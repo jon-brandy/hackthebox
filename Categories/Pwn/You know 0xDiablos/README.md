@@ -20,7 +20,7 @@ I missed my flag
 ![image](https://user-images.githubusercontent.com/70703371/207645014-3ceb1439-e40d-401c-9bac-cf5ff74e6319.png)
 
 
-3. Check the file type and the file's protection.
+3. Check the file type and the binary's protection.
 
 > FILE TYPE
 
