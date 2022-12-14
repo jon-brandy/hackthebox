@@ -48,10 +48,28 @@ Did you know that racecar spelled backwards is racecar? Well, now that you know 
 ![image](https://user-images.githubusercontent.com/70703371/207557993-c0842a28-250f-4334-8404-0a60ed55e99d.png)
 
 
-![image](https://user-images.githubusercontent.com/70703371/207558036-a432291e-cdba-4c05-a179-5e429bf9600f.png)
+
+![image](https://user-images.githubusercontent.com/70703371/207558779-ab2e8e92-5f67-4ce2-9c3e-3ff392f6c954.png)
 
 
-![image](https://user-images.githubusercontent.com/70703371/207558163-f73b632b-c917-4813-a9c1-76702acb9b12.png)
 
+![image](https://user-images.githubusercontent.com/70703371/207558766-204d621a-4ad0-432d-a2f5-5ee2961621b6.png)
+
+
+7. Let's run the remote server.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/207558976-9a6ad069-a3a0-4934-82c9-3b4872ec777e.png)
+
+
+8. Follow the same steps as before.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/207559114-b0da1ce8-c96f-48ac-853a-4efcc5066a68.png)
+
+
+9. 
 
 
