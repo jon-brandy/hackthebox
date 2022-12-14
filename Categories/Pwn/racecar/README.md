@@ -70,6 +70,13 @@ Did you know that racecar spelled backwards is racecar? Well, now that you know 
 ![image](https://user-images.githubusercontent.com/70703371/207559114-b0da1ce8-c96f-48ac-853a-4efcc5066a68.png)
 
 
-9. 
+9. Let's decompile the file using ghidra.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/207559895-986815be-edeb-4683-9478-e3d36c911d04.png)
+
+
+10. 
 
 
