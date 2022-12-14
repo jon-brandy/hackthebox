@@ -77,6 +77,55 @@ Did you know that racecar spelled backwards is racecar? Well, now that you know 
 ![image](https://user-images.githubusercontent.com/70703371/207559895-986815be-edeb-4683-9478-e3d36c911d04.png)
 
 
-10. 
+10. Since we want to know what happen we the program asked us to enter the string, so let's check the `car_menu()` function.
+
+> CAR_MENU()
+
+![image](https://user-images.githubusercontent.com/70703371/207561282-42b1ab93-4e2d-44c2-9ce5-96de15643217.png)
+
+
+11. Looks like we found the vuln here.
+
+
+![image](https://user-images.githubusercontent.com/70703371/207561369-793e05fb-0033-4a87-a14f-068e98c0a74d.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/207561487-5f783413-f004-416e-a5d0-8b25e6452fa3.png)
+
+
+12. We can do `format strings attack`, because there's no identifier specified at the `printf()` function.
+13. Run the file again, but this time in **gdb** and create the `flag.txt` first.
+14. At this session, input `%p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p` as the input 
+
+
+![image](https://user-images.githubusercontent.com/70703371/207562117-efe8541d-b6e8-4398-be85-1bc56f1e09c3.png)
+
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/207567229-8c5649fe-32f8-491b-96af-675bac67da98.png)
+
+
+15. Great we reached the next step now.
+16. Based from the **ghidra** we know this variable stored the **flag** content
+
+
+![image](https://user-images.githubusercontent.com/70703371/207573182-4c3531ad-4872-486b-b928-63eadb3986e5.png)
+
+
+> IT HAS 44 BYTES AS THE BUFFER
+
+![image](https://user-images.githubusercontent.com/70703371/207573552-03ea8f31-4fe7-4932-bb31-bd95bb59a9eb.png)
+
+
+17. And this variable 
+
+
+
+
+
+
+
+
 
 
