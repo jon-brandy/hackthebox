@@ -118,14 +118,43 @@ Did you know that racecar spelled backwards is racecar? Well, now that you know 
 ![image](https://user-images.githubusercontent.com/70703371/207573552-03ea8f31-4fe7-4932-bb31-bd95bb59a9eb.png)
 
 
-17. And this variable 
+17. Since we know the buffer is 44 bytes, then we need to find the offset of the `__*format`. To find that, since we can't loop to run the file.
+18. We can find the offset by input it manually from 1 - 44. -> **(%1-44$s)**.
+19. Got a string when i tried to input `%12$s`.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/207577158-7422df20-9e50-4f19-b53d-6761213df5de.png)
 
 
+20. It means the start offset of the flag is 12.
+21. Let's continue.
+
+> INPUT -> %12$p %13$p 
 
 
+![image](https://user-images.githubusercontent.com/70703371/207580551-68948635-0c31-46c4-b9ed-33557710e0c3.png)
 
 
+##### NOTES: Changed the 's' to 'p', because we would get segmentation fault. Just need the hex value.
 
 
+> CONTINUE -> %12$p %13$p %14$p 
+
+
+![image](https://user-images.githubusercontent.com/70703371/207580724-8ac03866-2534-4e05-8dd6-ddb58d9db7fd.png)
+
+
+> CONTINUE -> %12$p %13$p %14$p %15$p 
+
+
+![image](https://user-images.githubusercontent.com/70703371/207580928-b1531015-450d-47cd-b451-e0952b13ca67.png)
+
+
+> CONTINUE -> %12$p %13$p %14$p %15$p %16$p %17$p %18$p %19$p %20$p %21$p %22$p
+
+%12$s %13$s %14$s %15$s %16$s
+
+![image](https://user-images.githubusercontent.com/70703371/207581109-49539cf6-482b-48ff-8820-0333a3f3f1d5.png)
 
 
