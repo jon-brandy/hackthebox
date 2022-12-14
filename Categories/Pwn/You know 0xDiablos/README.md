@@ -43,4 +43,29 @@ I missed my flag
 ![image](https://user-images.githubusercontent.com/70703371/207646431-c05472b6-a7a9-4d81-b232-86bf038355c9.png)
 
 
-5. 
+5. As we know, since there's **no canary found**, then we can overflow the buffer.
+6. I opened GDB and copied 1024 cyclic pattern, then run the file.
+
+> GDB
+
+![image](https://user-images.githubusercontent.com/70703371/207648015-176a3305-6214-49c3-93e5-1b13789cd213.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/207648543-ac71b49a-166f-4bb2-801a-5b79be6a2c2b.png)
+
+
+7. Copy the 4 chars in **EIP** , then do `cyclic -l waab`
+
+```
+EIP stands for Extended Instruction Pointer.
+```
+
+![image](https://user-images.githubusercontent.com/70703371/207649036-6d15d6e0-d67f-4ff3-813a-5594fa0f3660.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/207649107-2487380c-4c9c-48ff-b372-032d07887552.png)
+
+
+8. Now we know, we need to add 188 bytes as the padding.
+9. 
+
