@@ -67,5 +67,19 @@ EIP stands for Extended Instruction Pointer.
 
 
 8. Now we know, we need to add 188 bytes as the padding.
-9. 
+9. Next, let's decompile the binary using ghidra.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/207650199-f2fbdcf8-f495-478a-af85-edf6cbd5b5cb.png)
+
+
+10. Check the `flag()` function.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/207650433-f2e6fe7e-7228-4f7c-829f-2c9ed0468f99.png)
+
+
+11. 
 
