@@ -36,4 +36,11 @@ I missed my flag
 ![image](https://user-images.githubusercontent.com/70703371/207645250-d4f9fb33-affa-423e-9ced-5d3e598f6897.png)
 
 
-4. 
+4. Now let's make the file executeable first by run `chmod +x vuln`, then run the file.
+
+> INPUT ANY LENGTH OF A'S - RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/207646431-c05472b6-a7a9-4d81-b232-86bf038355c9.png)
+
+
+5. 
