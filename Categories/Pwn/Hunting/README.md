@@ -33,4 +33,16 @@ Please note that the goal is to find the flag, and not to obtain a shell.
 ![image](https://user-images.githubusercontent.com/70703371/207771226-3271d1ea-91bb-403e-bd9d-5dbcadd9868d.png)
 
 
-6. 
+6. Let's run the binary.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/207774738-424fdd40-88fc-4bf1-b61e-d7c6b97a324c.png)
+
+
+7. Got segmentation fault even though i entered a char.
+8. Hmm.. Let's run the file in GDB.
+
+> RESULT
+
+
