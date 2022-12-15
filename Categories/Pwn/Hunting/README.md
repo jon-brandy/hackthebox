@@ -60,5 +60,11 @@ Please note that the goal is to find the flag, and not to obtain a shell.
 ![image](https://user-images.githubusercontent.com/70703371/207775439-62f5cdc6-f57b-4206-bf97-d68a45121969.png)
 
 
+10. When i tried to analyze the main function, i found the dummy flag.
 
+
+![image](https://user-images.githubusercontent.com/70703371/207776126-2d91f200-04f8-4426-88bf-d65669dcb2b5.png)
+
+
+11. Now we know the dummy flag is accessed in the `main()` function.
 
