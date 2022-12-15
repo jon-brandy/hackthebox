@@ -81,5 +81,19 @@ EIP stands for Extended Instruction Pointer.
 ![image](https://user-images.githubusercontent.com/70703371/207650433-f2e6fe7e-7228-4f7c-829f-2c9ed0468f99.png)
 
 
-11. 
+11. Since the `flag()` function has parameters, then we can conclude it's a ret2win concept but with parameters.
+12. To do ret2win with param in 32 Bit, the payload shall look like this:
+
+```
+padding + flagAddr + returnAddress + param1 + param2
+```
+
+13. Copy the param1 and param2 value.
+
+> PARAM 1 & PARAM 2 (BOTH IN CHAR FORMAT)
+
+![image](https://user-images.githubusercontent.com/70703371/207764429-ab1cbfe6-071b-4653-b900-73dd82c01f24.png)
+
+
+14. 
 
