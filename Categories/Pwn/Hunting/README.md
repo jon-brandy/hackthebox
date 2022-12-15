@@ -46,3 +46,19 @@ Please note that the goal is to find the flag, and not to obtain a shell.
 > RESULT
 
 
+![image](https://user-images.githubusercontent.com/70703371/207774916-f15f8ed6-2720-45b9-9b50-e7f8f897a9f7.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/207775532-1572f788-568e-4384-a624-85e311f41a35.png)
+
+
+
+9. I tried to enter longer strings, but the program crashed at the same offset.
+
+> PROOF
+
+![image](https://user-images.githubusercontent.com/70703371/207775439-62f5cdc6-f57b-4206-bf97-d68a45121969.png)
+
+
+
+
