@@ -47,4 +47,9 @@ Are you able to cheat me and get the flag?
 
 
 9. However, better than wasting time analyze the stripped code, in reverse engineering we may **patch the binary instruction**.
-10. 
+10. Let's patch this one.
+
+![image](https://user-images.githubusercontent.com/70703371/208133316-e8a6b26b-f062-4b14-9c02-8372a1318704.png)
+
+
+11. 
