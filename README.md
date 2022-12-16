@@ -20,4 +20,16 @@
 |:-:|:--------------:|
 |1. |[Templated](https://github.com/Bread-Yolk/hackthebox/blob/a814c1dfaa72a1abf52784da7ac51b469e3db73d/Categories/Web/Templated/README.md)|
 
-  </details>
+</details>
+
+
+<details>
+<br>
+<summary> Forensics </summary>
+
+|No.|Challenge's name|
+|:-:|:--------------:|
+|1. |[Illumination](https://github.com/Bread-Yolk/hackthebox/blob/1b60d3d966a41da91cf9d209d4a50288a336d772/Categories/Forensics/Illumination/README.md)|
+
+</details>
+
