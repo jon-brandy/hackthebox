@@ -2,7 +2,7 @@
 
 <details>
 <br>
-<summary> Binary Exploitation </summary>
+<summary> Pwn </summary>
 
 |No.|Challenge's name|
 |:-:|:--------------:|
@@ -41,6 +41,17 @@
 |:-:|:--------------:|
 |1. |[BabyEncryption](https://github.com/Bread-Yolk/hackthebox/blob/bcd0c433568098d73deb1d6563b4c360a71ae8a6/Categories/Cryptography/BabyEncryption/README.md)|
 |2. |[xorxorxor](https://github.com/Bread-Yolk/hackthebox/blob/026f450d84c0006c2e27ca2fdeba503f9e27e4a1/Categories/Cryptography/xorxorxor/README.md)|
+
+</details>
+
+
+<details>
+<br>
+<summary> Reversing </summary>
+
+|No.|Challenge's name|
+|:-:|:--------------:|
+|1. |[Impossible Password](https://github.com/Bread-Yolk/hackthebox/blob/a81c6ca2205dc6218e95081229bb352d633211e3/Categories/Reversing/Impossible%20Password/README.md)|
 
 </details>
 
