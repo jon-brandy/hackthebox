@@ -24,3 +24,9 @@ Who is lucky enough to be included in the phonebook?
 ![image](https://user-images.githubusercontent.com/70703371/208025396-88d42c54-31e6-42fb-9dc0-5241a1dafe13.png)
 
 
+5. Also there's a note from Reese:
+
+![image](https://user-images.githubusercontent.com/70703371/208025598-3c03e023-b1bb-4768-a2db-184f9b51fb7f.png)
+
+
+6. What comes to my mind is, the website is using the 7. So 
