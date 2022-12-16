@@ -60,4 +60,24 @@ Are you able to cheat me and get the flag?
 ![image](https://user-images.githubusercontent.com/70703371/208134195-282424fe-da8e-46dd-8855-f41055475745.png)
 
 
-12. 
+12. Export the file to a binary format.
+13. Make it executable first, then run the program again.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/208134559-0dc0b70c-824f-4504-84ab-23868cb53730.png)
+
+
+##### NOTES: Since we changed the instruction pointer to NOP, we can enter any character without any validation to get the flag.
+
+
+![image](https://user-images.githubusercontent.com/70703371/208134804-00670805-f16f-4da9-bcae-7da332c9e95d.png)
+
+
+14. Got the flag!
+
+## FLAG
+
+```
+HTB{40b949f92b86b18}
+```
