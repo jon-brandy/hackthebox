@@ -33,3 +33,15 @@
 
 </details>
 
+<details>
+<br>
+<summary> Cryptography </summary>
+
+|No.|Challenge's name|
+|:-:|:--------------:|
+|1. |[BabyEncryption](https://github.com/Bread-Yolk/hackthebox/blob/bcd0c433568098d73deb1d6563b4c360a71ae8a6/Categories/Cryptography/BabyEncryption/README.md)|
+
+</details>
+
+
+
