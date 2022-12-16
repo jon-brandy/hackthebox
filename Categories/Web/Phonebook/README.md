@@ -20,4 +20,7 @@ Who is lucky enough to be included in the phonebook?
 
 3. Yeah obviously we failed, but notice at the url parameter.
 4. The message parameter has `Authentication failed` as the value.
-5. 
+
+![image](https://user-images.githubusercontent.com/70703371/208025396-88d42c54-31e6-42fb-9dc0-5241a1dafe13.png)
+
+
