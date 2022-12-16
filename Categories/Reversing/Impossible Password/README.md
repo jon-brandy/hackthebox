@@ -19,7 +19,7 @@ Are you able to cheat me and get the flag?
 ![image](https://user-images.githubusercontent.com/70703371/208129195-3604916d-566c-4438-a97b-a3debcb68a18.png)
 
 
-3. Since it's a binary file, let's make it executeable by run chmod, then run the file.
+3. Now we know it's a binary file and stripped, means we can't see the function's name. Since it's a binary file, let's make it executeable by run chmod, then run the file.
 
 > RESULT
 
