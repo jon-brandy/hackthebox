@@ -27,6 +27,23 @@ Are you able to cheat me and get the flag?
 
 
 4. Hmm.. let's decompile the file using ghidra.
+5. Find a clue here.
 
-> GHIDRA
+![image](https://user-images.githubusercontent.com/70703371/208130523-59086866-395b-4b45-948e-773b1a8dee01.png)
 
+
+6. The program will compare our input with the `local_10` value.
+7. Then the program will prompt us an input again, and it will compare our input with `__s2` value.
+
+![image](https://user-images.githubusercontent.com/70703371/208130909-4d17f40b-6018-4c31-aa6b-7add255f0fbc.png)
+
+
+8. Let's analyze this function.
+
+![image](https://user-images.githubusercontent.com/70703371/208131063-56205631-7b75-4128-b1ae-1ac97370cee6.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/208131171-bc4830da-22e0-470c-af4c-f0eab1a7bb69.png)
+
+
+9. 
