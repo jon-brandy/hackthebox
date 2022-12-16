@@ -52,4 +52,12 @@ Are you able to cheat me and get the flag?
 ![image](https://user-images.githubusercontent.com/70703371/208133316-e8a6b26b-f062-4b14-9c02-8372a1318704.png)
 
 
-11. 
+11. Patch the intruction pointer from `JNZ` (Jump If Not Zero) to `NOP` (No Operation).
+
+![image](https://user-images.githubusercontent.com/70703371/208133976-377e6d9d-7523-47aa-a249-95f8d087ec39.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/208134195-282424fe-da8e-46dd-8855-f41055475745.png)
+
+
+12. 
