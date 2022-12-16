@@ -19,3 +19,5 @@
 |No.|Challenge's name|
 |:-:|:--------------:|
 |1. |[Templated](https://github.com/Bread-Yolk/hackthebox/blob/a814c1dfaa72a1abf52784da7ac51b469e3db73d/Categories/Web/Templated/README.md)|
+
+  </details>
