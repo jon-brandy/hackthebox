@@ -55,5 +55,17 @@
 
 </details>
 
+<details>
+<br>
+<summary> OSINT </summary>
+
+|No.|Challenge's name|
+|:-:|:--------------:|
+|1. |[Easy Phish](https://github.com/Bread-Yolk/hackthebox/blob/9757e2b02c396666792cdab691fe53a009b491f6/Categories/OSINT/Easy%20Phish/README.md)|
+
+</details>
+
+
+
 
 
