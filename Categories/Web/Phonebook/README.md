@@ -29,4 +29,29 @@ Who is lucky enough to be included in the phonebook?
 ![image](https://user-images.githubusercontent.com/70703371/208025598-3c03e023-b1bb-4768-a2db-184f9b51fb7f.png)
 
 
-6. What comes to my mind is, the website is using the 7. So 
+6. After did several SQLi command, i found that when i entered both username and password as `*`. We successfully logged in!
+
+> LOGGED IN
+
+
+![image](https://user-images.githubusercontent.com/70703371/208936585-62d4177c-707c-4470-8e20-851567f67fb2.png)
+
+
+7. Let's check for `Reese`.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/208937586-429c5925-2e95-4692-964f-6551f45df490.png)
+
+
+8. Well got no clue.
+9. Let's go back to the login page.
+10. I tried to change the message parameter.
+
+> RESULT
+
+![Uploading image.png…]()
+
+
+11. It changed, maybe it's related to **XSS** (?)
+12. 
