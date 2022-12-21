@@ -43,7 +43,7 @@ http://178.62.88.144:30462/
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/208919382-2ceced11-9573-4aa3-b614-69afdb66ff59.png)
+![image](https://user-images.githubusercontent.com/70703371/208932357-b51820a1-f346-4408-a9ec-d156f5525a10.png)
 
 
 > INDEX.PHP
@@ -125,7 +125,7 @@ http://www.securityidiots.com/Web-Pentest/SQL-Injection/addslashes-bypass-sql-in
 ```
 
 17. When i add `${system("ls")}` as the format value, obviously it won't do anything.
-18. Based from the article i read, we can utilize the GET parameter. Since %_GET is a dictionary, the key can be a number, hence we can add the 2nd parameter to be `anynum` equal to cat, ls, etc.
+18. Based from the article i read, we can utilize the GET parameter. Since `%_GET` is a dictionary, the key can be a number, hence we can add the 2nd parameter to be `anynum` equal to cat, ls, etc.
 19. So our  shall look like this:
 
 ```php
