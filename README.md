@@ -30,6 +30,7 @@
 |No.|Challenge's name|
 |:-:|:--------------:|
 |1. |[Illumination](https://github.com/Bread-Yolk/hackthebox/blob/1b60d3d966a41da91cf9d209d4a50288a336d772/Categories/Forensics/Illumination/README.md)|
+|2. |[LoveTok](https://github.com/Bread-Yolk/hackthebox/blob/cb1ab3178ae25ac00c807a0a89dc3a2c6428270d/Categories/Web/LoveTok/README.md)|
 
 </details>
 
