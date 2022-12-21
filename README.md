@@ -19,6 +19,9 @@
 |No.|Challenge's name|
 |:-:|:--------------:|
 |1. |[Templated](https://github.com/Bread-Yolk/hackthebox/blob/a814c1dfaa72a1abf52784da7ac51b469e3db73d/Categories/Web/Templated/README.md)|
+|2. |[LoveTok](https://github.com/Bread-Yolk/hackthebox/blob/cb1ab3178ae25ac00c807a0a89dc3a2c6428270d/Categories/Web/LoveTok/README.md)|
+|3. |[Phonebook](https://github.com/Bread-Yolk/hackthebox/blob/2cbf3f75fbf7fb0f6a3003be39ba2393d018ddd0/Categories/Web/Phonebook/README.md)|
+
 
 </details>
 
@@ -30,7 +33,7 @@
 |No.|Challenge's name|
 |:-:|:--------------:|
 |1. |[Illumination](https://github.com/Bread-Yolk/hackthebox/blob/1b60d3d966a41da91cf9d209d4a50288a336d772/Categories/Forensics/Illumination/README.md)|
-|2. |[LoveTok](https://github.com/Bread-Yolk/hackthebox/blob/cb1ab3178ae25ac00c807a0a89dc3a2c6428270d/Categories/Web/LoveTok/README.md)|
+
 
 </details>
 
