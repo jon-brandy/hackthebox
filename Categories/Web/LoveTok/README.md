@@ -32,6 +32,13 @@ http://138.68.140.156:30069/
 ![image](https://user-images.githubusercontent.com/70703371/208854243-710879f2-d77f-40e6-a42f-10856b128208.png)
 
 
-5. 
+5. Jump to the extracted folder.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/208854373-8d0707b3-beaf-40e2-9d71-87b266095bab.png)
+
+
+
 
 
