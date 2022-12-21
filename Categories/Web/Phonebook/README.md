@@ -50,8 +50,50 @@ Who is lucky enough to be included in the phonebook?
 
 > RESULT
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/70703371/208938935-a6702a0b-07e3-4d69-8a69-64a821b40c69.png)
+
 
 
 11. It changed, maybe it's related to **XSS** (?)
-12. 
+12. When i entered a simple xss payload, we got nothing.
+13. But when i tried to enter xss with the <img> tag. Got this result:
+
+```
+<img src/onerror=prompt(8)>
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/208939632-5363988c-7ec4-427e-94e1-a3c1fc4ef20f.png)
+
+
+14. Great we can conclude that the website is vulnerable to XSS.
+15. And the type of XSS is DOM XSS, means the vulnerability exists in client-side code.
+
+![image](https://user-images.githubusercontent.com/70703371/208940055-df448d9f-e438-4353-b200-57f8160c96e6.png)
+
+
+16. Now how to get the correct username?? I think it's a luck, when i tried to see the cookies after i logged in using `*` as username and pass.
+
+> COOKIE
+
+```
+MTY3MTYzNjczNnxEdi1CQkFFQ180SUFBUkFCRUFBQUpfLUNBQUVHYzNSeWFXNW5EQW9BQ0dGMWRHaDFjMlZ5Qm5OMGNtbHVad3dIQUFWeVpXVnpaUT09fNLEZJsY2tV2A42nzGyxDgQtIvKJZR37B0b69fpdZvbf
+```
+
+17. Then i pasted it on cyberchef.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/208943332-860aed9e-39b3-42dd-983b-3b6d00c217ca.png)
+
+
+18. Decode the **base64** text.
+
+```
+Dv-BBAEC_4IAARABEAAAJ_-CAAEGc3RyaW5nDAoACGF1dGh1c2VyBnN0cmluZwwHAAVyZWVzZQ==
+```
+
+
+
+
