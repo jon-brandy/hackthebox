@@ -27,4 +27,11 @@ http://138.68.140.156:30069/
 
 ![image](https://user-images.githubusercontent.com/70703371/208853448-88975e17-dbb5-46a5-bdc3-49d3540a1f92.png)
 
-4. 
+4. Anyway let's `unzip` the zip file given.
+
+![image](https://user-images.githubusercontent.com/70703371/208854243-710879f2-d77f-40e6-a42f-10856b128208.png)
+
+
+5. 
+
+
