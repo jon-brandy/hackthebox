@@ -87,3 +87,16 @@
 </details>
 
 
+<details>
+<br>
+<summary> Hardware </summary>
+
+|No.|Challenge's name|
+|:-:|:--------------:|
+|1. |[Debugging Interface](https://github.com/Bread-Yolk/hackthebox/blob/7f2a35f3a586db14f6867c53ca20f250fba6b016/Categories/Hardware/Debugging%20Interface/README.md)|
+
+
+</details>
+
+
+
