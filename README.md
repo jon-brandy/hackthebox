@@ -103,3 +103,19 @@
 
 
 
+<details>
+<br>
+<summary> Misc </summary>
+
+|No.|Challenge's name|
+|:-:|:--------------:|
+|1. |[Canvas](
+https://github.com/Bread-Yolk/hackthebox/blob/90db8bbdcc304afd6aded628c6c1e77fba194dfc/Categories/Misc/Canvas/README.md)|
+
+
+</details>
+
+
+
+
+
