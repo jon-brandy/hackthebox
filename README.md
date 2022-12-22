@@ -56,6 +56,8 @@
 |No.|Challenge's name|
 |:-:|:--------------:|
 |1. |[Impossible Password](https://github.com/Bread-Yolk/hackthebox/blob/a81c6ca2205dc6218e95081229bb352d633211e3/Categories/Reversing/Impossible%20Password/README.md)|
+|2. |[Bypass](https://github.com/Bread-Yolk/hackthebox/blob/93653f7324bc03697be4294ea4feb57642293434/Categories/Reversing/Bypass/README.md)|
+
 
 </details>
 
