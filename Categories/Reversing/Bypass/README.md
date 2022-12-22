@@ -40,7 +40,31 @@ The Client is in full control. Bypass the authentication and read the key to get
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/208225388-d469c922-0647-43d9-b821-9ac1fba01212.png)
+![image](https://user-images.githubusercontent.com/70703371/209152786-d178c14d-f037-478b-ac64-1dcf40f6b935.png)
 
 
-9. Now check the functiosn
+9. Now check this function.
+
+![image](https://user-images.githubusercontent.com/70703371/209146033-7899f12c-5760-4a2f-9162-1338e1997db9.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209146076-31a10430-0dbb-4092-9be1-3514120af42f.png)
+
+
+10. Based from it we know that the boolean values of flag and flag2 is the same.
+
+![image](https://user-images.githubusercontent.com/70703371/209150407-feb1744f-65dd-4d86-b317-efd391ed1d50.png)
+
+
+11. Now set breakpoints at flag2 and flag.
+
+![image](https://user-images.githubusercontent.com/70703371/209153013-03b0df56-b33f-44dd-8e2e-1032329284e2.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209153302-878a9699-1c1a-423a-a8cd-d9082c7b1d56.png)
+
+
+12. 
+
+
+
