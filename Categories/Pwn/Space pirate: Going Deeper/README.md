@@ -31,11 +31,46 @@ Can you disable the mechanisms and take control of the Admin Panel?
 
 
 6. **No canary found** and **no PIE**.
-7. Anyway let's run the binary.
+7. Anyway let's run the binary in gdb.
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/209361238-af164417-35ed-446c-b160-d24c630fa7c7.png)
+![image](https://user-images.githubusercontent.com/70703371/209362224-8a23b6fa-5cad-4c57-b6fe-e60440078e9d.png)
 
 
-8. 
+8. If we pressed 1, we prompted an input, let's paste 1024 cyclic pattern here.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209363188-cc550fff-6721-474c-8b48-8aa9c2c14f4e.png)
+
+
+9. Great! The program crashed.
+10. Now utilize the RBP characters to find the correct bytes to overflow the buffer.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209363201-03d6f6d7-de4f-4688-acf6-eb04123f85a8.png)
+
+
+11. Means we need to add 44 padding bytes.
+12. Anyway let's decompile the file and open the `main()` function.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209363588-d2254810-2ab9-4416-b90f-70456ee2c0e1.png)
+
+13. From the 3 functions, the `admin_panel()` function caught my attention.
+
+> ADMIN_PANEL
+
+![image](https://user-images.githubusercontent.com/70703371/209363750-d34aaf84-613b-4005-9ce2-1594255bcf83.png)
+
+
+14. Based from the source code, the read function reads 57 bytes and the program comparing the admin username with the newline after it not a NULL character.
+15. To bypass that simply use `sendafter()` function in **pwntools**.
+16. Here is the full script:
+
+```py
+
+```
