@@ -39,4 +39,25 @@ Can you crack the 'ZIP' folder and get the SSH password?
 ![image](https://user-images.githubusercontent.com/70703371/209439192-2b776c77-d073-44d0-844f-13d09811d33d.png)
 
 
-6. 
+6. I noticed that the strings looks like encoded in base64.
+7. Let's decode it then.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209439380-684f7719-0b72-4501-af7f-59eea3284e0a.png)
+
+
+8. Copy the binaries and paste it on cyberchef.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209439410-cf20a614-6955-4fd4-a4af-ddd9c7100b1b.png)
+
+
+9. Got the flag!
+
+## FLAG
+
+```
+HTB{if_y0u_c@n_$m3ll_wh@t_th3_r0ck_is_c00king}
+```
