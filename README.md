@@ -116,6 +116,7 @@
 |No.|Challenge's name|
 |:-:|:--------------:|
 |1. |[Canvas](https://github.com/Bread-Yolk/hackthebox/blob/90db8bbdcc304afd6aded628c6c1e77fba194dfc/Categories/Misc/Canvas/README.md)|
+|2. |[fs0ciety](https://github.com/Bread-Yolk/hackthebox/blob/e3e9ac82c2f6e37d176369a4805c590616ebe978/Categories/Misc/fs0ciety/README.md)|
 
 
 </details>
