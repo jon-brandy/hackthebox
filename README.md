@@ -72,7 +72,7 @@
 |No.|Challenge's name|
 |:-:|:--------------:|
 |1. |[Easy Phish](https://github.com/Bread-Yolk/hackthebox/blob/9757e2b02c396666792cdab691fe53a009b491f6/Categories/OSINT/Easy%20Phish/README.md)|
-|1. |[Infiltration](https://github.com/Bread-Yolk/hackthebox/blob/24851cd3a6e4b5a203531b796dfe9ffe1c5a1e7a/Categories/OSINT/Infiltration/README.md)|
+|2. |[Infiltration](https://github.com/Bread-Yolk/hackthebox/blob/24851cd3a6e4b5a203531b796dfe9ffe1c5a1e7a/Categories/OSINT/Infiltration/README.md)|
 
 </details>
 
