@@ -53,6 +53,11 @@ module.exports = router;
 ```
 
 5. It is known that `unflatten()` is outdated and vulnerable to prototype pollution.
+6. I did a small outsource on the internet about AST injection and the script.
+7. Found this script.
+
+> RESULT
+
 
 
 
