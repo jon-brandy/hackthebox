@@ -80,3 +80,5 @@ Over a million stars above your head! Enjoy the silence and the glorious stars w
 
 15. We found the vuln there.
 16. I think the concept here is **ret2libc**, because there's not `system()` function, but only `reads()` and `write()`, both are come from the libc library.
+
+
