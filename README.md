@@ -10,7 +10,7 @@
 |2. |[You know 0xDiablos](https://github.com/Bread-Yolk/hackthebox/blob/a814c1dfaa72a1abf52784da7ac51b469e3db73d/Categories/Pwn/You%20know%200xDiablos/README.md)|
 |3. |[Jeeves](https://github.com/Bread-Yolk/hackthebox/blob/1c2a6a60df107c5f729c0a68cd1d4764bb921aba/Categories/Pwn/Jeeves/README.md)|
 |4. |[Space pirate: Entrypoint](https://github.com/Bread-Yolk/hackthebox/blob/c79b78b6e4b55ab702583374b11a2772d7976fc5/Categories/Pwn/Space%20pirate:%20Entrypoint/README.md)|
-|5. |[Reg](https://github.com/Bread-Yolk/hackthebox/blob/e54565e808107ad6b0c457c4b7c78f0b5297b189/Categories/Pwn/Reg/README.md)|
+|5. |[Reg](https://github.com/Bread-Yolk/hackthebox/blob/52607acbdc4f7f3f821dcf691749d7eec097addb/Categories/Pwn/Reg/README.md)|
 
 
 
