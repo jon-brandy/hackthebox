@@ -47,10 +47,10 @@ Over a million stars above your head! Enjoy the silence and the glorious stars w
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/209470185-9bda701e-ed75-446c-905c-e5eead82c801.png)
+![image](https://user-images.githubusercontent.com/70703371/209470626-1b8b301c-f33b-461e-9100-286baf84ad10.png)
 
 
-9. It's 64 bytes.
+9. It's 72 bytes.
 10. Now let's check all the functions available.
 
 > RESULT
