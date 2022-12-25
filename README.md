@@ -37,6 +37,7 @@
 |1. |[Illumination](https://github.com/Bread-Yolk/hackthebox/blob/1b60d3d966a41da91cf9d209d4a50288a336d772/Categories/Forensics/Illumination/README.md)|
 |2. |[MarketDump](https://github.com/Bread-Yolk/hackthebox/blob/0528e83d18e5713dfd1b5e2df8ab3bde7e998cdd/Categories/Forensics/MarketDump/README.md)|
 |3. |[Wrong Spooky Seasaon](https://github.com/Bread-Yolk/hackthebox/blob/65b8e6281b1f666e4e01f5752f319caab509be00/Categories/Forensics/Wrong%20Spooky%20Season/README.md)|
+|4. |[Marshal in the Middle](https://github.com/Bread-Yolk/hackthebox/blob/a7f559c662c94b5b1a4d9e6e5acf11e2858fdabe/Categories/Forensics/Marshal%20in%20the%20Middle/README.md)|
 
 </details>
 
