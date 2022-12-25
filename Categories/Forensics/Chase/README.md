@@ -45,5 +45,44 @@ We've taken a network capture before shutting the server down to take a clone of
 ![image](https://user-images.githubusercontent.com/70703371/209457720-fe679898-9872-4b6b-b463-a50d17c4c2e7.png)
 
 
-8. 
+8. Now let's follow this TCP stream.
+
+![image](https://user-images.githubusercontent.com/70703371/209457751-67c5e868-c3f1-4749-b6a9-2259a5976a1d.png)
+
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209457758-1d0be9fc-1c35-4b93-9cee-d8ae22070036.png)
+
+
+9. Based from it, we know the attacker executed **whoami** and **ipconfig**.
+10. Then the attacker upload a `.txt` file twice.
+11. By using **powershell** and **certutil**.
+12. To see what's inside the `.txt` file, i filtered the tcp stream to 5.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209457808-d39e1ea4-b594-4c17-a941-f3873c44338a.png)
+
+
+13. Nothing interesting from the inside.
+14. I kind of lucky, because i think the filename is look like a encoded text (?)
+15. I pasted the text to cyberchef and got this result.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209457861-66b5ce62-ebf8-48cf-97a5-bb9aa8c470f2.png)
+
+
+16. Turns out the text is encoded in base32.
+17. Got the flag!
+
+## FLAG
+
+```
+HTB{MAn_8lu3_73aM_R0cX}  
+```
+
+
+
  
