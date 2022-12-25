@@ -63,5 +63,20 @@ Over a million stars above your head! Enjoy the silence and the glorious stars w
 
 > RESULT
 
+![image](https://user-images.githubusercontent.com/70703371/209470231-01786e09-00cc-4eeb-b8c6-0e1268e8a54b.png)
 
 
+13. Check the `star()` function.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209470246-7146969e-960a-4835-9265-4b72c221ae7b.png)
+
+
+14. Notice the program reads more buffer from `local_48`.
+
+![image](https://user-images.githubusercontent.com/70703371/209470294-3e462513-66b2-4fe4-a821-920ac6ae8d66.png)
+
+
+15. We found the vuln there.
+16. 
