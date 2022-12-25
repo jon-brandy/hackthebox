@@ -11,7 +11,7 @@
 |3. |[Jeeves](https://github.com/Bread-Yolk/hackthebox/blob/1c2a6a60df107c5f729c0a68cd1d4764bb921aba/Categories/Pwn/Jeeves/README.md)|
 |4. |[Space pirate: Entrypoint](https://github.com/Bread-Yolk/hackthebox/blob/c79b78b6e4b55ab702583374b11a2772d7976fc5/Categories/Pwn/Space%20pirate:%20Entrypoint/README.md)|
 |5. |[Reg](https://github.com/Bread-Yolk/hackthebox/blob/d88aa1b00cf41672ef139801617536ea6975210e/Categories/Pwn/Reg/README.md)|
-
+|6. |[Space pirate: Going Deeper](https://github.com/Bread-Yolk/hackthebox/blob/99949fc45a7834dddfa5242d2de7581813344f00/Categories/Pwn/Space%20pirate:%20Going%20Deeper/README.md)|
 
 
 </details>
