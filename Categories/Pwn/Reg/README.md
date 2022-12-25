@@ -41,16 +41,12 @@ Partial RELRO (some sections of the binary are read only, preventing them from b
 ![image](https://user-images.githubusercontent.com/70703371/209469249-07d78d45-4722-47cf-a3bc-ba148c4871d3.png)
 
 
-7. To find the correct bytes to overflow the buffer, copy all the RBP characters.
-
-![image](https://user-images.githubusercontent.com/70703371/209469266-359f4ef1-28d3-46fb-87d8-20e696c0e3a3.png)
-
-
-8. Then run this command -> `cyclic -l gaaaaaaa`.
+7. To find the correct bytes to overflow the buffer, copy all the RSP characters.
+8. Then run this command -> `cyclic -l haaaaaaa`.
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/209469282-1faa70d6-4614-499f-aa8f-b27c342306c7.png)
+![image](https://user-images.githubusercontent.com/70703371/209470737-928138e2-e96a-4c8f-8992-b8f2f0240da8.png)
 
 
 9. 48 Bytes.
