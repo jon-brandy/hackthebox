@@ -80,5 +80,28 @@ Over a million stars above your head! Enjoy the silence and the glorious stars w
 
 15. We found the vuln there.
 16. I think the concept here is **ret2libc**, because there's not `system()` function, but only `reads()` and `write()`, both are come from the libc library.
+17. Now we need to leak the `.got` address.
+18. First, let's get the `pop_rdi` value from the binary using ropper.
 
+```
+ropper --file shooting_star --search "pop rdi"
+```
+
+> RESULT - 0x4012cb
+
+![image](https://user-images.githubusercontent.com/70703371/209471808-e24d8024-2b4f-4d13-b242-36ba92a3b9bc.png)
+
+
+19. Next, get the `pop_rsi` value.
+
+```
+ropper --file shooting_star --search "pop rsi"
+```
+
+> RESULT - 0x4012c9
+
+![image](https://user-images.githubusercontent.com/70703371/209471877-bd6dc023-ec2d-4e90-ae9b-ac03deb64a3f.png)
+
+
+20. 
 
