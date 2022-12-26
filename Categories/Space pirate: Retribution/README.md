@@ -66,6 +66,16 @@ Draeger's HQ might be out of the scope for now, but we can certainly cause signi
 ![image](https://user-images.githubusercontent.com/70703371/209498211-f18250dc-7adc-4dee-9755-c4e278bb01bb.png)
 
 
-12. Ok, let's create `flag.txt` file first, then run the binary with the same steps.
-13. 
+12. I'm confused here, because we already have the `flag.txt` file from extracting the `.zip` file.
 
+![image](https://user-images.githubusercontent.com/70703371/209498348-90b08ebf-7009-4192-92b9-3c24607bc55c.png)
+
+
+13. Anyway let's open the binary in ghidra and open the `main()` function.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209498508-1253825b-1e8a-4208-b6f6-ac0841ab575f.png)
+
+
+14. 
