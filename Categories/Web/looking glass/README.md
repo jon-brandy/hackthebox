@@ -43,3 +43,39 @@ system("ping -c 4 142.93.37.215; ls");
 
 ![image](https://user-images.githubusercontent.com/70703371/209567067-96d3a895-e9d5-43ac-a888-a350b9cb2e29.png)
 
+
+7. It seems there's only one file and no directory in the current directory.
+8. Let's check the root directory by add -> `; ls /`.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209567290-ec4fa5fe-ef1a-4c00-b16c-b6043ffbed8a.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209567359-56bd09ac-3deb-4891-91f5-18f83e719833.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209567384-f85d2262-29ff-4427-b96c-232e7c7cfe8e.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209567390-c45a527b-88a2-4f5a-a9d6-940372d2b243.png)
+
+
+9. Notice there's a directory/file named **flag_50j98**.
+10. Since we don't know whether it's a directory or a file, let's test if it's a file or not by run cat.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209567530-530384dc-ad24-4e89-9048-385154f69755.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209567570-362d06f0-f2cb-4716-9753-3abc4334d1ac.png)
+
+
+11. Got the flag!
+
+## FLAG
+
+```
+HTB{I_f1n4lly_l00k3d_thr0ugh_th3_rc3}
+```
