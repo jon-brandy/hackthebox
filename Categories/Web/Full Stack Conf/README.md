@@ -28,3 +28,11 @@ But be very careful with the stay up to date form, we don't sanitize anything an
 
 ![image](https://user-images.githubusercontent.com/70703371/209569824-e2ce998c-4053-4453-8f9d-9b9668631c0a.png)
 
+
+4. Got the flag!
+
+## FLAG
+
+```
+HTB{p0p..p0p..p0p...alert(1337)}
+```
