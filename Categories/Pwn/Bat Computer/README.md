@@ -64,4 +64,11 @@ It's your time to save the world!
 ![image](https://user-images.githubusercontent.com/70703371/209466369-2685fcf5-5bef-462f-83b2-e3c13f0f3cae.png)
 
 
-12.
+12. The vuln here is the `auStack84` only has 76 size of buffers but the binary read 137. Hence we can utilize it for bufferoverflow.. 
+
+![image](https://user-images.githubusercontent.com/70703371/209514203-72e514f3-fc0b-449d-8c34-df461ffec906.png)
+
+
+13. The attack we shall use to get the flag is `inject a shellcode`.
+14. So when the binary prompts us the navigation, we inject the shellcode there, so the shellcode will stored at the stack location which we have the address of. So then we need to overwrite teh return address (the instruction pointer), overwrite that with the address of the stack where we place our shell code.
+
