@@ -75,6 +75,7 @@
 |2. |[Bypass](https://github.com/Bread-Yolk/hackthebox/blob/93653f7324bc03697be4294ea4feb57642293434/Categories/Reversing/Bypass/README.md)|
 |3. |[Behind the Scenes](https://github.com/Bread-Yolk/hackthebox/blob/6952513424348ef3a27dbd8246e6183d807b1432/Categories/Reversing/Behind%20the%20Scenes/README.md)|
 |4. |[WIDE](https://github.com/Bread-Yolk/hackthebox/blob/e311ca3b8b5e0700da560239e4d7cd3e7a525fae/Categories/Reversing/WIDE/README.md)|
+|5. |[Baby RE](https://github.com/Bread-Yolk/hackthebox/blob/e5d22a3cecdd098e3982f310613e26c5f8b3655d/Categories/Reversing/Baby%20RE/README.md)|
 
 </details>
 
