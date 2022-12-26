@@ -70,5 +70,40 @@ It's your time to save the world!
 
 
 13. The attack we shall use to get the flag is `inject a shellcode`.
-14. So when the binary prompts us the navigation, we inject the shellcode there, so the shellcode will stored at the stack location which we have the address of. So then we need to overwrite teh return address (the instruction pointer), overwrite that with the address of the stack where we place our shell code.
+14. So when the binary prompts us the navigation, we inject the shellcode there, so the shellcode will stored at the stack location which we have the address of. So then we need to overwrite the return address (the instruction pointer), overwrite that with the address of the stack where we place our shell code.
+15. In short, since the `auStack84` location will change everytime we execute the binary, so we need to extract the address of it, then we need to enter the password and enter the shellcode. To control the return address we need to overflow the buffer.
+16.  Now let's run the binary in gdb.
 
+> RESULT - CHOOSE OPTION 2 - ENTER THE PASSWORD (b4tp@$$w0rd!)
+
+![image](https://user-images.githubusercontent.com/70703371/209515683-69da2386-8b87-4d88-acab-912037ea9c59.png)
+
+
+17. Enter cyclic 1024 pattern.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209516091-384d2679-2871-4896-bcd3-25eb2d8caddc.png)
+
+
+18. The program didn't crash, because it will crash until we hit return, remember that we are in a while loop.
+
+![image](https://user-images.githubusercontent.com/70703371/209516369-f8855662-9a57-4a91-820e-c15e469632da.png)
+
+
+19. Let's make another cyclic pattern, but this time 100.
+20. Run the binary again in gdb.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209516507-c0ab0615-b327-4543-9c69-747707710a61.png)
+
+
+21. This time enter random number.
+
+> RESULT - SEGMENTATION FAULT
+
+![image](https://user-images.githubusercontent.com/70703371/209516541-6cef29de-deba-466a-a618-b4af96d1fa09.png)
+
+
+22. 
