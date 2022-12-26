@@ -30,6 +30,9 @@
 |4. |[Spookifier](https://github.com/Bread-Yolk/hackthebox/blob/10f6b0f4f6b6a06aa068365c134a030a1738ed08/Categories/Web/Spookifier/README.md)|
 |5. |[looking glass](https://github.com/Bread-Yolk/hackthebox/blob/614c63d770bea260f16c2559fff7b9ed97982748/Categories/Web/looking%20glass/README.md)|
 |6. |[sanitize](https://github.com/Bread-Yolk/hackthebox/blob/d6ff78188af3f11a6498633746d20f5d6f798cdd/Categories/Web/sanitize/README.md)|
+|7. |[baby auth](https://github.com/Bread-Yolk/hackthebox/blob/e684dd5d36f5412fae79e29a45f6de882e4da9e6/Categories/Web/baby%20auth/README.md)|
+
+
 
 </details>
 
