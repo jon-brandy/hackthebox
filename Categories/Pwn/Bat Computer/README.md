@@ -106,4 +106,12 @@ It's your time to save the world!
 ![image](https://user-images.githubusercontent.com/70703371/209516541-6cef29de-deba-466a-a618-b4af96d1fa09.png)
 
 
-22. 
+22. Now take 4 bytes from RSP to look the correct bytes to overflow the buffer.
+
+> RESULT - 84 BYTES
+
+![image](https://user-images.githubusercontent.com/70703371/209516745-eaee73ed-a9f0-41d8-a3bd-8575482d8c64.png)
+
+
+23. Means we need to write 84 bytes, then the return address (the location of joker), enter the password, enter the shellcode.
+24. 
