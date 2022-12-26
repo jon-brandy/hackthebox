@@ -22,7 +22,33 @@ You've enlisted a medium who can translate it, but they like to take their time.
 
 
 3. Great, it's not stripped. Hence it's easier for us to reverse the binary.
-4. Let's decompile the binary in ghidra.
+4. Let's run the binary in GDB.
 
 > RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209524134-2e042478-0c11-4b88-8b20-118f2437f3bc.png)
+
+5. It stucks here (?)
+
+![image](https://user-images.githubusercontent.com/70703371/209524215-ad496467-4bc2-44e9-a52e-219a1e5f3388.png)
+
+
+6. Let's decompile the binary using ghidra and open the `main()` function.
+7. Got the reason why the program took long enough to output a message.
+
+![image](https://user-images.githubusercontent.com/70703371/209524377-51b05668-48b3-4587-9ed0-88d48f60598a.png)
+
+![image](https://user-images.githubusercontent.com/70703371/209524406-6f486aec-aec4-4948-9b15-d9a489a2e1c7.png)
+
+
+8. Well let's change every `sleep()` function's value to 0.
+
+![image](https://user-images.githubusercontent.com/70703371/209524619-b097e549-c5dc-41e5-bda1-3752cb99d8a8.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209524662-0d0c5920-5b6f-47a5-9869-0d355157d392.png)
+
+
+9. 
+
 
