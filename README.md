@@ -33,6 +33,8 @@
 |7. |[baby auth](https://github.com/Bread-Yolk/hackthebox/blob/e684dd5d36f5412fae79e29a45f6de882e4da9e6/Categories/Web/baby%20auth/README.md)|
 |8. |[baby BonChewerCon](https://github.com/Bread-Yolk/hackthebox/blob/eadd1da75f5141f43bb277fbb02c9231c84a0c56/Categories/Web/baby%20BoneChewerCon/README.md)|
 |9. |[Full Stack Conf](https://github.com/Bread-Yolk/hackthebox/blob/b83c10cddbf740799b7d2bdc41680971a54fd108/Categories/Web/Full%20Stack%20Conf/README.md)|
+|10. |[baby interdimensional internet](https://github.com/Bread-Yolk/hackthebox/blob/58384b0de7a475e13f5ba96e6a882328978887b9/Categories/Web/baby%20interdimensional%20internet/README.md)|
+
 
 </details>
 
