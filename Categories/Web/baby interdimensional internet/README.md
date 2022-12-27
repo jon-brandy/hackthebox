@@ -84,3 +84,7 @@ if __name__ == '__main__':
 	app.run('0.0.0.0', port=1337)
 
 ```
+
+7. Notice there's a `calc()` function which can be our attack vector, also there's `exec()` function which executes python script injected at the recipe variable.
+8. Based from the script, when we perform a `POST` request, we are accessing this part of code.
+
