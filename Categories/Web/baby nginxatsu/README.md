@@ -70,7 +70,7 @@ http://142.93.37.215:30822/storage/
 ![image](https://user-images.githubusercontent.com/70703371/209689598-cf9162b4-19a5-45c6-89f6-dd5b2560268b.png)
 
 
-![image](https://user-images.githubusercontent.com/70703371/209689635-397ec4e8-557d-4309-a298-65eab2a78ae7.png)
+![image](https://user-images.githubusercontent.com/70703371/209690690-6d3d5fe3-a70b-4801-bab8-e5a67ac0297b.png)
 
 
 ![image](https://user-images.githubusercontent.com/70703371/209689654-181fd960-0037-46bf-a044-2a2989b81c19.png)
@@ -83,7 +83,7 @@ http://142.93.37.215:30822/storage/
 ![image](https://user-images.githubusercontent.com/70703371/209690234-a233033a-ae96-4488-9981-0b09b1df49ef.png)
 
 
-12. Check the hash algorithm used for jr's password. To copy it, click this symbol first.
+12. Crack the hash algorithm used for jr's password. To copy it, click this symbol first.
 
 ![image](https://user-images.githubusercontent.com/70703371/209690603-5f325214-70ac-43ec-8909-eda641558d94.png)
 
@@ -93,5 +93,32 @@ http://142.93.37.215:30822/storage/
 ![image](https://user-images.githubusercontent.com/70703371/209690626-ac8bed95-12c4-430e-a830-601d2c40eb6b.png)
 
 
-13. 
+13. Let's try by MD5 first, the common one. I crack the pass using [this](https://www.md5online.org/md5-decrypt.html) website.
 
+> RESULT
+
+
+![image](https://user-images.githubusercontent.com/70703371/209691451-02aedd20-666b-4e2b-bb56-e12b0c6b9186.png)
+
+
+14. Nice.. Let's try the other.
+15. Well i got nothing.
+16. At this point we already know the email of jr and his pass, let's use his creds.
+
+```
+EMAIL -> nginxatsu-adm-01@makelarid.es
+PASS -> adminadmin1
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209691835-7a8e3d8b-7d51-4254-b662-21e4aa568c35.png)
+
+
+17. Got the flag!
+
+## FLAG
+
+```
+HTB{ng1ngx_r34lly_b3_sp1ll1ng_my_w3ll_h1dd3n_s3cr3ts??}
+```
