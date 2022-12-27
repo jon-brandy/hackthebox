@@ -35,6 +35,7 @@
 |9. |[Full Stack Conf](https://github.com/Bread-Yolk/hackthebox/blob/b83c10cddbf740799b7d2bdc41680971a54fd108/Categories/Web/Full%20Stack%20Conf/README.md)|
 |10. |[baby interdimensional internet](https://github.com/Bread-Yolk/hackthebox/blob/58384b0de7a475e13f5ba96e6a882328978887b9/Categories/Web/baby%20interdimensional%20internet/README.md)|
 |11. |[Juggling facts](https://github.com/Bread-Yolk/hackthebox/blob/120cdd6fd7769ab56521d3fb662df0a589aea1fe/Categories/Web/Juggling%20facts/README.md)|
+|12. |[baby nginxatsu](https://github.com/Bread-Yolk/hackthebox/blob/71cf87fbdc6a75300cfc5a58b953bb9a4709a197/Categories/Web/baby%20nginxatsu/README.md)|
 
 </details>
 
