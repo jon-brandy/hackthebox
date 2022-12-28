@@ -37,6 +37,9 @@
 |11. |[Juggling facts](https://github.com/Bread-Yolk/hackthebox/blob/120cdd6fd7769ab56521d3fb662df0a589aea1fe/Categories/Web/Juggling%20facts/README.md)|
 |12. |[baby nginxatsu](https://github.com/Bread-Yolk/hackthebox/blob/71cf87fbdc6a75300cfc5a58b953bb9a4709a197/Categories/Web/baby%20nginxatsu/README.md)|
 |13. |[baby todo or not todo](https://github.com/Bread-Yolk/hackthebox/blob/61f7245d85401a69b151e5dbfd8156216f873cbf/Categories/Web/baby%20todo%20or%20not%20todo/README.md)|
+|14. |[baby WAFfles order](https://github.com/Bread-Yolk/hackthebox/blob/651f3adb3914b817cbc092119de8f0f2f7617184/Categories/Web/baby%20WAFfles%20order/README.md)|
+|15. |[]()|
+|16. |[]()|
 
 
 </details>
