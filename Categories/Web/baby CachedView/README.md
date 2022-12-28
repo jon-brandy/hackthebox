@@ -54,7 +54,7 @@ def flag():
 
 > UTIL.PY
 
-```
+```py
 import functools, signal, struct, socket, os
 from urllib.parse import urlparse
 from application.models import cache
@@ -150,4 +150,37 @@ def is_from_localhost(func):
 Time of Check to Time of Use
 ```
 
-14. 
+14. Based from the hints we got (TOCTOU) and DNS Rebinding, it's obvious that we need to rapidly modify the DNS binding for a domain. 
+15. Knowing that there's 2 checks, then for the first one, the resolved IP address must not be local. Then the second time the IP resolved must be local so that the headless browser shall give us a screenshot of the flag.
+16. Now let's open [this](https://lock.cmpxchg8b.com/rebinder.html) online tools to rebind dns.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209833048-b3a83b8d-6823-46d1-a3ad-ee7735f9b2ee.png)
+
+
+17. Now let's find the `google.com` dns.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209834348-0d528c7f-32de-4af6-b770-68077bdbc65a.png)
+
+
+18. Paste it at B textbox.
+
+![image](https://user-images.githubusercontent.com/70703371/209834479-d3697cf4-7e2f-426f-8598-d1615286bbb3.png)
+
+
+19. Copy the value below them.
+
+```
+7f000001.d8ef2678.rbndr.us
+```
+
+20. Now input this at the URL textarea.
+
+```
+http://7f000001.d8ef2678.rbndr.us/flag
+```
+
+
