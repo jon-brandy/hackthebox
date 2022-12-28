@@ -156,19 +156,13 @@ Time of Check to Time of Use
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/209833048-b3a83b8d-6823-46d1-a3ad-ee7735f9b2ee.png)
+![image](https://user-images.githubusercontent.com/70703371/209837900-ad3ba0c2-2e7b-4942-9933-ed300faa0e60.png)
 
 
-17. Now let's find the `google.com` dns.
-
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/209834348-0d528c7f-32de-4af6-b770-68077bdbc65a.png)
-
-
+17. As we know the primary DNS server for google DNS is `216.239.38.120`.
 18. Paste it at B textbox.
 
-![image](https://user-images.githubusercontent.com/70703371/209834479-d3697cf4-7e2f-426f-8598-d1615286bbb3.png)
+![image](https://user-images.githubusercontent.com/70703371/209837913-6c8a9edd-06a6-4bf6-9ec6-4575c5e7cced.png)
 
 
 19. Copy the value below them.
@@ -181,6 +175,17 @@ Time of Check to Time of Use
 
 ```
 http://7f000001.d8ef2678.rbndr.us/flag
+```
+
+21. Try to submit it again and again, until we got this image.
+
+> RESULT
+
+
+## FLAG
+
+```
+
 ```
 
 
