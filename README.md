@@ -13,7 +13,7 @@
 |5. |[Reg](https://github.com/Bread-Yolk/hackthebox/blob/d88aa1b00cf41672ef139801617536ea6975210e/Categories/Pwn/Reg/README.md)|
 |6. |[Space pirate: Going Deeper](https://github.com/Bread-Yolk/hackthebox/blob/99949fc45a7834dddfa5242d2de7581813344f00/Categories/Pwn/Space%20pirate:%20Going%20Deeper/README.md)|
 |7. |[Bat Computer](https://github.com/Bread-Yolk/hackthebox/blob/7a0efe3bbcdc21c5b1e7ba55be02299f87d1c917/Categories/Pwn/Bat%20Computer/README.md)|
-
+|8. |[Blacksmith](https://github.com/Bread-Yolk/hackthebox/blob/95c93c68e41d3d0820f2ea693c150933468ee482/Categories/Pwn/Blacksmith/README.md)|
 
 </details>
 
