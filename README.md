@@ -144,7 +144,7 @@
 |3. |[Milkshake](https://github.com/Bread-Yolk/hackthebox/blob/e46700d906db46f0a9b855fc22eee52b3169e08f/Categories/Misc/Milkshake/README.md)|
 |4. |[Hackerman](https://github.com/Bread-Yolk/hackthebox/blob/931d5d96d85c778dcf1491dde5b56917ac9f0dda/Categories/Misc/Hackerman/README.md)|
 |5. |[0ld is g0ld](https://github.com/Bread-Yolk/hackthebox/blob/166ef91a077d4678087cd524788ad90e3733d4c8/Categories/OSINT/0ld%20is%20g0ld/README.md)|
-
+|6. |[Da Vinci](https://github.com/Bread-Yolk/hackthebox/blob/9641a31811afeb4c9990edf15d41cc080725399d/Categories/Misc/Da%20Vinci/README.md)|
 
 
 </details>
