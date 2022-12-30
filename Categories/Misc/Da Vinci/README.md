@@ -100,3 +100,49 @@ fcrackzip -D -u -p /usr/share/wordlists/rockyou.txt famous.zip
 ![image](https://user-images.githubusercontent.com/70703371/210079842-1c114675-f653-4eff-95ed-a96f7ff0c374.png)
 
 
+19. Hmm.. use it to plans then.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210079924-73f1df62-c5ef-434b-8a20-ff823512ea01.png)
+
+
+20. Stuck for a while here, but when i check the youtube's link we got.
+21. I tried to use the `Guernica` as the password.
+22. Turns out it's correct.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210080626-e55004ed-d6d0-42e1-92bb-5e568b8c23b2.png)
+
+
+23. Strings the key.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210080656-b1bdf603-0f80-455a-b086-04f0af73d967.png)
+
+
+24. It's encoded in base64 , decode it.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210080781-80491ff1-5821-4eaf-a780-7e2c5b2e5066.png)
+
+> DECODE IT AGAIN
+
+![image](https://user-images.githubusercontent.com/70703371/210080845-c2c2f8b4-18ab-4bf3-9857-0907a2cebb94.png)
+
+
+> DECODE IT AGAIN
+
+![image](https://user-images.githubusercontent.com/70703371/210080899-4ffd4241-25f6-49a2-85aa-f1f8174a4639.png)
+
+
+25. Got the flag!
+
+## FLAG
+
+```
+HTB{M0n@_L1z@_!s_D3@D}
+```
