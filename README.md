@@ -142,6 +142,7 @@
 |1. |[Canvas](https://github.com/Bread-Yolk/hackthebox/blob/90db8bbdcc304afd6aded628c6c1e77fba194dfc/Categories/Misc/Canvas/README.md)|
 |2. |[fs0ciety](https://github.com/Bread-Yolk/hackthebox/blob/e3e9ac82c2f6e37d176369a4805c590616ebe978/Categories/Misc/fs0ciety/README.md)|
 |3. |[Milkshake](https://github.com/Bread-Yolk/hackthebox/blob/e46700d906db46f0a9b855fc22eee52b3169e08f/Categories/Misc/Milkshake/README.md)|
+|4. |[Hackerman](https://github.com/Bread-Yolk/hackthebox/blob/931d5d96d85c778dcf1491dde5b56917ac9f0dda/Categories/Misc/Hackerman/README.md)|
 
 
 
