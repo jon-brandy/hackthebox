@@ -146,6 +146,8 @@
 |5. |[0ld is g0ld](https://github.com/Bread-Yolk/hackthebox/blob/166ef91a077d4678087cd524788ad90e3733d4c8/Categories/OSINT/0ld%20is%20g0ld/README.md)|
 |6. |[Da Vinci](https://github.com/Bread-Yolk/hackthebox/blob/9641a31811afeb4c9990edf15d41cc080725399d/Categories/Misc/Da%20Vinci/README.md)|
 |7. |[Art](https://github.com/Bread-Yolk/hackthebox/blob/93eeedfe96070a35b1eba4e60a825dbbce0eb36f/Categories/Misc/Art/README.md)|
+|8. |[misDIRection](https://github.com/Bread-Yolk/hackthebox/blob/2e27902e1fa55bbd8b6a8ab5cf8d4aae6b1f24eb/Categories/Misc/misDIRection/README.md)|
+
 
 </details>
 
