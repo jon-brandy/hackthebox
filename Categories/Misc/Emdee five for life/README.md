@@ -16,7 +16,7 @@ Can you encrypt fast enough?
 
 
 2. What comes to my mind is we can use intruder in burpsuite to bruteforce the hash or we can use python script.
-3. For the first solution i tried to use python script.
+3. For this solution i tried to use python script.
 
 > THE SCRIPT
 
@@ -65,43 +65,6 @@ warn(extracted)
 ```
 HTB{N1c3_ScrIpt1nG_B0i!}
 ```
-
-## WITH BURPSUITE SOLUTION
-
-1. Open the burpsuite, set the intercept to on, refresh the page, then send the request to intruder.
-
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/210124709-b68c0061-ca8d-4b8d-ba1c-02823fda62ce.png)
-
-
-2. Choose the `clear` button.
-
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/210124713-7e4970d9-5cbe-44b9-b355-8bf51eb862fe.png)
-
-
-3. Since we want to bruteforce the hash value, clear the hash value and add 2 `$$` dollar signs.
-4. And add any character between the dollar signs as the **initial value**.
-
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/210124732-0995c34d-539d-45e5-bc59-288d24b8753b.png)
-
-
-5. Now open the payload tab.
-6. Change the payload type to `recursive grep`.
-7. Now open the options tab and scroll down to the `Grep Extract section`.
-
-![image](https://user-images.githubusercontent.com/70703371/210124760-93623480-4dae-44ee-bcde-b1d0d86c7911.png)
-
-> Check this one
-
-![image](https://user-images.githubusercontent.com/70703371/210124777-ca724b4a-0b08-4db4-aa0a-0f18e0a1c700.png)
-
-
-8. Then click the add button, copy this line:
 
 
 
