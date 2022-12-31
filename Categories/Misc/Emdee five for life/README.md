@@ -16,7 +16,7 @@ Can you encrypt fast enough?
 
 
 2. What comes to my mind is we can use intruder in burpsuite to bruteforce the hash or we can use python script.
-3. For this solution i tried to use python script.
+3. For the first solution i tried to use python script.
 
 > THE SCRIPT
 
@@ -65,3 +65,11 @@ warn(extracted)
 ```
 HTB{N1c3_ScrIpt1nG_B0i!}
 ```
+
+## WITH BURPSUITE SOLUTION
+
+1. Open the burpsuite, set the intercept to on, refresh the page, then send the request to intruder.
+
+> RESULT
+
+
