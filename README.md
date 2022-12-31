@@ -15,7 +15,7 @@
 |7. |[Bat Computer](https://github.com/Bread-Yolk/hackthebox/blob/7a0efe3bbcdc21c5b1e7ba55be02299f87d1c917/Categories/Pwn/Bat%20Computer/README.md)|
 |8. |[Blacksmith](https://github.com/Bread-Yolk/hackthebox/blob/95c93c68e41d3d0820f2ea693c150933468ee482/Categories/Pwn/Blacksmith/README.md)|
 |9. |[Shooting star](https://github.com/Bread-Yolk/hackthebox/blob/1d2ddc3cc0c80f0e45c777a0985b3f2fc1ed92ff/Categories/Pwn/Shooting%20star/README.md)|
-
+|10. |[HTB Console](https://github.com/Bread-Yolk/hackthebox/blob/63d9e2d283e818dc42212c552e9b8c431c74cfea/Categories/Pwn/HTB%20Console/README.md)|
 
 
 
