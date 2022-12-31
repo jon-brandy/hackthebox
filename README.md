@@ -148,6 +148,9 @@
 |7. |[Art](https://github.com/Bread-Yolk/hackthebox/blob/93eeedfe96070a35b1eba4e60a825dbbce0eb36f/Categories/Misc/Art/README.md)|
 |8. |[misDIRection](https://github.com/Bread-Yolk/hackthebox/blob/2e27902e1fa55bbd8b6a8ab5cf8d4aae6b1f24eb/Categories/Misc/misDIRection/README.md)|
 |9. |[Emdee five for life](https://github.com/Bread-Yolk/hackthebox/blob/9deb6ae692170251e3835b655b78fe30b79b1672/Categories/Misc/Emdee%20five%20for%20life/README.md)|
+|10. |[The secret of a Queen](https://github.com/Bread-Yolk/hackthebox/blob/2b9c778cdf51f9aa67292cc75ce007b338526254/Categories/Misc/The%20secret%20of%20%20a%20Queen/README.md)|
+
+
 
 </details>
 
