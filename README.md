@@ -90,7 +90,7 @@
 |5. |[Baby RE](https://github.com/Bread-Yolk/hackthebox/blob/e5d22a3cecdd098e3982f310613e26c5f8b3655d/Categories/Reversing/Baby%20RE/README.md)|
 |6. |[You Cant C Me](https://github.com/Bread-Yolk/hackthebox/blob/8c8ce88956d8b8edef2e1977e61d18aab4d1082f/Categories/Reversing/You%20Cant%20C%20Me/README.md)|
 |7. |[Find The Easy Pass](https://github.com/Bread-Yolk/hackthebox/blob/67efb00b668907bd5f5bb5ddca7f41ca9028d958/Categories/Reversing/Find%20The%20Easy%20Pass/README.md)|
-
+|8. |[Baby Crypt](https://github.com/Bread-Yolk/hackthebox/blob/10774e941c21a178e959916201fc4bd342053461/Categories/Reversing/Baby%20Crypt/README.md)|
 
 </details>
 
