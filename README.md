@@ -105,6 +105,9 @@
 |2. |[Infiltration](https://github.com/Bread-Yolk/hackthebox/blob/24851cd3a6e4b5a203531b796dfe9ffe1c5a1e7a/Categories/OSINT/Infiltration/README.md)|
 |3. |[Money Flowz](https://github.com/Bread-Yolk/hackthebox/blob/f9f661605faedaf8db8f0c44e3da13d98571f2e1/Categories/OSINT/Money%20Flowz/README.md)|
 |4. |[Missing in Action](https://github.com/Bread-Yolk/hackthebox/blob/0b46ee97a600501b2ac314895edae541efacab46/Categories/OSINT/Missing%20in%20Action/README.md)|
+|5. |[ID Exposed](https://github.com/Bread-Yolk/hackthebox/blob/2347dd7cc5ad7acaf05c53f64122fa0eb92eeef0/Categories/OSINT/ID%20Exposed/README.md)|
+
+
 </details>
 
 
