@@ -64,4 +64,9 @@ JavaServer Pages, Java Servlets, Java classes, XML files, tag libraries, static 
 constitute a web application. 
 ```
 
-10.
+10. Hence we can upload a WAR file that contains a payload or malicious script/code that can do a reverse shell back to us when we navigate that file.
+11. Let's use **msfvenom**.
+
+> RESULT
+
+
