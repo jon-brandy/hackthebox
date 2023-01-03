@@ -173,6 +173,30 @@ python -c 'import pty; pty.spawn("/bin/sh")'
 46b24a994e2c264192df7f7c060f1fdd
 ```
 
+# GET THE USER.TXT FILE
+
+26. Simply go to `home` directory. Then go to `makis`.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210297723-3eedb338-7eeb-4612-9cd8-adf2a8346760.png)
+
+
+27. Cat the `.txt` file.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210297753-5f2d7bdb-209c-4674-bc3b-aa13f715109f.png)
+
+
+28. User owned!
+
+## USER
+
+```
+f6b0bf444d16b49c167fffea3e7a9f5a
+```
+
 
 
 
