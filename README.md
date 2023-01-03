@@ -74,6 +74,7 @@
 |1. |[BabyEncryption](https://github.com/Bread-Yolk/hackthebox/blob/bcd0c433568098d73deb1d6563b4c360a71ae8a6/Categories/Cryptography/BabyEncryption/README.md)|
 |2. |[xorxorxor](https://github.com/Bread-Yolk/hackthebox/blob/026f450d84c0006c2e27ca2fdeba503f9e27e4a1/Categories/Cryptography/xorxorxor/README.md)|
 |3. |[Android in the Middle](https://github.com/Bread-Yolk/hackthebox/blob/f1080775ab4b3e0f12113879090e102f1bec52e6/Categories/Cryptography/Android-in-the-Middle/README.md)|
+|4. |[Weak RSA](https://github.com/Bread-Yolk/hackthebox/blob/9c3e52e12ccc045e6b50f19425e2ccf14ca6b15e/Categories/Cryptography/Weak%20RSA/README.md)|
 
 
 </details>
