@@ -15,7 +15,7 @@
 ![image](https://user-images.githubusercontent.com/70703371/210548679-5dd82615-0a4e-44e9-a4bf-2cd51961c46b.png)
 
 
-2. Based from the output, we know that port 445 shall be our interests, because it seems running some types of network shares. Remember that 139 & 445 is SMB port, so let's check nmap scripts about `smb-vuln`.
+2. Based from the output, we know that port 445 shall be our interests, because it seems running some types of network shares. Remember that 139 & 445 is SMB port, so let's check nmap scripts about `smb-vuln`. Now only what now we know that we're working with `windows 7`.
 3. Simply run this command:
 
 ```
@@ -138,3 +138,21 @@ The 5th module -> Is using a backdoor (must be on the system already).
 ```
 0f6cf23df2d2c550f6c7f42eab29077c
 ```
+
+
+### WITHOUT METASPLOIT APPROACH
+
+1. Now without the metasploit, let's see if there's any python script we can use in the `exploitdb`.
+
+```
+searchsploit ms17-010
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210553394-148e224b-539a-4d3b-ba17-c575aea9bfbb.png)
+
+
+2. Since we're working with windows 7, let's download this one:
+
+![image](https://user-images.githubusercontent.com/70703371/210553802-74515538-e44c-40e6-bd79-0f0d65091f96.png)
