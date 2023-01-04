@@ -140,4 +140,95 @@ password -> PrTg@dmin2018
 ![image](https://user-images.githubusercontent.com/70703371/210522597-5ee2e04e-3a89-4671-a5c6-c939c319f74c.png)
 
 
-17. 
+17. Got no clue now, let's search for **PRTG Exploit**.
+
+```
+https://www.exploit-db.com/exploits/46527
+https://github.com/wildkindcc/CVE-2018-9276
+```
+
+18. It seems we can copy the root.txt file to the public repository by this command:
+
+```
+Copy-Item -Path "C:\Users\Administrator\Desktop\root.txt" -Destination "C:\Users\Public\root.txt" -Recurse
+```
+
+19. Anyway there's another way to get the `root.txt` file, you can run `searchsploit prtg` to find another approach.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210527327-efe30d4f-e4d5-45ba-8149-ca4127840553.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210527460-b84773c9-cb66-461b-bcce-8de4c6ff0c99.png)
+
+
+21. Let's copy the script to our directory.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210527639-2bfe4558-96ea-4944-bd6b-abd0994caaa7.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210527732-924b3d9c-eb89-4f04-8742-07dd79569c01.png)
+
+
+22. We can see there's a guide.
+
+![image](https://user-images.githubusercontent.com/70703371/210527857-de864b26-619b-4c5b-9059-f123b8d222d7.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210527885-bb2ac3cc-2e22-4741-b1d3-f4d1dfe73047.png)
+
+
+23. Let's go back to our first approach, open the web app again, go to setup -> account settings -> notifications.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210529284-6edb0356-8e0c-4958-a8ca-9fe73f555f1a.png)
+
+
+24. Choose `add new notification` and change the `Notification name` to **New Notification**.
+
+![image](https://user-images.githubusercontent.com/70703371/210529829-a326963d-f08d-4fbc-97e5-9b804bf2ef5b.png)
+
+
+25. Choose the `Execute Program`.
+
+![image](https://user-images.githubusercontent.com/70703371/210529889-9584851d-0af9-4b56-a45a-dbbccb52f51c.png)
+
+
+> Choose the output file to outfile.ps1
+
+![image](https://user-images.githubusercontent.com/70703371/210530094-dd4d88bc-73e7-491f-ad72-1acdee7ff106.png)
+
+> Fill the parameter with this
+
+```
+flag.txt; Copy-Item -Path "C:\Users\Administrator\Desktop\root.txt" -Destination "C:\Users\Public\root.txt" -Recurse
+```
+
+26. Click save!
+27. Now open the ftp again, then choose the bell symbol at the notification's name.
+
+![image](https://user-images.githubusercontent.com/70703371/210530573-9aec385c-72ad-4e2d-bc08-20fe269c08d0.png)
+
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210530636-c18197f9-842c-4b53-9317-488798f4f4ee.png)
+
+
+28. Download the `root.txt` file.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210530779-c75093d2-d407-45ec-9f3a-300a5a0ffbf2.png)
+
+
+## ROOT FLAG
+
+```
+4b0f0ae842643eb2251cc83372cf48b2
+```
+
