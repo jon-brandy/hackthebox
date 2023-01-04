@@ -89,8 +89,52 @@ The 5th module -> Is using a backdoor (must be on the system already).
 
 
 7. When i tried to list all the directories, we got many directories. But our interest here is to jump to the `Users` or `users` directory.
-8. Let's see if we can find one.
+8. Let's try one of them.
 
 > RESULT
 
+![image](https://user-images.githubusercontent.com/70703371/210551510-4fe09bf9-069e-4536-b46f-1988c57e440a.png)
 
+
+9. Got it, now let's lists it.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210551605-019e6678-2cef-4fb8-a707-34de82dfb9fc.png)
+
+
+10. Let's jump to `harris` -> `Desktop`.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210551720-de8cc37e-ad94-460d-9dd5-86acebb56073.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210551749-b6f42d66-1e49-4390-b906-5e30048ebe5c.png)
+
+
+11. Got the user flag!
+
+## USER FLAG (WITH METASPLOIT)
+
+```
+32e24b1a214c952a07446d5317505f5a
+```
+
+12. Now to get the root, let's jump to the `Administrator` directory, then go to `Desktop`.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210551976-4e651bfd-1885-4582-b0ed-53acb1b7fad5.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210552024-5810ae0c-fcf4-4075-af40-2de49d59ad91.png)
+
+
+13. Got the root flag!
+
+## ROOT FLAG (WITH METASPLOIT)
+
+```
+0f6cf23df2d2c550f6c7f42eab29077c
+```
