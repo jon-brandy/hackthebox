@@ -44,6 +44,12 @@ Are you 1337 enough?
 ![image](https://user-images.githubusercontent.com/70703371/210160703-2c5e0343-ea88-4132-81f4-b16c0bcd3c13.png)
 
 
+> NOTES
+
+```
+/dev/random and /dev/urandom are special files that serve as cryptographically secure pseudorandom number generators in linux. They allow access to environmental noise collected from device drivers and other sources.
+```
+
 8. What comes to my mind is we could overwrite the value of `local_13c` in the `/dev/urandom` with the value of `winner` divided by the `1337c0de`.
 
 ```
