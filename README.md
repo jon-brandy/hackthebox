@@ -62,6 +62,9 @@
 |5. |[Chase](https://github.com/Bread-Yolk/hackthebox/blob/d51855a03e39690f4734d0ad9cb7297efe6c5ca1/Categories/Forensics/Chase/README.md)|
 |6. |[Event Horizon](https://github.com/Bread-Yolk/hackthebox/blob/407d9b37f12b71edd6281986dac1a37122cdcdbe/Categories/Forensics/Event%20Horizon/README.md)|
 |7. |[Insider](https://github.com/Bread-Yolk/hackthebox/blob/0efa80d8a52f5df666727284679216bffd0cd097/Categories/Forensics/Insider/README.md)|
+|8. |[Export](https://github.com/Bread-Yolk/hackthebox/blob/856a33f723e901f195787aced92a4bd0bc525752/Categories/Forensics/Export/README.md)|
+
+
 
 </details>
 
