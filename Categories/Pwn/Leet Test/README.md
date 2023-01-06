@@ -63,4 +63,11 @@ Assume the random bytes is 77 77 77 77, then:
 Hence, we only have 2 random bytes left.
 ```
 
-8.  
+8. So at the end of the while loop, we have 2 random bytes.
+9. The "while loop" will always be active, we need to hit the `break` statements to stop it.
+
+![image](https://user-images.githubusercontent.com/70703371/211010771-888a07b1-0506-44d7-b000-a815497f7ac9.png)
+
+
+10. Based from the "while loop", we want to pass the if condition so we can get the `flag.txt` file, the problem here is we can do bufferoverflow because the input we can do is only the "name". Not only that the `local_128` variable (name) is not used in the if condition.
+11. But we can pass that by utilize the format string vulnerability.
