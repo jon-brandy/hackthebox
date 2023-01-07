@@ -9,24 +9,53 @@ We found evidence of a password spray attack against the Domain Controller, and 
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/210036188-251c3814-ce9e-4844-b5b3-88c9ea7f6ebb.png)
-
-
-![image](https://user-images.githubusercontent.com/70703371/210036198-17f35529-93c2-471a-8994-4a2f0d0d5d94.png)
+![image](https://user-images.githubusercontent.com/70703371/211130806-fb17c411-8590-4417-9098-8a4e2a7a9b0b.png)
 
 
 2. Let's strings the `.bmc` file.
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/210036284-5d7c6be9-c1a9-42f7-bf50-74d654a14fd2.png)
+![image](https://user-images.githubusercontent.com/70703371/211130814-0e3eba3f-d05a-4d38-8c0b-7dde1ba68623.png)
 
 
 3. Hmm.. Let's open the other file using hexedit.
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/210036391-d917a325-fb00-480d-80bb-1fe0b20850ca.png)
+![image](https://user-images.githubusercontent.com/70703371/211130841-36d65954-fc65-43cf-bf4f-bc465e3d33ee.png)
 
 
-4. 
+5. Based from the result we can conclude that it's RDP bitmap cache file.
+6. We can use [this](https://github.com/ANSSI-FR/bmc-tools) python script to extract the bitmaps from cache file.
+
+> RESULT
+
+
+![image](https://user-images.githubusercontent.com/70703371/211131148-d7775196-59f9-4aeb-9361-c172e0af4b36.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211131169-d125cb37-22d8-4675-afd4-b3ba35d5057b.png)
+
+
+7. Let's collage all of them.
+
+```
+eog *.bin_collage.bmp
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211131214-b96b73c1-0519-41f8-b01b-79cdddb1bc0c.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211131242-032429fc-6c9f-4d2e-a54d-3d7cc7e01cb5.png)
+
+
+8. Got the flag!
+
+## FLAG
+
+```
+HTB{w47ch_y0ur_c0Nn3C71}
+```
