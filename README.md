@@ -64,7 +64,7 @@
 |7. |[Insider](https://github.com/Bread-Yolk/hackthebox/blob/0efa80d8a52f5df666727284679216bffd0cd097/Categories/Forensics/Insider/README.md)|
 |8. |[Export](https://github.com/Bread-Yolk/hackthebox/blob/856a33f723e901f195787aced92a4bd0bc525752/Categories/Forensics/Export/README.md)|
 |9. |[Persistence](https://github.com/Bread-Yolk/hackthebox/blob/1c0ec0afbd6ac2249b5de95b2fee0e6a2c55dcfa/Categories/Forensics/Persistence/README.md)|
-
+|10. |[No Place To Hide](https://github.com/Bread-Yolk/hackthebox/blob/14692edf0f31388ffc0224ba826478ffdbd2ce16/Categories/Forensics/No%20Place%20To%20Hide/README.md)|
 
 </details>
 
