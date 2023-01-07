@@ -46,4 +46,43 @@ We're noticing some strange connections from a critical PC that can't be replace
 
 
 
-7. 
+7. Let's jump to windows.
+
+> INSIDE - WINDOWS
+
+![image](https://user-images.githubusercontent.com/70703371/211130560-ad53168d-5bc1-472a-adc1-5f7d442d2d02.png)
+
+
+8. Jump to currentVersion and choose `run`.
+
+
+![image](https://user-images.githubusercontent.com/70703371/211130587-c536741a-02bc-4fb3-bcbf-35ae0165dc3b.png)
+
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211130595-051bbc8d-5e2b-4146-a916-b83b4ffb2ee7.png)
+
+
+9. Looks like the flag is encoded in base64. Let's decode it.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211130644-0a08f0df-0fb4-41a1-aa8b-06e86f158425.png)
+
+
+10. Got the flag!
+
+
+## FLAG
+
+```
+HTB{1_C4n_kw3ry_4LR19h7}
+```
+
+
+## LEARNING REFERENCES:
+
+```
+https://pentestlab.blog/2019/10/01/persistence-registry-run-keys/
+```
