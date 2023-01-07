@@ -71,7 +71,17 @@
 ![image](https://user-images.githubusercontent.com/70703371/211158201-f586b991-61d5-4bce-8f94-87e044cb8322.png)
 
 
-12. 
+12. When i tried to cracked the admin's hash, seems the plaintext is not leaked in the internet. Then i tried for `josh`. Got this:
+
+> RESULT
+
+
+![image](https://user-images.githubusercontent.com/70703371/211158641-d0655d32-dd09-4d98-946e-dc5ccb46ad25.png)
+
+
+13. I tried to login ssh with josh as the username and the password as the plaintext we cracked.
+14. But it says wrong password.
+15. Let's find another approach now.
 
 
 ## LEARNING REFERENCES:
