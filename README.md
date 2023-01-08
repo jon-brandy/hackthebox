@@ -66,7 +66,7 @@
 |9. |[Persistence](https://github.com/Bread-Yolk/hackthebox/blob/1c0ec0afbd6ac2249b5de95b2fee0e6a2c55dcfa/Categories/Forensics/Persistence/README.md)|
 |10. |[No Place To Hide](https://github.com/Bread-Yolk/hackthebox/blob/14692edf0f31388ffc0224ba826478ffdbd2ce16/Categories/Forensics/No%20Place%20To%20Hide/README.md)|
 |11. |[Lure](https://github.com/Bread-Yolk/hackthebox/blob/040dae2f2d76d366998e7b3b42f4719e364eeada/Categories/Forensics/Lure/README.md)|
-
+|12. |[Logger](https://github.com/Bread-Yolk/hackthebox/blob/8abb9e295e8a06803d860766c1e7b15feee529c4/Categories/Forensics/Logger/README.md)|
 
 
 
