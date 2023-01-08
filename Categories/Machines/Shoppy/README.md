@@ -153,6 +153,10 @@ password: Sh0ppyBest@pp!
 
 > RESULT
 
+![image](https://user-images.githubusercontent.com/70703371/211185372-2a85a52f-f126-4326-b0d1-fff33fd90eb4.png)
+
+
+
 ![image](https://user-images.githubusercontent.com/70703371/211184512-0d4e95ae-f62d-43ac-b6ac-c6a00ab1e880.png)
 
 
@@ -167,14 +171,129 @@ password: Sh0ppyBest@pp!
 ## USER FLAG
 
 ```
-
+ad6c565914c1420ed389310014cd19c1
 ```
 
 
+26. Let's find the root now.
+27. Go back twice, then jump to the root directory.
+
+> GO BACK TWICE - RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211184711-d1f6459c-fdca-4603-9f5c-250fe2debfb7.png)
+
+
+> THE ROOT
+
+![image](https://user-images.githubusercontent.com/70703371/211184744-9d14dd3d-9d9c-4860-a065-e1aed1f11d1a.png)
+
+
+28. I already tried `sudo su` and obviouly we can't do that in ssh mode.
+29. Remember there's `deploy` directory inside the `home` directory, let's jump there.
+
+![image](https://user-images.githubusercontent.com/70703371/211184814-76055ce6-95b2-43fb-b0e4-6fd046632104.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211184825-0c68b57c-d400-4a54-b15c-b51438c54591.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211184836-e1884eeb-7fff-4bf5-a93c-dcd5c8b6d804.png)
+
+
+30. Can't cat the creds, notice there's an executeable binary file.
+
+![image](https://user-images.githubusercontent.com/70703371/211184847-e4acc254-f673-44c2-94c3-2da18187e2f7.png)
+
+
+31. Let's try to run it.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211184851-52c6a90e-8a90-4fa9-9f52-c77afe5930b2.png)
+
+
+32. Cat it then.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211184878-8db2afd6-8a8c-4f4f-b9d9-a3865e3b110b.png)
+
+
+33. Hmm.. got a password there (Sample).
+34. I think we need to find a way to run the binary.
+35. Well the logic here is, the username to run sudo mode must be `deploy` (because we're in the "deploy" directory, not in "jaeger" directory). 
+36. However, remember this warning:
+
+![image](https://user-images.githubusercontent.com/70703371/211185111-6c0aca0f-5d0b-4c9e-a0fd-da2aa5ff5e41.png)
+
+
+37. Hence we need to run the sudomode for `deploy` using this command:
+
+```
+sudo -u deploy /home/deploy/password-manager
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211185175-5b10073b-2777-4385-a0ee-a52a39441d7d.png)
+
+> GREAT! Now enter the pass we found before when cat the binary -> Sample.
+
+![image](https://user-images.githubusercontent.com/70703371/211185236-439e56cf-041c-4cc0-bb45-b1a0c3db5adb.png)
+
+
+38. Nice! Got the creds. Let's login as "deploy" via ssh.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211185274-5d7d1107-dd08-4049-871a-f4a4758559e4.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211185292-14188fe5-096a-4154-9292-94f5251f8113.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211185382-def4ac8f-d23c-4a21-9ac4-9d0d599ca619.png)
+
+
+39. Notice when i enter `id`. It seems we are in a docker container.
+40. To get into the root mode. Let's enter `bash` first.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211185447-a6a41396-26a7-4f3f-adba-eb5b95614f71.png)
+
+
+41. Then i did a used [this](https://gtfobins.github.io/#) website to search about docker command that gets us a root shell.
+
+![image](https://user-images.githubusercontent.com/70703371/211185498-a201ce6c-f76b-417e-b136-780e1176e5d8.png)
+
+
+```
+docker run -v /:/mnt --rm -it alpine chroot /mnt sh
+```
+
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211185516-cb2d9fdc-31fb-4028-ba35-de8923cbf343.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211185525-42e27219-7081-4051-b884-bc318e403ead.png)
+
+
+42. Got the root flag!
+
+
+## ROOT FLAG
+
+```
+66ca567a8cf4694e15ce2a52f9466d34
+```
 
 
 ## LEARNING REFERENCES:
 
 ```
 https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/NoSQL%20Injection
+https://gtfobins.github.io/#
 ```
