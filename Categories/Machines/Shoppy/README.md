@@ -81,7 +81,96 @@
 
 13. I tried to login ssh with josh as the username and the password as the plaintext we cracked.
 14. But it says wrong password.
-15. Let's find another approach now.
+15. Let's use another approach.
+16. Maybe let's use `fuff` to checks if there are any subdomains available.
+
+```
+ffuf -u http://shoppy.htb -H "Host: FUZZ.shoppy.htb" -w /usr/share/wordlists/SecLists-master/Discovery/DNS/bitquark-subdomains-top100000.txt -mc all
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211184219-9d499667-64d4-4315-97f6-b9911d1446d2.png)
+
+
+
+17. Since there's many responses with size of 169. Let's filter it.
+
+```
+ffuf -u http://shoppy.htb -H "Host: FUZZ.shoppy.htb" -w /usr/share/wordlists/SecLists-master/Discovery/DNS/bitquark-subdomains-top100000.txt -mc all -fs 169
+
+-u -> stands for target URL
+-H -> stands for header.
+-w -> stands for wordlist file path.
+-mc -> stands for match http status code.
+-fs -> stands for filter http response size.
+
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211184255-429d8b8f-503b-406f-96a1-130a5c6fd4d3.png)
+
+
+18. Got it!
+19. Now place the subdomain to `/etc/hosts` first, then open it on the web browser.
+
+> ON THE WEB BROWSER
+
+![image](https://user-images.githubusercontent.com/70703371/211184365-e5b45f9c-220f-48e7-b05c-4ca0fe604e8d.png)
+
+
+20. Now let's enter `josh` creds.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211184404-80d11564-9a2b-4f05-a474-26c78bbc5a49.png)
+
+
+21. It looks like we have another username here.
+
+![image](https://user-images.githubusercontent.com/70703371/211184425-7be4abe0-da8d-43c1-8e9c-a9a71aef931b.png)
+
+
+22. Let's check every channels here.
+
+![image](https://user-images.githubusercontent.com/70703371/211184450-3961c296-c0d1-4e7c-97eb-6707435dd859.png)
+
+
+23. Got a creds at `Deploy Machine` channel.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211184468-1fd3a951-c8c1-41e6-bca0-d86e7be070e3.png)
+
+
+24. Let's try **ssh** to login now.
+
+```
+username: josh
+password: Sh0ppyBest@pp!
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211184512-0d4e95ae-f62d-43ac-b6ac-c6a00ab1e880.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211184558-e6dfb4e7-df2a-483b-9152-f69b42228c25.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211184566-03584828-22cf-4f7b-9054-d9c012869f1e.png)
+
+
+25 Got the user flag!
+
+## USER FLAG
+
+```
+
+```
+
+
 
 
 ## LEARNING REFERENCES:
