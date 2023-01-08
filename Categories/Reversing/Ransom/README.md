@@ -22,11 +22,17 @@ A system administrator downloaded the attachment from the email and ran it, and 
 ![image](https://user-images.githubusercontent.com/70703371/211203782-99e84329-a7a0-4822-8db2-44c150a10fea.png)
 
 
-4. When i tried to check few functions, i found this `encrypt` function that could be our interest.
+4. When i tried to check few functions, i found `encrypt` function and `encryptFile` function that could be our interest.
 
 
 ![image](https://user-images.githubusercontent.com/70703371/211205977-b2d4e2ea-c6d7-40ec-9da2-af2d124bd7bc.png)
 
 
+![image](https://user-images.githubusercontent.com/70703371/211206090-abe7b431-3202-40c4-916b-60df4948ae37.png)
 
+
+5. Notice when i tried to hover the `local_17` value. I got `CESREPUS` as characters.
+6. Then for the `local_f` value in characters is `RU` and `local_d` value in character is `E`.
+7. Concate all of them shall give us `ERUCESREPUS`.
+8. 
 
