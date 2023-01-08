@@ -22,7 +22,11 @@ A system administrator downloaded the attachment from the email and ran it, and 
 ![image](https://user-images.githubusercontent.com/70703371/211203782-99e84329-a7a0-4822-8db2-44c150a10fea.png)
 
 
-4. 
+4. When i tried to check few functions, i found this `encrypt` function that could be our interest.
+
+
+![image](https://user-images.githubusercontent.com/70703371/211205977-b2d4e2ea-c6d7-40ec-9da2-af2d124bd7bc.png)
+
 
 
 
