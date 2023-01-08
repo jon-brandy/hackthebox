@@ -63,9 +63,19 @@
 ![image](https://user-images.githubusercontent.com/70703371/211188145-a76d347c-4916-4e46-8bbb-cf96c3c260ea.png)
 
 
-9. Hence, let's see the download request using burpsuite.
+9. Hence, let's see the download request using burpsuite and send it to repeater.
 
 > RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211188308-051c41d0-21c5-47e5-bb41-52437ead0a37.png)
+
+
+10. To check whether it's vulnerable to command injection, let's add `;id` behind the value of filetype parameter.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211188356-5eefb301-754f-4bc2-8dd4-e80620f0bf76.png)
+
 
 
 
