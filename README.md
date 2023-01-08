@@ -67,7 +67,7 @@
 |10. |[No Place To Hide](https://github.com/Bread-Yolk/hackthebox/blob/14692edf0f31388ffc0224ba826478ffdbd2ce16/Categories/Forensics/No%20Place%20To%20Hide/README.md)|
 |11. |[Lure](https://github.com/Bread-Yolk/hackthebox/blob/040dae2f2d76d366998e7b3b42f4719e364eeada/Categories/Forensics/Lure/README.md)|
 |12. |[Logger](https://github.com/Bread-Yolk/hackthebox/blob/8abb9e295e8a06803d860766c1e7b15feee529c4/Categories/Forensics/Logger/README.md)|
-|13. |[Ransom](https://github.com/Bread-Yolk/hackthebox/blob/bed3462da6bc1874a6e621963be1041b3682e259/Categories/Reversing/Ransom/README.md)|
+
 
 
 
@@ -103,6 +103,8 @@
 |6. |[You Cant C Me](https://github.com/Bread-Yolk/hackthebox/blob/8c8ce88956d8b8edef2e1977e61d18aab4d1082f/Categories/Reversing/You%20Cant%20C%20Me/README.md)|
 |7. |[Find The Easy Pass](https://github.com/Bread-Yolk/hackthebox/blob/67efb00b668907bd5f5bb5ddca7f41ca9028d958/Categories/Reversing/Find%20The%20Easy%20Pass/README.md)|
 |8. |[Baby Crypt](https://github.com/Bread-Yolk/hackthebox/blob/10774e941c21a178e959916201fc4bd342053461/Categories/Reversing/Baby%20Crypt/README.md)|
+|9. |[Ransom](https://github.com/Bread-Yolk/hackthebox/blob/bed3462da6bc1874a6e621963be1041b3682e259/Categories/Reversing/Ransom/README.md)|
+
 
 </details>
 
