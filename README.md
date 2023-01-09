@@ -68,7 +68,7 @@
 |11. |[Lure](https://github.com/Bread-Yolk/hackthebox/blob/040dae2f2d76d366998e7b3b42f4719e364eeada/Categories/Forensics/Lure/README.md)|
 |12. |[Logger](https://github.com/Bread-Yolk/hackthebox/blob/8abb9e295e8a06803d860766c1e7b15feee529c4/Categories/Forensics/Logger/README.md)|
 |13. |[Halloween Invitation](https://github.com/Bread-Yolk/hackthebox/blob/103059774af7efb85c9d04768a9e038ae432f4ce/Categories/Forensics/Halloween%20Invitation/README.md)|
-
+|14. |[Peel Back The Layers](https://github.com/Bread-Yolk/hackthebox/blob/eabfe7f9ddbf138837fe9dd36acbea83fa91a4c1/Categories/Forensics/Peel%20Back%20The%20Layers/README.md)|
 
 
 
