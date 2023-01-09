@@ -10,36 +10,27 @@ A copy of the email was recovered and is provided for reference. Find and decode
 - NONE
 
 ## STEPS:
-1. First, unzip the file given.
+1. First, unzip the file given and jump to the extracted directory.
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/207777216-c27ab91f-d18a-4300-b02f-70b716d25b30.png)
+![image](https://user-images.githubusercontent.com/70703371/211300298-38e48d49-a6f8-4848-af8b-bef9cab455bd.png)
 
 
-2. Jump the extracted folder.
-
-![image](https://user-images.githubusercontent.com/70703371/207777280-2282bbf5-a6c9-41bd-a5d4-6148af472705.png)
-
-
-3. Let's `strings` the imageinfo.txt file.
+2. Let's run vol.py to the memory dump file.
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/207777675-41520362-973a-4cdd-9326-bad0f00c3130.png)
+![image](https://user-images.githubusercontent.com/70703371/211300407-2f87b5fa-07af-4c27-aee4-f5635306953f.png)
 
 
-4. I think it provides information on flounder-pc-memdump.elf memory file. Now Strings the `.eml` file.
+3. Now we know the suggested profile.
 
-> RESULT
-
-
-![image](https://user-images.githubusercontent.com/70703371/207778293-376ada2c-1d4e-4dc1-93fd-b0cd0016ae10.png)
+![image](https://user-images.githubusercontent.com/70703371/211300457-2c421a2b-58cb-496b-9587-3269a5e64949.png)
 
 
-5. It looks like there's a `.zip` file?
+4. Hence run this command:
 
-![image](https://user-images.githubusercontent.com/70703371/207778361-c0075d3a-bdb2-4537-bf2f-509f0ff784ad.png)
+```
 
-
-6. I
+```
