@@ -41,8 +41,47 @@ Can you find a way out of this loop?
 
 7. Seems we need to automate this. So i did a small outsource on the internet for a script to automate this unzipping. Found this bash script.
 
+```sh
+#!/bin/bash
+
+ZIPFILE=$1
+RESULT=0
+
+while [ $RESULT -eq 0 ]
+do
+PASSWORD=$( unzip -l $ZIPFILE | grep -E "^\s+[0-9]+" | grep -Eo "[0-9]+\.zip" | grep -Eo "[0-9]+" )
+unzip -P "$PASSWORD" "$ZIPFILE"
+RESULT=$?
+ZIPFILE="$PASSWORD.zip"
+done
+```
+
 > RESULT
 
+![image](https://user-images.githubusercontent.com/70703371/211329788-8735e317-7ad6-4813-a317-7ebd8c69d6a4.png)
+
+
+8. Stopped at 6969.
+9. Let's use **fcrackzip** for it.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211329990-9da3c456-6a09-41dd-9e71-5cf2972ceeb5.png)
+
+
+> USE THE PASS, THEN STRINGS THE FILE WE GOT - RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211330191-fb620c18-0017-49cf-8779-23d6cb0e3a78.png)
+
+
+10. Got the flag!
+
+
+## FLAG
+
+```
+HTB{z1p_and_unz1p_ma_bruddahs}
+```
 
 
 
