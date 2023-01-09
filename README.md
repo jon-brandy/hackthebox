@@ -170,7 +170,7 @@
 |8. |[misDIRection](https://github.com/Bread-Yolk/hackthebox/blob/2e27902e1fa55bbd8b6a8ab5cf8d4aae6b1f24eb/Categories/Misc/misDIRection/README.md)|
 |9. |[Emdee five for life](https://github.com/Bread-Yolk/hackthebox/blob/9deb6ae692170251e3835b655b78fe30b79b1672/Categories/Misc/Emdee%20five%20for%20life/README.md)|
 |10. |[The secret of a Queen](https://github.com/Bread-Yolk/hackthebox/blob/2b9c778cdf51f9aa67292cc75ce007b338526254/Categories/Misc/The%20secret%20of%20%20a%20Queen/README.md)|
-
+|11. |[Eternal Loop](https://github.com/Bread-Yolk/hackthebox/blob/371b094e2c225f4e90cc8037c3f1fab5c60227b3/Categories/Misc/Eternal%20Loop/README.md)|
 
 
 </details>
