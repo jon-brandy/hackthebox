@@ -52,9 +52,10 @@ sudo docker save steammaintainer/gearrepairimage > peel.tar
 
 
 8. Surprisingly got the flag!
+9. But remove the `H` character first.
 
 ## FLAG
 
 ```
-HTB{1_r3H4lly_l1kH3_st34mpHunk_r0b0Hts!!!}
+HTB{1_r34lly_l1k3_st34mpunk_r0b0ts!!!}
 ```
