@@ -34,4 +34,21 @@
 ![image](https://user-images.githubusercontent.com/70703371/211477967-7beb1d95-b90d-48e8-9e2a-9d25744803b7.png)
 
 
-3. 
+3. Remember there's port `3000` with `ppp?` as it's service.
+
+![image](https://user-images.githubusercontent.com/70703371/211479120-a0330dac-c1db-4076-88dc-c7128d2c3d01.png)
+
+
+4. Based from it's info, it opens a login page.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211479182-3b461ea9-f0ec-46af-9f5e-2547d74e817a.png)
+
+
+5. I did a small outsource about grafana and found CVE about [grafana exploit](https://github.com/pedrohavay/exploit-grafana-CVE-2021-43798).
+
+6. Let's use the script from the github documentation.
+
+> RESULT
+
