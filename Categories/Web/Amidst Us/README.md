@@ -27,3 +27,18 @@ Can you hack into it despite the low visibility and get them access?
 ![image](https://user-images.githubusercontent.com/70703371/211489188-8dcb5d73-172c-4eee-bb8c-7fe0a8075159.png)
 
 
+3. When i pressed this one:
+
+![image](https://user-images.githubusercontent.com/70703371/211499478-4d6ac1ee-f261-4a9b-b154-911e35849bd5.png)
+
+
+4. We can upload a file.
+
+![image](https://user-images.githubusercontent.com/70703371/211499558-fac26588-b305-450c-bfba-1a0e3667100e.png)
+
+
+5. Hence let's get catch that request.
+
+> RESULT
+
+
