@@ -70,7 +70,7 @@
 |13. |[Halloween Invitation](https://github.com/Bread-Yolk/hackthebox/blob/103059774af7efb85c9d04768a9e038ae432f4ce/Categories/Forensics/Halloween%20Invitation/README.md)|
 |14. |[Peel Back The Layers](https://github.com/Bread-Yolk/hackthebox/blob/eabfe7f9ddbf138837fe9dd36acbea83fa91a4c1/Categories/Forensics/Peel%20Back%20The%20Layers/README.md)|
 |15. |[Reminiscent](https://github.com/Bread-Yolk/hackthebox/blob/c6737e4f4bbbba7a43e184c5eb46a816fefbb955/Categories/Forensics/Reminiscent/README.md)|
-
+|16. |[Intergalactic Recovery](https://github.com/Bread-Yolk/hackthebox/blob/b4f592a62e8abf0d8c8ec34acd3abcab3f411ef6/Categories/Forensics/Intergalactic%20Recovery/README.md)|
 
 </details>
 
