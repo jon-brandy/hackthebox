@@ -65,17 +65,56 @@ write('disk3.img', disk3) # save the recovered disk
 
 
 8. Yep it's obviously still corrupted, because we still need to reconfigure the raid 5.
+9. Now before going any further, i already done it to the end and still can't open the pdf file. So i did a small outsource about this problem and found out that we need to switch the disk2 and disk3. What i intend to say is, we need to change the order of the disk. So the disk2 shall renamed to disk3, and disk3 shall renamed to disk2
+
+
+![image](https://user-images.githubusercontent.com/70703371/211974289-47bd2c89-84b3-4553-85a7-141e2ba6719c.png)
+
+
 9. Now let's use **losetup** to setup and control loop devices.
 
 ```
-sudo losetup /dev/loop1 fef0d1cd.img
-sudo losetup /dev/loop2 06f98d35.img
+sudo losetup /dev/loop1 disk1.img
+sudo losetup /dev/loop2 disk2.img
 sudo losetup /dev/loop3 disk3.img
 ```
 
 ![image](https://user-images.githubusercontent.com/70703371/211968964-bb8e4210-bae9-464b-8846-ecfc35d78f62.png)
 
  
-10. Next, let's use **mdadm**, it's used for 
+10. Next, let's use **mdadm**, it's used for manage MD devices aka Linux Software RAID
+
+```
+sudo mdadm --create --level=5 --raid-devices=3 /dev/md0 /dev/loop1 /dev/loop2 /dev/loop3
+```
+
+![image](https://user-images.githubusercontent.com/70703371/211970653-51c0780a-de42-495d-8940-4b7904108020.png)
 
 
+> FOLLOW THIS STEP TO MOUNT THE DISK
+
+![image](https://user-images.githubusercontent.com/70703371/211970744-cb49acf3-590a-47ae-b586-772c2de770b2.png)
+
+```
+sudo mount /dev/md0 /mnt/raid
+```
+
+![image](https://user-images.githubusercontent.com/70703371/211970973-944f2f0e-8f12-4e57-a5fe-21d8e0ac501a.png)
+
+
+11. Check what we get inside.
+
+![image](https://user-images.githubusercontent.com/70703371/211971117-3c58568d-1927-49a1-91aa-f940d8d565a3.png)
+
+
+12. Let's copy that to our current directory.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/211971212-af573fb8-1263-4915-9ed5-7457a420644f.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/211971270-09b6539f-717a-4285-b051-2abbdc14e850.png)
+
+
+13. I
