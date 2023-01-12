@@ -114,7 +114,13 @@ sudo mount /dev/md0 /mnt/raid
 ![image](https://user-images.githubusercontent.com/70703371/211971212-af573fb8-1263-4915-9ed5-7457a420644f.png)
 
 
-![image](https://user-images.githubusercontent.com/70703371/211971270-09b6539f-717a-4285-b051-2abbdc14e850.png)
+![image](https://user-images.githubusercontent.com/70703371/211978216-a3709706-6190-41b9-9389-cb7ab75f616a.png)
 
 
-13. I
+13. Got the flg!
+
+## FLAG
+
+```
+HTB{f33ls_g00d_t0_b3_1nterg4l4ct1c_m0st_w4nt3d}
+```
