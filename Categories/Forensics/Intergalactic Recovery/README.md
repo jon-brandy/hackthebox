@@ -79,8 +79,6 @@ sudo losetup /dev/loop2 disk2.img
 sudo losetup /dev/loop3 disk3.img
 ```
 
-![image](https://user-images.githubusercontent.com/70703371/211968964-bb8e4210-bae9-464b-8846-ecfc35d78f62.png)
-
  
 10. Next, let's use **mdadm**, it's used for manage MD devices aka Linux Software RAID
 
