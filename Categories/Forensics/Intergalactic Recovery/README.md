@@ -107,11 +107,9 @@ sudo mount /dev/md0 /mnt/raid
 ![image](https://user-images.githubusercontent.com/70703371/211971117-3c58568d-1927-49a1-91aa-f940d8d565a3.png)
 
 
-12. Let's copy that to our current directory.
+12. Let's copy that to our current directory, then open the pdf file.
 
 > RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/211971212-af573fb8-1263-4915-9ed5-7457a420644f.png)
 
 
 ![image](https://user-images.githubusercontent.com/70703371/211978216-a3709706-6190-41b9-9389-cb7ab75f616a.png)
