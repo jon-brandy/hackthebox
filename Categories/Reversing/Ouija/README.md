@@ -41,14 +41,23 @@ You've enlisted a medium who can translate it, but they like to take their time.
 ![image](https://user-images.githubusercontent.com/70703371/209524406-6f486aec-aec4-4948-9b15-d9a489a2e1c7.png)
 
 
-8. Well let's change every `sleep()` function's value to 0.
+8. Well let's change every `sleep()` function's that say 10 to 0.
 
-![image](https://user-images.githubusercontent.com/70703371/209524619-b097e549-c5dc-41e5-bda1-3752cb99d8a8.png)
+![image](https://user-images.githubusercontent.com/70703371/212287721-55bbf5db-25b7-45af-9934-75af525c7a4a.png)
+
+9. Export the binary, make it executeable, now run the binary.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/212292151-b63c6242-e92d-4c66-8a1a-70aa6a7a7bff.png)
 
 
-![image](https://user-images.githubusercontent.com/70703371/209524662-0d0c5920-5b6f-47a5-9869-0d355157d392.png)
+10. As you can see, it starts to print out the flag.
 
+## FLAG
 
-9. 
+```
+
+```
 
 
