@@ -52,12 +52,15 @@ You've enlisted a medium who can translate it, but they like to take their time.
 ![image](https://user-images.githubusercontent.com/70703371/212292151-b63c6242-e92d-4c66-8a1a-70aa6a7a7bff.png)
 
 
+![image](https://user-images.githubusercontent.com/70703371/212323240-290e7e20-eff7-4a29-98a8-d32719583a22.png)
+
+
 10. As you can see, it starts to print out the flag.
 
 ## FLAG
 
 ```
-
+HTB{Sleping_is_not_obfuscation}
 ```
 
 
