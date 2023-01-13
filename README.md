@@ -72,7 +72,7 @@
 |15. |[Reminiscent](https://github.com/Bread-Yolk/hackthebox/blob/c6737e4f4bbbba7a43e184c5eb46a816fefbb955/Categories/Forensics/Reminiscent/README.md)|
 |16. |[Intergalactic Recovery](https://github.com/Bread-Yolk/hackthebox/blob/b4f592a62e8abf0d8c8ec34acd3abcab3f411ef6/Categories/Forensics/Intergalactic%20Recovery/README.md)|
 |16. |[Downgrade](https://github.com/Bread-Yolk/hackthebox/blob/a0275a7b15574ef8660e1c83fc57f9313ab60d61/Categories/Forensics/Downgrade/README.md)|
-
+|17. |[Automation](https://github.com/Bread-Yolk/hackthebox/blob/5e9fca100f99c718d21b59ad4dacc93b90e3c817/Categories/Forensics/Automation/README.md)|
 
 </details>
 
