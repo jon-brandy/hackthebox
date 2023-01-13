@@ -1,4 +1,4 @@
-> CHALLENGES SOLVED
+> CTF CHALLENGES SOLVED
 
 <details>
 <br>
