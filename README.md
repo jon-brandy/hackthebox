@@ -114,7 +114,7 @@
 |9. |[Ransom](https://github.com/Bread-Yolk/hackthebox/blob/bed3462da6bc1874a6e621963be1041b3682e259/Categories/Reversing/Ransom/README.md)|
 |10. |[Anti Flag](https://github.com/Bread-Yolk/hackthebox/blob/76aad1501e5806a3ff1fc666ab223232f50f5afa/Categories/Reversing/Anti%20Flag/README.md)|
 |11. |[Ouija](https://github.com/Bread-Yolk/hackthebox/blob/509e773686d7c001a229c1e0471ada07a625759a/Categories/Reversing/Ouija/README.md)|
-
+|12. |[Tear Or Dear](https://github.com/Bread-Yolk/hackthebox/blob/360e7c8eaf0484c3894ab73452280e8219339400/Categories/Reversing/Tear%20Or%20Dear/README.md)|
 
 
 </details>
