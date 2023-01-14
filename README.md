@@ -88,7 +88,7 @@
 |2. |[xorxorxor](https://github.com/Bread-Yolk/hackthebox/blob/026f450d84c0006c2e27ca2fdeba503f9e27e4a1/Categories/Cryptography/xorxorxor/README.md)|
 |3. |[Android in the Middle](https://github.com/Bread-Yolk/hackthebox/blob/f1080775ab4b3e0f12113879090e102f1bec52e6/Categories/Cryptography/Android-in-the-Middle/README.md)|
 |4. |[Weak RSA](https://github.com/Bread-Yolk/hackthebox/blob/9c3e52e12ccc045e6b50f19425e2ccf14ca6b15e/Categories/Cryptography/Weak%20RSA/README.md)|
-
+|5. |[Classic, yet complicated!](https://github.com/Bread-Yolk/hackthebox/blob/8493730b525986eae8995e5e669427d8f51ed557/Categories/Cryptography/Classic,%20yet%20complicated!/README.md)|
 
 </details>
 
