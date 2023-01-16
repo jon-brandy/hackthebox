@@ -35,7 +35,7 @@ Can you get to the profile page of the admin?
 6. Hence, i tried to use **padbuster**.
 
 ```
-padbuster http://188.166.148.162:32617/profile.php 9gH0dY2dcbIcTGya8Oe08osnxYExeoXx4ZnLS1hltFWNxYCJ2hWTdQ%3D%3D 8 -cookies iknowmag1k=9gH0dY2dcbIcTGya8Oe08osnxYExeoXx4ZnLS1hltFWNxYCJ2hWTdQ%3D%3D
+padbuster http://188.166.148.162:32309/profile.php 9gH0dY2dcbIcTGya8Oe08osnxYExeoXx4ZnLS1hltFWNxYCJ2hWTdQ%3D%3D 8 -cookies iknowmag1k=9gH0dY2dcbIcTGya8Oe08osnxYExeoXx4ZnLS1hltFWNxYCJ2hWTdQ%3D%3D
 ```
 
 > RESULT
