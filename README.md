@@ -90,7 +90,7 @@
 |4. |[Weak RSA](https://github.com/Bread-Yolk/hackthebox/blob/9c3e52e12ccc045e6b50f19425e2ccf14ca6b15e/Categories/Cryptography/Weak%20RSA/README.md)|
 |5. |[Classic, yet complicated!](https://github.com/Bread-Yolk/hackthebox/blob/8493730b525986eae8995e5e669427d8f51ed557/Categories/Cryptography/Classic,%20yet%20complicated!/README.md)|
 |6. |[Brainy's Cipher](https://github.com/Bread-Yolk/hackthebox/blob/c0ff79a70a1f35b0fe53c17e2ed9a18ee6a95348/Categories/Cryptography/Brainy's%20Cipher/README.md)|
-
+|7. |[Gonna-Lift-Em-All](https://github.com/Bread-Yolk/hackthebox/blob/bd5d59da3ea8a29e6afed4986fca62731a0e096a/Categories/Cryptography/Gonna-Lift-Em-All/README.md)|
 
 
 
