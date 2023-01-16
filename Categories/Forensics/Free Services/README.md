@@ -21,4 +21,16 @@ Now Klaus asks your opinion about a mail it received from "sales@unlockyourmind.
 ![image](https://user-images.githubusercontent.com/70703371/211981425-cf0977a4-1779-4934-a280-49867f3b538c.png)
 
 
+2. Well we can't view this file in kali linux, let's open it in windows.
 
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/212715812-12b7ed6a-5c31-42d9-9276-ac333d1d87f2.png)
+
+
+3. At the other sheet, we got this:
+
+![image](https://user-images.githubusercontent.com/70703371/212715911-e83a5e66-6e2f-4b2c-ad3e-c3a13bff949b.png)
+
+
+4. 
