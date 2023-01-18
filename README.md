@@ -74,7 +74,7 @@
 |16. |[Downgrade](https://github.com/Bread-Yolk/hackthebox/blob/a0275a7b15574ef8660e1c83fc57f9313ab60d61/Categories/Forensics/Downgrade/README.md)|
 |17. |[Automation](https://github.com/Bread-Yolk/hackthebox/blob/5e9fca100f99c718d21b59ad4dacc93b90e3c817/Categories/Forensics/Automation/README.md)|
 |18. |[Perseverance](https://github.com/Bread-Yolk/hackthebox/blob/f001497dfaed90a4a42009174381e9e1a0089367/Categories/Forensics/Perseverance/README.md)|
-
+|19. |[Deadly Arthropod](https://github.com/Bread-Yolk/hackthebox/blob/8031d2cfdb01b3936fcb7f278bc1f7c855c9a5eb/Categories/Forensics/Deadly%20Arthropod/README.md)|
 
 </details>
 
