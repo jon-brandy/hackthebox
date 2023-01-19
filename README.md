@@ -1,4 +1,4 @@
-> CTF 
+> CTF CHALLENGE SOLVED
 
 <details>
 <br>
