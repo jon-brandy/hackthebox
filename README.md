@@ -80,6 +80,9 @@
 |17. |[Automation](https://github.com/Bread-Yolk/hackthebox/blob/5e9fca100f99c718d21b59ad4dacc93b90e3c817/Categories/Forensics/Automation/README.md)|
 |18. |[Perseverance](https://github.com/Bread-Yolk/hackthebox/blob/f001497dfaed90a4a42009174381e9e1a0089367/Categories/Forensics/Perseverance/README.md)|
 |19. |[Deadly Arthropod](https://github.com/Bread-Yolk/hackthebox/blob/8031d2cfdb01b3936fcb7f278bc1f7c855c9a5eb/Categories/Forensics/Deadly%20Arthropod/README.md)|
+|20. |[Keep Tryin'](https://github.com/Bread-Yolk/hackthebox/blob/ae8b2c6b26d1d19b61b90ff9bb5df546e42965f4/Categories/Forensics/Keep%20Tryin'/README.md)|
+
+
 
 </details>
 
