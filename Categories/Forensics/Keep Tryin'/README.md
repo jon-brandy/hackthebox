@@ -48,5 +48,13 @@ This packet capture seems to show some suspicious traffic
 
 
 7. When i pasted that on cyberchef, we got nothing.
-8. Well based on the packets we got and the approach we've done, what comes to my mind is we need to do **DNS Exfiltration**.
-9. 
+8. Then, when i checking the packets, found a request sent to /flag.
+
+![image](https://user-images.githubusercontent.com/70703371/214080864-386e5093-2387-4f64-8ba5-9cf7a362fcec.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/214080908-7f3ebee0-f193-4dc4-b956-61862cda57dd.png)
+
+
+9. Well based on the packets we got and the approach we've done, what comes to my mind is we need to do **DNS Exfiltration**.
+9. So 
