@@ -98,14 +98,20 @@ https://blog.didierstevens.com/2021/10/11/update-1768-py-version-0-0-8/
 11. First let's get the public and private key (if there is) using [this](https://blog.didierstevens.com/2021/10/11/update-1768-py-version-0-0-8/) python script.
 
 ```sh
-python 1768.py ../../../Downloads/htb/foren/freesteam.dmp -V
+python 1768.py ../../../Downloads/htb/foren/exportHttp/iVd9 -V 
 ```
 
 > RESULT
 
 ```
-File: ../../../Downloads/htb/foren/freesteam.dmp
-Config found: xorkey b'.' 0x00000000 0x00010000
+File: ../../../Downloads/htb/foren/exportHttp/iVd9
+xorkey(chain): 0xb9ce3940
+length: 0x00032600
+payloadType: 0x10014522
+payloadSize: 0x00000000
+intxorkey: 0x00000000
+id2: 0x00000000
+Config found: xorkey b'.' 0x0002f610 0x00032600
 0x0001 payload type                     0x0001 0x0002 0 windows-beacon_http-reverse_http
 0x0002 port                             0x0001 0x0002 80
 0x0003 sleeptime                        0x0002 0x0004 60000
@@ -156,6 +162,7 @@ Guessing Cobalt Strike version: 4.2 (max 0x003a)
 ```
 
 12. Got the public key but no private key. Also there's `Malleable_C2_Instructions` -> `\x00\x00\x00\x04`.
+13. Convert it from little-endian we know it's 4 bytes. 
 
 
 
