@@ -162,7 +162,23 @@ Guessing Cobalt Strike version: 4.2 (max 0x003a)
 ```
 
 12. Got the public key but no private key. Also there's `Malleable_C2_Instructions` -> `\x00\x00\x00\x04`.
-13. Convert it from little-endian we know it's 4 bytes. 
+13. Convert it from little-endian we know it's 4 bytes. Confused here, so read the documentation again and found out that we need to grep data from a post http stream but with a len of 68 bytes. Then pass in as the `-c` parameter when used `cs-extract-key.py` script.
+
+> RESULT - COPY AS A HEX STREAM
+
+![image](https://user-images.githubusercontent.com/70703371/214213370-644c37b5-4509-45bb-a2ee-51000df5c1ba.png)
+
+
+> USED IT ON THE SCRIPT - PASS IT FOR .DMP FILE
+
+![image](https://user-images.githubusercontent.com/70703371/214213451-e6c37e68-1300-4819-bbe4-61f801c153c4.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/214213540-3079eca4-993f-49ec-a757-0029d89f6cb0.png)
+
+
+14. The problem now is we didn't found the raw key.
+
 
 
 
