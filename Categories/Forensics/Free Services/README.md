@@ -33,4 +33,11 @@ Now Klaus asks your opinion about a mail it received from "sales@unlockyourmind.
 ![image](https://user-images.githubusercontent.com/70703371/212715911-e83a5e66-6e2f-4b2c-ad3e-c3a13bff949b.png)
 
 
-4. 
+4. Based from the macro formula we got at Macro1, we know that all the integer values in column E, F, and G are XORed with 24.
+
+![image](https://user-images.githubusercontent.com/70703371/214282711-5a90ae43-aa07-48da-a0f3-cb1a705f9b96.png)
+
+
+5. The logics of XOR, if we XOR it again, the original value shall returned.
+6. First saved the macro sheet as `macroFile.csv`.
+
