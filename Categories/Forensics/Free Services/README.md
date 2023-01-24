@@ -39,5 +39,5 @@ Now Klaus asks your opinion about a mail it received from "sales@unlockyourmind.
 
 
 5. The logics of XOR, if we XOR it again, the original value shall returned.
-6. First saved the macro sheet as `macroFile.csv`.
+6. First saved the macro sheet as `free_decryption.csv`.
 
