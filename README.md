@@ -124,6 +124,7 @@
 |11. |[Ouija](https://github.com/Bread-Yolk/hackthebox/blob/509e773686d7c001a229c1e0471ada07a625759a/Categories/Reversing/Ouija/README.md)|
 |12. |[Tear Or Dear](https://github.com/Bread-Yolk/hackthebox/blob/360e7c8eaf0484c3894ab73452280e8219339400/Categories/Reversing/Tear%20Or%20Dear/README.md)|
 |13. |[Rebuilding](https://github.com/Bread-Yolk/hackthebox/blob/bbbc0ef73a47a2b734b4d58bbdf84bb1dff48291/Categories/Reversing/Rebuilding/README.md)|
+|14. |[Teleport](https://github.com/Bread-Yolk/hackthebox/blob/15d8c5d3143e37a8697b4b464c67ecf05418821a/Categories/Reversing/Teleport/README.md)|
 
 </details>
 
