@@ -45,5 +45,5 @@ However, they don't want to be caught, and disappear out of your grasp - can you
 ## FLAG
 
 ```
-HTB{h0pp1ng_thru_th3_sp4c3_t1m3_c0nt1nuum!}
+HTB{jump1ng_thru_th3_sp4c3_t1m3_c0nt1nuum!}
 ```
