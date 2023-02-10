@@ -37,17 +37,15 @@ Welcome to our Restaurant. Here, you can eat and drink as much as you want! Just
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/218120700-d0b1a8f2-93ed-418b-b0f2-7c679f3f1219.png)
+![image](https://user-images.githubusercontent.com/70703371/218121772-d33483b6-d7ee-4d9e-90b6-9216d265edc1.png)
 
 
-![image](https://user-images.githubusercontent.com/70703371/218120792-12b1dbf6-6c89-4979-9137-4cd72560a3b2.png)
-
-
-8. Since there's no 8 bytes leaked at the RIP, we can utilize the **Return Stack Pointer** value.
+8. Since there's no value leaked at the RIP, we can use the RSP offset.
 
 > RESULT - 40
 
-![image](https://user-images.githubusercontent.com/70703371/218121053-e4c3eea4-4bf3-47e5-b3de-7c9176bcac7b.png)
+![image](https://user-images.githubusercontent.com/70703371/218122089-5186b81e-be34-4433-8d53-9745341c834d.png)
+
 
 
 
