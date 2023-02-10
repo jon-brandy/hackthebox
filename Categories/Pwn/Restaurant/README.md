@@ -26,4 +26,10 @@ Welcome to our Restaurant. Here, you can eat and drink as much as you want! Just
 ![image](https://user-images.githubusercontent.com/70703371/218116059-7fc94767-9177-42f5-b2cd-66e4deba8b90.png)
 
 
-4. 
+4. Now let's decompile the binary using ghidra.
+5. At the `fill()` function, looks like there's a bufferoverflow.
+
+![image](https://user-images.githubusercontent.com/70703371/218119145-7fe380f3-fbfb-44a0-9c7f-876f5c90b093.png)
+
+
+
