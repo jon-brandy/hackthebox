@@ -205,17 +205,13 @@
 
 |No.|Challenge's name|
 |:-:|:--------------:|
-|1. |[racecar]()|
-|2. |[You know 0xDiablos]()|
-|3. |[Jeeves]()|
-|4. |[Space pirate: Entrypoint]()|
-|5. |[Reg]()|
-|6. |[Space pirate: Going Deeper]()|
-|7. |[Bat Computer]()|
-|8. |[Blacksmith]()|
-|9. |[Shooting star]()|
-|10. |[HTB Console]()|
-|11. |[Optimistic]()|
+|1. |[Blue](https://github.com/Bread-Yolk/hackthebox/blob/bc10bf7a582cfe3264032b6c1a2b6b08fc7be653/Categories/Machines/Blue/README.md)|
+|2. |[Jerry](https://github.com/Bread-Yolk/hackthebox/blob/bc10bf7a582cfe3264032b6c1a2b6b08fc7be653/Categories/Machines/Jerry/README.md)|
+|3. |[Lame](https://github.com/Bread-Yolk/hackthebox/blob/bc10bf7a582cfe3264032b6c1a2b6b08fc7be653/Categories/Machines/Lame/README.md)|
+|4. |[Netmon](https://github.com/Bread-Yolk/hackthebox/blob/bc10bf7a582cfe3264032b6c1a2b6b08fc7be653/Categories/Machines/Netmon/README.md)|
+|5. |[Photobomb](https://github.com/Bread-Yolk/hackthebox/blob/bc10bf7a582cfe3264032b6c1a2b6b08fc7be653/Categories/Machines/Photobomb/README.md)|
+|6. |[Precious](https://github.com/Bread-Yolk/hackthebox/blob/bc10bf7a582cfe3264032b6c1a2b6b08fc7be653/Categories/Machines/Precious/README.md)|
+|7. |[Shoppy](https://github.com/Bread-Yolk/hackthebox/blob/bc10bf7a582cfe3264032b6c1a2b6b08fc7be653/Categories/Machines/Shoppy/README.md)|
 
 
 </details>
