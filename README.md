@@ -196,6 +196,29 @@
 </details>
 
 
+> MACHINE'S PWNED
+
+
+<details>
+<br>
+<summary> Machines </summary>
+
+|No.|Challenge's name|
+|:-:|:--------------:|
+|1. |[racecar]()|
+|2. |[You know 0xDiablos]()|
+|3. |[Jeeves]()|
+|4. |[Space pirate: Entrypoint]()|
+|5. |[Reg]()|
+|6. |[Space pirate: Going Deeper]()|
+|7. |[Bat Computer]()|
+|8. |[Blacksmith]()|
+|9. |[Shooting star]()|
+|10. |[HTB Console]()|
+|11. |[Optimistic]()|
+
+
+</details>
 
 
 
