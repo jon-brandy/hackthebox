@@ -32,4 +32,23 @@ Welcome to our Restaurant. Here, you can eat and drink as much as you want! Just
 ![image](https://user-images.githubusercontent.com/70703371/218119145-7fe380f3-fbfb-44a0-9c7f-876f5c90b093.png)
 
 
+6. Let's get the offset of RIP first by get a segmentation fault with running the binary in gdb.
+7. Enter 1024 bytes.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/218120700-d0b1a8f2-93ed-418b-b0f2-7c679f3f1219.png)
+
+
+![image](https://user-images.githubusercontent.com/70703371/218120792-12b1dbf6-6c89-4979-9137-4cd72560a3b2.png)
+
+
+8. Since there's no 8 bytes leaked at the RIP, we can utilize the **Return Stack Pointer** value.
+
+> RESULT - 40
+
+![image](https://user-images.githubusercontent.com/70703371/218121053-e4c3eea4-4bf3-47e5-b3de-7c9176bcac7b.png)
+
+
+
 
