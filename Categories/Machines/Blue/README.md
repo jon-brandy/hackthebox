@@ -140,7 +140,7 @@ The 5th module -> Is using a backdoor (must be on the system already).
 ```
 
 
-### WITHOUT METASPLOIT APPROACH
+### WITHOUT METASPLOIT APPROACH (UNFINISHED)
 
 1. Now without the metasploit, let's see if there's any python script we can use in the `exploitdb`.
 
