@@ -47,6 +47,7 @@ Welcome to our Restaurant. Here, you can eat and drink as much as you want! Just
 ![image](https://user-images.githubusercontent.com/70703371/218122089-5186b81e-be34-4433-8d53-9745341c834d.png)
 
 
-
+9. Well, notice that there's no interesting function to jump or flag function, then we given a libc library, hence the approach here is `ROP`.
+10. The steps here, first we need to craft a `ROP exploit` so we can leak any library function's address.
 
 
