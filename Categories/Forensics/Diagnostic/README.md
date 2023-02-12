@@ -9,4 +9,10 @@ Take a look and figure out what's going on.
 - NONE
 ## STEPS:
 1. First, spawn the docker, then run `wget http://134.122.103.40:32730/layoffs.doc`, to download the file.
-2. 
+
+> CHECK IT'S METADATA
+
+![image](https://user-images.githubusercontent.com/70703371/218293725-28b378eb-3759-452f-a8a5-f006c894ac9d.png)
+
+
+2. Looks like it's a `zip archive data`, let's extract it then.
