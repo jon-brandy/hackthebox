@@ -395,3 +395,8 @@ HTB{r3turn_2_th3_r3st4ur4nt!}
 ```
 
 
+## ALTERNATE SOLVES 
+
+### Go check our medium 🙌🏼
+
+[CyberYolk's Medium](https://medium.com/@baycorp22/hack-the-box-restaurant-writeup-28fd91ee0638)
