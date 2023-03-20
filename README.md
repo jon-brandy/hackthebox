@@ -154,7 +154,7 @@
 
 |No.|Challenge's name|
 |:-:|:--------------:|
-|1. |[cat](https://github.com/Bread-Yolk/hackthebox/blob/91d6b2978e8b7bbbcb40e4584ce41553b1319eda/Categories/Mobile/Cat/README.md)|
+|1. |[Cat](https://github.com/Bread-Yolk/hackthebox/blob/91d6b2978e8b7bbbcb40e4584ce41553b1319eda/Categories/Mobile/Cat/README.md)|
 |2. |[Don't Overreact](https://github.com/Bread-Yolk/hackthebox/blob/da68aa0e7ddbf381db40bfd347ba7d088c15aca5/Categories/Mobile/Don't%20Overreact/README.md)|
 |3. |[APKey](https://github.com/Bread-Yolk/hackthebox/blob/493680037cc2b223289b09c9d4ad543d1947c6f8/Categories/Mobile/APKey/README.md)|
 
