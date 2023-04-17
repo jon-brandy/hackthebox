@@ -83,7 +83,7 @@
 |19. |[Deadly Arthropod](https://github.com/Bread-Yolk/hackthebox/blob/8031d2cfdb01b3936fcb7f278bc1f7c855c9a5eb/Categories/Forensics/Deadly%20Arthropod/README.md)|
 |20. |[Keep Tryin'](https://github.com/Bread-Yolk/hackthebox/blob/ae8b2c6b26d1d19b61b90ff9bb5df546e42965f4/Categories/Forensics/Keep%20Tryin'/README.md)|
 |21. |[Strike Back](https://github.com/Bread-Yolk/hackthebox/blob/98c1f2b38620ad72b3f45095ed12184089baee9c/Categories/Forensics/Strike%20Back/README.md)|
-
+|22. |[Diagnostic](https://github.com/Bread-Yolk/hackthebox/blob/f3ab7fc60cdc6399418100b9b521caead9456822/Categories/Forensics/Diagnostic/README.md)|
 
 </details>
 
