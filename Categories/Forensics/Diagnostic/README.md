@@ -237,7 +237,7 @@ ${f`ile} = ("{7}{1}{6}{8}{5}{3}{2}{4}{0}"-f'}.exe','B{msDt_4s_A_pr0','E','r...s'
 '}.exe','B{msDt_4s_A_pr0','E','r...s','3Ms_b4D','l3','toC','HT','0l_h4nD'
 ```
 
-8. I did it manually -> `HTB{msDt_4s_A_pr0toC0l_h4nDl3r...sE3Ms_b4D}`
+8. I did it manually -> `HTB{msDt_4s_A_pr0toC0l_h4nDl3r...sE3Ms_b4D}`, don't follow the order of number inside curly brackets, it still randomized, but few are correct. That helps me to get the correct order. The rest are just insinct.
 9. Got the flag!
 
 ## FLAG
