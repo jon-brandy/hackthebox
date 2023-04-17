@@ -137,8 +137,8 @@ if (@preg_match("/$kh(.+)$kf/", @file_get_contents("php://input"), $m) == 1) {
 ?>
 */
 
-$input = "QKxO/n6DAwXuGEoc5X9/H3HkMXv1Ih75Fx1NdSPRNDPUmHTy";
-$decode_base64 = base64_decode($input);
+$encoded_strings = "QKxO/n6DAwXuGEoc5X9/H3HkMXv1Ih75Fx1NdSPRNDPUmHTy"; // encoded strings goes here
+$decode_base64 = base64_decode($encoded_strings);
 $get_xor = x($decode_base64, $k);
 $get_plaintext = gzuncompress($get_xor);
 echo "Plaintext -> ".$get_plaintext;
@@ -147,10 +147,60 @@ echo "Plaintext -> ".$get_plaintext;
 
 </body>
 </html>
-
 ```
 
+11. I don't use XAMPP or POSTMAN to run this, simply use [this](https://www.w3schools.com/php/phptryit.asp?filename=tryphp_compiler) online PHP compiler.
+
 > RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/232377924-bb7e7ff5-0d6f-414a-bfca-3a2d306d14bb.png)
+
+
+12. Great! We successfully decode the encoded strings and looks like the attacker execute `id`.
+13. Let's decode the other strings we got.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/232378278-810c1aa2-e7a2-4333-848b-a3e43bdec473.png)
+
+
+14. Looks like this time the attacker run `ls -lh`.
+15. Notice there's 1 filename that could be our interest -> `pwdb.kdbx`.
+16. Following the TCP stream at 24, we found similiar pattern again.
+
+![image](https://user-images.githubusercontent.com/70703371/232378724-16b90f97-38d6-484c-ab26-11ed0f05eaa9.png)
+
+
+> DECODE IT
+
+![image](https://user-images.githubusercontent.com/70703371/232378884-e7c7af1b-3ca7-47bd-bc4b-56198d88aa46.png)
+
+
+17. This time the attacker runs `pwd`, nothing interesting here.
+18. Following the TCP stream at 25, we found the same pattern again, but longer.
+
+![image](https://user-images.githubusercontent.com/70703371/232379002-d6f0c32c-187d-4ecd-9509-754316fa46eb.png)
+
+
+> DECODE IT
+
+![image](https://user-images.githubusercontent.com/70703371/232379081-f65e87fa-1143-43d2-89d2-651060f9db68.png)
+
+
+19. Confused what it is, well it's the last stream we can follow, hence our approach must be from this last one.
+20. Maybe the attacker cat the `kdbx` file (?)
+21. Let's assume that for now, save the decoded strings into a file with .kdbx as the extension.
+22. Now open the file using **KeePass**.
+
+> RESULT
+
+![image](https://user-images.githubusercontent.com/70703371/232380024-862c0aed-97a1-4a35-96e0-fe2a7f278412.png)
+
+
+23. It's asking for the master keys, which are good news because it really is a kdbx file.
+24. But we need to find the master keys.
+
+
 
 
 
