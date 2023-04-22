@@ -38,6 +38,17 @@ http://files.pypi-install.com/packages/a5/61/caf3af6d893b5cb8eae9a90a3054f370a92
 
 5. Now it's asking what is the name of the malicious process, we can get the ans by analyzing the dump file using **volatility**.
 6. Notice there's a `Ubuntu_4.15.0-184-generic_profile.zip`, by it's name obviously it's a profile.
-7. Since we're given the profile in a .zip file, we need to move it to our volatility `plugin` directory.
+7. Since we're given the profile in a .zip file, we need to move it to our volatility overlays directory, specifically in it's linux directory.
+8. For volatility i'm using **SIFT**.
+
+```console
+sansforensics@siftworkstation: ~/Downloads/poof
+$ sudo mv Ubuntu_4.15.0-184-generic_profile.zip ../../../../usr/local/lib/python2.7/dist-packages/volatility/plugins/overlays/linux/
+```
+
+9. 
+
+
+
 
 
