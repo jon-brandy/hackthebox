@@ -23,6 +23,7 @@
 |10. |[HTB Console](https://github.com/Bread-Yolk/hackthebox/blob/63d9e2d283e818dc42212c552e9b8c431c74cfea/Categories/Pwn/HTB%20Console/README.md)|
 |11. |[Optimistic](https://github.com/Bread-Yolk/hackthebox/blob/e82f419e546cd71ea5e634f98d0f364253440168/Categories/Pwn/Optimistic/README.md)|
 |12. |[Restaurant](https://github.com/Bread-Yolk/hackthebox/blob/13fa1153d9268bc80c2c0cb4693ccb79651e7211/Categories/Pwn/Restaurant/README.md)|
+|13. |[Entity](https://github.com/Bread-Yolk/hackthebox/blob/6b2119ec4cfde78cdeb7fda2674b12dce6c5c006/Categories/Pwn/Entity/README.md)|
 
 
 </details>
