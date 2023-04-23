@@ -88,6 +88,8 @@
 |21. |[Strike Back](https://github.com/Bread-Yolk/hackthebox/blob/98c1f2b38620ad72b3f45095ed12184089baee9c/Categories/Forensics/Strike%20Back/README.md)|
 |22. |[Diagnostic](https://github.com/Bread-Yolk/hackthebox/blob/f3ab7fc60cdc6399418100b9b521caead9456822/Categories/Forensics/Diagnostic/README.md)|
 |23. |[Fake News](https://github.com/Bread-Yolk/hackthebox/blob/6a2d14c9161548dcadfd5c75ab6926fdd034dfbc/Categories/Forensics/Fake%20News/README.md)|
+|24. |[POOF](https://github.com/Bread-Yolk/hackthebox/blob/002c2623ce21e4506b256ba810d6c88bf47ab6a5/Categories/Forensics/POOF/README.md)|
+
 
 </details>
 
