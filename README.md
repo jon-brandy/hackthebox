@@ -24,6 +24,7 @@
 |11. |[Optimistic](https://github.com/Bread-Yolk/hackthebox/blob/e82f419e546cd71ea5e634f98d0f364253440168/Categories/Pwn/Optimistic/README.md)|
 |12. |[Restaurant](https://github.com/Bread-Yolk/hackthebox/blob/13fa1153d9268bc80c2c0cb4693ccb79651e7211/Categories/Pwn/Restaurant/README.md)|
 |13. |[Entity](https://github.com/Bread-Yolk/hackthebox/blob/6b2119ec4cfde78cdeb7fda2674b12dce6c5c006/Categories/Pwn/Entity/README.md)|
+|14. |[Getting Started](https://github.com/Bread-Yolk/hackthebox/blob/3e9a1f2a6933f2eb36c745ab51b14218be9294b5/Categories/Pwn/Getting%20Started/README.md)|
 
 
 </details>
