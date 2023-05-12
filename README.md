@@ -14,7 +14,7 @@
 |1. |[racecar](https://github.com/Bread-Yolk/hackthebox/blob/a814c1dfaa72a1abf52784da7ac51b469e3db73d/Categories/Pwn/racecar/README.md)|
 |2. |[You know 0xDiablos](https://github.com/Bread-Yolk/hackthebox/blob/a814c1dfaa72a1abf52784da7ac51b469e3db73d/Categories/Pwn/You%20know%200xDiablos/README.md)|
 |3. |[Jeeves](https://github.com/Bread-Yolk/hackthebox/blob/1c2a6a60df107c5f729c0a68cd1d4764bb921aba/Categories/Pwn/Jeeves/README.md)|
-|4. |[Space pirate: Entrypoint](https://github.com/Bread-Yolk/hackthebox/blob/c79b78b6e4b55ab702583374b11a2772d7976fc5/Categories/Pwn/Space%20pirate:%20Entrypoint/README.md)|
+|4. |[Space pirate: Entrypoint](https://github.com/Bread-Yolk/hackthebox/blob/64feece2c0169f6ae89da5c378e87d1607d07c61/Categories/Pwn/Space%20pirate%3A%20Entrypoint/README.md)|
 |5. |[Reg](https://github.com/Bread-Yolk/hackthebox/blob/d88aa1b00cf41672ef139801617536ea6975210e/Categories/Pwn/Reg/README.md)|
 |6. |[Space pirate: Going Deeper](https://github.com/Bread-Yolk/hackthebox/blob/e0cce92991f33c13ccaaffc3ab976aa2f94f6691/Categories/Pwn/Space%20pirate%3A%20Going%20Deeper/README.md)|
 |7. |[Bat Computer](https://github.com/Bread-Yolk/hackthebox/blob/7a0efe3bbcdc21c5b1e7ba55be02299f87d1c917/Categories/Pwn/Bat%20Computer/README.md)|
