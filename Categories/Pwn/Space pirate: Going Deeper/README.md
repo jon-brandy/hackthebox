@@ -112,7 +112,7 @@ sh.interactive()
 
 > RESULT
 
-![Uploading image.png…]()
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/7c483531-53c3-43c5-8183-6b2b1a574ac5)
 
 
 18. Got the flag!
