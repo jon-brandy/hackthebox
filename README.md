@@ -20,7 +20,7 @@
 |7. |[Bat Computer](https://github.com/Bread-Yolk/hackthebox/blob/7a0efe3bbcdc21c5b1e7ba55be02299f87d1c917/Categories/Pwn/Bat%20Computer/README.md)|
 |8. |[Blacksmith](https://github.com/Bread-Yolk/hackthebox/blob/95c93c68e41d3d0820f2ea693c150933468ee482/Categories/Pwn/Blacksmith/README.md)|
 |9. |[Shooting star](https://github.com/Bread-Yolk/hackthebox/blob/1d2ddc3cc0c80f0e45c777a0985b3f2fc1ed92ff/Categories/Pwn/Shooting%20star/README.md)|
-|10. |[HTB Console](https://github.com/Bread-Yolk/hackthebox/blob/63d9e2d283e818dc42212c552e9b8c431c74cfea/Categories/Pwn/HTB%20Console/README.md)|
+|10. |[HTB Console](https://github.com/Bread-Yolk/hackthebox/blob/2d7b1b66d690115eeb292bf91ff5802986ae6a38/Categories/Pwn/HTB%20Console/README.md)|
 |11. |[Optimistic](https://github.com/Bread-Yolk/hackthebox/blob/e82f419e546cd71ea5e634f98d0f364253440168/Categories/Pwn/Optimistic/README.md)|
 |12. |[Restaurant](https://github.com/Bread-Yolk/hackthebox/blob/13fa1153d9268bc80c2c0cb4693ccb79651e7211/Categories/Pwn/Restaurant/README.md)|
 |13. |[Entity](https://github.com/Bread-Yolk/hackthebox/blob/6b2119ec4cfde78cdeb7fda2674b12dce6c5c006/Categories/Pwn/Entity/README.md)|
