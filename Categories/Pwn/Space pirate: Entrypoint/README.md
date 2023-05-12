@@ -83,7 +83,7 @@ To achieve our goal, we split the mission into three parts. In this part, all we
 
 ```
 "%" indicates the start of a format specifier in a format string.
-"4919" is a numerical value that specifies the minimum width of the field. It indicates that the output should be padded with spaces or zeroes to make it at least 4919 characters wide.
+"4919" decimal value of 0x1337.
 "c" is a conversion specifier that indicates the value to be printed as a character.
 "%7$" is a positional specifier that specifies the argument index to be printed. In this case, it refers to the seventh argument.
 "hn" is a length modifier that specifies that the argument should be interpreted as a short integer and printed as a halfword (2 bytes) in a specific format.
