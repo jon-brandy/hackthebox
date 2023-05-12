@@ -77,9 +77,19 @@ To achieve our goal, we split the mission into three parts. In this part, all we
 
 
 13. Based from the output, we know that **0xdeadbeef** is at offset 6 and **0xdead1337** is at offset 7. 
-14. Get the decimals value of **0x1337** -> `4919`
-15. Means the input shall look like this -> `%4919c%7$hn`
-16. To get the flag, actually u don't need to make the script, but i just want to make it 😁
+14. Get the decimals value of **0x1337** -> `4919`.
+15. Means the input shall look like this -> `%4919c%7$hn`.
+16. To make it clear:
+
+```
+"%" indicates the start of a format specifier in a format string.
+"4919" is a numerical value that specifies the minimum width of the field. It indicates that the output should be padded with spaces or zeroes to make it at least 4919 characters wide.
+"c" is a conversion specifier that indicates the value to be printed as a character.
+"%7$" is a positional specifier that specifies the argument index to be printed. In this case, it refers to the seventh argument.
+"hn" is a length modifier that specifies that the argument should be interpreted as a short integer and printed as a halfword (2 bytes) in a specific format.
+```
+
+17. To get the flag, actually u don't need to make the script, but i just want to make it 😁
 
 > THE SCRIPT
 
@@ -103,7 +113,7 @@ sh.interactive()
 ![image](https://user-images.githubusercontent.com/70703371/209465379-85f5adb9-1aa3-4ccd-9e8d-1163907fe90f.png)
 
 
-17. Got the flag!
+18. Got the flag!
 
 ## FLAG
 
