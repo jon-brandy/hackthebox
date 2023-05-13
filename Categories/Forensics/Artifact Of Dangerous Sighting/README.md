@@ -249,3 +249,10 @@ echo $result
 ![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/2d0c0b0c-b08b-47b3-9791-460f6797d093)
 
 
+12. Got the flag!
+
+## FLAG
+
+```
+HTB{Y0U_C4nt_St0p_Th3_Alli4nc3}
+```
