@@ -40,7 +40,7 @@ Another Phishing document. Dig in and see if you can find what it executes.
 ## FLAG
 
 ```
-
+HTB{n0w_eXc3l_4.0_M4cr0s_r_b4cK}
 ```
 
 
