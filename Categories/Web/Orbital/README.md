@@ -135,11 +135,26 @@ EOF
 ![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/a6fefa63-ff98-4162-afdd-b9139e55cdf1)
 
 
-13. Send it to repeater.
+13. Send it to repeater and change the json "name" value to our flag location using **LFI**.
 
 ![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/f9c59d1e-e420-47d8-b105-64d75d90ee2b)
 
 
-15. 
+15. Actually there's many known methods to bypass the filter for LFI. I used these:
 
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/7839ab0b-2997-43e3-87cb-9f487b8ed5ae)
+
+
+16. Succeed to receive the flag using this method --> `....//signal_sleuth_firmware`.
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/f87de874-3c4e-46e1-91db-4a0250d98721)
+
+
+17. Got the flag!
+
+## FLAG
+
+```
+HTB{s3qu3l_4nd_lf1s_4r3_fun!!}
+```
 
