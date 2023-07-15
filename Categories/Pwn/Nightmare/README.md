@@ -345,3 +345,6 @@ sh.interactive()
 
 > Checking if correct (using GDB)
 
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/6e94782a-6b28-4dea-afcc-5e0e1bebdf35)
+
+
