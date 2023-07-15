@@ -1,6 +1,4 @@
 # Nightmare
-
-![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/903bcf42-d9f2-46f1-b4fb-babde834a92e)
 > Write-up author: jon-brandy
 ## DESCRIPTION:
 You seem to be stuck in an endless nightmare. Can you find a way out?
