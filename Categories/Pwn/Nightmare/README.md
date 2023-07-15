@@ -349,5 +349,13 @@ sh.interactive()
 
 
 13. Finally the last exploit we should do is to overwrite the Global Offset Table (GOT), why need to overwrite? Because there's no BOF but no RELRO. Means we can spawn a shell by overwrite the GOT.
-14. We need to overwrite a function of the GOT with **system**..
+14. We need to overwrite a function of the GOT with **system**.
+15. Based from the decompiled binary, it seems the potential overwrite only for the `printf()`.
+
+> At line 19 we can send a strings "/bin/sh" then change the printf() to system() to get the shell.
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/c165faf8-22f7-4e93-b72e-e24d2668bc16)
+
+
+16. But the problem is, we might get an error when system() is called at another LOC remembering there are many printf() called.
 
