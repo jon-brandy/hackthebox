@@ -370,6 +370,6 @@ log.info('This is the printf@got addr --> %#0x', printf_got_addr)
 
 > Check it using GDB
 
-
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/21a71e35-6789-4a06-8c5a-e3e0890c0676)
 
 
