@@ -603,4 +603,16 @@ sh.sendline(b'sh') # run shell
 sh.interactive()
 ```
 
+> RESULT LOCALLY
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/e3d3c239-16dc-4f27-b831-c9f2bcc80ecf)
+
+23. Successfully get the shell locally.
+24. Let's try send it remotely.
+
+> REMOTELY
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/9a7ce607-41f5-4300-9edf-ecb5e7cf5079)
+
+25. Confused why got out of range.
 
