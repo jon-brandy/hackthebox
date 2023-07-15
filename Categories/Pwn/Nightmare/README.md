@@ -348,3 +348,5 @@ sh.interactive()
 ![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/6e94782a-6b28-4dea-afcc-5e0e1bebdf35)
 
 
+13. Finally the last exploit we should do is to overwrite the Global Offset Table (GOT), why need to overwrite? Because there's no BOF but no RELRO. Means we can spawn a shell by overwrite the GOT.
+
