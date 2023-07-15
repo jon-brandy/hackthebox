@@ -349,4 +349,5 @@ sh.interactive()
 
 
 13. Finally the last exploit we should do is to overwrite the Global Offset Table (GOT), why need to overwrite? Because there's no BOF but no RELRO. Means we can spawn a shell by overwrite the GOT.
+14. We need to overwrite a function of the GOT with **system**..
 
