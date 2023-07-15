@@ -615,4 +615,19 @@ sh.interactive()
 ![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/9a7ce607-41f5-4300-9edf-ecb5e7cf5079)
 
 25. Confused why got out of range.
+26. Took me very long to realize that when i ran the same method to leak the PIE or libc by sending --> %26$p manually, it does not reflect any.
+
+> Manually in remote server
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/97211c8d-7905-42c3-ad4b-014f79c0d60e)
+
+
+27. Well this is the mistake, hence the intended solution must be by leaking the address using option 2.
+28. Anyway to skip this long walkthrough, just want to tell the approach is the same, the differences just only by the option chosen to leak the address.
+
+> FINAL SCRIPT
+
+```py
+
+```
 
