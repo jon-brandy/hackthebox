@@ -11,21 +11,21 @@
 
 |No.|Challenge's name|
 |:-:|:--------------:|
-|1. |[racecar](https://github.com/Bread-Yolk/hackthebox/blob/a814c1dfaa72a1abf52784da7ac51b469e3db73d/Categories/Pwn/racecar/README.md)|
-|2. |[You know 0xDiablos](https://github.com/Bread-Yolk/hackthebox/blob/553be825b76745ed3841210842bc97b6aaf66c5d/Categories/Pwn/You%20know%200xDiablos/README.md)|
-|3. |[Jeeves](https://github.com/Bread-Yolk/hackthebox/blob/1c2a6a60df107c5f729c0a68cd1d4764bb921aba/Categories/Pwn/Jeeves/README.md)|
-|4. |[Space pirate: Entrypoint](https://github.com/Bread-Yolk/hackthebox/blob/64feece2c0169f6ae89da5c378e87d1607d07c61/Categories/Pwn/Space%20pirate%3A%20Entrypoint/README.md)|
-|5. |[Reg](https://github.com/Bread-Yolk/hackthebox/blob/d88aa1b00cf41672ef139801617536ea6975210e/Categories/Pwn/Reg/README.md)|
-|6. |[Space pirate: Going Deeper](https://github.com/Bread-Yolk/hackthebox/blob/e0cce92991f33c13ccaaffc3ab976aa2f94f6691/Categories/Pwn/Space%20pirate%3A%20Going%20Deeper/README.md)|
-|7. |[Bat Computer](https://github.com/Bread-Yolk/hackthebox/blob/7a0efe3bbcdc21c5b1e7ba55be02299f87d1c917/Categories/Pwn/Bat%20Computer/README.md)|
-|8. |[Blacksmith](https://github.com/Bread-Yolk/hackthebox/blob/95c93c68e41d3d0820f2ea693c150933468ee482/Categories/Pwn/Blacksmith/README.md)|
-|9. |[Shooting star](https://github.com/Bread-Yolk/hackthebox/blob/db6c7d2dcfd1fde7543caeb67f2eb0c9e69c755a/Categories/Pwn/Shooting%20star/README.md)|
-|10. |[HTB Console](https://github.com/Bread-Yolk/hackthebox/blob/2d7b1b66d690115eeb292bf91ff5802986ae6a38/Categories/Pwn/HTB%20Console/README.md)|
-|11. |[Optimistic](https://github.com/Bread-Yolk/hackthebox/blob/e82f419e546cd71ea5e634f98d0f364253440168/Categories/Pwn/Optimistic/README.md)|
-|12. |[Restaurant](https://github.com/Bread-Yolk/hackthebox/blob/3ef5013121151f335c38afe98403d05ae9a71dbb/Categories/Pwn/Restaurant/README.md)|
-|13. |[Entity](https://github.com/Bread-Yolk/hackthebox/blob/6b2119ec4cfde78cdeb7fda2674b12dce6c5c006/Categories/Pwn/Entity/README.md)|
-|14. |[Getting Started](https://github.com/Bread-Yolk/hackthebox/blob/3e9a1f2a6933f2eb36c745ab51b14218be9294b5/Categories/Pwn/Getting%20Started/README.md)|
-|15. |[Questionnaire](https://github.com/Bread-Yolk/hackthebox/blob/819ae7c8e0a1618dd24b6c92a3f4bfdb84adb6b7/Categories/Pwn/Questionnaire/README.md)|
+|1. |[racecar](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/racecar)|
+|2. |[You know 0xDiablos](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/You%20know%200xDiablos)|
+|3. |[Jeeves](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Jeeves)|
+|4. |[Space pirate: Entrypoint](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Space%20pirate%3A%20Entrypoint)|
+|5. |[Reg](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Reg)|
+|6. |[Space pirate: Going Deeper](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Space%20pirate%3A%20Going%20Deeper)|
+|7. |[Bat Computer](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Bat%20Computer)|
+|8. |[Blacksmith](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Blacksmith)|
+|9. |[Shooting star](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Shooting%20star)|
+|10. |[HTB Console](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/HTB%20Console)|
+|11. |[Optimistic](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Optimistic)|
+|12. |[Restaurant](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Restaurant)|
+|13. |[Entity](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Entity)|
+|14. |[Getting Started](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Getting%20Started)|
+|15. |[Questionnaire](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Questionnaire)|
 
 
 </details>
