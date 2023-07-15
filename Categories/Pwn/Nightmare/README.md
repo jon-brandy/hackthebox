@@ -358,4 +358,18 @@ sh.interactive()
 
 
 16. But the problem is, we might get an error when system() is called at another LOC remembering there are many printf() called.
+17. Anyway let's just try it.
+18. First calculate the printf@got address.
+
+> FORMULA
+
+```py
+printf_got_addr = pie_base + elf.got['printf']
+log.info('This is the printf@got addr --> %#0x', printf_got_addr)
+```
+
+> Check it using GDB
+
+
+
 
