@@ -75,15 +75,5 @@ sh.interactive()
 
 10. Let's send it remotely.
 
-> REMOTELY
-
-
-
-
-
-
-
-
-
 
 
