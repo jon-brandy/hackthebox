@@ -828,6 +828,11 @@ sh.sendline(b'sh')
 sh.interactive()
 ```
 
+#### NOTES: To get the libc library used, i used the leaked libc_system_address and send it over the libc.blukat
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/4a39d5ee-4f24-416d-ac81-8306ad1ac4f7)
+
+
 > RESULT
 
 ![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/2f22789d-f1fc-4156-b7cd-dd65a33f72c8)
