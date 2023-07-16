@@ -26,6 +26,7 @@
 |13. |[Entity](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Entity)|
 |14. |[Getting Started](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Getting%20Started)|
 |15. |[Questionnaire](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Questionnaire)|
+|16. |[Nightmare](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Pwn/Nightmare/README.md)|
 
 
 </details>
