@@ -75,7 +75,13 @@ sh.interactive()
 
 10. Let's send it remotely.
 
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/48407f72-6cd6-431d-a2ff-54578d5302a2)
 
 
+11. Got the flag!
 
+## FLAG
 
+```
+HTB{pwnt00l5_h0mep4g3_15_u54ful}
+```
