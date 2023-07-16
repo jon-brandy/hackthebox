@@ -625,7 +625,9 @@ sh.interactive()
 
 
 27. Well this is the mistake, hence the intended solution must be by leaking the address using option 2.
-28. Anyway to skip this long walkthrough, just want to tell the approach is the same, the differences just only by the option chosen to leak the address.
+28. Anyway to skip this long walkthrough, just want to tell the approach is the same, the differences just only by the option chosen to leak the address and the libc library used at the remote server.
+
+#### NOTES: I gave comment for every critical changes.
 
 > FINAL SCRIPT
 
@@ -824,5 +826,21 @@ sh.sendline(b'2')
 sh.sendline(b'sh')
 
 sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/2f22789d-f1fc-4156-b7cd-dd65a33f72c8)
+
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/f6c9e01b-bd79-4964-97cb-f329ffcbc9b7)
+
+
+29. Got the flag!
+
+## FLAG
+
+```
+HTB{ar3_y0u_w0k3_y3t!?}
 ```
 
