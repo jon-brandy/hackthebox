@@ -136,7 +136,7 @@
 |7. |[Find The Easy Pass](https://github.com/Bread-Yolk/hackthebox/blob/67efb00b668907bd5f5bb5ddca7f41ca9028d958/Categories/Reversing/Find%20The%20Easy%20Pass/README.md)|
 |8. |[Baby Crypt](https://github.com/Bread-Yolk/hackthebox/blob/10774e941c21a178e959916201fc4bd342053461/Categories/Reversing/Baby%20Crypt/README.md)|
 |9. |[Ransom](https://github.com/Bread-Yolk/hackthebox/blob/bed3462da6bc1874a6e621963be1041b3682e259/Categories/Reversing/Ransom/README.md)|
-|10. |[Anti Flag](https://github.com/Bread-Yolk/hackthebox/blob/76aad1501e5806a3ff1fc666ab223232f50f5afa/Categories/Reversing/Anti%20Flag/README.md)|
+|10. |[Anti Flag](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Reversing/Anti%20Flag)|
 |11. |[Ouija](https://github.com/Bread-Yolk/hackthebox/blob/509e773686d7c001a229c1e0471ada07a625759a/Categories/Reversing/Ouija/README.md)|
 |12. |[Tear Or Dear](https://github.com/Bread-Yolk/hackthebox/blob/360e7c8eaf0484c3894ab73452280e8219339400/Categories/Reversing/Tear%20Or%20Dear/README.md)|
 |13. |[Rebuilding](https://github.com/Bread-Yolk/hackthebox/blob/bbbc0ef73a47a2b734b4d58bbdf84bb1dff48291/Categories/Reversing/Rebuilding/README.md)|
