@@ -54,6 +54,7 @@
 |14. |[baby WAFfles order](https://github.com/Bread-Yolk/hackthebox/blob/651f3adb3914b817cbc092119de8f0f2f7617184/Categories/Web/baby%20WAFfles%20order/README.md)|
 |15. |[BlinkerFluids](https://github.com/Bread-Yolk/hackthebox/blob/89947e8c65c9a2cb42625ad3fa45b925623aeed4/Categories/Web/BlinkerFluids/README.md)|
 |16. |[Orbital](https://github.com/Bread-Yolk/hackthebox/blob/6fdf73141eac261dd7ffd05bf48e254b83c3baeb/Categories/Web/Orbital/README.md)|
+|17. |[Trapped Source](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Trapped%20Source/README.md)|
 
 
 </details>
