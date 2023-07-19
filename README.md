@@ -38,22 +38,22 @@
 
 |No.|Challenge's name|
 |:-:|:--------------:|
-|1. |[Templated](https://github.com/Bread-Yolk/hackthebox/blob/a814c1dfaa72a1abf52784da7ac51b469e3db73d/Categories/Web/Templated/README.md)|
-|2. |[LoveTok](https://github.com/Bread-Yolk/hackthebox/blob/cb1ab3178ae25ac00c807a0a89dc3a2c6428270d/Categories/Web/LoveTok/README.md)|
-|3. |[Phonebook](https://github.com/Bread-Yolk/hackthebox/blob/2cbf3f75fbf7fb0f6a3003be39ba2393d018ddd0/Categories/Web/Phonebook/README.md)|
-|4. |[Spookifier](https://github.com/Bread-Yolk/hackthebox/blob/10f6b0f4f6b6a06aa068365c134a030a1738ed08/Categories/Web/Spookifier/README.md)|
+|1. |[Templated](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Templated/README.md)|
+|2. |[LoveTok](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/LoveTok/README.md)|
+|3. |[Phonebook](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Phonebook/README.md)|
+|4. |[Spookifier](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Spookifier/README.md)|
 |5. |[looking glass](https://github.com/Bread-Yolk/hackthebox/blob/614c63d770bea260f16c2559fff7b9ed97982748/Categories/Web/looking%20glass/README.md)|
 |6. |[sanitize](https://github.com/Bread-Yolk/hackthebox/blob/d6ff78188af3f11a6498633746d20f5d6f798cdd/Categories/Web/sanitize/README.md)|
 |7. |[baby auth](https://github.com/Bread-Yolk/hackthebox/blob/e684dd5d36f5412fae79e29a45f6de882e4da9e6/Categories/Web/baby%20auth/README.md)|
-|8. |[baby BonChewerCon](https://github.com/Bread-Yolk/hackthebox/blob/eadd1da75f5141f43bb277fbb02c9231c84a0c56/Categories/Web/baby%20BoneChewerCon/README.md)|
+|8. |[baby BonChewerCon](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20BoneChewerCon/README.md)|
 |9. |[Full Stack Conf](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Full%20Stack%20Conf/README.md)|
 |10. |[baby interdimensional internet](https://github.com/Bread-Yolk/hackthebox/blob/58384b0de7a475e13f5ba96e6a882328978887b9/Categories/Web/baby%20interdimensional%20internet/README.md)|
-|11. |[Juggling facts](https://github.com/Bread-Yolk/hackthebox/blob/120cdd6fd7769ab56521d3fb662df0a589aea1fe/Categories/Web/Juggling%20facts/README.md)|
+|11. |[Juggling facts](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Juggling%20facts/README.md)|
 |12. |[baby nginxatsu](https://github.com/Bread-Yolk/hackthebox/blob/71cf87fbdc6a75300cfc5a58b953bb9a4709a197/Categories/Web/baby%20nginxatsu/README.md)|
 |13. |[baby todo or not todo](https://github.com/Bread-Yolk/hackthebox/blob/61f7245d85401a69b151e5dbfd8156216f873cbf/Categories/Web/baby%20todo%20or%20not%20todo/README.md)|
-|14. |[baby WAFfles order](https://github.com/Bread-Yolk/hackthebox/blob/651f3adb3914b817cbc092119de8f0f2f7617184/Categories/Web/baby%20WAFfles%20order/README.md)|
+|14. |[baby WAFfles order](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20WAFfles%20order/README.md)|
 |15. |[BlinkerFluids](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/BlinkerFluids/README.md)|
-|16. |[Orbital](https://github.com/Bread-Yolk/hackthebox/blob/6fdf73141eac261dd7ffd05bf48e254b83c3baeb/Categories/Web/Orbital/README.md)|
+|16. |[Orbital](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Orbital/README.md)|
 |17. |[Trapped Source](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Trapped%20Source/README.md)|
 
 
