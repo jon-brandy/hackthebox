@@ -115,7 +115,7 @@
 |6. |[Brainy's Cipher](https://github.com/Bread-Yolk/hackthebox/blob/c0ff79a70a1f35b0fe53c17e2ed9a18ee6a95348/Categories/Cryptography/Brainy's%20Cipher/README.md)|
 |7. |[Gonna-Lift-Em-All](https://github.com/Bread-Yolk/hackthebox/blob/bd5d59da3ea8a29e6afed4986fca62731a0e096a/Categories/Cryptography/Gonna-Lift-Em-All/README.md)|
 |8. |[Ancient Encodings](https://github.com/Bread-Yolk/hackthebox/blob/ca5772a7f59ec7c10dbec44ba0e3c5d84c79389c/Categories/Cryptography/Ancient%20Encodings/README.md)|
-  
+|9. |[Nuclear Sale](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Cryptography/Nuclear%20Sale/README.md)|
 
 
 </details>
