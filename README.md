@@ -94,7 +94,8 @@
 |26. |[Extraterrestrial Persistence](https://github.com/Bread-Yolk/hackthebox/blob/0cd729a0b69e8c7cd12d87aa23660ca48a0630c6/Categories/Forensics/Extraterrestrial%20Persistence/README.md)|
 |27. |[Artifact Of Dangerous Sighting](https://github.com/Bread-Yolk/hackthebox/blob/27b728f227dfad1bc8606d62c3d975f51de1da73/Categories/Forensics/Artifact%20Of%20Dangerous%20Sighting/README.md)|
 |28. |[oBfsC4t10n2](https://github.com/Bread-Yolk/hackthebox/blob/f31f4db495f307b7b69cfeb229d0dd016c013a03/Categories/Forensics/oBfsC4t10n2/README.md)|
-  
+|29. |[Packet Cyclone](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Packet%20Cyclone/README.md)|
+
   
 
 </details>
