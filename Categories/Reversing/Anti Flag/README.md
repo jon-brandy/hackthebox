@@ -75,3 +75,72 @@ Flag? What's a flag?
 HTB{y0u_trac3_m3_g00d!!!}
 ```
 
+## ALTERNATE SOLUTION
+
+1. Also we can solve it dynamically with gdb.
+2. As we know the binary protection for PIE is enabled.
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/df6ac9a8-8356-4087-8a67-c8ba2fb03b2c)
+
+
+3. So to solve it dynamically we need to identify the piebase to do a jump (dynamically).
+4. Before that i realize ghidra removes **uncreachable code** which we can undo that by doing this at ghidra:
+
+```
+edit -> tool options -> analysis -> "do uncheck" for eliminate reachable code
+```
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/d493dfc1-fdbc-420a-b700-4c994b578297)
+
+
+5. Then click apply.
+
+> RESULT
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/fdf72929-cc74-4a1d-8392-9e11f5440046)
+
+
+6. As you can see we got another logic validations at the middle, which we can bypass by simply change to true, then we can get the flag easily (for static).
+7. For dynamic, since the binary is stripped, we can't just set a breakpoint there:
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/2298d8bf-8964-49ac-a8f9-222579a7a74c)
+
+
+8. Because we don't now the base address for the offset we want and we can't see the address.
+9. But we can start breakpoint by ran `starti`. With this we can jump to the flag decode function to get the flag.
+
+> RESULT
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/208051f1-88b5-41b6-a842-1fb724e5439f)
+
+
+> OUR INTEREST OFFSET TO JUMP (THE FLAG DECODE FUNCTION) --> 0x1525
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/8dcf22f1-50e1-4072-8c12-8bae34f534b4)
+
+
+10. We can run `piebase 0x1525` to get the piebase for that offset then jump to the piebase we got.
+11. But we can't just do that, it shall gave us **SEGMENTATION FAULT**.
+12. We need to breakrva first at the first check (first if statement), then hit continue and grab the piebase for 0x1525 to jump there.
+
+> SET BREAKPOINT AT 0x14f4 (first breakpoint) and hti continue
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/e988fe50-c90c-40d0-923d-1aad7249cd3b)
+
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/9e8d3fc1-be2a-4a8d-93b0-64c590e5ad69)
+
+> HIT CONTINUE
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/715751a8-6d3a-45a5-93fa-acaca818c655)
+
+
+> GET PIEBASE for 0x1525 and JUMP there.
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/7d2f7213-f902-45ff-8053-abd33e53178d)
+
+
+13. Got the flag!
+
+
+
