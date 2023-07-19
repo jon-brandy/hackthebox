@@ -42,15 +42,15 @@
 |2. |[LoveTok](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/LoveTok/README.md)|
 |3. |[Phonebook](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Phonebook/README.md)|
 |4. |[Spookifier](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Spookifier/README.md)|
-|5. |[looking glass](https://github.com/Bread-Yolk/hackthebox/blob/614c63d770bea260f16c2559fff7b9ed97982748/Categories/Web/looking%20glass/README.md)|
-|6. |[sanitize](https://github.com/Bread-Yolk/hackthebox/blob/d6ff78188af3f11a6498633746d20f5d6f798cdd/Categories/Web/sanitize/README.md)|
-|7. |[baby auth](https://github.com/Bread-Yolk/hackthebox/blob/e684dd5d36f5412fae79e29a45f6de882e4da9e6/Categories/Web/baby%20auth/README.md)|
+|5. |[looking glass](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/looking%20glass/README.md)|
+|6. |[sanitize](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/sanitize/README.md)|
+|7. |[baby auth](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20auth/README.md)|
 |8. |[baby BonChewerCon](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20BoneChewerCon/README.md)|
 |9. |[Full Stack Conf](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Full%20Stack%20Conf/README.md)|
-|10. |[baby interdimensional internet](https://github.com/Bread-Yolk/hackthebox/blob/58384b0de7a475e13f5ba96e6a882328978887b9/Categories/Web/baby%20interdimensional%20internet/README.md)|
+|10. |[baby interdimensional internet](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20interdimensional%20internet/README.md)|
 |11. |[Juggling facts](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Juggling%20facts/README.md)|
-|12. |[baby nginxatsu](https://github.com/Bread-Yolk/hackthebox/blob/71cf87fbdc6a75300cfc5a58b953bb9a4709a197/Categories/Web/baby%20nginxatsu/README.md)|
-|13. |[baby todo or not todo](https://github.com/Bread-Yolk/hackthebox/blob/61f7245d85401a69b151e5dbfd8156216f873cbf/Categories/Web/baby%20todo%20or%20not%20todo/README.md)|
+|12. |[baby nginxatsu](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20nginxatsu/README.md)|
+|13. |[baby todo or not todo](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20todo%20or%20not%20todo/README.md)|
 |14. |[baby WAFfles order](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20WAFfles%20order/README.md)|
 |15. |[BlinkerFluids](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/BlinkerFluids/README.md)|
 |16. |[Orbital](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Orbital/README.md)|
