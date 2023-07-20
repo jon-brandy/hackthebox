@@ -7,12 +7,24 @@ Will Bonnie achieve to gain access to Gold Fang’s internal network and retriev
 ## HINT:
 - NONE
 ## STEPS:
-1. First, unzip the `.zip` file.
-2. Next, check the file type.
+1. In this challenge we're given a 64 bit binary, dynamically linked, and not stripped.
 
-> RESULT - (BINARY) & IT'S PROTECTION
-
-![image](https://user-images.githubusercontent.com/70703371/212446039-293b74a8-9845-4350-9358-af43c7d8c939.png)
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/01e498a8-ad99-4299-8d88-13f78a1cc1d6)
 
 
-3. 
+> BINARY PROTECTIONS
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/2de5a421-f79f-4f92-ae29-8249a21a1476)
+
+
+2. After decompiled the binary, it looks like there's a hidden menu which calls the **beta_feature()** function.
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/1ead0cbe-4f84-4235-ad05-5931745906c3)
+
+
+3. There's a chance we can do shellcode injection even though the NX are disabled.
+
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/c624695a-1467-4a47-88fd-cc9bf0dcaa64)
+
+
+4. But the problem is, we have `seccomp()`. (`skid_check()`)
