@@ -29,7 +29,7 @@
 |16. |[Nightmare](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Pwn/Nightmare/README.md)|
 |17. |[Void](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Pwn/Void/README.md)|
 |18. |[Fleet Management](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Pwn/Fleet%20Management/README.md)|
-
+|19. |[Vault-breaker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Vault-breaker/README.md)|
 
 </details>
 
