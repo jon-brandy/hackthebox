@@ -84,4 +84,17 @@ sh.interactive()
 
 > REMOTELY
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/76bf0af6-9662-4f2d-89b2-4103ac9e8251)
+
+
+#### NOTES: 
+```
+The binary at the remote server is very unstable, took me a while to get the flag remotely, i keep terminate and spawn the host again and again. Because if you tried to leak it manually without the script, you'll notice some char can't be leaked and when you restart the host, it can be leaked.
+```
+
+## FLAG
+```
+HTB{d4nz4_kudur0r0r0}
+```
+
 
