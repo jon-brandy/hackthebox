@@ -89,7 +89,8 @@ sh.interactive()
 
 #### NOTES: 
 ```
-The binary at the remote server is very unstable, took me a while to get the flag remotely, i keep terminate and spawn the host again and again. Because if you tried to leak it manually without the script, you'll notice some char can't be leaked and when you restart the host, it can be leaked.
+The binary at the remote server is very unstable, took me a while to get the flag remotely,i keep terminate and spawn the host again and again.
+Because if you tried to leak it manually without the script, you'll notice some char can't be leaked and when you restart the host, it can be leaked.
 ```
 
 ## FLAG
