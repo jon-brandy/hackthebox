@@ -45,7 +45,7 @@ apksigner sign --ks a.keystore patched_pinned.apk
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4aa25d14-49ad-46cf-9c2b-7491079f8443)
 
 
-6. Hmm.. It seems there's nothing we can do here. After clicked the login, it saya "logged in". Based from the description we just need to intercept the request so we can see what is the password.
+6. Hmm.. It seems there's nothing we can do here. After clicked the login, it saya "logged in". Based from the description we just need to intercept the request so we can see what is the password at the burpsuite.
 7. To bypass the ssl pinning, i used this frida codeshare --> https://codeshare.frida.re/@pcipolloni/universal-android-ssl-pinning-bypass-with-frida/
 
 > COMMAND
