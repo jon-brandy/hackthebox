@@ -5,7 +5,7 @@ This app has stored my credentials and I can only login automatically. I tried t
 ## HINT:
 - NONE
 ## STEPS:
-1. Based from the description and the chall's title, it seems we just need to bypass the ssl pinning applied.
+1. Based from the description and the chall's title, it seems we just need to bypass the ssl pinner applied.
 2. Unzipping the .zip file, there's a .txt file telling that we need to use the API under 29 or exact 29.
 3. But since i only have the API 33, hence let's just try it.
 
