@@ -177,7 +177,7 @@
 |1. |[Cat](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Cat/README.md)|
 |2. |[Don't Overreact](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Don't%20Overreact/README.md)|
 |3. |[APKey](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/APKey/README.md)|
-
+|4. |[Pinned](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Pinned/pinned.md)|
 
 
 
