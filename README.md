@@ -179,6 +179,7 @@
 |3. |[APKey](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/APKey/README.md)|
 |4. |[Pinned](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Pinned/pinned.md)|
 |5. |[APKrypt](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/APKrypt/README.md)|
+|6. |[Manager](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Manager/README.md)|
 
 
 </details>
