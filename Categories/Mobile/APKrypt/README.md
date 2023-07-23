@@ -54,15 +54,30 @@ apktool d patched.apk
 > SAVE then, run this command to build the apk again.
 
 ```
-apktool -b -o patchedv1.2 patched
+apktool b -o patchedv1.2.apk patched
 ```
 
 > Zipalign the apk again then sign it with apksigner.
 
 ```
-zipalign -p 4 patchedv1.2 deploy_patched
+zipalign -p 4 patchedv1.2.apk deploy_patched.apk
 ```
 
 ```
+apksigner sign --ks a.keystore deploy_patched.apk
+```
+
+> Install the apk again, the input random strings. It will decrypt the flag, because our input's hash will not equal to the hardcoded hash.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a816c5b2-db63-4fd3-8938-346aa3d1e86c)
+
+
+8. Got the flag!
+
+## FLAG
 
 ```
+HTB{3nj0y_y0ur_v1p_subscr1pt1on}
+```
+
+
