@@ -218,7 +218,7 @@
 </details>
 
 
-> MACHINE'S CHALLENGE SOLVED
+> MACHINE'S PWNED
 
 
 <details>
