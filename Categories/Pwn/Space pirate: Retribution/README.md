@@ -1,6 +1,20 @@
 # Space pirate: Retribution
 > Write-up author: jon-brandy
 ## DESCRIPTION:
+We got access to the Admin Panel! The last part of the mission is to change the target location of the missiles. We can probably target Draeger's HQ or some other Golden Fang's spaceships. Draeger's HQ might be out of the scope for now, but we can certainly cause significant damage to his army.
+
+## HINT:
+- NONE
+## STEPS:
+1. In this challenge we're given a 64 bit binary, dynamically linked, not stripped, and a libc library.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/71b7f1fc-7a3a-4800-8be5-f3ea631a6329)
+
+
+> BINARY PROTECTIONS
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e19b3a92-ed10-4d5d-9a43-85f23f2a6ce7)
+
 
 
 > FINAL SCRIPT
