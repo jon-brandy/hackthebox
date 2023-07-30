@@ -28,7 +28,8 @@ We got access to the Admin Panel! The last part of the mission is to change the 
 
 > Let's try by send \n --> got unreadable bytes (need to unpack it).
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/135984cb-5f7a-47a0-973d-d10bae44d893)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/68cf34dd-2d88-4d88-a5f2-114efc77f448)
+
 
 
 5. Knowing this result, we can unpack it then format it to hex again, this should be a potential pie leak. Well this challenge is interesting, took me a while to leak the pie and calculate it correctly. Because if we leak it by sending newline, we shall have only 3/4 of the leaked PIE.
