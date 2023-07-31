@@ -33,6 +33,7 @@
 |20. |[Spooky Time](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Spooky%20Time/README.md)|
 |21. |[Space pirate: Retribution](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space%20pirate%3A%20Retribution/README.md)|
 |22. |[Space](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space/README.md)|
+|23. |[Leet Test](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Leet%20Test/README.md)|
 
 </details>
 
