@@ -32,7 +32,7 @@
 |19. |[Vault-breaker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Vault-breaker/README.md)|
 |20. |[Spooky Time](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Spooky%20Time/README.md)|
 |21. |[Space pirate: Retribution](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space%20pirate%3A%20Retribution/README.md)|
-
+|22. |[Space](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space/README.md)|
 
 </details>
 
