@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/75326314-963d-462d-ba71-12a3692634c1)![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6042dc21-4df4-457f-99bc-7e062796326a)# Leet Test
+# Leet Test
 > Write-up author: jon-brandy
 ## DESCRIPTION:
 Are you 1337 enough?
