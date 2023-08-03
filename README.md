@@ -3,7 +3,7 @@
 </p>
 
 
-> CTF'S 
+> CTF CHALLENGES SOLVED
 
 <details>
 <br>
