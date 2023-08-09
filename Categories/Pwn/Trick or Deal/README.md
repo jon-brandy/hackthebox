@@ -55,6 +55,9 @@ update_weapons() is called at the main(), and it allocates a chunk on the heap. 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/61265489-8ae5-4c02-b200-5b957478fbc4)
 
 
+> PROOF (80 sized chunk holds a string and also the printstorage() pointer
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/327b93d0-d395-43c0-88fc-a48fa4fc9505)
 
 
 ### FLOW
@@ -62,6 +65,8 @@ update_weapons() is called at the main(), and it allocates a chunk on the heap. 
 ```
 At first, we free the storage by calling the steal(), since storage is not set to NULL, hence we can use the chunk later (it just freed, does not remove the contents).
 
-Next we do malloc by calling the make_offer() 
+Next we do malloc by calling the make_offer() and make a size of 80 to take the original chunk. Since we only need the last 2 bytes, hence we can fill the rest (72 buffer) with junk. Now we will get RCE at option 1. 
 ```
+
+
 
