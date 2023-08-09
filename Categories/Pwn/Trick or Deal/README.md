@@ -38,5 +38,30 @@ trick_or_deal: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamica
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4be67cc-3490-4434-bfb8-76819fee077c)
 
 
-4. The pwn concept here is ret2win with UAF, but the problem is the PIE enabled. There are no way we can leaj 
+4. The pwn concept here is ret2win, but the problem is the PIE enabled and there is no potential overflow. We can leak the PIE at `buy()` by sending 7 bytes, but we won't be able to use it because there is no overflow.
+5. Anyway we can still do get inside the `unlock_storage()` using the **UAF** with modifying the last 2 bytes (least significant bytes) of the function pointer. The goal is to change **printstorage** to **unlock_storage**.
+
+#### NOTES:
+
+```
+update_weapons() is called at the main(), and it allocates a chunk on the heap. The chunk is saved in a global variable named storage with a size of 80 bytes (0x50) and it copies it's value and a pointer to the printstorage(). (Only in the last 8 bytes). 
+```
+
+
+6. But why printstorage shall be our interest? Here's why:
+
+> WITH GDB - CHECKING THE HEAP CHUNKS
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/61265489-8ae5-4c02-b200-5b957478fbc4)
+
+
+
+
+### FLOW
+
+```
+At first, we free the storage by calling the steal(), since storage is not set to NULL, hence we can use the chunk later (it just freed, does not remove the contents).
+
+Next we do malloc by calling the make_offer() 
+```
 
