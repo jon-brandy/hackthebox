@@ -33,4 +33,10 @@ trick_or_deal: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamica
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0459f894-b235-456b-a158-8178edf8bbd9)
 
 
+3. And it seems our goal is at the `unlock_storage()`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4be67cc-3490-4434-bfb8-76819fee077c)
+
+
+4. The pwn concept here is ret2win with UAF, but the problem is the PIE enabled. There are no way we can leaj 
 
