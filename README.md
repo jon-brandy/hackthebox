@@ -34,6 +34,9 @@
 |21. |[Space pirate: Retribution](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space%20pirate%3A%20Retribution/README.md)|
 |22. |[Space](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space/README.md)|
 |23. |[Leet Test](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Leet%20Test/README.md)|
+|24. |[Trick or Deal](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Trick%20or%20Deal/README.md)|
+
+
 
 </details>
 
