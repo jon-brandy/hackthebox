@@ -142,5 +142,30 @@ for i in range(200):
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f46a959e-d70d-4908-9a58-2c2b709aa02a)
 
 
+- So this is where my way gets unintended, I didn't leak the printf@got or fgets@got to get more accurate libc result, I immediately tried the `libc6_2.27-3ubuntu1_amd64 `. So what comes to my mind, if the `libc6_2.27-3ubuntu1_amd64` does not work, i will use the `libc6_2.27-3ubuntu1.2_amd64 ` and so on.
+
+---
+
+8. Download the libc and do pwninit.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4c04a585-0e6e-4fba-8b11-e5b94ae73d89)
+
+
+9. Great, let's grab one_gadget and __malloc_hook.
+
+> ONE_GADGET --> try the 2nd one.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dd519df9-6320-47bd-b6e2-1d2b956849b6)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3daf400f-abd1-4894-adb4-3c73aeee7a87)
+
+
+10. 
+
+
+
+
 
 
