@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0b984a01-c83a-4175-9709-f5819f534595)# Format
+# Format
 ## DESCRIPTION:
 Can you hear the echo?
 ## HINT:
@@ -122,7 +122,6 @@ for i in range(200):
 
 
 - But, we need to know the actual libc used, to minimize the probability i used the leaked **_IO_file_jumps**.
-bhbi
 
 
 
