@@ -123,6 +123,8 @@ for i in range(200):
 
 - But, we need to know the actual libc used, to minimize the probability i used the leaked **_IO_file_jumps**.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d4ddadd0-092b-405c-8ce1-b5ce1ad6e076)
+
 
 
 
