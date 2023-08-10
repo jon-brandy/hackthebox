@@ -1,4 +1,4 @@
-# Format
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0b984a01-c83a-4175-9709-f5819f534595)# Format
 ## DESCRIPTION:
 Can you hear the echo?
 ## HINT:
@@ -116,5 +116,14 @@ for i in range(200):
 - Anyway, at the end i got result after sending the **_IO_2_1_stderr_**.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/81201f90-1a27-49a4-9ac5-3f6b98aef802)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0491790b-3959-4d42-ab67-f322936d1350)
+
+
+- But, we need to know the actual libc used, to minimize the probability i used the leaked **_IO_file_jumps**.
+bhbi
+
+
 
 
