@@ -52,7 +52,7 @@ format: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically lin
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f41313c3-13fb-4455-8ceb-aa392f095f1f)
 
 
-#### NOTES: In this writeup i won't explain again how to calculate the libc base and piebase again, i've explained many times be
+#### NOTES: In this writeup i won't explain again how to calculate the libc base and piebase again, i've explained this many times, go check my other writeups for explaination.
 
 
 6. After calculating the piebase and libc base, before overwriting **__malloc_hook** with **one_gadgetA**, we need to identify the libc used at the remote server, so we won't work twice.
