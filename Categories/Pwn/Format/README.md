@@ -30,8 +30,8 @@ format: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically lin
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8e3f2da2-36ef-481e-b471-b432a1dafa77)
 
 
-3. But there is no BOF, hence we can't do ret2libc here. Also we can't overwrite the Global Offset Table, because RELRO is full.
-4. So how to get the shell? We still can utilize `__malloc_hook`.
+3. But there is no BOF, hence we can't do ret2libc here. Also, we can't overwrite the Global Offset Table because RELRO is full.
+4. So how to get RCE? We still can utilize `__malloc_hook`.
 
 #### MALLOC HOOK
 
@@ -55,8 +55,8 @@ format: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically lin
 #### NOTES: In this writeup i won't explain again how to calculate the libc base and piebase again, i've explained this many times, go check my other writeups for explaination.
 
 
-6. After calculating the piebase and libc base, before overwriting **__malloc_hook** with **one_gadgetA**, we need to identify the libc used at the remote server, so we won't work twice.
-7. Well what i did to identify the remote server is kinda lucky i guess, maybe there are many ways that are more straightforward.
+6. After calculating the piebase and libc base, before overwriting **__malloc_hook** with **one_gadget**, we need to identify the libc used at the remote server so we won't work twice.
+7. Well, what I did to identify the remote server is kind of lucky, I guess; maybe there are many ways that are more straightforward.
 
 ---
 
@@ -113,4 +113,8 @@ for i in range(200):
 
 
 - But when i used the leaked **_IO_2_1_stdin_** at the remote server and check it on blukat, it did not found any libc relevant to this.
-- Anyway, at the end i get the correct 
+- Anyway, at the end i got result after sending the **_IO_2_1_stderr_**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/81201f90-1a27-49a4-9ac5-3f6b98aef802)
+
+
