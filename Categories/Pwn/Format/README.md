@@ -126,5 +126,21 @@ for i in range(200):
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d4ddadd0-092b-405c-8ce1-b5ce1ad6e076)
 
 
+> AT REMOTE
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2562483f-d25e-4ca6-8bab-b40ef62fdfe1)
+
+
+> RESULT at libc blukat
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3c959958-8de6-425f-b075-a746bc94cfd5)
+
+
+- It's better than before, but we need to find the correct one. Notice, we can ignore the first seven (because they are for 32 bit).
+- Our interest are these:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f46a959e-d70d-4908-9a58-2c2b709aa02a)
+
+
 
 
