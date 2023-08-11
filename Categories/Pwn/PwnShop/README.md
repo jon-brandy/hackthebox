@@ -1,4 +1,5 @@
 # PwnShop
+> Write-up author: jon-brandy
 ## DESCRIPTION:
 We just opened a Pwn Shop, time to pwn all the things!
 ## HINT:
