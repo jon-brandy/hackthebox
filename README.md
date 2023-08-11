@@ -36,6 +36,8 @@
 |23. |[Leet Test](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Leet%20Test/README.md)|
 |24. |[Trick or Deal](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Trick%20or%20Deal/README.md)|
 |25. |[Format](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Format/README.md)|
+|26. |[PwnShop](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/PwnShop/README.md)|
+
 
 </details>
 
