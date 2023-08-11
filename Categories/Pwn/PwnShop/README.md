@@ -555,6 +555,8 @@ sh.interactive()
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bc3bc14a-7ebf-4d57-81f6-b9ba284b40ff)
 
 
+12. Got the flag.
+
 ## FLAG
 
 ```
