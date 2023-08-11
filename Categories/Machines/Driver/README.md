@@ -65,5 +65,8 @@ Remembering the OS used is windows, hence we can upload Shell Command File (SCF)
 #### NOTES:
 
 ```
-NTLM (NT LAN Manager) hash is a cryptographic hash function used in Windows OS for authentication purposes. It's commonly used as a password hashing mechanism in Windows env. NTLM hash is designed to hash passwords and other data for security, but it's considered relatively weak compared to more modern hashing algorithms like bcrypt or Argon2.
+NTLM (NT LAN Manager) hash is a cryptographic hash function used in Windows OS for authentication purposes.
+It's commonly used as a password hashing mechanism in Windows env.
+NTLM hash is designed to hash passwords and other data for security,
+ but it's considered relatively weak compared to more modern hashing algorithms like bcrypt or Argon2.
 ```
