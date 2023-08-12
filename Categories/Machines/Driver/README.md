@@ -55,7 +55,7 @@ Using nmap, we identified there are 4 ports open, 80, 135 (msrpc service), 445 (
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7b3e6987-30f9-4f12-8881-64b73201c8c7)
 
 
-Seems the vuln is at the file upload feature, because it does not check the uploaded file, the file itself shall reviewed manually later.
+Seems the vuln is at the file upload feature, because it does not check the uploaded file, the file itself shall reviewed manually later by the testing team.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a69f817c-0ea2-4196-996c-41501be82cec)
 
@@ -70,3 +70,5 @@ It's commonly used as a password hashing mechanism in Windows env.
 NTLM hash is designed to hash passwords and other data for security,
  but it's considered relatively weak compared to more modern hashing algorithms like bcrypt or Argon2.
 ```
+
+
