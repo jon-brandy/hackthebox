@@ -241,6 +241,7 @@
 |5. |[Photobomb](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Photobomb/README.md)|
 |6. |[Precious](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Precious/README.md)|
 |7. |[Shoppy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shoppy/README.md)|
+|8. |[Cap](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Cap/README.md)|
 
 
 </details>
