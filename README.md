@@ -37,7 +37,7 @@
 |24. |[Trick or Deal](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Trick%20or%20Deal/README.md)|
 |25. |[Format](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Format/README.md)|
 |26. |[PwnShop](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/PwnShop/README.md)|
-
+|27. |[Finale](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Finale/README.md)|
 
 </details>
 
