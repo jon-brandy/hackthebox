@@ -54,6 +54,18 @@ choice (8 bytes) + canary (8 bytes) + input (64 bytes).
 Why do we need canary?? No need to explain this in detail I guess, already learned heap, I'm guessing you already familiar with canary.
 So our return address is consist of --> leaked stack address + padding.
 
-Anyway we still have a problem, after freeing our input, the program terminates itself (goes to return 0). Well we don't want that to happen.
+Anyway we still have a problem, after freeing our input, the program terminates itself (goes to return 0). Well, we don't want that.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cac7c853-2954-4c4c-b713-621e8540e280)
+
+
 This is where **House of Spirit** come in play, we need to make a fake chunk, the fake chunk can't be like our casual junk (8 bytes A or whatever).
 It must be a NULL (0) or actual chunk.
+
+So what we want to send in 3rd option is:
+
+```
+0x0 (fake chunk) + return_address (leaked stack address + padding).
+```
+
+Then
