@@ -7,7 +7,7 @@
 
 <details>
 <br>
-<summary> PWN </summary>
+<summary> Pwn </summary>
 
 |No.|Challenge's name|
 |:-:|:--------------:|
