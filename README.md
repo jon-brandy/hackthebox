@@ -7,7 +7,7 @@
 
 <details>
 <br>
-<summary> Binary Exploitation </summary>
+<summary> Pwn </summary>
 
 |No.|Challenge's name|
 |:-:|:--------------:|
