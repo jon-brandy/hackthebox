@@ -3,7 +3,7 @@
 </p>
 
 
-> CTF CHALLENGES
+> CTF's PWNED
 
 <details>
 <br>
