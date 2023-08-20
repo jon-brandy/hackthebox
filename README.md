@@ -39,6 +39,7 @@
 |26. |[PwnShop](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/PwnShop/README.md)|
 |27. |[Finale](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Finale/README.md)|
 |28. |[Hellhound](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Hellhound/README.md)|
+|29. |[Sacred Scrolls: Revenge](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sacred%20Scrolls%3A%20Revenge/README.md)|
 
 
 </details>
