@@ -69,7 +69,7 @@ Values they compared:
 
 7. Hence the exploit is very straight forward here.
 
-## FLOW
+## FLOW AND HOW TO
 
 ```
 1. Craft the payload (RCE payload because we have system()).
@@ -96,6 +96,40 @@ UEsDBBQAAAAIAE1CFFe9j2lokwEAAAcEAAAJABwAc3BlbGwudHh0VVQJAAPBLuJkuy7iZHV4CwABBOgD
 
 #### NOTES: Dunno why gdb-pwndbg and gdb-peda won't work with this binary, hence i used gdb-gef.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4869e4a6-a7e5-4399-85e1-101d67b22858)
+
+
+Again, dunno why it said that our content has invalid character. Tbh i don't understand why it responded like that although the cyclic i encode does not have invalid character. So i think we just have to bruteforced it later, maybe start from 32 bytes.
+
+Anyway we have system(), pop_rdi gadget, now we need the /bin/sh strings, let's check if the binary does have it.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bd458671-5ea0-4a66-92d2-e78ab35492cb)
+
+
+Hmmm, it's not easy as it looks like. Anyway, turns out there's binsh strings written in this binary. Found it after i noticed at the main() it accepts so many buffer which should not accepts that big, like for what (?)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5a51e231-d3f7-426a-b3b5-bd492aed3f3c)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/93dd265b-af5c-44ee-bdd3-15f68500f54e)
+
+
+After checks what stored in the RSI, found this: (run the binary -> ctrl + c -> telescope).
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/11071dd8-9a2b-4af5-9d48-ffdd42c91507)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eaf4be07-f41b-49cd-a4d8-4ac1edbf655a)
+
+
+We can leak it by sending 0x10 buffer (16). So the payload shall look like this:
+
+```
+emojis + padding + ret + rdi + binsh + system
+```
+
+8. Now let's grab the leaked binsh strings.
 
 
 
