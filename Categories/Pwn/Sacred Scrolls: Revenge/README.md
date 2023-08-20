@@ -190,7 +190,7 @@ with open('spell.zip', 'rb') as f:
     base64_bytes = base64_payload.encode()
 ```
 
-> FULL SCRIPT
+> FULL SCRIPT (GOT RCE)
 
 ```py
 from pwn import * 
