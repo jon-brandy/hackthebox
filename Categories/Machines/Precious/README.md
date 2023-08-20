@@ -5,7 +5,7 @@
 ## HINT:
 - NONE
 ## STEPS:
-1. First, let's run nmap to scan all open ports.
+1. First, let's run nmap to check if there are any ports open.
 
 > RESULT
 
