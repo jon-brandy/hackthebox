@@ -5,7 +5,7 @@
 ## HINT:
 - NONE
 ## STEPS:
-1. First, scan all open ports and it's services from the host given.
+1. First, let's run nmap to scan all open ports.
 
 > RESULT
 
