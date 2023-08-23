@@ -43,10 +43,6 @@ format: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically lin
 
 5. Let's grab the piebase and potential libc.
 
-> Actually there is many potential libc address, but i grabbed the 1st one.
-
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fd8097b8-44e8-4e63-8058-8765319f4a73)
-
 
 > Many potential pie we can use to calculate the base.
 
