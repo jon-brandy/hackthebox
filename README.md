@@ -227,6 +227,16 @@
 
 </details>
 
+<details>
+  <br>
+  <summary>Blockchain</summary>
+
+  |No.|Challenge's name|
+  |:-:|:--------------:|
+  |1. |[Survival of the Fittest](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Blockchain/Survival%20of%20the%20Fittest/README.md)|
+  
+</details>
+
 
 > MACHINE'S PWNED
 
@@ -250,15 +260,7 @@
 </details>
 
 
-<details>
-  <br>
-  <summary>Blockchain</summary>
 
-  |No.|Challenge's name|
-  |:-:|:--------------:|
-  |1. |[Survival of the Fittest](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Blockchain/Survival%20of%20the%20Fittest/README.md)|
-  
-</details>
 
 
 
