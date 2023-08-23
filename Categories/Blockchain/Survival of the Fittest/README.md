@@ -104,4 +104,38 @@ cast send --rpc-url http://ip:port/rpc --private-key private_key_address target_
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1bedeff5-53a3-4bd9-bc35-4614ae049221)
 
 
+> CHECKING THE LIFEPOINTS
 
+```
+cast call --rpc-url ip:port/rpc target_address "lifePoints()"
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5afa25a-0730-4de5-a3f1-2509c172a37e)
+
+
+6. Great we beat them.
+7. Let's loot the flag!
+
+> LOOT THE FLAG
+
+```
+cast send --rpc-url http://ip:port/rpc --private-key private_key_address target_address "loot()"
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/082021a4-80c5-4d3b-8813-d15a726196da)
+
+
+8. Now let's open the /flag endpoint.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7e179ff0-8468-4fcd-bebd-0a38278d7439)
+
+
+9. Got the flag!
+
+## FLAG
+
+```
+HTB{g0t_y0u2_f1r5t_b100d}
+```
