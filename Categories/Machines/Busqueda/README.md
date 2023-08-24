@@ -129,9 +129,15 @@ cat config
 svc@busqueda:/var/www/app/.git$ 
 ```
 
-> gitea.searcher.htb
+> gitea.searcher.htb -> use -> cody:jh1usoih2bkjaspwe92
 
-![Uploading image.png…]()
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1871d832-3231-4080-8722-511ebd99bed1)
+
+
+
+
+
+
 
 
 
