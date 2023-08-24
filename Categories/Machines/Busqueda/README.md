@@ -135,7 +135,26 @@ svc@busqueda:/var/www/app/.git$
 
 
 
+#### NOTES:
 
+```
+In short about Gitea:
+-> Similar to GitHub or GitLab but more lightweight, easy to install, and consume fewer system resources.
+```
+
+
+12. Nothing interesting here. Anyway i tried to run `sudo -l` to see the sudo permissions for user svc, but resulting to this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f7be4e1d-0be1-42ac-8501-5dc4458848c6)
+
+
+13. To solve this, we need to do login ssh using this cred --> `svc:jh1usoih2bkjaspwe92`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d4cb6819-21de-4b38-98b2-46a98be39809)
+
+
+14. `/usr/bin/python3 /opt/scripts/system-checkup.py` can be our interest now.
+15. 
 
 
 
