@@ -165,6 +165,8 @@ In short about Gitea:
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dbf058b9-1555-4074-b24d-749de0a01249)
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e608e77c-7bd8-4d2f-8ef6-fab6c714262e)
+
 
 16. When running "docker-inspect" it asks us to specify the format and the docker name.
 
@@ -480,6 +482,15 @@ sudo /usr/bin/python3 /opt/scripts/system-checkup.py docker-inspect '{{json .}}'
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f7b1c05f-ee9e-4ad7-9d5a-ce43fbbe8ba5)
 
 
+18. Finally we can analyze the `system-checkup` source code.
+19. Found the vuln here:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/999aec4b-0d19-476c-b4b7-f9634f8c7fa1)
+
+
+20. Instead of using an absolute path for executing the full-checkup script, it using a relative path. Knowing this, means system-checkup shall executes full-checkup from the directory where system-checkup is executed.
+
+21. 
 
 
 
