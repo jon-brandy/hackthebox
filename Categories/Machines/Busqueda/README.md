@@ -154,7 +154,18 @@ In short about Gitea:
 
 
 14. `/usr/bin/python3 /opt/scripts/system-checkup.py` can be our interest now.
-15. 
+
+> User only has access to execute.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8499175f-8203-485d-8286-09d3d58b20b2)
+
+
+15. Things getting more interesting here.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dbf058b9-1555-4074-b24d-749de0a01249)
+
+
+
 
 
 
