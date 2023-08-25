@@ -218,3 +218,11 @@ root
 # 
 ```
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6ad88a19-39c0-452c-acfe-8a9cfc43d086)
+
+
+## ROOT FLAG
+
+```
+5c78862fec523cd01ebd58711da58323
+```
