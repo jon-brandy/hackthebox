@@ -1,8 +1,7 @@
 # Cap
-## DESCRIPTION:
-- NONE
-## HINT:
-- NONE
+
+> Write-up author: jon-brandy
+
 ## STEPS:
 > PORT SCANNING
 
