@@ -1,4 +1,7 @@
 # Busqueda
+
+> Write-up author: jon-brandy
+
 ## STEPS:
 
 > PORT SCANNING
