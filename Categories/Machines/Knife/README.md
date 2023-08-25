@@ -42,7 +42,7 @@ Nmap done: 1 IP address (1 host up) scanned in 30.65 seconds
 
 > SCRIPT FROM DOCUMENTATION
 
-```
+```py
 # Exploit Title: PHP 8.1.0-dev - 'User-Agentt' Remote Code Execution
 # Date: 23 may 2021
 # Exploit Author: flast101
@@ -152,4 +152,4 @@ $
 b18383f88c92034b8db5157c1c8c28fb
 ```
 
-5. To get the root flag, let's run `sudo -l` t
+5. To get the root flag, let's run `sudo -l` to see if there is any actions we can do with
