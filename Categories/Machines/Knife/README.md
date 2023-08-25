@@ -1,5 +1,7 @@
 # Knife
 
+> Write-up author: jon-brandy
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b047d79-69bf-4a4d-aec3-f51ced0790a9)
 
 
