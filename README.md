@@ -256,6 +256,7 @@
 |7. |[Shoppy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shoppy/README.md)|
 |8. |[Cap](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Cap/README.md)|
 |9. |[Busqueda](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Busqueda/README.md)|
+|10. |[Knife](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Knife/README.md)|
 
 
 </details>
