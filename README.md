@@ -258,6 +258,8 @@
 |9. |[Busqueda](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Busqueda/README.md)|
 |10. |[Knife](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Knife/README.md)|
 |11. |[Bashed](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bashed/README.md)|
+|12. |[Shocker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shocker/README.md)|
+
 
 </details>
 
