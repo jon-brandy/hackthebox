@@ -33,5 +33,11 @@ Nmap done: 1 IP address (1 host up) scanned in 56.02 seconds
 1. Based from the nmap result, we know the machine runs a web application and ssh service.
 2. Since there's no interesting info currently, i ran dirbuster and found a directory named `cgi-bin`.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/98b50867-ce6d-4244-8830-f178eda7757d)
 
+
+3. Which is interesing, it's forbidden. Judging from the challenge title and the directory we found.
+4. This challenge could be related to `shellshock exploit` --> `Apache mod CGI`.
+5. This should be the one --> `https://www.exploit-db.com/exploits/34766` (since there's .sh files).
+6. 
 
