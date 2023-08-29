@@ -39,5 +39,14 @@ Nmap done: 1 IP address (1 host up) scanned in 56.02 seconds
 3. Which is interesing, it's forbidden. Judging from the challenge title and the directory we found.
 4. This challenge could be related to `shellshock exploit` --> `Apache mod CGI`.
 5. This should be the one --> `https://www.exploit-db.com/exploits/34766` (since there's .sh files).
-6. 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/969a041f-98d0-4122-9947-bf198467955e)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/304bbb31-bc3f-474b-aeda-5a7407448e56)
+
+
+6. Let's use 1.
+
+
 
