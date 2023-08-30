@@ -260,7 +260,7 @@
 |10. |[Knife](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Knife/README.md)|
 |11. |[Bashed](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bashed/README.md)|
 |12. |[Shocker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shocker/README.md)|
-
+|13. |[Beep](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Beep/README.md)|
 
 </details>
 
