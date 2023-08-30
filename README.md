@@ -29,28 +29,15 @@
 <details>
 <br>
 <summary> Web </summary>
-
-|No.|Challenge's name|
-|:-:|:--------------:|
-|1. |[Templated](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Templated/README.md)|
-|2. |[LoveTok](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/LoveTok/README.md)|
-|3. |[Phonebook](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Phonebook/README.md)|
-|4. |[Spookifier](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Spookifier/README.md)|
-|5. |[looking glass](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/looking%20glass/README.md)|
-|6. |[sanitize](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/sanitize/README.md)|
-|7. |[baby auth](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20auth/README.md)|
-|8. |[baby BonChewerCon](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20BoneChewerCon/README.md)|
-|9. |[Full Stack Conf](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Full%20Stack%20Conf/README.md)|
-|10. |[baby interdimensional internet](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20interdimensional%20internet/README.md)|
-|11. |[Juggling facts](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Juggling%20facts/README.md)|
-|12. |[baby nginxatsu](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20nginxatsu/README.md)|
-|13. |[baby todo or not todo](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20todo%20or%20not%20todo/README.md)|
-|14. |[baby WAFfles order](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20WAFfles%20order/README.md)|
-|15. |[BlinkerFluids](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/BlinkerFluids/README.md)|
-|16. |[Orbital](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Orbital/README.md)|
-|17. |[Trapped Source](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Trapped%20Source/README.md)|
-|18. |[Passman](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Web/Passman/README.md)|
-
+  
+|No.|Collumn 1|Collumn 2|Collumn 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[Templated](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Templated/README.md)|[LoveTok](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/LoveTok/README.md)|[Phonebook](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Phonebook/README.md)|
+|2. |[Spookifier](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Spookifier/README.md)|[looking glass](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/looking%20glass/README.md)|[sanitize](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/sanitize/README.md)|
+|3. |[baby auth](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20auth/README.md)|[baby BonChewerCon](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20BoneChewerCon/README.md)|[Full Stack Conf](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Full%20Stack%20Conf/README.md)|
+|4. |[baby interdimensional internet](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20interdimensional%20internet/README.md)|[Juggling facts](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Juggling%20facts/README.md)|[baby nginxatsu](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20nginxatsu/README.md)|
+|5. |[baby todo or not todo](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20todo%20or%20not%20todo/README.md)|[baby WAFfles order](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20WAFfles%20order/README.md)|[BlinkerFluids](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/BlinkerFluids/README.md)|
+|6. |[Orbital](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Orbital/README.md)|[Trapped Source](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Trapped%20Source/README.md)|[Passman](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Web/Passman/README.md)|
 
 </details>
 
@@ -59,38 +46,18 @@
 <br>
 <summary> Forensics </summary>
 
-|No.|Challenge's name|
-|:-:|:--------------:|
-|1. |[Illumination](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Illumination/README.md)|
-|2. |[MarketDump](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/MarketDump/README.md)|
-|3. |[Wrong Spooky Seasaon](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Wrong%20Spooky%20Season/README.md)|
-|4. |[Marshal in the Middle](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Marshal%20in%20the%20Middle/README.md)|
-|5. |[Chase](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Chase/README.md)|
-|6. |[Event Horizon](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Event%20Horizon/README.md)|
-|7. |[Insider](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Insider/README.md)|
-|8. |[Export](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Export/README.md)|
-|9. |[Persistence](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Persistence/README.md)|
-|10. |[No Place To Hide](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/No%20Place%20To%20Hide/README.md)|
-|11. |[Lure](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Lure/README.md)|
-|12. |[Logger](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Logger/README.md)|
-|13. |[Halloween Invitation](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Halloween%20Invitation/README.md)|
-|14. |[Peel Back The Layers](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Peel%20Back%20The%20Layers/README.md)|
-|15. |[Reminiscent](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Reminiscent/README.md)|
-|16. |[Intergalactic Recovery](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Intergalactic%20Recovery/README.md)|
-|16. |[Downgrade](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Downgrade/README.md)|
-|17. |[Automation](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Automation/README.md)|
-|18. |[Perseverance](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Perseverance/README.md)|
-|19. |[Deadly Arthropod](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Deadly%20Arthropod/README.md)|
-|20. |[Keep Tryin'](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Keep%20Tryin'/README.md)|
-|21. |[Strike Back](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Strike%20Back/README.md)|
-|22. |[Diagnostic](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Diagnostic/README.md)|
-|23. |[Fake News](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Fake%20News/README.md)|
-|24. |[POOF](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/POOF/README.md)|
-|25. |[Alien Cradle](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Alien%20Cradle/README.md)|
-|26. |[Extraterrestrial Persistence](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Extraterrestrial%20Persistence/README.md)|
-|27. |[Artifact Of Dangerous Sighting](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Artifact%20Of%20Dangerous%20Sighting/README.md)|
-|28. |[oBfsC4t10n2](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/oBfsC4t10n2/README.md)|
-|29. |[Packet Cyclone](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Packet%20Cyclone/README.md)|
+|No.|Collumn 1|Collumn 2|Collumn 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[Illumination](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Illumination/README.md)|[MarketDump](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/MarketDump/README.md)|[Wrong Spooky Seasaon](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Wrong%20Spooky%20Season/README.md)|
+|2. |[Marshal in the Middle](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Marshal%20in%20the%20Middle/README.md)|[Chase](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Chase/README.md)|[Event Horizon](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Event%20Horizon/README.md)|
+|3. |[Insider](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Insider/README.md)|[Export](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Export/README.md)|[Persistence](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Persistence/README.md)|
+|4. |[No Place To Hide](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/No%20Place%20To%20Hide/README.md)|[Lure](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Lure/README.md)|[Logger](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Logger/README.md)|
+|5. |[Halloween Invitation](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Halloween%20Invitation/README.md)|[Peel Back The Layers](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Peel%20Back%20The%20Layers/README.md)|[Reminiscent](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Reminiscent/README.md)|
+|6. |[Intergalactic Recovery](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Intergalactic%20Recovery/README.md)|[Downgrade](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Downgrade/README.md)|[Automation](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Automation/README.md)|
+|7. |[Perseverance](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Perseverance/README.md)|[Deadly Arthropod](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Deadly%20Arthropod/README.md)|[Keep Tryin'](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Keep%20Tryin'/README.md)|
+|8. |[Strike Back](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Strike%20Back/README.md)|[Diagnostic](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Diagnostic/README.md)|[Fake News](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Fake%20News/README.md)|
+|9. |[POOF](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/POOF/README.md)|[Alien Cradle](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Alien%20Cradle/README.md)|[Extraterrestrial Persistence](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Extraterrestrial%20Persistence/README.md)|
+|10. |[Artifact Of Dangerous Sighting](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Artifact%20Of%20Dangerous%20Sighting/README.md)|[oBfsC4t10n2](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/oBfsC4t10n2/README.md)|[Packet Cyclone](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Packet%20Cyclone/README.md)|
 
   
 
