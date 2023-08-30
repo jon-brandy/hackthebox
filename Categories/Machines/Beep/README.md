@@ -67,4 +67,29 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 399.28 seconds
 ```
 
-1. In this 
+1. Interesting the machine opens many tcp ports, since the machine runs a web application let's run dirbuster.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/18f63fec-cbd5-4016-80c5-f3712a82359d)
+
+
+2. Confused it won't open the web app, to solve this i tried to modify the minimum TLS version. (It's possible that the TLS version of our browser is higher than what the browser supports).
+
+> CHANGING THE TLS MINIMUM VERSION
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f86d50f5-95dc-42c5-b1de-665bd5ba6c7f)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1dc303de-f985-4c51-9848-95bb0678adce)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a5f1543a-8483-4ba0-9b73-b4d86711604b)
+
+
+3. Turns out elastix has many vuln found history.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/27776557-8c7d-44e7-8a68-8a015152663e)
+
