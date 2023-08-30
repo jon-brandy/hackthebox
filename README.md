@@ -224,6 +224,7 @@
 |9. |[Emdee five for life](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Emdee%20five%20for%20life/README.md)|
 |10. |[The secret of a Queen](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/The%20secret%20of%20%20a%20Queen/README.md)|
 |11. |[Eternal Loop](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Eternal%20Loop/README.md)|
+|12. |[Blocky](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blocky/README.md)|
 
 </details>
 
