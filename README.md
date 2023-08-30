@@ -9,7 +9,7 @@
 <br>
 <summary> Pwn </summary>
 
-|No.|Collumn 1|Collumn 2|Collumn 3|
+|No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[racecar](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/racecar)|[You know 0xDiablos](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/You%20know%200xDiablos)|[Jeeves](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Jeeves)|
 |2. |[Space pirate: Entrypoint](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Space%20pirate%3A%20Entrypoint)|[Reg](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Reg)|[Space pirate: Going Deeper](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Space%20pirate%3A%20Going%20Deeper)|
@@ -30,7 +30,7 @@
 <br>
 <summary> Web </summary>
   
-|No.|Collumn 1|Collumn 2|Collumn 3|
+|No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[Templated](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Templated/README.md)|[LoveTok](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/LoveTok/README.md)|[Phonebook](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Phonebook/README.md)|
 |2. |[Spookifier](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Spookifier/README.md)|[looking glass](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/looking%20glass/README.md)|[sanitize](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/sanitize/README.md)|
@@ -45,8 +45,8 @@
 <details>
 <br>
 <summary> Forensics </summary>
-
-|No.|Collumn 1|Collumn 2|Collumn 3|
+  
+|No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[Illumination](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Illumination/README.md)|[MarketDump](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/MarketDump/README.md)|[Wrong Spooky Seasaon](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Wrong%20Spooky%20Season/README.md)|
 |2. |[Marshal in the Middle](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Marshal%20in%20the%20Middle/README.md)|[Chase](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Chase/README.md)|[Event Horizon](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Event%20Horizon/README.md)|
@@ -67,7 +67,7 @@
 <br>
 <summary> Cryptography </summary>
 
-|No.|Collumn 1|Collumn 2|Collumn 3|
+|No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[BabyEncryption](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/BabyEncryption/README.md)|[xorxorxor](https://github.com/jon-brandy/hackthebox/tree/main/Categories/Cryptography/xorxorxor)|[Android in the Middle](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Android-in-the-Middle/README.md)|
 |2. |[Weak RSA](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Weak%20RSA/README.md)|[Classic, yet complicated!](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Classic%2C%20yet%20complicated!/README.md)|[Brainy's Cipher](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Brainy's%20Cipher/README.md)|
@@ -81,8 +81,8 @@
 <details>
 <br>
 <summary> Reversing </summary>
-
-|No.|Collumn 1|Collumn 2|Collumn 3|
+  
+|No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[Impossible Password](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Impossible%20Password/README.md)|[Bypass](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Bypass/README.md)|[Behind the Scenes](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Behind%20the%20Scenes/README.md)|
 |2. |[WIDE](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/WIDE/README.md)|[Baby RE](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Baby%20RE/README.md)|[You Cant C Me](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/You%20Cant%20C%20Me/README.md)|
@@ -97,7 +97,7 @@
 <br>
 <summary> OSINT </summary>
 
-|No.|Collumn 1|Collumn 2|Collumn 3|
+|No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[Easy Phish](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Easy%20Phish/README.md)|[Infiltration](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Infiltration/README.md)|[Money Flowz](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Money%20Flowz/README.md)|
 |2. |[Missing in Action](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Missing%20in%20Action/README.md)|[ID Exposed](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/ID%20Exposed/README.md)|[0ld is g0ld](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/0ld%20is%20g0ld/README.md)|
@@ -112,7 +112,7 @@
 <br>
 <summary> Mobile </summary>
 
-|No.|Collumn 1|Collumn 2|Collumn 3|
+|No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[Cat](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Cat/README.md)|[Don't Overreact](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Don't%20Overreact/README.md)|[APKey](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/APKey/README.md)|
 |2. |[Pinned](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Pinned/pinned.md)|[APKrypt](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/APKrypt/README.md)|[Manager](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Manager/README.md)|
@@ -125,7 +125,7 @@
 <br>
 <summary> Hardware </summary>
 
-|No.|Collumn 1|Collumn 2|Collumn 3|
+|No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[Debugging Interface](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Hardware/Debugging%20Interface/README.md)|||
 
@@ -137,8 +137,8 @@
 <details>
 <br>
 <summary> Misc </summary>
-
-|No.|Collumn 1|Collumn 2|Collumn 3|
+  
+|No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[Canvas](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Canvas/README.md)|[fs0ciety](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/fs0ciety/README.md)|[Milkshake](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Milkshake/README.md)|
 |2. |[Hackerman](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Hackerman/README.md)|[Da Vinci](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Da%20Vinci/README.md)|[Art](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Art/README.md)|
@@ -151,7 +151,7 @@
 <br>
 <summary>Blockchain</summary>
   
-|No.|Collumn 1|Collumn 2|Collumn 3|
+|No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[Survival of the Fittest](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Blockchain/Survival%20of%20the%20Fittest/README.md)|||
   
@@ -165,7 +165,7 @@
 <br>
 <summary> Machines </summary>
 
-|No.|Collumn 1|Collumn 2|Collumn 3|
+|No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[Blue](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blue/README.md)|[Jerry](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Jerry/README.md)|[Lame](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Lame/README.md)|
 |2. |[Netmon](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Netmon/README.md)|[Photobomb](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Photobomb/README.md)|[Precious](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Precious/README.md)|
