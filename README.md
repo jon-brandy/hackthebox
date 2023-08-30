@@ -9,37 +9,18 @@
 <br>
 <summary> Pwn </summary>
 
-|No.|Challenge's name|
-|:-:|:--------------:|
-|1. |[racecar](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/racecar)|
-|2. |[You know 0xDiablos](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/You%20know%200xDiablos)|
-|3. |[Jeeves](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Jeeves)|
-|4. |[Space pirate: Entrypoint](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Space%20pirate%3A%20Entrypoint)|
-|5. |[Reg](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Reg)|
-|6. |[Space pirate: Going Deeper](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Space%20pirate%3A%20Going%20Deeper)|
-|7. |[Bat Computer](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Bat%20Computer)|
-|8. |[Blacksmith](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Blacksmith)|
-|9. |[Shooting star](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Shooting%20star)|
-|10. |[HTB Console](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/HTB%20Console)|
-|11. |[Optimistic](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Optimistic)|
-|12. |[Restaurant](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Restaurant)|
-|13. |[Entity](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Entity)|
-|14. |[Getting Started](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Getting%20Started)|
-|15. |[Questionnaire](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Questionnaire)|
-|16. |[Nightmare](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Pwn/Nightmare/README.md)|
-|17. |[Void](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Pwn/Void/README.md)|
-|18. |[Fleet Management](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Pwn/Fleet%20Management/README.md)|
-|19. |[Vault-breaker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Vault-breaker/README.md)|
-|20. |[Spooky Time](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Spooky%20Time/README.md)|
-|21. |[Space pirate: Retribution](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space%20pirate%3A%20Retribution/README.md)|
-|22. |[Space](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space/README.md)|
-|23. |[Leet Test](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Leet%20Test/README.md)|
-|24. |[Trick or Deal](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Trick%20or%20Deal/README.md)|
-|25. |[Format](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Format/README.md)|
-|26. |[PwnShop](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/PwnShop/README.md)|
-|27. |[Finale](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Finale/README.md)|
-|28. |[Hellhound](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Hellhound/README.md)|
-|29. |[Sacred Scrolls: Revenge](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sacred%20Scrolls%3A%20Revenge/README.md)|
+|No.|Collumn 1|Collumn 2|Collumn 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[racecar](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/racecar)|[You know 0xDiablos](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/You%20know%200xDiablos)|[Jeeves](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Jeeves)|
+|2. |[Space pirate: Entrypoint](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Space%20pirate%3A%20Entrypoint)|[Reg](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Reg)|[Space pirate: Going Deeper](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Space%20pirate%3A%20Going%20Deeper)|
+|3. |[Bat Computer](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Bat%20Computer)|[Blacksmith](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Blacksmith)|[Shooting star](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Shooting%20star)|
+|4. |[HTB Console](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/HTB%20Console)|[Optimistic](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Optimistic)|[Restaurant](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Restaurant)|
+|5. |[Entity](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Entity)|[Getting Started](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Getting%20Started)|[Questionnaire](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Pwn/Questionnaire)|
+|6. |[Nightmare](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Pwn/Nightmare/README.md)|[Void](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Pwn/Void/README.md)|[Fleet Management](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Pwn/Fleet%20Management/README.md)|
+|7. |[Vault-breaker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Vault-breaker/README.md)|[Spooky Time](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Spooky%20Time/README.md)|[Space pirate: Retribution](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space%20pirate%3A%20Retribution/README.md)|
+|8. |[Space](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space/README.md)|[Leet Test](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Leet%20Test/README.md)|[Trick or Deal](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Trick%20or%20Deal/README.md)|
+|9. |[PwnShop](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/PwnShop/README.md)|[Finale](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Finale/README.md)|[Hellhound](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Hellhound/README.md)|
+|10. |[Sacred Scrolls: Revenge](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sacred%20Scrolls%3A%20Revenge/README.md)|||
 
 
 </details>
