@@ -171,7 +171,7 @@
 |2. |[Netmon](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Netmon/README.md)|[Photobomb](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Photobomb/README.md)|[Precious](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Precious/README.md)|
 |3. |[Shoppy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shoppy/README.md)|[Cap](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Cap/README.md)|[Busqueda](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Busqueda/README.md)|
 |4. |[Knife](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Knife/README.md)|[Bashed](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bashed/README.md)|[Shocker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shocker/README.md)|
-|5. |[Beep](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Beep/README.md)|[Blocky](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blocky/README.md)||
+|5. |[Beep](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Beep/README.md)|[Blocky](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blocky/README.md)|[Bank](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bank/README.md)|
 
 
 </details>
