@@ -112,14 +112,10 @@
 <br>
 <summary> Mobile </summary>
 
-|No.|Challenge's name|
-|:-:|:--------------:|
-|1. |[Cat](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Cat/README.md)|
-|2. |[Don't Overreact](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Don't%20Overreact/README.md)|
-|3. |[APKey](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/APKey/README.md)|
-|4. |[Pinned](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Pinned/pinned.md)|
-|5. |[APKrypt](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/APKrypt/README.md)|
-|6. |[Manager](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Manager/README.md)|
+|No.|Collumn 1|Collumn 2|Collumn 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[Cat](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Cat/README.md)|[Don't Overreact](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Don't%20Overreact/README.md)|[APKey](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/APKey/README.md)|
+|2. |[Pinned](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Pinned/pinned.md)|[APKrypt](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/APKrypt/README.md)|[Manager](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Manager/README.md)|
 
 
 </details>
@@ -129,9 +125,9 @@
 <br>
 <summary> Hardware </summary>
 
-|No.|Challenge's name|
-|:-:|:--------------:|
-|1. |[Debugging Interface](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Hardware/Debugging%20Interface/README.md)|
+|No.|Collumn 1|Collumn 2|Collumn 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[Debugging Interface](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Hardware/Debugging%20Interface/README.md)|||
 
 
 </details>
@@ -142,29 +138,22 @@
 <br>
 <summary> Misc </summary>
 
-|No.|Challenge's name|
-|:-:|:--------------:|
-|1. |[Canvas](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Canvas/README.md)|
-|2. |[fs0ciety](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/fs0ciety/README.md)|
-|3. |[Milkshake](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Milkshake/README.md)|
-|4. |[Hackerman](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Hackerman/README.md)|
-|5. |[Da Vinci](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Da%20Vinci/README.md)|
-|6. |[Art](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Art/README.md)|
-|7. |[misDIRection](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/misDIRection/README.md)|
-|9. |[Emdee five for life](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Emdee%20five%20for%20life/README.md)|
-|10. |[The secret of a Queen](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/The%20secret%20of%20%20a%20Queen/README.md)|
-|11. |[Eternal Loop](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Eternal%20Loop/README.md)|
-|12. |[Blocky](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blocky/README.md)|
+|No.|Collumn 1|Collumn 2|Collumn 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[Canvas](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Canvas/README.md)|[fs0ciety](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/fs0ciety/README.md)|[Milkshake](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Milkshake/README.md)|
+|2. |[Hackerman](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Hackerman/README.md)|[Da Vinci](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Da%20Vinci/README.md)|[Art](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Art/README.md)|
+|3. |[misDIRection](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/misDIRection/README.md)|[Emdee five for life](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Emdee%20five%20for%20life/README.md)|[The secret of a Queen](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/The%20secret%20of%20%20a%20Queen/README.md)|
+|4. |[Eternal Loop](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Misc/Eternal%20Loop/README.md)||
 
 </details>
 
 <details>
-  <br>
-  <summary>Blockchain</summary>
-
-  |No.|Challenge's name|
-  |:-:|:--------------:|
-  |1. |[Survival of the Fittest](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Blockchain/Survival%20of%20the%20Fittest/README.md)|
+<br>
+<summary>Blockchain</summary>
+  
+|No.|Collumn 1|Collumn 2|Collumn 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[Survival of the Fittest](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Blockchain/Survival%20of%20the%20Fittest/README.md)|||
   
 </details>
 
@@ -176,21 +165,14 @@
 <br>
 <summary> Machines </summary>
 
-|No.|Challenge's name|
-|:-:|:--------------:|
-|1. |[Blue](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blue/README.md)|
-|2. |[Jerry](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Jerry/README.md)|
-|3. |[Lame](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Lame/README.md)|
-|4. |[Netmon](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Netmon/README.md)|
-|5. |[Photobomb](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Photobomb/README.md)|
-|6. |[Precious](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Precious/README.md)|
-|7. |[Shoppy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shoppy/README.md)|
-|8. |[Cap](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Cap/README.md)|
-|9. |[Busqueda](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Busqueda/README.md)|
-|10. |[Knife](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Knife/README.md)|
-|11. |[Bashed](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bashed/README.md)|
-|12. |[Shocker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shocker/README.md)|
-|13. |[Beep](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Beep/README.md)|
+|No.|Collumn 1|Collumn 2|Collumn 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[Blue](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blue/README.md)|[Jerry](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Jerry/README.md)|[Lame](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Lame/README.md)|
+|2. |[Netmon](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Netmon/README.md)|[Photobomb](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Photobomb/README.md)|[Precious](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Precious/README.md)|
+|3. |[Shoppy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shoppy/README.md)|[Cap](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Cap/README.md)|[Busqueda](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Busqueda/README.md)|
+|4. |[Knife](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Knife/README.md)|[Bashed](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bashed/README.md)|[Shocker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shocker/README.md)|
+|5. |[Beep](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Beep/README.md)|[Blocky](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blocky/README.md)||
+
 
 </details>
 
