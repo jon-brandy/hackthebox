@@ -67,17 +67,12 @@
 <br>
 <summary> Cryptography </summary>
 
-|No.|Challenge's name|
-|:-:|:--------------:|
-|1. |[BabyEncryption](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/BabyEncryption/README.md)|
-|2. |[xorxorxor](https://github.com/jon-brandy/hackthebox/tree/main/Categories/Cryptography/xorxorxor)|
-|3. |[Android in the Middle](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Android-in-the-Middle/README.md)|
-|4. |[Weak RSA](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Weak%20RSA/README.md)|
-|5. |[Classic, yet complicated!](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Classic%2C%20yet%20complicated!/README.md)|
-|6. |[Brainy's Cipher](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Brainy's%20Cipher/README.md)|
-|7. |[Gonna-Lift-Em-All](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Gonna-Lift-Em-All/README.md)|
-|8. |[Ancient Encodings](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Ancient%20Encodings/README.md)|
-|9. |[Nuclear Sale](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Cryptography/Nuclear%20Sale/README.md)|
+|No.|Collumn 1|Collumn 2|Collumn 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[BabyEncryption](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/BabyEncryption/README.md)|[xorxorxor](https://github.com/jon-brandy/hackthebox/tree/main/Categories/Cryptography/xorxorxor)|[Android in the Middle](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Android-in-the-Middle/README.md)|
+|2. |[Weak RSA](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Weak%20RSA/README.md)|[Classic, yet complicated!](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Classic%2C%20yet%20complicated!/README.md)|[Brainy's Cipher](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Brainy's%20Cipher/README.md)|
+|3. |[Gonna-Lift-Em-All](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Gonna-Lift-Em-All/README.md)|[Ancient Encodings](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Cryptography/Ancient%20Encodings/README.md)|[Nuclear Sale](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Cryptography/Nuclear%20Sale/README.md)|
+
 
 
 </details>
@@ -87,23 +82,13 @@
 <br>
 <summary> Reversing </summary>
 
-|No.|Challenge's name|
-|:-:|:--------------:|
-|1. |[Impossible Password](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Impossible%20Password/README.md)|
-|2. |[Bypass](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Bypass/README.md)|
-|3. |[Behind the Scenes](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Behind%20the%20Scenes/README.md)|
-|4. |[WIDE](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/WIDE/README.md)|
-|5. |[Baby RE](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Baby%20RE/README.md)|
-|6. |[You Cant C Me](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/You%20Cant%20C%20Me/README.md)|
-|7. |[Find The Easy Pass](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Find%20The%20Easy%20Pass/README.md)|
-|8. |[Baby Crypt](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Baby%20Crypt/README.md)|
-|9. |[Ransom](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Ransom/README.md)|
-|10. |[Anti Flag](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Reversing/Anti%20Flag)|
-|11. |[Ouija](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Ouija/README.md)|
-|12. |[Tear Or Dear](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Tear%20Or%20Dear/README.md)|
-|13. |[Rebuilding](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Rebuilding/README.md)|
-|14. |[Teleport](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Teleport/README.md)|
-|15. |[Hunting License](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Hunting%20License/README.md)|
+|No.|Collumn 1|Collumn 2|Collumn 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[Impossible Password](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Impossible%20Password/README.md)|[Bypass](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Bypass/README.md)|[Behind the Scenes](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Behind%20the%20Scenes/README.md)|
+|2. |[WIDE](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/WIDE/README.md)|[Baby RE](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Baby%20RE/README.md)|[You Cant C Me](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/You%20Cant%20C%20Me/README.md)|
+|3. |[Find The Easy Pass](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Find%20The%20Easy%20Pass/README.md)|[Baby Crypt](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Baby%20Crypt/README.md)|[Ransom](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Ransom/README.md)|
+|4. |[Anti Flag](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Reversing/Anti%20Flag)|[Ouija](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Ouija/README.md)|[Tear Or Dear](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Tear%20Or%20Dear/README.md)|
+|5. |[Rebuilding](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Rebuilding/README.md)|[Teleport](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Teleport/README.md)|[Hunting License](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Hunting%20License/README.md)|
 
 </details>
 
@@ -112,14 +97,11 @@
 <br>
 <summary> OSINT </summary>
 
-|No.|Challenge's name|
-|:-:|:--------------:|
-|1. |[Easy Phish](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Easy%20Phish/README.md)|
-|2. |[Infiltration](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Infiltration/README.md)|
-|3. |[Money Flowz](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Money%20Flowz/README.md)|
-|4. |[Missing in Action](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Missing%20in%20Action/README.md)|
-|5. |[ID Exposed](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/ID%20Exposed/README.md)|
-|6. |[0ld is g0ld](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/0ld%20is%20g0ld/README.md)|
+|No.|Collumn 1|Collumn 2|Collumn 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[Easy Phish](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Easy%20Phish/README.md)|[Infiltration](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Infiltration/README.md)|[Money Flowz](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Money%20Flowz/README.md)|
+|2. |[Missing in Action](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/Missing%20in%20Action/README.md)|[ID Exposed](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/ID%20Exposed/README.md)|[0ld is g0ld](https://github.com/jon-brandy/hackthebox/blob/main/Categories/OSINT/0ld%20is%20g0ld/README.md)|
+
 
 </details>
 
