@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8c326d4d-e2ad-4bbc-9f96-3006ced4cb92)# Nibbles
+# Nibbles
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ecef1d4d-8619-447a-ab65-02edffd61d40)
