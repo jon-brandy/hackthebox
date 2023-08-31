@@ -55,4 +55,14 @@ Nmap done: 1 IP address (1 host up) scanned in 16.73 seconds
 I did not find any interesting files outside the /nibbleblog/ direcotry.
 ```
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ecfe8140-b08d-4b39-9b15-84438ae833bb)
+
+
+5. Long story short, the `admin.php` opens up a login page and there's no SQLi vuln at all.
+6. So we need to find a valid cred.
+7. Found the potential username at --> `http://nibbles.htb/nibbleblog/content/private/users.xml`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a1f233d6-ae4c-4b7a-a1e2-0cbb98c6616c)
+
+
 
