@@ -244,13 +244,19 @@ root
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9582e4cc-bae7-462d-beb6-ffeb278a09f2)
 
 
+> ALTERNATE WAY (getting shell)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/afa398de-c43c-4b5f-b56a-5f1351eac39c)
+
+
+
 ## USER FLAG
 
 ```
 43df52debff39b99e488a3eb7fc41e26
 ```
 
-14. To get the root flag, since we're exploiting kubernetes.
+14. To get the root flag (which is located at the steamcloud root user), since we're exploiting kubernetes, we can't just do basic reverse shell as usual.
 15. We need to create our own service account. We can create higher privileged for our service account.
 
 > WHAT WE NEED --> token & ca.crt.
@@ -355,7 +361,23 @@ pods                                            []                              
 
 > .yaml script
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/91ff7069-469e-4a1c-b885-bb845635766d)
+
+
+> APPLYING
+
 ```
+kubectl --token=$token --certificate-authority=ca.crt --server=https://10.10.11.133:8443 apply -f Downloads/machine/machine_steamcloud/brendi.yaml
 ```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/20b9c656-ab88-48be-af06-1ebfa1bf84aa)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a82c0aad-ac41-41f4-a8f9-743a92a7bbee)
+
+
+19. Wondered why it's not ready.
+20. Let's restart the process from the start.
+
 
 
