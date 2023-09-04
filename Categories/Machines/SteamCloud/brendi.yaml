@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jon-brandy-pod
+  namespace: default
+spec:
+  containers:
+  - name: jon-brandy-pod
+    image: nginx:1.14.2
+    volumeMounts:
+    - mountPath: /root
+      name: mount-root-into-mt
+  volumes:
+  - name: mount-root-into-mt
+    hostPath:
+      path: /
+  automountServiceAccountToken: true
+  hostNetwork: true
