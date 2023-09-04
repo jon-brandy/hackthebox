@@ -361,7 +361,9 @@ pods                                            []                              
 
 > .yaml script
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/91ff7069-469e-4a1c-b885-bb845635766d)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3c7918e0-213f-4b54-82ca-7c8d608c6450)
+
 
 
 > APPLYING
