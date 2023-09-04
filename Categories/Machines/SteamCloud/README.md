@@ -381,5 +381,21 @@ kubectl --token=$token --certificate-authority=ca.crt --server=https://10.10.11.
 19. Wondered why it's not ready.
 20. Let's restart the process from the start.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a8e75505-02dd-49a0-a30f-ac91db0ad23a)
+
+
+21. Awesome! Now we should have the root@steamcloud.
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3a045439-6c90-4c0e-8ee5-e84f61eb3543)
+
+
+## ROOT FLAG
+
+```
+7bc118ad42b10d0cc68e30c512216889
+```
+
 
 
