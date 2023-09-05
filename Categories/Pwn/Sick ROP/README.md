@@ -98,7 +98,7 @@ writeable_area = 0x400000
 frame = SigreturnFrame()
 frame.rax = 0xa #10 --> mprotect
 frame.rdi = writeable_area
-frame.rsi = 0x4000 # set size
+frame.rsi = 0x400000 # set size
 frame.rdx = 0x7 #7 --> initialize rwx access to what's rdi pointing to
 
 # because we're changing the stack frame
@@ -118,4 +118,24 @@ Next we call the syscall_ret to execute the read and then we send in our fake_st
 ```
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8eb5c1b2-75c5-4a7f-bca1-161bc1bb8800)
+
+
+14. Next, we need to trigger the sys_rt_sigreturn. To trigger it the RAX must be set to 15.
+15. Since there's no pop or mov gadget, we need to be more creative.
+16. After I pause the process with GDB and checked the value in RAX, noticed that "NUMBER" of bytes we send at the input_stream is stored at RAX.
+
+> I sent 48 pad and it stores 49, it concludes the newline is counted.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/93de4669-fb79-4bcc-9562-58259c299c39)
+
+
+17. So if you want to use .sendline(), then send it 14 junk. If .send() send it exact 14.
+18. Finally! The last part is to find where will our shellcode stored so we can access it to gain RCE.
+19. So, after send our junk to set RAX to 15, at GDB we can see that our junk filled rsi and r10.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ab23641b-2281-4705-98a8-5a6752d68a24)
+
+
+20. Since in pwndbg aslr is on, let's use peda.
+
 
