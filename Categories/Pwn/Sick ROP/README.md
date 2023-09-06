@@ -148,6 +148,29 @@ Why need to do .recv() after we sent payloads in SROP??
 
 25. Nice! Again, now we need to identify the location for our shellcode.
 26. So when we returned to that location, we got RCEEEE.
-27. 
+27. To identify it simply send a junk and hopefully we can see our buffer at GDB.
 
+> SENDING JUNK
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f1021956-2f4f-4ee3-af5e-b963cbc2f158)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6d3f46a0-7f08-4d36-be8d-383f07e3ce4d)
+
+
+28. Interesting our junk filled RSI and R10 at address --> 0x4010b8
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7ccf3321-827a-4faa-87db-372bb1ee65df)
+
+
+29. We can set our return address to that.
+30. For the shellcode, i used this --> https://shell-storm.org/shellcode/files/shellcode-806.html.
+31. Anyway since the shellcode only has 27 as it's length, we need to add 13 more as it's junk to RIP.
+32. Here's the full script:
+
+> SCRIPT
+
+```py
+
+```
 
