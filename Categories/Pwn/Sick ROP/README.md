@@ -131,11 +131,23 @@ Next we call the syscall_ret to execute the read and then we send in our fake_st
 
 17. So if you want to use .sendline(), then send it 14 junk. If .send() send it exact 14.
 18. Finally! The last part is to find where will our shellcode stored so we can access it to gain RCE.
-19. So, after send our junk to set RAX to 15, at GDB we can see that our junk filled rsi and r10.
+19. But here's the **small knowledge** about sending payload in SROP. The best practice is to receive bytes everytime we sent payloads.
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ab23641b-2281-4705-98a8-5a6752d68a24)
+```
+Why need to do .recv() after we sent payloads in SROP??
+-> To prevent the data we sent mixed up with the data sent by the remote server.
+```
+
+21. Not a fond about SROP anyway, but from what I've learned, sometimes I failed to get RCE because data sent by the remote server is mixed up with our second payload (if there is).
+22. BUT **SPOILER**, I got RCE by **only** used .recv() for the first payload.
+23. So here's the fixed script.
+24. Anyway since we already set RAX to 15 (by send 14 pad junk data + newline). We can check the procmap at GDB.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0f189774-8f46-4322-9beb-0ff84b9867e5)
 
 
-20. Since in pwndbg aslr is on, let's use peda.
+25. Nice! Again, now we need to identify the location for our shellcode.
+26. So when we returned to that location, we got RCEEEE.
+27. 
 
 
