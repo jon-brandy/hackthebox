@@ -20,7 +20,7 @@
 |7. |[Vault-breaker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Vault-breaker/README.md)|[Spooky Time](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Spooky%20Time/README.md)|[Space pirate: Retribution](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space%20pirate%3A%20Retribution/README.md)|
 |8. |[Space](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space/README.md)|[Leet Test](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Leet%20Test/README.md)|[Trick or Deal](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Trick%20or%20Deal/README.md)|
 |9. |[PwnShop](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/PwnShop/README.md)|[Finale](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Finale/README.md)|[Hellhound](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Hellhound/README.md)|
-|10. |[Sacred Scrolls: Revenge](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sacred%20Scrolls%3A%20Revenge/README.md)|||
+|10. |[Sacred Scrolls: Revenge](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sacred%20Scrolls%3A%20Revenge/README.md)|[Sick ROP](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sick%20ROP/README.md)||
 
 
 </details>
