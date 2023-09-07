@@ -49,7 +49,30 @@ Nmap done: 1 IP address (1 host up) scanned in 24.01 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cc541995-9be8-47f0-b8c6-1f7d49061711)
 
 
-4. 
+4. Let's use the cred --> successfully logged in as root!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/252ba974-aff4-41df-b6c7-d8d0775146a1)
+
+
+
+5. Long story short, we can see all the user by open the navbar admin --> users --> select.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/09756ecf-647d-46db-b8a2-8e74deb768da)
+
+
+6. As we can see there's a user named lnorgaard.
+7. Since the machine opens a ssh login, seems we need to login as lnorgaard.
+8. Anyway, if you clicked the username and scrolls down to the comment section.
+9. You shall find a password hardcoded there.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b08497c0-367c-4d97-a742-8f4d8fcf7e27)
+
+
+10. Let's login.
+
+> LOGIN
+
+
 
 
 
