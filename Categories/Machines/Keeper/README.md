@@ -344,4 +344,94 @@ if __name__ == '__main__':
             print(f'Possible password: {password}')
 ```
 
+> RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/381b11b4-5cfc-403b-b9e7-b04277ac8ba9)
+
+
+
+16. Another rabbit hole here! Took me a while unti I paste the result to the google search and found this article:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/53b3c172-dcd6-4c46-8976-c0df8963bc98)
+
+
+17. Interesting, it seems our key dumper tools is failed to print the "character" because it's not in the ascii range.
+18. Let's use the pass -> rødgrød med fløde to open the .kdbx file using **keepas2**.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c9460208-ad9f-404d-b54e-ca8ec6ab6eb8)
+
+
+19. Clicking twice the root username we can see it's password clear (by clicking the 3 dots button).
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ce9688eb-f961-457a-925f-b5bb0df1f8ef)
+
+
+20. However, already tried to use it for ssh login but failed.
+21. Hmm.. Another rabbit hole here, until I realized the notes is a .ppk file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/761126d3-caa2-46b9-b7aa-3ddaa0ce2434)
+
+> NOTES --> .ppk file, save it to a file with .ppk extension.
+
+```
+PuTTY-User-Key-File-3: ssh-rsa
+Encryption: none
+Comment: rsa-key-20230519
+Public-Lines: 6
+AAAAB3NzaC1yc2EAAAADAQABAAABAQCnVqse/hMswGBRQsPsC/EwyxJvc8Wpul/D
+8riCZV30ZbfEF09z0PNUn4DisesKB4x1KtqH0l8vPtRRiEzsBbn+mCpBLHBQ+81T
+EHTc3ChyRYxk899PKSSqKDxUTZeFJ4FBAXqIxoJdpLHIMvh7ZyJNAy34lfcFC+LM
+Cj/c6tQa2IaFfqcVJ+2bnR6UrUVRB4thmJca29JAq2p9BkdDGsiH8F8eanIBA1Tu
+FVbUt2CenSUPDUAw7wIL56qC28w6q/qhm2LGOxXup6+LOjxGNNtA2zJ38P1FTfZQ
+LxFVTWUKT8u8junnLk0kfnM4+bJ8g7MXLqbrtsgr5ywF6Ccxs0Et
+Private-Lines: 14
+AAABAQCB0dgBvETt8/UFNdG/X2hnXTPZKSzQxxkicDw6VR+1ye/t/dOS2yjbnr6j
+oDni1wZdo7hTpJ5ZjdmzwxVCChNIc45cb3hXK3IYHe07psTuGgyYCSZWSGn8ZCih
+kmyZTZOV9eq1D6P1uB6AXSKuwc03h97zOoyf6p+xgcYXwkp44/otK4ScF2hEputY
+f7n24kvL0WlBQThsiLkKcz3/Cz7BdCkn+Lvf8iyA6VF0p14cFTM9Lsd7t/plLJzT
+VkCew1DZuYnYOGQxHYW6WQ4V6rCwpsMSMLD450XJ4zfGLN8aw5KO1/TccbTgWivz
+UXjcCAviPpmSXB19UG8JlTpgORyhAAAAgQD2kfhSA+/ASrc04ZIVagCge1Qq8iWs
+OxG8eoCMW8DhhbvL6YKAfEvj3xeahXexlVwUOcDXO7Ti0QSV2sUw7E71cvl/ExGz
+in6qyp3R4yAaV7PiMtLTgBkqs4AA3rcJZpJb01AZB8TBK91QIZGOswi3/uYrIZ1r
+SsGN1FbK/meH9QAAAIEArbz8aWansqPtE+6Ye8Nq3G2R1PYhp5yXpxiE89L87NIV
+09ygQ7Aec+C24TOykiwyPaOBlmMe+Nyaxss/gc7o9TnHNPFJ5iRyiXagT4E2WEEa
+xHhv1PDdSrE8tB9V8ox1kxBrxAvYIZgceHRFrwPrF823PeNWLC2BNwEId0G76VkA
+AACAVWJoksugJOovtA27Bamd7NRPvIa4dsMaQeXckVh19/TF8oZMDuJoiGyq6faD
+AF9Z7Oehlo1Qt7oqGr8cVLbOT8aLqqbcax9nSKE67n7I5zrfoGynLzYkd3cETnGy
+NNkjMjrocfmxfkvuJ7smEFMg7ZywW7CBWKGozgz67tKz9Is=
+Private-MAC: b0a0fd2edf4f0e557200121aa673732c9e76750739db05adc3ab65ec34c55cb0
+```
+
+```
+A small concept (After i did a small research about what we can do with a .ppk file).
+
+We can create a private-openssh key using the .ppk file.
+To create that we can use puttygen.
+
+Next we do ssh login using the key we created from puttygen.
+```
+
+> CREATING PRIVATE-OPENSSHKEY
+
+```
+┌──(brandy㉿bread-yolk)-[~/Downloads/machine/machine_keeper]
+└─$ puttygen hackthebox.ppk -O private-openssh -o rsakey
+```
+
+> LOGIN
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aaf62327-1f65-4b2f-94c5-cffad1551f3b)
+
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3b354fa7-52a9-462a-a2ad-b73a537416fa)
+
+
+## ROOT FLAG
+
+```
+8828d4244059a3ef5077e9bae5700c89
+```
