@@ -70,8 +70,23 @@ Nmap done: 1 IP address (1 host up) scanned in 24.01 seconds
 
 10. Let's login.
 
-> LOGIN
+> LOGIN AS lnorgaard
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f844ad58-c4a9-4869-b7ff-7b6f3147b8e1)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b82fefbf-d5de-4c7f-8391-d66cca9993f6)
+
+
+## USER FLAG
+
+```
+4568e6ca6ced018b446f6ae5688ff786
+```
+
+11. 
 
 
 
