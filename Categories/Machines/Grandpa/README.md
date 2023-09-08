@@ -51,7 +51,7 @@ Nmap done: 1 IP address (1 host up) scanned in 146.43 seconds
 > GETTING USER FLAG
 
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0584be66-4b48-479f-aee3-6e0858d6d8d2)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fc7911a2-bded-4c76-bb02-8ba13cb50045)
 
 
 ## USER FLAG
