@@ -1,18 +1,17 @@
 # Legacy
-## DESCRIPTION:
-- NONE
-## HINT:
-- NONE
-## STEPS:
+> Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c3613dba-80e2-4531-8062-67c543733ab8)
+
+## STEPS:
 > PORT SCANNING
 
 ```
 ┌──(brandy㉿bread-yolk)-[~]
-└─$ nmap -p- -sVC -Pn 10.10.10.4 -T4         
-Starting Nmap 7.93 ( https://nmap.org ) at 2023-08-12 02:10 PDT
+└─$ nmap -p- -sVC 10.10.10.4 --min-rate 1000 
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-09-07 19:02 PDT
 Nmap scan report for 10.10.10.4
-Host is up (0.019s latency).
+Host is up (0.025s latency).
 Not shown: 65532 closed tcp ports (conn-refused)
 PORT    STATE SERVICE      VERSION
 135/tcp open  msrpc        Microsoft Windows RPC
@@ -21,9 +20,9 @@ PORT    STATE SERVICE      VERSION
 Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
 
 Host script results:
-|_smb2-time: Protocol negotiation failed (SMB2)
 |_clock-skew: mean: 5d00h27m38s, deviation: 2h07m16s, median: 4d22h57m38s
-|_nbstat: NetBIOS name: LEGACY, NetBIOS user: <unknown>, NetBIOS MAC: 005056b9faae (VMware)
+|_smb2-time: Protocol negotiation failed (SMB2)
+|_nbstat: NetBIOS name: LEGACY, NetBIOS user: <unknown>, NetBIOS MAC: 005056b9bf11 (VMware)
 | smb-security-mode: 
 |   account_used: guest
 |   authentication_level: user
@@ -35,26 +34,45 @@ Host script results:
 |   Computer name: legacy
 |   NetBIOS computer name: LEGACY\x00
 |   Workgroup: HTB\x00
-|_  System time: 2023-08-17T14:09:00+03:00
+|_  System time: 2023-09-13T07:00:44+03:00
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 36.02 seconds
+Nmap done: 1 IP address (1 host up) scanned in 35.08 seconds
 ```
 
-After nmapping, we identified the machine's SMB port (445) is open. Knowing there's no web application running let's use nmap's smb scripts.
+1. Based from the nmap results, the machine runs SMB service. This should be our interest since there's no web application or any service that is interesting other than that.
+2. Luckily nmap has a flag which makes us easier to identify the vuln.
+3. Simply run --> `nmap -p 139,445 --script smb-vuln* 10.10.10.4 --min-rate 1000`.
+
+> RESULT
 
 ```
 ┌──(brandy㉿bread-yolk)-[~]
-└─$ nmap --script smb-vuln* -p 139,445 10.10.10.4
-Starting Nmap 7.93 ( https://nmap.org ) at 2023-08-12 02:12 PDT
+└─$ nmap -p 139,445 --script smb-vuln* 10.10.10.4 --min-rate 1000
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-09-07 19:10 PDT
 Nmap scan report for 10.10.10.4
-Host is up (0.024s latency).
+Host is up (0.038s latency).
 
 PORT    STATE SERVICE
 139/tcp open  netbios-ssn
 445/tcp open  microsoft-ds
 
 Host script results:
+|_smb-vuln-ms10-061: ERROR: Script execution failed (use -d to debug)
+| smb-vuln-ms17-010: 
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|           
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|_      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
 | smb-vuln-ms08-067: 
 |   VULNERABLE:
 |   Microsoft Windows system vulnerable to remote code execution (MS08-067)
@@ -68,39 +86,15 @@ Host script results:
 |     References:
 |       https://technet.microsoft.com/en-us/library/security/ms08-067.aspx
 |_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4250
-|_smb-vuln-ms10-061: ERROR: Script execution failed (use -d to debug)
-| smb-vuln-ms17-010: 
-|   VULNERABLE:
-|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
-|     State: VULNERABLE
-|     IDs:  CVE:CVE-2017-0143
-|     Risk factor: HIGH
-|       A critical remote code execution vulnerability exists in Microsoft SMBv1
-|        servers (ms17-010).
-|           
-|     Disclosure date: 2017-03-14
-|     References:
-|       https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
-|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
-|_      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
 |_smb-vuln-ms10-054: false
 
-Nmap done: 1 IP address (1 host up) scanned in 6.48 seconds
+Nmap done: 1 IP address (1 host up) scanned in 5.38 seconds
 ```
 
-Turns out, there is 2 potential CVE, let's use metasploit.
+4. Turns out there is 2 CVE found.
+5. I did a small research and turns out the correct CVE for this challenge is module --> **smb-vuln-ms08-067**.
+6. This arg is supported by the server service for this CVE.
+7. Since we already have the CVE number, let's use metasploit straight away.
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c394b70c-81c9-448d-bc18-5f7848c32d98)
-
-
-If you did a small research about the CVE:
-
-```
-https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2008-4250
-https://www.exploit-db.com/exploits/40279.
-```
-
-It seems the exploit only works on few server service in microsoft windows. Let's choose our target.
-
-> CHOOSING TARGET, BY LISTING THEM
+> RESULT
 
