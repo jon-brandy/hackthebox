@@ -173,7 +173,7 @@
 |4. |[Knife](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Knife/README.md)|[Bashed](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bashed/README.md)|[Shocker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shocker/README.md)|
 |5. |[Beep](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Beep/README.md)|[Blocky](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blocky/README.md)|[Bank](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bank/README.md)|
 |6. |[Nibbles](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Nibbles/README.md)|[SteamCloud](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/SteamCloud/README.md)|[Keeper](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Keeper/README.md)|
-|7. |[Optimum](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Optimum/README.md)|[Legacy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Legacy/README.md)|
+|7. |[Optimum](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Optimum/README.md)|[Legacy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Legacy/README.md)|[Granny](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Granny/README.md)|
 
 </details>
 
