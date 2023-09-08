@@ -98,3 +98,28 @@ Nmap done: 1 IP address (1 host up) scanned in 5.38 seconds
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/58392440-cafc-41f1-9bc5-5bed0c4afa94)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/12a09306-442e-46e4-a1fe-9afb0c02c58a)
+
+
+## USER FLAG
+
+```
+e69af0e4f443de7e36876fda4ec7644f
+```
+
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a273338e-a0c2-40fd-9f31-501c64d8b0fd)
+
+
+## ROOT FLAG
+
+```
+993442d258b0e0ec917cae9e695d5713
+```
