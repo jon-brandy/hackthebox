@@ -109,3 +109,41 @@ exploit
 
 > RESULT FOR SUGGESTER
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8d5347d1-1fe0-4573-a9fe-b9e002f3d2b2)
+
+
+13. Awesome! We have many options. But to skip trial and error, let's use the basic module for privesc in windows pentest --> `exploit/windows/local/ms15_051_client_copy_image`.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e98e7c08-1c96-493d-90fb-3f4bfe658352)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/94dbc91d-de28-4883-ab33-440e0aa60a5e)
+
+
+14. Got rooootttttt.
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ac82aedc-7c68-48fd-b1a5-90c0207a584d)
+
+
+## USER FLAG
+
+```
+cf9f33d569de576f36f2d0eb7c238edf
+```
+
+> GETTING ROOT FLAG
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3a7a0354-e211-4d13-8d64-b9598f7098ba)
+
+
+## ROOT FLAG
+
+```
+4d4ad08f74ccbd3f2e5b39eb8979260d
+```
+
