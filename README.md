@@ -1,7 +1,3 @@
-<p align="center">
-<img src="https://github.com/Bread-Yolk/hackthebox/blob/3349c58b447a6487178cc6e7e82711dfb9e8d5ad/Assets/banner.png" width="950" height="250">
-</p>
-
 
 > CTF's PWNED
 
