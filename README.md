@@ -171,7 +171,7 @@
 |6. |[Nibbles](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Nibbles/README.md)|[SteamCloud](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/SteamCloud/README.md)|[Keeper](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Keeper/README.md)|
 |7. |[Optimum](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Optimum/README.md)|[Legacy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Legacy/README.md)|[Granny](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Granny/README.md)|
 |8. |[Grandpa](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Grandpa/README.md)|[Devel](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Devel/README.md)|[Horizontall](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Horizontall/README.md)|
-
+|9. |[Validation](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Validation/README.md)|[]()|[]()|
 
 </details>
 
