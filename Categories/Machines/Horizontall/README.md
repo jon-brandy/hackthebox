@@ -100,4 +100,56 @@ http://api-prod.horizontall.htb/admin/auth/login [200 OK] Country[RESERVED][ZZ],
 
 12. Great we found the version --> `3.0.0-beta.17.4`.
 13. Based from the `main()` function we can run --> `python3 script url` to execute the script (because there's `sys.argv[1]`).
-14. 
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d7c453a1-2e29-4940-8906-43e21e352f2b)
+
+
+14. Great! Let's run a listener to do reverse shell and send our template bash reverse shell.
+
+> RESULT - GOT SHELL
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a0977b61-e195-4ec8-8af9-1cda291d3f44)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e813ec72-4a3f-4741-a35d-0bc06bc2b446)
+
+
+## USER FLAG
+
+```
+b541b4deaf34b257c3f33ee472d67bb2
+```
+
+15. Running `sudo -l` to check the sudo permission for user strapi shall resulting to nothing because we logged in as strapi without providing the password.
+
+```
+strapi@horizontall:/home/developer$ sudo -l
+sudo -l
+sudo: no tty present and no askpass program specified
+```
+
+16. Stuck for a while, until I ran --> ss -anlp | grep "127.0.0.1"
+
+```
+strapi@horizontall:/home/developer$ ss -anlp | grep "127.0.0.1"
+ss -anlp | grep "127.0.0.1"
+tcp  LISTEN 0      128                                     127.0.0.1:1337                     0.0.0.0:*              users:(("node",pid=1754,fd=31))            
+tcp  LISTEN 0      128                                     127.0.0.1:8000                     0.0.0.0:*                                                         
+tcp  LISTEN 0      80                                      127.0.0.1:3306                     0.0.0.0:*
+```
+
+17. To open each of it, we can just do ssh tunneling. But before, that let's check port that could be our interest. Port 3306 should not be our interest (MySQL) port. To check it run --> curl ip:port.
+18. Long story short, port 8000 is our interest. To render it we can do ssh tunneling.
+19. But to do it we need to set the shell stable first using ssh-keygen. But I managed to solve this my searching the CVE for the laravel version.
+20. So based from the curl result on port 8000, we can identified the laravel version is 8.
+
+
+
+
+
+
+
