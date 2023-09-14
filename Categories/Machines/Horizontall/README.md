@@ -1,4 +1,4 @@
-# Horizontall
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9b26236f-a95f-4731-b6a9-b6980fc04868)# Horizontall
 > Write-up author: jon-brandy
 ## STEPS:
 > PORT SCANNING
@@ -144,8 +144,28 @@ tcp  LISTEN 0      80                                      127.0.0.1:3306       
 
 17. To open each of it, we can just do ssh tunneling. But before, that let's check port that could be our interest. Port 3306 should not be our interest (MySQL) port. To check it run --> curl ip:port.
 18. Long story short, port 8000 is our interest. To render it we can do ssh tunneling.
-19. But to do it we need to set the shell stable first using ssh-keygen. But I managed to solve this my searching the CVE for the laravel version.
+19. But to do it we need to set the shell stable first using ssh-keygen. Let's do it.
+
+> GETTING STABLE SHELL
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/764248db-8ef2-45db-84af-26e585559d62)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2ee037a7-b025-4453-8f8e-4346a42eec75)
+
+
+
+
 20. So based from the curl result on port 8000, we can identified the laravel version is 8.
+
+> SEARCHING THE CVE RELATED TO LARAVEL V8 - version 8.4.2 should be our interest.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dd833cf7-f1ab-48b4-b2f6-48b443fe461a)
+
+
+
+
+
 
 
 
