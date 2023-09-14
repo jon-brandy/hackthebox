@@ -84,4 +84,20 @@ Nmap done: 1 IP address (1 host up) scanned in 29.63 seconds
 http://api-prod.horizontall.htb/admin/auth/login [200 OK] Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Linux][nginx/1.14.0 (Ubuntu)], IP[10.10.11.105], Script[text/javascript], Strict-Transport-Security[max-age=31536000; includeSubDomains], Title[Strapi Admin], UncommonHeaders[content-security-policy], X-Frame-Options[SAMEORIGIN], X-Powered-By[Strapi <strapi.io>], X-XSS-Protection[1; mode=block], nginx[1.14.0]
 ```
 
-9. 
+9. Anyway we can make an interpretation, since we don't have any cred. Our interest shall be around the 3rd and 4th exploit.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7f7c1cc5-0e48-494f-8f8f-eedd294d0fb6)
+
+
+10. To copy the script to our current directory, run --> `searchsploit -m 50239.py`.
+11. Reading the script at glance, seems we can check the strapi version by changing the url to --> /admin/init.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fc69ec36-6eec-4fff-b7d0-05ce69ec8b8a)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3727ba97-7fb0-4d28-b35c-023c646a78cd)
+
+
+12. Great we found the version --> `3.0.0-beta.17.4`.
+13. Based from the `main()` function we can run --> `python3 script url` to execute the script (because there's `sys.argv[1]`).
+14. 
