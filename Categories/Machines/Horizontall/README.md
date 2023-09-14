@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9b26236f-a95f-4731-b6a9-b6980fc04868)# Horizontall
+# Horizontall
 > Write-up author: jon-brandy
 ## STEPS:
 > PORT SCANNING
