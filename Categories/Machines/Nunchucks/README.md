@@ -1,4 +1,4 @@
-# Nunchucks 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e142b66e-ea17-4117-aa3c-ba53ceee9dd6)# Nunchucks 
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/07260abf-8e6f-49eb-86fa-aefb6913930f)
@@ -44,5 +44,23 @@ Nmap done: 1 IP address (1 host up) scanned in 43.76 seconds
 1. Based from the nmap results, the machine runs a web applicatoin and opens ssh login.
 
 > WEB APP
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0e52b16f-9ae9-402b-8691-25f5011ffc30)
+
+
+2. Trying every feature, resulting to nothing interesting. Even when tried to register account, they said it's closed already.
+3. Running **dirbuster** found nothing interesting again.
+4. But checking the subdomain, by running **gobuster**, found one domain that should be our interest --> `store.nunchucks.htb`.
+
+#### NOTES:
+```
+Since nunchuck is https --> hence need to add -k
+
+gobuster vhost -u host -w wordlists -k
+```
+
+5.
+
+
 
 
