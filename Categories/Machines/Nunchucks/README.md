@@ -67,5 +67,22 @@ gobuster vhost -u host -w wordlists -k
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6408bf16-245e-448e-8c0f-6418f281c85e)
 
 
-6. The vuln is SSTI.
+6. The vuln is SSTI as you can see the webserver execute the regex operation.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/22c82c7c-0e2e-4059-b1aa-58148a6c2447)
+
+
+7. Great! Seems this is our foothold.
+8. Anyway, after ran another ssti for flask, it shows nothing.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/16c5bb63-e8f4-4945-a106-1824e140aabb)
+
+
+9. Not took me long to realized that the template engine used probably is **Nunjucks**. It's easy to guess based from the chall title and programming language used in this webapp.
+
+> WAPPALYZER RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/63734eda-2187-4acd-8dfc-d3889acce18b)
+
+
+10. 
