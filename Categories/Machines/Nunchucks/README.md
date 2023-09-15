@@ -212,6 +212,18 @@ printlog "Completed";
 
 21. Amazing this should allows us to do privesc.
 22. But we can't overwrite the backup.pl file. Stuck in a rabbit hole once again.
-23. Until I did a research about --> **Apparmor perl bugs**.
+23. Until I did a research about --> **Apparmor perl bugs** --> https://bugs.launchpad.net/apparmor/+bug/1911431.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0fdb5436-9f02-466c-8435-a288e04eacaa)
+
+
+24. This means, we can execute scripts with the shebang. Also they won't apply the AppArmor profile to our script.
+25. Great! Let's make another .pl file which contains our previous perl payload but we add the shebang.
+26. Before that, let's get stable shell.
+
+> USING SSH-KEYGEN METHOD AS USUAL
+
+
+
 
 
