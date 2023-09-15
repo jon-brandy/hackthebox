@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e142b66e-ea17-4117-aa3c-ba53ceee9dd6)# Nunchucks 
+# Nunchucks 
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/07260abf-8e6f-49eb-86fa-aefb6913930f)
@@ -59,8 +59,13 @@ Since nunchuck is https --> hence need to add -k
 gobuster vhost -u host -w wordlists -k
 ```
 
-5.
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3bf45dc4-6fcb-44db-b099-ca71aaf0a13d)
 
 
+5. Long story short found the vuln at the **Notify Me** textbox --> SSTI.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6408bf16-245e-448e-8c0f-6418f281c85e)
+
+
+6. The vuln is SSTI.
 
