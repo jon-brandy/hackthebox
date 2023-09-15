@@ -155,4 +155,63 @@ Use the previous request we sent to repeater then change the JSON email paramete
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ab4e90d8-637b-4db4-afb7-816f8dbe28a8)
 
 
-17. Interesting.
+17. Interesting, this kind of thing shall related to **Apparmor**. It's primary purpose is to protect the system and its resources by enforcing fine-grained access control policies on the actions that specific applications or processes can perform.
+18. We can prove that interpretation by run --> `cat /etc/apparmor.d/usr.bin.perl`.
+19. Noticed there's a .pl file inside /opt/.
+
+> backup.pl
+
+```
+#!/usr/bin/perl
+use strict;
+use POSIX qw(strftime);
+use DBI;
+use POSIX qw(setuid); 
+POSIX::setuid(0); 
+
+my $tmpdir        = "/tmp";
+my $backup_main = '/var/www';
+my $now = strftime("%Y-%m-%d-%s", localtime);
+my $tmpbdir = "$tmpdir/backup_$now";
+
+sub printlog
+{
+    print "[", strftime("%D %T", localtime), "] $_[0]\n";
+}
+
+sub archive
+{
+    printlog "Archiving...";
+    system("/usr/bin/tar -zcf $tmpbdir/backup_$now.tar $backup_main/* 2>/dev/null");
+    printlog "Backup complete in $tmpbdir/backup_$now.tar";
+}
+
+if ($> != 0) {
+    die "You must run this script as root.\n";
+}
+
+printlog "Backup starts.";
+mkdir($tmpbdir);
+&archive;
+printlog "Moving $tmpbdir/backup_$now to /opt/web_backups";
+system("/usr/bin/mv $tmpbdir/backup_$now.tar /opt/web_backups/");
+printlog "Removing temporary directory";
+rmdir($tmpbdir);
+printlog "Completed";
+```
+
+20. What's interesting here is, as user we can execute this backup.pl file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ecace07c-9ac8-4a6c-9ccd-af99c3922aa5)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b9fd5323-7289-4d85-9a56-4693eb262e2a)
+
+
+21. Amazing this should allows us to do privesc.
+22. But we can't overwrite the backup.pl file. Stuck in a rabbit hole once again.
+23. Until I did a research about --> **Apparmor perl bugs**.
+
+
