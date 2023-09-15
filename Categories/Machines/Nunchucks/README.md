@@ -218,12 +218,26 @@ printlog "Completed";
 
 
 24. This means, we can execute scripts with the shebang. Also they won't apply the AppArmor profile to our script.
-25. Great! Let's make another .pl file which contains our previous perl payload but we add the shebang.
-26. Before that, let's get stable shell.
+25. Great! Let's make another .pl file which contains our previous perl payload but we add the **shebang**.
+26. Before that, let's run `script /dev/null sh` to start a new shell session.
+27. Then navigate to /tmp directory, because that's the only place we're allowed to make files.
+28. Lastly run this --> `echo '#!/usr/bin/perl -e use POSIX qw(setuid); POSIX::setuid(0); exec "/bin/sh";' > shell.pl`.
+29. Then make **shell.pl** file executeable and run it.
 
-> USING SSH-KEYGEN METHOD AS USUAL
+> RESULT - GOT ROOT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/34ebafa4-3cf3-4a11-b4c4-ce1cbb7e08f0)
 
 
+> GETTING ROOT FLAG
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3ec3ca8b-542f-4b53-85c7-419f394b57bd)
+
+
+## ROOT FLAG
+
+```
+54274cf8cddcefe12bc8bf6f5e747302
+```
 
