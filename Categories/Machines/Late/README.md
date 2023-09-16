@@ -128,6 +128,14 @@ Change "bash" to "sh" won't work.
 abb776efaca5d2c498c0340369be1cb1
 ```
 
-12.
+12. To do privesc, it's easier by running linpeas first to check for possible paths to escalate privileges.
+13. Let's get a stable shell first so we can simply send linpeas to the target server.
+
+> FOUND RSA KEY PAIR at the user home dir.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/72a198ac-6b4c-4103-b0f5-2645eed15f0e)
+
+
+14. 
 
 
