@@ -95,8 +95,7 @@ wfuzz -u "http://late.htb" -H "Host: FUZZ.late.htb" -w SecLists/Discovery/DNS/su
 
 > PAYLOAD
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b4ab6cd4-f645-47e8-8300-7775c36f35a9)
-
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/196cd6f7-d671-42df-b3fc-065922cfa3ee)
 
 > What to send
 
@@ -114,8 +113,21 @@ Change "bash" to "sh" won't work.
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b1965299-eae7-4c51-a421-787e0890eb55)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c3168416-af54-4364-bf99-f43101944c80)
 
 
 
+## USER FLAG
+
+```
+abb776efaca5d2c498c0340369be1cb1
+```
+
+12.
 
 
