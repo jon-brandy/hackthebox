@@ -1,4 +1,4 @@
-<p style="align:center">
+<p align="center">
 
 <img src="https://github.com/jon-brandy/hackthebox/assets/70703371/a51e7b6d-ea3f-48c8-b786-075775c22ce9"> 
   
