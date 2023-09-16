@@ -5,7 +5,7 @@
 </p>
 
 
-> CTF's PWNED
+> HTB CTF's PWNED
 
 <details>
 <br>
@@ -160,7 +160,7 @@
 </details>
 
 
-> MACHINE'S PWNED
+> HTB MACHINE'S PWNED
 
 
 <details>
