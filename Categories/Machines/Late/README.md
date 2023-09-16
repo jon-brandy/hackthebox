@@ -45,7 +45,18 @@ Nmap done: 1 IP address (1 host up) scanned in 48.66 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/007a61cf-d04c-4d43-ab18-d7f339278b24)
 
 
+> Running wfuzz to check another subdomain --> found only images.late.htb.
+
+```
+wfuzz -u "http://late.htb" -H "Host: FUZZ.late.htb" -w SecLists/Discovery/DNS/subdomains-top1million-5000.txt --hh 9461
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cf0e6f3e-68b4-4bc7-9c3b-ee01891249e8)
+
+
 3. Interesting, since it said that it built with Flask, hence it could related to SSTI vuln.
 4. Let's check that by uploading a file which has regex operation such --> {{7*7}}.
+5. I used [this](https://onlinetexttools.com/convert-text-to-image) online tool to convert text to image with ease.
+
 
 
