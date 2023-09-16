@@ -37,6 +37,9 @@ Nmap done: 1 IP address (1 host up) scanned in 48.66 seconds
 
 2. Scrolling down, there's another link which redirects to another subdommain --> images.late.htb.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f2b77347-64f0-4ef0-8181-45eb4a5ddff1)
+
+
 > images.late.htb
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/007a61cf-d04c-4d43-ab18-d7f339278b24)
