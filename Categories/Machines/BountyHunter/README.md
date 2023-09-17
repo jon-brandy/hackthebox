@@ -32,5 +32,92 @@ Nmap done: 1 IP address (1 host up) scanned in 17.64 seconds
 
 > WEBAPP
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d55476aa-4511-4a38-ac70-f16e5f0a568c)
+
+
+2. After ran dirbuster, found several dirs and files.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/498ca093-98a1-41ed-ba0b-f68309c43caf)
+
+
+3. Long story short, **portal.php** AND **db.php** could be our interest.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0f7b0715-f102-44ff-b71f-03dc15d99366)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a36e25bd-c459-480d-be95-2b4864740626)
+
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3150f267-374d-4dd8-937c-5486ea6e4577)
+
+
+
+
+4. Let's start by sending random data and intercept the request using burpsuite.
+
+> DATA TO SEND
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ed4ca98a-cc06-410b-a04a-5113303739b7)
+
+
+> RESULT IN BURP
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/02bd4583-bd02-4cf9-9220-69149bc0678b)
+
+
+5. Interesting, our data is url encoded (judging from %3D), let's throw that to cyberchef.
+
+> RESULT IN CYBERCHEF
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/19e5c515-9049-458e-8fc2-e1d63737a46a)
+
+
+6. Interesting! Our request is formatted in xml. This should be our foothold if we can do XXE. Let's try the basic payload to test if it is vuln to XXE.
+
+> COMMON ONE
+
+```
+<!DOCTYPE data [
+<!ENTITY file SYSTEM "file:///etc/passwd"> ]>
+```
+
+```
+<?xml  version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE data [
+<!ENTITY file SYSTEM "file:///etc/passwd"> ]>
+<bugreport>
+<title>aa</title>
+	<cwe>&file;</cwe>
+	<cvss>aaaa</cvss>
+	<reward>80000</reward>
+</bugreport>
+```
+
+7. Encode it to base64 + url. Send it afterwards.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d077e50c-6077-44f0-a540-4cd7613aace0)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3c8b5c2c-cffc-4938-9f79-bf029aa905ba)
+
+
+
+8. Turns out, it does vulnerable to XXE.
+9. Nice, this should be our foothold.
+10. Noticed, we already leak the username.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0cea2752-0ecb-4f74-adee-0d95b3d43c3d)
+
+
+11. Remembering that this is an Apache's server and it stores data, hence we can leak database file at `/var/www/html`.
+
+> RESULT
+
+
+
+
 
 
