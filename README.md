@@ -178,6 +178,8 @@
 |7. |[Optimum](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Optimum/README.md)|[Legacy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Legacy/README.md)|[Granny](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Granny/README.md)|
 |8. |[Grandpa](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Grandpa/README.md)|[Devel](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Devel/README.md)|[Horizontall](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Horizontall/README.md)|
 |9. |[Validation](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Validation/README.md)|[Nunchucks](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Nunchucks/README.md)|[Late](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Late/README.md)|
+|10. |[BountyHunter](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/BountyHunter/README.md)|[]()|[]()|
+
 
 </details>
 
