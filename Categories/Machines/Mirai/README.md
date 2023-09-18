@@ -49,5 +49,34 @@ Nmap done: 1 IP address (1 host up) scanned in 70.83 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bb26fee6-88bc-495e-93c9-2b61cf28bd41)
 
 
-2. 
+2. After ran dirbuster, there's a directory named "admin".
 
+> Opens /admin
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9640f3ec-bff8-4843-8bba-a7331ed24262)
+
+
+3. Interesting, based from the results we can conclude that the remote server is running a Raspberry PI machine.
+4. Again here, we're making an interpretation where the admin **could** be using default creds.
+5. Checking the internet for Raspberry PI default creds, shall resulting to --> `pi:raspberry`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8248eac6-5354-4370-a879-b37332f651aa)
+
+
+6. Let's try run ssh to the remote server.
+
+> We're logged in!!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/52979401-d760-48ea-a6de-7bc450600b8c)
+
+
+> GETTING USER FLAG -> it's in the user home dir, then go to /desktop.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6c8f8433-f08c-4728-b2f1-5761f91fa238)
+
+
+## USER FLAG
+
+```
+ff837707441b257a20e32199d7c8838d
+```
