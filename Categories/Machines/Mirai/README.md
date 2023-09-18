@@ -80,3 +80,89 @@ Nmap done: 1 IP address (1 host up) scanned in 70.83 seconds
 ```
 ff837707441b257a20e32199d7c8838d
 ```
+
+7. Checking the sudo permission for pi.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a6fbd4ff-fe07-41f7-a0bc-e81596c1efa3)
+
+
+8. Since we can simply run sudo su to escalate our privilege.
+
+> GOT ROOT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/09ec6005-e5da-4443-ad8c-314cc1c3da56)
+
+
+9. BUT, the root flag is missing.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f2fec2e7-0361-46d8-8042-d0244064d7eb)
+
+
+> GETTING ROOT FLAG
+
+10. It seems we need to do a little memory forensics, we need to do forensic file recovery.
+11. I started checking the **lost+found** which is a directory used by the filesystem checking utility, typically "fsck" (filesystem check), to store files and directories that it recovers during the filesystem repair process.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8584291e-8ccf-411e-90b5-545fe1f6b850)
+
+
+12. Sadly no data there, then I ran --> `df -h` to list the machine's partitions. Why I ran this?? Because the **root.txt** file is interpret that there's might be a mounted drive or partition that contains a copy of the original file.
+
+> OUR INTEREST --> THE FILESYSTEM
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bea9d1f7-af76-456f-b855-efccd9a8dc25)
+
+
+13. There's 2 method we can use here. The unintended one is to strings the filesystem.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9ada8525-551d-4057-b61b-e2251035fc4e)
+
+
+## ROOT FLAG
+
+```
+3d3e483143ff12ec505d026fa13e020b
+```
+
+14. Anyway let's do it the proper way, by imaging the file.
+
+> IMAGING COMMAND IN LINUX
+
+```
+dcfldd if=/dev/sdb of=dump_htb.dd
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/290e787d-4cc4-45a4-a451-51294af733cc)
+
+
+15. Let's copy it to our local machine.
+
+> COMMAND
+
+```
+scp pi@mirai.htb:/home/pi/Desktop/dump_htb.dd .
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/47bd9c63-7527-4ea7-ada2-6d35942bd9b1)
+
+
+16. Since we're trying to recover data let's use **Testdisk**.
+17. Hmm.. Choosing --> None --> List.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4b79eb4-41cf-4ebf-a95e-bb1a1a021e88)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1ff7428c-8e08-45f5-9327-3c17844d82b3)
+
+
+18. What interesting here is the size is 0. Hmm.. Confused here, but if the formatting done is bit level, hence we can't retrieve it, but let's assume the data is not deleted in bit level.
+19. Let's strings it.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/73e565a0-455f-4825-96af-bfd67aeff46e)
+
+
+20. Exactly like what we expect! Got the root flag.
