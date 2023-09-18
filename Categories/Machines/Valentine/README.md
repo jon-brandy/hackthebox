@@ -103,4 +103,35 @@ RUgZkbMQZNIIfzj1QuilRVBm/F76Y/YMrmnM9k/1xSGIskwCUQ+95CGHJE8MkhD3
 -----END RSA PRIVATE KEY-----
 ```
 
-4. 
+4. Stuck in a rabbit hole for while. Then I started to move my attention to the heartbleed logo. Well it's obvious that the vuln here could be heartbleed bug, I took time long to search for any files I could use to interpret the RSA key.
+5. Anyway since I know this bug name but dunno how it works. Did a small outsource resulting to this great reference --> https://xkcd.com/1354/.
+6. By the way, to verify our assumptions about heartbleed, we can run ssl-heartbleed nmap scripts.
+
+> RESULT
+
+```
+┌──(brandy㉿bread-yolk)-[~/Downloads]
+└─$ nmap -p 443 --script ssl-heartbleed valentine.htb 
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-09-18 07:53 PDT
+Nmap scan report for valentine.htb (10.10.10.79)
+Host is up (0.036s latency).
+
+PORT    STATE SERVICE
+443/tcp open  https
+| ssl-heartbleed: 
+|   VULNERABLE:
+|   The Heartbleed Bug is a serious vulnerability in the popular OpenSSL cryptographic software library. It allows for stealing information intended to be protected by SSL/TLS encryption.
+|     State: VULNERABLE
+|     Risk factor: High
+|       OpenSSL versions 1.0.1 and 1.0.2-beta releases (including 1.0.1f and 1.0.2-beta1) of OpenSSL are affected by the Heartbleed bug. The bug allows for reading memory of systems protected by the vulnerable OpenSSL versions and could allow for disclosure of otherwise encrypted confidential information as well as the encryption keys themselves.
+|           
+|     References:
+|       http://www.openssl.org/news/secadv_20140407.txt 
+|       http://cvedetails.com/cve/2014-0160/
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160
+
+Nmap done: 1 IP address (1 host up) scanned in 0.62 seconds
+```
+
+7. Turns out it is.
+8. 
