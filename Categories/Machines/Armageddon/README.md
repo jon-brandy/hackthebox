@@ -48,6 +48,16 @@ Nmap done: 1 IP address (1 host up) scanned in 122.15 seconds
 
 
 3. Great! Based from the documentation and the chall's title. We seems in the correct approach.
-4. 
+4. Found a 2 github POCs we can use here.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f04f5a98-3fea-46d2-aa49-2a997e20f43e)
+
+
+5. I used the most starred github repo --> https://github.com/dreadlocked/Drupalgeddon2
+6. Let's clone the repo and run the ruby solver.
+
+> RESULT
+
+
 
 
