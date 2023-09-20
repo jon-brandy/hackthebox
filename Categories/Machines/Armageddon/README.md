@@ -194,6 +194,10 @@ armageddon.htb>>
 12. Found a username that should be our interest --> **brucetherealadmin**. But the password is hashed.
 13. Hmm.. Let's try to crack it using **hashcat**.
 
+```
+brucetherealadmin:$S$DgL2gjv6ZtxBo6CdqZEyJuBphBmrCqIV6W97.oOsUf1xAhaadURt
+```
+
 > CRACKING PASSWORD
 
 
