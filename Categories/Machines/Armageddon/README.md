@@ -56,8 +56,16 @@ Nmap done: 1 IP address (1 host up) scanned in 122.15 seconds
 5. I used the most starred github repo --> https://github.com/dreadlocked/Drupalgeddon2
 6. Let's clone the repo and run the ruby solver.
 
-> RESULT
+> RESULT - Got shell!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/27058e5d-9011-424b-a860-03ac10c85aba)
 
 
+7. Interesting! The shell we got is not fully interactive.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/00a017e8-1ef3-4dde-83a8-e9c6ea111ca3)
+
+
+8. 
 
 
