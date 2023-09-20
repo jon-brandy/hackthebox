@@ -66,6 +66,32 @@ Nmap done: 1 IP address (1 host up) scanned in 122.15 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/00a017e8-1ef3-4dde-83a8-e9c6ea111ca3)
 
 
-8. 
+8. Did a small research about drupal. Turns out there should be a creds we can access at this path --> sites/default/settings.php
+
+```
+https://serverpilot.io/docs/where-to-find-your-database-credentials-in-drupal/
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dc3de778-0eed-4eca-a640-26be6196fe3f)
+
+
+
+> RESULT
+
+```
+armageddon.htb>> ls sites/default/
+default.settings.php
+files
+settings.php
+armageddon.htb>> 
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4e347ec5-daba-4cf5-935e-7f48a66ea070)
+
+
+9. Found a cred we can use to login to mysql.
+
+> RESULT
+
 
 
