@@ -1,4 +1,4 @@
-# Paper
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/96776c88-8170-4a8f-a003-f757b99e9848)# Paper
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d312cd0a-ada9-42d0-8b02-1f81a3135a4f)
@@ -91,4 +91,10 @@ Nmap done: 1 IP address (1 host up) scanned in 56.47 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a25e00cc-37ab-48c1-b030-4b085e5349a4)
 
 
-7. 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eda07e2d-83f3-4965-b553-7db8e53ede0b)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fcb86fb5-7c80-46b1-b313-8b0ac96531f5)
+
+
+7. It seems we need to use --> `http://chat.office.paper/register/8qozr226AhkCHZdyY` , so we can register.
