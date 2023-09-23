@@ -135,7 +135,7 @@ Nmap done: 1 IP address (1 host up) scanned in 56.47 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/650feda6-9831-4e68-a947-3cce3f565a5a)
 
 
-> GETTING USER FLAG
+> GETTING USER FLAG | cred --> dwight:Queenofblad3s!23
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a0f376f7-0c06-4a49-a8b0-c079f79bd1ed)
 
@@ -147,4 +147,9 @@ Nmap done: 1 IP address (1 host up) scanned in 56.47 seconds
 ```
 
 
-19. 
+19. Since we can't check sudo permission for **dwight**, let's use linpeas.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5fab5503-29eb-481f-bc36-dcb5f1ed9e53)
+
+
+
