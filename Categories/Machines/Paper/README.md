@@ -152,4 +152,61 @@ Nmap done: 1 IP address (1 host up) scanned in 56.47 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5fab5503-29eb-481f-bc36-dcb5f1ed9e53)
 
 
+20. Set python server at port 80, then wget linpeas to the remote server.
+21. Running it shall resulting to many list of potential files or sudo permission usable for privesc.
+22. Anyway, researching the vuln about the sudo version shown by **Linpeas**.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bd04e4be-62ca-4820-943d-92f0c435352a)
+
+
+23. Resulting to this -> https://www.cybersecurity-help.cz/vdb/sudo/sudo/1.8.29/.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/72ae5984-9635-4362-b330-433e576fd051)
+
+
+24. I tried one of them, choosing for the simplest one, also **Linpeas** did a great job for listing all the CVE's available for the particular sudo version.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/66254f6b-ed12-4f96-abb7-802fe948b016)
+
+
+25. Things to note, dwight not run sudo. Long story short, I gained root using the documentation from CVE-2021-3156.
+26. Again, did a small research about it resulting to this POC --> https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation/blob/main/poc.sh.
+27. We just need to send it to the remote server and execute the shellscript there.
+28. Before that, we must changed the username and password at the script. For me I changed the username to --> `anjay-win` and password to --> `aabbcc`.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f238ecbe-150a-4019-b816-a5b0b43a3cf5)
+
+
+29. Set a python server again then run wget on the remote server.
+30. Lastly, execute the shellscript.
+
+#### NOTES: 
+
+```
+It is a best practice to download and run file at /tmp directory.
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e699317b-a984-4824-99ce-ad845c4df373)
+
+
+31. Great! Let's change user to --> `anjay-win`, input password then run `sudo bash` to obtain root (based from the response we got before).
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8b2d3c98-b02f-4631-84f4-24eb4e0b1379)
+
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/81aa5854-6b0b-46a9-9322-47f293828d8a)
+
+
+## ROOT FLAG
+
+```
+3cb90ecc183f4d05605649a0fb4cd1e0
+```
