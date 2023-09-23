@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/96776c88-8170-4a8f-a003-f757b99e9848)# Paper
+# Paper
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d312cd0a-ada9-42d0-8b02-1f81a3135a4f)
@@ -98,3 +98,53 @@ Nmap done: 1 IP address (1 host up) scanned in 56.47 seconds
 
 
 7. It seems we need to use --> `http://chat.office.paper/register/8qozr226AhkCHZdyY` , so we can register.
+8. After registering account, login with the same cred.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/32c5be69-e358-4226-847d-99c3a3ff84c4)
+
+
+9. Reading the `general` you shall find a bot named **Recycle**, based from the chat history we can chatting with bot.
+10. There's several commands we can use.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/498a2656-94bf-475e-b52c-12790d9873b8)
+
+
+11. We can list files at the remote server and we can see the content.
+12. Long story short, found the **user.txt** at the `/` directory.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ed31160c-97e1-4858-b2e4-51ceaf782b00)
+
+
+13. But we can't see the content, because only root can read the file.
+14. As we know, we're accessing the server as **dwight**.
+15. Running --> `reyclops file../../../../../etc/passwd`, we can identified another user named **rocketchat**.
+16. Stuck for a while, until I realized there's a directory named **hubot** that dwight can access.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9e8baec9-cbe2-4e90-a478-31713af789fe)
+
+
+17. Checking the **.env** file we shall find a password for **rocketchat** (?)
+18. Here's what's unique, we found 2 users -> rocketchat & dwight. Somehow the password we found is the correct password for dwight when running ssh.
+
+> .env
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/650feda6-9831-4e68-a947-3cce3f565a5a)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a0f376f7-0c06-4a49-a8b0-c079f79bd1ed)
+
+
+## USER FLAG
+
+```
+6276e48a3644fba299956c0a72ad4c7e
+```
+
+
+19. 
