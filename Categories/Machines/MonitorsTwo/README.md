@@ -103,7 +103,34 @@ mysql -h db -u root -proot cacti -e 'use cacti; show tables;'
 
 
 12. Noticed there's 2 creds that should be our interest --> admin and marcus.
-13. Let's use john to crack the hashes.
+13. Let's use john to crack both hashes.
+14. Long story short, only marcus hash can be cracked by john.
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7dafa110-a8b4-4747-af0d-05d3bd16fd97)
+
+
+> LOGIN AS MARCUS
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/50483c1e-af8a-4b22-8d4e-36c61c377fbb)
+
+
+15. Sadly we can't check sudo permission for marcus.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f73d2c85-445f-4bd6-8359-0897ad9a714b)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8df43a00-29fe-4693-9737-14faf8d68aca)
+
+
+## USER FLAG
+
+```
+fa555eb52270bc288bd5b972c955debc
+```
+
+16. To do privesc, I download linpeas.sh to the remote server.
+17. 
