@@ -148,4 +148,17 @@ fa555eb52270bc288bd5b972c955debc
 
 
 21. Checking all the CVE version listed at the mail, the most potential is --> CVE-2021-41091.
-22. Seems the goal is to exploit 
+22. Seems the goal is to exploit **Moby Docker Engine**.
+23. Did a research shall resulting to these references:
+
+```
+https://exploit-notes.hdks.org/exploit/container/docker/moby-docker-engine-privesc/
+https://github.com/UncleJ4ck/CVE-2021-41091
+```
+
+24. Let's follow the steps in the documentation and clone the git repository to use the solver.
+25. Then moved it to the remote server and run the script.
+
+> RESULT
+
+
