@@ -133,6 +133,19 @@ fa555eb52270bc288bd5b972c955debc
 ```
 
 16. To do privesc, I download linpeas.sh to the remote server.
-17. Running linpeas.sh obviously shall showing you bunch of potential files that **could** help us to gain root.
+17. Running linpeas.sh obviously shall showing you bunch of potential files that **could** help us to gain root, included with the CVE version.
 18. Anyway things to remember, marcus can't run sudo.
-19. 
+19. Checking another linpeas result, found mails.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5d74fa6f-9bbb-43f2-b584-1fbc1911d709)
+
+
+20. Both mails have the same contents.
+
+> CONTENTS
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2b42d503-66e0-4818-bf67-173c7a2891b6)
+
+
+21. Checking all the CVE version listed at the mail, the most potential is --> CVE-2021-41091.
+22. Seems the goal is to exploit 
