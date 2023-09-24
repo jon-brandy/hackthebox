@@ -133,4 +133,6 @@ fa555eb52270bc288bd5b972c955debc
 ```
 
 16. To do privesc, I download linpeas.sh to the remote server.
-17. 
+17. Running linpeas.sh obviously shall showing you bunch of potential files that **could** help us to gain root.
+18. Anyway things to remember, marcus can't run sudo.
+19. 
