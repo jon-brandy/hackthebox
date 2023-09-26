@@ -65,4 +65,55 @@ Nmap done: 1 IP address (1 host up) scanned in 21.33 seconds
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/833033a0-4f0e-4a11-b02c-dff45dbf7f74)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/42acb84c-42b9-412f-8f93-5748e4ac10e4)
+
+
+11. Succeed access /etc/passwd. Great! This means we can access the user directory and get the user flag there.
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5c71ee41-1931-4839-a588-fe3707403df0)
+
+
+12. Found 2 users, let's see which one has the user flag.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cb963b88-6bc2-42e9-a250-82b6ba08faf5)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c1458e84-d17f-4342-afd7-c5cfe45a0b33)
+
+
+13. Found the user flag at **phil**, but the web browser can't read the user.txt file.
+14. Going back to **frank** directory and checking `.m2` directory, we found a file named **settings.xml**, opening it shall resulting to this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/588b0f85-3f14-41f3-b288-717d744655fa)
+
+
+15. Noticed there's a cred hardcoded there.
+16. Anyway can't login to phil and frank using that password.
+17. Then I go to `var/www` to see if there's any interesting directories or files inside it.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5a935911-b8be-4a54-9f12-6f3e8d15c0a5)
+
+
+> FOUND NOTHING IN HTML
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/967fae62-dd94-4785-b9db-4437abb39498)
+
+
+> FOUND FILES IN WEBAPP DIR
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a1ca30cd-44bb-49b8-9364-3c6ca1d819ef)
+
+
+18. Checking **pom.xml** which covering about **spring framework** we can see the web version.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/40f83c6b-64c9-48b3-a67c-f55a950fb587)
+
+
+19. Great! This shall helps us find CVEs.
+
 
