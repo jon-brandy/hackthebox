@@ -143,4 +143,11 @@ Nmap done: 1 IP address (1 host up) scanned in 21.33 seconds
 fc6d1634e2f5babf342a0cf22ac541bd
 ```
 
-25. 
+25. Run --> `python3 -c 'import pty;pty.spawn("/bin/sh")'` so we can check sudo permission for phil.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3386bf5c-8d74-4c7e-b3a1-29c08e19e919)
+
+
+26. Sadly we can't, let's use linpeas.
