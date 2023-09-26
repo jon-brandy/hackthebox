@@ -55,4 +55,14 @@ Nmap done: 1 IP address (1 host up) scanned in 21.33 seconds
 
 
 7. Great! More interestingly there's a URL parameter! We can send our reverse shell and access it to trigger it.
-8. 
+8. But anyway based from the wappalyzer info the webapps seems can't execute any file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4b21490e-e7c2-4012-ab4c-b23895dd0424)
+
+
+9. And we don't know whether it sanitizes the image content or not.
+10. Anyway, found a `File Traversal` vuln when capturing the request using burpsuite and changing the parameter value.
+
+> RESULT
+
+
