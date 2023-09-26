@@ -5,6 +5,33 @@
 </p>
 
 
+> HTB MACHINE'S PWNED
+
+
+<details>
+<br>
+<summary> Machines </summary>
+
+|No.|Column 1|Column 2|Column 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[Blue](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blue/README.md)|[Jerry](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Jerry/README.md)|[Lame](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Lame/README.md)|
+|2. |[Netmon](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Netmon/README.md)|[Photobomb](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Photobomb/README.md)|[Precious](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Precious/README.md)|
+|3. |[Shoppy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shoppy/README.md)|[Cap](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Cap/README.md)|[Busqueda](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Busqueda/README.md)|
+|4. |[Knife](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Knife/README.md)|[Bashed](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bashed/README.md)|[Shocker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shocker/README.md)|
+|5. |[Beep](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Beep/README.md)|[Blocky](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blocky/README.md)|[Bank](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bank/README.md)|
+|6. |[Nibbles](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Nibbles/README.md)|[SteamCloud](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/SteamCloud/README.md)|[Keeper](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Keeper/README.md)|
+|7. |[Optimum](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Optimum/README.md)|[Legacy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Legacy/README.md)|[Granny](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Granny/README.md)|
+|8. |[Grandpa](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Grandpa/README.md)|[Devel](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Devel/README.md)|[Horizontall](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Horizontall/README.md)|
+|9. |[Validation](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Validation/README.md)|[Nunchucks](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Nunchucks/README.md)|[Late](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Late/README.md)|
+|10. |[BountyHunter](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/BountyHunter/README.md)|[Mirai](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Mirai/README.md)|[Armageddon](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Armageddon/README.md)|
+|11. |[Paper](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Paper/README.md)|[MonitorsTwo](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/MonitorsTwo/README.md)|[Inject](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Inject/README.md)|
+
+
+</details>
+
+
+
+
 > HTB CTF's PWNED
 
 <details>
@@ -158,32 +185,6 @@
 |1. |[Survival of the Fittest](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Blockchain/Survival%20of%20the%20Fittest/README.md)|||
   
 </details>
-
-
-> HTB MACHINE'S PWNED
-
-
-<details>
-<br>
-<summary> Machines </summary>
-
-|No.|Column 1|Column 2|Column 3|
-|:-:|:-------:|:-------:|:-------:|
-|1. |[Blue](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blue/README.md)|[Jerry](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Jerry/README.md)|[Lame](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Lame/README.md)|
-|2. |[Netmon](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Netmon/README.md)|[Photobomb](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Photobomb/README.md)|[Precious](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Precious/README.md)|
-|3. |[Shoppy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shoppy/README.md)|[Cap](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Cap/README.md)|[Busqueda](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Busqueda/README.md)|
-|4. |[Knife](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Knife/README.md)|[Bashed](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bashed/README.md)|[Shocker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Shocker/README.md)|
-|5. |[Beep](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Beep/README.md)|[Blocky](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blocky/README.md)|[Bank](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Bank/README.md)|
-|6. |[Nibbles](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Nibbles/README.md)|[SteamCloud](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/SteamCloud/README.md)|[Keeper](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Keeper/README.md)|
-|7. |[Optimum](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Optimum/README.md)|[Legacy](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Legacy/README.md)|[Granny](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Granny/README.md)|
-|8. |[Grandpa](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Grandpa/README.md)|[Devel](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Devel/README.md)|[Horizontall](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Horizontall/README.md)|
-|9. |[Validation](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Validation/README.md)|[Nunchucks](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Nunchucks/README.md)|[Late](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Late/README.md)|
-|10. |[BountyHunter](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/BountyHunter/README.md)|[Mirai](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Mirai/README.md)|[Armageddon](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Armageddon/README.md)|
-|11. |[Paper](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Paper/README.md)|[MonitorsTwo](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/MonitorsTwo/README.md)|[Inject](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Inject/README.md)|
-
-
-</details>
-
 
 
 
