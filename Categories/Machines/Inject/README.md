@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/26598249-49ef-4568-9fc9-299ee24bd25d)# Inject
+# Inject
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/badbc336-8df3-4625-b604-12ca012c8b9a)
@@ -191,4 +191,16 @@ fc6d1634e2f5babf342a0cf22ac541bd
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d7af6d22-a287-4d80-8c57-04b700d11515)
 
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/153aa52a-717c-4d00-8e98-30cad221e497)
+
+
+## ROOT FLAG
+
+```
+836c23c223f92772f6cbfe4cb2e2e1c2
+```
