@@ -151,7 +151,20 @@ fc6d1634e2f5babf342a0cf22ac541bd
 
 
 26. Sadly we can't, let's use linpeas to check whether there is files or directories we can use to escalate our privilege.
+27. Linpeas is a great tool, it listed every files/directories and even potential CVE document we can use to escalate our privilege.
+28. However, it still hard to identify which one and it took time.
+29. Based from the linpeas, it listed several `Ansible` path which runs as root.
+30. `Ansible` is a great tool for automating IT tasks and managing infra at scale. It uses YAML to describe config changes and tasks.
+31. Also it can be used to manage systems that runs on a wide range of OS.
+32. Running another powerfull tool called **pspy64** shall resulting the same result as linpeas but with more straightforward result.
 
-> RESULT
+> FINDING
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/402ce897-a1e3-49b1-a6e7-7e7b7f777a4f)
+
+
+33. Great! Seems **Ansible** is truly the intended solution here.
+34. Noticed the `ansible/playbook` is being run as root.
+35. Inside `playbook` itslef contained such as described before --> a task like execute shell command, create a new user, modifying a configuration file, or even installing packages. The cool thing is, it's `AUTOMATED`.
+36. Checking the files permissions in `/opt/automation/tasks/` shall resulting to this:
 
