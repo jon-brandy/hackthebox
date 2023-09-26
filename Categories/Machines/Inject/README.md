@@ -150,4 +150,8 @@ fc6d1634e2f5babf342a0cf22ac541bd
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3386bf5c-8d74-4c7e-b3a1-29c08e19e919)
 
 
-26. Sadly we can't, let's use linpeas.
+26. Sadly we can't, let's use linpeas to check whether there is files or directories we can use to escalate our privilege.
+
+> RESULT
+
+
