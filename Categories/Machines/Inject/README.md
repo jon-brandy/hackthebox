@@ -73,8 +73,6 @@ Nmap done: 1 IP address (1 host up) scanned in 21.33 seconds
 
 11. Succeed access /etc/passwd. Great! This means we can access the user directory and get the user flag there.
 
-> GETTING USER FLAG
-
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5c71ee41-1931-4839-a588-fe3707403df0)
 
 
@@ -116,10 +114,33 @@ Nmap done: 1 IP address (1 host up) scanned in 21.33 seconds
 
 19. Great! This shall helps us find CVEs.
 20. Diving in the internet found 2 CVEs close to this --> `CVE-2022-22965` and `CVE-2022-22963`.
-21. Checking the metasploit, the targeturi seems at `/functionRouter`.
+21. Analyze further the **poc.xml** shall realized the CVE for this challenge should be --> `CVE-2022-22963`. Because there's several things not there to use `CVE-2022-22965`.
+22. Checking the metasploit, the targeturi seems at `/functionRouter`.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ecb48e81-8ecf-4212-8aa3-3e53c74e9db6)
 
 
-22. 
+> USING METASPLOIT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/00deb14f-45c8-41a5-ac95-661cd0dbf4d5)
+
+
+23. This time I tried to change to phil using the password we failed to use at ssh before.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/78af3178-61ea-43a8-8703-77c6db813b3c)
+
+
+24. Turns out we succeed! Confused why failed before.
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8b7c7463-3f0a-44cf-ad9d-27560363150a)
+
+
+## USER FLAG
+
+```
+fc6d1634e2f5babf342a0cf22ac541bd
+```
+
+25. 
