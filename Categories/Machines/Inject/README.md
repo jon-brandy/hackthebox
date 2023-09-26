@@ -168,3 +168,13 @@ fc6d1634e2f5babf342a0cf22ac541bd
 35. Inside `playbook` itslef contained such as described before --> a task like execute shell command, create a new user, modifying a configuration file, or even installing packages. The cool thing is, it's `AUTOMATED`.
 36. Checking the files permissions in `/opt/automation/tasks/` shall resulting to this:
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/783ce4c6-2df9-47d2-8fc5-278b11927940)
+
+37. Remembering **phil** is a member of user group --> **staff**. Hence it allows us to create another .yaml file which has our reverse shell payload.
+38. With this we can gain root!
+
+> MALICIOUS .YAML FILE
+
+```
+
+```
