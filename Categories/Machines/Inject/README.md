@@ -115,5 +115,11 @@ Nmap done: 1 IP address (1 host up) scanned in 21.33 seconds
 
 
 19. Great! This shall helps us find CVEs.
+20. Diving in the internet found 2 CVEs close to this --> `CVE-2022-22965` and `CVE-2022-22963`.
+21. Checking the metasploit, the targeturi seems at `/functionRouter`.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ecb48e81-8ecf-4212-8aa3-3e53c74e9db6)
+
+
+22. 
 
