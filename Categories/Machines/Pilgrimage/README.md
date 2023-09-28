@@ -62,4 +62,47 @@ assets  dashboard.php  index.php  login.php  logout.php  magick  register.php  v
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/502576c5-935b-4606-9c58-ab56adc0cc76)
 
 
-5. 
+5. Well, analyzing **index.php** source code, shall found an interesting tool used by the webapp (ImageMagick).
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4ad6b78b-4722-454e-91ff-a04df08e9732)
+
+
+6. Searching in metasploit for **Image Magick** shall resuulting to these:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fd001312-48fe-4886-ba14-9d879ac7931d)
+
+
+7. Got bunch of results, searching on the internet shall found these:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c2274c43-9806-488a-8bf4-a48dabcdd7a4)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2c22af4a-a45d-44cd-a4a5-abb26235ef7a)
+
+
+> CVE's POC --> https://github.com/voidz0r/CVE-2022-44268
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5989ddf0-3238-42cf-aeb0-f8276e5bda0c)
+
+
+8. Quite promising, let's try use that CVE in metasploit -->  CVE-2022-44268
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/098ad4d4-0817-462b-a517-0d39870929b5)
+
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8b064e7b-0bd5-40b2-b487-bbc729848071)
+
+
+9. It seems we need to exploit this manually.
+10. I did not want to use the CVE's POC we found before because it runs cargo.
+11. Searching for another POC, found this POC where it uses python script --> `https://github.com/Sybil-Scan/imagemagick-lfi-poc`.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1704d401-9494-47d2-9d08-e9d342be8fee)
+
+
+12. Let's just follow the steps listed there.
+13. 
+
