@@ -147,7 +147,7 @@ Nmap done: 1 IP address (1 host up) scanned in 109.41 seconds
 
 > RESULT
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/df5e2a78-1495-4037-8e72-3b383a28f28f)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bb944f1e-f640-4c09-bdcc-1fedcdb21392)
 
 
 > ADD /web/ before the basket name, resulting to this:
@@ -160,7 +160,60 @@ Nmap done: 1 IP address (1 host up) scanned in 109.41 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5d74a66-0377-41e1-83ba-6bee3dc555d5)
 
 
-19. Anyway at this point we found nothing interesting again. 
+19. Anyway at this point we found nothing interesting again.
+20. Remembering we got another service version again before --> `Maltrail (v0.53)`.
+21. Let's dive there.
 
+> Found it easily
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3ba6792d-1a56-4081-9a7c-56cc81b614d2)
+
+
+22. Seems the vuln is --> **Unauth OS Command Injection**.
+23. Let's use this github POC --> `https://github.com/spookier/Maltrail-v0.53-Exploit`.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a485a2e3-dab7-48a1-a54d-78c7c0c20534)
+
+
+24. Awesome! We got RCE.
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/26290f9c-7c75-4a06-9abf-d5d3053bd169)
+
+
+## USER FLAG
+
+```
+d964ef5c7620432c0c32724f4275cc34
+```
+
+25. I tried to check sudo permissions for **user puma** which surprisingly **WE CAN (?)** even though before we got reverse shell and does not login with ssh.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f570151e-2b25-48d1-802b-3795e1095fc2)
+
+
+26. Also to get privesc is not hard, because we're allowed to access --> `systemctl status trail.service` without password.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1962c613-3411-4f50-b41f-99e63cfcad9d)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4770bea6-5b66-4805-b6f9-6025d9ee4c89)
+
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/febd54e9-fff9-4505-b6fb-722d9039813f)
+
+
+## ROOT FLAG
+
+```
+50e206a8fd006d49e00d3ff7cd4be838
+```
 
 
