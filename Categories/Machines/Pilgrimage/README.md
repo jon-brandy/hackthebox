@@ -40,4 +40,10 @@ Nmap done: 1 IP address (1 host up) scanned in 19.57 seconds
 
 1. Based from the nmap results, the machine runs a web application and opens ssh login.
 2. Noticed based from the nmap result, /.git/ is found. We can dump that using git-dumper later.
+
+> WEB APP
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7efd6bef-7ebc-4379-ad5f-cde52a4283e4)
+
+
 3. 
