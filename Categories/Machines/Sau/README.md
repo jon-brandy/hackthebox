@@ -159,7 +159,8 @@ Nmap done: 1 IP address (1 host up) scanned in 109.41 seconds
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5d74a66-0377-41e1-83ba-6bee3dc555d5)
 
-19. 
+
+19. Anyway at this point we found nothing interesting again. 
 
 
 
