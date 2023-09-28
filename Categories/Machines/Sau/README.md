@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d5046544-fe2e-4795-a324-2d2195987687)# Sau
+# Sau
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0d8ec6c5-88e8-405a-80d5-9f925668b750)
@@ -118,6 +118,16 @@ Nmap done: 1 IP address (1 host up) scanned in 109.41 seconds
 7. Again the problem is we need to identify the service version for request baskets.
 8. Anyway, gathering information about this vuln resulting to the same version discussed --> v1.2.1.
 9. The vuln shall stay the same --> SSRF.
-10. Then I tried this POC --> `https://github.com/entr0pie/CVE-2023-27163`.
+10. Also I noticed it lately, the version actually shown at the homepage.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4d16ec67-ee32-4642-af8e-caa348fca27f)
+
+
+11. So it's clear the vuln should be SSRF and the CVE should be --> CVE-2023-27163.
+12. Sadly metasploit does not have that CVE version.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/12b86143-b267-453c-b276-cd8055891cc0)
+
+13. Hence, we need to exploit this manually.
+14. 
 
