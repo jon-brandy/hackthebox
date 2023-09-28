@@ -119,5 +119,64 @@ assets  dashboard.php  index.php  login.php  logout.php  magick  register.php  v
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/83a9a115-20f9-4ed2-97d5-527b16dc1953)
 
 
+13. Running `identify -verbose 651533fa137a0.png` and scrolling down, shall found this hexes:
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0d69cc67-0fa6-4637-b69a-c49ce75026e9)
+
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/06e4e2fe-4f84-4aac-984d-817eaea774a3)
+
+
+14. Great we found the foothold. Anyway we leaked a username --> `emily`.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6f3c0764-79ba-4f45-a12e-cb2f68b6e21d)
+
+
+15. However because we're not in a webshell or a shell, we can't read .txt file, so there must be a creds somewhere we can use to login as emily.
+16. But how come?? Here's the situation. We can read /home/emily/user.txt, and we just found out that the vuln is LFI not SSTI. That's why the approach must be hardcoded creds somewhere or reuse password scenario.
+17. Remembering it's a webapp and we got the source code by dumping the `.git` vulnerability. Hence it's much easier for us to found where database might be located.
+18. Reviewing login.php source code, found our potential interest.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7811c50d-7f16-4c3e-9a7c-27916436dfce)
+
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/912da23e-fb4e-4916-a9d5-3a57da2dcf5c)
+
+
+19. Running the same method as before by grabbing the hexes and decode them in Cyberchef, found this:
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ea3701b9-604a-4e3e-9c03-018b1f423a9d)
+
+
+20. Great! After tried ssh login with `emily:abigchonkyboi123`, we logged in!
+
+> RESULT
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5203e367-f992-420d-bfd1-f6053d68c204)
+
+
+> GETTING USER FLAG
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ae2d2531-3028-4ded-aa01-c77d6a7eae14)
+
+
+## USER FLAG
+
+```
+6779af2316ab81439521d378340a224d
+```
+
+21. When checking sudo permission for emily, sadly emily does not run sudo on pilgrimage.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c5272a64-e51b-44c7-b367-b3e35569b36a)
 
 
