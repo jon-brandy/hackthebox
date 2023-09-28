@@ -104,5 +104,20 @@ assets  dashboard.php  index.php  login.php  logout.php  magick  register.php  v
 
 
 12. Let's just follow the steps listed there.
-13. 
+
+> RESULT
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/07f93215-ecfc-4a4d-b7af-cd3428f3e421)
+
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/facd5578-f3fd-42cb-b1fd-dc65756df7bc)
+
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/83a9a115-20f9-4ed2-97d5-527b16dc1953)
+
+
+
 
