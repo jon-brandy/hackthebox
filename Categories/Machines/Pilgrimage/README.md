@@ -180,3 +180,83 @@ assets  dashboard.php  index.php  login.php  logout.php  magick  register.php  v
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c5272a64-e51b-44c7-b367-b3e35569b36a)
 
 
+22. Running **linpeas.sh** we found this interesting result.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/08583d7e-34dc-4af3-996c-611dcfa97411)
+
+
+23. Noticed 2 tools used here -> `inotifywait` and `binwalk`.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8e7741a5-67eb-418d-a120-4ccd2774c15f)
+
+
+24. Reviewing the source code again, it looks like monitor newly created files in `/var/www/pilgrimage.htb/shrunk/` directory. The **monitoring** itself using binwalk and it auto deletes file which match with what defined inside the blacklist array.
+25. So our foothold can be at binwalk.
+26. Let's run **pspy64** to check whether the process is being run as root or not.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c13c9658-0a0e-4b24-8c34-43b146ba430d)
+
+
+27. Great! Searching on the internet about binwalk exploit shall resulting to this --> `https://www.exploit-db.com/exploits/51249`.
+28. The binwalk version itself does the same as the documentation.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5890061-468c-4680-b3b5-61c9d889aef1)
+
+
+29. Great! Seems binwalk is indeed our foothold.
+30. Searching on the internet for POCs found this --> `https://github.com/adhikara13/CVE-2022-4510-WalkingPath`.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b3fc8307-f307-42f5-8477-11db943a6976)
+
+
+31. The github POCs itself referencing to another POC.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0d8295ab-ef29-4957-8cc6-9ef19578f7af)
+
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7c5906ab-c33b-45b8-b85d-972da1145824)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2ac92000-bfa7-4ab2-94e4-e88ca9f4755c)
+
+
+32. Let's use the **RCE_binwalk.py**.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/26281827-ed8c-47a7-98c5-f9e1874f58a9)
+
+
+33. Now download the newly created image file from the script --> `binwalk_exploit.png` to the remote server, then copy it to --> `/var/www/pilgrimage.htb/shrunk/`.
+
+#### NOTES: Remembering there's a blacklist char, naming "gambar.png" shall safe.
+
+> RESULT
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ebd5a634-ef1e-4785-8896-07220f4a9f1e)
+
+
+34. Nice!
+
+> GETTING ROOT FLAG
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/372d35c0-986f-4a8e-85d4-0c8e37e0c3ff)
+
+
+## ROOT FLAG
+
+```
+bb8702d5c401f0995582469c48d7169e
+```
+
+
+
+
