@@ -129,5 +129,37 @@ Nmap done: 1 IP address (1 host up) scanned in 109.41 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/12b86143-b267-453c-b276-cd8055891cc0)
 
 13. Hence, we need to exploit this manually.
-14. 
+14. Found a github POC --> `https://github.com/entr0pie/CVE-2023-27163` discussing this vuln.
+15. Based from this documentation, we're using a bashscript which helps us to access port 80 which is filtered before.
+16. Let's follow the steps shown there.
+
+> HOW TO RUN
+
+```
+./CVE-2023-27163.sh http://10.10.11.224:55555/ http://127.0.0.1:80/
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7613c722-d6fc-40e8-abff-859db3f62061)
+
+17. Great! Let's access the endpoint shown with it's token.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/df5e2a78-1495-4037-8e72-3b383a28f28f)
+
+
+> ADD /web/ before the basket name, resulting to this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7130af28-6b0a-4f2b-93a6-10fe1966d383)
+
+
+18. Insert the token.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5d74a66-0377-41e1-83ba-6bee3dc555d5)
+
+19. 
+
+
 
