@@ -26,4 +26,16 @@ Nmap done: 1 IP address (1 host up) scanned in 256.03 seconds
 ```
 
 1. Based from the nmap results, the machine runs `Windows Remote Procedure Call (RPC)` and an unknown service at port 8500.
-2. Interesting! Let's 
+2. Interesting! Accesing port 8500 shall resulting to this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d48c0661-d8dc-49b8-a0c2-a232aee1b76c)
+
+
+3. But noticed we got info there.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b291a117-3543-4094-94c4-078e199d23b9)
+
+
+4. It seems prt 8500 is running **Coldfusion** webserver.
+
+
