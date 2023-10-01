@@ -118,3 +118,23 @@ Nmap done: 1 IP address (1 host up) scanned in 23.15 seconds
 ```
 fa74b70a848ed9002b4ba1ded4dba244
 ```
+
+19. When tried to check sudo permission for **vdaisley**, sadly he/she does not run sudo on this machine.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/98152475-44b8-48ec-84b3-6ae7c5cdb414)
+
+
+20. Noticed there's a **pspy64**, we won't need to grab linpeas or another pspy64 version from our local machine, let's just make it executeable then run it.
+21. This two should be interesting.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ae81472d-dbe0-489d-ac2e-a64d3184e520)
+
+
+22. **gnuplot** is being run as root.
+23. Scrolling down the pspy64 result shall find files inside gnuplot is executed again.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b410f74b-92cf-483d-8ae5-11ec90d5ae8c)
+
+
+24. It's part of the cronjob! Great!
+25. 
