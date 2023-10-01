@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9452c78a-0fca-4ef7-b43f-7750fb5794c8)<p align="center">
+<p align="center">
 
 <img src="https://github.com/jon-brandy/hackthebox/assets/70703371/a51e7b6d-ea3f-48c8-b786-075775c22ce9"> 
   
