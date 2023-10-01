@@ -137,4 +137,32 @@ fa74b70a848ed9002b4ba1ded4dba244
 
 
 24. It's part of the cronjob! Great!
-25. 
+25. Traversing to **/opt/** shall find the gnuplot dir, but sadly we can't ls there.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/55217966-e265-4130-8318-f11219660aed)
+
+
+26. We can't make sure whether how many .plt file there and does it executes all .plt files.
+27. Anyway I reset the machine again because it keeps lagging and turnsout when I tried to login to **vdaisley** again, the pspy64 suddenly gone and the shell interface is different too.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1fdd1725-dcfb-4f42-a3c4-5d94f56e866d)
+
+
+28. Dunno why this happened, I thought the pspy64 is there by purpose. Anyway things to note if you want to send pspy64 to the remote machine, simply set a python server at your local machine then run wget at the remote server (check my other machine's writeups for detail).
+29. Back to the gnuplot privesc topic, diving on the internet found many POCs about how to do privesc, one of them is this --> `https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/gnuplot-privilege-escalation/`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0b07061a-3cf3-4792-b7c5-e712b38a4945)
+
+
+30. We can run **system** and specify the command afterwards, hence we can run --> `system "chmod u+s /bin/sh"` and store it to random .plt file.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2c2a1cd6-f974-4785-a611-43712c51efaf)
+
+
+31. Great! Let's trigger it by run --> `/bin/sh -p`.
+
+> RESULT
+
+
