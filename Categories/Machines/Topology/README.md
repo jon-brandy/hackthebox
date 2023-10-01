@@ -1,0 +1,70 @@
+# Topology
+> Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1614206e-d7d4-428b-b223-97aa9b0ae5a0)
+
+
+## STEPS:
+> PORT SCANNING
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ nmap -p- -sVC 10.10.11.217 --min-rate 1000
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-10-01 06:44 PDT
+Nmap scan report for toplogy.htb (10.10.11.217)
+Host is up (0.028s latency).
+Not shown: 65533 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 dcbc3286e8e8457810bc2b5dbf0f55c6 (RSA)
+|   256 d9f339692c6c27f1a92d506ca79f1c33 (ECDSA)
+|_  256 4ca65075d0934f9c4a1b890a7a2708d7 (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-title: Miskatonic University | Topology Group
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 23.15 seconds
+```
+
+1. Based from the nmap results, the machine runs a web application and opens ssh login.
+
+> WEB APP
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7ad08a3f-dc9b-47ed-9587-c3dfaec73705)
+
+
+2. After ran **dirsearch** found nothing interesting.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2f24b03b-d2eb-43da-ae26-7937ec8d9bff)
+
+
+3. Checking the webpage, found an interesting link.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9ff66afa-3e4e-4d87-ad1d-b2f2dc6f37eb)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6c43c371-ace2-49c7-ba62-391ed423a32f)
+
+
+4. Interesting, I think we all have the same thought here of what the vuln might be.
+5. It could be **command injection** or **SSTI**.
+6. Anyway, after searching on the internet about `latex injection` found this --> `https://book.hacktricks.xyz/pentesting-web/formula-doc-latex-injection`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/62712b93-030e-4552-b826-d00b98c008f6)
+
+
+7. Let's try to read a file using these template payloads.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/53dc4ab9-197a-4ad7-941d-e5158916f536)
+
+> Input --> $\lstinputlisting{/etc/passwd}$
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2c782fdc-4af0-4542-b193-97da0ee4ff39)
+
+
+8. It creates a .png file and shows what's inside passwd. Great! This is our foothold, noticed we found 2 users --> root and vdaisley.
+9. Anyway, I think the intended way is to get a reverse shell using command injection payload for LaTeX. But since it allows us to do arbitrary files read.
+10. Hence, I tried to traverse along and see what I can g
