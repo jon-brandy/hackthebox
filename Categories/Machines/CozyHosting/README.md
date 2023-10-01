@@ -32,3 +32,12 @@ Nmap done: 1 IP address (1 host up) scanned in 18.72 seconds
 > WEBAPP
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fd9b7161-dbf0-4b00-b073-ef80301da3e2)
+
+
+2. The wappalyzer itself shows us minimum info (for version).
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1850a964-0b31-4a53-961a-1beee364802c)
+
+
+3. Hence i ran dirsearch to list all directories or files available for this webapp.
+4. 
