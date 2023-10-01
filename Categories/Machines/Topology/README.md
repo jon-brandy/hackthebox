@@ -161,9 +161,28 @@ fa74b70a848ed9002b4ba1ded4dba244
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2c2a1cd6-f974-4785-a611-43712c51efaf)
 
 
-31. Hmm, it referencing to /bin/dash not /bin/bash, hence let's overwrite it by running the same command again, but this time use change /bin/sh to /bin/bash.
+31. Hmm, it referencing to /bin/dash not /bin/bash, hence let's overwrite it by running the same command again, but this time use change /bin/sh to /bin/bash, then to trigger it execute `/bin/bash -p`.
 
 > RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2458df37-5ccf-4469-93f8-8b2781c0ca47)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/79bcffd8-da93-49d2-8ef6-1a4373b58de5)
+
+
+33. We gained root!
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0f74741f-2229-4725-aa3e-07441223bb58)
+
+
+## ROOT FLAG
+
+```
+1b30c0e9550cba28da13c13cf706465d
+```
 
 
 
