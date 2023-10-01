@@ -161,8 +161,10 @@ fa74b70a848ed9002b4ba1ded4dba244
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2c2a1cd6-f974-4785-a611-43712c51efaf)
 
 
-31. Great! Let's trigger it by run --> `/bin/sh -p`.
+31. Hmm, it referencing to /bin/dash not /bin/bash, hence let's overwrite it by running the same command again, but this time use change /bin/sh to /bin/bash.
 
 > RESULT
+
+
 
 
