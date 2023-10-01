@@ -67,4 +67,54 @@ Nmap done: 1 IP address (1 host up) scanned in 23.15 seconds
 
 8. It creates a .png file and shows what's inside passwd. Great! This is our foothold, noticed we found 2 users --> root and vdaisley.
 9. Anyway, I think the intended way is to get a reverse shell using command injection payload for LaTeX. But since it allows us to do arbitrary files read.
-10. Hence, I tried to traverse along and see what I can g
+10. Hence, I tried to traverse all common dir and files location, but somehow can't access them.
+11. Stuck in this for a while, until I check for subdomains and found this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5fcdef3c-39cd-4774-ba85-a4ba1b671a03)
+
+
+12. Found a subdomain --> `dev`.
+
+> dev.topology.htb
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f0ea81b3-f30d-4d0b-8023-a6a51000d744)
+
+
+13. Interesting! Let's run dirsearch again for this subdomain.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/375d4fec-b8f9-48db-8a07-9054c2c371f2)
+
+
+14. As you can see, I think it will shows the same result as the **topology.htb** domain.
+15. But the unique thing is, there is no such ".htpasswd" inside it but indeed there seems ".htpasswds".
+16. Even accessing ".htpasswds" shall gave me error message. Trying access ".htpasswd" shows us cred for **vdaisley** user.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/857a61e2-ade6-44fc-8ef8-abf6b8594a4d)
+
+
+17. Awesome, let's crack it with john.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b136ae3a-6698-423a-a9b8-ec99594f9ea7)
+
+
+18. Let's login to ssh as **vdaisley:calculus20**.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d7c7b382-dfd9-4222-ada4-183a27621582)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b933157-3c71-4c52-856d-e7f73dfff36e)
+
+
+## USER FLAG
+
+```
+fa74b70a848ed9002b4ba1ded4dba244
+```
