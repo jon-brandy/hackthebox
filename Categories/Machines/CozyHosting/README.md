@@ -40,4 +40,39 @@ Nmap done: 1 IP address (1 host up) scanned in 18.72 seconds
 
 
 3. Hence i ran dirsearch to list all directories or files available for this webapp.
-4. 
+
+> RESULTS
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5697fb2f-fb43-476f-8efc-705146d76b30)
+
+
+4. `admin` page and `actuator` directory should be our interest here.
+5. Opens `actuator/sessions` shall resulting to this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/617cbf55-e5f0-470d-a54c-53965f5817bb)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e95e9939-f036-4f73-af4a-6a7330e23f2c)
+
+
+6. Noticed there's a user session with name `kanderson` (Informatin Disclosure).
+7. Let's change our session to kanderson's, then refresh the page.
+
+ ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a7c8c241-4cfa-4d95-a058-7c0bdd8b7d4f)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fac50408-3393-41e8-8df3-b4d2f3cf9604)
+
+
+8. Scrolling down you shall see an input box.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dbbc52af-baf7-45d6-9dd8-036986c88b27)
+
+
+9. This should be our interest. To identify what's the vuln, let's capture the request we send using burpsuite.
+
+> RESULT
+
+
