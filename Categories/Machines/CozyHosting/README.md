@@ -72,9 +72,15 @@ Nmap done: 1 IP address (1 host up) scanned in 18.72 seconds
 
 
 9. This should be our interest. To identify what's the vuln, let's capture the request we send using burpsuite.
-10. Let's just fill the hostname with our tun0 interface and leave password for empty, we just want to know what response might the server give.
+10. Let's just fill the hostname with our tun0 interface and leave username empty, we just want to know what response might the server give.
 
 > IN BURPSUITE
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c2035f5f-dcc6-41f9-9f08-2a892ecfe5ba)
+
+
+11. Noticed the server responds an error for the ssh command.
+12. This make it clear, that the vuln should be related to command injection.
 
 
 
