@@ -142,7 +142,24 @@ URL-ENCODE:
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1b6709ea-e312-4421-8cce-40996c53d1df)
 
 
-21. 
+21. Well if you noticed, it failed to download it full.
+22. Hmm, confused here, but anyway since we opens python server at port 8000, accessing the remote host with port 8000 shall shown this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0baf88f9-bf8d-49f3-8c81-5a60662244b9)
+
+
+23. Let's download it manually.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b6b219f6-0f33-4010-bc31-003450d26de8)
+
+
+> DECOMPILING IT WITH JD-GUI
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/017cf7f2-8d89-4797-b0fa-24d2f0c283dd)
+
+
+24. Interesting, we found a **postgres** cred.
+25. 
 
 
 
