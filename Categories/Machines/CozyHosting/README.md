@@ -159,7 +159,21 @@ URL-ENCODE:
 
 
 24. Interesting, we found a **postgres** cred.
-25. 
+25. Let's access `psql` at the remote server.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/01837280-db9b-4d0b-a325-512bf643d3a7)
+
+
+26. Run --> `\l` to list all the databases available.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8f630db5-1b44-4adc-89a3-759db0298432)
+
+
+27. Great! Let's connect to `cozyhosting` --> run `\c cozyhosting`.
+28. To dump all the tables run -> `\d`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/de6584c5-0f47-4752-8e01-a0880437bae1)
+
 
 
 
