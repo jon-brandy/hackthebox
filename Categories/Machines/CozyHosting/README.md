@@ -230,7 +230,29 @@ URL-ENCODE:
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/60eef894-3c47-425b-9de4-d733ef3ed2a3)
 
 
-38. **ssh** command is being run as root. 
+38. **ssh** command is being run as root.
+39. Diving on the internet and searching for `ssh gtfobins` exploit, shall resulting to this --> `https://gtfobins.github.io/gtfobins/ssh/`
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e7a98b44-9fe7-4344-9aff-aead90826b51)
+
+
+40. Using it.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/210a6f59-891f-4023-b1ba-e2a94c56b808)
+
+
+41. Successfully gained root!
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0d16d0b5-aa7a-4bd6-a976-ad4d11d52176)
+
+
+## ROOT FLAG
+
+```
+5783572fa5559507b67cfbd6636c934e
+```
 
 
 
