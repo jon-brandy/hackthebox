@@ -1,4 +1,4 @@
-<p align="center">
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9452c78a-0fca-4ef7-b43f-7750fb5794c8)<p align="center">
 
 <img src="https://github.com/jon-brandy/hackthebox/assets/70703371/a51e7b6d-ea3f-48c8-b786-075775c22ce9"> 
   
@@ -26,6 +26,7 @@
 |10. |[BountyHunter](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/BountyHunter/README.md)|[Mirai](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Mirai/README.md)|[Armageddon](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Armageddon/README.md)|
 |11. |[Paper](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Paper/README.md)|[MonitorsTwo](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/MonitorsTwo/README.md)|[Inject](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Inject/README.md)|
 |12. |[Sau](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Sau/README.md)|[Pilgrimage](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Pilgrimage/README.md)|[CozyHosting](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/CozyHosting/README.md)|
+|13. |[Topology](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Topology/README.md)|[]()|[]()|
 
 
 
