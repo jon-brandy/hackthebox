@@ -72,7 +72,10 @@ Nmap done: 1 IP address (1 host up) scanned in 18.72 seconds
 
 
 9. This should be our interest. To identify what's the vuln, let's capture the request we send using burpsuite.
+10. Let's just fill the hostname with our tun0 interface and leave password for empty, we just want to know what response might the server give.
 
-> RESULT
+> IN BURPSUITE
+
+
 
 
