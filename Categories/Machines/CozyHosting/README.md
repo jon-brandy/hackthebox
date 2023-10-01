@@ -188,9 +188,49 @@ URL-ENCODE:
 
 
 30 Awesome! Let's crack all the hashed password with john.
+31. I started to cracking the first hash with john and while waiting for john to cracks hash, I identify the hash using `hashid`, which allows to use **hashcat**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/10b7aec7-339c-4a98-8c7a-4f7d90adf1e5)
+
+
+32. Because time is money 🙏🏼.
+
+> GRABBING THE HASHCAT CODE FOR BCRYPT.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6ecb07c4-8c7c-415f-b4f2-14ab9e974068)
+
+
+33. Found nothing for the kanderson's hash.
+34. But succeed cracks the password for admin's hash.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/143e3bf4-794a-4bd8-871c-1b5ad173d2dd)
+
+
+35. Hmm.. Remembering our remote /home dir is **josh**, we make an interpretes of potential **password reuse**.
+36. Turns out it is.
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b3c28583-d323-4156-be5d-19fbdb29790a)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/37046df1-18e2-47d6-9adb-ccdb4cfee70f)
+
+
+## USER FLAG
+
+```
+83cfd0650592f468972d63e44761211a
+```
+
+37. Checking sudo permissions for **josh** resulting to this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/60eef894-3c47-425b-9de4-d733ef3ed2a3)
+
+
+38. **ssh** command is being run as root. 
 
 
 
