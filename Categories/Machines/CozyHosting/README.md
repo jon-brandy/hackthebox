@@ -175,6 +175,22 @@ URL-ENCODE:
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/de6584c5-0f47-4752-8e01-a0880437bae1)
 
 
+> DUMPING users column.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/18e97676-389a-4574-925f-665faf90e4ab)
+
+
+29. Interesting, **users** table should be our interest. Let's select all from it.
+
+> SELECT * FROM public.users;
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7df3bd4f-d4c7-4b02-bd63-8c6bce6324f6)
+
+
+30 Awesome! Let's crack all the hashed password with john.
+
+> RESULT
+
 
 
 
