@@ -171,7 +171,7 @@ sh.interactive()
 
 > FULL SCRIPT
 
-```
+```py
 from pwn import * 
 import os 
 os.system('clear')
