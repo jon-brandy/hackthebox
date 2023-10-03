@@ -67,4 +67,9 @@ Nmap done: 1 IP address (1 host up) scanned in 146.59 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0cb0817c-6404-42be-acf8-252b039aa924)
 
 
-3. Hmm..
+3. Turns out it's not. Searching on the internet about service at port 50051, resulting to this
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a430effb-34ea-403a-9e92-8b2cece4e068)
+
+
+4. `gRPC` service! 
