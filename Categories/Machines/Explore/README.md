@@ -153,4 +153,14 @@ Nmap done: 1 IP address (1 host up) scanned in 133.31 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/15f265d8-583a-40cc-9546-adacb175b53e)
 
 
-10. 
+10. Searching on the internet about port 59777 found a CVE documentation about it.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c6702d44-51f2-474a-b9f2-477b5f8249b3)
+
+
+> USING SEARCHSPLOIT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/952cb484-4426-49b6-8f67-3772f7316905)
+
+
+11. 
