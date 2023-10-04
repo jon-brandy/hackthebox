@@ -64,10 +64,10 @@ apktool d Anchored.apk
 > BUILD THE APK
 
 ```
-apktool b Anchored anchored_patched.apk
+apktool b -o anchored_patched.apk Anchored
 ```
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8e7d96d2-7ded-4521-a573-3111bd93e3cb)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a78bc8dd-fd94-4e41-9f96-d691bca313ea)
 
 
 > MAKE KEY
