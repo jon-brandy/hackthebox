@@ -163,4 +163,68 @@ Nmap done: 1 IP address (1 host up) scanned in 133.31 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/952cb484-4426-49b6-8f67-3772f7316905)
 
 
-11. 
+11. You can use either [this](https://github.com/fs0c131y/ESFileExplorerOpenPortVuln) github POC or metasploit.
+12. I solved it with metasploit, simply run `use CVE-2019-6447` to use it.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a9f0fbbb-321f-4b24-af75-87498a952f06)
+
+
+13. It seems we just need to specify the remote host.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f97776d5-5d81-449b-a165-6926feb895fa)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3dbfb07e-b520-406c-8624-46799cdd11bf)
+
+
+14. To check what actions we can do, simply run --> `show actions`.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d9b1e868-f81b-41ec-9335-7f5349bf4b08)
+
+
+15. To set action simply run --> `set action <action_name>`.
+16. Long story short, found a finding! (a cred).
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a27fae79-b014-4d64-9694-43e57087589f)
+
+
+
+17. To dump it we can use **GETFILE** option and set the **ACTIONITEM** with the item's path.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/04489403-af35-4a6c-b61f-b739ebeb6ab5)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/20bfef08-ae83-4726-a9d1-2e00bb1fc65e)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/df610772-3fe7-491b-8ab7-0fabbfceba28)
+
+
+18. Awesome! Let's run ssh login --> `kristi:Kr1sT!5h@Rp3xPl0r3!`
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dedd726e-e8fe-4251-8b75-00bb3150e618)
+
+
+19. If you countered the same problem as me, simply add --> `-oHostKeyAlgorithms=+ssh-rsa`.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/224f8b6b-b66f-4df0-8165-58a26160b124)
+
+
+> GETTING THE USER FLAG (usually located inside /storage/emulated/0/) (remember the user's image also stored here, hence the /home for user might be also here).
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fdedeaf2-d775-4aac-9556-a6e764a5c920)
+
+
+## USER FLAG
+
+```
+f32017174c7c7e8f50c6da52891ae250
+```
+
+20. 
