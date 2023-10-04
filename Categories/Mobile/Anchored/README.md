@@ -73,10 +73,14 @@ apktool b Anchored anchored_patched.apk
 > MAKE KEY
 
 ```
-
+keytool -genkey -keystore a.keystore -keyalg RSA -keysize 2048 -validity 10000
 ```
 
 > SIGN THE APK
+
+```
+
+```
 
 #### NOTES:
 
