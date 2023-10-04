@@ -40,6 +40,19 @@ Can you help me find a way to intercept this value in plain text.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d89af009-336c-4d99-a3ae-2edcedd6a92a)
 
 
+6. Searching on the internet about `network_security_config.xml exploit` shall resulting to this --> `https://gist.github.com/sunary/039d52ba3e71022f6062ad6a23d1c4ea`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a32477b5-3da4-4a78-b921-52c7ae3ed0bc)
+ 
+
+7. After added the burpsuite cert to intercept request, we can't intercept the app.
+8. This shall means, the intended solve should be patch the `network_security_config.xml` file.
+9. Let's patch it.
+
+> RESULT
+
+
+
 #### NOTES:
 
 ```
