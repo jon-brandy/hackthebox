@@ -26,7 +26,7 @@
 |10. |[BountyHunter](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/BountyHunter/README.md)|[Mirai](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Mirai/README.md)|[Armageddon](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Armageddon/README.md)|
 |11. |[Paper](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Paper/README.md)|[MonitorsTwo](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/MonitorsTwo/README.md)|[Inject](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Inject/README.md)|
 |12. |[Sau](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Sau/README.md)|[Pilgrimage](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Pilgrimage/README.md)|[CozyHosting](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/CozyHosting/README.md)|
-|13. |[Topology](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Topology/README.md)|[]()|[]()|
+|13. |[Topology](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Topology/README.md)|[Explore](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Explore/README.md)|[]()|
 
 
 
