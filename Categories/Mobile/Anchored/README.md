@@ -17,4 +17,6 @@ Can you help me find a way to intercept this value in plain text.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bce29399-c132-427e-8a22-860ba3ed41fd)
 
 
-2. 
+2. I ran it on API level 24.
+
+
