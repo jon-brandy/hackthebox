@@ -17,6 +17,23 @@ Can you help me find a way to intercept this value in plain text.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bce29399-c132-427e-8a22-860ba3ed41fd)
 
 
-2. I ran it on API level 24.
+2. I ran it on Pixel 4 API 25 (along with the google play) (non rooted).
+
+> MOBILE APP
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e43174f6-167f-430a-b29b-2a8ebd9b577c)
+
+
+
+
+
+
+
+
+#### NOTES:
+
+```
+If you use API under 30, name the burpsuite cert with .crt as it's extension.
+```
 
 
