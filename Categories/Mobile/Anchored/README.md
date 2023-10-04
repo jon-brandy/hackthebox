@@ -24,10 +24,20 @@ Can you help me find a way to intercept this value in plain text.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e43174f6-167f-430a-b29b-2a8ebd9b577c)
 
 
+3. Decompiled the apk using **JADX**, found an interesting endpoint at the `MainActivity` but sadly we can't access it.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/25eabd3b-edeb-4c63-bc34-49ab13661b80)
 
 
+4. Confused here, reviewing the `AndroidManifest.xml` source code, shall found an interesting attribute --> `android:networkSecurityConfig`.
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eda9ac81-7643-4b48-af95-1489b9872ad8)
+
+
+5. We can access the `network_security_config.xml` with this path --> `/res/xml/network_security_config.xml`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d89af009-336c-4d99-a3ae-2edcedd6a92a)
 
 
 #### NOTES:
