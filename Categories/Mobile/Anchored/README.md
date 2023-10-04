@@ -46,6 +46,13 @@ Can you help me find a way to intercept this value in plain text.
  
 
 7. After added the burpsuite cert to intercept request, we can't intercept the app.
+
+#### NOTES:
+
+```
+If you use API under 30, name the burpsuite cert with .crt as it's extension.
+```
+
 8. This shall means, the intended solve should be patch the `network_security_config.xml` file.
 9. Let's patch it.
 
@@ -79,13 +86,38 @@ keytool -genkey -keystore a.keystore -keyalg RSA -keysize 2048 -validity 10000
 > SIGN THE APK
 
 ```
-
+apksigner sign --ks a.keystore anchored_patched.apk
 ```
 
-#### NOTES:
+10. Great! Now let's install the apk again with adb, then try to intercept the reqeust sent to server.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/667c98cb-dd60-4d75-bfcc-d0f6cfaea2da)
+
+
+11. Got the flag!
+
+## FLAG
 
 ```
-If you use API under 30, name the burpsuite cert with .crt as it's extension.
+HTB{UnTrUst3d_C3rT1f1C4T3s}
 ```
 
+## BONUS
+
+> Another network_security_config.xml
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">anchored.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" overridePins="true"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
+```
 
