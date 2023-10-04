@@ -49,9 +49,34 @@ Can you help me find a way to intercept this value in plain text.
 8. This shall means, the intended solve should be patch the `network_security_config.xml` file.
 9. Let's patch it.
 
-> RESULT
+> decode the apk with **apktool**.
+
+```
+apktool d Anchored.apk
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7aaf2826-ae11-4a8a-b417-557038f4b715)
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3b83e4e4-acf0-4da6-acb7-056ce51f8aca)
+
+
+> BUILD THE APK
+
+```
+apktool b Anchored anchored_patched.apk
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8e7d96d2-7ded-4521-a573-3111bd93e3cb)
+
+
+> MAKE KEY
+
+```
+
+```
+
+> SIGN THE APK
 
 #### NOTES:
 
