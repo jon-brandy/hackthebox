@@ -148,6 +148,9 @@
 |:-:|:-------:|:-------:|:-------:|
 |1. |[Cat](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Cat/README.md)|[Don't Overreact](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Don't%20Overreact/README.md)|[APKey](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/APKey/README.md)|
 |2. |[Pinned](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Pinned/pinned.md)|[APKrypt](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/APKrypt/README.md)|[Manager](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Manager/README.md)|
+|3. |[Anchored](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Mobile/Anchored/README.md)|[]()|[]()|
+
+
 
 
 </details>
