@@ -149,3 +149,30 @@ Nmap done: 1 IP address (1 host up) scanned in 16.77 seconds
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/878227d9-2b7d-4ebd-b903-0a3dcf3fe69c)
 
+
+17. But we can't access it, because it's the port is not opened.
+18. Long story short, we know that everytime we submit a delimiter it shows us blank page, but this time it downloads a file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2b243840-a266-4b47-bcc7-19484b88f696)
+
+
+> RESULT (ALL)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/73f214a5-b568-4562-a1af-2a4ab156438b)
+
+
+19. All of them shows the same data.
+20. Interesting, reviewing the logs.php source found **command injection** vuln.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b36b357c-8e64-492f-8a35-0bf595ee4a8a)
+
+
+21. There is no filter! Great, this should be our foothold.
+22. Let's capture the request again using burpsuite.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ac00b7bc-fe70-4fa7-b69f-10532ffa2651)
+
+
+23. To test whether our argument is true or not, we can use bash command to ping our tun0 interface then check it on our local machine.
+
+ 
