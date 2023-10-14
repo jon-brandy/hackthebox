@@ -52,5 +52,44 @@ Nmap done: 1 IP address (1 host up) scanned in 16.77 seconds
 
 
 4. Click the `CREATE ACCOUNT` option shall redirect you to the login page.
-5. Interesting.
-6. 
+5. Interesting! Intercept the request for that option usingh burpsuite shall resulting to another interesting part.
+
+> NOTICED IT DIRECTS US TO ACCOUNT.PHP
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ddccfcd2-399c-44ad-b594-2e592b4707a9)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d2229416-c940-4372-97ef-be9d6f062098)
+
+
+5. The interesting part is at the response tab where it says `ONLY ADMINS SHOULD BE ABLE TO ACCESS THIS PAGE!!`.
+6. Reviewing the source code at the response tab, you shall notice that it leaked all the parameter we need to make an account.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8fe0d1cf-1885-4f3f-b0f0-e7f3fd700674)
+
+
+7. Anyway, accessing the root (/) page, shall redirect us to login.php.
+8. This type of thing is related to `Execution After Redirect (EAR) Vulnerability`.
+9. To exploit this vulnerability we can turn on `Server Response Interception` in Burp Proxy. This should allows us to pause or intercept the response (tp prevent it redirected to the another page).
+
+> TURNING ON SERVER RESPONSE INTERCEPTION
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6beb4b9c-cd65-4daa-94f8-571b422c8658)
+
+
+> TRY ACCESSING ROOT AGAIN
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/31dac8fa-62e7-481e-9e07-975dc59e9e8d)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7ea2398c-09d1-4604-855b-25ec1a9ef3c3)
+
+
+10. Noticed we are also logged in here.
+    
+#### NOTES: Anyway another method if you did not want to intercept the response, you can simply intercept the request then right click, then choose --> "Response to this request".
+
+11. 
