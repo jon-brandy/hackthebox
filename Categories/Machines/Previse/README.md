@@ -244,7 +244,16 @@ Analyzing '$🧂llol.'
 ```
 
 31. Stuck for a while, because hashid failed to identify the potential hash algorithm.
-32. Reviewing the source code again, 
+32. Reviewing the accounts.php source again, you shall find the hash algorithm there.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a68991f0-1eeb-46cf-94db-775b0c7a81c2)
+
+
+33. The `1$` indicates the hash is md5, hence we can use `md5crypt-long` module.
+
+> RESULT
+
+
 
 
 
