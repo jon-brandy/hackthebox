@@ -114,8 +114,24 @@ Nmap done: 1 IP address (1 host up) scanned in 16.77 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/17e2daca-6814-4a50-a112-e60ced6e2834)
 
 
-> log.php (choosing)
+> log.php (choosing any file delimiter shall resulting to a blank page).
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/19fe0d13-ab35-45bb-a7d8-37da76d25a3c)
+
+
+12. Found several pages that could be our foothold, but one page caught my attention fully, the accounts.php page.
+13. After registered dummy account, we can logged in and see all the pages without burp again.
+
+> CREATING ACCOUNR
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6911fdb2-e6de-40a7-8c3f-b8f50955e0b2)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/78e724e2-b186-43df-9b6a-fe58b580501e)
+
+
+> LOGGING IN
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c5222cc7-de7e-4da2-81a5-efc41870ffcc)
 
 
