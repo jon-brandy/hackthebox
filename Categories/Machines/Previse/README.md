@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cec1a971-687a-4131-8d61-05d05f79ecb8)# Previse
+# Previse
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/66cdadd8-4e5d-4b69-847e-30c752492d73)
