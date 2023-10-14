@@ -119,7 +119,7 @@ Nmap done: 1 IP address (1 host up) scanned in 16.77 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/19fe0d13-ab35-45bb-a7d8-37da76d25a3c)
 
 
-12. Found several pages that could be our foothold, but one page caught my attention fully, the accounts.php page.
+12. Found several pages that could be our foothold, but two pages caught my attention fully, the accounts.php page and files.php page.
 13. After registered dummy account, we can logged in and see all the pages without burp again.
 
 > CREATING ACCOUNR
@@ -134,4 +134,18 @@ Nmap done: 1 IP address (1 host up) scanned in 16.77 seconds
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c5222cc7-de7e-4da2-81a5-efc41870ffcc)
 
+
+14. Great! Now let's download the attached .zip file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4b909a5b-592d-4985-81d0-6b198db27609)
+
+
+15. Turns out it's the source code!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5d894d6a-8cc0-4e9d-9bf6-931606989a6b)
+
+
+16. Reviewing the config.php source shall found a mysql cred.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/878227d9-2b7d-4ebd-b903-0a3dcf3fe69c)
 
