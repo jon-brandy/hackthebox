@@ -92,4 +92,30 @@ Nmap done: 1 IP address (1 host up) scanned in 16.77 seconds
     
 #### NOTES: Anyway another method if you did not want to intercept the response, you can simply intercept the request then right click, then choose --> "Response to this request".
 
-11. 
+11. To access all the page from the navbar option, use the same method as to access the root page.
+
+> accounts.php page
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bcefa70b-b8e1-4fcf-894f-3631d944f7b5)
+
+
+> files.php page
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a9dc12e3-f3ef-401b-8290-d816f796ddaf)
+
+
+> status.php page
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7cdfc4ad-c9b8-4c9b-95ac-1f3640bb2073)
+
+
+> file_logs.php
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/17e2daca-6814-4a50-a112-e60ced6e2834)
+
+
+> log.php (choosing)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/19fe0d13-ab35-45bb-a7d8-37da76d25a3c)
+
+
