@@ -40,4 +40,50 @@ Nmap done: 1 IP address (1 host up) scanned in 85.17 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d3b2b1e8-467b-49d7-950d-ec7fdf0a8635)
 
 
-3. Enumerating subdomain shall found 
+3. Enumerating subdomain for the host found one result.
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ ffuf -w SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u http://10.10.11.233 -H "Host: FUZZ.analytical.htb" -mc all -ac
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.0.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://10.10.11.233
+ :: Wordlist         : FUZZ: /home/brandy/SecLists/Discovery/DNS/subdomains-top1million-5000.txt
+ :: Header           : Host: FUZZ.analytical.htb
+ :: Follow redirects : false
+ :: Calibration      : true
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: all
+________________________________________________
+
+[Status: 200, Size: 77883, Words: 3574, Lines: 28, Duration: 68ms]
+    * FUZZ: data
+
+:: Progress: [4989/4989] :: Job [1/1] :: 1388 req/sec :: Duration: [0:00:04] :: Errors: 0 ::
+```
+
+> data.analytical.htb
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/781dbb51-a3be-4fd6-9e51-7ec757de690e)
+
+
+4. Now we're given a metabase login page. Searching on Google about it's vuln found several results of it:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d03f3da6-473d-4bbc-850a-62f851c2f210)
+
+
+5. Checking metasploit about it found one module.
+
+
+
