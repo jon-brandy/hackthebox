@@ -83,7 +83,14 @@ ________________________________________________
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d03f3da6-473d-4bbc-850a-62f851c2f210)
 
 
-5. Checking metasploit about it found one module.
+5. One CVE looks like promosing to us:
+
+```
+https://blog.assetnote.io/2023/07/22/pre-auth-rce-metabase/
+https://github.com/shamo0/CVE-2023-38646-PoC
+```
+
+6. 
 
 
 
