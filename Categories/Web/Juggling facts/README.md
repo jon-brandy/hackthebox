@@ -45,18 +45,12 @@ https://www.php.net/manual/en/control-structures.switch.php
 
 7. Based of the documentation from the link above. We can't send the type value at json as `true`. Hence we got the false bool, then we can get the flag.
 8. Let's implement this using burpsuite and set the intercept to on when entering the `secrets` page.
-
-> BURPSUITE
-
-![Uploading image.png…]()
-
-
 9. Choose send to repeater, click send.
 10. Change the type value as `true`, without the quote, otherwise the webapp shall think that we request a type.
 
 > RESULT
 
-![Uploading image.png…]()
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e201aeb2-889d-4d79-80d9-7dc50752bf47)
 
 
 11. Got the flag!
