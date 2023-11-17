@@ -156,4 +156,15 @@ https://access.redhat.com/security/cve/cve-2021-28169
 ```
 
 6. But analyzing the vulnerabilities discussed, seems not what can be exploited on this machine.
-7. Long story short, analyzing 
+7. Long story short, I tried to enter `admin:admin` at the login prompt and logged in.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f6eb03f1-752c-425c-b6ff-f72a8aaf5551)
+
+
+8. Searching the vulnerabilities for the current version, shall resulting to this:
+
+```
+https://activemq.apache.org/news/cve-2023-46604?ref=deep-kondah.com
+```
+
+9. 
