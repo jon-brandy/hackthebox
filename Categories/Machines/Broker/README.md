@@ -172,4 +172,37 @@ https://activemq.apache.org/news/cve-2023-46604?ref=deep-kondah.com
 https://github.com/evkl1d/CVE-2023-46604
 ```
 
-9. 
+9. The github's POC shall be our interest here.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/78e77da3-4ead-4e33-b74a-f7d32f41c53b)
+
+
+10. Following the same steps shall resulting to a reverse shell.
+
+> Modify the poc.xml reverse shell LOC.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/77c3e2e5-37c8-457b-b8ad-4685272779c0)
+
+
+11. Set python server to retrieve poc.xml file from our local to the remote server and set listener on port 1337.
+12. Lastly run the exploit script.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/05d837e3-8d59-4525-b903-c40b28adc1a7)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/15d96621-f9a4-4ece-b4f5-c10b2391c1c3)
+
+
+> GETTING THE USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/579046b0-7341-4399-9231-908328010ad8)
+
+
+## USER FLAG
+
+```
+2e2c9604e8ad95589a449d86864a00d0
+```
+
+> GETTING
+
