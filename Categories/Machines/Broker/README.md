@@ -204,5 +204,10 @@ https://github.com/evkl1d/CVE-2023-46604
 2e2c9604e8ad95589a449d86864a00d0
 ```
 
-> GETTING
+13. Checking sudo permissions for `activemq` shall resulting to this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/95b224bb-b522-4137-8c00-09892993853c)
+
+
+15. Great! It seems we just need to modify the `/usr/sbin/nginx` and we shall gained root easily.
 
