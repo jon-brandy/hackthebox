@@ -152,4 +152,8 @@ Nmap done: 1 IP address (1 host up) scanned in 45.06 seconds
 
 ```
 https://security.snyk.io/package/maven/org.eclipse.jetty:jetty-server/9.4.39.v20210325
+https://access.redhat.com/security/cve/cve-2021-28169
 ```
+
+6. But analyzing the vulnerabilities discussed, seems not what can be exploited on this machine.
+7. Long story short, analyzing 
