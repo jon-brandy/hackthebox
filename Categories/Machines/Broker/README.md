@@ -1,5 +1,9 @@
 # Broker
-> Write-up author: jon-brandy
+> Write-up author: jon-brandy | Lesson learned --> Apache ActiveMQ Vuln and Exploitation.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/162b558d-174f-42ba-9b0b-8c5c24e340b0)
+
+
 ## STEPS:
 > PORT SCANNING
 
@@ -165,6 +169,7 @@ https://access.redhat.com/security/cve/cve-2021-28169
 
 ```
 https://activemq.apache.org/news/cve-2023-46604?ref=deep-kondah.com
+https://github.com/evkl1d/CVE-2023-46604
 ```
 
 9. 
