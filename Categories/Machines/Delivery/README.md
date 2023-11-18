@@ -1,4 +1,4 @@
-# Delivery
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ef3e3017-fadf-43ac-aaf8-bcd223832651)# Delivery
 > Write-up author: jon-brandy | Lesson learned --> Email Impersonation, 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2b87883c-038e-46bb-82e8-6a38ad52c1a1)
@@ -191,6 +191,111 @@ Nmap done: 1 IP address (1 host up) scanned in 167.26 seconds
 
 > USING HASHCAT RULE TO MAKE VARIANTS
 
+```
+echo PleaseSubscribe! | hashcat -r /usr/share/hashcat/rules/best64.rule --stdout
+```
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ echo PleaseSubscribe! | hashcat -r /usr/share/hashcat/rules/best64.rule --stdout
+PleaseSubscribe!        
+!ebircsbuSesaelP
+PLEASESUBSCRIBE!
+pleaseSubscribe!
+PleaseSubscribe!0
+PleaseSubscribe!1
+PleaseSubscribe!2
+PleaseSubscribe!3
+PleaseSubscribe!4
+PleaseSubscribe!5
+PleaseSubscribe!6
+PleaseSubscribe!7
+PleaseSubscribe!8
+PleaseSubscribe!9
+PleaseSubscribe!00
+PleaseSubscribe!01
+PleaseSubscribe!02
+PleaseSubscribe!11
+PleaseSubscribe!12
+PleaseSubscribe!13
+PleaseSubscribe!21
+PleaseSubscribe!22
+PleaseSubscribe!23
+PleaseSubscribe!69
+PleaseSubscribe!77
+PleaseSubscribe!88
+PleaseSubscribe!99
+PleaseSubscribe!123
+PleaseSubscribe!e
+PleaseSubscribe!s
+PleaseSubscribea
+PleaseSubscribs
+PleaseSubscriba
+PleaseSubscriber
+PleaseSubscribie
+PleaseSubscrio
+PleaseSubscriy
+PleaseSubscri123
+PleaseSubscriman
+PleaseSubscridog
+1PleaseSubscribe!
+thePleaseSubscribe!
+dleaseSubscribe!
+maeaseSubscribe!
+PleaseSubscribe!
+PleaseSubscr1be!
+Pl3as3Subscrib3!
+PlaseSubscribe!
+PlseSubscribe!
+PleseSubscribe!
+PleaeSubscribe!
+Ples
+Pleas1
+PleaseSubscribe
+PleaseSubscrib
+PleaseSubscri
+PleaseSubscriPleaseSubscri
+PeaseSubscri
+ribe
+bscribe!easeSu
+PleaseSubscri!
+dleaseSubscrib
+be!PleaseSubscri
+ibe!
+ribe!
+cribcrib
+tlea
+asPasP
+XleaseSubscribe!
+SaseSubscribe!
+PleaSu
+PlesPles
+asP
+PlcrPlcr
+PcSu
+PleasS
+PeSubs
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fe06585f-03bb-412e-aa87-ce997835ce1a)
 
 
+17. Awesome we cracked it. --> `PleaseSubscribe!21`.
+18. Now we can switch user as root.
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eb48826e-db83-4a7b-beb5-2c379e9b02c9)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bdeb47e8-c63a-49f2-8018-27b5b2e9b09b)
+
+
+## ROOT FLAG
+
+```
+9ac111e9d8eccaf00015bbc7e6f5fa30
+```
 
