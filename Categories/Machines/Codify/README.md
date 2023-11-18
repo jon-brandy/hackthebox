@@ -261,3 +261,19 @@ while not is_found:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c2100c44-23f9-4481-b71c-1244a771b557)
 
+
+> GETTING ROOT FLAG
+
+18. Great! Let's switch user to root.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/125a689c-b95f-4acf-b4bd-c645dd9e9e54)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/62f1d7b0-5812-4f3b-afa8-04949651033c)
+
+
+## ROOT FLAG
+
+```
+f41dc7d5bdc226c6acbdef35629f3012
+```
