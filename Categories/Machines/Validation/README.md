@@ -1,6 +1,9 @@
 # Validation
 > Write-up author: jon-brandy
 
+## Lesson Learned:
+- SQLi Vuln leads to drop webshell allowance.
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/34121d99-dd66-480a-a190-40e8a6267294)
 
 ## STEPS:
