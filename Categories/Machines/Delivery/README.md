@@ -167,9 +167,29 @@ Nmap done: 1 IP address (1 host up) scanned in 167.26 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3428b0bf-34f9-4d83-821e-da349adae8a8)
 
 
-15. 
+> use db and dump all the table names
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/064e7de7-e27d-446d-b49d-2f0e44227ff0)
 
 
+15. **Users** table shall be our interest.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4d828ff3-f123-4170-9e1d-1fbaae159469)
+
+
+> SELECT ALL COLUMNS FROM USERS TABLE
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/13beb4af-e57f-45f4-87d3-e455fc5479e0)
+
+
+> SELECT USERNAME AND PASSWORD ONLY
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/781f9700-aa8f-4852-a0a2-63f06387d118)
+
+
+16. Great, let's crack the hash using our previous plan.
+
+> USING HASHCAT RULE TO MAKE VARIANTS
 
 
 
