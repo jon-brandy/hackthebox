@@ -151,9 +151,23 @@ Nmap done: 1 IP address (1 host up) scanned in 167.26 seconds
 55a87cf052f6e86e70b700470ad14b86
 ```
 
+10. To gained root, we can simply bruteforce the hashes for root password from mysql database mattermost.
+11. This argument is an interpretation from these statements.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/554e47ab-8470-4d5a-b689-690217b99c59)
 
 
+12. It seems we need to create variants of `PleaseSubscribe!`, to create those we can use rule from `/hashcat/rules/best64.rule`.
+13. Anyway let's start searching for the mysql password. For faster enumeration, the objective is to find the config file for mattermost which we can find at --> `/opt/mattermost/config/config.json`.
+14. Reviewing the .json file, found the creds at **sqlsettings**. --> `mmuser:Crack_The_MM_Admin_PW`.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eca38168-43ad-4c24-8fb8-cccb0f37d02d)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3428b0bf-34f9-4d83-821e-da349adae8a8)
+
+
+15. 
 
 
 
