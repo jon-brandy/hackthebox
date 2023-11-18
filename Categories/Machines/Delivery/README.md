@@ -114,6 +114,19 @@ Nmap done: 1 IP address (1 host up) scanned in 167.26 seconds
 
 6. Remembering previously we got a company email, hence we can use it to register account to mattermost server.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b03a3bdb-d101-4c2a-b26e-01cdae34a517)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aafc472e-4548-4d87-afe7-c5badddd591c)
+
+
+> CHECKING THE TICKET STATUS
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cbc0acc2-90b3-4c31-981f-56f213619d18)
+
+
+7. 
+
 
 
 
