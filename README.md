@@ -27,7 +27,7 @@
 |11. |[Paper](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Paper/README.md)|[MonitorsTwo](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/MonitorsTwo/README.md)|[Inject](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Inject/README.md)|
 |12. |[Sau](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Sau/README.md)|[Pilgrimage](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Pilgrimage/README.md)|[CozyHosting](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/CozyHosting/README.md)|
 |13. |[Topology](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Topology/README.md)|[Explore](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Explore/README.md)|[Previse](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Previse/README.md)|
-|14. |[Broker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Broker/README.md)|
+|14. |[Broker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Broker/README.md)|[Delivery](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Delivery/README.md)||
 
 
 
