@@ -156,4 +156,16 @@ console.log(vm.run(code));
 
 11. Great! Now we have joshua cred --> `joshua:spongebob1`.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ef4eba08-3270-468b-a430-137ca16ea7f4)
 
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fcbec800-39a2-48a2-8fbf-59ee500e1b39)
+
+
+## USER FLAG
+
+```
+cf933e03df80d5ec0e913a06dea26830
+```
