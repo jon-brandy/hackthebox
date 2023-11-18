@@ -146,3 +146,12 @@ console.log(vm.run(code));
 
 
 10. Let's crack the hash using rockyou.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b6da0163-21cd-47dd-8124-6e2c68ab4850)
+
+#### NOTES: If you want to list all available formats, simply run --> john --list-formats
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/126301b7-5671-40f1-a3c0-6db8763d1213)
+
+
+11. 
