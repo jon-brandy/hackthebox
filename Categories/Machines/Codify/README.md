@@ -165,7 +165,7 @@ console.log(vm.run(code));
 
 > GETTING USER FLAG
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fcbec800-39a2-48a2-8fbf-59ee500e1b39)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ac08ba0f-4192-4c64-806d-6eca5a03ec82)
 
 
 ## USER FLAG
@@ -215,4 +215,19 @@ done
 /usr/bin/echo 'Done!'
 ```
 
-13. Reviewing the bash script, found the vuln at the comparison. 
+13. Reviewing the bash script, found the vuln at the comparison.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e7b5c6a2-7733-48d5-be87-9a3f1d6768ea)
+
+
+14. If using double squared brackets, the comparison has meaning to do pattern matching, not string comparing.
+15. Since `$USER_PASS` (user input) is treated as pattern, hence if user input glob characters such as --> `?` or `*`, it shall potentially match unintended strings.
+16. In summary, we can leak every chars by bruteforcing it.
+
+### SCENARIO:
+
+```
+DB_PASS = admin
+USER_INPUT = x****
+
+```
