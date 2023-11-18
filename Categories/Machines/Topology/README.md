@@ -1,6 +1,11 @@
 # Topology
 > Write-up author: jon-brandy
 
+## Lesson Learned:
+- LaTex Injection.
+- Using FFUF.
+- .htpasswds.
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1614206e-d7d4-428b-b223-97aa9b0ae5a0)
 
 
