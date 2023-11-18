@@ -1,5 +1,5 @@
 # Codify
-> Write-up author: jon-brandy | Lesson learned:
+> Write-up author: jon-brandy | Lesson learned: vm2 exploitations, 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ed060495-9bbf-4521-8586-e52f9f08aa52)
 
@@ -30,4 +30,24 @@ Nmap done: 1 IP address (1 host up) scanned in 275.72 seconds
 ```
 
 1. Based from the nmap results, we can identified that the machine runs a web application, opens ssh login and using node.js framework for the webapp.
-2. 
+
+> WEBAPP
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/95dde7ef-9cee-480e-b93f-0a705d53d68d)
+
+
+2. Reading the **About Us** page, shows us the door to exploit this web app, the `vm2 (virtual machine 2)` vuln.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/31abcec5-c414-408a-b0eb-170397adf10b)
+
+
+3. Searching on the internet about vm2 vulns, shall resulting to this:
+
+```
+VM2 --> Is a library that provides a secure and sandboxed environment for executing JavaScript code. Primarily used in server side
+environments such as Node-JS.
+
+https://www.uptycs.com/blog/exploitable-vm2-vulnerabilities (the newest one --> 2023).
+```
+
+4. 
