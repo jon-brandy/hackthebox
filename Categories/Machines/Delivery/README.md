@@ -1,5 +1,5 @@
 # Delivery
-> Write-up author: jon-brandy | Lesson learned --> 
+> Write-up author: jon-brandy | Lesson learned --> Email Impersonation, 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2b87883c-038e-46bb-82e8-6a38ad52c1a1)
 
@@ -106,4 +106,11 @@ Nmap done: 1 IP address (1 host up) scanned in 167.26 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/72accaaa-badb-4ea3-bbf2-ed1890f3d76d)
 
 
-4. Let's check our status.
+4. If you noticed, this could become our foothold. As you can see it created a new company email with ticket ID as it's prefix.
+5. Remembering at **contact-us** endpoint we prompted this information.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d9e6fd90-6473-450d-adca-01b8e270acc4)
+
+
+6. Remembering previously we got a company email, hence we can use it to register account.
+7. 
