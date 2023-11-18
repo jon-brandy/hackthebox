@@ -154,4 +154,6 @@ console.log(vm.run(code));
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/126301b7-5671-40f1-a3c0-6db8763d1213)
 
 
-11. 
+11. Great! Now we have joshua cred --> `joshua:spongebob1`.
+
+
