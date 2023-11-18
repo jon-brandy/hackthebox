@@ -1,7 +1,14 @@
 # Steam Cloud
 > Write-up author: jon-brandy
-## STEPS:
 
+## Lesson Learned:
+- Pentesting Kubernetes.
+- Creating malicious pod.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3ccd9857-3991-4f19-8cc4-d4dbbec96091)
+
+
+## STEPS:
 > PORT SCANNING
 
 ```
