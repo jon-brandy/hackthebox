@@ -1,5 +1,9 @@
 # Codify
-> Write-up author: jon-brandy | Lesson learned: vm2 exploitations, 
+> Write-up author: jon-brandy
+## Lesson learned: 
+- Virtual Machine 2 (VM2) exploitation.
+- Bash script review.
+- Python bruteforce script.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ed060495-9bbf-4521-8586-e52f9f08aa52)
 
@@ -176,6 +180,8 @@ cf933e03df80d5ec0e913a06dea26830
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d41fdbef-d8a0-4162-b4e8-6eb0d1124ed3)
 
 
+> BASH SCRIPT
+
 ```
 joshua@codify:~$ cat /opt/scripts/mysql-backup.sh
 #!/bin/bash
@@ -208,3 +214,5 @@ done
 /usr/bin/chmod 774 -R "$BACKUP_DIR"
 /usr/bin/echo 'Done!'
 ```
+
+13. Reviewing the bash script, found the vuln at the comparison. 
