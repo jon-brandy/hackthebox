@@ -96,4 +96,14 @@ Nmap done: 1 IP address (1 host up) scanned in 167.26 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/89c005d3-4611-4bf3-ac2f-470cd8f55084)
 
 
-3. 
+> CREATING A NEW TICKET
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/38496648-f152-4ade-93b2-8c370dd9e98d)
+
+
+3. After created a new ticket, we got this result:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/72accaaa-badb-4ea3-bbf2-ed1890f3d76d)
+
+
+4. Let's check our status.
