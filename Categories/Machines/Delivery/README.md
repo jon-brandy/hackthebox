@@ -1,5 +1,5 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ef3e3017-fadf-43ac-aaf8-bcd223832651)# Delivery
-> Write-up author: jon-brandy | Lesson learned --> Email Impersonation, 
+# Delivery
+> Write-up author: jon-brandy | Lesson learned --> Email Impersonation, hash cracking using best64.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2b87883c-038e-46bb-82e8-6a38ad52c1a1)
 
