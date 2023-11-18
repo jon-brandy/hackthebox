@@ -125,7 +125,36 @@ Nmap done: 1 IP address (1 host up) scanned in 167.26 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cbc0acc2-90b3-4c31-981f-56f213619d18)
 
 
-7. 
+7. Clicks the email shall activate our account and we can sign in using our previous creds --> `6258120@delivery.htb:adminadmin123!@#AAA`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/593cdd2b-d905-4dd2-a325-7342cff7f0f0)
+
+
+8. Notice we got a cred for the remote server.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2cb7fc9d-e84d-454d-8789-a79313ac255f)
+
+
+9. Cred --> `maildeliverer:Youve_G0t_Mail!`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a4ee3d0f-a9bc-491d-a040-33ddc6da6e75)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7f4d4e88-0111-489f-ae3f-38749f3eab6a)
+
+
+## USER FLAG
+
+```
+55a87cf052f6e86e70b700470ad14b86
+```
+
+
+
+
+
 
 
 
