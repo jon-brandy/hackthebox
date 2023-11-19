@@ -138,6 +138,20 @@ ________________________________________________
 839ce638e8a39a87207f8d584fd86c45
 ```
 
+12. To gained root, I ran linpeas to search for potentials privesc.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f7ac57b3-0b9f-4d4f-bf58-8a4c60959e83)
+
+
+13. It does suggest several CVE exploits but the ubuntu version for the machine is --> `Ubuntu 22.04.3 LTS`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3a3e4f2c-f6a7-4076-9f10-7f57892cb808)
+
+
+14. Searching on the internet about local privesc in ubuntu 22, shall resulting to this article.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/71be8c79-ea90-4a5a-9b08-67dbb7e72839)
+
 
 
 
