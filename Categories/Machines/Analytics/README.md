@@ -106,7 +106,37 @@ ________________________________________________
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/71123638-2235-4861-a933-e79d39935cc5)
 
 
-8. 
+8. At the `/` diretory found a .db directory which holds two DBs file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ca68ea08-f1c3-4acc-84b2-40c0c4be71ff)
+
+
+9. The first .db file --> `metabase.db.mv.db` should be our interest (because it holds big information, but still taks long time to analyze), so I tried to enumerate other aspect.
+10. Running `ls -a` shows **.dockerenv**, hence let's run **env** command.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9698d7fa-92b0-4fa7-ba90-4452c9afe490)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/34a9d2e6-5cc3-473e-9a90-031525769a75)
+
+
+11. Great! We found cred --> `metalytics:An4lytics_ds20223#`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3158d08d-874e-492d-af15-7d9f458b49f7)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3caec3a3-cfc1-4c0a-9e7e-9918d9dc979b)
+
+
+## USER FLAG
+
+```
+839ce638e8a39a87207f8d584fd86c45
+```
 
 
 
