@@ -153,5 +153,28 @@ ________________________________________________
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/71be8c79-ea90-4a5a-9b08-67dbb7e72839)
 
 
+> THE POCs
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a2e26733-7703-43d0-b57e-6ebc4923b1b5)
 
 
+15. Looks like POC is indeed what we are looking for.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/03811041-9b09-4e13-acaa-738bff66a171)
+
+
+16. Following the POC shall gained root.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f9646637-8e20-49ee-8a18-fcb11461f2c4)
+
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/82e7c3cf-216b-435f-bc0b-d8d02b25785e)
+
+
+## ROOT FLAG
+
+```
+3874be40709ce7a631ada97453175701
+```
