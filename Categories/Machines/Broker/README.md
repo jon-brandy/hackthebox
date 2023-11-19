@@ -1,5 +1,7 @@
 # Broker
-> Write-up author: jon-brandy | Lesson learned --> Apache ActiveMQ Vuln and Exploitation.
+> Write-up author: jon-brandy |
+## Lesson Learned:
+- Apache ActiveMQ Exploitation.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/162b558d-174f-42ba-9b0b-8c5c24e340b0)
 
