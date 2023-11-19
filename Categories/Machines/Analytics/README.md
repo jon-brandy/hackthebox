@@ -83,14 +83,31 @@ ________________________________________________
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d03f3da6-473d-4bbc-850a-62f851c2f210)
 
 
-5. One CVE looks like promosing to us:
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/17c03739-d9ad-41a4-ab11-b17e1dae01c9)
 
-```
-https://blog.assetnote.io/2023/07/22/pre-auth-rce-metabase/
-https://github.com/shamo0/CVE-2023-38646-PoC
-```
 
-6. 
+5. Checking metasploit for this module found one result which corresponds the previous result we got.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0a24fdd5-a6ab-41e3-800c-cab67b9f1dcb)
+
+
+> USING IT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/821165e6-591d-448e-9314-600ef2afbfd0)
+
+
+6. Got shell! But sadly it does not have python3 running, hence we can't get a stable shell.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6fcc6953-78b7-41ed-93a0-b8c2c9191509)
+
+
+7. Somehow the user.txt is not there, hence we need to enumerate dirs and files to find config file or .db file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/71123638-2235-4861-a933-e79d39935cc5)
+
+
+8. 
+
 
 
 
