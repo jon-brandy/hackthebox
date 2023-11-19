@@ -1,6 +1,10 @@
 # Analytics
 > Write-up author: jon-brandy
 
+## Lesson Learned:
+- Exploit metabase login page.
+- Local Privesc Ubuntu 22
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b992274b-eee2-4815-9962-5968bd5498c8)
 
 
