@@ -3,7 +3,7 @@
 ## Lesson learned:
 - ImageMagick LFI.
 - git-dumper.
-- 
+- binwalk RCE.
 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dfb8e16e-4ed7-4561-a81f-d29317b75673)
