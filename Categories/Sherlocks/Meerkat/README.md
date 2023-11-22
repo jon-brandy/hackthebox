@@ -1,7 +1,7 @@
 # Meerkat
 > Write-up author: jon-brandy
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c8f0ae29-0794-4aa0-b872-8ee11b1ce17e)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/860f1cb2-71d0-48c5-bb58-9cf4d6155baa)
 
 
 ## DESCRIPTION:
