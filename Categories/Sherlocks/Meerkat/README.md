@@ -1,5 +1,9 @@
 # Meerkat
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c8f0ae29-0794-4aa0-b872-8ee11b1ce17e)
+
+
 ## DESCRIPTION:
 As a fast growing startup, Forela have been utilising a business management platform. 
 Unfortunately our documentation is scarce and our administrators aren't the most security aware. 
