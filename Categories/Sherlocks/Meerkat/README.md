@@ -15,8 +15,6 @@ As a fast growing startup, Forela have been utilising a business management plat
 Unfortunately our documentation is scarce and our administrators aren't the most security aware. 
 As our new security provider we'd like you to take a look at some PCAP and log data we have exported to confirm if we have (or have not) been compromised.
 
-## HINT:
-- NONE
 ## STEPS:
 1. In this challenge we're given two files.
 
