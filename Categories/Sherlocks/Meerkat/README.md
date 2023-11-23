@@ -143,7 +143,60 @@ As our new security provider we'd like you to take a look at some PCAP and log d
 27. Found the cred --> `username=seb.broom@forela.co.uk&password=g0vernm3nt`.
 
 
-> 7TH QUESTION --> ANS: 
+> 7TH QUESTION --> ANS: pastes.io
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c6abcaa5-5571-4df8-8d67-5762ac50a52c)
+
+
+28. To answer this, we can simply filter the packet using --> `http.request.method`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3cfc4e39-daed-47a5-9271-4530c871c6a4)
+
+
+> 8TH QUESTION --> ANS: 0dc54416c346584539aa985e9d69a98e
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d5ed6fb7-ac2e-47bd-b693-a48da008eed1)
+
+
+29. To get the hash, we need to export the objects of our previous packet.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eea286b6-0b0f-4074-8d34-95f7c3a4cb7d)
+
+
+30. Running **file** command it states that the exported objects is a JSON data.
+31. Reading it shall found the endpoint of the script used by hacker, run wget shall download the script.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9de08475-1899-45ff-925e-23402d4cacd9)
+
+
+32. To get the md5checksum simply run **md5sum**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1df562b2-302c-47cb-9d2f-e51c6057f881)
+
+
+> 9TH QUESTION --> ANS: dbb906628855a433d70025b6692c05e7
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c85d9716-5f52-4e87-88dc-aed615f641a8)
+
+
+33. Accessing the pastes.io shall resulting to this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ed05bbff-f1be-4ef4-a713-42b092255d0f)
+
+
+34. Based from the bash script, we can identified that `hffgra4unv` contains the public key.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/59441f05-fadc-4ef3-a5d4-0b00aa29f995)
+
+
+35. Simply `wget` it then get the md5sum.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/27b045a1-fcc4-4fed-83c3-952032bec332)
+
+
+> 10TH QUESTION --> ANS: 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ed956922-19d9-42ae-8760-d4814197e955)
 
 
 
