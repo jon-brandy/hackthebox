@@ -17,7 +17,7 @@ As our new security provider we'd like you to take a look at some PCAP and log d
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/317a7617-95f3-4020-8255-a3676d20bec2)
 
 
-> 1ST QUESTION --> ANS : Bonitasoft
+> 1ST QUESTION --> ANS : Bonitasoft.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/633d94c8-2997-4a84-9322-8728099a8d4d)
 
@@ -34,7 +34,7 @@ As our new security provider we'd like you to take a look at some PCAP and log d
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3034bbfd-bbfc-4212-9836-1b942ef56356)
 
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: Credential Stuffing.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ec6d3311-5945-4c30-a9f9-c011c290035c)
 
@@ -48,4 +48,7 @@ As our new security provider we'd like you to take a look at some PCAP and log d
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d5abd805-6e65-42f5-8956-c72436d4d100)
 
 
-8. If you noticed, the mail which used as the username always ends with `.forela.co.uk`. This indicates a 
+8. If you noticed, the mail which used as the username always ends with `.forela.co.uk`. This indicates a company email.
+9. Remembering status code is 401 for both (actually more), it means the attacker is bruteforcing.
+10. This kind of attacks is called `Credential Stuffing`.
+
