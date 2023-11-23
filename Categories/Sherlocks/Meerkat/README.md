@@ -140,9 +140,6 @@ As our new security provider we'd like you to take a look at some PCAP and log d
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3edb78c7-4bee-435f-9448-36e2cf4fbbb1)
 
 
-27. Found the cred --> `username=seb.broom@forela.co.uk&password=g0vernm3nt`.
-
-
 > 7TH QUESTION --> ANS: pastes.io
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c6abcaa5-5571-4df8-8d67-5762ac50a52c)
