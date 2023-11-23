@@ -35,7 +35,7 @@ Nmap done: 1 IP address (1 host up) scanned in 24.01 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e8f6e209-5fbb-4a76-bcfc-58913a0aa156)
 
 
-2. To open the subdomain --> tickets.keeper.htb, we need to add that hostname to /etc/passwd first.
+2. To open the subdomain --> tickets.keeper.htb, we need to add that hostname to /etc/hosts first.
 
 > tickets.keeper.htb
 
