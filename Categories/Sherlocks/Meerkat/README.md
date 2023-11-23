@@ -77,9 +77,53 @@ As our new security provider we'd like you to take a look at some PCAP and log d
 13. Reading the CVE documentation, shall found a statement that the attacker is appending `;i18ntranslation or /../i18ntranslation/` to the end of an URL.
 
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: 56
 
-14. 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c3e0450c-c31d-4693-a40a-b73baab13a37)
+
+
+14. To get the answer, a filter command is needed for quick analyze.
+15. Simply execute --> `urlencoded-form.key == "username"`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1cafdb73-f1e5-4f78-a295-81109b3c916a)
+
+
+16. To see the username value, luckily wireshark allows us to do custom columns.
+17. Hence we can create a custom column --> `edit -> preferences -> columns`, then set the column type to custom.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2450c106-ca85-42ce-a3d5-900f1efa1320)
+
+
+18. Next, to modify the column, right click at the column area then choose `edit column` and set the fields to --> `urlencoded-form.value`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7748be57-7733-4eee-a154-dab256532790)
+
+
+19. Noticed at the bottom right it states 118 data displayed.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/73094f81-e60f-488d-8441-70e7273f5e11)
+
+
+20. Scrolling down the packets, noticed several packets which unnecesarry is included.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b07bf323-3b69-46af-8eaa-96a07f89090e)
+
+
+21. Hence let's add another filter which denied `install`.
+22. Filter command --> `urlencoded-form.key == "username" && !(http contains "install")`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5a4083b4-f3ee-460f-8b8e-1ce28c7a6ee2)
+
+
+23. Now it shows 59 but there are still duplicated username.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9b85f32c-c9e8-4853-a90d-1e95f2c886b0)
+
+
+24. Hence the answer is 59 - 3 --> 56.
+25. 
+
+
 
 
 ### IMPORTANT LINKS:
