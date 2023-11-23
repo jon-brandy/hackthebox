@@ -32,3 +32,20 @@ As our new security provider we'd like you to take a look at some PCAP and log d
 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3034bbfd-bbfc-4212-9836-1b942ef56356)
+
+
+> 2ND QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ec6d3311-5945-4c30-a9f9-c011c290035c)
+
+
+6. Continue analyzing the logs, noticed several response with status code **401** which indicates **unauthorized access**.
+7. I tried to follow few of them and found several different creds used.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7d8c3782-3076-42d3-a6b5-a912ddec0d8a)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d5abd805-6e65-42f5-8956-c72436d4d100)
+
+
+8. If you noticed, the mail which used as the username always ends with `.forela.co.uk`. This indicates a 
