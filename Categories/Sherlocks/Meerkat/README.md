@@ -127,7 +127,14 @@ As our new security provider we'd like you to take a look at some PCAP and log d
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a082e00a-fee4-4836-89a8-7948ad0238de)
 
 
-25. 
+25. To answer this, we can filter the response which status code is below 300. Filter command --> `http.response.code < 300`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b72c169-87c9-4aa9-886a-0ee980fb440a)
+
+
+26. 
+
+
 
 
 
