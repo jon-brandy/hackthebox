@@ -3,7 +3,7 @@
 ## Lesson learned:
 - Identifying **Credential Stuffing** attacks.
 - Bonitasoft CVE.
-- 
+- Packet filtering and custom column value.
 
 > Write-up author: jon-brandy
 
