@@ -121,6 +121,12 @@ As our new security provider we'd like you to take a look at some PCAP and log d
 
 
 24. Hence the answer is 59 - 3 --> 56.
+
+> 6TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a082e00a-fee4-4836-89a8-7948ad0238de)
+
+
 25. 
 
 
