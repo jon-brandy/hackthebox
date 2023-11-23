@@ -194,12 +194,32 @@ As our new security provider we'd like you to take a look at some PCAP and log d
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/27b045a1-fcc4-4fed-83c3-952032bec332)
 
 
-> 10TH QUESTION --> ANS: 
+> 10TH QUESTION --> ANS: /home/ubuntu/.ssh/authorized_keys
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ed956922-19d9-42ae-8760-d4814197e955)
 
 
+36. The answer is the destination of the public key.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b9580b7e-897e-4308-91ff-0c977443f74e)
+
+
+> 11TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d2d19336-38b0-4409-8b2a-aafa68f3d810)
+
+
+37. Searching `ssh` shall resulting to these:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/220d379e-205f-42ae-a56a-8876d054ba03)
+
+
+38. The first one should be our interest.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e49d3285-e0b2-408a-8cac-f505f927e4d4)
+
+
+39. It discussed the same method used by the attacker.
 
 ### IMPORTANT LINKS:
 
