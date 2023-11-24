@@ -205,4 +205,13 @@ dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-
 
 24. To check for vulns, we can use an intercepter.
 
+> RESULT USING BURPSUITE
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/44276f61-88e5-477d-953d-4bb2ec34d908)
+
+
+25. From the result above, we can conclude that the **WebSocket is vulnerable to Blind SQLi**.
+26. Why blind? Because the query result is not reflected to user interface, but we can only see the result from an interceptor.
+27. Nice, to speed this exploitations, I used sqlmap.
+
 
