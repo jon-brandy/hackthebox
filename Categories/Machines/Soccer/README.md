@@ -287,13 +287,31 @@ c3cdf7fa8be966709b922a4ae48c3f4e
 37. Luckily `/usr/local/share/dstat` has write access for user.
 38. Great! Let's make our python exploit and remember to save the exploit script with `dstat_` as it's prefixes (based on the manual page).
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/77d47d4a-9d40-4e89-bb11-6de1d400cf83)
+
+
+39. Now let's upload it to `/usr/share/local/dstat`.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3cf42891-6f93-423a-b5e0-6e1d60268809)
 
 
+40 To list all the dstat plugins available, run --> `doas /usr/bin/dstat --list`. As you can see our malicious plugin is there.
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3b49fb2c-78ab-4bf3-a823-43332594919c)
 
 
+41. Nice! Lastly, to use the plugins, run --> `doas /usr/bin/dstat --exploit` and we gained root!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/71a1c566-d911-45e2-a4a1-658148eb75ce)
 
 
+> GETTING ROOT FLAG
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/211254c6-7af3-4b24-bf65-7bc7b10651a1)
+
+
+## ROOT FLAG
+
+```
+8e52a05bfe5bdb5e848d1b13bb45659d
+```
