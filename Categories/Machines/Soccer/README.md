@@ -5,7 +5,8 @@
 - h3k tiny file manager exploitations.
 - WebSocket Exploitation.
 - Using sqlmap for blind SQLi exploitation.
-- 
+- Privesc using SUID doas.
+- Making malicious dstat using python --> /usr/share/local/dstat.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4a519534-98c2-4bda-a815-6a4101ab3229)
 
@@ -261,5 +262,38 @@ c3cdf7fa8be966709b922a4ae48c3f4e
 ```
 
 30. To gained root, I started by uploading **linpeas.sh** to the remote server and run it.
+31. Actually I tried several CVE about heap corruption but none of it succeed.
+32. Also I've tried the exploitation recommended related to the sudo version, but again none succeed.
+33. So I checked at the SUID section and found several potential SUIDs binary which is potential.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f684e110-f55d-4be0-969c-fa1691ea84a9)
+
+
+34. My interest is pointed to **doas**, then I started to find the configuration file of doas. --> `/usr/local/etc/doas.conf`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/30b8cb51-c3a3-41da-8f21-ef531097b532)
+
+
+35. Reading the manual page for **doas**, found that there is a possibility of using python plugins for **doas**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c2675a5a-fcb3-4dd5-97f2-dd15bef627b7)
+
+
+36. Great! As you can see it disclosed several path that may contain external dstat. Let's check the permissions there.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/327dcdb3-bdf3-438d-965a-269e5bee6398)
+
+
+37. Luckily `/usr/local/share/dstat` has write access for user.
+38. Great! Let's make our python exploit and remember to save the exploit script with `dstat_` as it's prefixes (based on the manual page).
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3cf42891-6f93-423a-b5e0-6e1d60268809)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3b49fb2c-78ab-4bf3-a823-43332594919c)
+
+
+
 
 
