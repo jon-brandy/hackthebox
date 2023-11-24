@@ -1,6 +1,7 @@
 # Soccer
 > Write-up author: jon-brandy
 ## Lesson learned:
+- Directory listing using dirsearch
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4a519534-98c2-4bda-a815-6a4101ab3229)
 
@@ -113,4 +114,24 @@ Nmap done: 1 IP address (1 host up) scanned in 97.20 seconds
 
 
 2. Scrolling down and clicking the navbar item, shall found nothing interesting.
-3. 
+3. Hence the approach is to do directory listing or enumerate subdomain.
+4. Running both with ffuf and dirsearch, found interesting directory named `tiny`.
+
+```
+dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-small.txt
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ffa5631e-e919-40e3-a74c-e16a694313bc)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/046768ed-3b68-403b-92cc-acf470db2ad6)
+
+
+5. Searching on the internet for `h3k tiny file manager default credentials` shall resulting to this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/29a563fd-fc3a-4699-82e6-b6531ca81021)
+
+
+6. We successfully logged in after using the admin cred as admin.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c058e8f7-94ef-4fdc-baf2-902b1e32e496)
