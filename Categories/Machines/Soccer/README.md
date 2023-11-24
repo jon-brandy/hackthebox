@@ -198,4 +198,9 @@ dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-
 
 
 22. Also there is another endpoint which is **/check**, this is getting more interesting and this could tell that the interest should be about port 9091 (another open port found at our nmap scan before).
-23. 
+23. Viewing the page source, found that the web application functionalities are based on the WebSocket server which running on port 9091.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4e840839-1cb5-46fa-aacc-7f175c38e5dc)
+
+
+
