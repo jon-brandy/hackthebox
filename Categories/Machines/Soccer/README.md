@@ -214,4 +214,12 @@ dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-
 26. Why blind? Because the query result is not reflected to user interface, but we can only see the result from an interceptor.
 27. Nice, to speed this exploitations, I used sqlmap.
 
-
+```
+-u "ws://soc-player.soccer.htb:9091": Specifies the target URL where the SQL injection vulnerability is suspected. In this case, it's a WebSocket URL (ws://) for a service running on soc-player.soccer.htb at port 9091.
+--data '{"id":"*"}': Specifies the data payload that will be used in the HTTP request. In this case, it's a JSON payload with a parameter named 'id' set to ''. The asterisk () is often used as a wildcard character in SQL injection attempts.
+--dbs: Instructs sqlmap to enumerate the available databases once a SQL injection vulnerability is identified.
+--threads 10: Sets the number of concurrent threads to 10. This option can be used to speed up the scanning process by making multiple requests simultaneously.
+--level 5: Sets the level of tests to be performed by sqlmap. The level ranges from 1 to 5, with 5 being the most comprehensive and thorough.
+--risk 3: Sets the risk level of the tests. The risk level ranges from 1 to 3, with 3 being the highest risk level.
+--batch: Runs sqlmap in batch mode, which means it will not prompt for user input during the scanning process. It will use the default options and automatically proceed with the scan.
+```
