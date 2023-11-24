@@ -191,4 +191,5 @@ dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-
 
 
 19. Interesting we found the similiar views but there are 3 other navbar item.
-20. 
+20. But this time default credential for admin is invalid.
+21. After I tried to create a ticket, 
