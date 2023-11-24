@@ -192,4 +192,10 @@ dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-
 
 19. Interesting we found the similiar views but there are 3 other navbar item.
 20. But this time default credential for admin is invalid.
-21. After I tried to create a ticket, 
+21. After I tried to create an account with both username and password is admin, found this result.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4116ef83-2321-4f9a-b1d3-6bfb50b38128)
+
+
+22. Also there is another endpoint which is **/check**, this is getting more interesting and this could tell that the interest should be about port 9091 (another open port found at our nmap scan before).
+23. 
