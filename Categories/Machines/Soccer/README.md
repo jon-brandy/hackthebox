@@ -3,7 +3,7 @@
 ## Lesson learned:
 - Directory listing using dirsearch.
 - h3k tiny file manager exploitations.
-- 
+- WebSocket Exploitation.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4a519534-98c2-4bda-a815-6a4101ab3229)
 
@@ -194,7 +194,7 @@ dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-
 20. But this time default credential for admin is invalid.
 21. After I tried to create an account with both username and password is admin, found this result.
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4116ef83-2321-4f9a-b1d3-6bfb50b38128)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c44ef10b-c4e2-4bcd-ae1d-e21a147e542d)
 
 
 22. Also there is another endpoint which is **/check**, this is getting more interesting and this could tell that the interest should be about port 9091 (another open port found at our nmap scan before).
@@ -202,5 +202,7 @@ dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4e840839-1cb5-46fa-aacc-7f175c38e5dc)
 
+
+24. To check for vulns, we can use an intercepter.
 
 
