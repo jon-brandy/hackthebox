@@ -135,3 +135,21 @@ dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-
 6. We successfully logged in after using the admin cred as admin.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c058e8f7-94ef-4fdc-baf2-902b1e32e496)
+
+
+7. Checking all images, seems there's nothing interesting, it goes the same for the .html file.
+8. But checking **tiny** directory, found .php files which hardcoded the creds there.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4620ca6a-419c-4569-a0f5-590f884e3429)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7febed41-fd73-4cf4-baf5-c2c6aabefaff)
+
+
+9. After checked the **Uploads** directory's permission, found out as admin we are allowed to RWX.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f35d23ed-b9dd-4354-a860-b24c3487f2fc)
+
+
+10. Interesting, we can try to upload **php reverse shell** then.
+11. 
