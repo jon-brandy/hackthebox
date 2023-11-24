@@ -178,4 +178,17 @@ dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-
 
 
 18. Hence I started to enumerate the **nginx** settings and luckily found a foothold.
-19. 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e665b9d7-5d59-4eb2-a435-3e2ff78454c0)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/885a0d27-ff52-404b-ab29-794a8cab262b)
+
+
+> soc-player.soccer.htb
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/64b84cfa-9a74-4dad-96de-5928b43d5520)
+
+
+19. Interesting we found the similiar views but there are 3 other navbar item.
+20. 
