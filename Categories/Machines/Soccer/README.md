@@ -1,7 +1,9 @@
 # Soccer
 > Write-up author: jon-brandy
 ## Lesson learned:
-- Directory listing using dirsearch
+- Directory listing using dirsearch.
+- h3k tiny file manager exploitations.
+- 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4a519534-98c2-4bda-a815-6a4101ab3229)
 
@@ -152,4 +154,28 @@ dirsearch -u http://soccer.htb -w /usr/share/wordlists/dirbuster/directory-list-
 
 
 10. Interesting, we can try to upload **php reverse shell** then.
-11. 
+11. For the php reverse_shell I used --> `https://github.com/pentestmonkey/php-reverse-shell`.
+12. Don't forget to change these:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/386d5119-4bf4-44ea-88ed-dfc33bc0c7a4)
+
+
+14. Upload the file inside the **uploads** directory, then access the endpoint of the uploaded file --> `/tiny/uploads/<filename>`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8689f8a9-0f71-41f7-bff8-2fcb498c6a8e)
+
+
+> RESULT AT LISTENER
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d8c621c7-7a1d-4fa7-8a78-e76a2779c122)
+
+
+15. We can't get the user flag obviously because we didn't get shell as user.
+16. Took me a while to find a foothold which useful to get shell as user.
+17. Enumerating `/var/www/` found nothing interesting. Remembering the web server is running using **nginx**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ea589c54-3e6e-482c-840e-43e4f0e8fe98)
+
+
+18. Hence I started to enumerate the **nginx** settings and luckily found a foothold.
+19. 
