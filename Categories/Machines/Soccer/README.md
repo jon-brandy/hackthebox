@@ -1,4 +1,4 @@
-# Soccer
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/27c058fc-9849-471f-a161-e0441d4e1e3f)# Soccer
 > Write-up author: jon-brandy
 ## Lesson learned:
 - Directory listing using dirsearch.
@@ -242,3 +242,22 @@ sqlmap -u "ws://soc-player.soccer.htb:9091" --data '{"id":"*"}' -D soccer_db --d
 ```
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/301f0449-426f-4ff6-a384-427e0ca91ae2)
+
+
+29. Great! We found a cred which we can use to login to the remote server.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2b67a498-c206-41d8-b9aa-d73e02470319)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/81091316-b84d-4a82-a0e5-e83a287c8ed0)
+
+
+## USER FLAG
+
+```
+c3cdf7fa8be966709b922a4ae48c3f4e
+```
+
+30. To gained root, 
