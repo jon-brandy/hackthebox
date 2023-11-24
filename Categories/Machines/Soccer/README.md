@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/27c058fc-9849-471f-a161-e0441d4e1e3f)# Soccer
+# Soccer
 > Write-up author: jon-brandy
 ## Lesson learned:
 - Directory listing using dirsearch.
@@ -260,4 +260,6 @@ sqlmap -u "ws://soc-player.soccer.htb:9091" --data '{"id":"*"}' -D soccer_db --d
 c3cdf7fa8be966709b922a4ae48c3f4e
 ```
 
-30. To gained root, 
+30. To gained root, I started by uploading **linpeas.sh** to the remote server and run it.
+
+
