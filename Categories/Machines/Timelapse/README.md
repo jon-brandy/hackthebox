@@ -214,6 +214,15 @@ evil-winrm -i timelapse.htb -S -k key.pem -c cert.pem
 3ddef02b88667a36cc86db0373cfd99a
 ```
 
+15. Again, for those who wonders why I can use bash command at the shell is because **evil-winrm** allows us to use native windows commands (powershell commands).
+16. Checking this user privilege shall resulting to nothing interesting.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0e460032-c530-4150-94e0-0797069174f3)
+
+
+17. But, after assessing the cmd history at --> `C:\Users\legacyy\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine`, found something interesting.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/12405381-67bd-4983-be48-8f9d87416c92)
 
 
 
