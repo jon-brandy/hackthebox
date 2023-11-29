@@ -259,6 +259,8 @@ Local Administrator Password Solution (LAPS) is used to manage local account pas
 Essentially, LAPS helps to keep local administrator password safe and unique.
 ```
 
+> GETTING ROOT FLAG
+
 23. Now that we know `svc_deploy` is part of **LAPS_Readers** group, hence we can read the admin password.
 24. I found a nice documentation about exploiting **LAPS Readers** in **evil-winrm**.
 
@@ -288,11 +290,40 @@ reg query "HKLM\Software\Policies\Microsoft Services\AdmPwd" /v AdmPwdEnabled
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/53f07311-66b3-48b4-a715-74b027028141)
 
 
-28. 
+28. Next to get the information of the Active Directory Computer we can use this command:
+
+```
+Get-ADComputer -Identity DC01 -property 'ms-mcs-admpwd'
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/106ff01d-9392-4ce8-af86-82422c567dba)
 
 
+29. Awesome! We found the admin password!
+
+> We gained root!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e17d190c-0559-46e1-8ea7-0d252a2c5e5a)
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ef640bfe-68f9-4cf6-a784-fc32d12c831b)
+
+
+30. Enumerating the **Administrator** directory shall not found the root flag.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/230738c4-00cb-4a12-adfe-dc45f9d954ca)
+
+
+31. Found the root flag at the TRX directory.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e4135182-67e3-4e78-bc30-2976fb66b4d2)
+
+
+## ROOT FLAG
+
+```
+308e36289ea7112f2dc7db71a3d4357e
+```
 
 
 ## IMPORTANT LINKS
