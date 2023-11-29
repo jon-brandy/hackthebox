@@ -154,5 +154,26 @@ encoded in the PEM format. The contents of a PEM file are encoded using Base64 e
 openssl pkcs12 -in legacyy_dev_auth.pfx -nocerts -out key.pem -nodes
 ```
 
+11. It failed when I reused the previous password, hence let's crack it again using john.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/91600221-4507-4378-903e-5cdb6ece009d)
+
+
+12. Anyway, inside john directory you shall found several python script which convert few file extension to **.john**. Also all of them still rely on python2.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c7d10ac0-3f38-483b-bca9-cd623f7fab9b)
+
+
+
+
+
+
+## IMPORTANT LINKS
+
+```
+
+```
+
+
 
 
