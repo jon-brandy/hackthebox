@@ -1,6 +1,9 @@
 # Timelapse
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6ae9f7ae-3c2d-47b0-96c8-611d44ecf6ce)
+
+
 ## Lesson learned:
 - Enumerate public smb share with **smbclient**.
 - Cracking Personal Information Exchange (PFX) file.
