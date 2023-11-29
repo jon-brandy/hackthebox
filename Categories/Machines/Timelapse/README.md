@@ -159,13 +159,20 @@ openssl pkcs12 -in legacyy_dev_auth.pfx -nocerts -out key.pem -nodes
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/91600221-4507-4378-903e-5cdb6ece009d)
 
 
-12. Anyway, inside john directory you shall found several python script which convert few file extension to **.john**. Also all of them still rely on python2.
+12. Anyway, inside john directory you shall found several python script which convert few file extension to **.john**. 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c7d10ac0-3f38-483b-bca9-cd623f7fab9b)
 
 
+> Run openssl command again using **thuglegacy**
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1f82ad66-0bf5-4428-8d16-46a213e86285)
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3db03f58-40fc-4959-87ba-59d9103e44a3)
+
+
+13. 
 
 
 ## IMPORTANT LINKS
