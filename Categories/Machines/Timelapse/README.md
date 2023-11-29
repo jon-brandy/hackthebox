@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fa45f2fa-9585-4a93-a05d-3b4a5785500e)# Timelapse
+# Timelapse
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6ae9f7ae-3c2d-47b0-96c8-611d44ecf6ce)
@@ -11,7 +11,7 @@
 - Converting pfx file to john file.
 - Active Directory.
 - Using evil-winrm and executing basic pwsh's enumeration commands.
-- 
+- Exploiting LAPS.
 
 ## STEPS:
 > PORT SCANNING
