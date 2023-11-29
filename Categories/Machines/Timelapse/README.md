@@ -138,10 +138,21 @@ Session completed.
 7. Personal Information Exchange (PFX) also known as PKCS #12 or P12 file is a binary format file that is commonly used to store a private key with its associated public key and certificates.
 8. It securely exporting and importing private keys and certificates, especially in scenarios where you need to move or back up a certificate and its associated private key.
 9. They are often used in web server configurations, for example, when installing SSL/TLS certificates. The PFX format provides a convenient way to bundle all the necessary components securely into a single file.
-10. Great! Now we know what **.pfx** file is, to use it run this command:
+10. Great! Now we know what **.pfx** file is, let's extract what inside it and used them with **WinRM** so we can login to the remote server without a password.
 
+> Command to extract pfx file
+
+#### NOTES:
+
+```
+For those who wonders why .pem (Privacy Enhanced Mail), because PEM file is a text file that typically contains one or more cryptographic elements,
+encoded in the PEM format. The contents of a PEM file are encoded using Base64 encoding and are enclosed between
+"-----BEGIN CERTIFICATE-----" and "-----END CERTIFICATE-----" (or a similar marker depending on the type of data).
 ```
 
 ```
+openssl pkcs12 -in legacyy_dev_auth.pfx -nocerts -out key.pem -nodes
+```
+
 
 
