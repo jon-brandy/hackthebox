@@ -1,4 +1,4 @@
-# Timelapse
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fa45f2fa-9585-4a93-a05d-3b4a5785500e)# Timelapse
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6ae9f7ae-3c2d-47b0-96c8-611d44ecf6ce)
@@ -245,12 +245,63 @@ evil-winrm -i timelapse.htb -u 'svc_deploy' -p 'E3R$Q62^12p7PLlC%KWaxuaV' -S
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4fd4e7d2-fbe6-4c41-99bd-bd5aa18777e4)
 
 
-21. 
+21. Checking for the network configurations found our foothold.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b90cccf7-2bd7-47bb-8b02-5c34459174cd)
+
+
+22. It shows that we are part of the **LAPS_Readers** group.
+
+#### NOTES:
+
+```
+Local Administrator Password Solution (LAPS) is used to manage local account passwords of Active Directory computers.
+Essentially, LAPS helps to keep local administrator password safe and unique.
+```
+
+23. Now that we know `svc_deploy` is part of **LAPS_Readers** group, hence we can read the admin password.
+24. I found a nice documentation about exploiting **LAPS Readers** in **evil-winrm**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b5809d9e-3457-433d-bee5-bd7fec374256)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d477fa1e-c9d7-4d90-bfd4-679065e9152a)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1357eb11-3f0b-452f-8ef8-b208d2b9bd60)
+
+
+25. Based from the documentation, we need to check whether it is activated or not.
+
+```
+reg query "HKLM\Software\Policies\Microsoft Services\AdmPwd" /v AdmPwdEnabled
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/533581ae-6124-48d8-972d-b8c9a105aa88)
+
+
+26. It is indeed enabled.
+27. Now let's get all the computer accounts using this command --> `Get-ADComputer -Filter *`.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/53f07311-66b3-48b4-a715-74b027028141)
+
+
+28. 
+
+
+
+
+
 
 ## IMPORTANT LINKS
 
 ```
-
+https://learn.microsoft.com/en-us/powershell/module/activedirectory/get-adcomputer?view=windowsserver2022-ps
+https://exploit-notes.hdks.org/exploit/windows/active-directory/laps-pentesting/
+https://book.hacktricks.xyz/windows-hardening/active-directory-methodology/laps
+https://github.com/ztrhgf/LAPS/tree/master
 ```
 
 
