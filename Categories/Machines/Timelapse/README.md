@@ -2,7 +2,8 @@
 > Write-up author: jon-brandy
 
 ## Lesson learned:
-- dfs
+- Enumerate public smb share with **smbclient**.
+- 
 
 ## STEPS:
 > PORT SCANNING
@@ -56,4 +57,80 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 320.43 seconds
 ```
 
-1. Based from the nmap results, there is no web application running.
+1. Based from the nmap results, it opens few ports (which is not good) and it runs web application at port 5986.
+2. Noticed there are SMB share opens, let's enumerate it with **smbclient**.
+
+> Using smbclient, for password using your own machine password.
+
+```
+smbclient -L //timelapse.htb/
+```
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ smbclient -L //timelapse.htb/
+Password for [WORKGROUP\brandy]:
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        ADMIN$          Disk      Remote Admin
+        C$              Disk      Default share
+        IPC$            IPC       Remote IPC
+        NETLOGON        Disk      Logon server share 
+        Shares          Disk      
+        SYSVOL          Disk      Logon server share 
+Reconnecting with SMB1 for workgroup listing.
+do_connect: Connection to timelapse.htb failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND)
+Unable to connect with SMB1 -- no workgroup available
+```
+
+3. Nice there's `ADMIN$` sharename, but the only sharename we can access without credential is `Shares`.
+
+```
+smbclient //timelapse.htb/Shares
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/164a12a2-9dc5-429e-8895-73e6c381f3e1)
+
+
+4. After listing all files inside `Dev` directory, found a .zip file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/90b3257a-76ba-4d73-a210-d624fe8693fd)
+
+
+5. To download a file from smb share, we use `get` command.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1b81c185-9b93-444c-9a64-d11334e368cb)
+
+
+6. Interesting! Inside it, there's a .pfx file and it seems we need to use john to crack the password.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/140376c2-ba5f-4a4c-bf42-5e015d8e033b)
+
+
+> Using john
+
+```
+┌──(brandy㉿bread-yolk)-[~/Downloads/machine/machine_timelapse]
+└─$ zip2john winrm_backup.zip > hash.txt                                                                                                                           
+ver 2.0 efh 5455 efh 7875 winrm_backup.zip/legacyy_dev_auth.pfx PKZIP Encr: TS_chk, cmplen=2405, decmplen=2555, crc=12EC5683 ts=72AA cs=72aa type=8
+```
+
+> supremelegacy
+
+```
+┌──(brandy㉿bread-yolk)-[~/Downloads/machine/machine_timelapse]
+└─$ john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt                
+Using default input encoding: UTF-8
+Loaded 1 password hash (PKZIP [32/64])
+Will run 6 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+supremelegacy    (winrm_backup.zip/legacyy_dev_auth.pfx)     
+1g 0:00:00:00 DONE (2023-11-29 04:11) 4.761g/s 16559Kp/s 16559Kc/s 16559KC/s surkerior..supalove
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed.
+```
+
+
+
+> 
