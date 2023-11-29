@@ -7,6 +7,9 @@
 ## Lesson learned:
 - Enumerate public smb share with **smbclient**.
 - Cracking Personal Information Exchange (PFX) file.
+- Using openssl command for extracting pfx content.
+- Converting pfx file to john file.
+- Active Directory.
 
 ## STEPS:
 > PORT SCANNING
@@ -148,6 +151,8 @@ Session completed.
 For those who wonders why .pem (Privacy Enhanced Mail), because PEM file is a text file that typically contains one or more cryptographic elements,
 encoded in the PEM format. The contents of a PEM file are encoded using Base64 encoding and are enclosed between
 "-----BEGIN CERTIFICATE-----" and "-----END CERTIFICATE-----" (or a similar marker depending on the type of data).
+
+However, the extension is not a must to .pem, can be anything. But I prefer .pem.
 ```
 
 ```
@@ -172,7 +177,11 @@ openssl pkcs12 -in legacyy_dev_auth.pfx -nocerts -out key.pem -nodes
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3db03f58-40fc-4959-87ba-59d9103e44a3)
 
 
-13. 
+13. Great! Now let's also extract the certificate.
+
+```
+
+```
 
 
 ## IMPORTANT LINKS
