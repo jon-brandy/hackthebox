@@ -227,11 +227,25 @@ evil-winrm -i timelapse.htb -S -k key.pem -c cert.pem
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/45654291-8998-4a72-84c5-d263fcca0718)
 
 
-18. Nice! We found a cred, but before switch user, I checked the network-related configurations and resources using **net** command.
+18. Nice! We found a cred, but before switch user, I checked the network-related configurations and resources using **net** command but found nothing interesting.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8ab32c8e-d248-4a25-b787-ec156a42122d)
 
 
+19. However after enumerating the files and dirs, found nothing interesting, hence I tried to switch user to **svc_deploy** hoping this user permission shall helps us gain root.
+
+> Command to login as timelapse.htb
+
+```
+evil-winrm -i timelapse.htb -u 'svc_deploy' -p 'E3R$Q62^12p7PLlC%KWaxuaV' -S
+```
+
+20. Checking for the privilege, found nothing interesting again.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4fd4e7d2-fbe6-4c41-99bd-bd5aa18777e4)
+
+
+21. 
 
 ## IMPORTANT LINKS
 
