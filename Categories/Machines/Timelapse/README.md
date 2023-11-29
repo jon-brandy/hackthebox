@@ -10,6 +10,8 @@
 - Using openssl command for extracting pfx content.
 - Converting pfx file to john file.
 - Active Directory.
+- Using evil-winrm and executing basic pwsh's enumeration commands.
+- 
 
 ## STEPS:
 > PORT SCANNING
@@ -222,7 +224,12 @@ evil-winrm -i timelapse.htb -S -k key.pem -c cert.pem
 
 17. But, after assessing the cmd history at --> `C:\Users\legacyy\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine`, found something interesting.
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/12405381-67bd-4983-be48-8f9d87416c92)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/45654291-8998-4a72-84c5-d263fcca0718)
+
+
+18. Nice! We found a cred, but before switch user, I checked the network-related configurations and resources using **net** command.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8ab32c8e-d248-4a25-b787-ec156a42122d)
 
 
 
