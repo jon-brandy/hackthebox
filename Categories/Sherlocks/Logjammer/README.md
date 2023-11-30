@@ -32,6 +32,13 @@ Upon an
 
 > 4TH QUESTION --> ANS:
 
+
+> 8TH QUESTION --> ANS: SharpHound
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f34e9494-c82f-4b26-b30d-f77509fcf6cd)
+
+
+
 > 9TH QUESTION --> ANS: C:\Users\CyberJunkie\Downloads\SharpHound-v1.1.0.zip
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4c35cd98-c37f-4468-bb96-56af437cc905)
