@@ -32,6 +32,23 @@ Upon an
 
 > 4TH QUESTION --> ANS:
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/20348858-350d-47ed-89c5-136bf96addd3)
+
+
+> 5TH QUESTION --> ANS: HTB-AUTOMATION
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1836c8d0-253d-4b9c-9a54-ae9d1e7310e2)
+
+
+> 6TH QUESTION --> ANS: C:\Users\CyberJunkie\Desktop\Automation-HTB.ps1
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b24fc2a-c67f-4529-afff-5285417adac1)
+
+
+> 7TH QUESTION --> ANS: -A cyberjunkie@hackthebox.eu
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/777a9b04-329f-4bcf-87e1-7eb3ec9b14b7)
+
 
 > 8TH QUESTION --> ANS: SharpHound
 
