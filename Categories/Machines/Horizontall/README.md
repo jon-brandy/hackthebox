@@ -1,5 +1,10 @@
 # Horizontall
 > Write-up author: jon-brandy
+
+## Lesson learned:
+- Generating ssh-keygen to get a stable shell at the remote server.
+- Port forwarding from remote server to local server.
+
 ## STEPS:
 > PORT SCANNING
 
