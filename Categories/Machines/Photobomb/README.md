@@ -58,7 +58,7 @@
 ![image](https://user-images.githubusercontent.com/70703371/211188016-93639302-051f-45b5-a030-7d96ee78947e.png)
 
 
-8. It seems we can downlaod any image we click here.
+8. It seems we can download any image we click here.
 
 ![image](https://user-images.githubusercontent.com/70703371/211188145-a76d347c-4916-4e46-8bbb-cf96c3c260ea.png)
 
