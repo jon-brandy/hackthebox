@@ -1,6 +1,11 @@
 # Shocker
 > Write-up author: jon-brandy
 
+## Lesson learned:
+- Directory listing using dirbuster (found cgi-bin directory which is the interest here).
+- Conduct shellshock attack.
+- Exploiting perl binary.
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6a3d07d8-d7ff-47dc-bc67-8d520eff6f0d)
 
 
