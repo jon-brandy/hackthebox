@@ -37,4 +37,18 @@ Upon an
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4c35cd98-c37f-4468-bb96-56af437cc905)
 
 
-> 10TH QUESTION --> ANS: 
+> 10TH QUESTION --> ANS: Quarantine
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9099a991-0742-41d0-8fb5-dbc976592f53)
+
+
+> 11TH QUESTION --> ANS: Get-FileHash -Algorithm md5 .\Desktop\Automation-HTB.ps1
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1335058a-1e50-4c29-82cc-2063b6c148b2)
+
+
+> 12TH QUESTION --> ANS: 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/45be88e2-405b-4c2f-8713-210b7b492559)
+
+
