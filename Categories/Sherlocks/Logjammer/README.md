@@ -4,7 +4,7 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7f39ebc6-1bf6-4352-8165-e19d86fb2006)
 
 ## Lesson learned:
-
+- Windows event log analysis.
 
 ## Sherlock Scenario:
 You have been presented the opportunity to work as a junior DFIR consultant for a big consultancy, however they have provided a technical assessment for you to complete. 
