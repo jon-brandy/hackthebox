@@ -1,6 +1,11 @@
 # Beep
 > Write-up author: jon-brandy
 
+## Lesson learned:
+- Directory listing using dirbuster.
+- Exploiting Elastix webserver ('graph.php', LFI).
+- 
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c0ed88ed-9dbd-460d-b284-b95980734554)
 
 
