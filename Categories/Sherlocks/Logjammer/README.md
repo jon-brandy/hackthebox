@@ -37,9 +37,13 @@ Upon an
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/036c6743-c20e-427d-9d64-c697ca9015d5)
 
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: Other Object Access Events
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/20348858-350d-47ed-89c5-136bf96addd3)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1887ca59-a2df-4c18-bdd5-1b270ae92c5e)
+
 
 
 > 5TH QUESTION --> ANS: HTB-AUTOMATION
