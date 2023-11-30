@@ -23,11 +23,18 @@ The consultancy Forela-Security would like to gauge your knowledge on Windows Ev
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/333779a9-2bff-4554-84c7-f79130644319)
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0a9605c0-f6e1-46a8-acdc-f26ddd521d37)
+
+
+
 Upon an
 
 > 3RD QUESTION --> ANS: Outbound
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5f880250-44d7-4ad9-aa5f-0838a36845e9)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/036c6743-c20e-427d-9d64-c697ca9015d5)
 
 
 > 4TH QUESTION --> ANS:
