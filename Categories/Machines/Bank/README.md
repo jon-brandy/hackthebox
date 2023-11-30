@@ -1,6 +1,11 @@
 # Bank
 > Write-up author: jon-brandy
 
+## Lesson learned:
+- Directory listing using gobuster.
+- Identifying failed hash or encryption method.
+- Making a reverse shell payload using msfvenom with raw as the payload format.
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/71c41239-7326-462d-9f10-0ee1ebf1d1d8)
 
 ## STEPS:
