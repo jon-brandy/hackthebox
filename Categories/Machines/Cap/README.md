@@ -2,7 +2,7 @@
 > Write-up author: jon-brandy
 
 ## Lesson learned:
-- Exploiting python3.8 setuid.
+- Exploiting python3.8 cap_setuid.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/92cc6711-5f1a-4d7a-92d4-f836a38496c3)
 
