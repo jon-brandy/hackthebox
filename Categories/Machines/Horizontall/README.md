@@ -6,6 +6,9 @@
 - Port forwarding from remote server to local server.
 - Exploiting Laravel 8.4.2
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/93bfea9d-d224-4f9c-b724-0296787a7d84)
+
+
 ## STEPS:
 > PORT SCANNING
 
