@@ -1,6 +1,12 @@
 # Bashed
 
 > Write-up author: jon-brandy
+
+## Lesson learned:
+- Directory listing using gobuster.
+- Webshell upload.
+- Switch user at webshell --> sudo -u <username> bash -i.
+- Utilizing cronjob to gain root.
  
 ## STEPS:
 
