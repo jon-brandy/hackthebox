@@ -1,6 +1,10 @@
 # Blocky
 > Write-up author: jon-brandy
 
+## Lesson learned:
+- Directory listing using dirbuster.
+- Decompile a .jar file using JADX-GUI.
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2029e728-fc4a-4513-8896-a723cb5aef66)
 
 ## STEPS:
