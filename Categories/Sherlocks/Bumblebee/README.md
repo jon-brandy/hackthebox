@@ -48,3 +48,25 @@ We have attached some logs from the forum and a full database dump in sqlite3 fo
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/01042a85-d2b1-4942-923b-4837f7b1be44)
 
+
+> 4TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e33d8301-d2d9-4a0f-b0ca-771ed0325659)
+
+
+> 8TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c617074b-b8a4-47b9-9084-c6d2fbd0a35b)
+
+
+
+> 9TH QUESTION --> ANS: `26/04/2023 11:01:38`
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/91f99521-2df8-455d-8838-cd26619e6331)
+
+
+> 10TH QUESTION --> ANS: 34707
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a37aa44c-0402-432d-98c1-8235427a2d2f)
+
+
