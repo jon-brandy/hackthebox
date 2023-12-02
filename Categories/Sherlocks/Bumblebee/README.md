@@ -30,5 +30,21 @@ We have attached some logs from the forum and a full database dump in sqlite3 fo
 
 
 
-5. Noticed, there's a username with contractor mail.
-6. 
+5. Noticed, there's a username with contractor mail, hence we can identified the external contractor is should be `apoole` or `apoole1`.
+
+
+> 2ND QUESTION --> ANS: 10.10.0.78
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c5dbeb19-5a56-421c-b2f9-0829b2f68de3)
+
+
+6. To identify the IP address, we need to just need to check the column value.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9bb56ebc-37ab-4cbe-bb98-25be3fb1377c)
+
+
+> 3RD QUESTION --> ANS: 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/01042a85-d2b1-4942-923b-4837f7b1be44)
+
