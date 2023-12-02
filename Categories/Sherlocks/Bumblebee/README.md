@@ -26,7 +26,8 @@ We have attached some logs from the forum and a full database dump in sqlite3 fo
 
 4. Execute this query --> `SELECT * FROM phpbb_users;` to check all columns and it's value.
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c75ad478-c168-40be-9e7a-7e2258567a1a)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2104f97d-4e3f-4b4b-a1f5-70cdcd54234f)
+
 
 
 5. Noticed, there's a username with contractor mail.
