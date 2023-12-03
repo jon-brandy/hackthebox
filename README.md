@@ -35,6 +35,16 @@
 </details>
 
 
+> CASES INVESTIGATED
+
+<details>
+  <br>
+  <summary>Sherlocks</summary>
+  
+  |No.|Column 1|Column 2|Column 3|
+  |:-:|:------:|:------:|:------:|
+  |1. |[Meerkat](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Meerkat/README.md)|[Logjammer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Logjammer/README.md)||
+</details>
 
 
 > HTB CTF's PWNED
@@ -194,14 +204,6 @@
   
 </details>
 
-<details>
-  <br>
-  <summary>Sherlocks</summary>
-  
-  |No.|Column 1|Column 2|Column 3|
-  |:-:|:------:|:------:|:------:|
-  |1. |[Meerkat](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Meerkat/README.md)|[Logjammer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Logjammer/README.md)||
-</details>
 
 
 
