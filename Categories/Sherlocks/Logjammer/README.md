@@ -135,8 +135,32 @@ The consultancy Forela-Security would like to gauge your knowledge on Windows Ev
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2a109bd6-36aa-4f74-a968-a1ba5a81f81f)
 
 
-> 12TH QUESTION --> ANS: 
+> 12TH QUESTION --> ANS: Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/45be88e2-405b-4c2f-8713-210b7b492559)
 
+
+18. This is a little bit tricky, took me a while to get the correct answer.
+19. While analyzing the **Security_1** event log, I noticed there is an event log which is cleared by **cyberjunkie**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dfd9af9c-14b6-40a2-b0f3-e0276978d918)
+
+
+20. However if you tried to submit the event log cleared is --> `Security`, you shall get incorrect result.
+21. After analyzing the **Windows Firewall-Firewall** event log, I found this eventID which explains this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dd4af28c-0960-4a30-a192-ec1e9917584b)
+
+
+22. This should be our interest.
+23. Submitting the log name shall gave you correct result.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9ed60f75-717b-4fda-bb02-5ad93feba65e)
+
+
+## IMPORTANT LINKS:
+
+```
+https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/default.aspx
+```
 
