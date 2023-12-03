@@ -5,7 +5,7 @@
 
 
 ## Lesson learned:
-- sda
+- 
 
 ## DESCRIPTION:
 
