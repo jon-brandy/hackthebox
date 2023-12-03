@@ -23,7 +23,13 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a37d9ce5-cbf7-47b5-a1ec-19638c38e847)
 
-2. Based from the packets, we can identified that protocol DNS 
+2. Analyzing the packets, it is known that most of the hostname is a large number of hexadecimals.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/de16fb07-8a1c-4ada-89e7-a241aa714ffa)
+
+
+3. This pattern is referring to `DNS tunneling` technique, hence we can conclude the malicious protocol is DNS.
+4. 
 
 
 
