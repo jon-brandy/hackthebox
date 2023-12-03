@@ -5,7 +5,7 @@
 </p>
 
 
-> HTB MACHINE'S PWNED
+> MACHINES PWNED
 
 
 <details>
@@ -47,7 +47,7 @@
 </details>
 
 
-> HTB CTF's PWNED
+> CTFs PWNED
 
 <details>
 <br>
