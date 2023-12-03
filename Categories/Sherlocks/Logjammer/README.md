@@ -35,6 +35,8 @@ The consultancy Forela-Security would like to gauge your knowledge on Windows Ev
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/333779a9-2bff-4554-84c7-f79130644319)
 
+7. Analyzing the **Windows Firewall-Firewall** shall let us identify the name of the firewall rule added. 
+
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0a9605c0-f6e1-46a8-acdc-f26ddd521d37)
 
