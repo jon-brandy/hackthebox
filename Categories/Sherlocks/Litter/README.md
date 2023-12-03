@@ -29,7 +29,14 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 
 
 3. This pattern is referring to `DNS tunneling` technique, hence we can conclude the malicious protocol is DNS.
-4. 
+
+
+> 2ND QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cd4debd8-3524-4adf-9c65-fe7d42c898f9)
+
+
+
 
 
 
