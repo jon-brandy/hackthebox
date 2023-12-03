@@ -42,12 +42,12 @@ The consultancy Forela-Security would like to gauge your knowledge on Windows Ev
 
 
 
-Upon an
-
 > 3RD QUESTION --> ANS: Outbound
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5f880250-44d7-4ad9-aa5f-0838a36845e9)
 
+
+8. The direction of the firewall rule is also stated there.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/036c6743-c20e-427d-9d64-c697ca9015d5)
 
@@ -57,8 +57,9 @@ Upon an
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/20348858-350d-47ed-89c5-136bf96addd3)
 
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1887ca59-a2df-4c18-bdd5-1b270ae92c5e)
+9. Analyzing the **Security_1** event log with eventID **4719**, it states the subcategory of the changed policy.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1887ca59-a2df-4c18-bdd5-1b270ae92c5e)
 
 
 > 5TH QUESTION --> ANS: HTB-AUTOMATION
@@ -66,14 +67,18 @@ Upon an
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1836c8d0-253d-4b9c-9a54-ae9d1e7310e2)
 
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5864036-b3ca-421d-8c64-0ee0ef2d9e6c)
+10. To find the scheduled task created by **cyberjunkie** we just need to analyze the events with ID **4698** at **Security_1** event log.
 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5864036-b3ca-421d-8c64-0ee0ef2d9e6c)
 
 
 > 6TH QUESTION --> ANS: C:\Users\CyberJunkie\Desktop\Automation-HTB.ps1
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b24fc2a-c67f-4529-afff-5285417adac1)
 
+
+11. Scrolling down at the exact ID shows the full path of the file.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/68c9003f-7ab3-4ef8-9024-1ec4945450b4)
 
@@ -84,14 +89,18 @@ Upon an
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/777a9b04-329f-4bcf-87e1-7eb3ec9b14b7)
 
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1b09f60e-6ac5-4590-ac7c-98a9366a5e28)
+12. The argument is stated just below the file path.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1b09f60e-6ac5-4590-ac7c-98a9366a5e28)
 
 
 > 8TH QUESTION --> ANS: SharpHound
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f34e9494-c82f-4b26-b30d-f77509fcf6cd)
 
+
+13. To identify the tool, we need to analyze the **Windows Defender-Operational** event log.
+14. Simply searching for eventID **1117** shows us the tool name.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9bc7137d-a956-4d7d-8971-9e1d68b33af1)
 
@@ -101,14 +110,17 @@ Upon an
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4c35cd98-c37f-4468-bb96-56af437cc905)
 
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/48b1f3c6-dd95-48db-921d-e96fd5d95a8a)
+15. Scrolling down at the exact eventID's general tab, shows us the full path of the malware.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/48b1f3c6-dd95-48db-921d-e96fd5d95a8a)
 
 
 > 10TH QUESTION --> ANS: Quarantine
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9099a991-0742-41d0-8fb5-dbc976592f53)
 
+
+16. Scrolling down again at the exact eventID's general tab, you shall find the action taken by the antivirus. 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/43cf2235-70e8-489e-9c24-8de4c57154bf)
 
@@ -117,6 +129,8 @@ Upon an
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1335058a-1e50-4c29-82cc-2063b6c148b2)
 
+
+17. Analyzing **Powerhell-Operational** event log with **4104** as it's eventID, shows us the powershell command executed by the user. 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2a109bd6-36aa-4f74-a968-a1ba5a81f81f)
 
