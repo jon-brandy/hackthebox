@@ -11,11 +11,24 @@ You have been presented the opportunity to work as a junior DFIR consultant for 
 The consultancy Forela-Security would like to gauge your knowledge on Windows Event Log Analysis. Please analyse and report back on the questions they have asked.
 
 ## STEPS:
-1. In this challenge we're given several windows event logs.
+1. In this challenge we're given several windows event logs. 
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: `27/03/2023 14:37:09`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5a0b7dda-6ffa-4234-a8dc-d606ffca3564)
+
+
+2. To identify the timestamp, we need to analyze the **Security** or **Security_1** log.
+3. Long story short, after sorted the timestamp from the oldest to newest, found a logon attempt with explicit credentials (eventID -> 4648) and **cyberjunkie** as it's username.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2d1e7efa-7b4f-4036-a646-53c5b9f7d08e)
+
+
+4. However, it does not explain whether the login attempt is succesfull or not. It can be successfully or it can't be.
+5. But it concludes that this is the 1st attempt.
+6. Hence let's convert the timestamp tp UTC using this online tool --> `https://dateful.com/convert/utc`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/86b45242-3f52-4ed0-a1b9-f831f87cddf6)
 
 
 > 2ND QUESTION --> ANS: Metasploit C2 Bypass
