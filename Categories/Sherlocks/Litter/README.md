@@ -51,5 +51,54 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/734c4c4e-4f87-4e00-ac5c-aa675daf4865)
 
 
+> 4TH QUESTION --> ANS: 0.07
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e7eabc66-c4fc-4b4e-b856-c6cd7e337533)
+
+
+6. To identify the version of DNS tunneling tool used, simply analyze the previous decoded hex.
+7. Scrolling down, we shall find the version.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3d087d8e-ca8c-48b2-b1fa-7d1e8680547e)
+
+
+> 5TH QUESTION --> ANS: win_install.exe
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9d221578-a496-42f5-9b2a-685fae232ec9)
+
+
+8. Based from the previous question, we can assume that the attacker accidentally left the dns tool not renamed.
+9. Hence, I scrolling down again and searched for a renaming command and found this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4fced9bf-d34c-4b7b-8d3c-6d34447959ca)
+
+
+10. As you can see, the attacker tried to use `ren` command which is a shorthand of `rename` in windows command.
+
+> 6TH QUESTION --> ANS: 0 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2b891f42-ba2f-4959-80c8-442b066eb070)
+
+
+11. The users cloud storage is at `OneDrive`, scrolling down the decoded packet stream shall found out that there is no files inside it.
+12. Hence, we can conclude the attacker did not locate any file in the user cloud storage.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a6fe52a4-29dd-49d7-9985-722b6b86b0b4)
+
+
+> 7TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1bbef92a-0060-4c07-a681-ec221a433fc5)
+
+
+13. Again, scrolling down the same decoded packet stream, shall found the full path of PII file which is stolen.
+14. Actually I found few `.csv` file which is interesting but only one so far that the attacker attempted to read.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6c685d8e-dcb1-4591-a1f4-df9b52287c4c)
+
+
+15. Scrolling down again, you shall find the attacker indeed have an interest in this file and attempted to download it.
+
+
 
 
