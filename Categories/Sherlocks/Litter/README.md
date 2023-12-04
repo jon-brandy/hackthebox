@@ -86,7 +86,7 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a6fe52a4-29dd-49d7-9985-722b6b86b0b4)
 
 
-> 7TH QUESTION --> ANS:
+> 7TH QUESTION --> ANS: C:\users\test\documents\client data optimisation\user details.csv
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1bbef92a-0060-4c07-a681-ec221a433fc5)
 
@@ -100,5 +100,9 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 15. Scrolling down again, you shall find the attacker indeed have an interest in this file and attempted to download it.
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/df82bee2-0e20-4a0b-9c20-ac641c71699e)
 
+
+
+16. 
 
