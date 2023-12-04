@@ -106,3 +106,15 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 
 > 8TH QUESTION --> ANS: 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/df13f87a-2057-45de-9368-36ba257d8d76)
+
+
+16. To identify how many PII records were stolen, I download the cyberchef results and count manually there.
+17. Took me a very long time to analyze it, maybe there's an intended way to solve it.
+18. However, found out the amount of PII stolen is 721.
+
+## IMPORTANT LINKS:
+
+```
+https://www.socinvestigation.com/how-dns-tunneling-works-detection-response/
+```
