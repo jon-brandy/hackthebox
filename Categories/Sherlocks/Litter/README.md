@@ -5,7 +5,7 @@
 
 
 ## Lesson learned:
-- Analyzing DNS tunneling packet stream.
+- DNS tunneling.
 
 ## DESCRIPTION:
 
