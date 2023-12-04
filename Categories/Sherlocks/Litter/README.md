@@ -31,11 +31,24 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 3. This pattern is referring to `DNS tunneling` technique, hence we can conclude the malicious protocol is DNS.
 
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: 192.168.157.145
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cd4debd8-3524-4adf-9c65-fe7d42c898f9)
 
 
+4. Based from the previous malicious traffic we found, we can conclude the suspected host is --> `192.168.157.145`.
+
+> 3RD QUESTION --> ANS: whoami
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6aa035e6-25fb-4a7b-9889-ef3cce8b522c)
+
+
+5. Following one of the UDP packet streams and decode it with cyberchef, shall let us find the first command the attackers sends to the client.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8451a2f1-6a89-41d8-9b8c-a1da9e77d704)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/734c4c4e-4f87-4e00-ac5c-aa675daf4865)
 
 
 
