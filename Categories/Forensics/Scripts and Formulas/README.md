@@ -32,3 +32,31 @@ pinpoint the intrusion methods used and how the Arodor faction gained access!
 
 4. Noticed, there's a **cp** command which indicate a copy attempt.
 5. It seems the attacker attempts to copy a file named cscript.exe to another file named calc.exe.
+
+> 2ND QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/faffffbd-2135-417f-89b8-1d0f56e510f2)
+
+
+6. Reviewing the visual basic script, found 2 functions but one of them is interesting.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4015f0f6-f826-4912-ab24-75d26765441b)
+
+
+7. At this function, it runs a loop operation which make it interesting, but we can't decode it.
+8. That function also called by the other function.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9f61a6b8-188e-40e7-82e0-dad6c8ca4a56)
+
+
+9. Hence, I started to analyze the `Microsoft-Windows-PowerShell/Operational` event log.
+10. Upon analyzing it, found an encoded base64 strings, which resulting to a spreadsheet link after decoding it. Sadly the API key is no longer valid.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6d229b56-e444-417b-8cf5-9a1cde6aae0e)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6d5b2c10-dc76-4ab9-b369-0fb4e9c24305)
+
+
+11. 
+
