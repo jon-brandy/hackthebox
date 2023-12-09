@@ -102,6 +102,7 @@
 |8. |[Strike Back](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Strike%20Back/README.md)|[Diagnostic](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Diagnostic/README.md)|[Fake News](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Fake%20News/README.md)|
 |9. |[POOF](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/POOF/README.md)|[Alien Cradle](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Alien%20Cradle/README.md)|[Extraterrestrial Persistence](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Extraterrestrial%20Persistence/README.md)|
 |10. |[Artifact Of Dangerous Sighting](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Artifact%20Of%20Dangerous%20Sighting/README.md)|[oBfsC4t10n2](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/oBfsC4t10n2/README.md)|[Packet Cyclone](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Forensics/Packet%20Cyclone/README.md)|
+|11. |[Scripts and Formulas](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Forensics/Scripts%20and%20Formulas/README.md)|
 
   
 
