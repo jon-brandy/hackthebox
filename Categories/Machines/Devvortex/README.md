@@ -1,11 +1,11 @@
 # Devvortex
 > Write-up author: jon-brandy
 
+## Lesson Learned:
+- n
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c8f39e13-398d-457a-9e4c-144fc3b34e35)
 
-
-## Lesson Learned:
-- njkd;fs
 
 ## STEPS:
 > PORT SCANNING
@@ -37,5 +37,19 @@ Nmap done: 1 IP address (1 host up) scanned in 46.07 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/255c310a-13f0-45ae-b577-c6595e09a3bc)
 
 
-2. Next I tried to do directory listing and enumerating subdomain, both using **dirsearch**.
-3. 
+2. Next, I tried to do directory listing and enumerating subdomains using **dirsearch** and **ffuf**.  
+
+> Found a subdomain --> dev.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0be7379d-60e0-4c59-bb60-b7fac8d2d383)
+
+
+> dev.devvortex.htb
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/39af9892-c655-4589-a4aa-7fd5ac5af7dc)
+
+
+3. Running dirsearch again, found bunch of files but few of them caught my interest.
+
+
+
