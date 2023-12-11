@@ -4,6 +4,7 @@
 ## Lesson Learned:
 - Enumerating subdomain using ffuf.
 - Directory listing using dirsearch.
+- Exploiting CMS Joomla v4.2
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c8f39e13-398d-457a-9e4c-144fc3b34e35)
 
@@ -55,7 +56,7 @@ Nmap done: 1 IP address (1 host up) scanned in 46.07 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b40a7b83-edad-493e-ac79-e66d4e1bcc81)
 
 
-4. Turns out, it is **Joomla login page**.
+4. Turns out, it is **Joomla login page**. The webapp using **Joomla** CMS.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/452101aa-1232-4b6c-8fca-f411881795e0)
 
@@ -65,5 +66,30 @@ Nmap done: 1 IP address (1 host up) scanned in 46.07 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9b745f33-12bd-4216-a328-395676b9a3c4)
 
 
-6. 
+6. Running dirsearch again but this time without wordlist, found **README.txt** file and other interesting files.
 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/84bd48f3-803b-44f2-91f6-d30a454f1321)
+
+
+7. Accessing it, shows us the joomla's version.
+
+
+> VERSION 4.2
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0c30845a-a544-42f6-a3fb-063287bfbb21)
+
+
+8. Searching on the internet about the exploit for Joomla v4.2, found this promising github's POC.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b5c4a4e5-aff2-4256-b7b7-4be768cbabf9)
+
+
+9. 
+
+## IMPORTANT LINKS
+
+```
+https://github.com/Acceis/exploit-CVE-2023-23752
+https://www.exploit-db.com/exploits/51334
+```
