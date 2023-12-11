@@ -90,8 +90,71 @@ Nmap done: 1 IP address (1 host up) scanned in 46.07 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/87e3696c-c140-43c9-92d6-e28182fe81ef)
 
 
-10. Great, let's use it!
-11. 
+10. Great, let's use it and follow the procedure provided at the github's README.
+11. To run the ruby file, there are 3 gems needed. Those are **httpx**, **docopt**, and **paint**.
+12. All three can be installed by running:
+
+```
+sudo gem install httpx
+sudo gem install docopt
+sudo gem install paint
+```
+
+> EXPLOITING
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4e130ec1-d1bb-4c7b-985a-6c017facf4af)
+
+
+13. Awesome! We got mysql db cred.
+14. However, it's worth to try the cred to login at the **Joomla** login page, I assume there is **password reuse**.
+
+> TURNS OUT IT IS --> We're loggged in
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/73ecccf0-db1a-4ac1-9a08-0ee944eef37d)
+
+
+15. Next, I start to check the **system** option, then go to the **Warning** notification.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a73ff503-1ef6-4cda-a424-8fa465d3be32)
+
+> The warning message
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/78bbbfb4-5bbd-474c-8b5f-eae43e83d079)
+
+
+16. Seems it is not our interest.
+17. Long story short, I tried to add a simple bash reverse shell at **index.php**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/283ed526-bb49-46f9-b819-305c8cb51044)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7d1f5082-9027-4493-900b-0cba670c699e)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a84c0253-6b1d-4d0c-a55b-cf5df8d0b14b)
+
+
+18. Actually, maybe you can add at any .php files here, but make sure you access it to trigger the payload.
+19. The payload itself, I outsourced it from **PayloadAllTheThings**.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2a199f22-0a8f-494c-b7dd-49ec601d2a37)
+
+
+20. Click save accessing index.php shall trigger our payload.
+
+> GOT THE SHELL
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/492ac440-0433-438b-b78f-3d6a9d614d80)
+
+
+21. Great! Now let's use mysql to access lewis DB.
+
+> Using mysql.
+
+
+
+
 
 ## IMPORTANT LINKS
 
