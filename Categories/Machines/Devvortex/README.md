@@ -1,0 +1,40 @@
+# Devvortex
+> Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c8f39e13-398d-457a-9e4c-144fc3b34e35)
+
+
+## Lesson Learned:
+- njkd;fs
+
+## STEPS:
+> PORT SCANNING
+
+```
+┌──(brandy㉿bread-yolk)-[~]
+└─$ nmap -p- -sV -sC 10.10.11.242 --min-rate 1000     
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-12-11 01:23 PST
+Nmap scan report for 10.10.11.242
+Host is up (0.018s latency).
+Not shown: 65533 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.9 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 48add5b83a9fbcbef7e8201ef6bfdeae (RSA)
+|   256 b7896c0b20ed49b2c1867c2992741c1f (ECDSA)
+|_  256 18cd9d08a621a8b8b6f79f8d405154fb (ED25519)
+80/tcp open  http    nginx 1.18.0 (Ubuntu)
+|_http-title: Did not follow redirect to http://devvortex.htb/
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 46.07 seconds
+```
+
+1. Based from the nmap results, the machine runs a web application on port 80 and opens ssh logins on port 22.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/255c310a-13f0-45ae-b577-c6595e09a3bc)
+
+
+2. 
