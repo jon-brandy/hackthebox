@@ -150,7 +150,8 @@ sudo gem install paint
 
 21. Great! Now let's use mysql to access lewis DB.
 
-> Using mysql.
+> Using mysql --> lewis:P4ntherg0t1n5r3c0n##
+
 
 
 
