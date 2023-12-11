@@ -217,7 +217,13 @@ mysql -u lewis -pP4ntherg0t1n5r3c0n## -e "use joomla; select username, password 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b57552f2-e0d5-4940-a78a-0224025769e7)
 
 
-31. Checkingt the **/var** directory, we indeed have **crash** directory.
+31. The version is not the same, but it's worth a try to see if the previous one is indeed vulnerable with this.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/45eb30a9-a591-4f0f-aaed-57f85b3e3919)
+
+
+32. Checking the **/var** directory, we indeed have **crash** directory.
+
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c5245503-6b54-4b61-8937-6fbb60e5b6ed)
 
@@ -225,8 +231,25 @@ mysql -u lewis -pP4ntherg0t1n5r3c0n## -e "use joomla; select username, password 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/48b33553-fce4-4c77-b4e9-a53de9576d88)
 
 
-32. Based from the github's POC we need to create random .crash file, let's name it **exp.crash**.
-33. 
+33. Based from the github's POC we need a .crash file.
+34. Hence we need to make a program and intentionally make it crash.
+35. In this example, I made a bash script which intentionally crash.
+
+
+> BASH SCRIPT
+
+```sh
+#!/bin/bash
+
+echo "[+] Script is running"
+sleep 5 
+echo "Crashing the script"
+kill -SEGV $$
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cc087547-0d59-4b0f-8f7b-5f4b1a024365)
+
+
 
 ## IMPORTANT LINKS
 
