@@ -2,7 +2,8 @@
 > Write-up author: jon-brandy
 
 ## Lesson Learned:
-- n
+- Enumerating subdomain using ffuf.
+- Directory listing using dirsearch.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c8f39e13-398d-457a-9e4c-144fc3b34e35)
 
@@ -49,7 +50,20 @@ Nmap done: 1 IP address (1 host up) scanned in 46.07 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/39af9892-c655-4589-a4aa-7fd5ac5af7dc)
 
 
-3. Running dirsearch again, found bunch of files but few of them caught my interest.
+3. Running dirsearch again, found bunch of endpoint but one of them **administrator** shall be our interest.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b40a7b83-edad-493e-ac79-e66d4e1bcc81)
 
 
+4. Turns out, it is **Joomla login page**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/452101aa-1232-4b6c-8fca-f411881795e0)
+
+
+5. Searching on the internet for joomla login's default creds, shall leads to nothing.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9b745f33-12bd-4216-a328-395676b9a3c4)
+
+
+6. 
 
