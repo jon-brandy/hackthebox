@@ -6,6 +6,8 @@
 - Directory listing using dirsearch.
 - Exploiting CMS Joomla v4.2.
 - Accessing mysql (inline command).
+- Cracking password using john.
+- Exploiting apport-cli bin for privilege escalation.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c8f39e13-398d-457a-9e4c-144fc3b34e35)
 
@@ -208,7 +210,23 @@ mysql -u lewis -pP4ntherg0t1n5r3c0n## -e "use joomla; select username, password 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/064da11b-a476-4842-82b9-f025548b9051)
 
 
+28. **apport-cli** should be related to GTFO bins.
+29. But, searching about it there shall resulting to nothing.
+30. Searching on the internet again, found this github repository.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b57552f2-e0d5-4940-a78a-0224025769e7)
+
+
+31. Checkingt the **/var** directory, we indeed have **crash** directory.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c5245503-6b54-4b61-8937-6fbb60e5b6ed)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/48b33553-fce4-4c77-b4e9-a53de9576d88)
+
+
+32. Based from the github's POC we need to create random .crash file, let's name it **exp.crash**.
+33. 
 
 ## IMPORTANT LINKS
 
