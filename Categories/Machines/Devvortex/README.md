@@ -177,7 +177,7 @@ mysql -u lewis -pP4ntherg0t1n5r3c0n## -e "use joomla; select username, password 
 
 
 23. Awesome! We got 2 creds, we can crack the password using **john**.
-24. Long story short, john succeed to crack only for **logan**.
+24. Long story short, john succeed to crack only for **logan** --> `logan:tequieromucho`.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/afff59fd-0473-42ff-a6ed-b062f1be0038)
 
@@ -189,7 +189,7 @@ mysql -u lewis -pP4ntherg0t1n5r3c0n## -e "use joomla; select username, password 
 
 26. It is indeed logan.
 
-> GETTING USER FLAG
+> GETTING USER FLAG 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9ccd9b85-5156-49b5-92e7-2deab3508c3e)
 
@@ -203,7 +203,12 @@ mysql -u lewis -pP4ntherg0t1n5r3c0n## -e "use joomla; select username, password 
 68ec3cf7e4f24ccef72ed7974caa5924
 ```
 
-27. 
+27. To gain root, I started by checking the sudo permission for logan.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/064da11b-a476-4842-82b9-f025548b9051)
+
+
+
 
 ## IMPORTANT LINKS
 
