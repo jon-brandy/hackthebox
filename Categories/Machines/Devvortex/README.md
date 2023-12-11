@@ -85,7 +85,13 @@ Nmap done: 1 IP address (1 host up) scanned in 46.07 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b5c4a4e5-aff2-4256-b7b7-4be768cbabf9)
 
 
-9. 
+9. Reading another POC on exploitdb, seems this is what we are looking for.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/87e3696c-c140-43c9-92d6-e28182fe81ef)
+
+
+10. Great, let's use it!
+11. 
 
 ## IMPORTANT LINKS
 
