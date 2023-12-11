@@ -37,4 +37,5 @@ Nmap done: 1 IP address (1 host up) scanned in 46.07 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/255c310a-13f0-45ae-b577-c6595e09a3bc)
 
 
-2. 
+2. Next I tried to do directory listing and enumerating subdomain, both using **dirsearch**.
+3. 
