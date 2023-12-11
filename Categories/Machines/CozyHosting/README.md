@@ -1,7 +1,12 @@
 # CozyHosting
 > Write-up author: jon-brandy
 
+## Lesson learned:
+- Accessing postgres
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fa4c16d1-f3fe-47c6-810f-466d37c566a6)
+
+
 
 ## STEPS:
 > PORT SCANNING
