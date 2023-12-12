@@ -62,7 +62,7 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3d087d8e-ca8c-48b2-b1fa-7d1e8680547e)
 
 
-> 5TH QUESTION --> ANS: win_install.exe
+> 5TH QUESTION --> ANS: win_installer.exe
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9d221578-a496-42f5-9b2a-685fae232ec9)
 
