@@ -104,7 +104,7 @@ Khalid has just logged onto a host that he and his team use as a testing host fo
 
 
 
-> 8TH QUESTION --> ANS: 
+> 8TH QUESTION --> ANS: 721
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/df13f87a-2057-45de-9368-36ba257d8d76)
 
