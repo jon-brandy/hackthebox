@@ -124,3 +124,15 @@ enum4linux -a return.htb
 
 
 10. Nice! Let's use **evil-winrm**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/12e1c654-b1f0-4384-b14c-ad6689167798)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4e6cdcec-7b3f-4496-82b6-41a3e429715f)
+
+
+```
+5216ac3a0475fe671c786c662e88194e
+```
