@@ -9,7 +9,8 @@
 - Abusing network printer.
 - Using evil-winrm to login as svc-printer.
 - Enumerating group memberships for user svc-printer.
-- Checking user's privilege.
+- Checking user's privilege in windows.
+- Creating a reverse shell exe using msfvenom.
 - Abusing Active Directory (AD) security groups.
 
 ## STEPS:
@@ -171,7 +172,16 @@ net user svc-printer
 
 
 15. There is a binary in windows which used for communicating with the Service Control Manager (SCM) and services. It's called SC.
-16. Not only that, remembering the user has **SeBackupPrivilege** and **SeRestorePrivilege**, it makes 
+16. Not only that, remembering the user has **SeBackupPrivilege** and **SeRestorePrivilege**, makes it clear that we can gained root by modifying VSS binary path.
+
+```
+Why VSS?
+-> Volume Shadow Copy Service (VSS) can create and manage shadow copies of volumes on s Windows Systems. It is designed for creating backups and ensuring data consistency.
+```
+
+17. Now let's make a reverse shell exe using **msfvenom**.
+
+> 
 
 ## IMPORTANT LINKS
 
