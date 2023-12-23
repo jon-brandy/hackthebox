@@ -79,6 +79,10 @@ Nmap done: 1 IP address (1 host up) scanned in 143.45 seconds
 ```
 
 1. Based from the nmap results, the machine runs a web application hosted with Microsoft IIS httpd 10.0 web server and open public SMB.
+
+> WEB APP
+
+
 2. Few ports also opened and noticed the machine uses LDAP service.
 3. To enumerate public smb shares, you can use either **smbclient** or **enum4linux**.
 4. Anyway, enumerating it using **smbclient** found no workgroup.
@@ -96,3 +100,5 @@ enum4linux -a return.htb
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/219c992c-aa57-4661-ad0e-9dabeeda62e3)
 
+
+6. With this result, we can identified that `SMB does not allow guest sessions or NULL`.
