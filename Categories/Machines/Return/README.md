@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- Enumerating SMB Services using **enum4linux**.
+- Enumerating SMB Services using **smbclient**.
 
 ## STEPS:
 > PORT SCANNING
@@ -79,4 +79,19 @@ Nmap done: 1 IP address (1 host up) scanned in 143.45 seconds
 
 1. Based from the nmap results, the machine runs a web application hosted with Microsoft IIS httpd 10.0 web server and open public SMB.
 2. Few ports also opened and noticed the machine uses LDAP service.
-3. 
+3. To enumerate public smb shares, you can use either **smbclient** or **enum4linux**.
+4. Anyway, enumerating it using **smbclient** found no workgroup.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/31f869dc-37b9-4c5b-b256-7b80359c0b44)
+
+
+5. It goes the same with **enum4linux** but it provides another information, which states that the host is part of the **RETURN** domain.
+
+> Usage in enum4linux
+
+```
+enum4linux -a return.htb
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/219c992c-aa57-4661-ad0e-9dabeeda62e3)
+
