@@ -8,7 +8,8 @@
 - Enumerating SMB Services using **smbclient** and **enum4linux**.
 - Abusing network printer.
 - Using evil-winrm to login as svc-printer.
-- Enumerating group memberships for user svc-printer
+- Enumerating group memberships for user svc-printer.
+- Checking user's privilege.
 - Abusing Active Directory (AD) security groups.
 
 ## STEPS:
@@ -145,7 +146,7 @@ enum4linux -a return.htb
 5216ac3a0475fe671c786c662e88194e
 ```
 
-11. To gain root, we can start by enumerating the group memberships.
+11. To gain root, I start by enumerating the group memberships.
 
 ```
 net user svc-printer
@@ -154,18 +155,23 @@ net user svc-printer
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/af3da7c4-b906-401c-bb42-77beea08612b)
 
 
-12. Not a fond in windows pentesting, so I digging more about **Active Directory Security Groups** and found this website.
+12. Next, I check the user's priviege.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a12db1dd-60b9-41b7-9350-1c8d2c2cbd83)
+
+
+13. Not a fond in windows pentesting, so I digging more about **Active Directory Security Groups** and found this website.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/88c5aeef-e140-47f8-a506-58850fa8ce95)
 
 
-13. Long story short, **Server Operators Group** is our interest here. The most important here is, it can start and stop service. 
+14. Long story short, **Server Operators Group** is our interest here. The most important here is, it can start and stop service. 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4abaa734-a7ba-43cf-9809-93b9feed786d)
 
 
-14. There is a binary in windows which used for communicating with the Service Control Manager (SCM) and services. It's called SC.
-15. We can 
+15. There is a binary in windows which used for communicating with the Service Control Manager (SCM) and services. It's called SC.
+16. Not only that, remembering the user has **SeBackupPrivilege** and **SeRestorePrivilege**, it makes 
 
 ## IMPORTANT LINKS
 
