@@ -7,6 +7,8 @@
 ## Lessons Learned:
 - Enumerating SMB Services using **smbclient** and **enum4linux**.
 - Abusing network printer.
+- Using evil-winrm to login as svc-printer.
+- 
 
 ## STEPS:
 > PORT SCANNING
@@ -79,6 +81,7 @@ Nmap done: 1 IP address (1 host up) scanned in 143.45 seconds
 ```
 
 1. Based from the nmap results, the machine runs a web application hosted with Microsoft IIS httpd 10.0 web server and open public SMB.
+2. Noticed port **5985** (WinRM or Windows Remote Management) also opened, this should allows us to use **evil-winrm**.
 
 > WEB APP - Welp, we are in the admin panel.
 
@@ -111,4 +114,13 @@ enum4linux -a return.htb
 
 8. However, this page disclose an information that **svc-printer** cred is stored at port 389 (runs LDAP services).
 9. We can leak the password by setting a listener to that port and chaneg the server address to our public ip.
-10. 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0755bbe1-d1f6-4a11-9588-6165ec4e0505)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fc99ae94-b8fc-4421-88fa-c8fa8891e42c)
+
+
+10. Nice! Let's use **evil-winrm**.
