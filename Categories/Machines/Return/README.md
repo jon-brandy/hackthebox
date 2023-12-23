@@ -113,8 +113,8 @@ enum4linux -a return.htb
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/59978b87-b3f7-4664-b00d-be913f213a3e)
 
 
-8. However, this page disclose an information that **svc-printer** cred is stored at port 389 (runs LDAP services).
-9. We can leak the password by setting a listener to that port and chaneg the server address to our public ip.
+8. However, this page disclose an information that **svc-printer** cred can be seen by watching the request at port 389 (runs LDAP services).
+9. We can leak the password by setting a listener to that port and change the server address to our public ip. ANOTHER way to make it clear in case we can't see the leaked password clear, we can run **wireshark** when clicking the submit button.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0755bbe1-d1f6-4a11-9588-6165ec4e0505)
 
@@ -122,6 +122,11 @@ enum4linux -a return.htb
 > RESULT
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fc99ae94-b8fc-4421-88fa-c8fa8891e42c)
+
+
+> RESULT IN WIRESHARK
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dbae58ec-3662-4944-8344-ea1aa15d2a1b)
 
 
 10. Nice! Let's use **evil-winrm**.
@@ -154,11 +159,13 @@ net user svc-printer
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/88c5aeef-e140-47f8-a506-58850fa8ce95)
 
 
-13. Long story short, **Server Operators Group** is our interest here.
+13. Long story short, **Server Operators Group** is our interest here. The most important here is, it can start and stop service. 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4abaa734-a7ba-43cf-9809-93b9feed786d)
 
 
+14. There is a binary in windows which used for communicating with the Service Control Manager (SCM) and services. It's called SC.
+15. We can 
 
 ## IMPORTANT LINKS
 
