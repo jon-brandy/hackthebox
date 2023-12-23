@@ -8,6 +8,7 @@
 - Enumerating SMB Services using **smbclient** and **enum4linux**.
 - Abusing network printer.
 - Using evil-winrm to login as svc-printer.
+- Enumerating group memberships for user svc-printer
 - 
 
 ## STEPS:
@@ -133,6 +134,14 @@ enum4linux -a return.htb
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4e6cdcec-7b3f-4496-82b6-41a3e429715f)
 
 
+## USER FLAG
+
 ```
 5216ac3a0475fe671c786c662e88194e
+```
+
+11. To gain root, we can start by enumerating the group memberships.
+
+```
+net user svc-printer
 ```
