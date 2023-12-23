@@ -149,6 +149,17 @@ net user svc-printer
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/af3da7c4-b906-401c-bb42-77beea08612b)
 
 
+12. Not a fond in windows pentesting, so I digging more about **Active Directory Security Groups** and found this website.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/88c5aeef-e140-47f8-a506-58850fa8ce95)
+
+
+13. Long story short, **Server Operators Group** is our interest here.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4abaa734-a7ba-43cf-9809-93b9feed786d)
+
+
+
 ## IMPORTANT LINKS
 
 ```
