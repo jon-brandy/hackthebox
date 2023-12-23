@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- sdsd
+- Enumerating SMB Services using **enum4linux**.
 
 ## STEPS:
 > PORT SCANNING
@@ -78,4 +78,5 @@ Nmap done: 1 IP address (1 host up) scanned in 143.45 seconds
 ```
 
 1. Based from the nmap results, the machine runs a web application hosted with Microsoft IIS httpd 10.0 web server and open public SMB.
-2. Few ports also opened.
+2. Few ports also opened and noticed the machine uses LDAP service.
+3. 
