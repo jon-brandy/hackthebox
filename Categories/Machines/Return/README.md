@@ -5,7 +5,8 @@
 
 
 ## Lessons Learned:
-- Enumerating SMB Services using **smbclient**.
+- Enumerating SMB Services using **smbclient** and **enum4linux**.
+- asda
 
 ## STEPS:
 > PORT SCANNING
