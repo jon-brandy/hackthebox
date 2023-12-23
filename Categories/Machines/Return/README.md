@@ -9,7 +9,7 @@
 - Abusing network printer.
 - Using evil-winrm to login as svc-printer.
 - Enumerating group memberships for user svc-printer
-- 
+- Abusing Active Directory (AD) security groups.
 
 ## STEPS:
 > PORT SCANNING
@@ -144,4 +144,13 @@ enum4linux -a return.htb
 
 ```
 net user svc-printer
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/af3da7c4-b906-401c-bb42-77beea08612b)
+
+
+## IMPORTANT LINKS
+
+```
+https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-groups#bkmk-serveroperators
 ```
