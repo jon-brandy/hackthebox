@@ -6,7 +6,7 @@
 
 ## Lessons Learned:
 - Enumerating SMB Services using **smbclient** and **enum4linux**.
-- asda
+- Abusing network printer.
 
 ## STEPS:
 > PORT SCANNING
@@ -80,7 +80,9 @@ Nmap done: 1 IP address (1 host up) scanned in 143.45 seconds
 
 1. Based from the nmap results, the machine runs a web application hosted with Microsoft IIS httpd 10.0 web server and open public SMB.
 
-> WEB APP
+> WEB APP - Welp, we are in the admin panel.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/11a8acbe-87b9-4fb4-b7df-964d5321ac79)
 
 
 2. Few ports also opened and noticed the machine uses LDAP service.
@@ -102,3 +104,11 @@ enum4linux -a return.htb
 
 
 6. With this result, we can identified that `SMB does not allow guest sessions or NULL`.
+7. Moving on our attention to the web app and navigating to the **settings** option. Found out we can see the username but the password is hidden.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/59978b87-b3f7-4664-b00d-be913f213a3e)
+
+
+8. However, this page disclose an information that **svc-printer** cred is stored at port 389 (runs LDAP services).
+9. We can leak the password by setting a listener to that port and chaneg the server address to our public ip.
+10. 
