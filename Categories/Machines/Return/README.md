@@ -12,6 +12,7 @@
 - Checking user's privilege in windows.
 - Creating a reverse shell exe using msfvenom.
 - Abusing Active Directory (AD) security groups.
+- Utilizing exploit/multi/handler module in metasploit to get a stable shell.
 
 ## STEPS:
 > PORT SCANNING
