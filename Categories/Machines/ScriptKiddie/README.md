@@ -39,4 +39,12 @@ Nmap done: 1 IP address (1 host up) scanned in 73.05 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e977c852-6d17-410e-8dc0-7fbc752feddd)
 
 
-2. 
+2. Let's see if we can get the same result as our previous nmap scans by submitting localhost ip.
+
+> Turns out we get the same result.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a5154aa3-a693-4e22-9fd6-0a9d1b3988f4)
+
+
+3. Well, I assume this webapp provides the same functional as our own tools in kali.
+4. 
