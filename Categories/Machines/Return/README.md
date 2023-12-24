@@ -177,7 +177,8 @@ net user svc-printer
 
 ```
 Why VSS?
--> Volume Shadow Copy Service (VSS) can create and manage shadow copies of volumes on s Windows Systems. It is designed for creating backups and ensuring data consistency.
+-> Volume Shadow Copy Service (VSS) can create and manage shadow copies of volumes on s Windows Systems.
+It is designed for creating backups and ensuring data consistency.
 ```
 
 17. Now let's make a reverse shell exe using **msfvenom**.
