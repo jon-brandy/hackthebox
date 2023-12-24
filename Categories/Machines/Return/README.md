@@ -157,7 +157,7 @@ net user svc-printer
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/af3da7c4-b906-401c-bb42-77beea08612b)
 
 
-12. Next, I check the user's priviege.
+12. Next, I check the user's privilege.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a12db1dd-60b9-41b7-9350-1c8d2c2cbd83)
 
