@@ -86,6 +86,9 @@ Why searching for the attcker's IP?
 reflected the cookie back him. 
 ```
 
+> 5TH QUESTION
+
+
 > 8TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c617074b-b8a4-47b9-9084-c6d2fbd0a35b)
