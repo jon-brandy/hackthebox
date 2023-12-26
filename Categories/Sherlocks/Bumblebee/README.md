@@ -29,7 +29,6 @@ We have attached some logs from the forum and a full database dump in sqlite3 fo
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2104f97d-4e3f-4b4b-a1f5-70cdcd54234f)
 
 
-
 5. Noticed, there's a username with contractor mail, hence we can identified the external contractor is should be `apoole` or `apoole1`.
 
 
@@ -61,10 +60,17 @@ We have attached some logs from the forum and a full database dump in sqlite3 fo
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7c997bc2-b940-42e4-be3b-46e109590f7a)
 
 
+> I'm speculating the contractor tried to do XSS to get users's cookie.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/76c970fe-926c-4942-b46f-f09cb43d0a36)
+
+
 > 4TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e33d8301-d2d9-4a0f-b0ca-771ed0325659)
 
+
+11. For the URI
 
 > 8TH QUESTION --> ANS:
 
