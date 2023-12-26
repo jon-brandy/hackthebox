@@ -6,7 +6,7 @@
 ## Lesson learned:
 - Analyzing sqlite3 file.
 
-## DESCRIPTION:
+## SCENARIO:
 An external contractor has accessed the internal forum here at Forela via the Guest WiFi and they appear to have stolen credentials for the administrative user! 
 We have attached some logs from the forum and a full database dump in sqlite3 format to help you in your investigation.
 
@@ -117,6 +117,11 @@ reflected the cookie back him.
 > 7TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aec8b3ad-ea6b-41e3-b2f4-81d571b01eb4)
+
+
+16. Simply check the user agent for ip --> `10.255.254.2` because we already identified before that the IP is Forela's.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3e322b9e-a855-48a5-acce-639cd971d2a2)
 
 
 > 8TH QUESTION --> ANS:
