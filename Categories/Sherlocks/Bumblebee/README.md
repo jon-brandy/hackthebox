@@ -86,8 +86,23 @@ Why searching for the attcker's IP?
 reflected the cookie back him. 
 ```
 
-> 5TH QUESTION
+> 5TH QUESTION --> ANS: `26/04/2023 10:53:12`
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/116de872-072d-4659-a383-eafacd29f4d2)
+
+13. To find the UTC time, I started by analyzing the access.log file but did not find any supporting evidence.
+14. Hence, I started to analyze the **phpbb_log** table and found a column named **log_operation** which indicates a successful login attempt for admin role.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d1621ffb-178d-4f0d-b1f8-0bb85f4ca3a2)
+
+
+> RESULT 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7213dad3-6d11-4b7f-a30a-35fe7d078135)
+
+
+> 6TH QUESTION --> ANS: 
 
 > 8TH QUESTION --> ANS:
 
@@ -109,4 +124,5 @@ reflected the cookie back him.
 
 ```
 https://sqliteviewer.app/
+https://www.epochconverter.com/
 ```
