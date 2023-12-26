@@ -102,10 +102,21 @@ reflected the cookie back him.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7213dad3-6d11-4b7f-a30a-35fe7d078135)
 
 
-> 6TH QUESTION --> ANS: 
+> 6TH QUESTION --> ANS: Passw0rd1
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b59a15a0-ba49-44d2-bc2d-5f49f4f71bfd)
 
+
+15. To get the password name, I just strings the database and grep for "ldap".
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7f344630-e013-4f17-8091-55470eff4317)
+
+
+> 7TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aec8b3ad-ea6b-41e3-b2f4-81d571b01eb4)
 
 
 > 8TH QUESTION --> ANS:
