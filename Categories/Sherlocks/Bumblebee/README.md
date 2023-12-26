@@ -65,12 +65,26 @@ We have attached some logs from the forum and a full database dump in sqlite3 fo
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/76c970fe-926c-4942-b46f-f09cb43d0a36)
 
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: http://10.10.0.78/update.php
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e33d8301-d2d9-4a0f-b0ca-771ed0325659)
 
 
-11. For the URI
+11. For the URI path, we just need to analyze the malicious content.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ab57f6d7-1d83-4605-9d69-f40bf133ed05)
+
+
+12. Searching for the attacker's ip address shall gave us the URI path.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/00b9be11-f17f-4d90-a1bc-54a211fcc579)
+
+
+```
+Why searching for the attcker's IP?
+-> Since I am speculating that the attacker is doing XSS to steal user's cookie, hence the attacker COULD be
+reflected the cookie back him. 
+```
 
 > 8TH QUESTION --> ANS:
 
