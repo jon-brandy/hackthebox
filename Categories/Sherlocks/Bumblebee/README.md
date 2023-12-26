@@ -104,6 +104,10 @@ reflected the cookie back him.
 
 > 6TH QUESTION --> ANS: 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b59a15a0-ba49-44d2-bc2d-5f49f4f71bfd)
+
+
+
 > 8TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c617074b-b8a4-47b9-9084-c6d2fbd0a35b)
