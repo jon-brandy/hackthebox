@@ -10,7 +10,7 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/860f1cb2-71d0-48c5-bb58-9cf4d6155baa)
 
 
-## DESCRIPTION:
+## SCENARIO:
 As a fast growing startup, Forela have been utilising a business management platform. 
 Unfortunately our documentation is scarce and our administrators aren't the most security aware. 
 As our new security provider we'd like you to take a look at some PCAP and log data we have exported to confirm if we have (or have not) been compromised.
