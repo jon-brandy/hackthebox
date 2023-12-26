@@ -60,7 +60,7 @@ We have attached some logs from the forum and a full database dump in sqlite3 fo
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7c997bc2-b940-42e4-be3b-46e109590f7a)
 
 
-> I'm speculating the contractor tried to do XSS to get users's cookie.
+> I'm **SPECULATING** that the contractor tried to do XSS to get users's cookie.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/76c970fe-926c-4942-b46f-f09cb43d0a36)
 
@@ -82,7 +82,7 @@ We have attached some logs from the forum and a full database dump in sqlite3 fo
 
 ```
 Why searching for the attcker's IP?
--> Since I am speculating that the attacker is doing XSS to steal user's cookie, hence the attacker COULD be
+-> Since I am SPECULATING that the attacker is doing XSS to steal user's cookie, hence the attacker COULD be
 reflected the cookie back him. 
 ```
 
