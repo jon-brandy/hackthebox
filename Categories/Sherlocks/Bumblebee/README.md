@@ -114,7 +114,7 @@ reflected the cookie back him.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7f344630-e013-4f17-8091-55470eff4317)
 
 
-> 7TH QUESTION --> ANS:
+> 7TH QUESTION --> ANS: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aec8b3ad-ea6b-41e3-b2f4-81d571b01eb4)
 
