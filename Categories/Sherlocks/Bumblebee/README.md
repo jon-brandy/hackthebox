@@ -124,9 +124,24 @@ reflected the cookie back him.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3e322b9e-a855-48a5-acce-639cd971d2a2)
 
 
-> 8TH QUESTION --> ANS:
+> 8TH QUESTION --> ANS: `26/04/2023 10:53:51`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c617074b-b8a4-47b9-9084-c6d2fbd0a35b)
+
+
+17. Again, we need to check **LOG OPERATION** to get the time.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ad5dd7ca-be56-48c2-9020-20882d10bdda)
+
+
+18. As you can see, after the attacker successfully logged in as admin, he began to add his own user account as part of the **admin** group.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/76a2582e-be4c-43c2-ab72-3dd570ef70b7)
+
+
+19. To identify the timestamp, simply convert the epoch time to UTC.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9df2f862-bae6-487f-8189-176ffd8bfae1)
 
 
 
@@ -135,13 +150,22 @@ reflected the cookie back him.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/91f99521-2df8-455d-8838-cd26619e6331)
 
 
-![Uploading image.png…]()
+20. This time, I found the evidence when reviewing the access.log file.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/79ed6a59-1f5c-4724-ae85-b691119fd81d)
+
+
+21. Previously at table **phpbb_log** we can identify that the attacker attempted to do DB backup, then the timestamp is added at the backup's filename.
+22. At this point, we are **VERY** sure this is the backup file.
+23. Based from this log's line, we can see a **GET** request is made, the attacker tried to download the backup file the system previously created.
+24. To get the UTC timestamp, simply substract 12 by 1 because the log's timestamp is +1.
 
 > 10TH QUESTION --> ANS: 34707
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a37aa44c-0402-432d-98c1-8235427a2d2f)
 
+
+25. Besides the status code, we can see the bytes or lengths for current request.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/218e2bd8-ccb6-4d07-bdb1-c732f9b2f766)
 
