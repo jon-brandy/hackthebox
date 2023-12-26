@@ -135,9 +135,15 @@ reflected the cookie back him.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/91f99521-2df8-455d-8838-cd26619e6331)
 
 
+![Uploading image.png…]()
+
+
 > 10TH QUESTION --> ANS: 34707
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a37aa44c-0402-432d-98c1-8235427a2d2f)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/218e2bd8-ccb6-4d07-bdb1-c732f9b2f766)
 
 
 ## IMPORTANT LINKS
