@@ -44,7 +44,7 @@ Now please answer the questions regarding this security event so you can report 
 
 7. Based from our previous identification, we identified the binary filename is --> psexesvc.exe.
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: `07/09/2023  12:06:54`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/434c9c70-fa2c-4d25-802b-bb2bd5a1a8b2)
 
@@ -59,11 +59,47 @@ as these files can provide insights into which applications are frequently used 
 loaded into memory during system startup.
 ```
 
+9. To parse the prefetch file I used [this](https://github.com/EricZimmerman/PECmd) online tool created by Eric Zimmerman.
 
-> 4TH QUESTION --> ANS:
+```
+.\PECmd.exe -f 'C:\Users\saput\Downloads\CYBERDEFENDER\Tracer\C\Windows\prefetch\PSEXESVC.EXE-AD70946C.pf'
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0e84482e-1a98-4810-8d6e-31b096aa8fa6)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ab7bb046-6144-435d-9acd-5831d8747dc7)
+
+
+10. Noticed, there's a **run count** header which states 9. Another solution is to parse the prefetch file if we want to identify how many times a binary is executed.
+11. Based from the Github's documentation, we can extract the information to a json or csv format.
+12. I tried to extract the information into csv format and saved them to a directory named `new_directory`.
+
+```
+.\PECmd.exe -f 'C:\Users\saput\Downloads\CYBERDEFENDER\Tracer\C\Windows\prefetch\PSEXESVC.EXE-AD70946C.pf' --csv new_directory
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/86cac15e-0320-4332-b4b9-cf0770898974)
+
+
+13. The **output_timeline** csv should be our interest here.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fc20aae3-6aa1-4d24-85c7-a576ca6f174b)
+
+
+14. Simply viewing the timeline for the 6th row shall gave us the correct timestamp.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f21f846b-d31b-455b-8eb0-64575173704e)
+
+
+> 4TH QUESTION --> ANS: 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dcf41fa7-96ef-4a73-ac31-d3345953e04b)
 
+
+15. 
 
 > 5TH QUESTION --> ANS:
 
@@ -79,5 +115,12 @@ loaded into memory during system startup.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0406686d-fdd5-4d64-83c5-a3b8c2fcceab)
 
+
+## IMPORTANT LINKS
+
+```
+https://github.com/EricZimmerman/PECmd
+https://ericzimmerman.github.io/#!index.md
+```
 
 
