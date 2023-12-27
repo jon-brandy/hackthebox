@@ -1,4 +1,4 @@
-# Tracer
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2d1b431a-662b-483f-9e56-c22a09993301)# Tracer
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6a82121a-8a9f-4c90-8b4d-d8e12adaf889)
@@ -106,7 +106,8 @@ loaded into memory during system startup.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6afb92ba-901d-4054-87c3-63b9d24dfafe)
 
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: PSEXEC-FORELA-WKSTN001-95F03CFE.key
+
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b21dc320-cf6b-4761-aa1f-e063478c116f)
 
@@ -121,13 +122,32 @@ creation time, permissions, and the location of the file data on the disk.
 ```
 
 17. To parse it, we can use an online tool created by Eric Zimmerman named **MFTECmd**.
+18. I tried to extract the information into csv format and stored it on a directory named --> mftparse_result.
+
+```
+.\MFTECmd.exe -f 'C:\Users\saput\Downloads\CYBERDEFENDER\Tracer\C\$Extend\$J' --csv mftparse_result
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bf4f5e53-26a0-4e07-9985-c9901f89aaa7)
 
 
+19. Upon analyzing the csv file, I noticed the timestamp is descending. To get the correct key, we just need to search for timestamp which is **ONE SECOND** different than the execution of the last 5th instance.
+20. Long story short, I managed to find the correct key at row 145570. Noticed the timestamp is different one second only.
 
-> 6TH QUESTION --> ANS:
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2ce7de9f-ba0e-43a7-a7e2-de00290dcb80)
+
+
+21. Alternatives way to identify it, simply check the results from PECmd.exe at the `Files Referenced` header.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8d81dc7b-cf80-4f8e-8ed6-15be218b0ea5)
+
+
+> 6TH QUESTION --> ANS: `07/09/2023 12:06:55`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5554716f-12c1-4546-b9b1-1aa1838027ec)
 
+
+21. We managed to find the timestamp previously.
 
 > 7TH QUESTION --> ANS:
 
