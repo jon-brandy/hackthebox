@@ -6,6 +6,8 @@
 
 ## Lessons learned:
 - Analyzing windows event log file.
+- Parsing a prefetch file and extract the information into csv format using PECmd.
+- Parsing $MFT using MFTECmd.
 
 ## SCENARIO:
 A junior SOC analyst on duty has reported multiple alerts indicating the presence of PsExec on a workstation.
@@ -44,7 +46,7 @@ Now please answer the questions regarding this security event so you can report 
 
 7. Based from our previous identification, we identified the binary filename is --> psexesvc.exe.
 
-> 3RD QUESTION --> ANS: `07/09/2023  12:06:54`
+> 3RD QUESTION --> ANS: `07/09/2023 12:06:54`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/434c9c70-fa2c-4d25-802b-bb2bd5a1a8b2)
 
@@ -94,16 +96,32 @@ loaded into memory during system startup.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f21f846b-d31b-455b-8eb0-64575173704e)
 
 
-> 4TH QUESTION --> ANS: 
+> 4TH QUESTION --> ANS: FORELA-WKSTN001
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dcf41fa7-96ef-4a73-ac31-d3345953e04b)
 
 
-15. 
+15. To identify the hostname, we just need to view the `Files Referenced` result from the prefetch parser.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6afb92ba-901d-4054-87c3-63b9d24dfafe)
+
 
 > 5TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b21dc320-cf6b-4761-aa1f-e063478c116f)
+
+
+16. To identify the fullname of the key file dropped by 5th last instance, we can try to parse the Master File Table (MFT).
+
+```
+MFT stands for Master File Table, and it is a crucial component of the NTFS (New Technology File System) file system used in Windows operating systems.
+The MFT is a database that stores information about every file and directory on an NTFS-formatted volume.
+It acts as a centralized index, keeping track of metadata for each file, including attributes such as file name, size,
+creation time, permissions, and the location of the file data on the disk.
+```
+
+17. To parse it, we can use an online tool created by Eric Zimmerman named **MFTECmd**.
+
 
 
 > 6TH QUESTION --> ANS:
