@@ -49,6 +49,17 @@ Now please answer the questions regarding this security event so you can report 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/434c9c70-fa2c-4d25-802b-bb2bd5a1a8b2)
 
 
+8. Next, to get the timestamp for the 5th last instance of the PsExec, I tried to parse the prefetch file we extracted from the .zip file before.
+
+```
+Why prefetch file is the interest now?
+-> Because Prefetch files is used to preloading certain data and code into memory.
+Hence analyzing it helps us to understand the execution patterns of applications on a system,
+as these files can provide insights into which applications are frequently used and how they are
+loaded into memory during system startup.
+```
+
+
 > 4TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dcf41fa7-96ef-4a73-ac31-d3345953e04b)
