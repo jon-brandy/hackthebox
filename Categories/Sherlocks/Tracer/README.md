@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2d1b431a-662b-483f-9e56-c22a09993301)# Tracer
+# Tracer
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6a82121a-8a9f-4c90-8b4d-d8e12adaf889)
