@@ -18,15 +18,31 @@ Now please answer the questions regarding this security event so you can report 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/41106a98-cdf9-4eaa-b2d6-0999af903523)
 
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: 9
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e9ab6274-0181-4426-ba61-8cf85ecff92c)
 
 
-> 2ND QUESTION --> ANS:
+2. To identify how many times was PsExec executed by the attacker, we need to analyze the **Security** event log file.
+3. Analyzing the content of the latest log, we can identified the attacker's binary filename.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3aef0425-ecfd-4bc4-baa9-3aa341b907ed)
+
+
+4. As you can see, it states **Caller Process Name**, it means the result is executed using this binary.
+5. Hence, to check how many times it executed we just need to filter the **Event ID** displayed to --> **4625**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eebf76f1-8077-4466-b241-e4e838c7a056)
+
+
+6. I count it manually, by reviewing each contents. Counted +1 if psexesvc.exe executed.
+
+> 2ND QUESTION --> ANS: psexesvc.exe
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/73d2c743-4d79-426c-abb1-25899b40faca)
 
+
+7. Based from our previous identification, we identified the binary filename is --> psexesvc.exe.
 
 > 3RD QUESTION --> ANS:
 
