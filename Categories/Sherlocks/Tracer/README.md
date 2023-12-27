@@ -8,6 +8,7 @@
 - Analyzing windows event log file.
 - Parsing a prefetch file and extract the information into csv format using PECmd.
 - Parsing $MFT using MFTECmd.
+- Analyzing sysmon operational event log to identify fullname of the named Pipe ending with stderr.
 
 ## SCENARIO:
 A junior SOC analyst on duty has reported multiple alerts indicating the presence of PsExec on a workstation.
@@ -149,9 +150,30 @@ creation time, permissions, and the location of the file data on the disk.
 
 21. We managed to find the timestamp previously.
 
-> 7TH QUESTION --> ANS:
+> 7TH QUESTION --> ANS: \PSEXESVC-FORELA-WKSTN001-3056-stderr
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0406686d-fdd5-4d64-83c5-a3b8c2fcceab)
+
+
+22. To identify the fullname of the named Pipe ending with **stderr** keyword, we can start by analysing `Sysmon` event log.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f7e8ac91-64e4-4c86-8a25-c076dc7022cc)
+
+```
+Sysmon logs events related to various system activities, providing detailed information about processes, network connections, file creation, registry modifications, and more. The information logged by Sysmon can be crucial for detecting and investigating security incidents.
+```
+
+
+23. As we know, sysmon provide many event log. However there is a way to speeding the analysis, first we just need to analyze the same timestamp as the 5th.
+24. Then our second interest is this timestamp:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a7daa328-96e8-446b-b0bc-3d5d37652b3c)
+
+
+25. Just focusing when the second timestamp is close to `12:06:55`.
+26. Long story short, found the correct name.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ff189064-a491-44e4-a66e-fa410a077a2e)
 
 
 ## IMPORTANT LINKS
