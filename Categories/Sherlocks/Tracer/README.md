@@ -13,4 +13,9 @@ They verified the alerts and escalated the alerts to tier II. As an Incident res
 Now please answer the questions regarding this security event so you can report it to your incident manager.
 
 ## STEPS:
-1. In this challenge we're given 
+1. In this challenge we're given few files of windows event log and prefetch files.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/41106a98-cdf9-4eaa-b2d6-0999af903523)
+
+
+
