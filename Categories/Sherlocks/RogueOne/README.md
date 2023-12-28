@@ -96,19 +96,39 @@ Knowing this, the attacker might spoof few legitimate processes, one of them is 
 12. Previously we already identified that the malicious PID spawned another process --> cmd.exe with PID 4364.
 
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: 5bd547c6f5bfc4858fe62c8867acfbb5
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a46b2bd6-153c-4281-94b4-16ce0a8f128d)
 
 
-> 4TH QUESTION --> ANS:
+13. To identify the md5hash, we need to dump the process then execute md5sum for **svchost.exe.img**.
+
+```
+python3 ../../volatility3/vol.py -f 20230810.mem -o . windows.dumpfiles --pid 6812
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/830449cd-dcdc-4db3-8e1f-2ea8f75bcb0c)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6c5f46c9-9fc1-4c31-9218-7bd5697d5f86)
+
+
+
+> 4TH QUESTION --> ANS: 13.127.155.166:8888
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/59721088-9c05-4618-919a-b7e727afdee4)
+
+
+14. Refering back to the previous result after executing **netstat** plugin, we can identified the C2 server's IP and PORT.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6bd94045-39e7-48eb-be10-ebabaed4e9f5)
 
 
 > 5TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/535cab90-f0d1-4ace-93f3-b767bac4c701)
+
+
 
 
 > 6TH QUESTION --> ANS:
