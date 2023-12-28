@@ -146,9 +146,15 @@ python3 ../../volatility3/vol.py -f 20230810.mem -o . windows.dumpfiles --pid 68
 
 
 
-> 7TH QUESTION --> ANS:
+> 7TH QUESTION --> ANS: `10/08/2023 11:58:10`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/baf4d3cd-0517-43f9-a0e7-7d8c6416d516)
+
+
+17. To check when it submitted to virustotal, we just need to paste the md5sum at the search bar, then open the **details** tab and check the **history** section.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/21a6f0f1-af33-444c-8cc6-043940b9d9fe)
+
 
 
 
