@@ -87,9 +87,12 @@ Knowing this, the attacker might spoof few legitimate processes, one of them is 
 ```
 
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: 4364
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/78eb4957-6a6e-4e01-83c5-52ce7faf7f90)
+
+
+12. Previously we already identified that the malicious PID spawned another process --> cmd.exe with PID 4364.
 
 
 > 3RD QUESTION --> ANS:
