@@ -35,7 +35,7 @@ to investigate and resolve this urgent incident.
 
 3. Hence we can use windows plugin using volatility.
 
-### Looking for IOCs
+> Looking for IOCs
 
 4. Let's check for connections that are active at the time of the memory dump process.
 
