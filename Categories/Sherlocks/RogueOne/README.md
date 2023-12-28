@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- Using volatility3 to do memory forensics.
+- Using volatility3 to conduct memory forensics.
 
 ## SCENARIO:
 
