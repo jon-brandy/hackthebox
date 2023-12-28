@@ -33,7 +33,7 @@ to investigate and resolve this urgent incident.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7bc4e6ec-60fc-4ddb-94f5-6aff07c943d1)
 
 
-3. Hence we can use windows plugin using volatility.
+3. Hence we can use windows plugin with volatility.
 
 > Looking for IOCs
 
