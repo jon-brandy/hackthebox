@@ -156,5 +156,9 @@ python3 ../../volatility3/vol.py -f 20230810.mem -o . windows.dumpfiles --pid 68
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/21a6f0f1-af33-444c-8cc6-043940b9d9fe)
 
 
+## IMPORTANT LINKS
 
+```
+https://blog.onfvp.com/post/volatility-cheatsheet/
+```
 
