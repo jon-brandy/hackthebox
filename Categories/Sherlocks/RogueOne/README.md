@@ -129,23 +129,26 @@ python3 ../../volatility3/vol.py -f 20230810.mem -o . windows.dumpfiles --pid 68
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/535cab90-f0d1-4ace-93f3-b767bac4c701)
 
 
-15. We can identified the timestamp where the communication established using **netstat** plugin.
+15. Again, we can identified the timestamp where the communication established using **netstat** plugin.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7dbc465c-d8a0-4306-8c22-35bbf632b179)
 
 
-> 6TH QUESTION --> ANS: 0x9e8b8cb58010
+> 6TH QUESTION --> ANS: 0x9e8b87762080
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/49f0b387-c048-40f2-88a3-23b2ab8c4e44)
 
 
-16. Again, at the previous **netstat** result, we can identified the physical offset of the malicious process.
+16. This time to analyze the memory offset of the malicious process, we can view it by listing the process and filtering it only for the malicious PID using **pslist** or **pstree**.
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e29f0635-8373-4c8f-9bfc-eeb65f23c9c6)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aba010e3-7789-495c-a881-268d5f392923)
 
 
 
 > 7TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/baf4d3cd-0517-43f9-a0e7-7d8c6416d516)
+
+
 
