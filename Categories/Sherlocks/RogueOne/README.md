@@ -6,6 +6,7 @@
 
 ## Lessons Learned:
 - Using volatility3 to conduct memory forensics.
+- Identifying spoofed process by checking active connections and PPID for the active connections.
 
 ## SCENARIO:
 
