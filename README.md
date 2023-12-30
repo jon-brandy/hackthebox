@@ -43,6 +43,7 @@
   |:-:|:------:|:------:|:------:|
   |1. |[Meerkat](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Meerkat/README.md)|[Logjammer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Logjammer/README.md)|[Litter](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Litter/README.md)|
   |2. |[Bumblebee](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Bumblebee/README.md)|[Tracer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Tracer/README.md)|[RogueOne](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/RogueOne/README.md)|
+  |3. |[Hyperfiletable](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Hyperfiletable/README.md)||
 </details>
 
 
