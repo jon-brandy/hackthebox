@@ -137,11 +137,14 @@ Logical size (actual size) --> 0x478 = 1144
 
 
 
-> 10TH QUESTION --> ANS:
+> 10TH QUESTION --> ANS: 3471
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d5a5b2b4-6e13-46c6-9888-5ddee4659e54)
 
 
+15. To identify how many files remain under, I didn't figure out the fastest way. But from what I did, every time I click a directory I continuously adding the value shown at the bottom right.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0c2ae89d-e70f-4adc-8996-87e58788cea0)
 
 
 ## IMPORTANT LINKS
