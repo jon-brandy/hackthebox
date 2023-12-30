@@ -57,6 +57,9 @@ python3 'C:\CTF\TOOLS-FOREN\analyzeMFT\analyzeMFT.py' -f .\mft.raw -o analyzed_m
 7. To get the malicious filename, I start by searching .hta and it resulting to only 1 filename namely --> Onboarding.hta.
 8. This concludes that it is indeed the malicious file.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c9d7d23e-5ffb-4ca8-b2b2-47129948f14b)
+
+
 > 4TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/afb69561-172b-42ee-9e00-0d1adec8b87f)
