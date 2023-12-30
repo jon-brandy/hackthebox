@@ -65,7 +65,14 @@ python3 'C:\CTF\TOOLS-FOREN\analyzeMFT\analyzeMFT.py' -f .\mft.raw -o analyzed_m
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/afb69561-172b-42ee-9e00-0d1adec8b87f)
 
 
-9. To identify the ZoneIdentifier of the download for the malicious HTA file, we can lookfor 
+9. To identify the ZoneIdentifier of the download for the malicious HTA file, we can analyze the mft.raw file using **MFTExplorer**. 
+
+```
+What is ZoneID?
+The Zone Identifier is a piece of metadata associated with files that are downloaded from the internet. It is a security feature implemented in Microsoft Windows to help protect the system from potentially harmful content.
+```
+
+
 
 > 5TH QUESTION --> ANS:
 
@@ -104,4 +111,5 @@ python3 'C:\CTF\TOOLS-FOREN\analyzeMFT\analyzeMFT.py' -f .\mft.raw -o analyzed_m
 ```
 https://andreafortuna.org/2017/07/18/how-to-extract-data-and-timeline-from-master-file-table-on-ntfs-filesystem/
 https://github.com/dkovar/analyzeMFT
+https://ericzimmerman.github.io/#!index.md
 ```
