@@ -36,11 +36,17 @@ python3 'C:\CTF\TOOLS-FOREN\analyzeMFT\analyzeMFT.py' -f .\mft.raw -o analyzed_m
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9e6b248c-048e-40ae-a406-9feb5b82f9dc)
 
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: Randy Savage
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5a89a8df-a628-4d3b-86b1-73462c5387fe)
 
 
+5. To identify the user's name on the system, we can filter our search with this --> `/Users/`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5240e0df-0e42-4961-b259-09ca63176ffd)
+
+
+6. **Randy Savage** stands out as the only user we can see here.
 
 > 3RD QUESTION --> ANS:
 
