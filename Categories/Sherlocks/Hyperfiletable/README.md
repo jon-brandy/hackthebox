@@ -65,6 +65,8 @@ python3 'C:\CTF\TOOLS-FOREN\analyzeMFT\analyzeMFT.py' -f .\mft.raw -o analyzed_m
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/afb69561-172b-42ee-9e00-0d1adec8b87f)
 
 
+9. To identify the ZoneIdentifier of the download for the malicious HTA file, we can lookfor 
+
 > 5TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d2855386-f550-4511-8db9-af380a4461cf)
