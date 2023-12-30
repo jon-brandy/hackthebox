@@ -6,7 +6,7 @@
 
 ## Lessons Learned:
 - Parsing raw mft data using analyzeMFT.
-- Searching ZoneID for a specific file using MFTExplorer.
+- Searching ZoneID, physical size, and logical size for a specific file using MFTExplorer.
 
 ## SCENARIO:
 There has been a new joiner in Forela, they have downloaded their onboarding documentation, however someone has managed to phish the user with a malicious attachment. 
