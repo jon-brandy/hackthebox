@@ -5,7 +5,8 @@
 
 
 ## Lessons Learned:
-- sdasd
+- Parsing raw mft data using analyzedMFT.py
+- 
 
 ## SCENARIO:
 There has been a new joiner in Forela, they have downloaded their onboarding documentation, however someone has managed to phish the user with a malicious attachment. 
@@ -48,10 +49,13 @@ python3 'C:\CTF\TOOLS-FOREN\analyzeMFT\analyzeMFT.py' -f .\mft.raw -o analyzed_m
 
 6. **Randy Savage** stands out as the only user we can see here.
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: Onboarding.hta
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6434cc11-abfb-46ad-9a85-7d596254a627)
 
+
+7. To get the malicious filename, I start by searching .hta and it resulting to only 1 filename namely --> Onboarding.hta.
+8. This concludes that it is indeed the malicious file.
 
 > 4TH QUESTION --> ANS:
 
