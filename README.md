@@ -32,7 +32,6 @@
 
 </details>
 
-
 > CASES INVESTIGATED
 
 <details>
