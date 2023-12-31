@@ -6,6 +6,7 @@
 
 > MACHINES PWNED
 
+
 <details>
 <br>
 <summary> Machines </summary>
@@ -34,6 +35,7 @@
 
 > CASES INVESTIGATED
 
+
 <details>
   <br>
   <summary>Sherlocks</summary>
@@ -47,6 +49,7 @@
 
 
 > CTFs PWNED
+
 
 <details>
 <br>
