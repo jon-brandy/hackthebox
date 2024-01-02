@@ -73,4 +73,4 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 82.16 seconds
 ```
 
-1. Based from the nmap results, the machine runs a web application on port 5985 and have public smn share.
+1. Based from the nmap results, the machine runs a web application on port 5985 and have public smb share.
