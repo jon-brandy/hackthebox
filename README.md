@@ -6,7 +6,6 @@
 
 > MACHINES PWNED
 
-
 <details>
 <br>
 <summary> Machines </summary>
