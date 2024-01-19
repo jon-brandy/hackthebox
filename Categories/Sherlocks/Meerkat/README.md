@@ -1,14 +1,13 @@
 # Meerkat
 
-## Lesson learned:
-- Identifying **Credential Stuffing** attacks.
-- Bonitasoft CVE.
-- Packet filtering and custom column value.
-
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/860f1cb2-71d0-48c5-bb58-9cf4d6155baa)
 
+## Lesson learned:
+- Identifying **Credential Stuffing** attacks.
+- Bonitasoft CVE.
+- Packet filtering and custom column value.
 
 ## SCENARIO:
 As a fast growing startup, Forela have been utilising a business management platform. 
