@@ -40,11 +40,13 @@
   <br>
   <summary>Sherlocks</summary>
   
-  |No.|Column 1|Column 2|Column 3|
-  |:-:|:------:|:------:|:------:|
-  |1. |[Meerkat](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Meerkat/README.md)|[Logjammer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Logjammer/README.md)|[Litter](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Litter/README.md)|
-  |2. |[Bumblebee](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Bumblebee/README.md)|[Tracer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Tracer/README.md)|[RogueOne](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/RogueOne/README.md)|
-  |3. |[Hyperfiletable](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Hyperfiletable/README.md)||
+  |No.|SOC|DFIR|Malware Analysis|Threat Intelligence|
+  |:-:|:-:|:--:|:--------------:|:-----------------:|
+  |1. |[Meerkat](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Meerkat/README.md)|[Bumblebee](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Bumblebee/README.md)|[]()|
+  |2. |[Litter](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Litter/README.md)|[Logjammer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Logjammer/README.md)|[]()|
+  |3. |[]()|[Hyperfiletable](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Hyperfiletable/README.md)||
+  |4. |[]()|[Tracer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Tracer/README.md)|
+  |5. |[]()|[RogueOne](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/RogueOne/README.md)|
 </details>
 
 
