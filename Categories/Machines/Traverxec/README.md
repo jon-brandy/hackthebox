@@ -70,8 +70,30 @@ Nmap done: 1 IP address (1 host up) scanned in 147.43 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d597ca89-df1b-4283-9284-d145608c2a92)
 
 
-8. Interesting! It seems, we need to get reverse shell for better lateral movement.
-9. 
+8. Interesting! It seems, we need to do reverse shell for better lateral movement. Checking **nostromo** configuration file might help us.
+9. Let's enumerate the service's directory --> `/var/nostromo`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ea4554c3-85e3-4d83-91bf-8e2a2638909f)
+
+
+10. Checking what's inside **nhttpd.conf** shall resulting to another interest again.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f95a7146-2823-419d-abe4-71db2c48994e)
+
+
+11. So far we identified that we can get the user's password hash by checking **.htpasswd** and we identified another home public directory named public-www.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8e33ea64-7f1a-4e31-8b26-2bed01baeabd)
+
+
+12. Sadly **hashid** failed to identify the hash type.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d4161f3b-9f26-46a3-aa43-cf2a33b4194a)
+
+
+13. Seems we need to go another way around.
+
 
 
 
