@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- sdada
+- Exploiting nostromo 1.9.6.
 
 ## STEPS:
 > PORT SCANNING
@@ -36,3 +36,48 @@ Nmap done: 1 IP address (1 host up) scanned in 147.43 seconds
 
 > WEB APP
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e4d8bd58-623a-4e35-9953-84ca3b1c28cd)
+
+
+2. Enumerating endpoint or files using dirsearch shall resulting to no interesting result.
+3. Scrolling down the webapp, found a contact form.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/88a3839b-0f72-4c93-a687-2882e93e2b45)
+
+
+4. After tried to sent message, got result which indicates this form is not our interest.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ec58eabb-8dd8-4f18-b13c-d3dbdedcc857)
+
+
+5. Based from the nmap result for port 80, we can identified that the web server is **nostromo 1.9.6**.
+6. Searching on the internet for CVE related to that service's version, shall resulting to these exploitDB and github POC.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b3606a17-a359-4904-8880-d5a5bd18fe05)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f70372bf-82ce-4968-95db-ab1d866ddde1)
+
+
+> RESULT OF USING THE GITHUB'S POC
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/64248c7e-6edb-4902-af46-86e3da97e91a)
+
+
+7. Great! Using the github's poc shall helps us grab the user flag.
+
+> GETTING THE USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d597ca89-df1b-4283-9284-d145608c2a92)
+
+
+8. Interesting! It seems, we need to get reverse shell for better lateral movement.
+9. 
+
+
+
+## IMPORTANT LINKS
+
+```
+https://github.com/aN0mad/CVE-2019-16278-Nostromo_1.9.6-RCE
+https://www.exploit-db.com/exploits/47837
+```
