@@ -81,7 +81,13 @@ Nmap done: 1 IP address (1 host up) scanned in 147.43 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f95a7146-2823-419d-abe4-71db2c48994e)
 
 
-11. So far we identified that we can get the user's password hash by checking **.htpasswd** and we identified another home public directory named public-www.
+11. So far we identified that we can get the user's password hash by checking **.htpasswd** and we identified **HOMEDIRS** section.
+
+##### NOTES:
+
+```
+Based from the above result, the HOMEDIRS section determines that public_www directory might be inside the david's home directory. Even though david's home is not accessible by other user but public_www is accessible.
+```
 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8e33ea64-7f1a-4e31-8b26-2bed01baeabd)
