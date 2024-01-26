@@ -200,7 +200,7 @@ As our new security provider we'd like you to take a look at some PCAP and log d
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b9580b7e-897e-4308-91ff-0c977443f74e)
 
 
-> 11TH QUESTION --> ANS:
+> 11TH QUESTION --> ANS: T1098.004
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d2d19336-38b0-4409-8b2a-aafa68f3d810)
 
