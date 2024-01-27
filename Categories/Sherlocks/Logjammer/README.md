@@ -7,8 +7,12 @@
 - Windows event log analysis.
 
 ## Scenario:
+<p align="justify">
+
 You have been presented the opportunity to work as a junior DFIR consultant for a big consultancy, however they have provided a technical assessment for you to complete. 
 The consultancy Forela-Security would like to gauge your knowledge on Windows Event Log Analysis. Please analyse and report back on the questions they have asked.
+
+</p>
 
 ## STEPS:
 1. In this challenge we're given several windows event logs. 
