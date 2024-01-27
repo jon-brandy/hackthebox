@@ -6,6 +6,7 @@
 
 
 ## Lessons Learned:
+- Conducting static malware analysis using ghidra.
 - 
 
 ## SCENARIO:
