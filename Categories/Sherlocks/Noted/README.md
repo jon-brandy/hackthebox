@@ -62,6 +62,9 @@ attack occurred and find a way to contact the threat actors, as they accidentall
 
 9. Again, reviewing the .java source we can identified that the attacker stored all the data to a zip file named `Forela-Dev-Data.zip`.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0546a79e-6a40-4fc5-af7d-22e3d0a73381)
+
+
 > 4TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bd00c2c7-e6b0-4f78-a74b-4c199619ae05)
