@@ -1,4 +1,4 @@
-# Noted
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ae0985f5-32e5-4a83-bd64-27238951ecb2)# Noted
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9567cfe5-4323-4624-9df5-6caef66b4635)
@@ -70,14 +70,37 @@ attack occurred and find a way to contact the threat actors, as they accidentall
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bd00c2c7-e6b0-4f78-a74b-4c199619ae05)
 
+10. nsadsdf
+11. asdasda
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: 0xca8fa8f0b631ecdb18cda619c4fc9d197c8affca
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/31c92200-39fa-4364-9b93-cc2e26475e9f)
 
+12. Judging from the .txt file, it seems the wallet is stored inside the pastebin.
 
-> 6TH QUESTION --> ANS:
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/11e0796e-4b2b-41e2-918b-1437339538f3)
+
+
+13. The password for the locked pastebin is stored at the source file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7216f008-64b5-4d31-b316-01177d554587)
+
+
+> Got the wallet address
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8f6c87f7-30c1-4d15-9dea-1a0ad4dfacf7)
+
+
+
+> 6TH QUESTION --> ANS: CyberJunkie@mail2torjgmxgexntbrmhvgluavhj7ouul5yar6ylbvjkxwqf6ixkwyd.onion
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9d21e480-8f5e-478d-973c-d5dcfd2ba636)
+
+
+14. The email address is shown below the eth wallet.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/238ed46d-12d4-4c4c-92db-e0ec5fa257eb)
+
 
 
