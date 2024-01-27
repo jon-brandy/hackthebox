@@ -25,6 +25,20 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0dadd44b-893c-4160-8feb-16f0f41bc8cc)
 
 
+2. Reviewing the DANGER.txt file, we can conclude that the malware is inside the .zip file. This .txt file gives several warning upon analyzing the software and gave us the password for the zip file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/555669bc-772e-4908-9b73-28adcfe8dd26)
+
+
+3. Unzipping it, we found the malware named --> `bescrypt3.2`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0d0ec4d9-84c6-45eb-9043-a62f87602db1)
+
+
+4. To identify the encryption key used, I decompiled the binary using ghidra.
+
+
+
 > 2ND QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/037de062-cb14-49b6-acec-f329f522ba59)
