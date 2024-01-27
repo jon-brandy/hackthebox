@@ -7,7 +7,7 @@
 
 ## Lessons Learned:
 - Conducting static malware analysis using ghidra.
-- 
+- Reverse engineering the malware.
 
 ## SCENARIO:
 
@@ -57,6 +57,13 @@
 > 2ND QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/037de062-cb14-49b6-acec-f329f522ba59)
+
+
+9. To get his firstname and lastname, we just need to check the sql file of forela.
+10. But sadly it's already encrypted by the malware.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f967784a-3ad0-4b2f-aeaa-fe581eae2e33)
+
 
 
 > 3RD QUESTION --> ANS:
