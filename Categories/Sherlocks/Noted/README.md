@@ -1,11 +1,11 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ae0985f5-32e5-4a83-bd64-27238951ecb2)# Noted
+# Noted
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9567cfe5-4323-4624-9df5-6caef66b4635)
 
 
 ## Lessons Learned:
-1. Analyzing notepad artifacts.
+1. Analyzing Notepad++ artifacts.
 
 ## SCENARIO:
 
