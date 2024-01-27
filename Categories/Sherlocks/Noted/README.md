@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-1. SAD
+1. Analyzing notepad artifacts.
 
 ## SCENARIO:
 
