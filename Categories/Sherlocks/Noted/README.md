@@ -9,6 +9,7 @@
 
 ## SCENARIO:
 
+<p align="justify">
 Simon, a developer working at Forela, notified the CERT team about a note that appeared on his desktop. 
 The note claimed that his system had been compromised and that sensitive data from Simon's workstation had been collected. 
 The perpetrators performed data extortion on his workstation and are now threatening to release the data on the dark web 
@@ -20,7 +21,7 @@ you have been assigned a specific type of DFIR (Digital Forensics and Incident R
 The CERT lead, after triaging the workstation, has provided you with only the Notepad++ artifacts, suspecting that the attacker 
 created the extortion note and conducted other activities with hands-on keyboard access. Your duty is to determine how the 
 attack occurred and find a way to contact the threat actors, as they accidentally locked out their own contact information.
-
+</p>
 
 
 ## STEPS:
