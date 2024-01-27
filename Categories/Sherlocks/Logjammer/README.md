@@ -7,6 +7,7 @@
 - Windows event log analysis.
 
 ## Scenario:
+
 <p align="justify">
 
 You have been presented the opportunity to work as a junior DFIR consultant for a big consultancy, however they have provided a technical assessment for you to complete. 
