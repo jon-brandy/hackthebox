@@ -20,7 +20,7 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/066c6ce2-ab48-4db5-93cf-68369107fc2e)
 
 
-> 1ST QUESTION --> ANS: 
+> 1ST QUESTION --> ANS: bhUlIshutrea98liOp
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0dadd44b-893c-4160-8feb-16f0f41bc8cc)
 
@@ -36,8 +36,22 @@
 
 
 4. To identify the encryption key used, I decompiled the binary using ghidra.
+5. At the main() function, we can see a function named process_directory() is called, it have 2 parameters and both are strings.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cc293ba0-462d-4612-a9d1-74965e62666b)
 
 
+6. Then analyzig the process_directory() function, we can tell that the second parameter is used again by another function named encrypt_file().
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/392168fd-8d31-4173-942e-10762ef9f502)
+
+
+7. Reviewing the encrypt_file() code, it's clear that param2 is used as a key for XOR operation.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bdca4868-b1fc-4331-804a-b5acb5277bd2)
+
+
+8. Hence it concludes that --> `bhUlIshutrea98liOp` is the key.
 
 > 2ND QUESTION --> ANS:
 
