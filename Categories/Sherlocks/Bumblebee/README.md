@@ -7,8 +7,13 @@
 - Analyzing sqlite3 file.
 
 ## SCENARIO:
-An external contractor has accessed the internal forum here at Forela via the Guest WiFi and they appear to have stolen credentials for the administrative user! 
+
+<p align="justify">
+  An external contractor has accessed the internal forum here at Forela via the Guest WiFi and they appear to have stolen credentials for the administrative user! 
 We have attached some logs from the forum and a full database dump in sqlite3 format to help you in your investigation.
+</p>
+
+
 
 ## STEPS:
 1. In this challenge, we're given 2 files. A log file and a sqlite3 file.
