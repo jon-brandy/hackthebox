@@ -7,6 +7,7 @@
 ## Lessons Learned:
 1. Unreal3.2.8.1 is vulnerable to backdoor command execution.
 2. Exploiting irc service for version Unreal3.2.8.1 using metaploit.
+3. Identifying unknown SUID binary using linpeas.
 
 ## STEPS:
 > PORT SCANNING
