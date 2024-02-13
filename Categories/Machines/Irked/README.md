@@ -89,7 +89,7 @@ irssi -c irked.htb --port 6697
 
 
 9. It seems the remote port is already set to 6667 and we need to re-set it to one of the port which runs the irc service in our remote host.
-10. Also we need to set the remote host manually.
+10. Also we need to set the remote host, local host, and local port manually.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/28b87d95-1a4b-4eb7-9017-c1b1210f6d4d)
 
@@ -101,6 +101,82 @@ irssi -c irked.htb --port 6697
 
 
 12. Let's list all the available payloads.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/965d7e85-d3ba-4303-b2d0-4e7cd2d2fe5b)
+
+
+13. Payload number 6 seems promising.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4fba7d6b-1794-4c55-9e4a-d972f9cbd9f8)
+
+
+> RUN IT AGAIN.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5808df47-d4e4-4a11-8a0c-b807054797bc)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9ad27c69-b72a-439e-8907-9aef23a1a1e3)
+
+
+14. Great we got a shell.
+
+> GETTING THE USER FLAG
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3e51d566-0f8a-4931-bf36-aecbf555aadd)
+
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c0bd3715-5c1c-409f-8c47-91d6b5181eed)
+
+
+15. It seems we don't have the permission to access the user.txt file because it's created by root user, hence we need to gained root in order to see the contents.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f844b38f-ffbd-416a-810d-a83ecb432e3b)
+
+
+16. But noticed there's a hidden file named `.backup`.
+17. Based from the content, it should be related to **steghide** usage.
+18. However, we need to find the correct file which should be the target now.
+19. Remembering at the homepage of the webapp, it shows an image which states the hint for us to exploit the irc service.
+20. Let's use **steghide** to that image. The image itself can be found inside `/var/www/html`.
+21. Sadly the remote host does not have steghide, let's exfiltrate the image file to our localhost by setting up the python server at the remote host and run **wget** at our localhost.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bcda066f-1fd6-4860-bfb9-6a11b4c523cf)
+
+
+> RESULT
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/33b9dafc-97a8-4098-8f69-7cebd2c9941a)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fdbfc665-4f25-48af-983b-998e1fb59d23)
+
+
+22. Turns out it's the password, so user **djmardov** stored a backup password at his own home directory.
+
+> AUTH AS DJMARDOV
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f72be77a-b650-4477-9fc7-71fa3db6697c)
+
+
+> GETTING USER FLAG
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4dc16e4-f95e-448e-85a9-84d2bea7e8ae)
+
+
+## USER FLAG
+
+```
+7c7bc374daaf4d94fff0b6259eb7446d
+```
+
 
 ## IMPORTANT LINKS
 
