@@ -55,7 +55,8 @@ Nmap done: 1 IP address (1 host up) scanned in 107.56 seconds
 #### NOTES:
 
 ```
-RPC (Remote Procedure Call) is a protocol that one program can use to request a service from a program located on another computer in a network.
+RPC (Remote Procedure Call) is a protocol that one program can use to request a service from
+a program located on another computer in a network.
 ```
 
 > WEB APP
@@ -213,7 +214,8 @@ djmardov@irked:~$ ls -lh /usr/bin/viewuser
 #### NOTES:
 
 ```
-Noticed it said permission denied, does not mean user can't execute the binary (remembering users have "x"). It's because the **/tmp/listusers** does not have "x" permission for user role.
+Noticed it said permission denied, does not mean user can't execute the binary (remembering users have "x").
+It's because the **/tmp/listusers** does not have "x" permission for user role.
 ```
 
 30. We gained root!
