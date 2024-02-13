@@ -178,6 +178,57 @@ irssi -c irked.htb --port 6697
 ```
 
 
+23. To identify the vuln which can helps us to gain root, I ran **linpeas.sh** at the remote host.
+24. Few results are shown which gaves us several options but one section caught my attention.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d8494f4f-2ba4-4ae4-809e-41462dede2cb)
+
+
+25. Noticed there are two SUID binaries which are unknown. Since they are unknown hence those two are not written in **GTFOBins**.
+26. BUT our binary interest should be **/usr/bin/viewuser**, because it's inside **bin** directory. The other unknown SUID binary is inside **lib** directory which should be a dynamic link libraries.
+
+```
+djmardov@irked:~$ ls -lh /usr/bin/viewuser
+-rwsr-xr-x 1 root root 7.2K May 16  2018 /usr/bin/viewuser
+```
+
+27. It seems the binary is executeable for all roles and notice the `s` in owner permission means that the executable file will run with the privileges of the file's owner (in this case, root) rather than the user who runs the program. It's a vuln then, we can gain root using if we can misuse this binary.
+28. Let's try to execute the binary first.
+
+> RESULT
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/91d0738f-2eb0-4d4a-af88-469931ed5491)
+
+
+28. Interesting, **sh** not found in `/tmp/listusers`.
+29. Great! It is very straightforward, let's just pass **sh** to **listusers** file.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d320ef21-d90a-4ab1-a36c-e746256b94cb)
+
+
+#### NOTES:
+
+```
+Noticed it said permission denied, does not mean user can't execute the binary (remembering users have "x"). It's because the **/tmp/listusers** does not have "x" permission for user role.
+```
+
+30. We gained root!
+
+> GETTING ROOT FLAG
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aacc0641-0aee-47b1-b74e-acba7467eccf)
+
+
+## ROOT FLAG
+
+```
+c7fcebb0dadeb31c1008cf510f385360
+```
+
 ## IMPORTANT LINKS
 
 ```
