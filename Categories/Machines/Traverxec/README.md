@@ -100,15 +100,18 @@ Based from the above result, the HOMEDIRS section determines that public_www dir
 
 
 
-13. Let's crack it with john.
+13. Let's crack it with john and used the cracked password to login as david.
 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a65d39a9-157b-4efe-8bd9-55727ec6af98)
   
 
-> LATERAL MOVEMENT
+14. BUT, we failed to login as **david**.
 
-15. Now let's check what's inside **public_www** directory.
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d28d4f04-3964-4e9e-a164-a39d13cd4936)
+
+
+
 
 
 
