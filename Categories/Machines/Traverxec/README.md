@@ -70,7 +70,7 @@ Nmap done: 1 IP address (1 host up) scanned in 147.43 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d597ca89-df1b-4283-9284-d145608c2a92)
 
 
-8. Interesting! It seems, we need to do reverse shell for better lateral movement. Checking **nostromo** configuration file might help us.
+8. Sadly we don't have permission to access david's home directory. Checking **nostromo** configuration file might help us.
 9. Let's enumerate the service's directory --> `/var/nostromo`.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ea4554c3-85e3-4d83-91bf-8e2a2638909f)
@@ -108,7 +108,16 @@ Based from the above result, the HOMEDIRS section determines that public_www dir
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0b2c596a-075e-43ad-8ec7-8b8f16f44935)
 
 
-15. 
+15. Anyway, let's obtain a proper shell from now on so we can exfiltrate the backup file with ease.
+
+> OBTAINING PROPER SHELL
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/63165329-fe72-455b-8265-0171420d5a12)
+
+
+16. Let's exfiltrate the backup file.
+
+
 
 
 
