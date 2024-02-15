@@ -115,7 +115,8 @@ Based from the above result, the HOMEDIRS section determines that public_www dir
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/63165329-fe72-455b-8265-0171420d5a12)
 
 
-16. Let's exfiltrate the backup file.
+16. BUT this time we exfiltrate with **netcat** because it shall failed if using python server remembering we don't have permissions to access david home directory.
+17. 
 
 
 
