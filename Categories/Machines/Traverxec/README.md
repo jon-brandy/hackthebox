@@ -103,7 +103,7 @@ Based from the above result, the HOMEDIRS section determines that public_www dir
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b7754e31-1a45-4d60-af3c-875429b63648)
 
 
-14. We got a backup ssh file.
+14. We found a backup ssh file.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0b2c596a-075e-43ad-8ec7-8b8f16f44935)
 
