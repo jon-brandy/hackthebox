@@ -3,7 +3,7 @@
 
 ## DESCRIPTION:
 
-<p align="center">
+<p align="justify">
 
 After the successful hijacking of the D12 spaceship during the Space Pirate mission, 
 the crew managed to place a signal transmitter on a vending machine that the Golden Fang's members are using to order 
