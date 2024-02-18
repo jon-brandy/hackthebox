@@ -1,6 +1,11 @@
 # Bon-nie-appetit
 > Write-up author: jon-brandy
 
+## Lessons Learned:
+- Leaking main_arena address.
+- Exploiting OOB Bug (overlap chunks and forge a fake size field).
+- Tcache Poisoning.
+
 ## DESCRIPTION:
 
 <p align="justify">
@@ -77,9 +82,9 @@ size into account. (we can creating a fake size field).
 10. Let's leak a libc first by allocate size outside of fastbin range. When the chunk freed, it shall resides at the unsorted bin.
 11. To make sure our chunk falls at unsortedbin, let's allocate size in range of largebins.
 
-### LEAK LIBC ADDRESS IN UNSORTED BIN
+### LEAK MAIN ARENA ADDRESS IN UNSORTED BIN
 
-- To be able for libc address disclosed at the unsorted bins we need to allocate sizes outside the fastbin ranges.
+- To be able for main_arena address disclosed at the unsorted bins we need to allocate sizes outside the fastbin ranges.
 - The simplest method to make sure the chunks are stored in unsorted bins after freed, simply allocate sizes of largebins.
 - BUT remember to allocate another chunk after it to prevent consolidation with the top chunk.
 
@@ -236,3 +241,12 @@ make(0x78, b'D' * 0x28 + pack(0x21) + pack(libc.sym['__free_hook']))
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a1994bff-ef7b-4ee6-bd38-33660ff55af9)
 
+
+17. Nice! Based from the bins result, we can allocate another chunk with sizeof 0x28 and store **/bin/sh** strings there.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f738acc6-30f1-40fb-a76a-eb243a97a076)
+
+
+18. Lastly we just need to overwrite
