@@ -2,11 +2,16 @@
 > Write-up author: jon-brandy
 
 ## DESCRIPTION:
+
+<p align="center">
+
 After the successful hijacking of the D12 spaceship during the Space Pirate mission, 
 the crew managed to place a signal transmitter on a vending machine that the Golden Fang's members are using to order 
 food from the Supplier Spacecraft of Draeger. Golden Fang's crew's favorite food contains a secret ingredient called "Little Green People0," 
 which we do not have further info about. The signal passes through many satellites before it reaches the Supplier, 
 so it won't be easy to track the device and the leaked signal. Can you take advantage of it and get control of the Supplier?
+
+</p>
 
 ## HINT:
 - NONE
