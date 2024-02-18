@@ -74,6 +74,6 @@ size into account. (we can creating a fake size field).
 
 
 9. Great! Seems our interest should be at **edit_order()**.
-10. Let's leak a libc first by allocate size outside 0x80, so when it freed shall inserted to unsorted bins.
-
+10. Let's leak a libc first by allocate size outside of fastbin range. When the chunk freed, it shall resides at the unsorted bin.
+11. To make sure our chunk falls at unsortedbin, let's allocate size in range of largebins.
 
