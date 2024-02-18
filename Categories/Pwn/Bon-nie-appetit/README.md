@@ -65,11 +65,15 @@ To trigger the overflow, we just need to fill the content to the fullest of it's
 then we fill the content's up to 0x60, so there is an overflow because of the null-byte after it.
 
 Remembering heap chunks are stored adjacent, if overflow occurs then current chunks will take the next chunk's
-size into account.
+size into account. (we can creating a fake size field).
 ```
 
 8. Next, reviewing the delete_order() function, seems no use after free bug. The freed chunks are set to NULL.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cd398815-7ced-4ef7-96f8-89df916b8f3d)
+
+
+9. Great! Seems our interest should be at **edit_order()**.
+10. Let's leak a libc first by allocate size outside 0x80, so when it freed shall inserted to unsorted bins.
 
 
