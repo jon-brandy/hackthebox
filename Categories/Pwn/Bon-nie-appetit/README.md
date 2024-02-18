@@ -59,7 +59,8 @@ so it won't be easy to track the device and the leaked signal. Can you take adva
 To trigger the overflow, we just need to fill the content to the fullest of it's size. For example if we edit the size to 0x60,
 then we fill the content's up to 0x60, so there is an overflow because of the null-byte after it.
 
-Remembering heap chunks are stored adjacent, if overflow occurs then current chunks will take the next chunk's size into account.
+Remembering heap chunks are stored adjacent, if overflow occurs then current chunks will take the next chunk's
+size into account.
 ```
 
 8. Next, reviewing the delete_order() function, seems no use after free bug. The freed chunks are set to NULL.
