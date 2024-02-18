@@ -169,3 +169,7 @@ sh.interactive()
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fda5a6fd-8953-4acf-a143-eb21162bfe8e)
 
+
+13. Nice! Now let's move our interest to the **Off-One-Byte (OOB)** bug we found earlier.
+14. To make it works, let's delete the chunk at index 0 first, then starts allocating 3 chunks adjacently.
+15. All of this 
