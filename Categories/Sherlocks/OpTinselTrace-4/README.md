@@ -6,6 +6,7 @@
 
 ## Lessons Learned:
 - Hunt potential attacker's IP.
+- Identify port scanning attempts.
 
 ## SCENARIO:
 Printers are important in Santa’s workshops, but we haven’t really tried to secure them! The Grinch and his team of elite hackers may try 
@@ -33,6 +34,13 @@ and use this against us! Please investigate using the packet capture provided! T
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4ec124b-053d-4c3a-b97a-843e78ddc419)
 
 5. Next, to identify which port was then targeted for initial compromise of the printer, we can start by filter the source ip and analyze for port scanning attempts.
+6. Based from the description, the printer's IP is `192.168.68.128`. Let's start by filter the IP.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/30ffb823-9c5c-47b7-9c3f-e680c914208f)
+
+
+7. Based from the results above, we found several traffic with SYN flag and the packet bytes are small + request timestamp is very close in milisecond.
+8. From this evidence, we can conclude the attacker attempted an nmap scans and we start analyzing these packets.
 
 > 3RD QUESTION
 
