@@ -92,11 +92,16 @@ and use this against us! Please investigate using the packet capture provided! T
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6eb586cf-48ff-4760-9bc1-8a6529dc8bd6)
 
 
-17. Upon analyzing the packet stream at 46, we can found a scheduled printjob named ** 
+17. Upon analyzing the packet stream at 46, we can found a scheduled printjob named **MerryChristmas+BonusAnnouncment**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ffe284f0-2e2e-4e51-bf5c-04a9719bec0c)
+
 
 > 7TH QUESTION
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e8f9d562-2d97-423c-b34f-3715909bfaf1)
+
+
 
 
 > 8TH QUESTION
