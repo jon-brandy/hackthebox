@@ -58,7 +58,7 @@ and use this against us! Please investigate using the packet capture provided! T
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1e74f3e6-bd7f-46f8-ad2c-2487a2ffac77)
 
 
-12. Following the packets to check 
+12. Upon following the packet stream activity for port **9100**, found 
 
 
 > 4TH QUESTION
