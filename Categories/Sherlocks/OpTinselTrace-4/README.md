@@ -69,6 +69,13 @@ and use this against us! Please investigate using the packet capture provided! T
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3c0d8aa5-43a9-455e-b2c2-ac75f94db1c8)
 
 
+13. To identify the 2nd child on the nice list, simply analyze the packet stream at 28.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dd3c946f-8e6a-4db5-aa51-f58dfd5bd15e)
+
+
+14. It's **Douglas Price**.
+
 > 5TH QUESTION
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/22536e2a-5675-4772-8cd5-3ba27b644dc3)
