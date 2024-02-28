@@ -21,11 +21,18 @@ and use this against us! Please investigate using the packet capture provided! T
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/16cfba6f-2c99-4872-91d1-15548b34f8a0)
 
+2. To identify which IP address has an excessive amount of traffic to the printer server, we can check by go to **statistics -> IPv4 Statistics -> All Addresses**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/713b1f0f-dc2a-4caa-a68e-dc4272022725)
+
+3. Based from the results above, we can identified 2 IPs with the most activities.
+4. We can conclude that IP --> `172.17.79.132` is the answer.
 
 > 2ND QUESTION:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4ec124b-053d-4c3a-b97a-843e78ddc419)
 
+5. Next, to identify which port was then targeted for initial compromise of the printer, we can start by filter the source ip and analyze for port scanning attempts.
 
 > 3RD QUESTION
 
