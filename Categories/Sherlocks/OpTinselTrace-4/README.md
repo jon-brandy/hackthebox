@@ -18,7 +18,7 @@ and use this against us! Please investigate using the packet capture provided! T
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/035ef3fd-f642-4c6e-b9e2-3a97c7cf1966)
 
 
-> 1ST QUESTION: `172.17.79.132`
+> 1ST QUESTION --> ANS: `172.17.79.132`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/16cfba6f-2c99-4872-91d1-15548b34f8a0)
 
@@ -29,7 +29,7 @@ and use this against us! Please investigate using the packet capture provided! T
 3. Based from the results above, we can identified 2 IPs with the most activities.
 4. We can conclude that IP --> `172.17.79.132` is the answer.
 
-> 2ND QUESTION: 9100
+> 2ND QUESTION --> ANS: 9100
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4ec124b-053d-4c3a-b97a-843e78ddc419)
 
@@ -51,11 +51,14 @@ and use this against us! Please investigate using the packet capture provided! T
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c254d742-e658-4b34-8ada-2c7b7ffb1593)
 
 
-11. It's clear then, that port 9100 is the port exploited by the attacker.
+11. It's clear then, that port 9100 is the port exploited by the attacker. Not only that we identified that the attacker might be using 2 machine within NAT network remembering the IP used for scanning is --> `172.17.79.133`.
 
-> 3RD QUESTION
+> 3RD QUESTION --> ANS: 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1e74f3e6-bd7f-46f8-ad2c-2487a2ffac77)
+
+
+12. Following the packets to check 
 
 
 > 4TH QUESTION
