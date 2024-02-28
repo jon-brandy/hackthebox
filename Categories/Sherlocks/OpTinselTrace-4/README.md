@@ -7,6 +7,7 @@
 ## Lessons Learned:
 - Hunt potential attacker's IP.
 - Identify port scanning attempts.
+- Printer Hacking Network Forensic.
 
 ## SCENARIO:
 Printers are important in Santa’s workshops, but we haven’t really tried to secure them! The Grinch and his team of elite hackers may try 
@@ -87,7 +88,7 @@ and use this against us! Please investigate using the packet capture provided! T
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4626d2d-f0bc-45ca-98ae-99d10c533980)
 
 
-> 6TH QUESTION
+> 6TH QUESTION --> ANS: MerryChristmas+BonusAnnouncment
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6eb586cf-48ff-4760-9bc1-8a6529dc8bd6)
 
@@ -124,9 +125,27 @@ and use this against us! Please investigate using the packet capture provided! T
 21. The hostname of the other compromised critical server is specified at the commented line --> `christmas.gifts`.
 
 
-> 10TH QUESTION
+> 10TH QUESTION --> ANS: `2023-12-08 12:18:14`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/65cd484d-7e77-44a2-8a0d-a3d5321596c6)
 
 
-22. Lastly, 
+22. This time I followed another packet stream at **71** and found details that indicate a deletion for a file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2d2c6207-f62f-4044-b66e-f294ae9a7fc9)
+
+
+23. To identify the timestamp simply check the timestamp when the traffic came.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9e50fd7d-5a0e-44af-896d-988f89ed1b82)
+
+
+
+## IMPORANT LINKS
+
+```
+https://book.hacktricks.xyz/network-services-pentesting/9100-pjl
+```
+
+
