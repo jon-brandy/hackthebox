@@ -53,12 +53,15 @@ and use this against us! Please investigate using the packet capture provided! T
 
 11. It's clear then, that port 9100 is the port exploited by the attacker. Not only that we identified that the attacker might be using 2 machine within NAT network remembering the IP used for scanning is --> `172.17.79.133`.
 
-> 3RD QUESTION --> ANS: 
+> 3RD QUESTION --> ANS: NorthPole HP LaserJet 4200n
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1e74f3e6-bd7f-46f8-ad2c-2487a2ffac77)
 
 
-12. Upon following the packet stream activity for port **9100**, found 
+12. Upon following the packet stream activity for port **9100**, found the printer fullname at packet `stream eq 28`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0590dfb5-2b04-4a47-a97e-2ec916abad42)
+
 
 
 > 4TH QUESTION
