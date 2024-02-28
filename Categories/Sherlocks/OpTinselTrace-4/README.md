@@ -18,7 +18,7 @@ and use this against us! Please investigate using the packet capture provided! T
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/035ef3fd-f642-4c6e-b9e2-3a97c7cf1966)
 
 
-> 1ST QUESTION:
+> 1ST QUESTION: `172.17.79.132`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/16cfba6f-2c99-4872-91d1-15548b34f8a0)
 
@@ -29,7 +29,7 @@ and use this against us! Please investigate using the packet capture provided! T
 3. Based from the results above, we can identified 2 IPs with the most activities.
 4. We can conclude that IP --> `172.17.79.132` is the answer.
 
-> 2ND QUESTION:
+> 2ND QUESTION: 9100
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4ec124b-053d-4c3a-b97a-843e78ddc419)
 
@@ -41,6 +41,17 @@ and use this against us! Please investigate using the packet capture provided! T
 
 7. Based from the results above, we found several traffic with SYN flag and the packet bytes are small + request timestamp is very close in milisecond.
 8. From this evidence, we can conclude the attacker attempted an nmap scans and we start analyzing these packets.
+9. Scrolling down, we found several **ACK** response from the nmap scan for port **9100**. 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/15cd5e4e-d18b-44a9-93f8-fa60d65dc059)
+
+
+10. Searching on the internet about default port for service printing, turns out that **9100** is the default port.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c254d742-e658-4b34-8ada-2c7b7ffb1593)
+
+
+11. It's clear then, that port 9100 is the port exploited by the attacker.
 
 > 3RD QUESTION
 
