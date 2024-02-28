@@ -97,21 +97,31 @@ and use this against us! Please investigate using the packet capture provided! T
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ffe284f0-2e2e-4e51-bf5c-04a9719bec0c)
 
 
-> 7TH QUESTION
+> 7TH QUESTION --> ANS: `/Administration/securitykeys/ssh_systems/id_rsa`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e8f9d562-2d97-423c-b34f-3715909bfaf1)
 
 
+18. Scrolling down the packet stream, we can identify an **id_rsa** key which might be used by the attacker to do lateral movement.
+19. Based from the commented sentences, we can conclude that this is the path of the file on the printer server that enabled the Grinch to laterally move to this critical server.
 
 
-> 8TH QUESTION
+> 8TH QUESTION --> ANS: 1914
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/50741df6-93e9-4250-9f2c-18ed020f2322)
 
 
-> 9TH QUESTION
+20. To identify the file size, we just need to check the SIZE parameter.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7bc0f625-6132-4ad1-a956-4a2834f73ea7)
+
+
+> 9TH QUESTION --> ANS: christmas.gifts
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3ba31448-eed5-4d04-b57f-1c25cb03630d)
+
+
+21. The hostname of the other compromised critical server is specified at the commented line --> `christmas.gifts`.
 
 
 > 10TH QUESTION
@@ -119,3 +129,4 @@ and use this against us! Please investigate using the packet capture provided! T
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/65cd484d-7e77-44a2-8a0d-a3d5321596c6)
 
 
+22. Lastly, 
