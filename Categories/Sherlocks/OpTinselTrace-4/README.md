@@ -64,7 +64,7 @@ and use this against us! Please investigate using the packet capture provided! T
 
 
 
-> 4TH QUESTION
+> 4TH QUESTION --> ANS: Douglas Price
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3c0d8aa5-43a9-455e-b2c2-ac75f94db1c8)
 
@@ -76,15 +76,23 @@ and use this against us! Please investigate using the packet capture provided! T
 
 14. It's **Douglas Price**.
 
-> 5TH QUESTION
+> 5TH QUESTION --> ANS: The addressed employee is confirmed to be working with grinch and team. According to Clause 69 , This calls for an immediate expulsion.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/22536e2a-5675-4772-8cd5-3ba27b644dc3)
+
+
+15. Again, analyzing the same packet stream by scrolling down we found a **JOB NAME="Elfin-Layoff"**.
+16. Noticed there's a reason for Elfin's layoff, that should be the word rationale behind the decision to terminate Elfin's employment.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4626d2d-f0bc-45ca-98ae-99d10c533980)
 
 
 > 6TH QUESTION
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6eb586cf-48ff-4760-9bc1-8a6529dc8bd6)
 
+
+17. Upon analyzing the packet stream at 46, we can found a scheduled printjob named ** 
 
 > 7TH QUESTION
 
