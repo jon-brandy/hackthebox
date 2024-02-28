@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- sdasda
+- Hunt potential attacker's IP.
 
 ## SCENARIO:
 Printers are important in Santa’s workshops, but we haven’t really tried to secure them! The Grinch and his team of elite hackers may try 
