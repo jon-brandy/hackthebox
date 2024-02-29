@@ -168,7 +168,7 @@ printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerNa
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/74790f11-e375-45b9-a52c-3a770250b59e)
 
 
-> 11TH QUESTION --> ANS: 
+> 11TH QUESTION --> ANS: b0ad704122d9cffddd57ec92991a1e99fc1ac02d5b4d8fd31720978c02635cb1
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/17f08389-3aae-44c1-afbc-246b0962e5eb)
 
@@ -178,10 +178,31 @@ printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerNa
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d6f7b550-8f8f-4517-bb4a-c1f83c43631f)
 
 
+26. To verify that it is the malicious file, remembering the filename is the hash value of itself, then we can use it to virustotal to check whether the executeable file is a malware or not.
+
+> RESULT IN VIRUSTOTAL
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2035ecfb-e055-4986-a86c-cb179acc0110)
+
+
+27. It is indeed what we're looking for.
+
 > 12TH QUESTION --> ANS: 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/806b20de-cdf6-477a-9ed0-aa8441aaa570)
 
+
+28. We can simply open the details tab in virustotal to check for imphash value.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aa98a762-472f-4db5-9d8e-1ed924175952)
+
+
+#### NOTES:
+
+```
+What is imphash value?
+An imphash (import hash) value is a hash function generated from the characteristics of a binary executable file's imported functions. It is commonly used in digital forensics and malware analysis to quickly identify and compare different versions or instances of executable files based on their imported functions. The imphash value remains consistent for files that share similar import tables, making it a useful tool for identifying and grouping related files.
+```
 
 > 13TH QUESTION --> ANS:
 
