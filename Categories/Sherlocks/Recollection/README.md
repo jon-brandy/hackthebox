@@ -6,7 +6,7 @@
 
 ## Lessons Learned:
 - Using volatility to do RAM forensic.
-- Identifying an alias usage for IEX.
+- Identifying an alias attempt for IEX (Invoke Expression).
 
 ## SCENARIO:
 A junior member of our security team has been performing research and testing on what we believe to be an old and insecure operating system. 
