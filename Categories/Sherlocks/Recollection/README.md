@@ -29,7 +29,7 @@ Please answer the questions below.
 
 3. The first suggested profile usually is the correct one and judging from the result we can identify that the operating system of the machine is **Windows** and the version is **7**.
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: `2022-12-19 16:07:30`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bde732fb-5090-4130-9155-e59af34c4bbf)
 
@@ -43,6 +43,12 @@ Please answer the questions below.
 > 3RD QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d6277fb4-1096-413f-beac-6bbda85d01b4)
+
+
+5. To identify data saved on the clipboard, in volatility2 we can use **clipboard** plugin.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/319a3198-d582-476c-867d-04708c92bd39)
+
 
 
 > 4TH QUESTION --> ANS:
