@@ -217,13 +217,17 @@ making it a useful tool for identifying and grouping related files.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/22d08c28-153b-4567-84a7-5828fc7dc8c4)
 
 
-> 14TH QUESTIOM --> ANS:
+> 14TH QUESTIOM --> ANS: `192.168.0.104`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/efa3420a-8ad4-4376-bb99-c1ead9eae52d)
 
 
 30. To identify local ip address of the machine, we can use **netscan** plugin.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2ff00375-5256-442a-a2cc-9e684c0ece56)
+
+
+31. Based from the result above, it's clear that `192.168.0.104` is the local ip address of the machine, because it listens to `0.0.0.0`.
 
 
 > 15TH QUESTION --> ANS:
