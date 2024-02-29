@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/59d50aa0-ff7c-4987-961f-3741780ec202)# Recollection
+# Recollection
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c18c9fa8-036f-4af8-935b-71b53fa33dc9)
