@@ -97,6 +97,9 @@ Attacker tried to set an alias for IEX, this could be an attempt to obfuscate ma
 
 13. Analyzing the CMD history, we can identify an attempt of the attacker to exfiltrate the content of the **Confidential.txt** to his file named **pass.txt** inside **pulice** directory.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5d0f93a1-208f-4537-93da-2b893a60c555)
+
+
 > 6TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/da73e2fb-557c-4841-ac27-0ec8df50bb3b)
