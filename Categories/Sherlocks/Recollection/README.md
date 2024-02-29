@@ -40,7 +40,7 @@ Please answer the questions below.
 
 
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: `(gv '*MDR*').naMe[3,11,2]-joIN''`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d6277fb4-1096-413f-beac-6bbda85d01b4)
 
@@ -59,9 +59,26 @@ Please answer the questions below.
 
 8. Based from the result above, we can identify that the command is executed both in cmd and powershell. It's valid then, that the copied command is our interest.
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: Invoke-Expression
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8dee0847-91b7-41b0-9305-ec976561fd5b)
+
+
+9. Took me a while to identify the targeted powershell cmdlet. I used **consoles** plugin to check the result of the executed obfuscated command.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e04d8fbe-1294-4ca3-8790-a2f6dfbd4352)
+
+
+10. Interesting it's resulting to **iex**, searching on the internet about **iex** found that **iex** stands for **Invoke Expressions**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d09b4843-b673-4589-b9cb-c706ca19a6c9)
+
+
+#### NOTES:
+
+```
+Attacker tried to set an alias for IEX, this could be an attempt to obfuscate malicious PowerShell commands. By creating an alias for Invoke-Expression, an attacker may make it harder for security tools or analysts to detect and understand the true nature of the executed code
+```
 
 
 > 5TH QUESTION --> ANS:
@@ -132,3 +149,10 @@ Please answer the questions below.
 > 18TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b8400da6-5b77-4217-98d7-4b90de761802)
+
+
+## IMPORTANT LINKS
+
+```
+https://www.securonix.com/blog/hiding-the-powershell-execution-flow/
+```
