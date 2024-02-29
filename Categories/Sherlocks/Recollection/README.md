@@ -1,4 +1,4 @@
-# Recollection
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/59d50aa0-ff7c-4987-961f-3741780ec202)# Recollection
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c18c9fa8-036f-4af8-935b-71b53fa33dc9)
@@ -162,6 +162,10 @@ printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerNa
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a267ab2c-6c2a-48f4-955c-ee4483942076)
 
+
+24. To identify full location path, we can use **filescan** plugin and filter for **passwords.txt**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/74790f11-e375-45b9-a52c-3a770250b59e)
 
 
 > 11TH QUESTION --> ANS:
