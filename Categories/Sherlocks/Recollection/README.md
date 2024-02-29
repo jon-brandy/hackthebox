@@ -14,12 +14,19 @@ We want to confirm what actions were carried out by the attacker and if any othe
 Please answer the questions below.
 
 ## STEPS:
-1. In this challenge we're tasked to do a memory forensic from a memory dump to identify whether the operating system is compromised.
+1. In this challenge we're tasked to do a memory forensic from a memory dump to identify what actions carried out by the attacker and checks what assets might be affected.
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: Windows 7
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b206c191-cfd4-48c5-9b58-142beae6064e)
 
+
+2. To do RAM forensic, first we need to identify the correct profile. We can use volatility to identify it using plugin **imageinfo**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7d9386a2-3ae4-4989-aaf7-eea4ec3523a6)
+
+
+3. The first suggested profile usually is the correct one and judging from the result we can identify that the operating system of the machine is **Windows** and the version is **7**.
 
 > 2ND QUESTION --> ANS:
 
