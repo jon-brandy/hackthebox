@@ -187,7 +187,7 @@ printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerNa
 
 27. It is indeed what we're looking for.
 
-> 12TH QUESTION --> ANS: 
+> 12TH QUESTION --> ANS: d3b592cd9481e4f053b5362e22d61595 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/806b20de-cdf6-477a-9ed0-aa8441aaa570)
 
@@ -204,14 +204,23 @@ What is imphash value?
 An imphash (import hash) value is a hash function generated from the characteristics of a binary executable file's imported functions. It is commonly used in digital forensics and malware analysis to quickly identify and compare different versions or instances of executable files based on their imported functions. The imphash value remains consistent for files that share similar import tables, making it a useful tool for identifying and grouping related files.
 ```
 
-> 13TH QUESTION --> ANS:
+> 13TH QUESTION --> ANS: `2022-06-22 11:49:04`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b643844b-32b7-41be-ba93-66a07d9e45af)
+
+
+29. Again, we can use virustotal to check the creation time of the malicious executeable file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/22d08c28-153b-4567-84a7-5828fc7dc8c4)
 
 
 > 14TH QUESTIOM --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/efa3420a-8ad4-4376-bb99-c1ead9eae52d)
+
+
+30. To identify the local ip address of the machine, we can use **netscan** plugin.
+
 
 
 > 15TH QUESTION --> ANS:
