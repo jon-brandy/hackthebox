@@ -5,7 +5,8 @@
 
 
 ## Lessons Learned:
-- sdasda
+- Using volatility to do RAM forensic.
+- 
 
 ## SCENARIO:
 A junior member of our security team has been performing research and testing on what we believe to be an old and insecure operating system. 
@@ -31,6 +32,12 @@ Please answer the questions below.
 > 2ND QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bde732fb-5090-4130-9155-e59af34c4bbf)
+
+
+4. Few info shown simply by using plugin **imageinfo**. The time when the memory dump created is specify at the **Image data and time** header.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c69a04a6-d6dd-4b6f-98d0-197a52840a6c)
+
 
 
 > 3RD QUESTION --> ANS:
