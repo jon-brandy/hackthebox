@@ -100,14 +100,30 @@ Attacker tried to set an alias for IEX, this could be an attempt to obfuscate ma
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5d0f93a1-208f-4537-93da-2b893a60c555)
 
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: NO
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/da73e2fb-557c-4841-ac27-0ec8df50bb3b)
 
 
-> 7TH QUESTION --> ANS:
+14. Anyway, the exfiltration is failed because the program path was not found.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b386cc11-6820-4fec-aae1-0a50edf20f0c)
+
+
+> 7TH QUESTION --> ANS: `C:\Users\Public\Office\readme.txt`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8962f6b2-47b0-43fe-bf87-37389cf8afde)
+
+
+15. Analyzing the terminal history furthermore, we can identify there an encodede messages.
+
+ ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1bb9ff56-71da-485f-b83a-5a370fe5993a)
+
+16. After decoded the message we can identify the full path of the readme file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c18233ff-0469-4d2b-8f06-0082efd6a08c)
+
+
 
 
 > 8TH QUESTION --> ANS:
