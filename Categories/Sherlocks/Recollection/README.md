@@ -15,3 +15,11 @@ Please answer the questions below.
 
 ## STEPS:
 1. In this challenge we're tasked to do a memory forensic from a memory dump to identify whether the operating system is compromised.
+
+> 1ST QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b206c191-cfd4-48c5-9b58-142beae6064e)
+
+
+> 2ND QUESTION --> ANS:
+
