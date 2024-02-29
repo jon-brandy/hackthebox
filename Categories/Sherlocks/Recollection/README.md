@@ -173,6 +173,11 @@ printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerNa
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/17f08389-3aae-44c1-afbc-246b0962e5eb)
 
 
+25. By analyzing the results of **console** plugin, we can identify an executeable file with a hash lookalike values as it's name.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d6f7b550-8f8f-4517-bb4a-c1f83c43631f)
+
+
 > 12TH QUESTION --> ANS: 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/806b20de-cdf6-477a-9ed0-aa8441aaa570)
