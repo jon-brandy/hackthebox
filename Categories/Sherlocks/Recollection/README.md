@@ -158,7 +158,7 @@ printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerNa
 
 23. Based from the results, we can conclude that there were 3 users registered.
 
-> 10TH QUESTION --> ANS:
+> 10TH QUESTION --> ANS: `\Device\HarddiskVolume2\Users\user\AppData\Local\Microsoft\Edge\User Data\ZxcvbnData\3.0.0.0\passwords.txt`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a267ab2c-6c2a-48f4-955c-ee4483942076)
 
@@ -168,12 +168,12 @@ printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerNa
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/74790f11-e375-45b9-a52c-3a770250b59e)
 
 
-> 11TH QUESTION --> ANS:
+> 11TH QUESTION --> ANS: 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/17f08389-3aae-44c1-afbc-246b0962e5eb)
 
 
-> 12TH QUESTION --> ANS:
+> 12TH QUESTION --> ANS: 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/806b20de-cdf6-477a-9ed0-aa8441aaa570)
 
