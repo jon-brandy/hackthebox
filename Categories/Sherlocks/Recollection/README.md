@@ -146,16 +146,22 @@ printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerNa
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e6334582-c6b0-4c75-86a4-bb2a9a08c017)
 
 
-> 9TH QUESTION --> ANS:
+> 9TH QUESTION --> ANS: 3
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/216d4aa9-c65b-49fa-b982-729707aace9c)
 
 
+22. To identify total user accounts were in the machine we can run **hashdump** plugin.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/79a4c625-189e-4a37-aabb-ff9e092e1015)
+
+
+23. Based from the results, we can conclude that there were 3 users registered.
 
 > 10TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a267ab2c-6c2a-48f4-955c-ee4483942076)
+
 
 
 > 11TH QUESTION --> ANS:
