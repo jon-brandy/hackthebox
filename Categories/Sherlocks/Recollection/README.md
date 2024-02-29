@@ -50,6 +50,14 @@ Please answer the questions below.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/319a3198-d582-476c-867d-04708c92bd39)
 
 
+6. Noticed the first data shown is kinda obfuscated, this could indicate the obfuscated mentioned at the questions.
+7. To make sure that this is the copied command, we can use **cmdscan** plugin to check what command executed on the poweshell.exe process.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ce9988ae-f96f-4aa8-a788-8ca1b93837c0)
+
+
+8. Based from the result above, we can identify that the command is executed both in cmd and powershell. It's valid then, that the copied command is our interest.
 
 > 4TH QUESTION --> ANS:
 
