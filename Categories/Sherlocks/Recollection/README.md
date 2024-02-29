@@ -124,16 +124,33 @@ Attacker tried to set an alias for IEX, this could be an attempt to obfuscate ma
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c18233ff-0469-4d2b-8f06-0082efd6a08c)
 
 
-
-
-> 8TH QUESTION --> ANS:
+> 8TH QUESTION --> ANS: USER-PC
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/82aedfbf-4d94-47f0-807f-a5c71fd1f00f)
+
+
+17. To check hostname in windows, we can run --> **net users**.
+18. Based from the terminal history, the hostname of the compromised system is `USER-PC`.
+19. Anyway, there is an alternate way to check the machine's hostname. Simply dump the registry key.
+20. First we need to find the offset of **\REGISTRY\MACHINE\SYSTEM**. In volatility to list registry keys we can use plugin **hivelist**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/314141d5-107b-45fe-914a-2df10d576c61)
+
+
+21. Next, to dump the registry key we can use plugin **printkey**.
+
+```
+printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerName"
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e6334582-c6b0-4c75-86a4-bb2a9a08c017)
 
 
 > 9TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/216d4aa9-c65b-49fa-b982-729707aace9c)
+
+
 
 
 > 10TH QUESTION --> ANS:
