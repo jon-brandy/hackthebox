@@ -201,7 +201,10 @@ printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerNa
 
 ```
 What is imphash value?
-An imphash (import hash) value is a hash function generated from the characteristics of a binary executable file's imported functions. It is commonly used in digital forensics and malware analysis to quickly identify and compare different versions or instances of executable files based on their imported functions. The imphash value remains consistent for files that share similar import tables, making it a useful tool for identifying and grouping related files.
+An imphash (import hash) value is a hash function generated from the characteristics of a binary executable file's imported functions.
+It is commonly used in digital forensics and malware analysis to quickly identify and compare different versions or instances of executable
+files based on their imported functions. The imphash value remains consistent for files that share similar import tables,
+making it a useful tool for identifying and grouping related files.
 ```
 
 > 13TH QUESTION --> ANS: `2022-06-22 11:49:04`
@@ -219,7 +222,7 @@ An imphash (import hash) value is a hash function generated from the characteris
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/efa3420a-8ad4-4376-bb99-c1ead9eae52d)
 
 
-30. To identify the local ip address of the machine, we can use **netscan** plugin.
+30. To identify local ip address of the machine, we can use **netscan** plugin.
 
 
 
