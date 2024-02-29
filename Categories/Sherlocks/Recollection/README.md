@@ -6,7 +6,7 @@
 
 ## Lessons Learned:
 - Using volatility to do RAM forensic.
-- 
+- Identifying an alias usage for IEX.
 
 ## SCENARIO:
 A junior member of our security team has been performing research and testing on what we believe to be an old and insecure operating system. 
@@ -77,9 +77,18 @@ Please answer the questions below.
 #### NOTES:
 
 ```
+What is IEX?
+EX stands for "Invoke-Expression" in PowerShell. It's a cmdlet used to run a string as a PowerShell command. This means it allows PowerShell scripts to dynamically execute code stored in a string variable. It's a powerful feature but can also pose security risks if used improperly, as it enables dynamic execution of potentially malicious commands
+
 Attacker tried to set an alias for IEX, this could be an attempt to obfuscate malicious PowerShell commands. By creating an alias for Invoke-Expression, an attacker may make it harder for security tools or analysts to detect and understand the true nature of the executed code
 ```
 
+11. The article visited shows the obfuscated command that is similiar with what the attacker send.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9925ac30-ea5d-496f-83d1-22056d1085c1)
+
+
+12. It's clear that the attacker tried to set an alias for **Invoke Expression** cmdlet.
 
 > 5TH QUESTION --> ANS:
 
