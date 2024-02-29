@@ -63,3 +63,44 @@ Please answer the questions below.
 
 > 10TH QUESTION --> ANS:
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a267ab2c-6c2a-48f4-955c-ee4483942076)
+
+
+> 11TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/17f08389-3aae-44c1-afbc-246b0962e5eb)
+
+
+> 12TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/806b20de-cdf6-477a-9ed0-aa8441aaa570)
+
+
+> 13TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b643844b-32b7-41be-ba93-66a07d9e45af)
+
+
+> 14TH QUESTIOM --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/efa3420a-8ad4-4376-bb99-c1ead9eae52d)
+
+
+> 15TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ae56ce46-fa25-4c54-bfa4-61c206980d2b)
+
+
+> 16TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/316f936d-35d7-4643-a960-c626e0f28a6a)
+
+
+> 17TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9a9c3b94-43a7-44a1-b7f9-5eb8cac0d83d)
+
+
+> 18TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b8400da6-5b77-4217-98d7-4b90de761802)
