@@ -8,6 +8,7 @@
 - Using volatility to do RAM forensic.
 - Identifying an alias attempt for IEX (Invoke Expression).
 - Dumping browser history.
+- Identify malicious downloaded filename.
 
 ## SCENARIO:
 A junior member of our security team has been performing research and testing on what we believe to be an old and insecure operating system. 
