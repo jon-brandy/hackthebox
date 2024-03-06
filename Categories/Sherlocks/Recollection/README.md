@@ -272,9 +272,21 @@ python3 ../../volatility3/vol.py -f recollection.bin -o . windows.memmap --dump 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9a9c3b94-43a7-44a1-b7f9-5eb8cac0d83d)
 
 
-40. To identify the SIEM's solution name, we can use **filescan** plugin and search for **history**.
+40. To identify the SIEM's solution name, we can use **filescan** plugin and search for **history**. Remember to use `-i` flag for insensitive search.
+
+```
+python3 ../../volatility3/vol.py -f recollection.bin windows.filescan | grep -i history
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/07a805ba-fefa-4d24-962a-ac5291eb87a0)
 
 
+41. Seems we found our interest is at offset `0x11e0d16f0`, because it stored all the browser history.
+42. Let's dumps it using **dumpfiles** command.
+
+```
+python3 ../../volatility3/vol.py -f recollection.bin -o . windows.dumpfiles --virtaddr 0x11e0d16f0
+```
 
 > 18TH QUESTION --> ANS:
 
