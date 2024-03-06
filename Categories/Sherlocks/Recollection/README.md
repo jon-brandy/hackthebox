@@ -291,18 +291,16 @@ python2 ../../volatility/vol.py -f recollection.bin --profile=Win7SP1x64 dumpfil
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7c60f05e-c82b-4050-9f11-b989878a49c2)
 
 
-#### NOTES:
 
-```
-VACB files are associated with the Windows operating system, particularly with the NTFS (New Technology File System)
-file system.
+43. Great! Based from the result, our interest should be at the .dat file (because it contains the history).
+44. To open it, in Linux we can run --> `open`.
+45. Then go to **tabel -> keyword_search_terms** then choose browse data.
 
-The VACB is a data structure used by NTFS to manage file data caching. The purpose of the VACB is to keep track of the
-attributes of a file, such as its size, timestamps, and other relevant information, as well as to manage cached data
-associated with the file.
-```
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/363d54dc-fce3-492d-9e46-f7ff96f38e77)
 
-43. Great! Based from the result, our interest should be at the .vacb file.
+
+
+
 
 
 
