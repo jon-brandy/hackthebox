@@ -267,7 +267,7 @@ python3 ../../volatility3/vol.py -f recollection.bin -o . windows.memmap --dump 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a7db485a-8d7a-448b-be8a-ac20ab32d871)
 
 
-> 17TH QUESTION --> ANS:
+> 17TH QUESTION --> ANS: Wazuh
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9a9c3b94-43a7-44a1-b7f9-5eb8cac0d83d)
 
@@ -294,19 +294,21 @@ python2 ../../volatility/vol.py -f recollection.bin --profile=Win7SP1x64 dumpfil
 
 43. Great! Based from the result, our interest should be at the .dat file (because it contains the history).
 44. To open it, in Linux we can run --> `open`.
-45. Then go to **tabel -> keyword_search_terms** then choose browse data.
+45. Then go to **tabel -> keyword_search_terms** then right click and choose browse data.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/363d54dc-fce3-492d-9e46-f7ff96f38e77)
 
 
-
-
+46. Based from the results above, we can conclude that the victim search about WAZUH. The WAZUH itself is the SIEM solution's name.
 
 
 
 > 18TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b8400da6-5b77-4217-98d7-4b90de761802)
+
+
+47. 
 
 
 ## IMPORTANT LINKS
