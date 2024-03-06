@@ -288,6 +288,9 @@ python3 ../../volatility3/vol.py -f recollection.bin windows.filescan | grep -i 
 python2 ../../volatility/vol.py -f recollection.bin --profile=Win7SP1x64 dumpfiles --dump-dir=. -Q 0x11e0d16f0
 ```
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7c60f05e-c82b-4050-9f11-b989878a49c2)
+
+
 #### NOTES:
 
 ```
@@ -298,6 +301,10 @@ The VACB is a data structure used by NTFS to manage file data caching. The purpo
 attributes of a file, such as its size, timestamps, and other relevant information, as well as to manage cached data
 associated with the file.
 ```
+
+43. Great! Based from the result, our interest should be at the .vacb file.
+
+
 
 > 18TH QUESTION --> ANS:
 
