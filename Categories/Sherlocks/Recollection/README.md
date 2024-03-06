@@ -295,7 +295,8 @@ VACB files are associated with the Windows operating system, particularly with t
 file system.
 
 The VACB is a data structure used by NTFS to manage file data caching. The purpose of the VACB is to keep track of the
-attributes of a file, such as its size, timestamps, and other relevant information, as well as to manage cached data associated with the file.
+attributes of a file, such as its size, timestamps, and other relevant information, as well as to manage cached data
+associated with the file.
 ```
 
 > 18TH QUESTION --> ANS:
