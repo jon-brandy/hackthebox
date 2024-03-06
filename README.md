@@ -47,6 +47,7 @@
   |3. |[]()|[Hyperfiletable](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Hyperfiletable/README.md)||
   |4. |[]()|[Tracer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Tracer/README.md)|
   |5. |[]()|[RogueOne](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/RogueOne/README.md)|
+  |6. |[]()|[Recollection](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Recollection/README.md)|
 </details>
 
 
