@@ -282,10 +282,18 @@ python3 ../../volatility3/vol.py -f recollection.bin windows.filescan | grep -i 
 
 
 41. Seems we found our interest is at offset `0x11e0d16f0`, because it stored all the browser history.
-42. Let's dumps it using **dumpfiles** command.
+42. Let's dumps it using **dumpfiles** plugin.
 
 ```
-python3 ../../volatility3/vol.py -f recollection.bin -o . windows.dumpfiles --virtaddr 0x11e0d16f0
+python2 ../../volatility/vol.py -f recollection.bin --profile=Win7SP1x64 dumpfiles --dump-dir=. -Q 0x11e0d16f0
+```
+
+#### NOTES:
+
+```
+VACB files are associated with the Windows operating system, particularly with the NTFS (New Technology File System) file system.
+
+The VACB is a data structure used by NTFS to manage file data caching. The purpose of the VACB is to keep track of the attributes of a file, such as its size, timestamps, and other relevant information, as well as to manage cached data associated with the file.
 ```
 
 > 18TH QUESTION --> ANS:
