@@ -230,14 +230,40 @@ making it a useful tool for identifying and grouping related files.
 31. Based from the result above, it's clear that `192.168.0.104` is the local ip address of the machine, because it listens to `0.0.0.0`.
 
 
-> 15TH QUESTION --> ANS:
+> 15TH QUESTION --> ANS: cmd.exe
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ae56ce46-fa25-4c54-bfa4-61c206980d2b)
 
 
-> 16TH QUESTION --> ANS:
+32. To identify the parent process of the **powershell.exe** process which is a child process, we can use plugin **pstree** to list all the process and it's child process.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/78a3ac25-a13b-4132-b959-7d142eee84b1)
+
+
+33. Based from the result above, we can conclude that **cmd.exe** is the parent process.
+
+> 16TH QUESTION --> ANS: mafia_code1337@gmail.com
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/316f936d-35d7-4643-a960-c626e0f28a6a)
+
+
+34. Things to note, the attacker should use a browser to login a social media, hence we just need to dump the memory of the browser exe file.
+35. Based from the previous **pslist** result, we identified only one browser used. The microsoft edge.
+36. In volatility, we can dump that using plugin **memmap**.
+
+```
+python3 ../../volatility3/vol.py -f recollection.bin -o . windows.memmap --dump --pid 2380
+```
+
+37. Then, let's strings the .dmp file and search for **.gmail.com**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3a6042e2-493f-45f4-8e14-6f3224a93425)
+
+
+38. Noticed, we found a **.gmail.com** account and a URL encoded data.
+39. Upon decode the URL, it's clear that **mafia_code1337@gmail.com** is used for login.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a7db485a-8d7a-448b-be8a-ac20ab32d871)
 
 
 > 17TH QUESTION --> ANS:
