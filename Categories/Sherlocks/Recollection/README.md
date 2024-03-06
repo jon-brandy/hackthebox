@@ -303,7 +303,7 @@ python2 ../../volatility/vol.py -f recollection.bin --profile=Win7SP1x64 dumpfil
 
 
 
-> 18TH QUESTION --> ANS:
+> 18TH QUESTION --> ANS: csrsss.exe
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b8400da6-5b77-4217-98d7-4b90de761802)
 
