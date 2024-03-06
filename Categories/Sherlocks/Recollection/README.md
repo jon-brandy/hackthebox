@@ -271,6 +271,10 @@ python3 ../../volatility3/vol.py -f recollection.bin -o . windows.memmap --dump 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9a9c3b94-43a7-44a1-b7f9-5eb8cac0d83d)
 
 
+40. To identify the SIEM's solution name, we can use **filescan** plugin and search for **history**.
+
+
+
 > 18TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b8400da6-5b77-4217-98d7-4b90de761802)
