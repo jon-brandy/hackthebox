@@ -308,7 +308,14 @@ python2 ../../volatility/vol.py -f recollection.bin --profile=Win7SP1x64 dumpfil
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b8400da6-5b77-4217-98d7-4b90de761802)
 
 
-47. 
+47. To identify the malware .exe file, we can start by listing all the files inside **/Downloads** directory.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1f0bc8a6-a99a-44ce-9baa-39c70696ae47)
+
+
+48. Noticed there's a process named **crsss.exe** which is a typo process name. The "s" character should no more than 2.
+49. Knowing this, we can conclude that the malware exe file that the user downloaded is **crsss.exe**.
+
 
 
 ## IMPORTANT LINKS
