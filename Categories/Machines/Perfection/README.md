@@ -6,7 +6,7 @@
 
 ## Lessons Learned:
 - Exploiting WEBrick 1.7.0
-- Executing ERB or Ruby Code Execution.
+- ERB and reverse shell using Ruby Code Execution.
 
 ## STEPS:
 > PORT SCANNING
