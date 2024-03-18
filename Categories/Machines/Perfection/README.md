@@ -6,6 +6,7 @@
 
 ## Lessons Learned:
 - Exploiting WEBrick 1.7.0
+- Executing ERB or Ruby Code Execution.
 
 ## STEPS:
 > PORT SCANNING
@@ -80,7 +81,17 @@ Nmap done: 1 IP address (1 host up) scanned in 14.77 seconds
 
 
 12. It executed, it's a finding then.
-13. 
+13. Great! Now our interest focused on finding the correct ruby command injection or SSTI payloads.
+14. Long story short, found a repo which lists all the ruby code execution payloads.
+
+#### NOTES:
+
+```
+I dropped all the useful links at the bottom of this MD file.
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/48adb320-33a2-449f-8675-753f5c0ee33c)
+
  
 
 
@@ -90,4 +101,5 @@ Nmap done: 1 IP address (1 host up) scanned in 14.77 seconds
 https://security.snyk.io/package/rubygems/webrick
 https://portswigger.net/kb/issues/00100f00_ruby-code-injection
 https://www.stackhawk.com/blog/command-injection-ruby/
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection#ruby
 ```
