@@ -72,3 +72,11 @@ Nmap done: 1 IP address (1 host up) scanned in 14.77 seconds
 
 
 10. It's still blocked.
+
+
+
+## IMPORTANT LINKS
+
+```
+https://portswigger.net/kb/issues/00100f00_ruby-code-injection
+```
