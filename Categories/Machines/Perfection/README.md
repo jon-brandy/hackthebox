@@ -72,7 +72,15 @@ Nmap done: 1 IP address (1 host up) scanned in 14.77 seconds
 
 
 10. It's still blocked.
-11. Let's try to send URL encoded newline (\n) to test whether
+11. Let's try to send non-malicious URL encoded newline (\n) to test whether it executes encoded URL.
+
+> Sending %0a
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a26e2d7d-7293-4982-866c-2a7258db9e99)
+
+
+12. It executed, it's a finding then.
+13. 
  
 
 
@@ -81,4 +89,5 @@ Nmap done: 1 IP address (1 host up) scanned in 14.77 seconds
 ```
 https://security.snyk.io/package/rubygems/webrick
 https://portswigger.net/kb/issues/00100f00_ruby-code-injection
+https://www.stackhawk.com/blog/command-injection-ruby/
 ```
