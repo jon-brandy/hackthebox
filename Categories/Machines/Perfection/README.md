@@ -1,4 +1,4 @@
-# Perfection
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1cca854d-f213-4019-a6b0-6f2e4482120b)# Perfection
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a25ccf1b-8041-48e5-9d09-020a945528ef)
@@ -93,6 +93,26 @@ I dropped all the useful links at the bottom of this MD file.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/48adb320-33a2-449f-8675-753f5c0ee33c)
 
  
+15. Nice, let's use the **read file** payload and encode it in URL format.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/10119366-43a3-4657-8968-73a25330e3a1)
+
+
+> pwn%0a<%25%3d+File.open('/etc/passwd').read+%25>
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b9c88067-33a6-4ddf-bb80-ee4ee3dee672)
+
+
+
+#### NOTES:
+
+```
+%0a is needed, because it acts as a delimiter.
+```
+
+16. Amazing! Let's try to do reverse shell so it's easier for us to get the user flag.
+17. 
+
 
 
 ## IMPORTANT LINKS
