@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- sdasd
+- Exploiting WEBrick 1.7.0
 
 ## STEPS:
 > PORT SCANNING
@@ -43,5 +43,8 @@ Nmap done: 1 IP address (1 host up) scanned in 14.77 seconds
 
 
 3. Searching on the internet about vulns found in **WEBrick 1.7.0** resulting to none.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/29519086-e07e-46de-aae0-af2cfb55c438)
+
 
 
