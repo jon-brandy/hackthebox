@@ -213,9 +213,26 @@ hashcat -m 1400 susan_hash.txt -a 3 susan_nasus_?d?d?d?d?d?d?d?d?d
 -a --> aggresiveness.
 ```
 
-> RESULT
+> RESULT --> susan_nasus_413759210
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a83d3f4e-d997-43db-9483-89e2988ad5c9)
 
 
+31. We are logged in as susan!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1d15beca-a460-4d68-9d8d-f92007759a46)
+
+
+> GETTING ROOT FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7408524f-5211-4313-be86-c15d92aecaa2)
+
+
+## ROOT FLAG
+
+```
+aa7afaa82e281910a726fd7ba1e0969a
+```
 
 ## IMPORTANT LINKS
 
