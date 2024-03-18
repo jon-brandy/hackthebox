@@ -72,11 +72,13 @@ Nmap done: 1 IP address (1 host up) scanned in 14.77 seconds
 
 
 10. It's still blocked.
-
+11. Let's try to send URL encoded newline (\n) to test whether
+ 
 
 
 ## IMPORTANT LINKS
 
 ```
+https://security.snyk.io/package/rubygems/webrick
 https://portswigger.net/kb/issues/00100f00_ruby-code-injection
 ```
