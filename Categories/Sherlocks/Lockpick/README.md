@@ -7,7 +7,7 @@
 
 ## Lessons Learned:
 - Conducting static malware analysis using ghidra.
-- Reverse engineering the malware.
+- Reverse engineering C code-based Malware.
 
 ## SCENARIO:
 
@@ -65,6 +65,7 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f967784a-3ad0-4b2f-aeaa-fe581eae2e33)
 
 
+11. Now we need to do malware reversing.
 
 > 3RD QUESTION --> ANS:
 
