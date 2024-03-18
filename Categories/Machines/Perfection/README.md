@@ -7,7 +7,7 @@
 ## Lessons Learned:
 - Exploiting WEBrick 1.7.0
 - ERB and reverse shell using Ruby Code Execution.
-- Identify potential passwords using hashcat (based on password format).
+- Cracking hash using hashcat (based on password format).
 
 ## STEPS:
 > PORT SCANNING
