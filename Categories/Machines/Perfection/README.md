@@ -62,4 +62,13 @@ Nmap done: 1 IP address (1 host up) scanned in 14.77 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/26e43bd2-e5a9-4a3a-8cf6-8e90ffccc596)
 
 
-7
+7. Let's use repeater for further testing.
+8. The reflect message is caused because I input the malicious script/code at the **category** column.
+9. This time I tried to send `;id ` but encode it with URL.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/48782621-d8df-40c9-bce7-ecac7e8ee39c)
+
+
+10. It's still blocked.
