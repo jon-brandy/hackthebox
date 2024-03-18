@@ -47,4 +47,19 @@ Nmap done: 1 IP address (1 host up) scanned in 14.77 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/29519086-e07e-46de-aae0-af2cfb55c438)
 
 
+4. Scanning for subdomain and directories also resulting to none. However our interest should be at the **weight grade calculation** feature.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5e3e3123-8c34-4a6d-995e-0ecffda31a1c)
+
+
+5. After sent normal input, seems it just calculate our grades normally. Nothing special at client-side.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2f3a453e-a418-47a1-90b7-9cff9ec31e83)
+
+
+6. Tried to execute client-side attack, the webapp reflects us **Malicious Input Blocked**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/26e43bd2-e5a9-4a3a-8cf6-8e90ffccc596)
+
+
+7
