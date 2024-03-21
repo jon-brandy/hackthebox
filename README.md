@@ -35,7 +35,6 @@
 
 > CASES INVESTIGATED
 
-
 <details>
   <br>
   <summary>Sherlocks</summary>
