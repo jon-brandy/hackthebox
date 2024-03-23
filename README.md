@@ -11,6 +11,7 @@
 <summary> Machines </summary>
 
 
+
 |No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
 |1. |[Blue](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Blue/README.md)|[Jerry](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Jerry/README.md)|[Lame](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Lame/README.md)|
