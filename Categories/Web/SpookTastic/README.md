@@ -36,4 +36,13 @@ You find an encrypted message guiding you to a web challenge. They claim a curse
 
 8. Great! Let's just send simple XSS payload then.
 9. I start by sending `<script>alert('1')</script>` but nothing happened.
-10. Seems the webapp filters it.
+10. Seems the webapp filters it, but after sent another simple xss payload --> `<img src=err onerror=alert('br')>`, we got the flag!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7394aabb-fd87-4c65-91f1-9bc3fbfc705c)
+
+
+## FLAG
+
+```
+HTB{al3rt5_c4n_4nd_w1l1_c4us3_jumpsc4r35!!}
+```
