@@ -27,4 +27,13 @@ You find an encrypted message guiding you to a web challenge. They claim a curse
 
 
 4. Let's review the source code at the **Newsletter** section.
-5. 
+5. Noticed the "Book Now" button shall executes --> `javascript:void()` every time users click the button to submit their input.
+6. BUT, there is a certain condition to trigger this, because there is no direct calls for this function.
+7. Reviewing the `app.py` script, found LOC that reflect the flag to the user desktop if an alert is happen.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/68e47fa6-c8f2-4fec-9ffe-ea0bf4ac9084)
+
+
+8. Great! Let's just send simple XSS payload then.
+9. I start by sending `<script>alert('1')</script>` but nothing happened.
+10. Seems the webapp filters it.
