@@ -13,4 +13,10 @@ You find an encrypted message guiding you to a web challenge. They claim a curse
 - NONE
 
 ## STEPS:
-1. In this challenge we're given 
+1. In this challenge, the source codes are disclosed.
+
+> WEB APP
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/20ea6c64-b255-4e73-9505-dfb34f619e8c)
+
+
