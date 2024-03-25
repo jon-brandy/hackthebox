@@ -108,7 +108,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 57.08 seconds
 ```
 
-1. Based from the nmap results, we identified that the machine runs a web application and opens ssh login.
+1. Based from the nmap results, we identified that the machine runs a web application at port 5000 and opens ssh login.
 
 > WEB APP
 
