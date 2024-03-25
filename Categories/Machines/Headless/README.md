@@ -142,7 +142,8 @@ Nmap done: 1 IP address (1 host up) scanned in 57.08 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/09d37dd9-00dc-4215-9e16-90df99810102)
 
 
-9. Seems we still got the warning, lastly let's identify whether it only validate the `alert()` usage or not, let's set the onerror to steal the cookie and send it to our local python server.
+9. Seems we still got the warning, lastly let's identify which request header is vulnerable to XSS.
+10. To test it, let's use burpsuite.
 
 ```txt
 PAYLOAD:
