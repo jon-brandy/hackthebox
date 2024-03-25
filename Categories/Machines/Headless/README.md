@@ -136,4 +136,16 @@ Nmap done: 1 IP address (1 host up) scanned in 57.08 seconds
 
 
 8. Interesting, it detects `<script>` tag usage then, let's use HTML entities.
-9. 
+
+> RESULT of using <img src=x onerror=alert('1')>
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/09d37dd9-00dc-4215-9e16-90df99810102)
+
+
+9. Seems we still got the warning, lastly let's identify whether it only validate the `alert()` usage or not, let's set the onerror to steal the cookie and send it to our local python server.
+
+```
+PAYLOAD:
+
+
+```
