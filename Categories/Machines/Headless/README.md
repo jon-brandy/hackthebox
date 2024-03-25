@@ -127,4 +127,13 @@ Nmap done: 1 IP address (1 host up) scanned in 57.08 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6c9ebcc0-5dd2-44cf-8836-77d3cc31b7d9)
 
 
-6. This could be a hint that the exploitation is client-side.
+6. This could be a hint that the initial exploitation is client-side.
+7. Let's try with simple XSS payload to validate whether the **message** textbox is indeed vulnerable with XSS.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1a26b02f-6a76-4c16-a420-3a0074e6dddf)
+
+
+8. Interesting, it detects `<script>` tag usage then, let's use HTML entities.
+9. 
