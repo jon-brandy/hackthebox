@@ -112,4 +112,19 @@ Nmap done: 1 IP address (1 host up) scanned in 57.08 seconds
 
 > WEB APP
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/749cf208-f661-4e93-a089-5632c00b64c9)
 
+
+2. Long story short, after scanning for other subdomains, endpoints, or directories, it resulting to none.
+3. Hence our interest is only at `/support` endpoint.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7b83bc32-6e57-4ea7-9785-ddb8c7da02e4)
+
+
+4. What could be interesting is the **message** section.
+5. And noticed at the previous nmap results, there's a cookie header named `is_admin` with a set cookie.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6c9ebcc0-5dd2-44cf-8836-77d3cc31b7d9)
+
+
+6. This could be a hint that the exploitation is client-side.
