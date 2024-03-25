@@ -185,7 +185,7 @@
 
 |No.|Column 1|Column 2|Column 3|
 |:-:|:-------:|:-------:|:-------:|
-|1. |[Debugging Interface](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Hardware/Debugging%20Interface/README.md)|[Gawk](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Hardware/Gawk/README.md)||
+|1. |[Debugging Interface](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Hardware/Debugging%20Interface/README.md)|[Gawk](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Hardware/Gawk/README.md)|[Photon Lockdown](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Hardware/Photon%20Lockdown/README.md)|
 
 
 </details>
