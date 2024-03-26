@@ -5,7 +5,9 @@
 
 
 ## Lessons Learned:
-- sdas
+- Identifying XSS vulnerability.
+- Steal admin cookie.
+- 
 
 ## STEPS:
 > PORT SCANNING
