@@ -70,4 +70,21 @@ Can you save Spooky Surprises from its supernatural woes?.
 19. However, noticing there is a filter which blocks several localhost form, it's not quite robust. We can easily bypass it using `0`.
 20. Seems now we're clear, the objective for this challenge is to do **Server-Side Request Forgery**.
 
+```
+Manual URL:
+http://0:1337/api/addAdmin?username=vreshco
+```
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f3fa1fa6-70b5-4438-af62-00ffe2feb12d)
+
+
+21. Great! Now logout then login again, our user account shall upgraded to admin.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ac2782f6-5dc1-4fce-90dd-9a5c0480f0f5)
+
+
+## FLAG
+
+```
+HTB{s5rf_m4d3_m3_w3t_my_p4nts!}
+```
