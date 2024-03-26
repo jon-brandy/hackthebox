@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bc0993f0-03fa-4654-ab1f-dbbba2bcdd0a)# Headless
+# Headless
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/539cf778-31bc-4262-8da5-4bd3703218c7)
