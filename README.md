@@ -30,7 +30,7 @@
 |14. |[Broker](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Broker/README.md)|[Delivery](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Delivery/README.md)|[Codify](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Codify/README.md)|
 |15. |[Analytics](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Analytics/README.md)|[Soccer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Soccer/README.md)|[Timelapse](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Timelapse/README.md)|
 |16. |[Devvortex](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Devvortex/README.md)|[Return](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Return/README.md)|[Irked](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Irked/README.md)|
-|17. |[Perfection](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Perfection/README.md)|||
+|17. |[Perfection](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Perfection/README.md)|[Headless](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Headless/README.md)||
 
 
 </details>
