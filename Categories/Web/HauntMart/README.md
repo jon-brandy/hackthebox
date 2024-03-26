@@ -2,7 +2,9 @@
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
-- sdas
+- Source Code Review.
+- Bypassing SSRF Filter (filter for localhost IP usage).
+- Execute Server-Side Request Forgery.
 
 ## DESCRIPTION:
 HauntMart, a beloved Halloween webstore, has fallen victim to a curse, bringing its products to life. 
