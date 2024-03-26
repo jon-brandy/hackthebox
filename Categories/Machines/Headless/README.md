@@ -328,5 +328,32 @@ chmod u+s /bin/bash
 
 Explaination:
 - u: This stands for "user" and indicates that the permission applies to the owner of the file (/bin/bash in this case).
-- +s: This is an operator used with the chmod command to set the setuid permission. The setuid permission, when set on an executable file, allows a user to execute the file with the permissions of the file's owner rather than the user who is executing it.
+- +s: This is an operator used with the chmod command to set the setuid permission.
+The setuid permission, when set on an executable file, allows a user to execute the file with the permissions of the
+file's owner rather than the user who is executing it.
+```
+
+32. Let's implement our strat.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f6960665-be98-428f-a693-75ec9038b1c9)
+
+
+33. Noticed I did `impory pty;pty.spawn("/bin/sh")` it's not really useful, just trying to make the shell slightly stable but it changed the shell permission to normal user, but it triggers the "stable" I mean, try to execute `/bin/bash -p` and the shell is stable now.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/50557415-e2ef-42ff-999f-d2f854c408a0)
+
+
+## ROOT FLAG
+
+```
+71b74da42f8ab69f03e2908552c1b603
+```
+
+
+## IMPORTANT LINKS:
+
+```
+https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 ```
