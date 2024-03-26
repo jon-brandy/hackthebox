@@ -57,5 +57,15 @@ Can you save Spooky Surprises from its supernatural woes?.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/28678127-40ce-4fbf-8b71-698c17d0dc60)
 
 
-15. It filtered for localhost.
-16. 
+15. It filtered for localhost, interesting.
+16. Reviewing the other code, found a code that to make an admin user and seems the flag shall rendered if our role is admin. The flag itself shall rendered at the `/home` endpoint.
+17. The `/addAdmin` endpoint should be our interest.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8bf9e14a-22f2-42b9-982f-6d27c1d03a31)
+
+
+18. Noticed there is a middleware called --> `@isFromLocalhost`, which handle that the `/addAdmin` endpoint is only reachable from localhost request.
+19. However, noticing there is a filter which blocks several localhost form, it's not quite robust. We can easily bypass it using `0`.
+20. Seems now we're clear, the objective for this challenge is to do **Server-Side Request Forgery**.
+
+
