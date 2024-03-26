@@ -32,3 +32,8 @@ Can you save Spooky Surprises from its supernatural woes?.
 
 
 5. Interesting! Let's review the source code handling the logic behind this endpoint.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/501b0644-6440-459b-8aa0-399958c4314f)
+
+
+6. Let's analyze the `@isAuthenticated` middleware.
