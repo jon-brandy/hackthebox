@@ -9,6 +9,7 @@
 - Steal admin cookie.
 - Identifying Command Injection vulnerability.
 - Get reverse shell using bash execution.
+- Gained root by identifying vuln in bin.
 
 ## STEPS:
 > PORT SCANNING
