@@ -92,7 +92,7 @@
 |4. |[baby interdimensional internet](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20interdimensional%20internet/README.md)|[Juggling facts](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Juggling%20facts/README.md)|[baby nginxatsu](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20nginxatsu/README.md)|
 |5. |[baby todo or not todo](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20todo%20or%20not%20todo/README.md)|[baby WAFfles order](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/baby%20WAFfles%20order/README.md)|[BlinkerFluids](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/BlinkerFluids/README.md)|
 |6. |[Orbital](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Orbital/README.md)|[Trapped Source](https://github.com/Bread-Yolk/hackthebox/blob/main/Categories/Web/Trapped%20Source/README.md)|[Passman](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Web/Passman/README.md)|
-|7. |[SpookTastic](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Web/SpookTastic/README.md)|[CandyVault](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Web/CandyVault/README.md)||
+|7. |[SpookTastic](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Web/SpookTastic/README.md)|[CandyVault](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Web/CandyVault/README.md)|[HauntMart](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Web/HauntMart/README.md)|
 
 </details>
 
