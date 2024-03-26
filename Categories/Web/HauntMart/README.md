@@ -78,8 +78,8 @@ http://0:1337/api/addAdmin?username=vreshco
 #### NOTES:
 
 ```
-- Remember to use port 1337, based from the Dockerfile, that port is reachable. Also the run.py code specified that the port for
-localhost is 1337.
+- Remember to use port 1337, based from the Dockerfile, that port is reachable.
+Also the run.py code specified that the port for localhost is 1337.
 - WHY adding /api/ at the manual URL? Because /addAdmin endpoint is one of api.route.
 
 api = Blueprint('api', __name__)
