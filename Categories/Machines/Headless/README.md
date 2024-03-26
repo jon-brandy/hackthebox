@@ -266,7 +266,7 @@ b90b25bedc092bb16c78e147cc91e976
 
 > SYSCHECK CONTENT
 
-```txt
+```sh
 #!/bin/bash                                                                                                                                                  
                                                                                                                                                              
 if [ "$EUID" -ne 0 ]; then                                                                                                                                   
