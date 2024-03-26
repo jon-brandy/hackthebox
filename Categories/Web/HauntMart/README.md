@@ -75,6 +75,16 @@ Manual URL:
 http://0:1337/api/addAdmin?username=vreshco
 ```
 
+#### NOTES:
+
+```
+Remember to use port 1337, based from the Dockerfile, that port is reachable.
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9fa01f07-167b-4c09-9727-28b4d5280d42)
+
+> EXECUTION
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f3fa1fa6-70b5-4438-af62-00ffe2feb12d)
 
 
