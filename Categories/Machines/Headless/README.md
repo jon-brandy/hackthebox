@@ -156,7 +156,8 @@ Got 2 results:
 11. But before testing that, let's try to test for the last time whether:
 
 ```
-- It just gave us a warning message everytime it detects <script> tag usage or html entities, and still execute the code but not alert.
+- It just gave us a warning message everytime it detects <script> tag usage or html entities,
+and still execute the code but not alert.
 - Or it really does block the execution of any XSS payload.
 ```
 
