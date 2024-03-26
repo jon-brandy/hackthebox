@@ -26,4 +26,9 @@ Can you save Spooky Surprises from its supernatural woes?.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cbca3127-57f4-48e1-b571-d12a1c0c896b)
 
 
-4. 
+4. After clicking every available feature, turns out only one feature accessible. The sell product.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f4536a13-c409-4e82-8e34-a7f86cdc1a47)
+
+
+5. Interesting! Let's review the source code handling the logic behind this endpoint.
