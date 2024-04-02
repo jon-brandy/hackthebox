@@ -134,9 +134,43 @@ sh.interactive()
 
 > UNPACK RESULT & LIBC BASE CALCULATION
 
+```py
+sh.recvuntil(b':')
+sh.recvuntil(b':')
+
+get = unpack(sh.recvline().strip().ljust(8, b'\x00'))
+log.success(f'MAIN ARENA --> {hex(get)}')
+
+## Calculating libc base.
+
+libc.address = get - 0x3c4b78
+log.success(f'LIBC BASE --> {hex(libc.address)}')
+```
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ca65bb28-f0b0-43e6-83e4-8efad5fc043d)
 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eaf26c75-da6e-4c0c-80bc-72fad92849a3)
 
 
+18. Now let's set up our fastbin attack. We can start by allocate another chunk with 0x68 size field (it's the size that fit the libc.sym.system).
+19. Then free chunk index 2 and 1.
+
+> RESULT - Chunk index 2 and 1 fell to the unsorted bin.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9cb3a65e-18ce-4434-ac93-1f55a0988b10)
+
+
+20. Great! Now let's utilize the heap overflow vuln to overwrite the FD of chunk 2 to **__malloc_hook()**.
+21. But to do this, we need to identify the correct offset, because we need to have 0x7f as the size field (because will be used to drop libc.sym.system or one_gadget).
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cd1191e8-1ee2-457d-85e4-5b452d266c19)
+
+
+22. It's NULL, let's traverse up gain the correct offset.
+23. Long story short, found the correct offset at **-35**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b25ad19a-e644-4e5f-b75d-b1ab69ba4886)
+
+
+24. 
