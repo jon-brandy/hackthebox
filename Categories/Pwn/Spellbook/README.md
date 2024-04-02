@@ -31,5 +31,8 @@ Beware what you write inside this book. Have fun, if you are a true wizard after
 
 3. Great! Let's review the **add()** function first.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/58851af2-e2d8-42e6-992a-b16cff1399f7)
+
+
 
 
