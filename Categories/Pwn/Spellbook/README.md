@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ce657a92-14cf-434b-8008-025e5efbea05)# Spellbook
+# Spellbook
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
@@ -133,6 +133,9 @@ sh.interactive()
 
 
 > UNPACK RESULT & LIBC BASE CALCULATION
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ca65bb28-f0b0-43e6-83e4-8efad5fc043d)
+
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eaf26c75-da6e-4c0c-80bc-72fad92849a3)
 
