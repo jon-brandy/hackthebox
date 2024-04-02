@@ -181,3 +181,23 @@ log.success(f'LIBC BASE --> {hex(libc.address)}')
 
 
 25. However it's clear that the offset should be **-35**. Let's edit the second chunk and modify the data chunk to **__malloc_hook() - 35**.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8a2a0e34-8df7-4e65-a4f5-ef4943169a09)
+
+
+26. Alternatively, we can check the FD of it's chunk.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8b077fef-be09-43f8-b1c5-18d8750a40f6)
+
+
+27. The FD is already filled with **__malloc_hook() - 35**.
+28. Great! Now let's allocate 2 junk chunk until we reached the **__malloc__hook()** chunk.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/28f804b1-17f3-4c73-8334-22907ba61c6a)
+
+
+29. Now this time, after we write **__malloc_hook()-35** to the 0x70 bin, we want to overwrite it to `system("/bin/sh")` using one_gadget.
+30. So then, at the time we want to request malloc, shell is dropped.
+31. AGAIN, we need to identify the correct offset to drop one_gadget.
