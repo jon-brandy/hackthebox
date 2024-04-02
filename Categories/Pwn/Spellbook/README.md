@@ -333,9 +333,3 @@ sh.interactive()
 HTB{t00_m4ny_w4y5_2_s0lv3_ch005e_y0ur5}
 ```
 
-## IMPORTANT LINKS
-
-```
-
-```
-
