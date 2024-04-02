@@ -3,7 +3,7 @@
 
 ## Lessons Learned:
 - Leak main arena address by freeing a chunk to unsorted bin.
-- Utilizing OOB for fastbin attack lead to RCE.
+- Utilizing Heap Overflow for fastbin attack lead to RCE.
 
 ## DESCRIPTION:
 In this magic school, there are some spellbound books given to young wizards where they can create and store the spells they 
