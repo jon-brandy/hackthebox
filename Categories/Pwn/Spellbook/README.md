@@ -204,8 +204,19 @@ log.success(f'LIBC BASE --> {hex(libc.address)}')
 31. Now this time, after we write **__malloc_hook()-35** to the 0x70 bin, we want to overwrite it to `system("/bin/sh")` using one_gadget.
 33. So then, at the time we want to request malloc, shell is dropped.
 33. AGAIN, we need to identify the correct offset to drop one_gadget.
-34. The simplest way to find the offset is by allocting another 1 junk data with cyclic pattern, it shall fell to segfault anyway if we allocate 0x68 and sends 0x67.
+34. The simplest way to find the offset is by allocating another chunk with size of 0x68 but just fill 0x60 so it does not segfault, then we inspect the strings inside **__malloc__hook()**.
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6c121174-35f5-4f5a-a4fe-0febe060917c)
+
+
+35. Great let's send **19 padding + one_gadget** for the fourth index chunk.
+36. AGAIN, another issue. We need to find the correct one_gadget address. We can bruteforce it by using one by one, or we can just inspect the stack address.
+
+> ONE_GADGET
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a2424f93-7ed9-4d46-9a30-7853d96a75c2)
+
+> STACK ADDRESS INSPECTION
 
