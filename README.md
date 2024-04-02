@@ -74,7 +74,7 @@
 |8. |[Space](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Space/README.md)|[Leet Test](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Leet%20Test/README.md)|[Trick or Deal](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Trick%20or%20Deal/README.md)|
 |9. |[PwnShop](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/PwnShop/README.md)|[Finale](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Finale/README.md)|[Hellhound](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Hellhound/README.md)|
 |10. |[Sacred Scrolls: Revenge](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sacred%20Scrolls%3A%20Revenge/README.md)|[Sick ROP](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sick%20ROP/README.md)|[What does the f say?](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/What%20does%20the%20f%20say%3F/README.md)|
-|11. |[Bon-nie-appetit](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Bon-nie-appetit/README.md)|[Great Old Talisman](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Great%20Old%20Talisman/README.md)||
+|11. |[Bon-nie-appetit](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Bon-nie-appetit/README.md)|[Great Old Talisman](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Great%20Old%20Talisman/README.md)|[Spellbook](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Spellbook/README.md)|
 
 
 
