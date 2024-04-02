@@ -193,7 +193,7 @@ log.success(f'LIBC BASE --> {hex(libc.address)}')
 
 
 27. The FD is already filled with **__malloc_hook() - 35**.
-28. However I forgot to change our chunk size at index 1 to other than 0x68 (so it does not interfere with our RCE setup), this time let's change it to 24.
+28. However I forgot to change our chunk size at index 1 to other than 0x68 (so it does not interfere with our RCE setup), this time let's change it to 24, so it fell to 0x20 fastbin and not 0x70.
 
 > RESULT
 
