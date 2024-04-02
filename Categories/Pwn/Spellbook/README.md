@@ -197,7 +197,7 @@ log.success(f'LIBC BASE --> {hex(libc.address)}')
 
 > RESULT
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c73ecd84-b5b0-4678-8435-996c997523e3)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d5f39269-6053-4950-bc58-ec33e90fec4e)
 
 
 30. Great! Now let's allocate 1 junk chunk until we reached chunk **__malloc__hook() - 35**. 
