@@ -1,4 +1,4 @@
-# Spellbook
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ce657a92-14cf-434b-8008-025e5efbea05)# Spellbook
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
@@ -117,5 +117,23 @@ gdb.attach(sh)
 sh.interactive()
 ```
 
-> RESULT
+> RESULT - It fell to unsorted bin and not consolidate with the top chunk.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0c58b24a-6bb0-40a2-8714-a11087e5c191)
+
+
+16. Remember that it also freed 0x30 sized chunk to the fastbin.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/08987bcb-c4ee-45bf-a00b-64c722fb2415)
+
+
+17. By showing the data chunk at index 0, we can obtain the libc main arena address.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7c48594f-7eee-4db1-bde1-e4292945ed14)
+
+
+> UNPACK RESULT & LIBC BASE CALCULATION
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eaf26c75-da6e-4c0c-80bc-72fad92849a3)
+
 
