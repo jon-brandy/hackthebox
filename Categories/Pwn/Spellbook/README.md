@@ -34,5 +34,25 @@ Beware what you write inside this book. Have fun, if you are a true wizard after
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/58851af2-e2d8-42e6-992a-b16cff1399f7)
 
 
+4. Based from the code above, everytime we allocate a chunk and it's size, a new chunk with 0x30 sized field is also created. Let's prove that by allocate a small size of chunk.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/911fbc71-1d53-49dd-9d58-d338f3e91caa)
+
+
+5. Now let's review the **delete()** function.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bf0bd5df-e0ce-45da-b923-29c49a2f351c)
+
+
+6. Noticed the **__ptr** and **__ptr->sp** is freed but is not set to NULL afterwards. Hence we can still use the chunk later, it's introduce **Use After Free** vuln.
+7. Remembering at the **add()** function, we can allocate up to 1000 bytes and there is Use After Free vuln at the **delete()** function. We can leak main arena libc address by freeing size above a fastbin range, so it shall fell to the unsorted bin. Using UAF, we might could obtain RCE.
+8. Now let's review the **show()** function.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1d269956-3cca-4a3b-893b-f56bcd0600ef)
+
+
+9. Nothing interesting here, it just prints all the data we sent before.
+10. BUT, it introduces another vuln. A Format Strings Bug (FSB).
+11. We can use an alternate way to leak libc address, by using this vuln.
+12. Now let's analyze the **edit()** function.
 
