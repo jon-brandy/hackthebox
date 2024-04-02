@@ -59,7 +59,7 @@ Beware what you write inside this book. Have fun, if you are a true wizard after
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/041c506d-dcb5-4d9a-a7af-dc716ce2aa05)
 
 
-13. Found a heap overflow vuln at the second input, remembering the smallest size of chunk we can allocate using malloc is 0x20 sized field. Hence if we allocate under 0x30 sized field and we edit the size of that chunk up to 0x30, we can overwrite metadata of chunk that are adjacent with it.
+13. Found a heap overflow vuln at the second input, remembering the smallest size of chunk we can allocate using malloc is 0x20 sized field. Hence if we allocate above 0x30 sized field and we use **edit()** function to fill our chunk again but it only accepts 0x30, it triggers heap overflow then and we can overwrite metadata of chunk that are adjacent with it.
 14. Great! Seems we already identified all the vuln, our objective is to do fastbin attack (fastbindup) which lead to RCE.
 15. Let's start by writing the main arena's libc address to the unsorted bin. I allocate 0x200 chunk's size to make sure it outside of the fastbin range so it fell to unsorted bin when freed.
 
