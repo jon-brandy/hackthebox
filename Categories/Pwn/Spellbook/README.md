@@ -173,4 +173,11 @@ log.success(f'LIBC BASE --> {hex(libc.address)}')
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b25ad19a-e644-4e5f-b75d-b1ab69ba4886)
 
 
-24. 
+24. Anyway there's an alternative way to obtain the correct offset, by substracting the **__malloc_hook()** with fake fast chunk.
+
+> using fake fast chunk
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/829372e3-874f-4b90-a1e1-559e3e25eadf)
+
+
+25. However it's clear that the offset should be **-35**. Let's edit the second chunk and modify the data chunk to **__malloc_hook() - 35**.
