@@ -16,12 +16,12 @@ Beware what you write inside this book. Have fun, if you are a true wizard after
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, dynamically linked, and not stripped.
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2362b950-13e0-4c8a-a3ef-68c5025f11f3)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/079264de-f052-44f2-bbc2-994e89cc9ae8)
 
 
 > BINARY PROTECTIONS
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/903afd72-3c9b-49b1-8ebe-31f124d66587)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ac148f78-c617-47bd-bc9c-dbd02fe1facd)
 
 
 2. Upon reviewing the main() functions, we found 4 function call that seems to be our interest. Those are **add()**, **delete()**, **edit()**, and **show()**.
