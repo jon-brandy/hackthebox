@@ -193,15 +193,18 @@ log.success(f'LIBC BASE --> {hex(libc.address)}')
 
 
 27. The FD is already filled with **__malloc_hook() - 35**.
-28. Great! Now let's allocate 1 junk chunk until we reached the chunk that has FD **__malloc__hook() - 35**. 
+28. However I forgot to change our chunk size at index 1 to other than 0x68 (so it does not interfere with our RCE setup), this time let's change it to 24.
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/28f804b1-17f3-4c73-8334-22907ba61c6a)
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c73ecd84-b5b0-4678-8435-996c997523e3)
 
 
-29. Now this time, after we write **__malloc_hook()-35** to the 0x70 bin, we want to overwrite it to `system("/bin/sh")` using one_gadget.
-30. So then, at the time we want to request malloc, shell is dropped.
-31. AGAIN, we need to identify the correct offset to drop one_gadget.
-32. The simplest way to find the offset is by allocting another 1 junk data and the last chunk is cyclic pattern, it shall fell to segfault anyway.
+30. Great! Now let's allocate 1 junk chunk until we reached chunk **__malloc__hook() - 35**. 
+31. Now this time, after we write **__malloc_hook()-35** to the 0x70 bin, we want to overwrite it to `system("/bin/sh")` using one_gadget.
+33. So then, at the time we want to request malloc, shell is dropped.
+33. AGAIN, we need to identify the correct offset to drop one_gadget.
+34. The simplest way to find the offset is by allocting another 1 junk data with cyclic pattern, it shall fell to segfault anyway if we allocate 0x68 and sends 0x67.
 
 > RESULT
 
