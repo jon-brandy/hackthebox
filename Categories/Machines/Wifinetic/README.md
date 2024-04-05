@@ -5,7 +5,8 @@
 
 
 ## Lessons Learned:
-- sdas
+- Anonymous FTP login.
+- 
 
 ## STEPS:
 > PORT SCANNING
@@ -55,3 +56,11 @@ Nmap done: 1 IP address (1 host up) scanned in 18.06 seconds
 
 > ANONYMOUS FTP LOGIN
 
+```
+Execute this command --> ftp wifinetic.htb, then send "anonymous" as the username input.
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/34b001b6-daac-4d8b-bba1-bba7d9397e34)
+
+
+3. 
