@@ -13,5 +13,6 @@ In this very easy Sherlock, you will familiarize yourself with Unix auth.log and
 #### Notes:
 
 ```
-WTMP is a system log file in Unix and Unix-like operating systems. The wtmp file records all user logins and logouts. It's located in the /var/log directory in most Unix systems.
+WTMP is a system log file in Unix and Unix-like operating systems. The wtmp file records all user logins and logouts.
+It's located in the /var/log directory in most Unix systems.
 ```
