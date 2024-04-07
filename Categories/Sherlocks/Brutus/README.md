@@ -5,7 +5,8 @@
 
 
 ## Lessons Learned:
-- sdasd
+- Reviewing UNIX auth.log.
+- Identifying the suspect's IP.
 
 ## SCENARIO:
 In this very easy Sherlock, you will familiarize yourself with Unix auth.log and wtmp logs. We'll explore a scenario where a Confluence server was brute-forced via its SSH service. After gaining access to the server, the attacker performed additional activities, which we can track using auth.log. Although auth.log is primarily used for brute-force analysis, we will delve into the full potential of this artifact in our investigation, including aspects of privilege escalation, persistence, and even some visibility into command execution.
@@ -43,9 +44,15 @@ It's located in the /var/log directory in most Unix systems.
 
 6. However the IP resulting in massive failed login attempt which leads to a security concern. Hence can be marked as the suspect.
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: root
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4b3119b-f1a6-48e8-b4ec-5c689da1984a)
+
+
+7. Further analysis, found the initial attempt from the suspect IP for root account login.
+8. Noticed, after several bruteforce attempts, the suspect finally authenticated as root at `06:31:40` then logout again not long.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/12ed629d-a2ac-46f4-9480-17b6721e7495)
 
 
 > 3RD QUESTION --> ANS:
