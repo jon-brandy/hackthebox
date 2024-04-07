@@ -49,6 +49,8 @@ It's located in the /var/log directory in most Unix systems.
 
 > 7TH QUESTION --> ANS:
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4dffcc64-f4c4-48d9-b674-1e7c3140be20)
+
 
 > 8TH QUESTION --> ANS:
 
