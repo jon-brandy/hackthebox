@@ -29,4 +29,45 @@ network connections, file creation, registry modifications, and more.
 ```
 
 2. To analyze this type of log file we can use **Event Viewer**.
-3. 
+
+> 1ST QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0208a2b3-6758-4887-8462-36387ffc08bb)
+
+
+> 2ND QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f05510da-8da4-4658-a6ab-2ff24e46529e)
+
+
+> 3RD QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d3eff909-9df2-488a-a056-3454a52532eb)
+
+
+> 4TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dbcf19b4-6c90-49d9-9f46-77025d4a9c9f)
+
+
+> 5TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/289a5892-5062-454b-be9c-7884c3c2fd54)
+
+
+> 6TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dec896fd-5771-427e-83a8-ef78d6b92d23)
+
+
+> 7TH QUESTION --> ANS:
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f47bba48-7d38-4fce-95ca-c987ddb59368)
+
+
+> 8TH QUESTION --> ANS:
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c00f492c-812c-422a-8ca1-608a74e0d4ed)
+
