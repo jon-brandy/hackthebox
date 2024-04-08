@@ -70,12 +70,15 @@ It's located in the /var/log directory in most Unix systems.
 
 
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: 37
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9357b082-412e-4fe2-8418-9770175aa017)
 
 
-12. 
+12. After the attacker did a manual login to the root account, a new session number is created. It's **37**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8536251c-673e-4e93-80a0-fd97a4868b0d)
+
 
 
 > 5TH QUESTION --> ANS:
