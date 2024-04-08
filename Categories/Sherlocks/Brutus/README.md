@@ -7,6 +7,7 @@
 ## Lessons Learned:
 - Reviewing UNIX auth.log.
 - Identifying the suspect's IP.
+- Identify the timestamp for initial manual account logged in / manual entry.
 
 ## SCENARIO:
 In this very easy Sherlock, you will familiarize yourself with Unix auth.log and wtmp logs. We'll explore a scenario where a Confluence server was brute-forced via its SSH service. After gaining access to the server, the attacker performed additional activities, which we can track using auth.log. Although auth.log is primarily used for brute-force analysis, we will delve into the full potential of this artifact in our investigation, including aspects of privilege escalation, persistence, and even some visibility into command execution.
@@ -55,14 +56,26 @@ It's located in the /var/log directory in most Unix systems.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/12ed629d-a2ac-46f4-9480-17b6721e7495)
 
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: `06:32:45`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/110ca3ed-445d-435a-9b97-d24c45ba47fd)
+
+9. To identify the initial manual entry is quite tricky. If we analyze further, we shall identified that the attacker did a manual login to `root` user at `06:32:44`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c6364eb9-ed9e-42de-b486-f60b45528c07)
+
+
+10. However, the `06:32:44` is the timestamp for the attempt for successfull login.
+11. So the timestamp for the account's access should be at `06:32:45`.
+
 
 
 > 4TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9357b082-412e-4fe2-8418-9770175aa017)
+
+
+12. 
 
 
 > 5TH QUESTION --> ANS:
