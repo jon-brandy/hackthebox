@@ -30,9 +30,35 @@ network connections, file creation, registry modifications, and more.
 
 2. To analyze this type of log file we can use **Event Viewer**.
 
-> 1ST QUESTION --> ANS:
+> Result in Event Viewer
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c644bf5d-2d78-4d65-b2b7-c280f2da5f89)
+
+
+> 1ST QUESTION --> ANS: 56
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0208a2b3-6758-4887-8462-36387ffc08bb)
+
+
+3. There are 2 ways to identify the total logs for EventID 11. The first one is by filtering the log displayed in EventViewer then count it manually.
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/61294a7b-87c2-4d0d-a1bf-7a9009798214)
+
+
+4. Or, simply execute this powershell command.
+
+> COMMAND
+
+```ps
+Get-WinEvent -Path '.\Microsoft-Windows-Sysmon-Operational.evtx' -FilterXPath "*[System[(EventID=11)]]" | Measure-Object
+```
+
+> THE RESULT OF PS COMMAND
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b684310b-a9fb-4fc4-8803-eabd8140ef53)
 
 
 > 2ND QUESTION --> ANS:
