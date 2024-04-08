@@ -87,11 +87,21 @@ It's located in the /var/log directory in most Unix systems.
 
 
 13. For the lateral movement, the attacker created a new user and new group named **cyberjunkie**.
-14. Then the attacker also add **cyberjunkie** to the same group as **root** --> `sudo`.
+14. Then the attacker also add **cyberjunkie** to the **sudo** group so it can execute sudo permissions or open any files that requires sudo.
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: T1136.001
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5ccabb66-c177-4d59-9657-e2e411f6dbd7)
+
+
+15. Searching on the internet about MITRE ATT&CK, we can identify that **persistence** has several tech and sub tech.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4df6453d-fdf9-4ff3-983b-a40a41468328)
+
+
+16. Judging from what the attacker did, the correct one should be the **Create Account** technique with **Local Account** as it's sub-technique.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/51fa79a9-78fe-47eb-a1eb-ae06959b5414)
 
 
 > 7TH QUESTION --> ANS:
