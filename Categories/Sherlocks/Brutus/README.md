@@ -81,10 +81,13 @@ It's located in the /var/log directory in most Unix systems.
 
 
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: cyberjunkie
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/66eb2ed9-d302-4e9b-b3f2-367dcc8ecb67)
 
+
+13. For the lateral movement, the attacker created a new user and new group named **cyberjunkie**.
+14. Then the attacker also add **cyberjunkie** to the same group as **root** --> `sudo`.
 
 > 6TH QUESTION --> ANS:
 
