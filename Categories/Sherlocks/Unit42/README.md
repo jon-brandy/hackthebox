@@ -62,7 +62,7 @@ Get-WinEvent -Path '.\Microsoft-Windows-Sysmon-Operational.evtx' -FilterXPath "*
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b684310b-a9fb-4fc4-8803-eabd8140ef53)
 
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: `C:\Users\CyberJunkie\Downloads\Preventivo24.02.14.exe.exe`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f05510da-8da4-4658-a6ab-2ff24e46529e)
 
@@ -105,10 +105,31 @@ WinVNC (Windows Virtual Network Computing) malware is a specific type of malicio
 the VNC protocol to gain unauthorized remote desktop access to a victim's computer running the Windows operating system.
 ```
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: dropbox
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d3eff909-9df2-488a-a056-3454a52532eb)
 
+
+12. At the first sysmon log, we can identified that there is an access to a cloud storage named `dropbox` from the victim's system.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d8041814-f2d4-4a25-8043-49549f328fc5)
+
+
+13. EventID 22 itself indicates a DNSEvent.
+14. The next sysmon log has eventID 11 which indicates a file creation event.
+15. Interesting! We can speculate that the dropbox google cloud is accessed and the malware is downloaded to the victim's system from there.
+16. Our speculation can be proven by reviewing the 2nd eventID 11 log and the 4th eventID 11 log.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/82c62dc1-327c-4ea4-abd9-8d5970dd1c50)
+
+
+17. There is a `.part` file for `skZdsnwf.exe` file. This indicates a download is attempted and not finished.
+18. Then at the 4th log with eventID 11, we can see a firefox.exe still used at the same timestamp as the previous download attempt but this time the malware is downloaded.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6a09a9c5-0b12-4b8b-add7-6676f244f371)
+
+
+19. It's clear that **dropbox** is the clous used to distribute the malware.
 
 > 4TH QUESTION --> ANS:
 
