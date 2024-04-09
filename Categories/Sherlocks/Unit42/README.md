@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- sdasd
+- Reviewing sysmon logs using Event Viewer.
 
 ## SCENARIO:
 In this Sherlock, you will familiarize yourself with Sysmon logs and various useful EventIDs for identifying and analyzing malicious activities on a Windows system. 
