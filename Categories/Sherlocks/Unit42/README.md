@@ -97,3 +97,9 @@ Get-WinEvent -Path '.\Microsoft-Windows-Sysmon-Operational.evtx' -FilterXPath "*
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c00f492c-812c-422a-8ca1-608a74e0d4ed)
 
+
+## IMPORTANT LINKS
+
+```
+https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/default.aspx
+```
