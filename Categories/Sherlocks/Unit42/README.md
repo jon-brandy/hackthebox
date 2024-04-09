@@ -131,7 +131,7 @@ the VNC protocol to gain unauthorized remote desktop access to a victim's comput
 
 19. It's clear that **dropbox** is the cloud used to distribute the malware.
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: `2024-01-14 08:10:06`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dbcf19b4-6c90-49d9-9f46-77025d4a9c9f)
 
@@ -143,15 +143,20 @@ the VNC protocol to gain unauthorized remote desktop access to a victim's comput
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4ee1835-0f76-420b-8a07-1809dddb8952)
 
-22. Based from the log's content above, it's clear that the attacker tried to modify the pdf timestamp to `2024-01-14 08:10:06`. To make it appear old.
+22. Based from the log's content above, it's clear that the attacker used the malicoius file to modify the pdf timestamp to `2024-01-14 08:10:06`. To make it appear old.
 23. To make sure of it, open the `Details` tab. We can see that the creation timestamps is changed.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6cf9117b-0340-4bb8-bdab-01f604b39fbe)
 
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: `C:\Users\CyberJunkie\AppData\Roaming\Photo and Fax Vn\Photo and vn 1.1.2\install\F97891C\WindowsVolume\Games\once.cmd`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/289a5892-5062-454b-be9c-7884c3c2fd54)
+
+
+24. Further analysis, noticed that the malicious file dropped several files to the vicim's system. One of them is `once.cmd`. The full path is shown at the log's general tab.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e00054b1-8281-4968-bf82-2c02070c68c3)
 
 
 > 6TH QUESTION --> ANS:
