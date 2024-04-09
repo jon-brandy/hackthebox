@@ -5,6 +5,7 @@
 
 
 ## Lessons Learned:
+- Sysmon EventID definition.
 - Reviewing sysmon logs using Event Viewer.
 - Analyzing UltraVNC Infection Incident.
 
@@ -159,21 +160,38 @@ the VNC protocol to gain unauthorized remote desktop access to a victim's comput
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e00054b1-8281-4968-bf82-2c02070c68c3)
 
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: www.example.com
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dec896fd-5771-427e-83a8-ef78d6b92d23)
 
 
-> 7TH QUESTION --> ANS:
+25. To identify which dummy domain accessed by the malicious file, we can easily find it by filter the log shown with EventID 22 (DNSEvent).
+26. Reviewing the 3rd log shown, we can identified that `www.example.com` is the dummy domain accessed by the malicious file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c9b264d7-f11b-432e-a5c9-a63c56b78789)
+
+
+> 7TH QUESTION --> ANS: `93.184.216.34`
 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f47bba48-7d38-4fce-95ca-c987ddb59368)
 
 
-> 8TH QUESTION --> ANS:
+27. If a process tried to reach a network connection, hence sysmon log with EventID 3 is created.
+28. Reviewing the content of it, we can identified that the malicious process tried to establish a connection to `93.184.216.34`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/360648e1-c1b4-4885-b27d-1a9178d48bb0)
+
+
+> 8TH QUESTION --> ANS: `2024-02-14 03:41:58`
 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c00f492c-812c-422a-8ca1-608a74e0d4ed)
+
+29. At certain time, the malicious file terminated it's process after infecting the PC with a backdoored varient of UltraVNC.
+30. If a process is terminated, then EventID 5 is created. Reviewing the log's content, we can identify the timestamp of the termination.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/46714be2-535f-4821-a2dd-91571ab70981)
 
 
 ## IMPORTANT LINKS
