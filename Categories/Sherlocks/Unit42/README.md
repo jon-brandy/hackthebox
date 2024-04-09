@@ -129,11 +129,23 @@ the VNC protocol to gain unauthorized remote desktop access to a victim's comput
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6a09a9c5-0b12-4b8b-add7-6676f244f371)
 
 
-19. It's clear that **dropbox** is the clous used to distribute the malware.
+19. It's clear that **dropbox** is the cloud used to distribute the malware.
 
 > 4TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dbcf19b4-6c90-49d9-9f46-77025d4a9c9f)
+
+
+20. To identify an **attempt for modifying file creation time**, we can filter for EventID 2.
+21. Long story short, found the log which contain a pdf file and it's the only one.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c4ee1835-0f76-420b-8a07-1809dddb8952)
+
+22. Based from the log's content above, it's clear that the attacker tried to modify the pdf timestamp to `2024-01-14 08:10:06`. To make it appear old.
+23. To make sure of it, open the `Details` tab. We can see that the creation timestamps is changed.
+
 
 
 > 5TH QUESTION --> ANS:
