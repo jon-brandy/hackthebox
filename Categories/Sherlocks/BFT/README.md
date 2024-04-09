@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- asdas
+- Parsing Master File Table (MFT) raw file using MFT Explorer.
 
 ## SCENARIO:
 
@@ -16,7 +16,7 @@ to recover file contents from the MFT.
 
 
 ## STEPS:
-1. In this task we're given a MFT file which we need
+1. In this task we're given a MFT file which we can analyze using MFT Explorer or other 
 
 > 1ST QUESTION --> ANS:
 
