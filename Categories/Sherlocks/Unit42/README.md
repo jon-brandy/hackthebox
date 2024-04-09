@@ -6,6 +6,7 @@
 
 ## Lessons Learned:
 - Reviewing sysmon logs using Event Viewer.
+- Analyzing UltraVNC Infection Incident.
 
 ## SCENARIO:
 In this Sherlock, you will familiarize yourself with Sysmon logs and various useful EventIDs for identifying and analyzing malicious activities on a Windows system. 
@@ -41,7 +42,7 @@ network connections, file creation, registry modifications, and more.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0208a2b3-6758-4887-8462-36387ffc08bb)
 
 
-3. There are 2 ways to identify the total logs for EventID 11. The first one is by filtering the log displayed in EventViewer then count it manually.
+3. There are 2 ways to identify the total logs for EventID 11. The first one is by filtering the log displayed in EventViewer then count it manually or check the top diplayed number.
 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/61294a7b-87c2-4d0d-a1bf-7a9009798214)
@@ -65,6 +66,44 @@ Get-WinEvent -Path '.\Microsoft-Windows-Sysmon-Operational.evtx' -FilterXPath "*
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f05510da-8da4-4658-a6ab-2ff24e46529e)
 
+
+5. In analyzing sysmon logs, I used [this](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/default.aspx) online WIKI to help me identify the meaning of each eventID.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0fc978e4-2b37-451f-86dc-7ec0474086cd)
+
+
+6. It said that there is a malicious process that infected the victim's system, hence we can conclude that **the malicious process** is created in memory and it should be logged.
+7. To hunt the malicious process, let's filter the logs displayed to logs which have EventID 1.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c17ef370-913b-42f8-9d59-6b46093a857f)
+
+
+8. We got 6 results. Long story short, after reviewing each logs, found one log with suspicious binary name.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4b4fa5b7-06ae-4290-873d-89b0191077eb)
+
+
+9. It has double extension. The easiest way to bust whether it's the malware or not is not by contextual analysis. But sends the hash values provided at the sysmon log to virustotal.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/34bb71e6-990e-45ad-a706-9bfa4d2ab8ac)
+
+
+> RESULT IN VIRUSTOTAL
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9f4e5d97-320c-4291-9f3d-61fa0dc51079)
+
+
+10. It's tagged as malicious! Noticed it's categorized as Trojan and it's family is `winvnc`. Exactly what is the scenario told us.
+11. Hence we hunted the malware.
+
+#### NOTES:
+
+```
+WinVNC (Windows Virtual Network Computing) malware is a specific type of malicious software that exploits
+the VNC protocol to gain unauthorized remote desktop access to a victim's computer running the Windows operating system.
+```
 
 > 3RD QUESTION --> ANS:
 
