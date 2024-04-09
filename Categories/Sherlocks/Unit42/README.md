@@ -146,6 +146,7 @@ the VNC protocol to gain unauthorized remote desktop access to a victim's comput
 22. Based from the log's content above, it's clear that the attacker tried to modify the pdf timestamp to `2024-01-14 08:10:06`. To make it appear old.
 23. To make sure of it, open the `Details` tab. We can see that the creation timestamps is changed.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6cf9117b-0340-4bb8-bdab-01f604b39fbe)
 
 
 > 5TH QUESTION --> ANS:
