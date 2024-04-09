@@ -160,7 +160,7 @@ the VNC protocol to gain unauthorized remote desktop access to a victim's comput
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e00054b1-8281-4968-bf82-2c02070c68c3)
 
 
-> 6TH QUESTION --> ANS: www.example.com
+> 6TH QUESTION --> ANS: `www.example.com`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dec896fd-5771-427e-83a8-ef78d6b92d23)
 
