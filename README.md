@@ -146,6 +146,7 @@
 |3. |[Find The Easy Pass](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Find%20The%20Easy%20Pass/README.md)|[Baby Crypt](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Baby%20Crypt/README.md)|[Ransom](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Ransom/README.md)|
 |4. |[Anti Flag](https://github.com/Bread-Yolk/hackthebox/tree/main/Categories/Reversing/Anti%20Flag)|[Ouija](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Ouija/README.md)|[Tear Or Dear](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Tear%20Or%20Dear/README.md)|
 |5. |[Rebuilding](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Rebuilding/README.md)|[Teleport](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Teleport/README.md)|[Hunting License](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Hunting%20License/README.md)|
+|6. |[Shattered Tablet](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Reversing/Shattered%20Tablet/README.md)|||
 
 </details>
 
