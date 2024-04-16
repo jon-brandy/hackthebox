@@ -66,6 +66,67 @@
 
 
 11. Now we need to do malware reversing.
+12. Upon reviewing all the functions available in the binary, seems our interest should be the `encrypt_file()` function.
+13. The logic for the encryption lies at the XOR operation.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4fea2b1e-9bcd-4a6a-bcd8-a10e685ae734)
+
+
+14. Hence, we just need to re-write the code focusing on this function. Things to note in XOR logic, if we XOR the encrypted data with the same key it used to encrypt, we shall retrieved the plaintext.
+15. Remembering we already identified the key before, hence the rest should be just do the same operation again.
+16. To decrypt the encrypted file I used python script.
+
+> THE SCRIPT
+
+```py
+from pwn import *
+import os
+os.system('clear')
+
+# function to grab all the encrypted files
+def grab_encrypted(dir):
+    files=[]
+    for filename in os.listdir(dir): # enumerate every files inside the specified path
+        if filename.endswith('.24bes'): # if it ends with .24bes, add it to our list.
+            files.append(filename)
+    return files
+
+# function to decrypt the encrypted files.
+def decrypt_files(path, file, output_directory):
+    key = 'bhUlIshutrea98liOp' # param2
+    key_length = len(key)
+
+    output_path = os.path.join(output_directory, file[:-6]) # the slicing is to remove the .24bes name for the decrypted files.
+
+    current_path = os.path.join(path, file) # current path
+
+    with open(current_path, 'rb') as file:
+        data_file = file.read()# read all the files inside the dir.
+    
+    file_content = bytearray()
+    for i,y in enumerate(data_file):
+        file_content.append(y ^ ord(key[i % key_length])) # DECRYPTING
+    
+    with open(output_path, 'wb') as f:
+        f.write(file_content) # write the decrypted content to the output path
+
+path = './' # current path
+files = grab_encrypted(path) # grab all the encrypted files
+output_directory = os.path.join(path, 'decrypted-files')
+os.makedirs(output_directory) # create the output-dir
+
+# decrypt each files
+for i, file in enumerate(files, start=1):
+    decrypt_files(path, file, output_directory)
+    log.progress(f'IS DECRYPTING THE FILES')
+
+log.success(f'DECRYPTION DONE')
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3a57b156-b220-49a2-a396-45ed0e6dcc28)
+
 
 > 3RD QUESTION --> ANS:
 
