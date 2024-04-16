@@ -149,11 +149,17 @@ log.success(f'DECRYPTION DONE')
 
 19. Previously, upon reviewing the notes and the malware's logic, we can identified the attacker's mail. The attacker told Forela to discuss payment by contacting his email --> bes24@protonmail.com.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ad3d8190-d1f6-46ab-a066-a81ef00fba79)
+
 
 > 5TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ed700e63-c803-4c8e-a81b-79c4267a25bf)
 
+
+20. The city of London Police told us suspiciouns of some insider trading taking part within Forela trading organization.
+21. Now we're tasked to identify the email address and the profit percentage of the person which has the highest profit percentage.
+22. 
 
 > 6TH QUESTION --> ANS:
 
