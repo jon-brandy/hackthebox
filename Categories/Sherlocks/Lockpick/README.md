@@ -142,10 +142,12 @@ log.success(f'DECRYPTION DONE')
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e52edee1-362e-4ae7-bf9d-e8942c4ca729)
 
-
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: bes24@protonmail.com
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e7d29a43-4921-4291-98e2-f07e98477f1a)
+
+
+19. Previously, upon reviewing the notes and the malware's logic, we can identified the attacker's mail. The attacker told Forela to discuss payment by contacting his email --> bes24@protonmail.com.
 
 
 > 5TH QUESTION --> ANS:
