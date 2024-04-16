@@ -159,7 +159,37 @@ log.success(f'DECRYPTION DONE')
 
 20. The city of London Police told us suspiciouns of some insider trading taking part within Forela trading organization.
 21. Now we're tasked to identify the email address and the profit percentage of the person which has the highest profit percentage.
-22. 
+22. Noticed, there is around 2521 trading datas inside the .json file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/af38f294-300a-498c-bc49-de675c07c15b)
+
+
+23. Hence, a short script should be involved to sort the data shown descending by the profit percentage.
+
+> SORT SCRIPT
+
+```py
+from pwn import *
+import os
+import json
+
+# os.system('clear')
+
+filename = './trading-firebase_bkup.json'
+with open(filename, 'r') as f:
+    content = json.load(f) # read the json data
+
+# get the person with the highest profit percentage
+highest_profit = max(content.values(), key=lambda x: x['profit_percentage'])
+
+log.success(f"EMAIL ADDRESS: {highest_profit['email']}")
+log.success(f"PROFIT PERCENTAGE: {highest_profit['profit_percentage']}")
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0b660af0-6cf9-4418-88cc-00fa51dabcbb)
+
 
 > 6TH QUESTION --> ANS:
 
