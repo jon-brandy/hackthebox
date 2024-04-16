@@ -213,6 +213,9 @@ log.success(f"PROFIT PERCENTAGE: {highest_profit['profit_percentage']}")
 
 25. Again, upon reviewing the malware's code, we can identified that `.ppt` file is not targeted by the malware.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9e922955-2e46-4cac-8004-a5e534225e05)
+
+
 > 8TH QUESTION --> ANS: f3894af4f1ffa42b3a379dddba384405
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b4491f3-dd96-4e7c-9332-5e2cf76fc37b)
