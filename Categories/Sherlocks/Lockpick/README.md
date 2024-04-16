@@ -166,7 +166,7 @@ log.success(f'DECRYPTION DONE')
 
 23. Hence, a short script should be involved to sort the data shown descending by the profit percentage.
 
-> SORT SCRIPT
+> GET MAX SCRIPT
 
 ```py
 from pwn import *
@@ -191,28 +191,55 @@ log.success(f"PROFIT PERCENTAGE: {highest_profit['profit_percentage']}")
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0b660af0-6cf9-4418-88cc-00fa51dabcbb)
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/212eda02-61f4-43f1-b7f9-64c77fd5613e)
+
+
 > 6TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/af68e25c-17ba-4a73-abaf-31200839d5f0)
 
 
-> 7TH QUESTION --> ANS:
+24. To identify the IP address of **Karylin O'Hederscroll** simply review the `sales_forecast.xlsx` file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9685c296-14e6-47ed-931b-a97650224b60)
+
+
+> 7TH QUESTION --> ANS: .ppt
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ae8ecd3d-52bd-49f0-aa51-e0e7a7d5d112)
 
 
-> 8TH QUESTION --> ANS:
+25. Again, upon reviewing the malware's code, we can identified that `.ppt` file is not targeted by the malware.
+
+> 8TH QUESTION --> ANS: f3894af4f1ffa42b3a379dddba384405
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b4491f3-dd96-4e7c-9332-5e2cf76fc37b)
 
 
-> 9TH QUESTION --> ANS:
+26. Executing `md5sum` command at the terminal (for linux) shall shows us the checksum.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e402c3e1-5148-401a-961d-6e55471fd553)
+
+
+> 9TH QUESTION --> ANS: 87baa3a12068c471c3320b7f41235669
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a7f1edf3-f4bc-4d08-8b61-2359d122dd19)
 
 
-> 10TH QUESTION --> ANS:
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1a2f1f3d-888a-4c43-93ca-2bef47d80f3a)
+
+
+> 10TH QUESTION --> ANS: c3f05980d9bd945446f8a21bafdbf4e7
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c715808a-aa2b-4a9f-aac4-68253139e943)
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/61d06c66-e3ff-4cba-9771-c556a24a0181)
 
+
+27. Great! We've investigated the case.
+
+## IMPORANT LINKS
+
+```
+https://www.loginradius.com/blog/engineering/how-does-bitwise-xor-work/
+```
