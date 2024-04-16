@@ -133,9 +133,14 @@ log.success(f'DECRYPTION DONE')
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c5511b63-eefe-4e07-8b1d-8c7a47e92e36)
 
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: E8-16-DF-E7-52-48, 1316262
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f4027aec-1470-49fa-ac6d-375cc0b042b9)
+
+
+18. Next, to identify MAC Address and serial number of the laptop assigned to Hart Manifould, we should review the `it_assets.xml` file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e52edee1-362e-4ae7-bf9d-e8942c4ca729)
 
 
 > 4TH QUESTION --> ANS:
