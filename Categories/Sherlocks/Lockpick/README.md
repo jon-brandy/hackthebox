@@ -144,7 +144,7 @@ log.success(f'DECRYPTION DONE')
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e52edee1-362e-4ae7-bf9d-e8942c4ca729)
 
-> 4TH QUESTION --> ANS: bes24@protonmail.com
+> 4TH QUESTION --> ANS: `bes24@protonmail.com`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e7d29a43-4921-4291-98e2-f07e98477f1a)
 
@@ -154,7 +154,7 @@ log.success(f'DECRYPTION DONE')
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ad3d8190-d1f6-46ab-a066-a81ef00fba79)
 
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: `fmosedale17a@bizjournals.com, 142303.1996053929628411706675436`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ed700e63-c803-4c8e-a81b-79c4267a25bf)
 
@@ -196,7 +196,7 @@ log.success(f"PROFIT PERCENTAGE: {highest_profit['profit_percentage']}")
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/212eda02-61f4-43f1-b7f9-64c77fd5613e)
 
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: `8.254.104.208`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/af68e25c-17ba-4a73-abaf-31200839d5f0)
 
