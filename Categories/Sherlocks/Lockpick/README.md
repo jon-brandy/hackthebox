@@ -7,7 +7,9 @@
 
 ## Lessons Learned:
 - Conducting static malware analysis using ghidra.
-- Reverse engineering C code-based Malware.
+- Reviewing C code-based Malware.
+- Developing a python script to reverse the encryption logic.
+- Developing a python script to parse json file.
 
 ## SCENARIO:
 
