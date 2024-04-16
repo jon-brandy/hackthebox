@@ -54,7 +54,7 @@
 
 8. Hence it concludes that --> `bhUlIshutrea98liOp` is the key.
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: Walden Bevans
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/037de062-cb14-49b6-acec-f329f522ba59)
 
@@ -125,7 +125,12 @@ log.success(f'DECRYPTION DONE')
 
 > RESULT
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3a57b156-b220-49a2-a396-45ed0e6dcc28)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b2e6e1e7-5545-4065-a42f-e8aa10d8b331)
+
+
+17. Awesome! Now to identify the firstname and lastname of this --> `wbevansn1@cocolog-nifty.com` applicant, we can review the `forela_uk_applicants.sql` file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c5511b63-eefe-4e07-8b1d-8c7a47e92e36)
 
 
 > 3RD QUESTION --> ANS:
