@@ -6,6 +6,7 @@
 
 ## Lessons Learned:
 - Parsing Master File Table (MFT) raw file using MFT Explorer.
+- Using analyzeMFT to convert MFT raw file to csv.
 
 ## SCENARIO:
 
@@ -16,11 +17,19 @@ to recover file contents from the MFT.
 
 
 ## STEPS:
-1. In this task we're given a MFT file which we can analyze using MFT Explorer or other 
+1. In this task we're given a MFT file which we can analyze using MFT Explorer. 
 
 > 1ST QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c6838e00-5a77-458f-ab52-7d544a525ebe)
+
+
+2. Now let's convert the mft.raw file to a csv file using `analyzeMFT` python script.
+3. Next, we can use it to the MFT Explorer.
+
+> Converting mft.raw file to .csv file.
+
+
 
 
 > 2ND QUESTION --> ANS:
