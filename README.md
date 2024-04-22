@@ -53,6 +53,7 @@
   |6. |[]()|[Recollection](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Recollection/README.md)|
   |7. |[]()|[Brutus](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Brutus/README.md)|
   |8. |[]()|[Unit42](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Unit42/README.md)|
+  |9. |[]()|[BFT](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/BFT/README.md)|
 </details>
 
 
