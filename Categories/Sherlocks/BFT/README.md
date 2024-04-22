@@ -7,6 +7,7 @@
 ## Lessons Learned:
 - Parsing Master File Table (MFT) raw file using MFT Explorer.
 - Using MFTECmD to convert MFT raw file to csv.
+- Identify downloaded malicious file.
 
 ## SCENARIO:
 
@@ -18,10 +19,10 @@ to recover file contents from the MFT.
 
 ## STEPS:
 1. In this task we're given a MFT file which we can analyze using MFT Explorer. But I prefer to analyze it by converting the raw MFT file to a .csv format.
-2. Then analyze the CSV file with MFT Explorer or Timeline Explorer (both can be used to analyze the .csv file).
+2. Then analyze the CSV file using Timeline Explorer.
 3. To convert the raw MFT file to .csv format, you can either use `analyzeMFT` or `MFTECmD.exe`. Both also can be used for the same purpose.
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: Stage-20240213T093324Z-001.zip
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c6838e00-5a77-458f-ab52-7d544a525ebe)
 
@@ -48,12 +49,52 @@ to recover file contents from the MFT.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e1bf4356-751f-4e34-99f2-12aee2bb2dd3)
 
 
-8. However, found another zip file that downloaded at the same date. Interesting.
+8. However, found another zip file that resides in the Download directory. Interesting!
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2edaf7cc-e593-4b47-ab45-e932e82fc40b)
 
 
-9. Now 
+9. To improve the visibility, I sorted the parent path then custom the filter for only `Downloads` directory of user Simon.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/97f3315b-4b05-4a83-abab-48ce65dcea44)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c9715566-3d7b-430b-840f-1bc6bb5df538)
+
+
+
+10. Great! Based from the results above, seems there are only 2 .zip files inside Simon `Downloads` directory at 13th February 2024.
+11. Further analysis, found that `Stage-20240213T093324Z-001.zip` is unzipped and has another .zip file inside it named `invoices.zip`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9631bebb-c611-461e-9ebf-399e505e1e2e)
+
+
+12. Then found out a .bat file inside invoice.zip. This is absolutely indicating a malicious file.
+
+#### Notes
+
+```
+A .bat file is a batch file in Windows, which is essentially a script containing a series of commands that are
+executed in sequence. These files are often used to automate tasks or run multiple commands at once.
+```
+
+13. Noticed the file size is only 286 bytes. Hence it should be stored directly at the MFT entry.
+
+#### Notes
+
+```
+When a file is small enough to be stored entirely within the MFT record, it can improve access times because the file
+data can be read directly from the MFT without the need to access additional disk sectors. This technique is often used
+for system files and other small files that are frequently accessed.
+```
+
+
+14. Knowing this, then let's analyze invoice.bat's content by uploading raw MFT file using `MFT Explorer`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bae66771-6510-4e1d-a827-553cc186c664)
+
+
+15. Based from the result above, we can see there is a C2 IP and it's port which are as the web server to download a file.
+16. Great! We hunted the malicious file then.
 
 > 2ND QUESTION --> ANS:
 
