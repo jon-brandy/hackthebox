@@ -115,6 +115,11 @@ Using hexeditor and open at offset 0x16E3000, shows the invoice.bat's content.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/67acd946-ad3b-464d-8721-009130d27a14)
 
 
+19. To identify the full HOST URL, open `Time Explorer` again then filter the malicious zip file and check the **Zone id Contents** column.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8e9558df-f1c4-4d5f-a61b-85035d5d2b31)
+
+
 > 3RD QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d4bfc30b-fbfc-4c8d-aff7-f625a576de33)
