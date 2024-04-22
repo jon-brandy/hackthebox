@@ -35,6 +35,17 @@ to recover file contents from the MFT.
 
 5. Now let's upload it to `Timeline Explorer`.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/39d7836a-1b65-4c79-93c4-f8381a708ac6)
+
+
+6. The easiest way to identify the zip filename which Simon downloaded at 13th February, we just have to search for `.zip` and correlate the timestamp.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/86a998d8-397d-4c1a-9303-8ed5fb95a88e)
+
+
+7. Found one zip file that looks convincing based on it's timestamp and it's file path.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e1bf4356-751f-4e34-99f2-12aee2bb2dd3)
 
 
 > 2ND QUESTION --> ANS:
