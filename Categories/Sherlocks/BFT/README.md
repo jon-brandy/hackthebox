@@ -48,6 +48,13 @@ to recover file contents from the MFT.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e1bf4356-751f-4e34-99f2-12aee2bb2dd3)
 
 
+8. However, found another zip file that downloaded at the same date. Interesting.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2edaf7cc-e593-4b47-ab45-e932e82fc40b)
+
+
+9. Now 
+
 > 2ND QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/67acd946-ad3b-464d-8721-009130d27a14)
