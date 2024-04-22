@@ -94,7 +94,21 @@ for system files and other small files that are frequently accessed.
 
 
 15. Based from the result above, we can see there is a C2 IP and it's port which are as the web server to download a file.
-16. Great! We hunted the malicious file then.
+16. Another alternative way to review the content of invoice.bat file, simply upload the raw MFT file to a hexeditor then calculate the offset.
+
+```MD
+OFFSET for MFT Entry
+
+Entry number of invoice.bat file --> 23436 (you can see it at Timeline Explorer, there's a column for it).
+Each entry is 1024 bytes.
+
+Offset --> 23436 * 1024 = 23998464.
+Convert it to hex = 0x16E3000
+
+Using hexeditor and open at offset 0x16E3000, shows the invoice.bat's content.
+```
+
+18. Great! We hunted the malicious file then.
 
 > 2ND QUESTION --> ANS:
 
