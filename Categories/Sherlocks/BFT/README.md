@@ -110,7 +110,7 @@ Using hexeditor and open at offset 0x16E3000, shows the invoice.bat's content.
 
 18. Great! We hunted the malicious file then.
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: `https://storage.googleapis.com/drive-bulk-export-anonymous/20240213T093324.039Z/4133399871716478688/a40aecd0-1cf3-4f88-b55a-e188d5c1c04f/1/c277a8b4-afa9-4d34-b8ca-e1eb5e5f983c?authuser`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/67acd946-ad3b-464d-8721-009130d27a14)
 
@@ -120,23 +120,48 @@ Using hexeditor and open at offset 0x16E3000, shows the invoice.bat's content.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8e9558df-f1c4-4d5f-a61b-85035d5d2b31)
 
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: `C:\Users\simon.stark\Downloads\Stage-20240213T093324Z-001\Stage\invoice\invoices\invoice.bat`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d4bfc30b-fbfc-4c8d-aff7-f625a576de33)
 
 
-> 4TH QUESTION --> ANS:
+20. To identify the full path, simply filter for the malicious file we hunt before (invoice.bat) then look at the bottom for the full path.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/06fce1b1-9404-4163-a772-e8464bdc9130)
+
+
+> 4TH QUESTION --> ANS: `2024-02-13 16:38:39`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/832cd8ff-b6c5-46a6-b1fe-e295b84ae818)
 
 
+21. To identify the timestamp for the file creation on disk, simply check **Created0x30** column.
 
-> 5TH QUESTION --> ANS:
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/17bc136e-93d0-4637-bc90-2aeca40b3f57)
+
+
+> 5TH QUESTION --> ANS: 16E3000
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/082f4e7c-4f96-4172-b568-ac812da368b1)
 
 
+22. Previously we already calculated the offset as an alternative way to investigate the .bat's content.
+23. The calculation is performed by multiply the **Entry Number** with **1024** then convert it to hex.
 
-> 6TH QUESTION --> ANS:
+
+> 6TH QUESTION --> ANS: `43.204.110.203:6666`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/47ac6334-4072-46e0-ba7d-e5be553442f4)
+
+
+24. Again, previously we already identified the C2 IP and it's port by reviewing the .bat's file content.
+25. Finally, we investigated the case!
+
+## IMPORTANT LINKS
+
+```
+https://library.mosse-institute.com/articles/2022/05/windows-master-file-table-mft-in-digital-forensics/windows-master-file-table-mft-in-digital-forensics.html
+https://andreafortuna.org/2017/07/18/how-to-extract-data-and-timeline-from-master-file-table-on-ntfs-filesystem/
+https://github.com/dkovar/analyzeMFT
+https://ericzimmerman.github.io/#!index.md
+```
