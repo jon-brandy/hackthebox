@@ -17,19 +17,23 @@ to recover file contents from the MFT.
 
 
 ## STEPS:
-1. In this task we're given a MFT file which we can analyze using MFT Explorer. 
+1. In this task we're given a MFT file which we can analyze using MFT Explorer. But I prefer to analyze it by converting the raw MFT file to a .csv format.
+2. Then analyze the CSV file with MFT Explorer or Timeline Explorer (both can be used to analyze the .csv file).
+3. To convert the raw MFT file to .csv format, you can either use `analyzeMFT` or `MFTECmD.exe`. Both also can be used for the same purpose.
 
 > 1ST QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c6838e00-5a77-458f-ab52-7d544a525ebe)
 
 
-2. Now let's convert the mft.raw file to a csv file using `MFTECmD.exe`.
+4. For this writeup, I used `MFTECmD.exe` to convert the raw MFT to .csv file.
 
 > Converting mft.raw file to .csv file.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a5a79e2f-1029-4a2c-9df4-ed1ea2968957)
 
+
+5. Now let's upload it to `Timeline Explorer`.
 
 
 
