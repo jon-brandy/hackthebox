@@ -147,7 +147,7 @@ can be used for testing purposes (which also can be used for bruteforcing the WP
 #### NOTES:
 
 ```
-Monitorin interfaces, such as mon0 can also be used for passive sniffing of WI-FI traffic
+Monitoring interfaces, such as mon0 can also be used for passive sniffing of WI-FI traffic
 without associating with specific network.
 
 Knowing this, the attackers are allowed to capture and analyze Wi-Fi frames, including
