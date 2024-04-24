@@ -92,4 +92,30 @@ Nmap done: 1 IP address (1 host up) scanned in 20.50 seconds
 554891fe4881530f6ddd7ce52602c8a4
 ```
 
-9. Nice! 
+9. Nice! Now the point for wifi exploitation is to gained the password to the actual wifi (accessing root means we're accessing the actual client wifi).
+10. Now let's enumerating wireless network interfaces and identify which interface acts as the **Access Point (AP)** and which interface acts as the **Client Wifi**.
+
+> ifconfig
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/29b32b91-59b9-4be8-9a50-843f9b187996)
+
+
+11. Found 3 wireless network interfaces, but only 2 that seems to be our interest (both assigned with IP address).
+12. However, another network interface seems to be our interest at the future.
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/57e5f18f-4d93-4b0b-90fb-d373723dcd89)
+
+
+#### NOTES:
+
+```
+mon0 interface is a monitor mode, this interface commonly used for wireless network monitoring. Also it
+can be used for testing purposes (which also can be used for bruteforcing the WPS PIN).
+```
+
+13. Interesting, now we can focus on `wlan1`, `wlan0`, and `mon0`.
+14. Now let's identify which interface acts as AP and which acts as the Client Wifi.
+
+> Execute --> iw config
+
+
