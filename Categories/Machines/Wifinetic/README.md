@@ -235,5 +235,6 @@ phy#0
 
 ```
 https://outpost24.com/blog/wps-cracking-with-reaver/
+https://en.wikipedia.org/wiki/List_of_WLAN_channels
 ```
 
