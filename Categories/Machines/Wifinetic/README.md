@@ -69,9 +69,10 @@ Nmap done: 1 IP address (1 host up) scanned in 20.50 seconds
 
 ![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/03b1e129-ac25-4674-bddb-36201827ddf8)
 
-5. Reviewing the `passwd`, found 2 users.
+5. Reviewing the `passwd`, found a normal user (netadmin).
 
-![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/e25fd580-39e0-4b6d-822b-2b85b2bb5620)
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/08c0f3d2-1c10-4a48-9f14-8e7d82c0c553)
+
 
 6. Interestingly, there is no `shadow` file. So we can't crack hashes, the approach seems to identify any disclosed information or any weak configurations.
 7. Long story short, upon traversing and reviewing each files, found one file which disclosed a password.
