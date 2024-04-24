@@ -63,4 +63,33 @@ Nmap done: 1 IP address (1 host up) scanned in 20.50 seconds
 
 
 3. Found few files there! Let's download eadh files from current FTP directory to our local machine.
-4. 
+4. Upon reviewing each files, .tar file contained configuration files along with users registered on the machine.
+
+> Dirs and files inside the .tar file
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/03b1e129-ac25-4674-bddb-36201827ddf8)
+
+5. Reviewing the `passwd`, found 2 users.
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/e25fd580-39e0-4b6d-822b-2b85b2bb5620)
+
+6. Interestingly, there is no `shadow` file. So we can't crack hashes, the approach seems to identify any disclosed information or any weak configurations.
+7. Long story short, upon traversing and reviewing each files, found one file which disclosed a password.
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/b83c7bf3-4e29-468c-9693-0ce567bae41c)
+
+
+8. I'm speculating it's the cred for `netadmin` user, let's try it.
+
+> We authenticated and got the user flag.
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/5772911e-fd16-4f8b-884c-17a77995be0a)
+
+
+## USER FLAG
+
+```
+554891fe4881530f6ddd7ce52602c8a4
+```
+
+9. Nice! 
