@@ -121,4 +121,20 @@ can be used for testing purposes (which also can be used for bruteforcing the WP
 
 ![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/c06ae2bf-8557-410f-8ea3-a220a06eb9d6)
 
+ 
+15. But again, to make sure our understanding we can check the `hostapd` and `wpa_supplicant` files.
+
+> RESULT FOR BOTH FILES
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/48a108c5-ef75-48ac-9ee6-32d400691d7f)
+
+
+16. Awesome now we found our target, let's bruteforce the WPS PIN of WLAN1.
+17. Tool used to bruteforce the PIN, is using `reaver`. To identify whether the machine has reaver, simply execute the basic bins enumeration --> `getcap -r / 2>/dev/null`.
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/0d3bc332-6687-4634-9d97-cb49a4243718)
+
+
+18. Found it. To bruteforce the WPS PIN, we need to identify the BSSID of WLAN1.
+19. To identify it, we can using `iwconfig`.
 
