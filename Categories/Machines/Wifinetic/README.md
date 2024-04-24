@@ -62,5 +62,5 @@ Nmap done: 1 IP address (1 host up) scanned in 20.50 seconds
 ![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/ad250528-b56f-4844-af97-7101be0d0870)
 
 
-3. Found few files there! Let's download all of it using command **get ** to download all files from current FTP directory to our local machine.
+3. Found few files there! Let's download eadh files from current FTP directory to our local machine.
 4. 
