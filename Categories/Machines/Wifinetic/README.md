@@ -174,11 +174,20 @@ reaver -i mon0 -c 1 -vv -b 02:00:00:00:00:00
 
 
 25. Awesome we got the PIN and also we got the PSK password.
+26. Now we can switch to root!
 
-![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/2e29d9e3-4f23-49f0-aab0-98a3885860f3)
+> GETTING THE ROOT FLAG
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/bb3c6b2f-6c24-412f-9971-f4faba5cfc28)
 
 
+## ROOT FLAG
 
+```
+8260a0c13088da578787cb61b9170ab8
+```
+
+27. Got the root flag!
 
 ## IMPORTANT LINKS / NOTES
 
