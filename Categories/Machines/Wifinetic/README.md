@@ -7,9 +7,9 @@
 ## Lessons Learned:
 - FTP Anonymous Login (information disclosure).
 - Enumerating Wireless Network Interfaces.
-- Identifying which network interface used as Access Point and which one is used as the WIFI Client.
+- Identifying which network interface used as Access Point (BSSID) and which one is used as the WIFI Client.
 - Dump Detailed each of Wireless Network Configurations (identified misconfig).
-- Bruteforce WPS PIN using reaver (gained root access to the actual WIFI).
+- Bruteforce WPS PIN using reaver (gained root access to the actual WIFI, because we could also get the PSK).
 
 ## STEPS:
 > PORT SCANNING
@@ -135,6 +135,96 @@ can be used for testing purposes (which also can be used for bruteforcing the WP
 ![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/0d3bc332-6687-4634-9d97-cb49a4243718)
 
 
-18. Found it. To bruteforce the WPS PIN, we need to identify the BSSID of WLAN1.
+18. Found it. To bruteforce the WPS PIN, we need to identify the BSSID or AP of WLAN1.
 19. To identify it, we can using `iwconfig`.
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/a94d3f04-d1d5-4303-b4d0-ebda1d6aed96)
+
+
+20. Now, remembering there is `mon0` interface, we can use it to perform the WPS PIN Attack because that interface is used to capture WPS handshake packets exchanged during the WPS PIN authentication process.
+21. To perform it, we also use `reaver` to leverage captured WPS handshake packets to perform offline brute-force attacks against the WPS PIN. This can be done by repeatedly attempting different PIN combinations.
+
+#### NOTES:
+
+```
+Monitorin interfaces, such as mon0 can also be used for passive sniffing of WI-FI traffic
+without associating with specific network.
+
+Knowing this, the attackers are allowed to capture and analyze Wi-Fi frames, including
+those related to the WPS negotiation.
+```
+
+22. Another tricky part, to use `reaver` we also need to identify the channel number of the frequency.
+23. To identify it simly open the wikipedia for each frequencies's channel.
+24. Since our target has frequency of `2.412` GHz, hence the channel number is 1.
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/42ffd903-730c-4712-94e5-97105998066e)
+
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/bbf8ae75-0c7b-4542-ad57-6ee24e548d42)
+
+
+> Reaver Command
+
+```
+reaver -i mon0 -c 1 -vv -b 02:00:00:00:00:00
+```
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/64e5d4e4-0829-4c9d-981d-7ce3f94fc15f)
+
+
+25. Awesome we got the PIN and also we got the PSK password.
+
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/2e29d9e3-4f23-49f0-aab0-98a3885860f3)
+
+
+
+
+## IMPORTANT LINKS / NOTES
+
+For more detailed info about the network configurations, execute `iw dev`.
+
+```
+netadmin@wifinetic:~$ iw dev
+phy#2
+        Interface mon0
+                ifindex 7
+                wdev 0x200000002
+                addr 02:00:00:00:02:00
+                type monitor
+                txpower 20.00 dBm
+        Interface wlan2
+                ifindex 5
+                wdev 0x200000001
+                addr 02:00:00:00:02:00
+                type managed
+                txpower 20.00 dBm
+phy#1
+        Unnamed/non-netdev interface
+                wdev 0x1000000e9
+                addr 42:00:00:00:01:00
+                type P2P-device
+                txpower 20.00 dBm
+        Interface wlan1
+                ifindex 4
+                wdev 0x100000001
+                addr 02:00:00:00:01:00
+                ssid OpenWrt
+                type managed
+                channel 1 (2412 MHz), width: 20 MHz (no HT), center1: 2412 MHz
+                txpower 20.00 dBm
+phy#0
+        Interface wlan0
+                ifindex 3
+                wdev 0x1
+                addr 02:00:00:00:00:00
+                ssid OpenWrt
+                type AP
+                channel 1 (2412 MHz), width: 20 MHz (no HT), center1: 2412 MHz
+                txpower 20.00 dBm
+```
+
+```
+https://outpost24.com/blog/wps-cracking-with-reaver/
+```
 
