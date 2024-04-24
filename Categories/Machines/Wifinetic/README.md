@@ -119,4 +119,6 @@ can be used for testing purposes (which also can be used for bruteforcing the WP
 
 > Execute --> iw config
 
+![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/c06ae2bf-8557-410f-8ea3-a220a06eb9d6)
+
 
