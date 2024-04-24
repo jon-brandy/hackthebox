@@ -82,7 +82,7 @@ Nmap done: 1 IP address (1 host up) scanned in 20.50 seconds
 
 8. I'm speculating it's the cred for `netadmin` user, let's try it.
 
-> We authenticated and got the user flag.
+> We are authenticated and got the user flag.
 
 ![gambar](https://github.com/jon-brandy/hackthebox/assets/70703371/5772911e-fd16-4f8b-884c-17a77995be0a)
 
