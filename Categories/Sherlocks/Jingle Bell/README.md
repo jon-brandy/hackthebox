@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/94f63b3a-e870-45e7-b896-7bd326a6e4d1)# Jingle Bell
+# Jingle Bell
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5971ad1c-2977-47e0-951e-2fc180541d05)
