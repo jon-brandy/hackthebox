@@ -51,14 +51,22 @@ with other tools and services, and search through conversations and files easily
 
 8. It's clear then, that **Torrin** using `slack` to leak Forela's secret.
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: PrimeTech Innovations
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/758d8d97-0806-4537-9084-09e2d2e2ba29)
 
 
-> 3RD QUESTION --> ANS:
+9. Based from our previous finding, it's clear that **Torrin** tried to leak Forela's data to `PrimeTech Innovations` company.
+
+
+> 3RD QUESTION --> ANS: Cyberjunkie-PrimeTechDev
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6afcb584-942c-42e5-9bf5-e85b4f60f55b)
+
+
+10. Again, based from our previous finding, **Torrin** communicated with user `Cyberjunkie-PrimeTechDev`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0a1fcba4-307d-443e-bfd9-593af1a988b2)
 
 
 > 4TH QUESTION --> ANS:
