@@ -14,7 +14,11 @@ Torrin is suspected to be an insider threat in Forela. He is believed to have le
 </p>
 
 ## STEPS:
-1. dasda
+1. As a senior incident responder, we're tasked to investigate an incident in Forela. It is believed that **Torrin** leaked some data and removed certain applications from Forela workstation.
+2. We're given these files:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0e09cc43-806e-4d73-82c4-f38a62aea066)
+
 
 > 1ST QUESTION --> ANS:
 
