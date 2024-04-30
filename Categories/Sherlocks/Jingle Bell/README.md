@@ -20,6 +20,9 @@ Torrin is suspected to be an insider threat in Forela. He is believed to have le
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0e09cc43-806e-4d73-82c4-f38a62aea066)
 
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eee76dfd-2fe2-4c9d-b8c0-4eab7ef2eb55)
+
+
 > 1ST QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c2ce1b8d-616c-4ca1-b896-388c9c43bad5)
