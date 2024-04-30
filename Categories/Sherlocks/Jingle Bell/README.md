@@ -14,4 +14,25 @@ Torrin is suspected to be an insider threat in Forela. He is believed to have le
 </p>
 
 ## STEPS:
-1. 
+1. dasda
+
+> 1ST QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c2ce1b8d-616c-4ca1-b896-388c9c43bad5)
+
+
+> 2ND QUESTION --> ANS:
+
+> 3RD QUESTION --> ANS:
+
+> 4TH QUESTION --> ANS:
+
+> 5TH QUESTION --> ANS:
+
+> 6TH QUESTION --> ANS:
+
+> 7TH QUESTION --> ANS:
+
+> 8TH QUESTION --> ANS:
+
+
