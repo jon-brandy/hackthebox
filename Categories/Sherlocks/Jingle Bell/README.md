@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- asdas
+- Using sqlitebrowser to reviewing sqlite3.db file.
 
 ## SCENARIO:
 
@@ -23,14 +23,33 @@ Torrin is suspected to be an insider threat in Forela. He is believed to have le
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eee76dfd-2fe2-4c9d-b8c0-4eab7ef2eb55)
 
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: Slack
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c2ce1b8d-616c-4ca1-b896-388c9c43bad5)
 
 
-3. Upon reviewing the DB file given, we can identify the tool used by Torrin to leak Forela's data.
+3. Upon reviewing the DB file given, we can identify the tool used by Torrin to leak Forela's data by reviewing the `notification` table.
+4. Noticed an application seems to be our interest among all 23 rows.
+5. It's `slack` application.
 
-   
+#### NOTES:
+
+```
+Slack is a cloud-based communication platform primarily used for workplace collaboration. It allows teams tocommunicate
+in real-time through channels organized by topic, as well as through direct messaging. Users can share files, integrate
+with other tools and services, and search through conversations and files easily.
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/466a299c-d761-4ec5-8d74-fc7bf63305c5)
+
+
+6. Further checking, we identified a conversation between `PrimeTech Innovations` company, especially the Dev team.
+7. It asked **Torrin** whether he managed to find the files related to Forela Oil Extraction Plan in Angola.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e28cd9e1-c98b-44e7-9ba0-ec3258100d79)
+
+
+8. It's clear then, that **Torrin** using `slack` to leak Forela's secret.
 
 > 2ND QUESTION --> ANS:
 
