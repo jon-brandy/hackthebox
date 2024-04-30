@@ -104,13 +104,36 @@ with other tools and services, and search through conversations and files easily
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cf51db83-18d8-46a8-b16b-52172b983b51)
 
 
-> 7TH QUESTION --> ANS:
+> 7TH QUESTION --> ANS: `2023-04-20 10:34:49`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/50d25893-d2f4-4c5b-a09c-b4cb893b1a19)
 
 
-> 8TH QUESTION --> ANS:
+14. To identify the timestamp of when **Torrin** sends the google drive link to Cyberjunkie, simply convert the Unix timestamp to UTC using [this](https://www.epochconverter.com/) online converter.
+
+> UNIX TIMESTAMP
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6bb06ed8-a135-456e-9194-f2a13ea8d706)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/18991e57-3624-45b5-9d87-0b919c9a7623)
+
+
+> 8TH QUESTION --> ANS: £10000
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/36becd05-8e17-4bbd-b8b3-1f3829756bcb)
 
 
+
+15. Reviewing the 22nd row, we can identified the bank account number along with the money to be transferred.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/15e3abf4-3799-4222-ba10-44dc31b72ba7)
+
+
+16. We've finished investigatd the case!
+
+## IMPORTANT LINKS
+
+```
+https://www.epochconverter.com/
+https://slack.com/help/articles/360017938993-What-is-a-channel
+```
