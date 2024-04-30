@@ -1,4 +1,4 @@
-# Jingle Bell
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/94f63b3a-e870-45e7-b896-7bd326a6e4d1)# Jingle Bell
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5971ad1c-2977-47e0-951e-2fc180541d05)
@@ -23,16 +23,35 @@ Torrin is suspected to be an insider threat in Forela. He is believed to have le
 
 > 2ND QUESTION --> ANS:
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/758d8d97-0806-4537-9084-09e2d2e2ba29)
+
+
 > 3RD QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6afcb584-942c-42e5-9bf5-e85b4f60f55b)
+
 
 > 4TH QUESTION --> ANS:
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3586d6c1-7331-49c9-8a2d-bdb7e1f5237a)
+
+
 > 5TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/053d5052-f9cc-4983-9244-507c881c75fa)
+
 
 > 6TH QUESTION --> ANS:
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bc976d2f-5298-4698-865d-7ed624ced886)
+
+
 > 7TH QUESTION --> ANS:
 
+
+
 > 8TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/36becd05-8e17-4bbd-b8b3-1f3829756bcb)
 
 
