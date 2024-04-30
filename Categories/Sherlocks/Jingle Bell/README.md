@@ -70,23 +70,43 @@ with other tools and services, and search through conversations and files easily
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0a1fcba4-307d-443e-bfd9-593af1a988b2)
 
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: forela-secrets-leak
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3586d6c1-7331-49c9-8a2d-bdb7e1f5237a)
 
 
-> 5TH QUESTION --> ANS:
+11. Still from the same row's data, we can see the channel's name based from the **hashtag** usage.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4631c112-1e99-4b76-8e58-7f1a6d54e850)
+
+
+
+> 5TH QUESTION --> ANS: Tobdaf8Qip$re@1
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/053d5052-f9cc-4983-9244-507c881c75fa)
 
 
-> 6TH QUESTION --> ANS:
+12. Reviewing row 18th, **Torrin** seems Cyberjunkie spilled the password archive server and he confirmed the password again.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ed6b02ac-03dd-4757-8502-39e16c2127e6)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2ea55312-6018-4cdf-a12a-6c77feb8beb0)
+
+
+> 6TH QUESTION --> ANS: `https://drive.google.com/drive/folders/1vW97VBmxDZUIEuEUG64g5DLZvFP-Pdll?usp=sharing`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bc976d2f-5298-4698-865d-7ed624ced886)
 
 
+13. Reviewing the next row, Cyberjunkie sent **Torrin** the google drive link.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cf51db83-18d8-46a8-b16b-52172b983b51)
+
+
 > 7TH QUESTION --> ANS:
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/50d25893-d2f4-4c5b-a09c-b4cb893b1a19)
 
 
 > 8TH QUESTION --> ANS:
