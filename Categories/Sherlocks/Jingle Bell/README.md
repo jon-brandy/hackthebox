@@ -28,6 +28,10 @@ Torrin is suspected to be an insider threat in Forela. He is believed to have le
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c2ce1b8d-616c-4ca1-b896-388c9c43bad5)
 
 
+3. Upon reviewing the DB file given, we can identify the tool used by Torrin to leak Forela's data.
+
+   
+
 > 2ND QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/758d8d97-0806-4537-9084-09e2d2e2ba29)
