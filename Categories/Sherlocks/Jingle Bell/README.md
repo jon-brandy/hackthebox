@@ -6,6 +6,7 @@
 
 ## Lessons Learned:
 - Using sqlitebrowser to reviewing sqlite3.db file.
+- Slack Application Forensic (.DB) file.
 
 ## SCENARIO:
 
