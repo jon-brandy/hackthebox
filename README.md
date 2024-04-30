@@ -53,6 +53,8 @@
   |7. |[]()|[Brutus](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Brutus/README.md)|
   |8. |[]()|[Unit42](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Unit42/README.md)|
   |9. |[]()|[BFT](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/BFT/README.md)|
+  |10. |[]()|[Jingle Bell](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Jingle%20Bell/README.md)|
+
 </details>
 
 
