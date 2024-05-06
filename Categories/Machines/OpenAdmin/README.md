@@ -172,7 +172,7 @@ curl --silent -d "xajax=window_submit&xajaxr=1574117726710&xajaxargs[]=tooltips&
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/86dee7d8-3904-4134-9314-0ef537b4745b)
 
 
-24. Noticed it printed out joanna public key once we logged in at the webapp.
+24. Noticed it printed out joanna private key once we logged in at the webapp.
 
 > Reviewing index.php
 
@@ -212,7 +212,11 @@ ssh jimmy@openadmin.htb -L 52846:localhost:52846
 
 
 30. Now login using the credential we found and cracked before --> `jimmy:Revealed`.
-31. 
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5170a646-30bf-4726-8230-8f41ecc2d252)
+
 
 ## IMPORTANT LINKS
 
