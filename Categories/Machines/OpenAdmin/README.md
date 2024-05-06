@@ -9,7 +9,8 @@
 - Exploiting OpenNetAdmin (ONA) v.18.1.1 --> Remote Code Execution, Command Injection.
 - Implement bash reverse shell.
 - Reviewing apache2 internal configuration (reviewing the virtual host is running as which user --> lead to port forwarding).
-- Port Forwarding
+- Password Cracking using john.
+- 
 
 ## STEPS:
 > PORT SCANNNING
@@ -180,4 +181,30 @@ curl --silent -d "xajax=window_submit&xajaxr=1574117726710&xajaxargs[]=tooltips&
 25. At index.php file, we can see a hashed password for jimmy account. The password is hashed with SHA512, which is crackable using john or might be crackstation has the db for that password. Let's try both.
 
 > USING CRACKSTATION
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/09f2e1a2-5979-4b1d-b1ed-15439871fdea)
+
+
+> USING JOHN
+
+```
+john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt --format=RAW-SHA512 --rules=Jumbo
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ebb8375b-c8e7-470a-9143-d4a80d6fd947)
+
+
+26. Both states for `Revaled`.
+27. Next our objective is to reach the internal sites. Let's do port forwarding.
+28. Now reconnect to jimmy over SSH with a tunnel so that we can reach the internal webapp/website.
+
+> PORT FORWARDING
+
+```
+ssh jimmy@openadmin.htb -L 52846:localhost:52846
+```
+
+29. Now we can access the internal website at port 52846.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d0343b9d-c5af-42c9-9481-800f7ea0567f)
 
