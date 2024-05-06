@@ -11,7 +11,8 @@
 - Reviewing apache2 internal configuration (reviewing the virtual host is running as which user --> lead to port forwarding).
 - Password Cracking using john.
 - Port Forwarding (to be able to access internal website).
-- Dropping a webshell on the internal site.
+- Dropping a webshell on the internal site to gain access to joanna user.
+- Cracking SSH Private Key.
 
 ## STEPS:
 > PORT SCANNNING
@@ -235,10 +236,19 @@ ssh jimmy@openadmin.htb -L 52846:localhost:52846
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0cc28e9d-8b29-4633-acd7-e3bb5099d091)
 
 
+> GETTING THE USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cd6fb28c-a44a-452f-a639-ac2c059b4de1)
 
 
+## USER FLAG
 
+```
+cde17c5272847a3e4cf914a402c4c51e
+```
 
+33. To gain root, we need to crack the private key, because lateral movement in terminal-mode shell is needed.
+34. To crack the 
 
 ## IMPORTANT LINKS
 
