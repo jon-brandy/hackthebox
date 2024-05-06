@@ -171,5 +171,13 @@ curl --silent -d "xajax=window_submit&xajaxr=1574117726710&xajaxargs[]=tooltips&
 
 
 24. Noticed it printed out joanna public key once we logged in at the webapp.
-25. 
- 
+
+> Reviewing index.php
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f7585c7d-e89c-46ad-9ba6-d8a00831b593)
+
+
+25. At index.php file, we can see a hashed password for jimmy account. The password is hashed with SHA512, which is crackable using john or might be crackstation has the db for that password. Let's try both.
+
+> USING CRACKSTATION
+
