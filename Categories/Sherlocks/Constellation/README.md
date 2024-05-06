@@ -29,7 +29,7 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bc75456f-33c8-478b-811e-06d00f1e8698)
 
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: `2023-09-16 16:03:37`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eff7f229-5af5-4c46-901e-5ee441911711)
 
@@ -43,16 +43,23 @@
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a503a2f0-4290-4949-b60c-6f6606452d85)
 
+7. The correct initial timestamp is at the first index.
 
-> 2ND QUESTION --> ANS:
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a3e5ba02-1608-4db1-b444-4049f62f8060)
+
+
+> 2ND QUESTION --> ANS: NDA_Instructions.pdf
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b3d6a642-19f6-449d-99dc-8c8cf11d4852)
 
 
+8. It's clear, that the attack group sent the `NDA_Instructions.pdf` through discord.
 
 > 3RD QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ee7bf1b0-8c12-4b1e-8272-6af79567b41d)
+
+
 
 
 > 4TH QUESTION --> ANS:
