@@ -300,7 +300,22 @@ sudo /bin/nano /opt/priv
 41. Interesting! `reset;` is executed. It tries to reset `/stdin/stdout/stderr`, this could be because all 3's are broken or messed up.
 42. So we need to specify it manually afterwards. Nice let's try it.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/304c986f-8709-4c67-b33d-8ec2a4acdbff)
 
+
+43. Upon pressing enter after the payload, we gained root!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5c2140db-1eb6-43f7-932c-bdbc86df89da)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/58fc5ed0-7b60-4b01-ac05-6840e001f75b)
+
+
+## ROOT FLAG
+
+```
+16e1af12abeba1c35117a03390f5de07
+```
 
 ## IMPORTANT LINKS
 
