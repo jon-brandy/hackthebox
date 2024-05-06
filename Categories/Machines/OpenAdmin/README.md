@@ -6,6 +6,7 @@
 
 ## Lessons Learned:
 - Using dirsearch to enumerate webpages.
+- Exploiting OpenNetAdmin (ONA) v.18.1.1 --> Remote Code Execution, Command Injection.
 
 ## STEPS:
 > PORT SCANNNING
@@ -77,11 +78,23 @@ dirsearch -u http://openadmin.htb:80
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/44663749-8bbf-49eb-b6fd-d9e97afc4f98)
 
 
-7. Noticed, it disclosed the service's version --> `18.1.1`. Using `searchsploit` for vuln related to this version, found these results:
+7. Noticed, it disclosed the service's version --> `18.1.1`. Using `searchsploit` or internet to find vuln related to this version, found these results:
+
+> Internet
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5ab29c1d-0c5f-4864-8f4d-4347e780176c)
 
+> Searchsploit
+
+
 
 8. It's remote code execution, also there's github POC's which can be useful.
-9. 
+9. Anyway, let's use the exploit from exploit.db first.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/680d056a-3507-48d7-a5b0-fd42fe46fe17)
+
+
+```txt
+
+```
 
