@@ -13,6 +13,7 @@
 - Port Forwarding (to be able to access internal website).
 - Dropping a webshell on the internal site to gain access to joanna user.
 - Cracking SSH Private Key.
+- Privilege Escalation in nano by reseting `/stdin/stdout/stderr`.
 
 ## STEPS:
 > PORT SCANNNING
@@ -268,9 +269,37 @@ cde17c5272847a3e4cf914a402c4c51e
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0a60c57d-b6b5-4443-be5a-c8fda95a05e6)
 
 
-36. Awesome! We cracked it.
+36. Awesome! We cracked it. To login as **joanna**.
+
+```
+sudo ssh -i rsaprivkey joanna@openadmin.htb
+```
 
 > GETTING THE ROOT FLAG
+
+37. Checking sudo permission for **joanna**, found that /opt/priv file is executed as root using nano.
+38. The idea is to drop a shell by typing our payload at the read file prompt, then to excute it type `CTRL+X`.
+
+> Remember to run nano as sudo in joanna.
+
+```
+sudo /bin/nano /opt/priv
+```
+
+> READ FILE
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cf412661-9f3e-4be1-b888-065dd22546f1)
+
+
+39. BUT, there is a small problem. After typing `/bin/sh` then exeute `CTRL+X`, the terminal froze.
+40. Searching on the interner about Linux privesc using nano, found GTFO BINS documentation.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/15dc9dfe-ee95-4091-bb6b-254b8715b9e3)
+
+
+41. Interesting! `reset;` is executed. It tries to reset `/stdin/stdout/stderr`, this could be because all 3's are broken or messed up.
+42. So we need to specify it manually afterwards. Nice let's try it.
+
 
 
 ## IMPORTANT LINKS
@@ -279,4 +308,5 @@ cde17c5272847a3e4cf914a402c4c51e
 https://www.exploit-db.com/exploits/47691
 https://github.com/amriunix/ona-rce/blob/master/ona-rce.py
 https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+https://gtfobins.github.io/gtfobins/nano/
 ```
