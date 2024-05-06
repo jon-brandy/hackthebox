@@ -60,10 +60,28 @@ dirsearch -u http://openadmin.htb:80
 
 5. Long story short, after reviewing every feature. Figured out that login feature shall redirect us to `/ona` endpoint.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4c9b4311-3f21-42bf-bc44-71ababe5b4a7)
+
+
 > Accessing /ona/
 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f16362b7-372d-40c6-ba05-34704060d1a7)
 
 
+6. By checking for documentation, turns out ONA is an abbreviation of **OpenNetAdmin**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/45440e69-a7b4-4781-9f26-697aaed46333)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/44663749-8bbf-49eb-b6fd-d9e97afc4f98)
+
+
+7. Noticed, it disclosed the service's version --> `18.1.1`. Using `searchsploit` for vuln related to this version, found these results:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5ab29c1d-0c5f-4864-8f4d-4347e780176c)
+
+
+8. It's remote code execution, also there's github POC's which can be useful.
+9. 
 
