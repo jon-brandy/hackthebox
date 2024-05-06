@@ -11,7 +11,8 @@
 - Reviewing apache2 internal configuration (reviewing the virtual host is running as which user --> lead to port forwarding).
 - Password Cracking using john.
 - Port Forwarding (to be able to access internal website).
-- 
+- Dropping a webshell on the internal site.
+- Cracking RSA private key.
 
 ## STEPS:
 > PORT SCANNNING
