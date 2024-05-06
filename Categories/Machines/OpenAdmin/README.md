@@ -1,4 +1,4 @@
-# OpenAdmin
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/850ebdb0-48db-483c-92cb-ef6ed405c839)# OpenAdmin
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9908a103-8c8b-4771-bb74-0bf955c31f61)
@@ -133,6 +133,24 @@ curl --silent -d "xajax=window_submit&xajaxr=1574117726710&xajaxargs[]=tooltips&
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0d6873a0-f74e-4a4e-b140-ab3e56638b91)
 
 
-14. 
+14. Traversing to `/home` directory to check users registered in this machine. Found 2 users namely **jimmy** and **joanna**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ef5a2c80-db6f-4d45-885f-a77d4b5684b6)
 
 
+15. Upon reviewing the userinfo at ONA dashboard, identified it uses mysql and the host is local.
+16. Hence let's traverse to the webapp location --> `/var/www/html/ona`.
+17. Checking the `/local/config` found file --> `database_settings.inc.php` which should be our interest.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b737d855-08f8-4bcc-b17f-5ef8f676ccdc)
+
+
+18. Found the db password of `ona_sys` --> `n1nj4W4rri0R!`.  However we can't open mysql in the machine. At this condition, we can speculate a password reuse to a certain user.
+19. After tried for both, turns out **jimmy** using the same password as the DB.
+
+> LOGGED IN AS JIMMY
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1d18e759-41db-4e91-ae2e-361e1873bda9)
+
+
+20. Great!
