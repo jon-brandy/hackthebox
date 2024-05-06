@@ -162,3 +162,10 @@
 
 
 24. Great! We've investigated the case!
+
+## IMPORTANT LINKS
+
+```
+https://dfir.blog/unfurl/
+https://dfir.blog/
+```
