@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/850ebdb0-48db-483c-92cb-ef6ed405c839)# OpenAdmin
+# OpenAdmin
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9908a103-8c8b-4771-bb74-0bf955c31f61)
@@ -7,6 +7,8 @@
 ## Lessons Learned:
 - Using dirsearch to enumerate webpages.
 - Exploiting OpenNetAdmin (ONA) v.18.1.1 --> Remote Code Execution, Command Injection.
+- Implement bash reverse shell.
+- 
 
 ## STEPS:
 > PORT SCANNNING
