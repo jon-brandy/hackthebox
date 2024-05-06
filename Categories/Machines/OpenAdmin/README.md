@@ -205,7 +205,19 @@ john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt --format=RAW-SHA512 --
 ssh jimmy@openadmin.htb -L 52846:localhost:52846
 ```
 
+
 29. Now we can access the internal website at port 52846.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d0343b9d-c5af-42c9-9481-800f7ea0567f)
 
+
+30. Now login using the credential we found and cracked before --> `jimmy:Revealed`.
+31. 
+
+## IMPORTANT LINKS
+
+```
+https://www.exploit-db.com/exploits/47691
+https://github.com/amriunix/ona-rce/blob/master/ona-rce.py
+https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+```
