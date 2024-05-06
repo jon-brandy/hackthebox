@@ -3,7 +3,6 @@
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ba2e1093-d5e6-4c40-8216-af5076a4b300)
 
-
 ## Lessons Learned:
 - Identify the initial timestamp of conversation made in Discord using Discord File Link.
 - Using **unfurl** (Threat Intelligence tool) to identify initial timestamp of Google Query link and the initial timestamp of when a file sent in Discord.
