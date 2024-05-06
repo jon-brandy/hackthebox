@@ -80,20 +80,38 @@
 
 12. However, if we reviewed it carefully, it seems the attack group queried another thing --> `how to archive a folder using tar i`. 
 
-> 6TH QUESTION --> ANS:
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4f582c68-6427-40dc-bd65-ddd5b94e2273)
+
+
+> 6TH QUESTION --> ANS: `2023-09-27 05:31:45`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/37743e99-d015-4dff-b7e4-c59fcbc30d70)
 
 
+13. Next, to identify the timestamp of when this Google search made, we just need to paste it to the same tool we used before.
 
-> 7TH QUESTION --> ANS: 
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/33006baf-c3ce-412c-9f3d-6fde5564f54b)
+
+
+> 7TH QUESTION --> ANS: `AntiCorp Gr04p`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/336a8237-90a3-4af9-94e2-e54b5e79fe49)
+
+
+14. Based from the PDF content, we can see clearly the attack group said their own group name.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/026ab207-f934-48fc-840a-7a6eb67634cf)
+
 
 
 > 8TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8b2b6906-fc91-4468-be70-62c26ee96610)
+
+
+15. 
 
 
 > 9TH QUESTION --> ANS:
