@@ -153,4 +153,4 @@ curl --silent -d "xajax=window_submit&xajaxr=1574117726710&xajaxargs[]=tooltips&
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1d18e759-41db-4e91-ae2e-361e1873bda9)
 
 
-20. Great!
+20. Great! But sadly, there is no user flag inside **jimmy**'s home directory. Seems the goal is to be authenticated as **joanna** to get the user flag.
