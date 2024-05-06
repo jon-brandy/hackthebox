@@ -248,7 +248,30 @@ cde17c5272847a3e4cf914a402c4c51e
 ```
 
 33. To gain root, we need to crack the private key, because lateral movement in terminal-mode shell is needed.
-34. To crack the 
+34. To crack the sshkey, we need to convert the ssh key to john first. Then simply crack it with default john command.
+
+> CONVERTING SSH KEY TO JOHN
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f9da690a-48c6-422d-8c01-f990e3692c8f)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4e3cb9b8-ee92-4be0-9328-6217ee90266a)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/901bf2cf-50d4-4694-978d-153cee1572c8)
+
+
+35. Finally, let's crack it with john.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0a60c57d-b6b5-4443-be5a-c8fda95a05e6)
+
+
+36. Awesome! We cracked it.
+
+> GETTING THE ROOT FLAG
+
 
 ## IMPORTANT LINKS
 
