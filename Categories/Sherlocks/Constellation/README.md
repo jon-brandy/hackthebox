@@ -118,7 +118,7 @@
 
 
 
-> 9TH QUESTION --> ANS:
+> 9TH QUESTION --> ANS: `2054:01:17 22:45:22`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c78303be-9c2a-4f36-a789-2e60bcfe418d)
 
@@ -131,7 +131,7 @@
 
 
 17. Noticed there are several informations that could be useful for us. To identify the real name of the agen / handler from the attack group.
-18. Based from the result above, we can conclude that the creation timestamp in UTC is --> `2054:01:17 22:45:22+01:00`.
+18. Based from the result above, we can conclude that the creation timestamp in UTC is --> `2054:01:17 22:45:22`.
 
 > 10TH QUESTION --> ANS: Abdullah Al Sajjad
 
