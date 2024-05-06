@@ -55,26 +55,35 @@
 
 8. It's clear, that the attack group sent the `NDA_Instructions.pdf` through discord.
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: `2023-09-27 05:27:02`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ee7bf1b0-8c12-4b1e-8272-6af79567b41d)
 
 
+9. Again, still using the same online tool, we can identified the initial timestamp of when the attack group sent the pdf file to the suspect.
+10. Simply check for `File ID` branch.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d8fefcff-db22-4f86-89e7-ddbb9fd1a63a)
 
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: `How to zip a folder using tar in linux`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/09061d1d-9028-4acd-b060-274a335cb535)
 
 
-> 5TH QUESTION --> ANS:
+11. Now, reviewing the other link inside the IOC file, seems the attack group query `how to zip a folder using tar in linux` with google. Again, based from this condition and previous IOC, we can speculate that the attack group want the suspect to exfiltrates all the internal information to a folder then zip it using tar in linux.
+
+> 5TH QUESTION --> ANS: `how to archive a folder using tar i`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ebdb8cf6-487e-41f3-88d0-11e8777e29d9)
 
 
+12. However, if we reviewed it carefully, it seems the attack group queried another thing --> `how to archive a folder using tar i`. 
+
 > 6TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/37743e99-d015-4dff-b7e4-c59fcbc30d70)
+
 
 
 > 7TH QUESTION --> ANS: 
