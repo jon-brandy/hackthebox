@@ -123,12 +123,42 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c78303be-9c2a-4f36-a789-2e60bcfe418d)
 
 
-> 10TH QUESTION --> ANS:
+16. To identify the creation date timestamp, in Linux we can use **exiftools**.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/549e3aab-1610-4d50-9680-0caf984c7d2c)
+
+
+17. Noticed there are several informations that could be useful for us. To identify the real name of the agen / handler from the attack group.
+18. Based from the result above, we can conclude that the creation timestamp in UTC is --> `2054:01:17 22:45:22+01:00`.
+
+> 10TH QUESTION --> ANS: Abdullah Al Sajjad
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9ea88256-3146-4c41-8720-2e9ab8226055)
 
 
-> 11TH QUESTION --> ANS:
+19. Remembering previously we identified a gmail also the the attack group name, let's search it on the internet.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9fb667fd-b1e6-4182-a6cd-c210b60be394)
+
+
+20. Interesing! Found a linkedin profile.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/88a4a352-94d8-4bcd-a01a-ba6b800e79b0)
+
+
+21. Based from the profile description, it seems indeed we found the correct profile.
+
+> 11TH QUESTION --> ANS: Bahawalpur
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/00d6f74d-7377-4838-9dc2-46c948d6e3bc)
 
+
+22. Noticed, the agent disclosed his location --> city, province, and country. Great!
+23. Based from the profile, the agent seems lived in **Bahawalpur**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9e63dbc3-3b13-4e5e-a62a-8ab604d91e9d)
+
+
+24. Great! We've investigated the case!
