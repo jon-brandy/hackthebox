@@ -5,7 +5,8 @@
 
 
 ## Lessons Learned:
-- sadasd
+- Identify the initial timestamp of conversation made in Discord using Discord File Link.
+- Using unfurl (Threat Intelligence tool) to identify initial timestamp of Google Query link and the initial timestamp of when a file sent in Discord.
 
 ## SCENARIO:
 <p align="justify">
