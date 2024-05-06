@@ -8,7 +8,8 @@
 - Using dirsearch to enumerate webpages.
 - Exploiting OpenNetAdmin (ONA) v.18.1.1 --> Remote Code Execution, Command Injection.
 - Implement bash reverse shell.
-- 
+- Reviewing apache2 internal configuration (reviewing the virtual host is running as which user --> lead to port forwarding).
+- Port Forwarding
 
 ## STEPS:
 > PORT SCANNNING
@@ -156,3 +157,19 @@ curl --silent -d "xajax=window_submit&xajaxr=1574117726710&xajaxargs[]=tooltips&
 
 
 20. Great! But sadly, there is no user flag inside **jimmy**'s home directory. Seems the goal is to be authenticated as **joanna** to get the user flag.
+21. Upon traversing several configuration files, found a configuration that shall let us authenticated as **joanna**.
+22. Reviewing the **apache2** --> **internal.conf** file, it revealed that the internal virtual host is running as **joanna** on localhost at port 52846.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/28a6d26b-c85c-4753-a4f7-7e2ec0f41872)
+
+
+23. Traversing to `/var/www/internal` found 3 .php files --> `main.php`, `index.php`, and `logout.php`. Our interest should only for **main** and **index**.
+
+> Reviewing main.php
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/86dee7d8-3904-4134-9314-0ef537b4745b)
+
+
+24. Noticed it printed out joanna public key once we logged in at the webapp.
+25. 
+ 
