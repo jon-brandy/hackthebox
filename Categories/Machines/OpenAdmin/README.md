@@ -219,6 +219,11 @@ ssh jimmy@openadmin.htb -L 52846:localhost:52846
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5170a646-30bf-4726-8230-8f41ecc2d252)
 
 
+31. BUT, remembering we got access to the internal site. Hence we don't actually need to crack the ssh key.
+32. We can drop webshell to get access to **joanna** account.
+
+
+
 ## IMPORTANT LINKS
 
 ```
