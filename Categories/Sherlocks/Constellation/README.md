@@ -14,10 +14,34 @@
 
 ## STEPS:
 1. In this challenge we're tasked to do further analysis of artifacts which extracted by the IR team. Based from the artifacts, we're told to do information gathering regarding all individuals involved in this incident and collaborate with the Threat Intelligence team.
+2. We've recieved 2 artifacts:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/84ca4c81-048a-4bf1-9a6a-d8256b9b35fc)
+
+
+> PDF CONTENT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/87e56423-34db-4808-a3e9-28939f905be7)
+
+
+> IOC CONTENT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bc75456f-33c8-478b-811e-06d00f1e8698)
+
 
 > 1ST QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eff7f229-5af5-4c46-901e-5ee441911711)
+
+
+3. Based from the scenario and the IOC's link, we can speculate that the communication between the suspect and the actor group are done by discord.
+4. Hence the PDF file timestamp can be used to identify the initial communication between the suspect and the attacker group.
+5. To find the timestamp I used [this](https://dfir.blog/unfurl/) online threat intelligence tool named `unfurl`.
+6. Copy the discord link from the IOC file and paste it to the tool.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a503a2f0-4290-4949-b60c-6f6606452d85)
 
 
 > 2ND QUESTION --> ANS:
