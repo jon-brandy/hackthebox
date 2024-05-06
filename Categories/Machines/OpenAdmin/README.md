@@ -10,6 +10,7 @@
 - Implement bash reverse shell.
 - Reviewing apache2 internal configuration (reviewing the virtual host is running as which user --> lead to port forwarding).
 - Password Cracking using john.
+- Port Forwarding (to be able to access internal website).
 - 
 
 ## STEPS:
