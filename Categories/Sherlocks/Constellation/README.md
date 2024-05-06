@@ -106,12 +106,15 @@
 
 
 
-> 8TH QUESTION --> ANS:
+> 8TH QUESTION --> ANS: karen riley
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8b2b6906-fc91-4468-be70-62c26ee96610)
 
 
-15. 
+15. Again, still from the PDF file. The attack group said the suspected name.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a62da64c-27f3-4366-a084-b3a2da7707d8)
+
 
 
 > 9TH QUESTION --> ANS:
