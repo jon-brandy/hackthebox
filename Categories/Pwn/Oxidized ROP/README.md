@@ -39,5 +39,6 @@ Our workshop is rapidly oxidizing and we want a statement on its state from ever
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7b3ed479-8d3f-458a-bebb-795e132b5820)
 
 
-8. So once, we successfully modified the local variable, then a shell shall dropped when accessing the menu **2**.
-9. Remembering the login_pin is specified as 
+8. If we select the second option, we're not allowed to enter a value for the `login_pin`.
+9. It's because a global variable named `PIN_ENTRY_ENABLED` os set to false at the beginning. However the pin still checked.
+10. So our objective is to utilize the overflow vuln to overwrite the value for local variable `login_pin`.
