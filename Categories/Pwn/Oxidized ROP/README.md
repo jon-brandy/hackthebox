@@ -34,3 +34,10 @@ Our workshop is rapidly oxidizing and we want a statement on its state from ever
 4. Based from the snippet code above, we can conclude that `dest` is a mutable reference to an array of `u8` with fixed size of `INPUT_SIZE` --> 200 chars.
 5. Then it tries to copy characters from the `src` string to the `dest` buffer. However, the function does not check whether the length of the `src` string exceeds the size of the `dest`  buffer before copying.
 6. This could lead to Buffer Overflow.
+7. Next, upon reviewing other LOCs, seems our target is to modify the pin value to **123456**. This function can be accessed at menu **2**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7b3ed479-8d3f-458a-bebb-795e132b5820)
+
+
+8. So once, we successfully modified the local variable, then a shell shall dropped when accessing the menu **2**.
+9. Remembering the login_pin is specified as 
