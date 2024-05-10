@@ -26,4 +26,4 @@ Our workshop is rapidly oxidizing and we want a statement on its state from ever
 
 
 2. Noticed, the challenge author disclosed the source code. Hence no need to decompile the binary **for now**.
-3. Upon reviewing the **rust** code, 
+3. Upon reviewing the **rust** code, found a potential overflow at the `save_data()` function.
