@@ -42,3 +42,13 @@ Our workshop is rapidly oxidizing and we want a statement on its state from ever
 8. If we select the second option, we're not allowed to enter a value for the `login_pin`.
 9. It's because a global variable named `PIN_ENTRY_ENABLED` os set to false at the beginning. However the pin still checked.
 10. So our objective is to utilize the overflow vuln to overwrite the value for local variable `login_pin`.
+11. Reviewing the first menu, noticed a `read_user_input()` usage, it's similiar to `gets()` in C. Noticed that `input_buffer` variable is used as the `src` which the boundary is not checked.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/63c4d890-5296-4717-b312-442da756842f)
+
+
+12. Another things to note in rustpwn, to modify the variable value in rust, we need to encode it so it has wider range of action.
+13. Now let's identify the offset.
+
+> USING GDB
+
