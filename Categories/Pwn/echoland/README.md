@@ -3,8 +3,9 @@
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
-- sdad
-- a
+- Pwning blind PWN.
+- Exploiting Format Strings Bug (leaking PIE and LIBC runtime).
+- Binary dumping.
 
 ## DESCRIPTION:
 
