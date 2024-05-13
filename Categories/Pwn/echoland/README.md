@@ -38,5 +38,8 @@ It is heavily raining. You run to the cave in order to find shelter, but a heavy
 
 
 6. In a blind pwn challenge, the objective is to dump the binary. The first approach is to identify potential main() function.
-7. Based from the leaks, index 20 most likely is the main() address.
+7. At this state we're lacking of visibility, index 12, 17, or 20 can be used to dump the binary.
+8. Let's try to use index 12.
+
+
 
