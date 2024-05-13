@@ -21,3 +21,11 @@ It is heavily raining. You run to the cave in order to find shelter, but a heavy
 1. In this challenge we're not given any binary or source code. It's a blind pwn challenge.
 2. Knowing this is a blind pwn challenge, most likely there is FSB and the program flow shall be simple.
 
+> Identifying FSB
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f65eeeb2-b606-4644-a678-80ddadf9984f)
+
+
+3. We're given 2 menu options, but the FSB is found at the menu option prompt. The second menu seems should not be our interest.
+4. Upon checking whether there is canary by simply sending 1024 cyclic pattern, got segfault but no **stack smashing**. This indicates that there is no canary.
+
