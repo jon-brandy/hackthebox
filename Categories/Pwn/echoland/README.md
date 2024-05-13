@@ -29,3 +29,14 @@ It is heavily raining. You run to the cave in order to find shelter, but a heavy
 3. We're given 2 menu options, but the FSB is found at the menu option prompt. The second menu seems should not be our interest.
 4. Upon checking whether there is canary by simply sending 1024 cyclic pattern, got segfault but no **stack smashing**. This indicates that there is no canary.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7082c50e-36e0-45e7-b6f8-6a26c4a3c6e8)
+
+
+5. Further checking, by leaking addresses, found that PIE is enabled.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dd484e18-f08c-4e6f-ad76-204490012529)
+
+
+6. In a blind pwn challenge, the objective is to dump the binary. The first approach is to identify potential main() function.
+7. Based from the leaks, index 20 most likely is the main() address.
+
