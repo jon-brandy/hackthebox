@@ -19,3 +19,5 @@ It is heavily raining. You run to the cave in order to find shelter, but a heavy
 
 ## STEPS:
 1. In this challenge we're not given any binary or source code. It's a blind pwn challenge.
+2. Knowing this is a blind pwn challenge, most likely there is FSB and the program flow shall be simple.
+
