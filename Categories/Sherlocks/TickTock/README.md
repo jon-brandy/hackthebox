@@ -14,7 +14,7 @@ Gladys is a new joiner in the company, she has recieved an email informing her t
 </p>
 
 ## STEPS:
-1. In this case, we're tasked to investigate a malicious TeamViewer connection through the logs given.
+1. In this case, we're tasked to investigate a malicious remote access connection through the logs given.
 2. Based from the scenario and the questions, we can conclude that a new employee gets a call from the attacker to allow them remote access to her PC. After they get a TeamViewer connection, they also launch a C2 agent. 
 
 > ARTIFACTS GIVEN
@@ -31,6 +31,27 @@ Gladys is a new joiner in the company, she has recieved an email informing her t
 > 1ST QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6a2a5b43-ad89-4a75-923c-6d1e79375e39)
+
+
+4. Since the initial entry is from the **gladys** PC, where she allowed the attacker to do remote access to her PC. Let's check the log file inside her directory for any remote access application avail.
+
+```
+Navigating through --> /C/Users/gladys/AppData/Local/
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a68ffb92-4da2-4719-878c-cb70e147f6bc)
+
+
+5. Seems we identified what remote access application gladys used, it's **TeamViewer**. Now let's review the log start by the **TeamViewer15_Logfile.log**
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/333fef0c-099b-49fc-b908-8fb14a3ff875)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eb701865-a5b7-41ee-a783-b0f7c152e96b)
+
+
+
+
 
 
 
