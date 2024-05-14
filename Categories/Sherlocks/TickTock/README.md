@@ -56,6 +56,16 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3c31f9f8-7ce4-45a1-8ba6-3156faed2ccb)
 
 8. This could be the C2 Agent, but further checking is needed.
+9. Upon reviewing the csv file which contains prefetch log, found that `Merlin.exe` is part of the prefetch. Meaning it's previously **Opened** or **Executed** on the PC.
+10. It can be found at timestamp --> `11:51:15` row 63.
+ 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f31ceacb-cfcb-4ae6-9d73-3063d59d8cb2)
+
+
+11. But again, we need more evidence whether it is indeed acts as a C2 agent.
+12. Now let's review the Windows Event log.
+
+
 
 > 2ND QUESTION --> ANS:
 
