@@ -165,7 +165,7 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 
 
  
-> 7TH QUESTION --> ANS:
+> 7TH QUESTION --> ANS: Invoke-TimeWizard.ps1
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/54560c19-0fbb-4d51-8556-138a3bcca3b3)
 
@@ -196,10 +196,12 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 
 
 
-> 8TH QUESTION --> ANS:
+> 8TH QUESTION --> ANS: `2023/05/04 11:35:27`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/508aad12-731d-437d-83c7-c81c1dcb18e3)
 
+
+38. Again, based on our previous analsis on TeamViewer logfile. The initial connection starts at `2023/05/04 11:35:27`.
 
 > 9TH QUESTION --> ANS:
 
