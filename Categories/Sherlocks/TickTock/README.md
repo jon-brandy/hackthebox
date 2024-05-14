@@ -70,7 +70,7 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a3652b77-7333-4e0f-84f2-054d3622a1df)
 
 
-15. Reviewing the log previous it, Windows Defender identified the malware's family name of `Merlin.exe` --> `VirTool:Win32/Myrddin.D`.
+15. Reviewing the logs previous it, Windows Defender identified the malware's family name of `Merlin.exe` --> `VirTool:Win32/Myrddin.D`.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1c90fbb4-21a1-4366-af91-6120837dc0ca)
 
@@ -81,9 +81,16 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 16. So to summarize this up, `Merlin.exe` gets executed then quarantined by the Windows Defender, then it freed again.
 17. Great! We hunted the C2 agent.
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: `-2102926010`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1a66d9f4-a934-46dd-85fb-5ffb9c44b945)
+
+
+18. Now, to identify the initial access's session ID, we need to review again the Team Viewer logfile.
+19. Found that an initial attempt to login is at `11:35:27` and authenticated at `11:35:31`.
+20. Which means the session ID is --> `-2102926010`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/425adad3-1a78-4dbc-b39f-7b1339723ec4)
 
 
 > 3RD QUESTION --> ANS:
