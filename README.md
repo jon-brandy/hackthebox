@@ -1,10 +1,4 @@
-<p align="center">
-
-<img src="https://github.com/jon-brandy/hackthebox/assets/70703371/a51e7b6d-ea3f-48c8-b786-075775c22ce9"> 
-  
-</p>
-
-<p align="center">
+<p align="center" width="300">
 
 <img src="https://github.com/jon-brandy/hackthebox/blob/2e16911adec5955f0648267f8efe6c51d29cc5a2/Untitled120_20231005002555.png">
 
