@@ -73,7 +73,7 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a3652b77-7333-4e0f-84f2-054d3622a1df)
 
 
-15. Reviewing the logs previous it, Windows Defender identified the malware's family name of `Merlin.exe` --> `VirTool:Win32/Myrddin.D`.
+15. Reviewing the logs previous it, Windows Defender categorized the `Merlin.exe` as `VirTool:Win32/Myrddin.D`.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1c90fbb4-21a1-4366-af91-6120837dc0ca)
 
@@ -159,10 +159,20 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4ce8c9b4-139f-421a-bbc9-12dfdaf58093)
 
 
+31. Previously, by analyzing the **Windows Defender** event log, we identified the C2 binary categorized as --> ``
+ 
 > 7TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/54560c19-0fbb-4d51-8556-138a3bcca3b3)
 
+
+32. If you notice, when reviewing the TeamViewer log, the timestamp of the next logs seems manipulated (?)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/30c62a32-55c3-4e4b-9284-b13271e8bd36)
+
+
+33. This must be the attacker doing to confuse the analyst or the Incident Responds team.
+34. After reviewing several event logs, f
 
 > 8TH QUESTION --> ANS:
 
