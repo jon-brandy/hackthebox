@@ -11,6 +11,7 @@
 - Reviewing Windows Defender and Powershell log to identify the C2 Agent, Drive Mounting Execution, and C2's hashes.
 - Parsing raw Master File Table using MFTECmd.exe
 - Reviewing parsed MFT using Time Explorer.
+- Using Get-WinEvent grab for timestamp change event.
 
 ## SCENARIO:
 
