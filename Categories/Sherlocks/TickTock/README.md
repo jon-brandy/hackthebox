@@ -28,7 +28,7 @@ Gladys is a new joiner in the company, she has recieved an email informing her t
 3. It seems we're gonna dealing with parsing **Master File Table** and reviewing Windows Event Logs if needed.
 
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: Merlin.exe
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6a2a5b43-ad89-4a75-923c-6d1e79375e39)
 
@@ -64,8 +64,22 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 
 11. But again, we need more evidence whether it is indeed acts as a C2 agent.
 12. Now let's review the Windows Event log.
+13. The simplest way to identify whether the binary is malicious or not, we can start by reviewing the `Windows Defender` event log.
+14. Long story short, found that `Merlin.exe` is logged inside the log.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a3652b77-7333-4e0f-84f2-054d3622a1df)
 
 
+15. Reviewing the log previous it, Windows Defender identified the malware's family name of `Merlin.exe` --> `VirTool:Win32/Myrddin.D`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1c90fbb4-21a1-4366-af91-6120837dc0ca)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/27ea07dc-af5b-436b-b99e-b4217972de15)
+
+
+16. So to summarize this up, `Merlin.exe` gets executed then quarantined by the Windows Defender, then it freed again.
+17. Great! We hunted the C2 agent.
 
 > 2ND QUESTION --> ANS:
 
