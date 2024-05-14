@@ -15,10 +15,17 @@ Gladys is a new joiner in the company, she has recieved an email informing her t
 
 ## STEPS:
 1. In this case, we're tasked to investigate a malicious TeamViewer connection through the logs given.
-2. Based from the scenario and the questions, we can conclude that a new employee gets a call from the attacker to allow them remote access. After they get a TeamViewer connection, they also launch a C2 agent. 
+2. Based from the scenario and the questions, we can conclude that a new employee gets a call from the attacker to allow them remote access to her PC. After they get a TeamViewer connection, they also launch a C2 agent. 
 
-> LOGS GIVEN
+> ARTIFACTS GIVEN
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5decd5b4-7c6b-4a00-a791-7ecc902d4e30)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0a3a50b3-026c-41d4-9135-e51ad91b7bbb)
+
+
+3. It seems we're gonna dealing with parsing **Master File Table** and reviewing Windows Event Logs if needed.
 
 
 > 1ST QUESTION --> ANS:
