@@ -93,9 +93,20 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/425adad3-1a78-4dbc-b39f-7b1339723ec4)
 
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: `reallylongpassword`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/77210ffa-b07a-46c3-8ef5-07722ed7e8d6)
+
+
+21. To identify this event where the attacker attempted to set a bitlocked password on the C drive, we need to review Windows Powershell event log.
+22. Found an interesting powershell execution at `18:14:33`, the contents are encoded with base64.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/98700fd8-d07d-4b8e-b30c-f7ead928857f)
+
+
+23. Upon decoding it, it's indeed the command used by the attacker to mount the C drive. Also we identified the password used.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/240b9cf0-7016-4437-ab84-208ded626901)
 
 
 > 4TH QUESTION --> ANS:
