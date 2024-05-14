@@ -9,7 +9,7 @@
 - Reviewing Prefetch logs to identify previously opened or executed binaries.
 - Reviewing Sysmon log to identify outbound / inbound network connections.
 - Reviewing Windows Defender and Powershell log to identify the C2 Agent and Drive Mounting Execution.
-- Parsing raw Master File Table using analyzeMFT.py
+- Parsing raw Master File Table using MFTECmd.exe
 - Reviewing parsed MFT using Time Explorer.
 
 ## SCENARIO:
@@ -170,6 +170,12 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 33. This must be the attacker doing to confuse the analyst or the Incident Responds team.
 34. After reviewing several log at sysmon for eventID 11, found few powershell script with interesting filename.
 35. Let's parse the MFT to CSV file then open it using Time Explorer.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9327feb9-d942-40fb-824f-ce3251e39ddf)
+
+
+> TIME EXPLORER
+
 
  
 > 7TH QUESTION --> ANS:
