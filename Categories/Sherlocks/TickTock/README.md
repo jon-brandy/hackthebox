@@ -50,10 +50,12 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eb701865-a5b7-41ee-a783-b0f7c152e96b)
 
 
+6. Long story short, upon reviewing the logs. Found an outbound connection at `11:21:34` from **Gladys** PC.
+7. It downloaded a binary file named `Merlin.exe`. The binary stored at the desktop.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3c31f9f8-7ce4-45a1-8ba6-3156faed2ccb)
 
-
-
+8. This could be the C2 Agent, but further checking is needed.
 
 > 2ND QUESTION --> ANS:
 
