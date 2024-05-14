@@ -162,19 +162,6 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 
 
 31. Previously, by analyzing the **Windows Defender** event log, we identified the C2 binary categorized as --> `VirTool:Win32/Myrddin.D`.
-32. If you notice, when reviewing the TeamViewer log, the timestamp of the next logs seems manipulated (?)
-
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/30c62a32-55c3-4e4b-9284-b13271e8bd36)
-
-
-33. This must be the attacker doing to confuse the analyst or the Incident Responds team.
-34. After reviewing several log at sysmon for eventID 11, found few powershell script with interesting filename.
-35. Let's parse the MFT to CSV file then open it using Time Explorer.
-
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9327feb9-d942-40fb-824f-ce3251e39ddf)
-
-
-> TIME EXPLORER
 
 
  
@@ -183,7 +170,29 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/54560c19-0fbb-4d51-8556-138a3bcca3b3)
 
 
+32. If you notice, when reviewing the TeamViewer log, the timestamp of the next logs seems manipulated (?)
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/30c62a32-55c3-4e4b-9284-b13271e8bd36)
+
+
+33. This must be the attacker doing to confuse the analyst or the Incident Responds team.
+34. After reviewing several log at sysmon for eventID 11, found few powershell script with interesting filename.
+35. Seems this time we're gonna need to review the MFT, let's parse the MFT to CSV file then open it using Time Explorer.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9327feb9-d942-40fb-824f-ce3251e39ddf)
+
+
+> TIME EXPLORER
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/17bcc86c-f923-4f20-a124-7113b32891c1)
+
+
+36. Let's start the search by filtering for **gladys**'s Desktop first.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/98ce0f79-5aa1-40c8-8d9d-ab2695d853ba)
+
+
+37. Interestingly, there is a powershell script named `Invoke-TimeWizard`. Based from the filename and it's location. It's indeed the script used by the attacker to manipulate the TeamViewer timestamp. It manipulate the windows timestamp as a whole.
 
 
 
