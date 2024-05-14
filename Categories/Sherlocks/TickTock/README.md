@@ -8,7 +8,7 @@
 - Reviewing TeamViewer logs (hunting C2 agent, hunting the attacker session).
 - Reviewing Prefetch logs to identify previously opened or executed binaries.
 - Reviewing Sysmon log to identify outbound / inbound network connections.
-- Reviewing Windows Defender and Powershell log to identify the C2 Agent and Drive Mounting Execution.
+- Reviewing Windows Defender and Powershell log to identify the C2 Agent, Drive Mounting Execution, and C2's hashes.
 - Parsing raw Master File Table using MFTECmd.exe
 - Reviewing parsed MFT using Time Explorer.
 
@@ -208,20 +208,53 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 
 38. Again, based on our previous analsis on TeamViewer logfile. The initial connection starts at `2023/05/04 11:35:27`.
 
-> 9TH QUESTION --> ANS:
+> 9TH QUESTION --> ANS: ac688f1ba6d4b23899750b86521331d7f7ccfb69:42ec59f760d8b6a50bbc7187829f62c3b6b8e1b841164e7185f497eb7f3b4db9
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/077adf97-e116-4fa7-aa0b-6c891ade17ae)
 
 
-> 10TH QUESTION --> ANS:
+39. Rather than carving the binary from the raw MFT file manually, let's review the Windows Defender log.
+
+```
+PATH TO DEFENDER LOGS:
+C/ProgramData/Microsoft/Windows Defender/Support
+```
+
+40. Reviewing the MPLog shall help us to identify both sha1 and sha2.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/92e19bee-622c-46cb-8a3c-b604ec706c67)
+
+
+> 10TH QUESTION --> ANS: 2371
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a67891d5-2989-4f21-92c0-1f2878b4d3df)
 
 
-> 11TH QUESTION --> ANS:
+41. To identify the count, we need to review the `security` event log then filter for eventID **4616** and with keyword **powershell**.
+
+> COMMAND
+
+```
+Get-WinEvent -Path '.\Collection\C\Windows\System32\winevt\logs\Security.evtx' -FilterXPath "*[System[(EventID=4616)]]" | Where-Object { $_.Message -like '*powershell*' } | Measure-Object
+```
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d9324c1e-8686-41d8-a50a-f70812b20def)
+
+
+
+> 11TH QUESTION --> ANS: S-1-5-21-3720869868-2926106253-3446724670-1003
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d53a6817-f667-44b3-9f74-acd9422cb6e6)
 
+
+
+42. Again, reviewing the security event log, we can identify the SID for **gladys**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8c7095fb-5ed7-4a11-a2d5-c64e4d147b5d)
+
+
+43. Great! We've investigated the case!
 
 
 ## IMPORTANT LINKS
