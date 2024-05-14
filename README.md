@@ -1,4 +1,4 @@
-<p align="center" width="200">
+<p align="center" width="100">
 
 <img src="https://github.com/jon-brandy/hackthebox/blob/2e16911adec5955f0648267f8efe6c51d29cc5a2/Untitled120_20231005002555.png">
 
