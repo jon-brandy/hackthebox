@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- sadasd
+- Reviewing TeamViewer logs (hunting C2 agent).
 
 ## SCENARIO:
 
