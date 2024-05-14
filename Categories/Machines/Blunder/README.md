@@ -71,4 +71,11 @@ Nmap done: 1 IP address (1 host up) scanned in 133.26 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/676588dd-658c-4a69-89f2-ad271213830a)
 
 
-7. Interesting, we got few options.
+7. Interesting, we got few options. However, among all of it seems **bruteforce** should be our interest.
+
+
+## IMPORTANT LINKS
+
+```
+https://www.hackingarticles.in/wordlists-for-pentester/
+```
