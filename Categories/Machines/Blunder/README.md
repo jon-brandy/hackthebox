@@ -32,3 +32,18 @@ Nmap done: 1 IP address (1 host up) scanned in 133.26 seconds
 
 > WEB APP
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/55feec7a-d102-45ce-9741-c2b096750349)
+
+
+2. Checking each feature available at the website, none of it seems to be our interest. Upon running **dirsearch** found several endpoints.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9ce69db0-af21-4ec4-8537-21d206d2403d)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5ea0847c-4bd0-461d-92a8-eec60179dbc3)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ca4e0c7c-1a36-414b-86b8-019d33111871)
+
+
+3. Accessing `/todo.txt` endpoint, noticed that CMS is not updated yet. Hence the CMS seems should be exploited.
