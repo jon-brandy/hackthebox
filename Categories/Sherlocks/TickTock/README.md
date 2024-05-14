@@ -5,7 +5,10 @@
 
 
 ## Lessons Learned:
-- Reviewing TeamViewer logs (hunting C2 agent).
+- Reviewing TeamViewer logs (hunting C2 agent, hunting the attacker session).
+- Reviewing Prefetch logs to identify previously opened or executed binaries.
+- Reviewing Sysmon log to identify outbound / inbound network connections.
+- Reviewing Windows Defender and Powershell log to identify the C2 Agent and Drive Mounting Execution.
 
 ## SCENARIO:
 
@@ -129,10 +132,26 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 
 
 27. The first one, likely is Gladys PC's Hostname. The other one should be the attacker --> `fritjof olfasson`.
+28. As an additional information. There is an attempt to screenshot the desktop.
 
-> 5TH QUESTION --> ANS:
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bf55918e-5cfc-4b7d-b337-8ee7b7f0ad94)
+
+
+> 5TH QUESTION --> ANS: `52.56.142.81`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0f77df07-0fb5-4a38-9916-c908b9c46c14)
+
+
+29. To identify the destination of the C2 agent, simply review the **sysmon** log and filter for event ID 3 --> `Network Connection Detected`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3a58aa5f-39bc-445b-92d7-a4f131e12ae6)
+
+
+30. Great! Now we know the destination IP is --> `52.56.142.81`.
+
+> Destination IP details
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6a9ae3dc-a744-4461-bc11-c68be8becc7c)
 
 
 > 6TH QUESTION --> ANS:
@@ -163,3 +182,11 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 > 11TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d53a6817-f667-44b3-9f74-acd9422cb6e6)
+
+
+
+## IMPORTANT LINKS
+
+```
+https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/default.aspx?i=j
+```
