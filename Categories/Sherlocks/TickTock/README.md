@@ -9,6 +9,8 @@
 - Reviewing Prefetch logs to identify previously opened or executed binaries.
 - Reviewing Sysmon log to identify outbound / inbound network connections.
 - Reviewing Windows Defender and Powershell log to identify the C2 Agent and Drive Mounting Execution.
+- Parsing raw Master File Table using analyzeMFT.py
+- Reviewing parsed MFT using Time Explorer.
 
 ## SCENARIO:
 
@@ -154,25 +156,30 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6a9ae3dc-a744-4461-bc11-c68be8becc7c)
 
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: `VirTool:Win32/Myrddin.D`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4ce8c9b4-139f-421a-bbc9-12dfdaf58093)
 
 
-31. Previously, by analyzing the **Windows Defender** event log, we identified the C2 binary categorized as --> ``
- 
-> 7TH QUESTION --> ANS:
-
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/54560c19-0fbb-4d51-8556-138a3bcca3b3)
-
-
+31. Previously, by analyzing the **Windows Defender** event log, we identified the C2 binary categorized as --> `VirTool:Win32/Myrddin.D`.
 32. If you notice, when reviewing the TeamViewer log, the timestamp of the next logs seems manipulated (?)
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/30c62a32-55c3-4e4b-9284-b13271e8bd36)
 
 
 33. This must be the attacker doing to confuse the analyst or the Incident Responds team.
-34. After reviewing several event logs, f
+34. After reviewing several log at sysmon for eventID 11, found few powershell script with interesting filename.
+35. Let's parse the MFT to CSV file then open it using Time Explorer.
+
+ 
+> 7TH QUESTION --> ANS:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/54560c19-0fbb-4d51-8556-138a3bcca3b3)
+
+
+
+
+
 
 > 8TH QUESTION --> ANS:
 
