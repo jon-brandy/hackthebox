@@ -194,7 +194,12 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 
 37. Interestingly, there is a powershell script named `Invoke-TimeWizard`. Based from the filename and it's location. It's indeed the script used by the attacker to manipulate the TeamViewer timestamp. It manipulate the windows timestamp as a whole.
 
+> ADDITION RESULT USING MFT Explorer
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ddf4508b-4d05-417f-a1f9-10867453eba6)
+
+
+38. As you can see, using MFT Explorer shall help us with the visibility to review each timestamp of files.
 
 > 8TH QUESTION --> ANS: `2023/05/04 11:35:27`
 
