@@ -123,7 +123,7 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 
 
 25. Based, from the evidence above, after the attacker authenticated. It saved the session and saved the local participant as `1764218403`.
-26. Not long after it, around 4 seconds later, we can identified 2 participants inside the same session.
+26. Not long after it, around 4 seconds later, we can identified 2 participants inside the session.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/efc8f4bb-8358-4df4-9665-f00a16fc5c22)
 
