@@ -5,7 +5,7 @@
 
 
 ## Lessons Laerned:
-- sdasda
+- Bludit CMS Exploitation.
 
 ## STEPS:
 > PORT SCANNING
@@ -46,4 +46,29 @@ Nmap done: 1 IP address (1 host up) scanned in 133.26 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ca4e0c7c-1a36-414b-86b8-019d33111871)
 
 
-3. Accessing `/todo.txt` endpoint, noticed that CMS is not updated yet. Hence the CMS seems should be exploited.
+3. Accessing `/todo.txt` endpoint, noticed that CMS is not updated yet. Hence the CMS seems should be exploited. Also noticed it stated a person named `fergus`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5db8b5fd-53a5-44b1-a168-e893d38ad917)
+
+
+4. Great! Now let's access the `/admin` endpoint.
+
+> BLUDIT CMS
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a4528b7f-bc2a-474c-9599-d0e75005c2f0)
+
+
+5. Checking the page source, we can identified the CMS version is **3.9.2**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/442521a4-a533-4e67-ab3a-e82abeb85c77)
+
+
+6. Searcing on the internet and using searchsploit to identified vulns for the related version, resulting to these:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/94ef0d9f-17bf-46e6-b062-42d6c6b1a6cd)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/676588dd-658c-4a69-89f2-ad271213830a)
+
+
+7. Interesting, we got few options.
