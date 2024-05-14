@@ -177,7 +177,7 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 
 33. This must be the attacker doing to confuse the analyst or the Incident Responds team.
 34. After reviewing several log at sysmon for eventID 11, found few powershell script with interesting filename.
-35. Seems this time we're gonna need to review the MFT, let's parse the MFT to CSV file then open it using Time Explorer.
+35. Seems this time we're gonna need to review the MFT, let's parse the MFT to CSV file then open it using Time Explorer. Anyway there's another simple method if you don't want to parse it, simply using MFTExplorer you can open the raw MFT file without converting it first to CSV file.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9327feb9-d942-40fb-824f-ce3251e39ddf)
 
