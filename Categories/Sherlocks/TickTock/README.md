@@ -87,8 +87,11 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 
 
 18. Now, to identify the initial access's session ID, we need to review again the Team Viewer logfile.
-19. Found that an initial attempt to login is at `11:35:27` and authenticated at `11:35:31`.
+19. Found that an initial connection started at `11:35:27` and the login attempt is at `11:35:27`, then it authenticated at `11:35:31`.
 20. Which means the session ID is --> `-2102926010`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c2c6de0c-fc27-4ba0-a7c9-6e4e8e3f2c96)
+
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/425adad3-1a78-4dbc-b39f-7b1339723ec4)
 
@@ -109,10 +112,23 @@ Navigating through --> /C/Users/gladys/AppData/Local/
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/240b9cf0-7016-4437-ab84-208ded626901)
 
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: `fritjof olfasson`.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/68f1a606-026e-4cba-84bf-055222807c00)
 
+
+24. Next, to identify the name used by the attacker, again we need to review the TeamViewer logfile.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d9c3d1f7-be39-43fa-b929-1450ccd47407)
+
+
+25. Based, from the evidence above, after the attacker authenticated. It saved the session and saved the local participant as `1764218403`.
+26. Not long after it, around 4 seconds later, we can identified 2 participants inside the same session.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/efc8f4bb-8358-4df4-9665-f00a16fc5c22)
+
+
+27. The first one, likely is Gladys PC's Hostname. The other one should be the attacker --> `fritjof olfasson`.
 
 > 5TH QUESTION --> ANS:
 
