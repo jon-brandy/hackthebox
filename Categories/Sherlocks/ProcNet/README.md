@@ -1,6 +1,9 @@
 # ProcNet
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/16fbee1e-eb57-4c6d-924e-ab9e4649d9cc)
+
+
 ## Lessons Learned:
 - asdasda
 
