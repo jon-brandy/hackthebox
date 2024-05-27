@@ -14,10 +14,51 @@
 
 ## STEPS:
 1. In this task, we're given a `.apmx64` file which we can analyze using API Monitor tool.
+2. It is known that there is an insider that Forela Corporation that helps the attacker to gain access to the system.
+3. Remembering Forela Corporation depends on the utilisation of WSL hence it's harder for us to detect. However the red team shared API logs for us to analyze.
 
-> 1ST QUESTION --> ANS:
+
+> 1ST QUESTION --> ANS: whoami
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a58c216d-c29c-40dc-812f-1e1bcc317db7)
+
+
+2. To identify the initial command executed by the insider, we need to monitor the API logs for `insider`.
+
+> RESULT IN API Monitor tool.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/61e6541b-1b1d-41c0-aac0-64edb1f0ad6d)
+
+
+3. Noticed, several **string** API function is called.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1af33836-065e-4656-953f-e439634309ca)
+
+
+4. Reviewing each of them, found the first string function shall be our interest. Seems it used to map the UTF16 to a new character string.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c936c811-9084-4b69-adea-297cf08e5831)
+
+
+5. So after `WideCharToMultiByte` API is called, another child API is also called --> `RtlUnicodeToUTF8N`. This API translate the specified Unicode string into a new string, using the UTF-8 code page.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/362aa80f-9a3d-4a77-ba2b-505b001d2246)
+
+
+6. Then a `WriteFile` API is called, it is for writes data. Specifically for both synchronous and asynchronous operation --> I/O device.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b9fa8d9f-1a03-417f-8bcf-6bbd8384da5a)
+
+
+7. So following each this API call shall until it stops calling it, shall means the keystroke is stopped and the system is processing an output.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9721f443-ec1f-47c8-9c3a-8fa0b3e775a5)
+
+
+8. Long story short, following each of them shall resulting to `whoami` command.
+9. The result can be seen at index 36.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bc81061f-c4b1-421e-8ad5-0cf25c91570b)
 
 
 > 2ND QUESTION --> ANS:
