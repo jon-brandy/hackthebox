@@ -5,7 +5,8 @@
 
 
 ## Lessons Learned:
-- asdas
+- Conduct Forensic Analysis for .apmx64 file.
+- Using API Monitor tool to analysis the file and intercept the function call. 
 
 ## SCENARIO:
 
