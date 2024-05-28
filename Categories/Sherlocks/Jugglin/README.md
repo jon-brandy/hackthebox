@@ -114,6 +114,7 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0f4543e8-75d1-4155-b0bc-34e2ca218bc8)
 
 
+18. Based from our previous finding, it's clear the content of flag.txt is `HOOK_tH1$_apI_R7lUNIcoDet0utf8N`.
 
 > 6TH QUESTION --> ANS: Invoke-WebRequest
 
@@ -153,30 +154,77 @@ sensitive data from a compromised system.
 
 21. The child API function is used to translate the specified source string into a Unicode String. It translates the source string using the UTF8 code page.
 
-> 8TH QUESTION --> ANS:
+> 8TH QUESTION --> ANS: `H0ok_ThIS_@PI_rtlutf8TounICOD3N`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a7784474-d9fc-4c32-95b5-2c42bf7bedeb)
 
 
-> 9TH QUESTION --> ANS:
+22. After the insider tried to exfiltrate the file, it accessed it afterwards. Using the same method by following the keystrokes. The output can be seen at the `WriteFile` API call.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/08f46359-3ec5-4892-a5b2-30ec1a7957d1)
+
+
+> 9TH QUESTION --> ANS: lsassy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f345e08e-65fc-44a2-809f-a172de4a637f)
 
 
-> 10TH QUESTION --> ANS:
+23. Now let's monitor the `Attacker` apxm64 file. Initial analysis, the attacker executed command `whoami` before lateral movement, which the output can be seen --> `kali`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0c5c6beb-27dd-4e40-8e6e-40ca4ab38827)
+
+
+24. Then it tried to execute `lsassy`, but the binary seems not found inside the machine.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ce41adae-c5f6-469d-867b-17e43324bc34)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c37498db-da85-47c5-bf2d-2b45964354bc)
+
+
+
+> 10TH QUESTION --> ANS: http://3.6.165.8/lsassy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aa73fe3d-f959-4995-82c8-0304909d4809)
 
 
-> 11TH QUESTION --> ANS:
+25. So the next thing he does is to download the binary to the local machine.
+26. This activity can be seen at index 31 and 32.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/58167b7e-8b88-4414-b4f5-ed537b3862a2)
+
+
+> 11TH QUESTION --> ANS: e8f97fba9104d1ea5047948e6dfb67facd9f5b73
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3fca114f-def3-4024-b1ff-36dd07d9661a)
 
 
-> 12TH QUESTION --> ANS:
+27. Afterwards, he changed the binary permissions to be executeable by user.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5124806c-770f-4ae2-b73f-6e312504365c)
+
+
+28. Then the binary seems used to connect to a remote machine at `192.168.1.9` using the provided username and password, extract credentials from the lsassy process.
+29. Then save the results to a file naamed `keys.txt` under `/tmp` directory.
+30. Judging from this activity, seems the objective is to gain access to sensitive credential stored in memory on the target system, which can be used for further exploitation within the network.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a92b78b0-c54a-470a-93d7-05380782db63)
+
+
+31. The result of this activity can be seen at the `WriteFile` API function call. Seems the attacker obtained the hash of victim `user`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/98731482-c900-4922-9353-5add7ef2f164)
+
+
+
+> 12TH QUESTION --> ANS: WriteFile
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0bbd4fe3-f547-4140-9e50-129e242890f2)
 
+
+32. Each time the attacker executed command inside the WSL2, the output can be seen at the `WriteFile` API function call. Also we use this API to identify the result of the execution.
+33. Knowing this, we can conclude that `WriteFile` is a WIN32 API can be intercepted to monitor the behavior of the WSL2.
+34. Anyway, we've investigated the case!
 
 ## IMPORTANT LINKS:
 
