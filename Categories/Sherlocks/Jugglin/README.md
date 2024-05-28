@@ -183,7 +183,7 @@ sensitive data from a compromised system.
 
 
 
-> 10TH QUESTION --> ANS: http://3.6.165.8/lsassy
+> 10TH QUESTION --> ANS: `http://3.6.165.8/lsassy`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aa73fe3d-f959-4995-82c8-0304909d4809)
 
