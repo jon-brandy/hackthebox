@@ -83,7 +83,10 @@
 
 12. After the execution of **whoami** command, we identified that the insider is interacting with a linux distribution named `kali`.
 
-> 4TH QUESTION --> ANS:
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/97589b9e-1a78-4f0a-b0c2-e69143efe373)
+
+
+> 4TH QUESTION --> ANS: flag.txt
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9c73db6f-c2d2-4a30-8ef5-014dc9945318)
 
@@ -100,14 +103,26 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/00020cc0-298c-47d8-abee-a2dc7bdcd8dd)
 
 
-> 5TH QUESTION --> ANS:
+17. Long story short, again simply by following the keystrokes we can identify that the insider executed `cat flag.txt`, then the content or output can be seen by checking the `WriteFile` module. Now we know that the insider accessed **flag.txt** file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/df902e20-d221-474b-880a-7f5a07cfe06c)
+
+
+
+> 5TH QUESTION --> ANS: HOOK_tH1$_apI_R7lUNIcoDet0utf8N
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0f4543e8-75d1-4155-b0bc-34e2ca218bc8)
+
 
 
 > 6TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9facab44-2a2b-44b2-8c61-ee2cadb09b5a)
+
+
+18. Again, using the previous method, we identified that the insider tried to exfiltrate another data from the victim machine. it's a txt file named **Confidential**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a583fa50-dde3-4cf9-91a0-f658bf8f947b)
 
 
 > 7TH QUESTION --> ANS:
