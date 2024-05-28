@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ecdaa8cb-9646-41a9-998d-0de4d1e4c520)# Jugglin
+# Jugglin
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4cb55499-7ef4-4ed8-9329-06db9c054691)
