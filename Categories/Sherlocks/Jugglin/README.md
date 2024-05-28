@@ -6,7 +6,11 @@
 
 ## Lessons Learned:
 - Conduct Forensic Analysis for .apmx64 file.
-- Using API Monitor tool to analysis the file and intercept the function call. 
+- Using API Monitor tool to analysis the file and intercept the function call.
+- Identify string API API function call that can be intercepted to monitor keystrokes.
+- Identify API function call that can be intercepted to monitor the behavior of WSL2.
+- Identify string API function call that can be intercepted to monitor the usage of Windows Tool via WSL.
+- Identify powershell module used to exfiltrate data from the victim machine.
 
 ## SCENARIO:
 
@@ -136,3 +140,8 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0bbd4fe3-f547-4140-9e50-129e242890f2)
 
 
+## IMPORTANT LINKS:
+
+```
+https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/
+```
