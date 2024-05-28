@@ -61,19 +61,39 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bc81061f-c4b1-421e-8ad5-0cf25c91570b)
 
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: `RtlUnicodeToUTF8N, WideCharToMultiByte`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/93ee9549-38e9-431f-b4e6-fd9d4db829bd)
 
 
-> 3RD QUESTION --> ANS:
+10. Based from our previous analysis, APIs can be used to monitor the keystrokes should be `WideCharToMultiByte` function and `RtlUnicodeToUTF8N` function.
+11. Previously we identified the keystroke after `WideCharToMultiByte` function call and if you notice, there is a child API function call named `RtlUnicodeToUTF8N`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bb3ade3e-0b61-4860-8a65-87cbf454ef29)
+
+
+> 3RD QUESTION --> ANS: kali
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0fbbcd47-1874-4b3a-a4e1-4a60948393a4)
 
 
+12. After the execution of **whoami** command, we identified that the insider is interacting with a linux distribution named `kali`.
+
 > 4TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9c73db6f-c2d2-4a30-8ef5-014dc9945318)
+
+
+13. To identify the accessed file by the insider, we can use our previous method to identify the command executed by the insider.
+14. Simply follow the previous APIs used to monitor the keystrokes.
+15. Based from the log at index 109, we can see that the insider traversed to `/mnt/c/Users/karti/onedrive` directory.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/58e6916a-a4a2-4a27-8174-c1cef2a586a2)
+
+
+16. Then the insider reached `desktop`. Seems the file accessed is at the desktop.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/00020cc0-298c-47d8-abee-a2dc7bdcd8dd)
 
 
 > 5TH QUESTION --> ANS:
