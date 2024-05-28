@@ -1,6 +1,9 @@
 # Jinkies
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d0b4a5ed-d325-41ec-aee1-4e7cf69c5941)
+
+
 ## Lessons Learned:
 - sdas
 
