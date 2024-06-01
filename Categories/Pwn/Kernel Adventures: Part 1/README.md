@@ -4,6 +4,7 @@
 ## Lessons Learned:
 - Source code review.
 - Exploiting race condition vuln.
+- Password Hash Cracking.
 - Implement double fetch exploitation.
 
 ## DESCRIPTION:
