@@ -13,7 +13,7 @@ SUID binaries are too vulnerable. So I decided to implement su in the Kernel.
 - NONE
 
 ## STEPS:
-1. In this challenge we're given
+1. In this challenge we're given the kernel environment setup.
 
 
 ## FLAG
