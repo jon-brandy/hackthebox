@@ -1,4 +1,4 @@
-# Ore
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/84898ca6-8ee8-42ca-874c-9b5dbc8511f1)![image](https://github.com/jon-brandy/hackthebox/assets/70703371/60dc6914-c18e-4565-b857-decc41c3f063)# Ore
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/008e35c8-a398-44a2-a5d1-b81a7a1e4ada)
@@ -209,19 +209,31 @@ such activities and take preventive measures if necessary.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a4bca183-54a5-42ac-ae59-eaaae9304e56)
 
 
-37. After the attacker gained privesc, previously we identified he tried to download another bash script named **injector.sh** using wget command.
+37. After the attacker gained privesc, previously we identified he tried to download another bash script named **injector.sh** using **wget** command.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/04ec8773-797a-435e-b020-95b9442b9358)
 
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: /opt/automation/
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/267a1ade-f604-466c-870c-8e15e48a63a2)
 
 
-> 7TH QUESTION --> ANS:
+38. Scrolling down below, the attacker execute a **curl** command which used to download the XMRIG (mining binary) and the config file.
+39. Based from the **CurrentDirectory** parameter, it's clear that both files initially downloaded to `/opt/automation`.
+
+> 24TH NOVEMBER `09:59:47`
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/528f47e4-ee0d-403b-87ba-4d0a92301dcc)
+
+
+> 7TH QUESTION --> ANS: curl
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/df8aea36-be13-497e-aa09-bb3acc8b61a7)
+
+
+40. Again, still from our previous identifications. The attacker using **curl** command to download both the crypto mining binary and the config file.
+
 
 
 > 8TH QUESTION --> ANS:
