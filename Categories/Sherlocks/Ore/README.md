@@ -165,10 +165,42 @@ such activities and take preventive measures if necessary.
 
 29. Based from our previous finding. It's clear that the attacker utilize **grafana** user to infiltrate to the system.
 
+> RECAP EVIDENCE FROM AUTH LOG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1646d79b-4d2d-4fb2-9e7c-2286f4d770b5)
+
+
+30. There are no other user login activity detected based from the auth log.
+
 > 4TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c06d69a4-fe98-4513-966d-b003e7414f39)
 
+31. Surprisingly, if we review again the log which contains the wget command. Noticed the user value is already as **root**. Not **grafana**.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a8a37216-a6e2-4ff5-b2c5-9d790649f7b4)
+
+
+32. This mean, the attacker escalated privileges. Interestingly, a bash script is executed --> updater.sh.
+33. When reviewing the other syslog file --> syslog.1. We found **nano** and **cat** command execution for file **updater.sh**.
+
+> CAT EXECUTION - 24TH NOVEMBER `11:27:43` - USING GRAFANA USER
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6f091837-9b2c-438d-9a4c-36b82b9548eb)
+
+
+> NANO EXECUTION - 23TH NOVEMBER `11:45:50` - USING GRAFANA USER
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ef82c170-c624-4bad-8c16-2f29e249e6e5)
+
+
+34. At this point, we can speculate an attempt for modifying a bash file that could be a cronjob file. Because it gets executed as root at the `/opt/automation/updater.sh` file.
+35. To check for cronjob activity, let's traverse to `Persistence` directory.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0eb8950c-e373-4d7e-adc6-4f2520dc0e5f)
+
+
+36. 
 
 > 5TH QUESTION --> ANS:
 
