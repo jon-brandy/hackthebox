@@ -60,6 +60,14 @@ configuration issues, and an overall security score to help administrators quick
 and address security weaknesses.
 ```
 
+7. Navigating to the `/Logs` directory, we found 2 .gzip files. The var log should be our interest. Let's extract it.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cf0a2448-659e-4137-92e2-d693054af189)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/08958846-c73a-4fa3-b340-035f6b63617b)
 
 
 > 3RD QUESTION --> ANS:
