@@ -1,4 +1,4 @@
-# Ore
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8db4b8ad-7042-4f0f-8509-f840c9c5f44d)![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b0af6ac7-8040-4a7b-9821-2ccfef0062c5)# Ore
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/008e35c8-a398-44a2-a5d1-b81a7a1e4ada)
@@ -38,7 +38,7 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b259768-99c3-4edb-9bdc-2b3d0a195d5b)
 
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: 195.80.150.137, 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/215bb639-0ccc-42b6-a0b7-6fd5b60b9207)
 
@@ -78,21 +78,6 @@ and address security weaknesses.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b36b6f92-d52c-49c9-abe5-d7e3b2fb994f)
 
-
-11. Long story short, one IP caught my interest --> ``. It's stuffed few creds at `10:59:12 - 11:08:09`.
-
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ebfebec5-c4c9-4282-81c9-5856f6ca4ee7)
-
-
-12. But then it authenticated as `grafana` at `11:17:18`. Nice, we hunted one IP then. The rest IP are still the suspect.
-
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/88feca18-1fcf-40b5-8052-ca89e1dfacfc)
-
-
-13. This time, let's review the `Process_and_Network` l
-
-
-
 #### NOTES:
 
 ```
@@ -106,7 +91,45 @@ such activities and take preventive measures if necessary.
 
 
 12. But we can't jump to a conclusion yet that it's the one that compromised the Forela's organization. Because there are bunch other failed logon with Bad Reputation IP.
-13. 
+
+13. Long story short, one IP caught my interest --> `195.80.150.137`. It's stuffed few creds at `10:59:12 - 11:08:09`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ebfebec5-c4c9-4282-81c9-5856f6ca4ee7)
+
+
+14. But then it authenticated as `grafana` at `11:17:18`. Nice, we hunted one IP then. The rest IP are still the suspect.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/88feca18-1fcf-40b5-8052-ca89e1dfacfc)
+
+15. Now, let's review the `Process_and_Network` and let's query brutally for XMRIG process. We just want to get more information about the XMRIG activities at the EC2.
+
+> RESULTS - Got few interesting informations.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/193efa2b-116a-402b-981f-69c4d5af8295)
+
+16. Great! Based from the results above, we confirm that we can see a process named XMRIG running from `/usr/share/logs.txt/`.
+17. Now let's move to the grafana directory and review the logs at `/usr/share/grafana/data/log/`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9c3860e5-21f9-43a9-b208-79b71f4298f0)
+
+
+18. Upon reviewing each logs, we will find several False Positive activity. Remembering the Forela currently running VA and maintenance to the server.
+
+> FALSE POSITIVE IP --> each IP started with 86.x.x.x or IP with the same beginning 3 blocks.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d824a932-64d6-42a6-ad1a-612ac1654e18)
+
+
+19. Long story short, found another IP that attempted arbitrary file read.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/160de78c-a1d0-4bb4-b363-b504e2e5060f)
+
+
+> FURTHER CHECK FOR THE IP
+
+
+
+
 
 > 3RD QUESTION --> ANS:
 
