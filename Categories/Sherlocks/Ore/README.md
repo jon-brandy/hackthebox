@@ -35,7 +35,7 @@
 
 5. Reviewin each of them, drop us to a conclusion of the related CVE to this version should be --> `CVE-2021-43798`.
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/acd7f3c0-c05a-4f47-879e-935347bce16c)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b259768-99c3-4edb-9bdc-2b3d0a195d5b)
 
 
 > 2ND QUESTION --> ANS:
