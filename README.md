@@ -35,12 +35,15 @@
 
 </details>
 
-> CASES INVESTIGATED (NO TIMELINE ACTIVITIES TABLE CREATED)
+> CASES INVESTIGATED 
 
 
 
 <details>
   <br>
+
+  ### NOTES: NO TIMELINE ACTIVITIES TABLE CREATION FOR EVERY CHALLS.
+  
   <summary>Sherlocks</summary>
   
   |No.|SOC|DFIR|Malware Analysis|Threat Intelligence|Campaign|
