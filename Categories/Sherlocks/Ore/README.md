@@ -159,11 +159,11 @@ such activities and take preventive measures if necessary.
 28. Great! Seems we hunted all the threat actor's IPs.
 
 
-
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: grafana
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fb666590-22e3-46ab-b8e1-4aeda573da07)
 
+29. Based from our previous finding. It's clear that the attacker utilize **grafana** user to infiltrate to the system.
 
 > 4TH QUESTION --> ANS:
 
