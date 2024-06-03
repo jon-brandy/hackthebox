@@ -57,6 +57,10 @@
   |10. |[]()|[Jingle Bell](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Jingle%20Bell/README.md)|
   |11. |[]()|[TickTock](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/TickTock/README.md)|
   |12. |[]()|[Jugglin](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Jugglin/README.md)|
+  |13. |[]()|[Ore](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Ore/README.md)|
+  
+
+  
   
 
 
