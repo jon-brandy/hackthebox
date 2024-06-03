@@ -1,4 +1,4 @@
-# Ore
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e59fafb6-b66d-4c79-8feb-7982e75c2a62)# Ore
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/008e35c8-a398-44a2-a5d1-b81a7a1e4ada)
@@ -172,7 +172,7 @@ such activities and take preventive measures if necessary.
 
 30. There are no other user login activity detected based from the auth log.
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: /opt/automation/updater.sh
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c06d69a4-fe98-4513-966d-b003e7414f39)
 
@@ -200,11 +200,18 @@ such activities and take preventive measures if necessary.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0eb8950c-e373-4d7e-adc6-4f2520dc0e5f)
 
 
-36. 
+36. Checking the **cron-tab-list**, `/opt/automation/updater.sh` listed as a cronjob file. At this point, it's clear the attacker intention, he tried to escalate privilege by tampering the `updater.sh` file.
 
-> 5TH QUESTION --> ANS:
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8549265d-a613-408b-8d3e-4006ec57c9bb)
+
+> 5TH QUESTION --> ANS: wget
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a4bca183-54a5-42ac-ae59-eaaae9304e56)
+
+
+37. After the attacker gained privesc, previously we identified he tried to download another bash script named **injector.sh** using wget command.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/04ec8773-797a-435e-b020-95b9442b9358)
 
 
 > 6TH QUESTION --> ANS:
