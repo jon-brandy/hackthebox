@@ -1,4 +1,4 @@
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8db4b8ad-7042-4f0f-8509-f840c9c5f44d)![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b0af6ac7-8040-4a7b-9821-2ccfef0062c5)# Ore
+# Ore
 > Write-up author: jon-brandy
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/008e35c8-a398-44a2-a5d1-b81a7a1e4ada)
