@@ -16,7 +16,7 @@
 2. It is known that the CPU usage of the deployed EC2 instance unexpectedly soared to a constant of 98%+ due to a process named "XMRIG". The EC2 instance was used to host Grafana application.
 3. As a cyber forensic, wr're tasked to investigate what "XMRIG" is due to our understanding about cloud infrastructure, EC2 instances, and system processes.
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: CVE-2021-43798
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a83b0a5f-0659-41af-99fd-8ce47e5d75fd)
 
@@ -31,7 +31,10 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0784d0cb-81c6-447f-a43e-7067525a429d)
 
 
-5. Reviewin each of them, drop us to a conclusion of the related CVE to this version should be --> ``
+5. Reviewin each of them, drop us to a conclusion of the related CVE to this version should be --> `CVE-2021-43798`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/acd7f3c0-c05a-4f47-879e-935347bce16c)
+
 
 > 2ND QUESTION --> ANS:
 
@@ -102,5 +105,5 @@
 
 ```
 https://www.cybersecurity-help.cz/vdb/grafana_labs/grafana/8.2.0/
-
+https://github.com/pedrohavay/exploit-grafana-CVE-2021-43798
 ```
