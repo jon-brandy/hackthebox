@@ -135,6 +135,20 @@ such activities and take preventive measures if necessary.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d0f529d3-3deb-4d4d-9420-45fa09bb0711)
 
 
+20. Then found 2 other IPs accessing `/login` endpoint. One of them is has reported for ABUSE IP --> `44.192.62.21`. This should be our suspect.
+ 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/82aa39a8-27b2-49c8-969e-67a40a7110a7)
+
+
+> SMALL DETAILS FOR `44.192.62.21`
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c6fd73b4-4a69-4a32-9b62-166ecf64b288)
+
+
+21. At this point, it's proven for the first 2 IP is the threat actor's IP. Now we need to prove this potential last suspect IP.
+22. Let's review the `System_Info` directory.
+
+
 
 > 3RD QUESTION --> ANS:
 
