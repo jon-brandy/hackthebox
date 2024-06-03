@@ -38,7 +38,7 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b259768-99c3-4edb-9bdc-2b3d0a195d5b)
 
 
-> 2ND QUESTION --> ANS: 195.80.150.137, 
+> 2ND QUESTION --> ANS: 195.80.150.137, 95.181.232.32, 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/215bb639-0ccc-42b6-a0b7-6fd5b60b9207)
 
@@ -101,6 +101,11 @@ such activities and take preventive measures if necessary.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/88feca18-1fcf-40b5-8052-ca89e1dfacfc)
 
+> SMALL DETAILS ABOUT THE IP
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/07da419c-c2fc-47d2-bc9f-61b9dff06170)
+
+
 15. Now, let's review the `Process_and_Network` and let's query brutally for XMRIG process. We just want to get more information about the XMRIG activities at the EC2.
 
 > RESULTS - Got few interesting informations.
@@ -125,9 +130,9 @@ such activities and take preventive measures if necessary.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/160de78c-a1d0-4bb4-b363-b504e2e5060f)
 
 
-> FURTHER CHECK FOR THE IP
+> SMALL DETAILS ABOUT THE IP
 
-
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d0f529d3-3deb-4d4d-9420-45fa09bb0711)
 
 
 
