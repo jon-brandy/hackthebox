@@ -33,7 +33,7 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0784d0cb-81c6-447f-a43e-7067525a429d)
 
 
-5. Reviewin each of them, drop us to a conclusion of the related CVE to this version should be --> `CVE-2021-43798`.
+5. Reviewing each of them, drop us to a conclusion of the related CVE to this version should be --> `CVE-2021-43798`.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b259768-99c3-4edb-9bdc-2b3d0a195d5b)
 
@@ -79,14 +79,18 @@ and address security weaknesses.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b36b6f92-d52c-49c9-abe5-d7e3b2fb994f)
 
 
-11. Long story short, one IP caught my interest. It's stuffed few creds at `10:59:12 - 11:08:09`.
+11. Long story short, one IP caught my interest --> ``. It's stuffed few creds at `10:59:12 - 11:08:09`.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ebfebec5-c4c9-4282-81c9-5856f6ca4ee7)
 
 
-12. But then it authenticated as `grafana` at `11:17:18`.
+12. But then it authenticated as `grafana` at `11:17:18`. Nice, we hunted one IP then. The rest IP are still the suspect.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/88feca18-1fcf-40b5-8052-ca89e1dfacfc)
+
+
+13. This time, let's review the `Process_and_Network` l
+
 
 
 #### NOTES:
