@@ -6,7 +6,7 @@
 ## Lessons Learned:
 - Reviewing Grafana and Catscale Output artifacts.
 - Analyzing xmrig process.
-- 
+- Hunting the Threat Actor's IP by reviewing UNIX auth log.
 
 ## SCENARIO:
 <p align="justify">One of our technical partners are currently managing our AWS infrastructure. We requested the deployment of some technology into the cloud. The solution proposed was an EC2 instance hosting the Grafana application. Not too long after the EC2 was deployed the CPU usage ended up sitting at a continuous 98%+ for a process named "xmrig". Important Information Our organisation's office public facing IP is 86.5.206.121, upon the deployment of the application we carried out some basic vulnerability testing and maintenance.</p>
@@ -69,6 +69,30 @@ and address security weaknesses.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/08958846-c73a-4fa3-b340-035f6b63617b)
 
+
+8. Our investigation shall start at the UNIX auth log. Based from the scenario, we know that IP 86.5.206.121 is a legitimate IP. It's Forela's public IP.
+9. Hence, every IP starting with 86.x.x.x shall ignored.
+10. Upon reviewing the auth log, found several IPs attempt to establish a connection to port 22 but is dropped by the system. It failed to connect.
+
+> ONE OF THEM --> At `12:14:50 - 12:14:51`
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b36b6f92-d52c-49c9-abe5-d7e3b2fb994f)
+
+
+#### NOTES:
+
+```
+The failed pre-auth behavior is often indicative of automated scanning or probing activity. It's a good practice to monitor
+such activities and take preventive measures if necessary.
+```
+
+11. Upon further check about the IP. We found that the IP is registered as "Bad Reputation IP" with abuse reports of 15,037 times.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9b6007de-864c-4912-ac3c-cbfd785a7859)
+
+
+12. But we can't jump to a conclusion yet that it's the one that compromised the Forela's organization. Because there are bunch other failed logon with Bad Reputation IP.
+13. 
 
 > 3RD QUESTION --> ANS:
 
