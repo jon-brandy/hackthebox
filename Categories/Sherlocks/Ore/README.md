@@ -8,6 +8,7 @@
 - Analyzing xmrig process.
 - Hunting the Threat Actor's IPs by reviewing UNIX auth log, Web server log, and UNIX sysmon log (syslog).
 - Using shodan for threat intelligence (identifying the mining pool of the miner binary).
+- Using crontab.guru to identify how often the cronjob executed.
 
 ## SCENARIO:
 <p align="justify">One of our technical partners are currently managing our AWS infrastructure. We requested the deployment of some technology into the cloud. The solution proposed was an EC2 instance hosting the Grafana application. Not too long after the EC2 was deployed the CPU usage ended up sitting at a continuous 98%+ for a process named "xmrig". Important Information Our organisation's office public facing IP is 86.5.206.121, upon the deployment of the application we carried out some basic vulnerability testing and maintenance.</p>
@@ -302,7 +303,7 @@ such activities and take preventive measures if necessary.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0118491b-42fb-4e61-87f2-56a37a32b392)
 
 
-> 13TH QUESTION --> ANS:
+> 13TH QUESTION --> ANS: shred -u ./injector.sh
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ab23efbd-6abb-4ac0-8d25-3ff2a92a22c0)
 
@@ -324,14 +325,27 @@ such activities and take preventive measures if necessary.
 ```
 
 
-> 14TH QUESTION --> ANS:
+> 14TH QUESTION --> ANS: `daily - 08:30`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1c04868c-0311-48e1-9231-af5db3b86fea)
 
+
+56. To review again the cronjob task, open the `Persistence` directory then read the cron-tab list file.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dcc6f207-e3f9-431b-bfce-934a75eadaa6)
+
+57. Simply use crontab.guru to identify how often the cronjob executed.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/142aa5ad-d49c-410d-ba22-d346dc9e4367)
+
+
+58. Based from the result above, the cronjob process runs daily at 08:30 AM.
+59. We've investigated the case!
 
 ## IMPORTANT LINKS:
 
 ```
 https://www.cybersecurity-help.cz/vdb/grafana_labs/grafana/8.2.0/
 https://github.com/pedrohavay/exploit-grafana-CVE-2021-43798
+https://crontab.guru/#
 ```
