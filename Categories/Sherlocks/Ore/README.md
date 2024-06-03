@@ -45,6 +45,9 @@
 
 6. Now let's review the catscale output.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/817bd491-6db8-41e8-9dea-9fa25b4b8dbf)
+
+
 #### NOTES:
 
 ```
