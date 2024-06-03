@@ -43,7 +43,7 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/215bb639-0ccc-42b6-a0b7-6fd5b60b9207)
 
 
-6. Now let's analyze the catscale output.
+6. Now let's review the catscale output.
 
 #### NOTES:
 
@@ -56,6 +56,8 @@ The output from LinuxCatScale typically includes detailed reports on vulnerabili
 configuration issues, and an overall security score to help administrators quickly understand
 and address security weaknesses.
 ```
+
+
 
 > 3RD QUESTION --> ANS:
 
