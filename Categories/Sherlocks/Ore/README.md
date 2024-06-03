@@ -28,7 +28,10 @@
 
 4. Searching on the internet for CVE related to the version, we found these results
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0784d0cb-81c6-447f-a43e-7067525a429d)
 
+
+5. Reviewin each of them, drop us to a conclusion of the related CVE to this version should be --> ``
 
 > 2ND QUESTION --> ANS:
 
@@ -98,5 +101,6 @@
 ## IMPORTANT LINKS:
 
 ```
+https://www.cybersecurity-help.cz/vdb/grafana_labs/grafana/8.2.0/
 
 ```
