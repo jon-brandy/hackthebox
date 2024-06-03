@@ -146,8 +146,14 @@ such activities and take preventive measures if necessary.
 
 
 21. At this point, it's proven for the first 2 IP is the threat actor's IP. Now we need to prove this potential last suspect IP.
-22. Let's continue our investigation by reviewing the sysmon logs.
+22. Let's continue our investigation by reviewing the Linux Sysmon logs. Actually I did not have the setup for ELK stack or splunk. So it's kinda hard to analyze it in raw logs.
+23. I highly recommend setup an ELK stack then import the log or using splunk to review the log.
+24. Upon reviewing the raw log **manually**, at 24th November `08:30:01` found an attempt to use command `wget` at the machine.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9ae60b26-2248-444b-ab1c-3ec3503532bb)
+
+
+25. Based from our previous auth.log identification, IP `195.80.150.137` logged in to the EC2 server as grafana. The
 
 
 > 3RD QUESTION --> ANS:
