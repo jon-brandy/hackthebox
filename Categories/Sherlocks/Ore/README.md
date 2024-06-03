@@ -38,7 +38,7 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6b259768-99c3-4edb-9bdc-2b3d0a195d5b)
 
 
-> 2ND QUESTION --> ANS: 195.80.150.137, 95.181.232.32, 
+> 2ND QUESTION --> ANS: 44.204.18.94,95.181.232.32,195.80.150.137
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/215bb639-0ccc-42b6-a0b7-6fd5b60b9207)
 
@@ -153,7 +153,11 @@ such activities and take preventive measures if necessary.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9ae60b26-2248-444b-ab1c-3ec3503532bb)
 
 
-25. Based from our previous auth.log identification, IP `195.80.150.137` logged in to the EC2 server as grafana. The
+25. Based from our previous auth.log identification, IP `195.80.150.137` logged in to the EC2 server as grafana at 23th November, then do login and logout few times.
+26. At the next day, seems the attacker tried to import **injection.sh** file from his web server --> `44.204.18.94`.
+27. Reviewing the rest syslog, found no other malicious activity or IP that seems connected with the 2 previous IP we hunted.
+28. Great! Seems we hunted all the threat actor's IPs.
+
 
 
 > 3RD QUESTION --> ANS:
