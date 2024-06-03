@@ -48,9 +48,13 @@
 #### NOTES:
 
 ```
-LinuxCatScale is a bash script that uses live of the land tools to collect extensive data from Linux based hosts.
+LinuxCatScale is a bash script that uses live of the land tools to collect extensive
+data from Linux based hosts.
 
-The data provided can help DFIR professinoals in triaging and scoping incidents. The output from LinuxCatScale typically includes detailed reports on vulnerabilities, configuration issues, and an overall security score to help administrators quickly understand and address security weaknesses.
+The data provided can help DFIR professinoals in triaging and scoping incidents.
+The output from LinuxCatScale typically includes detailed reports on vulnerabilities,
+configuration issues, and an overall security score to help administrators quickly understand
+and address security weaknesses.
 ```
 
 > 3RD QUESTION --> ANS:
