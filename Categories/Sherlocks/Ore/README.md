@@ -236,9 +236,19 @@ such activities and take preventive measures if necessary.
 
 
 
-> 8TH QUESTION --> ANS:
+> 8TH QUESTION --> ANS: `2022-11-24 15:01:00`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/28f31da6-a23f-42e6-8d00-c177374db3bd)
+
+
+41. To identify the timestamp when the SOC team began artefact collection. We just need to filter **TargetFilename** `catscale`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e1aeb589-b27a-41b8-a003-4736010dd826)
+
+
+42. It should be the shell script, we can identify that it's executed at  `15:01:00`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/036f3f41-36f8-41c0-838f-77e6bd2dfa38)
 
 
 > 9TH QUESTION --> ANS:
