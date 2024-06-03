@@ -79,6 +79,16 @@ and address security weaknesses.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b36b6f92-d52c-49c9-abe5-d7e3b2fb994f)
 
 
+11. Long story short, one IP caught my interest. It's stuffed few creds at `10:59:12 - 11:08:09`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ebfebec5-c4c9-4282-81c9-5856f6ca4ee7)
+
+
+12. But then it authenticated as `grafana` at `11:17:18`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/88feca18-1fcf-40b5-8052-ca89e1dfacfc)
+
+
 #### NOTES:
 
 ```
