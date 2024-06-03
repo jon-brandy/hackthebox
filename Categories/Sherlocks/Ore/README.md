@@ -7,6 +7,7 @@
 - Reviewing Grafana and Catscale Output artifacts.
 - Analyzing xmrig process.
 - Hunting the Threat Actor's IPs by reviewing UNIX auth log, Web server log, and UNIX sysmon log (syslog).
+- Using shodan for threat intelligence (identifying the mining pool of the miner binary).
 
 ## SCENARIO:
 <p align="justify">One of our technical partners are currently managing our AWS infrastructure. We requested the deployment of some technology into the cloud. The solution proposed was an EC2 instance hosting the Grafana application. Not too long after the EC2 was deployed the CPU usage ended up sitting at a continuous 98%+ for a process named "xmrig". Important Information Our organisation's office public facing IP is 86.5.206.121, upon the deployment of the application we carried out some basic vulnerability testing and maintenance.</p>
@@ -261,26 +262,66 @@ such activities and take preventive measures if necessary.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d80b6a94-95b2-4c18-a783-da0ed3a6bde2)
 
 
-> 10TH QUESTION --> ANS:
+> 10TH QUESTION --> ANS: 0
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cd6e1342-9d44-44aa-96d8-652531693d1f)
 
 
-44. To identify the mining threads value of the XMRIG, we need to review the 
+44. To identify the mining threads value of the XMRIG, we need to review the `Process and Network` logs. But let's just brutally grep for the XMRIG value.
 
-> 11TH QUESTION --> ANS:
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/facbf201-c01a-438e-9b25-b9e9e2cd2bad)
+
+
+45. Based from the results above, the thread value is 0.
+
+> 11TH QUESTION --> ANS: `monero.herominers.com`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/250bdae2-45b4-4e82-a44b-208640d673fa)
 
 
-> 12TH QUESTION --> ANS:
+46. Mining pool can be identified if we have the IP to whom the binary establish connection.
+47. The binary seems communicating with --> `141.95.126.31`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5a522c81-eb1c-4f27-8371-f97db5e21fcc)
+
+
+48. Searching more details about the IP with shodan, shall show us the mining pool. 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d1039616-b9de-494c-8bd9-b377fc3bf28a)
+
+49. The mining pool should be `monero[.]herominers[.]com`.
+
+> 12TH QUESTION --> ANS: `/usr/share/.logstxt/`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/58dbbdaf-3c95-482b-9d90-f1036a6dee36)
+
+
+50. Based from our previous search, noticed the binary and it's config file are executed in `/usr/share/.logstxt/`.
+51. The attacker seems moved both file there, especially inside a hidden directory. Hoping the IT support did not utilize `ls -a` command.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0118491b-42fb-4e61-87f2-56a37a32b392)
 
 
 > 13TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ab23efbd-6abb-4ac0-8d25-3ff2a92a22c0)
+
+
+52. Since now we know the directory where he stored the miner and it's config file. However the binary, config file, and it's directory is gone.
+53. Seems the attacker are aware of it, so he removed the files so the SOC team unable to do further investigation to the binary to identify the wallet of the attacker.
+54. Not only that, the attacker seems also removed the **injector.sh** file. This activity can be verified by reviewing the syslog.
+
+> THE ATTACKER TOOK AN ACT TO THE INJECTOR.SH FILE `24TH NOVEMBER 09:59:49`
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b7691bb2-68f7-4206-8279-315ef3f3affe)
+
+55. The attacker took an act by executed **shred** command to the **injector.sh** file. With this command, the bash file is overwritten with garbage value then unlinked from the file system.
+
+#### NOTES:
+
+```
+-u, this flag is used to make sure that after the contents of the file are overwritten with garbage value. Then it's unlinked from the filesystem.
+```
 
 
 > 14TH QUESTION --> ANS:
