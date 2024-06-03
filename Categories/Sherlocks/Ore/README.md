@@ -251,15 +251,22 @@ such activities and take preventive measures if necessary.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/036f3f41-36f8-41c0-838f-77e6bd2dfa38)
 
 
-> 9TH QUESTION --> ANS:
+> 9TH QUESTION --> ANS: f0rela96789!
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d807380d-67a5-4327-9081-020ca2b05c40)
+
+
+43. To identify the grafana's admin password, simply review the `default.ini` file inside the `/grafana/conf`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d80b6a94-95b2-4c18-a783-da0ed3a6bde2)
 
 
 > 10TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cd6e1342-9d44-44aa-96d8-652531693d1f)
 
+
+44. To identify the mining threads value of the XMRIG, we need to review the 
 
 > 11TH QUESTION --> ANS:
 
