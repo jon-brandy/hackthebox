@@ -146,7 +146,7 @@ such activities and take preventive measures if necessary.
 
 
 21. At this point, it's proven for the first 2 IP is the threat actor's IP. Now we need to prove this potential last suspect IP.
-22. Let's review the `System_Info` directory.
+22. Let's continue our investigation by reviewing the sysmon logs.
 
 
 
