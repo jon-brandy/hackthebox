@@ -43,6 +43,16 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/215bb639-0ccc-42b6-a0b7-6fd5b60b9207)
 
 
+6. Now let's analyze the catscale output.
+
+#### NOTES:
+
+```
+LinuxCatScale is a bash script that uses live of the land tools to collect extensive data from Linux based hosts.
+
+The data provided can help DFIR professinoals in triaging and scoping incidents. The output from LinuxCatScale typically includes detailed reports on vulnerabilities, configuration issues, and an overall security score to help administrators quickly understand and address security weaknesses.
+```
+
 > 3RD QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fb666590-22e3-46ab-b8e1-4aeda573da07)
