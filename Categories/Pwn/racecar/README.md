@@ -2,11 +2,16 @@
 
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/76734269-2769-4654-b3bf-3dd77464dc5e)
+
+
+## Lessons Learned:
+1. Stack-Based Exploitation.
+2. Exploiting FSB to leak stack value.
+
 ## DESCRIPTION:
 Did you know that racecar spelled backwards is racecar? Well, now that you know everything about racing, win this race and get the flag!
 
-## HINT:
-- NONE
 
 ## STEPS:
 1. First, unzip the file given and enter `hackthebox` as the password.
