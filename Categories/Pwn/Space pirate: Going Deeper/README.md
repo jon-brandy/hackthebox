@@ -1,13 +1,18 @@
 # Space pirate: Going Deeper
 > Write-up author: jon-brandy
+
+## Lessons Learned:
+1. Stack-Based Exploitation.
+2. Buffer Overflow.
+3. Return to system() --> using lea offset.
+
 ## DESCRIPTION:
 We are inside D12! We bypassed the scanning system, and now we are right in front of the Admin Panel. 
 The problem is that there are some safety mechanisms enabled so that not everyone can access the admin panel and become the user right below Draeger. 
 Only a few of his intergalactic team members have access there, and they are the mutants that Draeger trusts. 
 Can you disable the mechanisms and take control of the Admin Panel?
 
-## HINT:
-- NONE
+
 ## STEPS:
 1. Unzipping the zip file resulting to a 64 bit binary file.
 
