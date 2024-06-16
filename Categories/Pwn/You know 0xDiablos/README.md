@@ -1,10 +1,16 @@
 # You know 0xDiablos
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fcede4ab-f544-4479-91f0-a17bcac7b14e)
+
+## Lessons Learned:
+1. Stack-Based Exploitation.
+2. Implement ret2win attack with 2 parameters.
+
 ## DESCRIPTION:
 I missed my flag
 
-## HINT:
-- NONE
+
 ## STEPS:
 1. First unzip the file given.
 
