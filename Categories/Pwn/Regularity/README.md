@@ -23,8 +23,43 @@
 
 
 2. Interesting, no protections are applied to the binary.
-3. Upon reviewing the decompiled code, seems the binary using write() instead of printf() as stdout.
+3. Upon reviewing the decompiled code, we found an initialize global variable named message1. Since it's initialized, the variable shall stored at the .DATA section.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b297ed28-a23f-4f83-8ec9-755a2f5258a9)
 
-4
+
+> .DATA SECTION.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1d9b319f-d05c-474d-a018-4f45f0af3e2d)
+
+
+4. It's unclear to determine the size of **nbytes** and **__buf**. So let's just send 1024 cyclic pattern and check whether GDB alarm SIGSEGV or not.
+
+> RESULTING TO SEGFAULT (SIGSEGV).
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c03fb309-1919-4f42-9789-ffaa36f88ee2)
+
+
+5. Great! There is a Buffer Overflow then. Since there is no direct input execution and no stack leak. Hence, the easiest way to drop a shell is by using register that used to store the input buffer.
+6. Commonly **RAX** is used to store the input buffer.
+7. BUT, reviewing the register context, seems RSI is used to store our buffer.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c20349b2-5e29-4349-a0c3-527b5becc6ed)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bffb1ec5-0149-4a75-a4d0-a607eb298d19)
+
+
+8. Nice! Seems RSI should be our target now. Again, remembering PIE is not enabled hence we can grab the `jmp rsi;` gadget without worries about the piebase.
+
+> USING ROPPER - CHECKING JMP RSI; GADGET.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ad3e4531-fb43-4600-8f0f-2f9ab5ef37c6)
+
+
+10. Here's the crafted exploit script.
+
+> SCRIPT
+
+```py
+```
