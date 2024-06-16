@@ -1,9 +1,15 @@
 # Jeeves
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/dad07cae-9e78-4386-abc5-ae41bdbbd5e3)
+
+
+## Lessons Learned:
+1. Local Variable Overwrite.
+
 ## DESCRIPTION:
 How are you doing, sir?
-## HINT:
-- NONE
+
 ## STEPS:
 1. First, unzip the `.zip` file given.
 
