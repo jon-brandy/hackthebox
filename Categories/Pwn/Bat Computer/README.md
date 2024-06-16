@@ -1,9 +1,16 @@
 # Bat Computer
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0455e35d-ab94-4c1b-a1df-9653ca642396)
+
+
+## Lessons Learned:
+1. BOF.
+2. Ret2shellcode.
+
 ## DESCRIPTION:
 It's your time to save the world!
-## HINT:
-- NONE
+
 ## STEPS:
 1. First, unzip the `.zip` file given.
 
