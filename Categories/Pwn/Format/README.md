@@ -6,6 +6,7 @@
 
 ## Lessons Learned:
 1. Exploiting Format String Bug (FSB).
+2. Utilize FSB to overwrite `__malloc_hook` with one-gadget.
 
 ## DESCRIPTION:
 Can you hear the echo?
