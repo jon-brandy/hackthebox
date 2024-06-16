@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- Ret2reg using call rsi; gadget.
+- Get shell using ret2reg concept --> jumping to rsi.
 
 ## DESCRIPTION:
 
