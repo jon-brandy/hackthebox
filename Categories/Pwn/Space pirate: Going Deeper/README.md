@@ -1,6 +1,9 @@
 # Space pirate: Going Deeper
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ebdde67e-6dfa-4ecd-9f1f-fa70e7b730b5)
+
+
 ## Lessons Learned:
 1. Stack-Based Exploitation.
 2. Buffer Overflow.
