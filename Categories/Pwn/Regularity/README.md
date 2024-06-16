@@ -37,7 +37,7 @@
 
 > RESULTING TO SEGFAULT (SIGSEGV).
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c03fb309-1919-4f42-9789-ffaa36f88ee2)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c76bc159-2c0d-4e6b-8990-c3dc229ff19c)
 
 
 > RIP Offset -> 256
