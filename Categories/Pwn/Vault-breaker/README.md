@@ -1,10 +1,17 @@
 # Vault-breaker
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9169b934-6493-4a9f-a579-ee70fff53121)
+
+
+## Lessons Learned:
+1. Stack-Based Exploitation.
+2. Exploiting strcpy() bug to leak data.
+
 ## DESCRIPTION:
 Money maker, Big Boy Bonnie has a crew of his own to do his dirty jobs. In a tiny little planet a few lightyears away, a custom-made vault has been found by his crew. 
 Something is hidden inside it, can you find out the way it works and bring it to Bonnie?
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, dynamically linked, and not stripped.
 
