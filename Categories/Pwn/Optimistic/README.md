@@ -1,9 +1,17 @@
 # Optimistic
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ecdb4a23-d691-405a-843f-0c4b57122115)
+
+
+## Lessons Learned:
+1. Exploiting Integer Overflow.
+2. Utilizing Integer Overflow to leak stack address.
+3. Writing shellcode to the leaked stack address and manipulate the RIP address to it.
+
 ## DESCRIPTION:
 Are you ready to feel positive?
-## HINT:
-- NONE
+
 ## STEPS:
 1. First, unzip the `.zip` file given, then check the type of file we got.
 
