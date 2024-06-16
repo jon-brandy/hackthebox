@@ -1,10 +1,18 @@
 # Space pirate: Retribution
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8f9899dd-dd33-43e0-88fc-7e1835dd61ea)
+
+
+## Lessons Learned:
+1. Stack-Based Exploitation.
+2. Bypass PIE protection.
+3. Implement ret2libc attack.
+
 ## DESCRIPTION:
 We got access to the Admin Panel! The last part of the mission is to change the target location of the missiles. We can probably target Draeger's HQ or some other Golden Fang's spaceships. Draeger's HQ might be out of the scope for now, but we can certainly cause significant damage to his army.
 
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, dynamically linked, not stripped, and a libc library.
 
