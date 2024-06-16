@@ -1,9 +1,16 @@
 # Reg
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/86622ff6-8221-4bfe-b66c-79b7ed193e2e)
+
+
+## Lessons Learned:
+1. Buffer Overflow.
+2. Implement ret2win attack.
+
 ## DESCRIPTION:
 This is a basic buffer flow exploit. Try to get the flag.
-## HINT:
-- NONE
+
 ## STEPS:
 1. First, unzip the `.zip` file given.
 2. Next, check the file type we got.
