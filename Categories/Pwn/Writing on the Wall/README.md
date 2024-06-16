@@ -7,7 +7,8 @@
 ## Lessons Learned:
 1. Stack-Based Exploitation.
 2. Out-of-Bound (OOB) Write.
-3. Local variable overwrite.
+3. read() vuln.
+4. Local variable overwrite.
 
 ## DESCRIPTION:
 <p align="justify">As you approach a password-protected door, a sense of uncertainty envelops you—no clues, no hints. Yet, just as confusion takes hold, your gaze locks onto cryptic markings adorning the nearby wall. Could this be the elusive password, waiting to unveil the door's secrets?</p>
