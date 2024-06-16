@@ -1,11 +1,18 @@
 # Space pirate: Entrypoint
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8d0e934c-1e1d-42c5-af08-078685d7ac78)
+
+## Lessons Learned:
+1. Stack-Based Exploitation.
+2. Exploiting FSB.
+3. Utilizing FSB to overwrite local variable.
+
 ## DESCRIPTION:
 D12 is one of Golden Fang's missile launcher spaceships. 
 Our mission as space pirates is to highjack D12, get inside the control panel room, and access the missile launcher system. 
 To achieve our goal, we split the mission into three parts. In this part, all we need to do is bypass the scanning system and open the gates so that we proceed further.
-## HINT:
-- NONE
+
 ## STEPS:
 1. First, unzip the `.zip` file given, then jump to the extracted directory.
 
