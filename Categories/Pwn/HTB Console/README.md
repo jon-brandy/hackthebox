@@ -1,9 +1,17 @@
 # HTB Console
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3f387489-f919-4a80-920f-647fd1fa7743)
+
+
+## Lessons Learned:
+1. Buffer Overflow.
+2. Direct .DATA section field manipulation.
+3. Utilizing BOF to return to .DATA section filled with `/bin/sh\x00` string.
+
 ## DESCRIPTION:
 Check out the all new HTB Console! Don't try to pwn it though.
-## HINT:
-- NONE
+
 ## STEPS:
 1. First, unzip the `.zip` file given.
 
