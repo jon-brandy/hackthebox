@@ -1,8 +1,18 @@
 # Sacred Scrolls: Revenge
+
+> Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fafd6805-62ae-4e49-92c8-72100bceb556)
+
+
+## Lessons Learned:
+1. Buffer Overflow.
+2. Implement ret2libc attack (encodes payload with base64 + stack alignment 16 bit).
+
+
 ## DESCRIPTION:
 Each house of the campus has its own secret library to store spells or spellbound messages so the others cannot see them. Messages are encrypted and must be signed by the boy who lived, turning them into sacred scrolls, otherwise they are not accepted in this library. You can try it yourself as long as you are a wizard of this house.
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, dynamically linked, and not stripped.
 
