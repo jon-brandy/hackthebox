@@ -1,11 +1,15 @@
 # Spellbook
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/aa3a18a2-80c9-469b-a028-948514bcc7f6)
+
+
 ## Lessons Learned:
-- Leak main arena address by freeing a chunk to unsorted bin.
-- Identify offset for __malloc_hook().
-- Identify offset for one_gadget.
-- Utilizing Heap Overflow for fastbin attack lead to RCE.
+1. Heap-Based Exploitation.
+2. Leak main arena address by freeing a chunk to unsorted bin.
+3. Identify offset for __malloc_hook().
+4. Identify offset for one_gadget.
+5. Utilizing Heap Overflow for fastbin attack lead to RCE.
 
 ## DESCRIPTION:
 In this magic school, there are some spellbound books given to young wizards where they can create and store the spells they 
