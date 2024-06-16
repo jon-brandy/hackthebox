@@ -89,3 +89,13 @@ sh.interactive()
 
 > REMOTE TEST
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/53c303a4-f1b3-44d4-808c-dc0661f78095)
+
+
+11. We've pwned it!
+
+## FLAG
+
+```
+HTB{jMp_rSi_jUmP_aLl_tH3_w4y!}
+```
