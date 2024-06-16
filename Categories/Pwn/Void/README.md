@@ -1,9 +1,16 @@
 # Void
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e143942d-bd1e-49df-9712-02db91812b63)
+
+
+## Lessons Learned:
+1. Stack-Based Exploitation.
+2. Implement ret2dlresolve attack.
+
 ## DESCRIPTION:
 The room goes dark and all you can see is a damaged terminal. Hack into it to restore the power and find your way out.
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary - not stripped.
 
