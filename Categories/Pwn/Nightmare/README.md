@@ -1,9 +1,16 @@
 # Nightmare
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/245829e2-44a4-4e7b-b64c-525fa2f52088)
+
+
+## Lessons Learned:
+1. Exploiting FSB.
+2. Overwriting Global Offset Table (GOT) with FSB.
+
 ## DESCRIPTION:
 You seem to be stuck in an endless nightmare. Can you find a way out?
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary , stripped, and with **NO RELRO**.
 
