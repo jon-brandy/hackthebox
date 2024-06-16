@@ -5,7 +5,8 @@
 
 
 ## Lessons Learned:
-- Get shell using ret2reg concept --> jumping to rsi.
+1. Stack-Based Exploitation.
+2. Get shell using ret2reg concept --> jumping to rsi.
 
 ## DESCRIPTION:
 
