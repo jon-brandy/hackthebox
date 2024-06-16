@@ -1,6 +1,9 @@
 # Bon-nie-appetit
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5b8ad838-14dc-44f6-9cb5-241829060cc2)
+
+
 ## Lessons Learned:
 - Leaking main_arena address.
 - Exploiting OOB Bug (overlap chunks and forge a fake size field).
@@ -18,8 +21,6 @@ so it won't be easy to track the device and the leaked signal. Can you take adva
 
 </p>
 
-## HINT:
-- NONE
 
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, dynamically linked, and not stripped.
