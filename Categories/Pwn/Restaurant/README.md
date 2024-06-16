@@ -1,9 +1,16 @@
 # Restaurant
 > Write-up author: vreshco
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d512731b-708d-480a-8840-ddf0dfbe65c6)
+
+
+## Lessons Learned:
+1. Buffer Overflow.
+2. Implement ret2libc attack (with stack alignment 16 bit).
+
 ## DESCRIPTION:
 Welcome to our Restaurant. Here, you can eat and drink as much as you want! Just don't overdo it..
-## HINT:
-- NONE
+
 ## STEPS:
 1. First, unzip the `.zip` file given.
 
