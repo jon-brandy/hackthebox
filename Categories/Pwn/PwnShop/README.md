@@ -1,9 +1,17 @@
 # PwnShop
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1880b20e-d311-43e5-8816-9684d0e480cb)
+
+
+## Lessons Learned:
+1. Buffer Overflow.
+2. Bypassing PIE and ASLR.
+3. Implement Stack Pivot.
+4. Implement ret2libc attack.
+
 ## DESCRIPTION:
 We just opened a Pwn Shop, time to pwn all the things!
-## HINT:
-- NONE
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, dynamically linked, and stripped.
 
