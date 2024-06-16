@@ -1,9 +1,14 @@
 # Getting Started
 > Write-up author: vreshco
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/343205bb-eab0-4dc2-8de5-0350510a580d)
+
+## Lesson Learned:
+1. Buffer Overflow.
+
 ## DESCRIPTION:
 Get ready for the last guided challenge and your first real exploit. It's time to show your hacking skills.
-## HINT:
-- NONE
+
 ## STEPS:
 1. Given 3 files, the glibc directory, 64 bit binary file, fake flag, and a snippet script for sending the payload.
 2. Check the binary's protections.
