@@ -5,8 +5,8 @@
 
 
 ## Lessons Learned:
-1. BOF.
-2. Ret2shellcode.
+1. Buffer Overflow.
+2. Implement ret2shellcode concept.
 
 ## DESCRIPTION:
 It's your time to save the world!
