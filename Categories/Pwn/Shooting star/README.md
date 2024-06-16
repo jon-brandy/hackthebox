@@ -1,10 +1,18 @@
 # Shooting star
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/3c46c2af-d731-48db-9285-13bc77809e40)
+
+
+## Lessons Learned:
+1. Buffer Overflow (Stack-Based Exploitation).
+2. Leaking libc runtime using write@got and `pop_rsi_r15` gadget.
+3. Implement ret2libc attack.
+
 ## DESCRIPTION:
 Tired of exploring the never-ending world, you lie down and enjoy the crystal clear sky. 
 Over a million stars above your head! Enjoy the silence and the glorious stars while you rest.
-## HINT:
-- NONE
+
 ## STEPS:
 1. First, unzip the `.zip` file given.
 2. Next, check the type of file we got.
