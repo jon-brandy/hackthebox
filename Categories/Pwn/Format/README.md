@@ -1,9 +1,15 @@
 # Format
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/a3150f5d-b7a6-43a2-a359-63d1fc0725b9)
+
+
+## Lessons Learned:
+1. Exploiting Format String Bug (FSB).
+
 ## DESCRIPTION:
 Can you hear the echo?
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, dynamically linked, and not stripped.
 
