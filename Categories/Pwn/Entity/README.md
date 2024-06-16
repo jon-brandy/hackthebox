@@ -1,9 +1,16 @@
 # Entity
 > Write-up author: vreshco
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7a7445d8-e950-4b71-aad7-ce24b2ecc65c)
+
+
+## Lessons Learned:
+1. Union Structure.
+2. Type Confusion.
+
 ## DESCRIPTION:
 This Spooky Time of the year, what's better than watching a scary film on the TV? Well, a lot of things, like playing CTFs but you know what's definitely not better? Something coming out of your TV!
-## HINT:
-- NONE
+
 ## STEPS:
 1. Given 3 files -> 64 bit ELF, the source-code and the fake flag.
 2. Let's check the binary's protections.
