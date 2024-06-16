@@ -1,8 +1,14 @@
 # Finale
+> Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/74de6d8b-ee75-43e2-9e41-62f890ba249a)
+
+## Lessons Learned:
+1. Implement Open-Read-Write (ORW) ROP Chain exploit.
+
 ## DESCRIPTION:
 It's the end of the season and we all know that the Spooktober Spirit will grant a souvenir to everyone and make their wish come true! Wish you the best for the upcoming year!
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge, we're given a 64 bit binary, dynamically linked, and not stripped.
 
