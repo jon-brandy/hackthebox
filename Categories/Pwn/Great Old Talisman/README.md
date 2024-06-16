@@ -1,6 +1,9 @@
 # Great Old Talisman
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0fedf870-97de-41d5-ae43-5f1ea48589c0)
+
+
 ## Lessons Learned:
 - Calculating offset for exit@got entry.
 - Utilizing 2 bytes overflow to overwrite exit@got.
