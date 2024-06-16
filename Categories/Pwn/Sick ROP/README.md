@@ -1,9 +1,15 @@
 # Sick ROP
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0be78de8-434e-48f5-a79b-1c2769a3b6d3)
+
+
+## Lessons Learned:
+1. Implement SigReturn Oriented Programming (SROP).
+
 ## DESRIPTION:
 You might need some syscalls.
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, statically linked, and not stripped.
 
