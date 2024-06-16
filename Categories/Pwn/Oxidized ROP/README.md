@@ -2,6 +2,8 @@
 
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c1509f6f-69d5-4070-afcd-21bb76357492)
+
 
 ## Lessons Learned:
 - RUST code review.
@@ -10,9 +12,6 @@
 ## DESCRIPTION:
 
 Our workshop is rapidly oxidizing and we want a statement on its state from every member of the team! > flag in `/challenge/flag.txt`
-
-## HINT:
-- NONE
 
 ## STEPS:
 1. In this challenge, we're given a 64 bit binary, dynamically linked, and not stripped.
