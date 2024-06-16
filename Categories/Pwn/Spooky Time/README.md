@@ -1,9 +1,17 @@
 # Spooky Time
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2a7a0e03-821f-4581-9bb2-92aad74eba63)
+
+## Lessons Learned:
+1. Stack-Based Exploitation.
+2. Exploiting FSB Bug.
+3. Overwrite puts@got with one gadget.
+
+
 ## DESCRIPTION:
 Everyone loves a good jumpscare, especially kids or the person who does it.. Try to scare them all!
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, not stripped, and dynamically linked.
 
