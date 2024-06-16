@@ -5,7 +5,8 @@
 
 
 ## Lessons Learned:
-1. Implement SigReturn Oriented Programming (SROP).
+1. Stack-Based Exploitation (statically linked and small binary).
+2. Implement SigReturn Oriented Programming (SROP).
 
 ## DESRIPTION:
 You might need some syscalls.
