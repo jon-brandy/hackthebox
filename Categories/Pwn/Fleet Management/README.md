@@ -1,11 +1,18 @@
 # Fleet Management
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8fd6fc1c-46e4-4cfd-99e8-b9bdba7077a6)
+
+
+## Lessons Learned:
+1. Bypassing secure-computing (seccomp) rules.
+2. Crafting custom shellcode.
+
 ## DESCRIPTION:
 Reading through an Underground Intergalactic hacking forum Bonnie stumbles upon a post talking about a backdoor in the Gold Fang’s Spaceship Fleet Management System. 
 There is a note about a twist added by the author to prevent anyone from using the backdoor. 
 Will Bonnie achieve to gain access to Gold Fang’s internal network and retrieve precious documents?
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, dynamically linked, and not stripped.
 
