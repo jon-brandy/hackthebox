@@ -1,6 +1,9 @@
 # Blacksmith
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fa8d9838-9d27-4b57-9545-34bac05aa840)
+
+
 ## Lessons Learned:
 1. Bypassing secure-computing rules.
 2. Implement ORW (Open-Read-Write) exploit.
