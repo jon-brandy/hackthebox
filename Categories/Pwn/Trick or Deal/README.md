@@ -1,10 +1,17 @@
 # Trick or Deal
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/eee9797c-97fd-4c19-aded-caba8fc7150f)
+
+
+## Lessons Learned:
+1. Heap-Based Exploitation.
+2. Use After Free.
+3. Implemen arbitrary chunk data read using UAF.
+
 ## DESCRIPTION:
 Bonnie and his crew arrive to planet Longhir to get equipped with the latest weaponry, but the intergalactic weapon dealer refuses to sell them weapons because he has a trade agreement with Draeger, the Alien Overlord,thus Bonnie has to employ his neat exploitation tricks to persuade the dealer into selling them weapons.
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, dynamically linked, and not stripped.
 
