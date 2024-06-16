@@ -1,13 +1,22 @@
 # What does the f say?
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/259368e4-6ad3-4ed1-a1da-fd8c30232b29)
+
+
+## Lessons Learned:
+1. Stack-Based Exploitation.
+2. Exploiting FSB.
+3. Bypass PIE, Canary, and ASLR.
+4. Implement ret2libc attack with stack alignment. 
+
 ## DESCRIPTION:
 
 Tired from exploring the endless mysteries of space, you need some rest and a welcome distraction. 
 From extreme flaming kamikazes to dangleberry sours, Fox space bar has everything. 
 Treat yourself like a king, but be careful! Don't drink and teleport!
 
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, dynamically linked, and not stripped.
 
