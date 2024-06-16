@@ -21,7 +21,7 @@
 
 > BINARY PROTECTIONS
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0f7df9ca-e75c-44bc-9f79-d2d1de4fb592)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2178fd41-209e-4d55-b1af-c710fa829ec6)
 
 
 2. Upon reviewing the decompiled code in ghidra, we can clearly spot the vuln at the read() usage. It introduced a OOB vuln.
