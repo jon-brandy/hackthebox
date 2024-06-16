@@ -1,9 +1,15 @@
 # Leet Test
 > Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ba3ff1f7-a019-4056-ad99-314378f662ca)
+
+## Lessons Learned:
+1. Exploiting FSB.
+2. Overwriting global and local variable to 0.
+
 ## DESCRIPTION:
 Are you 1337 enough?
-## HINT:
-- NONE
+
 ## STEPS:
 1. In this challenge we're given a 64 bit binary, dynamically linked, and not stripped.
 
