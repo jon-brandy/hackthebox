@@ -1,8 +1,19 @@
 # Space
+> Write-up author: jon-brandy
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e6d12d4a-12a8-4947-84e4-f57fc5526462)
+
+
+## Lessons Learned:
+1. Stack-Based Exploitation.
+2. Buffer Overflow.
+3. Small space after EIP.
+4. Crafting custom shellcode.
+
 ## DESCRIPTION:
 roaming in a small space
-## HINT:
-- NONE
+
+
 ## STEPS:
 1. In this challenge we're given a 32 bit binary, dynamically linked, and not stripped.
 
