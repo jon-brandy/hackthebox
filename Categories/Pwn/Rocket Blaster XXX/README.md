@@ -24,7 +24,30 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5f536ba1-7a27-4e01-8a2e-948f1ff74397)
 
 
-3. Reviewing other functions, we noticed a function named `fill_ammo` which opens the flag but not stored directly onto the stack.
+3. Reviewing other functions, we noticed a function named `fill_ammo` which opens the flag file then print it's content.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/227056a6-41a1-48c7-aeaa-b27fe8e5fabd)
+
+
+4. Seems the objective here is to return to `fill_ammo`. Noticed the `fill_ammo` function accepts 3 params, those 3 also used for a checker.
+5. However since there is no canary and PIE is disabled, hence it's very easy for us to pwn the binary.
+
+> GET RIP OFFSET --> 40
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/36e46731-9e73-47e8-b89a-fbf0904df6e2)
+
+
+6. Great! Next, let's search for useful gadgets.
+7. Popping 3 values to param, means we need RDI (as the 1st arg), RSI (as the 2nd arg), and RDX (as the 3rd arg).
+
+> CHECK FOR GADGETS
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/65206058-c5e4-499d-932a-6e217ab06019)
+
+
+8. Seems the gadgets are provided to us. We can utilize it then.
+
+
 
 
 
