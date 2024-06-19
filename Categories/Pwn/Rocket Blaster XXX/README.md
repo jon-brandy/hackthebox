@@ -178,7 +178,10 @@ sh.interactive()
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/35662783-d365-46d8-bdd0-c2fea4f133ff)
 
+
+5. Nice! We've pwned it!
 
 
 ## FLAG
