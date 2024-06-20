@@ -91,7 +91,7 @@
 |10. |[Sacred Scrolls: Revenge](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sacred%20Scrolls%3A%20Revenge/README.md)|[Sick ROP](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sick%20ROP/README.md)|[What does the f say?](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/What%20does%20the%20f%20say%3F/README.md)|
 |11. |[Bon-nie-appetit](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Bon-nie-appetit/README.md)|[Great Old Talisman](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Great%20Old%20Talisman/README.md)|[Spellbook](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Spellbook/README.md)|
 |12. |[Oxidized ROP](https://github.com/jon-brandy/hackthebox/tree/main/Categories/Pwn/Oxidized%20ROP)|[Regularity](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Regularity/README.md)|[Writing on the Wall](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Writing%20on%20the%20Wall/README.md)|
-|13. |[Execute](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Execute/README.md)|[Rocket Blaster XXX](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Rocket%20Blaster%20XXX/README.md)||
+|13. |[Execute](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Execute/README.md)|[Rocket Blaster XXX](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Rocket%20Blaster%20XXX/README.md)|[Sound of Silence](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sound%20of%20Silence/README.md)|
 
 
 
