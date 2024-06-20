@@ -82,3 +82,11 @@ sh.interactive()
 17. Noticed our `/` is bit-flipped (?)
 18. Upon debugging our input by set breakpoints at **main()**, we found an interesting pointer stored at the RDI upon step into the **gets()** call.
 
+> AFTER THE GETS CALL, PASS FEW BYTES
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b588ca19-e6ba-4ccf-a788-b20f16c38bbc)
+
+
+> RESULT
+
+
