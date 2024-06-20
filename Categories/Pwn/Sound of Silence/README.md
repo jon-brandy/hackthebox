@@ -1,4 +1,8 @@
 # Sound of Silence
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c00cb1d6-aa6b-4bff-b60d-65115285d01f)
+
+
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
