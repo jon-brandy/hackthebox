@@ -38,4 +38,11 @@
 9. Simply send +16 bytes or even more than the available buffers to hold by the input variable.
 10. We shall gained segfault.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4860fb58-d5a6-4801-b9fc-b20a8200d512)
 
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cbbd5a52-3c99-44fb-9230-93511d71b80c)
+
+
+11. Nice! Now, what are our objectives? There is no **write()**, **read()**, **printf()**, or **puts()** call.
+12. 
