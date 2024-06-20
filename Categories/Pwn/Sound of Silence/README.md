@@ -45,4 +45,7 @@
 
 
 11. Nice! Now, what are our objectives? There is no **write()**, **read()**, **printf()**, or **puts()** call.
-12. 
+12. BUT there is **system()**.
+13. Our objective is to return to `gets@plt`, then pass `system()` as it's arg.
+
+
