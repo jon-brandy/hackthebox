@@ -30,3 +30,8 @@
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/921676d0-52ff-4216-ac33-93d6275740da)
 
+
+5. BUT the problem here, remembering it does call system(), hence we can't identify RIP offset like usual with it.
+6. Although we can do it manually, but still I preferred using GDB.
+7. The method is to do **set follow-fork-mode parent**.
+8. With 
