@@ -33,5 +33,9 @@
 
 5. BUT the problem here, remembering it does call system(), hence we can't identify RIP offset like usual with it.
 6. Although we can do it manually, but still I preferred using GDB.
-7. The method is to do **set follow-fork-mode parent**.
-8. With 
+7. The method is to do **set follow-fork-mode parent** at GDB.
+8. So now the GDB is following the parent process, not the child process.
+9. Simply send +16 bytes or even more than the available buffers to hold by the input variable.
+10. We shall gained segfault.
+
+
