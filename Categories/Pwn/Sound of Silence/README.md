@@ -8,6 +8,7 @@
 ## Lessons Learned:
 1. Stack-Based Exploitation.
 2. Manipulate return address to gets(), then use system() as it's argument.
+3. Utilize GDB to follow parent process.
 
 ## DESCRIPTION:
 
