@@ -7,6 +7,9 @@
 ## Lessons Learned:
 1. Using **EventViewer** to analyze DC's security logs.
 2. Kerberoasting Attack Analysis.
+3. Using PECmd.exe to convert prefetch file to csv format.
+4. Using Timeline Explorer to review the csv formatted prefetch file.
+5. Identifying common kerberoasting tools.
 
 ## SCENARIO:
 <p align="justify">Alonzo Spotted Weird files on his computer and informed the newly assembled SOC Team. Assessing the situation it is believed a Kerberoasting attack may have occurred in the network. It is your job to confirm the findings by analyzing the provided evidence. You are provided with: 1- Security Logs from the Domain Controller 2- PowerShell-Operational Logs from the affected workstation 3- Prefetch Files from the affected workstation</p>
@@ -77,18 +80,57 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8cfaf4b4-1a38-424d-ad65-69a58266380d)
 
 
-> 6TH QUESTION --> ANS: 
+> 6TH QUESTION --> ANS: `C:\Users\Alonzo.spire\Downloads\Rubeus.exe`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2e9d6138-f941-4ee0-bc86-f1396c46ae81)
 
 
-> 7TH QUESTION --> ANS:
+15. After identified which account is kerberoastable, the threat actor continue it's attack scheme by executing a specific tool for kerberoasting.
+16. Upon reviewing the prefetch file given, a tool named `RUBEUS` caught my attention.
+17. Things to note, **RUBEUS**, **IMPACKET**, **GetUserSPN.py**, and **POWERSPLOIT (Invoke-Kerberoast)** are common tools used for kerberoasting.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/af9afc3a-980f-49ec-a939-b99bd81fc239)
+
+
+18. Now let's convert the prefetch file to a csv file then review it using **Timeline Explorer** to gain more info about the tool properties.
+
+> USING PECmd.exe to convert .pf file to csv.
+
+```
+.\PECmd.exe -f 'pathfile.pf' --csv . --csvf result.csv
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f8084f27-c5a3-48d9-8d4d-4cd3efb72e22)
+
+
+> RESULT IN TIMELINE EXPLORER
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/34bad86b-6c7c-4b35-9fd3-801e73639a33)
+
+
+19. To identify it's path, simply check the `Files Loaded` column.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/cb984d0e-e3e5-4e98-8996-202cc2afeaba)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2e2af728-8fad-4b3c-9fb8-ad51c72ecb76)
+
+20. Nice! We've identified the full path.
+
+> 7TH QUESTION --> ANS: `2024-05-21 03:18:08`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d8d1ba2d-15fb-47d9-9a4f-fa1320a3bf7d)
 
+
+21. Next to identify the execution timestamp, simply check the `Last Run` column.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/859a7b00-88e6-4e27-bcb1-dd1f780a67c9)
+
+
+22. Great! We've investigated the case!
 
 ## IMPORTANT LINKS
 
 ```
 https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769
+https://www.cybertriage.com/blog/dfir-breakdown-kerberoasting/
 ```
