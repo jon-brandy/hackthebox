@@ -11,11 +11,18 @@
 <p align="justify">Alonzo Spotted Weird files on his computer and informed the newly assembled SOC Team. Assessing the situation it is believed a Kerberoasting attack may have occurred in the network. It is your job to confirm the findings by analyzing the provided evidence. You are provided with: 1- Security Logs from the Domain Controller 2- PowerShell-Operational Logs from the affected workstation 3- Prefetch Files from the affected workstation</p>
 
 ## STEPS:
-1. In this case, we're tasked to investigate
+1. In this case, we're tasked to investigate a kerberoasting attack on Alonzo's computer. It is known that he spotted few weird files on hits computer.
+2. Later on, SOC team is informed and asked to assess the situation.
+3. SOC team found the situation is a result of kerberoasting attack in the network and we're asked to confirm their findings by analyzing the provided evidence.
+4. We're provided with security logs from Domain Controller, Powershell-Operational Logs, and Prefetch files from the affected workstation.
+
+
 
 > 1ST QUESTION --> ANS: 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/56e304d5-e71a-4426-99fc-24238f2d20da)
+
+
 
 
 > 2ND QUESTION --> ANS: 
