@@ -38,11 +38,19 @@
 
 
 9. Based from the log, seems **MSSQLService** is the targeted service name.
-10. Let's review the previous log, to identify at which workstation this activity occured.
+10. Upon reviewing the previous log, we can identify that the workstation used for this kerberoasting attack is **FORELA-WKSTN001**.
 
-> 3RD QUESTION --> ANS: 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8b86d7f9-457f-4680-b413-5614b48eea07)
+
+
+> 3RD QUESTION --> ANS: `172.17.79.129`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/14c102a9-b21a-46bd-ace4-398a62d95ac0)
+
+
+11. The IP address of the workstation is also shown at the initial kerberoasting attempt and it's previous log.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/df4d9acd-c589-427b-8fc8-417f2d7c4976)
 
 
 > 4TH QUESTION --> ANS: 
