@@ -6,6 +6,7 @@
 
 ## Lessons Learned:
 1. Using **EventViewer** to analyze DC's security logs.
+2. Identify initial kerberoasting attempt.
 
 ## SCENARIO:
 <p align="justify">Alonzo Spotted Weird files on his computer and informed the newly assembled SOC Team. Assessing the situation it is believed a Kerberoasting attack may have occurred in the network. It is your job to confirm the findings by analyzing the provided evidence. You are provided with: 1- Security Logs from the Domain Controller 2- PowerShell-Operational Logs from the affected workstation 3- Prefetch Files from the affected workstation</p>
@@ -21,6 +22,11 @@
 > 1ST QUESTION --> ANS: 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/56e304d5-e71a-4426-99fc-24238f2d20da)
+
+
+5. The easiest way to identify the initial kerberoasting attempt, we need to filter for EventID **4769 (A Kerberos service ticket was requested)**.
+6. Next, check for the service name taht is not **krbtgt** or ends with **$** sign (it indicates a workstation).
+7. Also note that the ticket type should be 0x17 along with the failure code must be 0x0.
 
 
 
@@ -58,4 +64,5 @@
 ## IMPORTANT LINKS
 
 ```
+https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769
 ```
