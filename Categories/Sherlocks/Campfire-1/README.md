@@ -19,7 +19,7 @@
 
 
 
-> 1ST QUESTION --> ANS: 
+> 1ST QUESTION --> ANS: `2024-05-21 03:18:09`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/56e304d5-e71a-4426-99fc-24238f2d20da)
 
@@ -27,14 +27,18 @@
 5. The easiest way to identify the initial kerberoasting attempt, we need to filter for EventID **4769 (A Kerberos service ticket was requested)**.
 6. Next, check for the service name that is not **krbtgt** or ends with **$** sign (it indicates a workstation).
 7. Also note that the ticket type should be 0x17 along with the failure code must be 0x0.
+8. Upon reviewing every logs, found one log which met our requirements.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bfa58c24-0e76-4deb-abd1-45d621515b59)
 
 
-
-
-> 2ND QUESTION --> ANS: 
+> 2ND QUESTION --> ANS: MSSQLService
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9ea80688-a40a-4ebf-915f-153769ef6ba6)
 
+
+9. Based from the log, seems **MSSQLService** is the targeted service name.
+10. Let's review the previous log, to identify at which workstation this activity occured.
 
 > 3RD QUESTION --> ANS: 
 
