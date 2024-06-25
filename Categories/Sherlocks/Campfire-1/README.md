@@ -53,19 +53,19 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/df4d9acd-c589-427b-8fc8-417f2d7c4976)
 
 
-> 4TH QUESTION --> ANS: 
+> 4TH QUESTION --> ANS: powerview.ps1
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5cdef3c-0f59-4bf7-bb16-cc4945de9920)
 
 
 12. Moving on to the 
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: `2024-05-21 03:16:32`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0c67fe84-19b6-497d-939e-a450b13f2315)
 
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: 
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2e9d6138-f941-4ee0-bc86-f1396c46ae81)
 
