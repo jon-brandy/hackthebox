@@ -58,11 +58,23 @@
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5cdef3c-0f59-4bf7-bb16-cc4945de9920)
 
 
-12. Moving on to the 
+12. Moving on to the powershell event logs. We can identify which powershell script used by the threat actor to enumerate AD objects and hunt for kerberoastable accounts in the network.
+13. Upon further review to the script and searching for variables naming related to AD and it's logic. We can confirm that it is indeed the used script.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/4588cca4-33a8-4b6f-bf6e-c0fedecd93d9)
+
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d5669947-b188-4383-84a7-97e7d35f248b)
+
 
 > 5TH QUESTION --> ANS: `2024-05-21 03:16:32`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0c67fe84-19b6-497d-939e-a450b13f2315)
+
+
+14. Based from our previous identification, the initial execution of the script is at `2024-05-21 03:16:32`
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8cfaf4b4-1a38-424d-ad65-69a58266380d)
 
 
 > 6TH QUESTION --> ANS: 
