@@ -207,7 +207,8 @@ Remember to execute the ssh inside .ssh directory and don't forget to execute ch
 
 27. Reviewing the next activity, it gets executed again at every 30 seconds.
 
-![image](https://github.com/jon-brandy/hackthebox/assets/70703371/98ea3306-5bef-4e79-a979-0d9d8d4f2546)
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8838b0eb-aef1-4842-8156-1b7723aa81e3)
+
 
 
 28. Seems `/etc/update-motd.d/` should be our target by now.
