@@ -8,7 +8,8 @@
 ## Lessons Learned:
 1. Enumeration.
 2. Utilizing dropped backdoor.
-3. Manipulating SSH Motd.
+3. Writing Lua.
+4. Manipulating SSH Motd.
 
 ## STEPS:
 > PORT SCANNING
