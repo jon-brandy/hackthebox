@@ -6,7 +6,9 @@
 
 
 ## Lessons Learned:
-1. Utilizing dropped backdoor.
+1. Enumeration.
+2. Utilizing dropped backdoor.
+3. Manipulating SSH Motd.
 
 ## STEPS:
 > PORT SCANNING
