@@ -9,7 +9,8 @@
 1. Enumeration.
 2. Utilizing dropped backdoor.
 3. Writing Lua.
-4. Manipulating SSH Motd.
+4. Generating ssh-keys.
+5. Manipulating SSH Motd.
 
 ## STEPS:
 > PORT SCANNING
