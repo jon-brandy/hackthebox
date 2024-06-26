@@ -6,7 +6,7 @@
 
 
 ## Lessons Learned:
-1. sda
+1. Utilizing dropped backdoor.
 
 ## STEPS:
 > PORT SCANNING
@@ -74,3 +74,9 @@ Nmap done: 1 IP address (1 host up) scanned in 56.67 seconds
 
 
 10. Indeed it seems the best backdoor 🤲🏻.
+11. Long story short, after traversing to `/home/webadmin`, found a note from sysadmin team.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/051e6bac-d543-485c-8429-a6da4faa6d3b)
+
+12. 
+
