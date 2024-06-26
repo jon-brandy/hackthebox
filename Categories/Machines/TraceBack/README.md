@@ -9,7 +9,7 @@
 1. Enumeration.
 2. Utilizing dropped backdoor.
 3. Writing Lua.
-4. Generating ssh-keys.
+4. Generating ssh-key to get a stable shell.
 5. Manipulating SSH Motd.
 
 ## STEPS:
