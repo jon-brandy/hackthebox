@@ -6,7 +6,7 @@
 
 
 ## Lessons Learned:
-1. sdas
+1. sda
 
 ## STEPS:
 > PORT SCANNING
@@ -40,4 +40,5 @@ Nmap done: 1 IP address (1 host up) scanned in 56.67 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0ed872db-def1-40fd-b05b-f01b2f8d6548)
 
 
-2. 
+2. Seems the webapp is already compromised and the attacker left a backdoor which is accessible he said.
+3. Hence let's execute directory listing using **dirsearch**.
