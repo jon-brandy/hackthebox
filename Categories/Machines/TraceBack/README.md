@@ -199,7 +199,20 @@ Remember to execute the ssh inside .ssh directory and don't forget to execute ch
 
 
 24. Awesome, to gain root, I used **linpeas** to identify misconfigurations or vulns reside in this machine which might help us to gain root.
-25. Also I used **pspy64** to identify processes run without the need for root.
+25. Also I used **pspy64** to identify cron job processes run without the need for root.
+26. Long story short, after reviewing the **pspy64** result, found a process which executed as root user right after I change the shell mode to interactive.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/59361f7d-5dbc-4dcd-a84e-13df3b93bae2)
+
+
+27. Reviewing the next activity, it gets executed again at every 30 seconds.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/98ea3306-5bef-4e79-a979-0d9d8d4f2546)
+
+
+28. Seems `/etc/update-motd.d/` should be our target by now.
+
+
 
 ## IMPORTANT LINKS
 
