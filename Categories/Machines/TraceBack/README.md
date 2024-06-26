@@ -49,4 +49,28 @@ Nmap done: 1 IP address (1 host up) scanned in 56.67 seconds
 
 
 
-6. Traversing on the internet
+6. Traversing on the internet resulting to this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f5d980a2-9a97-4b54-a70e-a82e3600451a)
+
+
+7. Adding **webshell** to our search query, resulting to this:
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/75d799d5-5024-41b6-bf40-3d71becb4ddc)
+
+
+8. The first result, should be our interest.
+
+> GITHUB
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/1384da27-8377-4203-b854-bb513772c9e8)
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e6c49331-c7e6-4672-9fe2-3b2ca7ab052a)
+
+
+9. Enumerating each webshell file, the backdoor dropped is --> `smevk.php`.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/363c04a5-96e9-4972-b799-ee967df3f46e)
+
+
+10. Indeed it seems the best backdoor 🤲🏻.
