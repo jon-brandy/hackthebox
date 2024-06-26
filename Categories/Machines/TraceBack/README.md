@@ -34,3 +34,10 @@ Nmap done: 1 IP address (1 host up) scanned in 56.67 seconds
 ```
 
 1. Based from the nmap results above, seems the machine runs web application at port 80 and opens ssh login at port 22.
+
+> WEB APP
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0ed872db-def1-40fd-b05b-f01b2f8d6548)
+
+
+2. 
