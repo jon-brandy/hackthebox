@@ -89,7 +89,7 @@ Nmap done: 1 IP address (1 host up) scanned in 56.67 seconds
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fd1ac823-a2ee-4330-ad17-afd3a7a4c729)
 
 
-13. This could be used for our privesc method.
+13. This could be used for our lateral movement later.
 14. Great! Anyway let's get more comfy enumeration by getting a reverse shell.
 15. I used simple bash reverse shell:
 
@@ -196,6 +196,10 @@ echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGlvFYfrNpHf4A8gXc+IB+B8xYMYE3ajJkruV4
 ```
 Remember to execute the ssh inside .ssh directory and don't forget to execute chmod 400 to id_rsa file.
 ```
+
+
+24. Awesome, to gain root, I used **linpeas** to identify misconfigurations or vulns reside in this machine which might help us to gain root.
+25. Also I used **pspy64** to identify processes run without the need for root.
 
 ## IMPORTANT LINKS
 
