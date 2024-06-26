@@ -42,3 +42,11 @@ Nmap done: 1 IP address (1 host up) scanned in 56.67 seconds
 
 2. Seems the webapp is already compromised and the attacker left a backdoor which is accessible he said.
 3. Hence let's execute directory listing using **dirsearch**.
+4. However, dirsearch resulting to none. It means the webshell filename is not common.
+5. Reviewing the message shown, resulting to no clue other than searching the `Xh4H` name online.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f7d67e1f-c1d5-4919-b0f7-3617db19484b)
+
+
+
+6. Traversing on the internet
