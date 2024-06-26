@@ -78,5 +78,10 @@ Nmap done: 1 IP address (1 host up) scanned in 56.67 seconds
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/051e6bac-d543-485c-8429-a6da4faa6d3b)
 
-12. 
+12. Reviewing the bash history file, found that a binary named **luvit** seems inside the sudo permission.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/fd1ac823-a2ee-4330-ad17-afd3a7a4c729)
+
+
+13. This could be used for our privesc method. 
 
