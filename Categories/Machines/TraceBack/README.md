@@ -73,6 +73,8 @@ Nmap done: 1 IP address (1 host up) scanned in 56.67 seconds
 
 9. Enumerating each webshell file, the backdoor dropped is --> `smevk.php`.
 
+> Enter creds --> `admin:admin` (shown at the source code).
+
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/363c04a5-96e9-4972-b799-ee967df3f46e)
 
 
