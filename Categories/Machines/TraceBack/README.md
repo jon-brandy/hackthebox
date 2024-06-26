@@ -205,7 +205,7 @@ Remember to execute the ssh inside .ssh directory and don't forget to execute ch
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/59361f7d-5dbc-4dcd-a84e-13df3b93bae2)
 
 
-27. Reviewing the next activity, it gets executed again at every 30 seconds.
+27. Reviewing the next activity, turns out the process is executed at every 30 seconds.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/8838b0eb-aef1-4842-8156-1b7723aa81e3)
 
@@ -213,10 +213,64 @@ Remember to execute the ssh inside .ssh directory and don't forget to execute ch
 
 28. Seems `/etc/update-motd.d/` should be our target by now.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/553d4ec0-0072-44f8-ad3c-09fe1d2bc35a)
+
+
+29. Noticed that sysadmin is group owner of all the files inside it and each files is executed as **root**.
+30. Amazing! We can gained root easily by manipulating the one of the files inside it, then ssh again later on to trigger the cronjob. 
+
+#### NOTES:
+
+```
+So what is MOTD?
+- Basicly Message of The Day or MOTD is a message prompted at the beginning of the shell login.
+
+EX:
+
+┌──(brandy㉿bread-yolk)-[~/.ssh]
+└─$ ssh -i sysadmin sysadmin@traceback.htb
+#################################
+-------- OWNED BY XH4H  ---------
+- I guess stuff could have been configured better ^^ -
+#################################
+
+Welcome to Xh4H land 
+
+
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+Last login: Wed Jun 26 01:16:00 2024 from 10.10.14.4
+$ bash -i
+sysadmin@traceback:~$
+```
+
+31. Reviewing the **00-header** we can see clearly the prompted message.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/b7c29344-3a56-4b0e-8290-36805582f0c8)
+
+
+32. Okay so there are actually several methods can be done to obtain the root flag. Either you want to PWN the root user by uploading a reverse shell payload, upload your root ssh keys OR even by simply cat the flag at the MOTD.
+33. I am using the simplest method.
+34. Simply run `echo "cat /root/root.txt" >> 00-header`.
+35. Then quickly re-log to sysadmin.
+
+> RESULT
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/9e7f41ae-afdb-4804-a7ac-4d688e0641ea)
+
+
+## ROOT FLAG
+
+```
+92145f05dcaf9ce7817625dcd1e34d73
+```
+
+36. We've pwned it! Well not fullpwn, but still doable if you want.
 
 
 ## IMPORTANT LINKS
 
 ```
-
+https://man7.org/linux/man-pages/man5/motd.5.html
 ```
