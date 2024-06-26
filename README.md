@@ -30,7 +30,7 @@
 |15. |[Analytics](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Analytics/README.md)|[Soccer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Soccer/README.md)|[Timelapse](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Timelapse/README.md)|
 |16. |[Devvortex](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Devvortex/README.md)|[Return](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Return/README.md)|[Irked](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Irked/README.md)|
 |17. |[Perfection](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Perfection/README.md)|[Headless](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Headless/README.md)|[Wifinetic](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Wifinetic/README.md)|
-|18. |[OpenAdmin](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/OpenAdmin/README.md)|
+|18. |[OpenAdmin](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/OpenAdmin/README.md)|[TraceBack](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/TraceBack/README.md)||
 
 
 </details>
