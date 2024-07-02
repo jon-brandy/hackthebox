@@ -1,6 +1,9 @@
 # GamePwn
 > Write-up author: jon-brandy
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/923eaa19-d59b-4925-8f3b-7d4426697d16)
+
+
 ## Lessons Learned:
 1. Utilizing cheat engine to manipulate values in game's memory at runtime.
 2. Identifying which block address hold the cube values.
