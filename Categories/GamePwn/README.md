@@ -3,6 +3,7 @@
 
 ## Lessons Learned:
 1. Utilizing cheat engine to manipulate values in game's memory at runtime.
+2. Identifying which block address hold the cube values.
 
 ## DESCRIPTION:
 Gotta collect them all.
@@ -51,8 +52,9 @@ Gotta collect them all.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bee67680-940c-49e6-a140-6133de33d467)
 
 
-11. Now select all these addresses, then drag below.
-12. Next, change the value to 20. Noticed the in-game value is also changed along with other memory segment value.
+11. Noticed all these 3 addressed hold the same value for previous and current. This should indicate indeed the correct address which hold our cube value.
+12. Now select all these addresses, then drag below.
+13. Next, change the value to 20. Noticed the in-game value is also changed along with other memory segment value.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e1d5897a-a4a7-45a9-8cc7-07ea63bec1a6)
 
