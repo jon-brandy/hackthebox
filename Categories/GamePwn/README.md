@@ -46,6 +46,25 @@ Gotta collect them all.
 
 
 9. Still to many, the objective is to gained small count so we can easily check for the correct memory to manipulate.
-10. Long story short, found 4 counts at cube 4.
+10. Long story short, found 3 addresses at cube 4.
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bee67680-940c-49e6-a140-6133de33d467)
+
+
+11. Now select all these addresses, then drag below.
+12. Next, change the value to 20. Noticed the in-game value is also changed along with other memory segment value.
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/e1d5897a-a4a7-45a9-8cc7-07ea63bec1a6)
+
+
+13. We've pwned it!
+
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/20fe9fee-d177-417b-893c-e864495b9591)
+
+
+## FLAG
+
+```
+HTB{CU83_M4DN355_UNM4DD3N3D}
+```
 
