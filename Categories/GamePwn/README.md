@@ -42,4 +42,10 @@ Gotta collect them all.
 
 > RESULT
 
+![image](https://github.com/jon-brandy/hackthebox/assets/70703371/7dfb6a5c-b5f8-47cd-9ac5-a9d0535a00d2)
+
+
+9. Still to many, the objective is to gained small count so we can easily check for the correct memory to manipulate.
+10. Long story short, found 4 counts at cube 4.
+
 
