@@ -2,7 +2,7 @@
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
-1. sadsa
+1. Utilizing cheat engine to manipulate values in game's memory at runtime.
 
 ## DESCRIPTION:
 Gotta collect them all.
@@ -18,4 +18,6 @@ Gotta collect them all.
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/0ba25bde-a1b2-4cad-b48c-1f5e788d20b8)
 
 
-3. Interesting. 
+3. Interesting. Actually we can use cheat engine to manipulate the cube collected values.
+4. BUT, we need to identify which memory holds our cube value.
+5. Let's capture 
