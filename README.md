@@ -100,6 +100,19 @@
 
 </details>
 
+
+<details>
+<br>
+<summary> GamePwn </summary>
+
+
+|No.|Column 1|Column 2|Column 3|
+|:-:|:-------:|:-------:|:-------:|
+|1. |[CubeMadness1](https://github.com/jon-brandy/hackthebox/blob/main/Categories/GamePwn/CubeMadness1/README.md)|||
+
+</details>
+
+
 <details>
 <br>
 <summary> Web </summary>
