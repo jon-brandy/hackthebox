@@ -32,7 +32,12 @@ mv rootfs.cpio.gz.backup rootfs.cpio.gz
 
 
 3. Great! Noticed that our kernel module name is **mysu.ko**.
-4. Let's decompiled it using ghidra to review the code.
+4. Upon decompiled the binary using ghidra, seems there are only 3 functions to interact with the module.
+
+![image](https://github.com/user-attachments/assets/aa40a641-8260-4bdc-a451-1b6ac4be9226)
+
+
+5. 
 
 ## FLAG
 
