@@ -54,7 +54,13 @@ mv rootfs.cpio.gz.backup rootfs.cpio.gz
 
 > REVIEWING dav_write()
 
+![image](https://github.com/user-attachments/assets/e3e5c02b-7007-4e10-97ad-81252c141f4f)
 
+
+8. If you noticed, `dav_write()` behavior is set to be similiar to write@plt function.
+9. **param2** is our content, **param3** is the size of our content, and **param1** performed as file descriptor (fd).
+10. If the size of our content is less than 8, then it the binary is terminated.
+11. Next, it check whether the contents of **param2** are equal to a global var named **users**.
 
 ## FLAG
 
