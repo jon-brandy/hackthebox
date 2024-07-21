@@ -71,7 +71,13 @@ mv rootfs.cpio.gz.backup rootfs.cpio.gz
 ![image](https://github.com/user-attachments/assets/454e9ec8-2850-439e-b314-7ecfa1689709)
 
 
-14. We can further check that by running **readelf** to **mysu.ko**.
+14. We can further check that by running **readelf** to **mysu.ko** and check for the `.data` section.
+
+#### NOTES:
+
+```
+Every initialized global variable that is not 0, is stored at .DATA_ADDRESS section.
+```
 
 > READELF
 
