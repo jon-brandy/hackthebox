@@ -92,7 +92,7 @@ Every initialized global variable that is not 0, is stored at .DATA_ADDRESS sect
 
 ### CONCERN
 
-18. The only concern for race condition in operating system is due to the lack of **Mutual Exclusion (Mutex)** and **Binary Semaphore**.
+18. The only concern for race condition in operating system is due to the absence of **Mutual Exclusion (Mutex)** or **Binary Semaphore**.
 
 ```
 [MUTEX]
@@ -103,6 +103,11 @@ or process can access a resource at a time.
 - Is a signaling mechanism that can have only 2 values, 0 and 1.
 It is similar to mutex but has differences in usage and behavior.
 ```
+
+19. Upon reviewing at the **init_module()** function, **mutex** or **semaphore** both are absence. Hence we could gain **Race Condition** to change our UID to root.
+
+![image](https://github.com/user-attachments/assets/c6df3ff9-5874-4789-b50d-f23fa3140547)
+
 
 ## FLAG
 
