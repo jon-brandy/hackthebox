@@ -57,7 +57,7 @@ mv rootfs.cpio.gz.backup rootfs.cpio.gz
 ![image](https://github.com/user-attachments/assets/e3e5c02b-7007-4e10-97ad-81252c141f4f)
 
 
-8. If you noticed, `dav_write()` behavior is set to be similiar to write@plt function.
+8. If you noticed, `dav_write()` behavior is set to be similar to write@plt function.
 9. **param2** is our content, **param3** is the size of our content, and **param1** performed as file descriptor (fd).
 10. If the size of our content is less than 8, then it the binary is terminated.
 11. Next, it check whether the contents of **param2** are equal to a global var named **users**.
@@ -89,6 +89,20 @@ Every initialized global variable that is not 0, is stored at .DATA_ADDRESS sect
 15. Anyway, the vuln is at the condition where it taking again our input data from **param2**. It could introduce as **Race Condition**.
 16. So when the check is passed at the beginning and we jump to label **LAB_0010017e**, we change our UID to 0 (root). Afterward the module shall perform `commit_creds(prepare_creds(0))`.
 17. This type of attack in kernel exploitation is called **Double Fetch**.
+
+### CONCERN
+
+18. The only concern for race condition in operating system is due to the lack of **Mutual Exclusion (Mutex)** and **Binary Semaphore**.
+
+```
+[MUTEX]
+- Is a locking mechanism used to ensure that only one thread
+or process can access a resource at a time.
+
+[BINARY SEMAPHORE]
+- Is a signaling mechanism that can have only 2 values, 0 and 1.
+It is similar to mutex but has differences in usage and behavior.
+```
 
 ## FLAG
 
