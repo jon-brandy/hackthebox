@@ -62,6 +62,21 @@ mv rootfs.cpio.gz.backup rootfs.cpio.gz
 10. If the size of our content is less than 8, then it the binary is terminated.
 11. Next, it check whether the contents of **param2** are equal to a global var named **users**.
 
+![image](https://github.com/user-attachments/assets/625f8172-eb32-47ec-89d0-9fff39189471)
+
+
+12. Afterwards, the module takes the next bytes of our input data (param2 + 1) and calc the hash. If the hash match to 0x0, then we jumped to label **LAB_0010017E**. This label uses functio `prepare_creds` and `commit_creds` to switch user. Our intention is to gained root by passing the 0 to it.
+13. This is our current privilege.
+
+![image](https://github.com/user-attachments/assets/454e9ec8-2850-439e-b314-7ecfa1689709)
+
+
+14. We can further check that by running **readelf** to **mysu.ko**.
+
+> READELF
+
+
+
 ## FLAG
 
 ```
