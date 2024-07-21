@@ -1,6 +1,9 @@
 # Kernel Adventures: Part 1
 > Write-up author: jon-brandy
 
+![image](https://github.com/user-attachments/assets/77bfbef0-42b4-4a26-8ce5-e3865ff54055)
+
+
 ## Lessons Learned:
 - Source code review.
 - Exploiting race condition vuln.
@@ -9,9 +12,6 @@
 
 ## DESCRIPTION:
 SUID binaries are too vulnerable. So I decided to implement su in the Kernel.
-
-## HINT:
-- NONE
 
 ## STEPS:
 1. In this challenge we're given the kernel environment setup.
