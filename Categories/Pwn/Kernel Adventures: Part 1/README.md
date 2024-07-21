@@ -86,6 +86,10 @@ Every initialized global variable that is not 0, is stored at .DATA_ADDRESS sect
 ![image](https://github.com/user-attachments/assets/e0013d4b-a53c-4ca9-b571-18976916e940)
 
 
+15. Anyway, the vuln is at the condition where it taking again our input data from **param2**. It could introduce as **Race Condition**.
+16. So when the check is passed at the beginning and we jump to label **LAB_0010017e**, we change our UID to 0 (root). Afterward the module shall perform `commit_creds(prepare_creds(0))`.
+17. This type of attack in kernel exploitation is called **Double Fetch**.
+
 ## FLAG
 
 ```
