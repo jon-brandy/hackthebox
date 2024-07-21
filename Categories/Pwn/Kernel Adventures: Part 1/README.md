@@ -16,6 +16,10 @@ SUID binaries are too vulnerable. So I decided to implement su in the Kernel.
 ## STEPS:
 1. In this challenge we're given the kernel environment setup.
 
+![image](https://github.com/user-attachments/assets/65122e1a-24fb-4dbf-bcbb-fcd6d72dc17f)
+
+
+2. 
 
 ## FLAG
 
