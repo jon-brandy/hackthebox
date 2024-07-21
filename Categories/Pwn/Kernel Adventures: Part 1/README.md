@@ -18,6 +18,8 @@ SUID binaries are too vulnerable. So I decided to implement su in the Kernel.
 
 ![image](https://github.com/user-attachments/assets/65122e1a-24fb-4dbf-bcbb-fcd6d72dc17f)
 
+![image](https://github.com/user-attachments/assets/e56eab40-ecca-4d6e-8ed1-85e50bdfdfbe)
+
 
 2. Let's extract the Linux file system.
 
