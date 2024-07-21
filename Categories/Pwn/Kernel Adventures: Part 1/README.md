@@ -37,7 +37,24 @@ mv rootfs.cpio.gz.backup rootfs.cpio.gz
 ![image](https://github.com/user-attachments/assets/aa40a641-8260-4bdc-a451-1b6ac4be9226)
 
 
-5. 
+> REVIEWING dav_open()
+
+![image](https://github.com/user-attachments/assets/fdd9ac7b-0ba2-49e3-968c-a675a13e1c73)
+
+
+5. Function `dav_open()` shall not be our interest here, it just print "opened" once it's called.
+
+> REVIEWING dav_read()
+
+![image](https://github.com/user-attachments/assets/fca2f4df-229f-4b1c-a837-9a4c1b7ff5ef)
+
+
+6. Function `dav_read()` reads up to 32 bytes of data from source **&users**, then copies it to a buffer named **param_2**.
+7. If the bytes is bigger than 32, it then returns 32. Otherwise, it just returns the number of bytes copied.
+
+> REVIEWING dav_write()
+
+
 
 ## FLAG
 
