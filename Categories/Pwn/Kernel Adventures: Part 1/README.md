@@ -81,6 +81,7 @@ Every initialized global variable that is not 0, is stored at .DATA_ADDRESS sect
 
 > READELF
 
+![image](https://github.com/user-attachments/assets/2a22de3d-3970-4f98-a8e6-e72ea29cc1e7)
 
 
 ## FLAG
