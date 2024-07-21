@@ -21,7 +21,7 @@ SUID binaries are too vulnerable. So I decided to implement su in the Kernel.
 
 2. Let's extract the Linux file system.
 
-```
+```sh
 cp rootfs.cpio.gz rootfs.cpio.gz.backup
 gunzip rootfs.cpio.gz
 sudo cpio -i < rootfs.cpio
