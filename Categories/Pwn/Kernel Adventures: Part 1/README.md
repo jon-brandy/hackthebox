@@ -54,7 +54,7 @@ mv rootfs.cpio.gz.backup rootfs.cpio.gz
 
 > REVIEWING dav_write()
 
-![image](https://github.com/user-attachments/assets/e3e5c02b-7007-4e10-97ad-81252c141f4f)
+![image](https://github.com/user-attachments/assets/42a3f23c-1177-41f2-be40-eade73091c68)
 
 
 8. If you noticed, `dav_write()` behavior is set to be similar to write@plt function.
