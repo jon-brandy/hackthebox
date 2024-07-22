@@ -220,7 +220,15 @@ int main() {
 
 > RESULT
 
+![image](https://github.com/user-attachments/assets/ac41eaf8-428e-4978-af64-1dfa28469e0a)
 
+
+29. Nice! Now let's craft our exploit.
+30. Remembering we're going to abuse a **Double Fetch**, hence using 2 threads shall required to win the race.
+31. One thread is used to continuously changing our UID to 0 in our input data.
+32. The other one is used to continuously changing our UID to 1000 in our input data.
+33. There should be a moment where, the module checks our UID (at this rate is 1000), then we passed. Afterwards our UID changed to 0 before the module fetch the user input data again to call `commit_creds(prepare_creds())`.
+34. Finally. once our UID is changed to 0, we stop all running threads.
 
 ## FLAG
 
