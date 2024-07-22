@@ -190,14 +190,14 @@ if solver.check() == sat:
 
 unsigned int hash(char *string) {
   int i;
-  unsigned int aux;
+  unsigned int uvar1;
   unsigned int res;
 
   res = 0;
 
   for (i = 0; i < strlen(string); i++) {  
-    aux = (res + string[i]) * 0x401;
-    res = aux ^ aux >> 6 ^ string[i];
+    uvar1 = (res + string[i]) * 0x401;
+    res = uvar1 ^ uvar1 >> 6 ^ string[i];
   }
 
   return res;
