@@ -111,6 +111,14 @@ It is similar to mutex but has differences in usage and behavior.
 ![image](https://github.com/user-attachments/assets/c6df3ff9-5874-4789-b50d-f23fa3140547)
 
 
+20. Great! Seems we found the bug now.
+21. First, let's get the expected hash to find a valid password. Execute `run.sh` file to start the kernel emulation.
+22. To get the expected hash, run `dd` from `/dev/mysu` to extract the users variable we saw before.
+
+> RESULT
+
+
+
 ## FLAG
 
 ```
