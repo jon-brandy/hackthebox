@@ -30,7 +30,7 @@
 |15. |[Analytics](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Analytics/README.md)|[Soccer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Soccer/README.md)|[Timelapse](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Timelapse/README.md)|
 |16. |[Devvortex](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Devvortex/README.md)|[Return](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Return/README.md)|[Irked](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Irked/README.md)|
 |17. |[Perfection](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Perfection/README.md)|[Headless](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Headless/README.md)|[Wifinetic](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/Wifinetic/README.md)|
-|18. |[OpenAdmin](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/OpenAdmin/README.md)|[TraceBack](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/TraceBack/README.md)|[Kernel Adventures: Part 1](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Kernel%20Adventures%3A%20Part%201/README.md)|
+|18. |[OpenAdmin](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/OpenAdmin/README.md)|[TraceBack](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Machines/TraceBack/README.md)||
 
 
 </details>
@@ -93,6 +93,7 @@
 |11. |[Bon-nie-appetit](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Bon-nie-appetit/README.md)|[Great Old Talisman](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Great%20Old%20Talisman/README.md)|[Spellbook](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Spellbook/README.md)|
 |12. |[Oxidized ROP](https://github.com/jon-brandy/hackthebox/tree/main/Categories/Pwn/Oxidized%20ROP)|[Regularity](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Regularity/README.md)|[Writing on the Wall](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Writing%20on%20the%20Wall/README.md)|
 |13. |[Execute](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Execute/README.md)|[Rocket Blaster XXX](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Rocket%20Blaster%20XXX/README.md)|[Sound of Silence](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sound%20of%20Silence/README.md)|
+|14. |[Kernel Adventures: Part 1](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Kernel%20Adventures%3A%20Part%201/README.md)||
 
 
 
