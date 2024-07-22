@@ -141,7 +141,7 @@ dd if=/dev/mysu count=4 | xxd
 
 
 27. Since the valid password length is 8 bytes, meaning **2 to the power of 68** and very time consuming because the only way to get the valid pass is by bruteforcing it.
-28. To speed up the process, we can use **angr** or **z3** library in python. But in this writeup I prefer to use **z3**. Also we need to compile the C hash function so we can validate whether our password is correct.
+28. To speed up the process, we can use **angr** or **z3** library in python. But in this writeup I will show the result for using both. Also we need to compile the C hash function so we can validate whether our password is correct.
 
 > SCRIPT TO BRUTEFORCE --> using Z3
 
@@ -221,6 +221,37 @@ int main() {
 > RESULT
 
 ![image](https://github.com/user-attachments/assets/ac41eaf8-428e-4978-af64-1dfa28469e0a)
+
+> WITH ANGR
+
+```py
+from pwn import *
+import os 
+import angr
+
+exe = angr.Project('./hash-bin')
+
+# create the initial state of the program (at the entry point)
+init_state = exe.factory.entry_state()
+
+# create a simulation manager to manage the exploration of states
+sim_manager = exe.factory.simulation_manager(init_state)
+
+# explore the state space to find a state where "Yes" is printed to fd 1 (stdout)
+sim_manager.explore(find=lambda state: b'Yes\n' in state.posix.dumps(1))
+
+if sim_manager.found:
+    found_state = sim_manager.found[0]
+    pass_bytes = found_state.posix.dumps(0) # extract input
+
+    # conver the input bytes to a list of hex strings
+    pass_hex = (hex(byte) for byte in pass_bytes)
+    print(', '.join(pass_hex))
+```
+
+> RESULT WITH ANGR
+
+![image](https://github.com/user-attachments/assets/0cbeceaf-d378-4b83-b650-f5414d0467b6)
 
 
 29. Nice! Now let's craft our exploit.
