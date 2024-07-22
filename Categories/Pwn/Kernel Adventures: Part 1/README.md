@@ -168,7 +168,7 @@ solver.add(result == target_hash)
 # if constraint is satisfiable
 if solver.check() == sat:
     model = solver.model()
-    log.success(f'[+] Correct hash found')
+    log.success(f'Correct hash found')
     # print result
     print(bytes(model[byte].as_long() for byte in byte_array))
 ```
@@ -229,6 +229,12 @@ int main() {
 32. The other one is used to continuously changing our UID to 1000 in our input data.
 33. There should be a moment where, the module checks our UID (at this rate is 1000), then we passed. Afterwards our UID changed to 0 before the module fetch the user input data again to call `commit_creds(prepare_creds())`.
 34. Finally. once our UID is changed to 0, we stop all running threads.
+
+> EXPLOIT C CODE
+
+```c
+
+```
 
 ## FLAG
 
