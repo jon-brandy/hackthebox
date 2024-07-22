@@ -20,6 +20,6 @@ solver.add(result == target_hash)
 # if constraint is satisfiable
 if solver.check() == sat:
     model = solver.model()
-    log.success(f'[+] Correct hash found')
+    log.success(f'Correct hash found')
     # print result
     print(bytes(model[byte].as_long() for byte in byte_array))
