@@ -356,10 +356,22 @@ chmod +x exploit
 
 > RESULT
 
+![image](https://github.com/user-attachments/assets/b31fe471-c432-489e-b2fd-d324a27f3e7d)
 
+
+![image](https://github.com/user-attachments/assets/5d357c6f-c60e-4f39-84cc-4369d732bae2)
+
+
+38. We've pwned it!!
 
 ## FLAG
 
 ```
 HTB{C0ngr4ts_y0u_3xpl0it3d_A_D0uBlE-FeTcH}
+```
+
+## IMPORTANT LINKS
+
+```
+https://n132.github.io/2022/05/19/Introduction-of-Kernel-Pwn-Double-Fetch.html
 ```
