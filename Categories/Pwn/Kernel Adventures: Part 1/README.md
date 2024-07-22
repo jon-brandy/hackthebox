@@ -141,13 +141,86 @@ dd if=/dev/mysu count=4 | xxd
 
 
 27. Since the valid password length is 8 bytes, meaning **2 to the power of 68** and very time consuming because the only way to get the valid pass is by bruteforcing it.
-28. To speed up the process, we can use **angr** library in python.
+28. To speed up the process, we can use **angr** or **z3** library in python. But in this writeup I prefer to use **z3**. Also we need to compile the C hash function so we can validate whether our password is correct.
 
-> SCRIPT TO BRUTEFORCE
+> SCRIPT TO BRUTEFORCE --> using Z3
 
 ```py
+from pwn import *
+import os
+from z3 import *
+
+result = 0
+target_hash = 0x03319f75
+byte_array = [BitVec(f'byte index {i}', 8) for i in range(8)]
+
+for byte in byte_array:
+    extended_byte = SignExt(24, byte)
+    intermediate_res = (result + extended_byte) * 0x401 # 1025
+    result = intermediate_res ^ LShR(intermediate_res, 6) ^ extended_byte
+
+# Create a Z3 solver instance
+solver = Solver()
+
+# Constraint to solver, that the calc hash must equal to targ hash.
+solver.add(result == target_hash)
+
+# if constraint is satisfiable
+if solver.check() == sat:
+    model = solver.model()
+    log.success(f'[+] Correct hash found')
+    # print result
+    print(bytes(model[byte].as_long() for byte in byte_array))
+```
+
+#### NOTES:
 
 ```
+1. Using SignExt because char type in C is signed.
+2. Using LShR to perform logical bit-shift.
+```
+
+> THE C SOURCE
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+unsigned int hash(char *string) {
+  int i;
+  unsigned int aux;
+  unsigned int res;
+
+  res = 0;
+
+  for (i = 0; i < strlen(string); i++) {  
+    aux = (res + string[i]) * 0x401;
+    res = aux ^ aux >> 6 ^ string[i];
+  }
+
+  return res;
+}
+
+int main() {
+  char password[8];
+  scanf("%s", password);
+  getchar();
+
+  if (hash(password) == 0x03319f75) {
+    puts("Yes");
+  } else {
+    puts("Nope");
+  }
+
+  return 0;
+}
+```
+
+> RESULT
+
+
 
 ## FLAG
 
