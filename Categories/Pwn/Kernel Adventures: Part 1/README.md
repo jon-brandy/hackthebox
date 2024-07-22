@@ -117,6 +117,19 @@ It is similar to mutex but has differences in usage and behavior.
 
 > RESULT
 
+```
+dd if=/dev/mysu count=4 | xxd
+```
+
+![image](https://github.com/user-attachments/assets/21cd47fa-f18d-44e3-bc92-9991ee417e88)
+
+
+23. Well, if you remembered the notes.txt file at the beginning. It states that the password hashes is removed. But it should not be 0.
+24. Let's check at the remote server.
+
+> REMOTE SERVER
+
+
 
 
 ## FLAG
