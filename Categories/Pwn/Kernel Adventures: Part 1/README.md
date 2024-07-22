@@ -121,7 +121,7 @@ It is similar to mutex but has differences in usage and behavior.
 dd if=/dev/mysu count=4 | xxd
 ```
 
-![image](https://github.com/user-attachments/assets/21cd47fa-f18d-44e3-bc92-9991ee417e88)
+![image](https://github.com/user-attachments/assets/01697716-08dc-45dc-acaa-6bf0afd4f6e0)
 
 
 23. Well, if you remembered the notes.txt file at the beginning. It states that the password hashes is removed. But it should not be 0.
@@ -129,8 +129,25 @@ dd if=/dev/mysu count=4 | xxd
 
 > REMOTE SERVER
 
+![image](https://github.com/user-attachments/assets/caca02a1-9790-4089-b832-a3eb04cf3ce8)
 
 
+25. So the expected hash in hex format is `0x03319f75`.
+26. To obtain this hash, we have to use the same hashing function found in the **mysu.ko**.
+
+> The hashing function
+
+![image](https://github.com/user-attachments/assets/708522f9-f7a7-451b-ac19-bcfbd66a8484)
+
+
+27. Since the valid password length is 8 bytes, meaning **2 to the power of 68** and very time consuming because the only way to get the valid pass is by bruteforcing it.
+28. To speed up the process, we can use **angr** library in python.
+
+> SCRIPT TO BRUTEFORCE
+
+```py
+
+```
 
 ## FLAG
 
