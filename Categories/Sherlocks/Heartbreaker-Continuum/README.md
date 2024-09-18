@@ -80,10 +80,18 @@ However, this does not include data segments (global / static variables), resour
 
 11. Great! Now we know the size of code is **38400**.
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: newILY.ps1
 
 ![image](https://github.com/user-attachments/assets/a9a862e2-ff53-483f-b73c-678647e3bb86)
 
+
+12. Interesting! It states that the binary may have undergone a conversion process and based on the question, the conversion act for the **FILENAME**.
+13. Actually there are simple methods to identify it, by checking the details tab, go to the **Dot Net Assembly**, and check the **Manifest Resource** field. 
+
+![image](https://github.com/user-attachments/assets/f4ae956a-b34c-4aa2-82f2-5c5df0c54752)
+
+
+14. Another method is to use **PEStudio** and check for the resource.
 
 > 5TH QUESTION --> ANS:
 
