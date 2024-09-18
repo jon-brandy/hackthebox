@@ -21,7 +21,7 @@
 
 3. Based from the evidence above, the binary is identified as a **PE32 executable** and likely written in .NET supported language such as **C#** or **VB.NET**.
 
-> 1ST QUESTION --> ANS: v
+> 1ST QUESTION --> ANS: 12daa34111bb54b3dcbad42305663e44e7e6c3842f015cccbbe6564d9dfd3ea3
 
 ![image](https://github.com/user-attachments/assets/6bc570a4-4c53-4107-982d-0fa71a470c84)
 
@@ -41,7 +41,7 @@
 6. Both **Virus Total** and **Kaspersky OpenTip** shown that the file is indeed a malware categorized as **Trojan**.
 7. Also both states that the binary acts as a downloader.
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: `2024-03-13 10:38:06`
 
 ![image](https://github.com/user-attachments/assets/d781763c-e54a-4170-b887-ec2893e983b4)
 
