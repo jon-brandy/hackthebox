@@ -27,9 +27,25 @@
 
 
 > 2ND QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/d781763c-e54a-4170-b887-ec2893e983b4)
+
+
 > 3RD QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/b0d6fc07-bb8a-4f80-bf18-d2acd71a92af)
+
+
 > 4TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/a9a862e2-ff53-483f-b73c-678647e3bb86)
+
+
 > 5TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/e59a999e-ea14-4b40-a8b6-868bee05ce2e)
+
+
 > 6TH QUESTION --> ANS:
 > 7TH QUESTION --> ANS:
 > 8TH QUESTION --> ANS:
