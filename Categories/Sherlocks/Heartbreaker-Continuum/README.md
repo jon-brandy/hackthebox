@@ -4,8 +4,8 @@
 ![image](https://github.com/user-attachments/assets/7fe97ce5-0ab7-43a6-97ef-2e981e1c373a)
 
 ## Lessons Learned:
-1. Using **PEStudio** to perform static malware analysis.
-2. Using threat intelligence tool to identify
+1. Using **PEStudio** and **Ghidra** to perform static malware analysis.
+2. Using threat intelligence tool to identify conversion filename and file creation time.
 
 ## SCENARIO:
 
@@ -92,6 +92,11 @@ However, this does not include data segments (global / static variables), resour
 
 
 14. Another method is to use **PEStudio** and check for the resource.
+
+![image](https://github.com/user-attachments/assets/be60e120-826a-498f-8a55-570c45aa096b)
+
+
+15. As you can see, both states the same filename.
 
 > 5TH QUESTION --> ANS:
 
