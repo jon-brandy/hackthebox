@@ -57,9 +57,24 @@
 
 
 > 8TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/46556a69-7054-4493-a6f6-d9aa3d7ebe4a)
+
+
 > 9TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/0c77c419-9648-427e-9826-cb5329987c72)
+
+
 > 10TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/93479846-d902-4bdb-bd33-bbd2e385a3fd)
+
+
 > 11TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/8429c794-7bf1-4e2c-9426-3bb9264113e2)
+
 
 ## IMPORTANT LINKS:
 
