@@ -4,8 +4,10 @@
 ![image](https://github.com/user-attachments/assets/7fe97ce5-0ab7-43a6-97ef-2e981e1c373a)
 
 ## Lessons Learned:
-1. Using **PEStudio** and **Ghidra** to perform static malware analysis.
+1. Using **PEStudio** and **Ghidra** to identify size of code bytes.
 2. Using threat intelligence tool to identify conversion filename and file creation time.
+3. Using hexeditor to identify the obfuscated strings offset.
+4. 
 
 ## SCENARIO:
 
