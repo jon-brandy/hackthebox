@@ -5,7 +5,7 @@
 
 ## Lessons Learned:
 1. Using **PEStudio** to perform static malware analysis.
-2. 
+2. Using threat intelligence tool to identify
 
 ## SCENARIO:
 
