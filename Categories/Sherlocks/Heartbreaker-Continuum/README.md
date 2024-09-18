@@ -4,7 +4,8 @@
 ![image](https://github.com/user-attachments/assets/7fe97ce5-0ab7-43a6-97ef-2e981e1c373a)
 
 ## Lessons Learned:
-1. sada
+1. Using **PEStudio** to perform static malware analysis.
+2. 
 
 ## SCENARIO:
 
@@ -13,7 +14,28 @@
 ## STEPS:
 1. In this investigation case, we're tasked to reverse engineer a malicious executable file which originated from a link within an email identified as phising.
 2. Once we gained valuable insights into the scope of the data breach, we're asked to provide the client with a comprehensive report detailing the attack methodology, potential data at risk, and a recommended mitigation steps (which we won't do in this writeup).
-3. 
+
+> Basic File Check
+
+![image](https://github.com/user-attachments/assets/43ef02c5-91c7-44fe-ba46-cca1cba66ac9)
+
+3. Based from the evidence above, the binary is identified as a **PE32 executable** and likely written in .NET supported language such as **C#** or **VB.NET**.
+
+> 1ST QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/6bc570a4-4c53-4107-982d-0fa71a470c84)
+
+
+> 2ND QUESTION --> ANS:
+> 3RD QUESTION --> ANS:
+> 4TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS:
+> 7TH QUESTION --> ANS:
+> 8TH QUESTION --> ANS:
+> 9TH QUESTION --> ANS:
+> 10TH QUESTION --> ANS:
+> 11TH QUESTION --> ANS:
 
 ## IMPORTANT LINKS:
 
