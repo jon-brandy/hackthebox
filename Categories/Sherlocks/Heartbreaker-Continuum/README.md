@@ -98,10 +98,23 @@ However, this does not include data segments (global / static variables), resour
 
 15. As you can see, both states the same filename.
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: 2c74
 
 ![image](https://github.com/user-attachments/assets/e59a999e-ea14-4b40-a8b6-868bee05ce2e)
 
+
+16. Next, upon execute strings to identify readable strings from the binary. Found a what looks like a base64 encoded text.
+17. Also the text later on decoded and an IEX is performed to naming an alias named **ilY**.
+
+![image](https://github.com/user-attachments/assets/a0e5a96e-49dc-4e34-ba67-aa25214c6f61)
+
+
+18. Interesting! Indeed the malware is using powershell script then, exactly like what we've identified for the original filename.
+19. To identify the offset of which this obfuscated text, I used hexeditor and run **grep** for the initiliazed variable.
+
+![image](https://github.com/user-attachments/assets/ff2895d2-a3dd-4256-9d43-8d86369d69ab)
+
+20. Nice, we identified the offset!
 
 > 6TH QUESTION --> ANS:
 
