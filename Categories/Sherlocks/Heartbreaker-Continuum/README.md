@@ -47,7 +47,15 @@
 
 
 > 6TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/02e79b45-0932-40c9-b0e3-5ba047b40201)
+
+
 > 7TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/3a676649-f8e7-43f1-a61e-a4d16d8b3e54)
+
+
 > 8TH QUESTION --> ANS:
 > 9TH QUESTION --> ANS:
 > 10TH QUESTION --> ANS:
