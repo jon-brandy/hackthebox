@@ -80,6 +80,12 @@ However, this does not include data segments (global / static variables), resour
 ![image](https://github.com/user-attachments/assets/67ddcd8e-d5c6-433a-976a-cd93f47ed2e3)
 
 
+> Another method --> simply check the **sections** in virus total under Details tab
+
+
+![image](https://github.com/user-attachments/assets/f876a3e2-dd21-4499-82ad-9d2e3d0ac52d)
+
+
 11. Great! Now we know the size of code is **38400**.
 
 > 4TH QUESTION --> ANS: newILY.ps1
@@ -100,7 +106,7 @@ However, this does not include data segments (global / static variables), resour
 
 15. As you can see, both states the same filename.
 
-> 5TH QUESTION --> ANS: 2c74
+> 5TH QUESTION --> ANS: 2C74
 
 ![image](https://github.com/user-attachments/assets/e59a999e-ea14-4b40-a8b6-868bee05ce2e)
 
@@ -159,15 +165,26 @@ cmdlet (command-let) is a lightweight command used in powershell environment.
 28. Then another IP IOC is identified at **sftp** command usage.
 29. Interestingly it performed `-hostkey=*/` which a method for hostkey bypass. This method allows the connection without verifying the hostkey.
 
-> 9TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/d69a3089-dd14-411e-8f46-454defd0add3)
+
+
+> 9TH QUESTION --> ANS: `C:\Users\Public\Public Files`
 
 ![image](https://github.com/user-attachments/assets/0c77c419-9648-427e-9826-cb5329987c72)
+
+
+30. Luckily the deobfuscated script has convential variable naming, reviewing the script at glance, we can quickly identified the specified target directory.
+
+![image](https://github.com/user-attachments/assets/a617c46b-fbb0-4bb8-ac31-7abafe5e7684)
 
 
 > 10TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/93479846-d902-4bdb-bd33-bbd2e385a3fd)
 
+
+31. I
 
 > 11TH QUESTION --> ANS:
 
