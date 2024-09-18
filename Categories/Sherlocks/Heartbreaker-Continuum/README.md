@@ -55,12 +55,22 @@
 
 ![image](https://github.com/user-attachments/assets/b0d6fc07-bb8a-4f80-bf18-d2acd71a92af)
 
-9. I was trying using **ghidra** to identify the size of code, but turns out the decompiler only gave me info about the maximum bytes that could be allocated.
+9. Using a decompiler such as **ghidra**, we can identify the maximum size of code of the binary in bytes.
 
 ![image](https://github.com/user-attachments/assets/646a2831-b30c-4058-8b96-f05fb08b3925)
 
 
-10. Hence, 
+#### NOTES:
+
+```
+The size of the code in a binary file refers to the total amount of space (in bytes) that is allocated for the actual
+executable instructions within the program.
+
+However, this does not include data segments (global / static variables), resources (image, icons), headers, and metadata.
+```
+
+
+10. To identify the code size in the binary file, simply open the memory map and check for the .text section length.
 
 
 > 4TH QUESTION --> ANS:
