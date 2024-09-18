@@ -7,7 +7,7 @@
 1. Using **PEStudio** and **Ghidra** to identify size of code bytes.
 2. Using threat intelligence tool to identify conversion filename and file creation time.
 3. Using hexeditor to identify the obfuscated strings offset.
-4. 
+4. Identify MITRE ID for automated collection technique.
 
 ## SCENARIO:
 
@@ -184,7 +184,7 @@ cmdlet (command-let) is a lightweight command used in powershell environment.
 ![image](https://github.com/user-attachments/assets/93479846-d902-4bdb-bd33-bbd2e385a3fd)
 
 
-31. Based from MITRE page, autonomously gather data is defined as **Automated Collection** technique under **Collection**. ID --> T1119
+31. Based from MITRE page, autonomously gather data is defined as **Automated Collection** technique under **Collection**.
 
 
 ![image](https://github.com/user-attachments/assets/0c79e2f7-0b14-4bf4-9087-5b1aded2ffc7)
