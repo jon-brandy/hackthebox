@@ -21,10 +21,25 @@
 
 3. Based from the evidence above, the binary is identified as a **PE32 executable** and likely written in .NET supported language such as **C#** or **VB.NET**.
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: v
 
 ![image](https://github.com/user-attachments/assets/6bc570a4-4c53-4107-982d-0fa71a470c84)
 
+
+4. One of the easiest way to identify whether a file is malicious or is a malware file, simply grab the IOC.
+5. This time, I grab the **sha256** hash. Afterwards, send it to threat intelligence tool to review the hash.
+
+![image](https://github.com/user-attachments/assets/d08e4903-f528-4b11-998a-2b1cf87748c8)
+
+
+![image](https://github.com/user-attachments/assets/b012bc47-29b4-45e9-8d16-4df248ff35e6)
+
+
+![image](https://github.com/user-attachments/assets/7ea63b5f-35f2-4b13-ad2f-f6dcc6b0c5c9)
+
+
+6. Both **Virus Total** and **Kaspersky OpenTip** shown that the file is indeed a malware categorized as **Trojan**.
+7. Also both states that the binary acts as a downloader.
 
 > 2ND QUESTION --> ANS:
 
