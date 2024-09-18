@@ -195,7 +195,7 @@ cmdlet (command-let) is a lightweight command used in powershell environment.
 ![image](https://github.com/user-attachments/assets/8429c794-7bf1-4e2c-9426-3bb9264113e2)
 
 
-32. Again, based from our previous finding. The password used is `M8&C!i6KkmGL1-#`.
+32. Again, based from our previous finding. The attacker seems tried to exfiltrate the collected files through sftp service using password `M8&C!i6KkmGL1-#`.
 33. Great! We've investigated the case!
 
 ## IMPORTANT LINKS:
