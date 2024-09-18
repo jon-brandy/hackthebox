@@ -118,20 +118,46 @@ However, this does not include data segments (global / static variables), resour
 
 20. Nice, we identified the offset!
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: Base64
 
 ![image](https://github.com/user-attachments/assets/02e79b45-0932-40c9-b0e3-5ba047b40201)
 
 
-> 7TH QUESTION --> ANS:
+21. Base from the previous finding, we identified that the malware used Base64 to encode what might be it's exploit.
+
+> 7TH QUESTION --> ANS: Invoke-WebRequest
 
 ![image](https://github.com/user-attachments/assets/3a676649-f8e7-43f1-a61e-a4d16d8b3e54)
 
 
-> 8TH QUESTION --> ANS:
+22. Anyway, we can simply decode it manually without revise the script, because it just encode the exploit and reversed it.
+23. Let's wayback it using cyberchef.
+
+> RESULT
+
+![image](https://github.com/user-attachments/assets/166d9aab-fc4a-4c62-a973-ba0942442f38)
+
+
+24. Awesome! From now on should be easy for us, because the exploit is stop here, there are no other outbound connections which related to download another malware.
+25. Long story short, after review the code, found the cmdlet used by the malware to initiate file downloads.
+26. It used **Invoke-WebRequest**, this cmdlet in powershell is used to perform HTTP or HTTPS request to a web resources. In short, this cmdlet quite perform the same as **curl** and **wget**.
+
+![image](https://github.com/user-attachments/assets/2422267f-8715-4d9f-8457-c9818c629b47)
+
+#### NOTE:
+
+```
+cmdlet (command-let) is a lightweight command used in powershell environment.
+```
+
+> 8TH QUESTION --> ANS: `35.169.66.138,44.206.187.144`
 
 ![image](https://github.com/user-attachments/assets/46556a69-7054-4493-a6f6-d9aa3d7ebe4a)
 
+
+27. Previously we identified the attacker's server IP which used to infiltrate the malware via phising.
+28. Then another IP IOC is identified at **sftp** command usage.
+29. Interestingly it performed `-hostkey=*/` which a method for hostkey bypass. This method allows the connection without verifying the hostkey.
 
 > 9TH QUESTION --> ANS:
 
