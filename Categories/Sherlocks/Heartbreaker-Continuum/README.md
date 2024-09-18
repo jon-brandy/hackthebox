@@ -46,9 +46,21 @@
 ![image](https://github.com/user-attachments/assets/d781763c-e54a-4170-b887-ec2893e983b4)
 
 
+8. Next, to identify the creation timestamp, we can check the **details** section at virus total.
+
+![image](https://github.com/user-attachments/assets/fe6b04d2-6aaa-42f6-8658-deddee7b5d1d)
+
+
 > 3RD QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/b0d6fc07-bb8a-4f80-bf18-d2acd71a92af)
+
+9. I was trying using **ghidra** to identify the size of code, but turns out the decompiler only gave me info about the maximum bytes that could be allocated.
+
+![image](https://github.com/user-attachments/assets/646a2831-b30c-4058-8b96-f05fb08b3925)
+
+
+10. Hence, 
 
 
 > 4TH QUESTION --> ANS:
