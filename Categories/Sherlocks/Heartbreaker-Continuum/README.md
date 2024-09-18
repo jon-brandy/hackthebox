@@ -179,20 +179,28 @@ cmdlet (command-let) is a lightweight command used in powershell environment.
 ![image](https://github.com/user-attachments/assets/a617c46b-fbb0-4bb8-ac31-7abafe5e7684)
 
 
-> 10TH QUESTION --> ANS:
+> 10TH QUESTION --> ANS: T1119 
 
 ![image](https://github.com/user-attachments/assets/93479846-d902-4bdb-bd33-bbd2e385a3fd)
 
 
-31. I
+31. Based from MITRE page, autonomously gather data is defined as **Automated Collection** technique under **Collection**. ID --> T1119
 
-> 11TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/0c79e2f7-0b14-4bf4-9087-5b1aded2ffc7)
+
+
+> 11TH QUESTION --> ANS: M8&C!i6KkmGL1-#
 
 ![image](https://github.com/user-attachments/assets/8429c794-7bf1-4e2c-9426-3bb9264113e2)
 
 
+32. Again, based from our previous finding. The password used is `M8&C!i6KkmGL1-#`.
+33. Great! We've investigated the case!
+
 ## IMPORTANT LINKS:
 
 ```
-
+https://attack.mitre.org/techniques/T1119/
+https://www.virustotal.com/gui/file/12daa34111bb54b3dcbad42305663e44e7e6c3842f015cccbbe6564d9dfd3ea3/relations
 ```
