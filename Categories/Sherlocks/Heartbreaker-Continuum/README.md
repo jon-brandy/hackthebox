@@ -51,7 +51,7 @@
 ![image](https://github.com/user-attachments/assets/fe6b04d2-6aaa-42f6-8658-deddee7b5d1d)
 
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: 38400
 
 ![image](https://github.com/user-attachments/assets/b0d6fc07-bb8a-4f80-bf18-d2acd71a92af)
 
@@ -70,8 +70,15 @@ However, this does not include data segments (global / static variables), resour
 ```
 
 
-10. To identify the code size in the binary file, simply open the memory map and check for the .text section length.
+10. To identify the code size in the binary file, simply go to window and open the memory map and check for the .text section length.
 
+![image](https://github.com/user-attachments/assets/05cff440-dce5-4425-93c2-193004ccd35a)
+
+
+![image](https://github.com/user-attachments/assets/67ddcd8e-d5c6-433a-976a-cd93f47ed2e3)
+
+
+11. Great! Now we know the size of code is **38400**.
 
 > 4TH QUESTION --> ANS:
 
