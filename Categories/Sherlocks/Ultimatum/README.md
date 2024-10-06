@@ -15,6 +15,13 @@ One of the Forela WordPress servers was a target of notorious Threat Actors (TA)
 
 ## STEPS:
 1. This time we're tasked to investigate an incident from Forela WordPress Servers. It is known that the server running a website with a vulnerable plugin. We're asked to hunt and confirm the culprits and restore the service.
+2. Based from the acquisition performed, it is clear that the IT admin team is using a Linux acquisition tool named **CatScale**.
+
+![image](https://github.com/user-attachments/assets/5f06bdcb-2f18-4e64-ba9c-9ba809d53378)
+
+
+![image](https://github.com/user-attachments/assets/7018b428-59f0-400a-b588-5579896f426e)
+
 
 > 1ST QUESTION --> ANS:
 
