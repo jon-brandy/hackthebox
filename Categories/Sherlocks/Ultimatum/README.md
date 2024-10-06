@@ -58,6 +58,7 @@ One of the Forela WordPress servers was a target of notorious Threat Actors (TA)
 ![image](https://github.com/user-attachments/assets/6857a8f4-42f5-4b7e-bc8c-093b3992e072)
 
 
+11. Both POC states the same objective --> to be authorized for admin access.
 
 > 3RD QUESTION --> ANS:
 
