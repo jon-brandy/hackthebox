@@ -5,7 +5,8 @@
 
 
 ## Lessons Learned:
-- asda
+- Reviewing catscale data acquisition.
+- 
 
 ## SCENARIO:
 
