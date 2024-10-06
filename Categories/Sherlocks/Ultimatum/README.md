@@ -28,6 +28,16 @@ One of the Forela WordPress servers was a target of notorious Threat Actors (TA)
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6401b787-0892-49bd-ba1a-43647a099025)
 
+3. To identify fingerprinting activity, we can review log at **Logs** directory.
+4. Our interest should be log inside --> `ip-172-31-11-131-20230808-0937-var-log.tar.gz`.
+5. Upon extracting it, found several **Apache** directory which indicates a web server log. Great!
+
+![image](https://github.com/user-attachments/assets/611e783a-70da-4f0c-aa6f-d5d52c4818b7)
+
+![image](https://github.com/user-attachments/assets/bd4c1008-0fd3-4763-8e23-c9dc391453c7)
+
+
+6. 
 
 > 2ND QUESTION --> ANS:
 
