@@ -37,7 +37,12 @@ One of the Forela WordPress servers was a target of notorious Threat Actors (TA)
 ![image](https://github.com/user-attachments/assets/bd4c1008-0fd3-4763-8e23-c9dc391453c7)
 
 
-6. 
+6. Upon reviewing the log, found the scanning tool used by the attacker and it's version.
+7. It's **WPScan** version **3.8.24**.
+
+![image](https://github.com/user-attachments/assets/1ddb3037-c6bf-4f26-9fc7-048d02ada4e9)
+
+8. 
 
 > 2ND QUESTION --> ANS:
 
