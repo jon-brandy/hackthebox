@@ -24,7 +24,7 @@ One of the Forela WordPress servers was a target of notorious Threat Actors (TA)
 ![image](https://github.com/user-attachments/assets/7018b428-59f0-400a-b588-5579896f426e)
 
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: WPScan/3.8.24
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6401b787-0892-49bd-ba1a-43647a099025)
 
@@ -42,11 +42,21 @@ One of the Forela WordPress servers was a target of notorious Threat Actors (TA)
 
 ![image](https://github.com/user-attachments/assets/1ddb3037-c6bf-4f26-9fc7-048d02ada4e9)
 
-8. 
-
 > 2ND QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bf6ee9e8-e58b-40da-9652-2fe8302a1754)
+
+
+8. It's not efficient to review the log using text editor. It's best to integrate it with ELK stack or other tools which help user in collect and visualize data.
+9. Anyway, long story short found an agent named **Secragon Offensive**.
+
+![image](https://github.com/user-attachments/assets/26a31cf2-9bd8-4088-bb24-9da3056f4494)
+
+
+10. Search it on the internet, resulting to few CVEs POC.
+
+![image](https://github.com/user-attachments/assets/6857a8f4-42f5-4b7e-bc8c-093b3992e072)
+
 
 
 > 3RD QUESTION --> ANS:
