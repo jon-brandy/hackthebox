@@ -112,15 +112,24 @@ attackers to create administrator accounts at will. This is actively being explo
 
 21. Great! Now we know the real threat actor IP is **23.106.60.163**.
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: secragon.
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/c02c2301-69c0-4b70-9014-5bcec3fed18f)
 
 
-> 5TH QUESTION --> ANS:
+22. To identify backdoor user, simply search the attempt to register account after the exploitation attempt.
+
+![image](https://github.com/user-attachments/assets/340e579e-a14d-4484-ab7d-c9f5b48e5c43)
+
+
+23. Great! Now we know the backdoor user is **secragon**.
+
+> 5TH QUESTION --> ANS: `198.16.74.45`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/81716e5f-3cbf-4c7e-9b99-592b139fd35b)
 
+
+24. Noticed after it gained access to admin resource, the attacker IP changed to the public cloud IP --> **198.16.74.45**.
 
 > 6TH QUESTION --> ANS:
 
