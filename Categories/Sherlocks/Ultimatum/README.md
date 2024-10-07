@@ -6,7 +6,8 @@
 
 ## Lessons Learned:
 - Reviewing catscale data acquisition.
-- 
+- Identify CVE version related to ultimate-member plugin.
+- Identify backdoor user and persistence activity.
 
 ## SCENARIO:
 
@@ -135,6 +136,23 @@ attackers to create administrator accounts at will. This is actively being explo
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/68be2673-8d48-45fe-be2e-356974454ec9)
 
+
+25. Long story short, found a suspicious file access inside the admin resource. It's a php file named hidden-comments.
+26. It's because afterwards a shell execution is executed.
+
+![image](https://github.com/user-attachments/assets/67681c9a-e244-4a2e-8cac-7c120bcc5dd9)
+
+
+![image](https://github.com/user-attachments/assets/414d0132-706b-41cc-a052-b79abe071595)
+
+
+27. More interestingly, the plugin used is a plugin that can upload, edit, create, and remove theme files.
+
+![image](https://github.com/user-attachments/assets/5072eb09-e746-4997-8f28-08754341d05c)
+
+
+29. It's very straight forward that **hidden-comments.php** is a theme file that used for persistence.
+30. 
 
 > 7TH QUESTION --> ANS:
 
