@@ -94,8 +94,11 @@ attackers to create administrator accounts at will. This is actively being explo
 
 18. Remembering the very first log we analyzed is identified using version 2.6.4. We can tell that we already find the correct CVE version!
 19. As you can see afterwards the plugin is accessed, the threat actor can access the admin resource. The threat actor IP is **198.16.74.45**.
+20. Interesting it is a public cloud IP, this could indicates that the attacker manually explored the website after logging in.
 
 ![image](https://github.com/user-attachments/assets/c6a0eaeb-2d65-44e9-8019-8342431883d9)
+
+![image](https://github.com/user-attachments/assets/01f79946-943d-47a9-9aa6-5a3d53cec286)
 
 
 > 3RD QUESTION --> ANS: `23.106.60.163`
