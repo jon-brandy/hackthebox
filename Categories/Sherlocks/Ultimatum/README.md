@@ -80,7 +80,21 @@ One of the Forela WordPress servers was a target of notorious Threat Actors (TA)
 ![image](https://github.com/user-attachments/assets/3197fcd6-bf14-4447-9d22-6f75df5173b2)
 
 
-17.
+#### NOTES:
+
+```
+The plugin does not prevent visitors from creating user accounts with arbitrary capabilities, effectively allowing
+attackers to create administrator accounts at will. This is actively being exploited in the wild.
+```
+
+17. Another outsource found WPScan documentation that shows convincing details.
+
+![image](https://github.com/user-attachments/assets/60e65778-5f8d-4eee-aa3f-0a2cdad1a45a)
+
+
+18. Remembering the very first log we analyzed is identified using version 2.6.4. We can tell that we already find the correct CVE version!
+
+![image](https://github.com/user-attachments/assets/c6a0eaeb-2d65-44e9-8019-8342431883d9)
 
 
 > 3RD QUESTION --> ANS:
@@ -132,4 +146,5 @@ One of the Forela WordPress servers was a target of notorious Threat Actors (TA)
 
 ```
 https://github.com/WithSecureLabs/LinuxCatScale
+https://wpscan.com/vulnerability/694235c7-4469-4ffd-a722-9225b19e98d7/
 ```
