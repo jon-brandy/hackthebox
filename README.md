@@ -61,9 +61,9 @@
   |12. |[]()|[TickTock](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/TickTock/README.md)|
   |13. |[]()|[Jugglin](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Jugglin/README.md)|
   |14. |[]()|[Ore](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Ore/README.md)|
-  
+  |15. |[]()|[Ultimatum](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Ultimatum/README.md)|
 
-  
+
   
 
 
