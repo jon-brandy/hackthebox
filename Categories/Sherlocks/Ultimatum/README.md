@@ -173,6 +173,17 @@ attackers to create administrator accounts at will. This is actively being explo
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d4deadac-6f4d-4192-b2a7-a333880835b5)
 
 
+34. Now to review the code of it, we need to traverse to **Misc -> ip-172-31-11-131-20230808-0937-pot-webshell-first-1000.txt**.
+35. Then search for --> **hidden-comments.php**.
+
+![image](https://github.com/user-attachments/assets/bd686b50-89b3-4467-8bd9-58bd04608851)
+
+
+36. `$shell` variable contains `uname -a; w; id; /bin/bash -i`
+37. Shortly those commands are for gather system information and user details by printig the systems's kernel version and arch.
+38. Also shows logged-in user and their activities, and displaying current user's UID, GID, and groups.
+39. Lastly it launch an interactive shell.
+
 > 8TH QUESTION --> ANS:
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/48a7eaa2-643a-42a2-838b-f4729c98d6f3)
