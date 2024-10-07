@@ -93,7 +93,7 @@ attackers to create administrator accounts at will. This is actively being explo
 
 
 18. Remembering the very first log we analyzed is identified using version 2.6.4. We can tell that we already find the correct CVE version!
-19. As you can see afterwards the plugin is accessed, the threat actor can access the admin resource. 
+19. As you can see afterwards the plugin is accessed, the threat actor can access the admin resource. The threat actor IP is **198.16.74.45**.
 
 ![image](https://github.com/user-attachments/assets/c6a0eaeb-2d65-44e9-8019-8342431883d9)
 
@@ -103,7 +103,7 @@ attackers to create administrator accounts at will. This is actively being explo
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6348ab3c-7129-49da-bdfd-2ff915980650)
 
 
-20. Based from our previous finding, we can conclude that the threat actor IP is **198.16.74.45**.
+20. Now to identify the real threat actor IP, we need to find the initial access.
 
 > 4TH QUESTION --> ANS:
 
