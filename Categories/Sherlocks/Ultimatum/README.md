@@ -98,12 +98,16 @@ attackers to create administrator accounts at will. This is actively being explo
 ![image](https://github.com/user-attachments/assets/c6a0eaeb-2d65-44e9-8019-8342431883d9)
 
 
-> 3RD QUESTION --> ANS: `198.16.74.45`
+> 3RD QUESTION --> ANS: `23.106.60.163`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6348ab3c-7129-49da-bdfd-2ff915980650)
 
 
-20. Now to identify the real threat actor IP, we need to find the initial access.
+20. Now to identify the real threat actor IP, we need to find the initial access OR the easiest way simply by check the IP used for the scanning activity.
+
+![image](https://github.com/user-attachments/assets/da9d50ce-fbb5-4867-8f39-66ecde526dcd)
+
+21. Great! Now we know the real threat actor IP is **23.106.60.163**.
 
 > 4TH QUESTION --> ANS:
 
