@@ -189,24 +189,58 @@ attackers to create administrator accounts at will. This is actively being explo
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/48a7eaa2-643a-42a2-838b-f4729c98d6f3)
 
 
-> 9TH QUESTION --> ANS:
+40. To identify the file size, simply check the CSV file provided inside **Misc** directory.
+41. It looks like contain a master file table of the OS.
+
+> ip-172-31-11-131-20230808-0937-full-timeline.csv
+
+![image](https://github.com/user-attachments/assets/6e7a0e9f-000b-4e2d-ae28-3bc949722c2c)
+
+
+42. Great! Now we know the size is **2592**.
+
+> 9TH QUESTION --> ANS: `43.204.24.76:6969`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/f3587f8b-b17c-4c32-a10b-3618a0d8c281)
 
 
-> 10TH QUESTION --> ANS:
+43. To identify the C2 IP and port, simply check the reverse shell payload and check the ip and port variable.
+
+![image](https://github.com/user-attachments/assets/63cf03da-994e-4b3f-88d2-de03bc2dfa41)
+
+
+
+> 10TH QUESTION --> ANS: 234521
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/5697102e-1e65-4668-9538-eb41c154e870)
 
 
-> 11TH QUESTION --> ANS:
+44. Next, to identify the process ID which enabled the threat actor to gain hands-on access to the server, we need to review the **Process and Network** logs.
+45. Our interest should be the process of opening shell as interactive mode.
+
+![image](https://github.com/user-attachments/assets/50aada87-f26a-4483-a6bb-845b98a7a5e8)
+
+
+46. Great! Now we know the PID is **234521**.
+
+> 11TH QUESTION --> ANS: linenum.sh
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/53a93703-6ecc-43a3-b1fe-553e73ca73be)
 
+
+47. A common tool used to enumerate for privesc path at Linux should be `linpeas` or `linenum`.
+48. To identify the existence of those files, simply review the **Misc** logs.
+49. Actually we can check the **MFT** and search for both file.
+50. Searching it resulting to the existence of **linenum.sh**.
+
+![image](https://github.com/user-attachments/assets/b5823bef-4108-4be3-ae7e-2c93dd0419f1)
+
+51. Great! Now we've investigated the case!
 
 ## IMPORTANT LINKS:
 
 ```
 https://github.com/WithSecureLabs/LinuxCatScale
 https://wpscan.com/vulnerability/694235c7-4469-4ffd-a722-9225b19e98d7/
+https://www.cyfirma.com/research/analyzing-the-ultimate-member-plugin-vulnerability-cve-2023-3460/
 ```
