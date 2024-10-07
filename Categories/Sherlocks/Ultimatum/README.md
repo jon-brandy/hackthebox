@@ -64,7 +64,24 @@ One of the Forela WordPress servers was a target of notorious Threat Actors (TA)
 ![image](https://github.com/user-attachments/assets/ab8f31ba-1919-4f94-b142-79028ac91073)
 
 
-13. 
+13. Searching about CVE related to the plugin, resulting to same CVE version we found before.
+
+![image](https://github.com/user-attachments/assets/34177f8d-f262-461d-a8dd-b2d78d1f959f)
+
+
+14. Reviewing the first website, seems it matched our finding. Actually our finding itself is not enough to identify wheter we found the correct CVE.
+15. For better analysis, another artifacts and further correlation is needed.
+
+![image](https://github.com/user-attachments/assets/edbb13d3-d9b3-441e-b6fa-97012170357d)
+
+
+16. Reviewing another log file named --> **access.log.1** found different plugin version used. But this match the CVE details we read before.
+
+![image](https://github.com/user-attachments/assets/3197fcd6-bf14-4447-9d22-6f75df5173b2)
+
+
+17.
+
 
 > 3RD QUESTION --> ANS:
 
