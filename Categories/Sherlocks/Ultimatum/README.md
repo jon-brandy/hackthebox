@@ -59,6 +59,12 @@ One of the Forela WordPress servers was a target of notorious Threat Actors (TA)
 
 
 11. Both POC states the same objective --> to be authorized for admin access.
+12. Also noticed a plugin is used previously. This could be a hint to our CVE version guess.
+
+![image](https://github.com/user-attachments/assets/ab8f31ba-1919-4f94-b142-79028ac91073)
+
+
+13. 
 
 > 3RD QUESTION --> ANS:
 
