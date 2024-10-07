@@ -42,7 +42,7 @@ One of the Forela WordPress servers was a target of notorious Threat Actors (TA)
 
 ![image](https://github.com/user-attachments/assets/1ddb3037-c6bf-4f26-9fc7-048d02ada4e9)
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: CVE-2023-3460	
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/bf6ee9e8-e58b-40da-9652-2fe8302a1754)
 
@@ -93,15 +93,17 @@ attackers to create administrator accounts at will. This is actively being explo
 
 
 18. Remembering the very first log we analyzed is identified using version 2.6.4. We can tell that we already find the correct CVE version!
-19. As you can see afterwards the plugin is accessed, the threat actor can access the admin resource. Threat actor IP --> **198.16.74.45**.
+19. As you can see afterwards the plugin is accessed, the threat actor can access the admin resource. 
 
 ![image](https://github.com/user-attachments/assets/c6a0eaeb-2d65-44e9-8019-8342431883d9)
 
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: `198.16.74.45`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/6348ab3c-7129-49da-bdfd-2ff915980650)
 
+
+20. Based from our previous finding, we can conclude that the threat actor IP is **198.16.74.45**.
 
 > 4TH QUESTION --> ANS:
 
