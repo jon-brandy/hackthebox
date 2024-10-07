@@ -132,13 +132,13 @@ attackers to create administrator accounts at will. This is actively being explo
 
 24. Noticed after it gained access to admin resource, the attacker IP changed to the public cloud IP --> **198.16.74.45**.
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: hidden-comments.php
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/68be2673-8d48-45fe-be2e-356974454ec9)
 
 
 25. Long story short, found a suspicious file access inside the admin resource. It's a php file named hidden-comments.
-26. It's because afterwards a shell execution is executed.
+26. It's because afterwards, a shell execution is attempted.
 
 ![image](https://github.com/user-attachments/assets/67681c9a-e244-4a2e-8cac-7c120bcc5dd9)
 
@@ -152,7 +152,20 @@ attackers to create administrator accounts at will. This is actively being explo
 
 
 29. It's very straight forward that **hidden-comments.php** is a theme file that used for persistence.
-30. 
+30. Anyway let's correlate with **error.log**, remembering it's a **source** file which edited and it's human activity, hence an error could happen during the code writing.
+31. After reviewing it, indeed an error happened at timestamp `09:01:04` right after the file is edited at `09:00:51`.
+
+> error.log
+
+![image](https://github.com/user-attachments/assets/ff01bd28-59a8-402b-a5fd-f1866c441509)
+
+
+> access.log
+
+![image](https://github.com/user-attachments/assets/a4f8cf6b-25b2-4d6a-be21-9963ef23216b)
+
+
+32. Remembering no other theme files opened, hence it's clear that **hidden-comments.php** is the backdoor file.
 
 > 7TH QUESTION --> ANS:
 
