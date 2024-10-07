@@ -132,7 +132,7 @@ attackers to create administrator accounts at will. This is actively being explo
 
 24. Noticed after it gained access to admin resource, the attacker IP changed to the public cloud IP --> **198.16.74.45**.
 
-> 6TH QUESTION --> ANS: hidden-comments.php
+> 6TH QUESTION --> ANS: /var/www/html/wp-content/themes/twentytwentythree/patterns/hidden-comments.php
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/68be2673-8d48-45fe-be2e-356974454ec9)
 
@@ -166,6 +166,7 @@ attackers to create administrator accounts at will. This is actively being explo
 
 
 32. Remembering no other theme files opened, hence it's clear that **hidden-comments.php** is the backdoor file.
+33. For the full path can be seen at the **error.log**.
 
 > 7TH QUESTION --> ANS:
 
