@@ -168,7 +168,7 @@ attackers to create administrator accounts at will. This is actively being explo
 32. Remembering no other theme files opened, hence it's clear that **hidden-comments.php** is the backdoor file.
 33. For the full path can be seen at the **error.log**.
 
-> 7TH QUESTION --> ANS:
+> 7TH QUESTION --> ANS: `'uname -a; w; id; /bin/bash -i';`
 
 ![image](https://github.com/jon-brandy/hackthebox/assets/70703371/d4deadac-6f4d-4192-b2a7-a333880835b5)
 
