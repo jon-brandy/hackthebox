@@ -1,6 +1,9 @@
 # knote
 > Write-up author: jon-brandy
 
+![image](https://github.com/user-attachments/assets/b816695d-e42d-4ec3-9b05-3b6370cf0a1c)
+
+
 ## Lessons Learned:
 - 
 
