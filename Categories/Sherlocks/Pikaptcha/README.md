@@ -17,6 +17,9 @@
 3. Happy reported that he received an email instructing him to update Microsoft Office via a link. After clicking the link, he was prompted to solve a CAPTCHA, but no download page appeared afterward.
 4. Recognizing this as a potential phishing attempt, Alonzo became suspicious of the attacker’s tactics. He contacted the security team, who promptly isolated the victim’s machine and provided us with network traffic data and endpoint artifacts for analysis.
 
+![image](https://github.com/user-attachments/assets/8e6a4129-e597-4e74-8094-b4c111b3cf51)
+
+
 > 1ST QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/a78977c0-5c0a-48a5-8b36-473255407f4a)
