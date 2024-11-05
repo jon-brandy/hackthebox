@@ -12,7 +12,10 @@
 <p align="justify">Happy Grunwald contacted the sysadmin, Alonzo, because of issues he had downloading the latest version of Microsoft Office. He had received an email saying he needed to update, and clicked the link to do it. He reported that he visited the website and solved a captcha, but no office download page came back. Alonzo, who himself was bombarded with phishing attacks last year and was now aware of attacker tactics, immediately notified the security team to isolate the machine as he suspected an attack. You are provided with network traffic and endpoint artifacts to answer questions about what happened.</p>
 
 ## STEPS:
-1. In this case, we're
+1. In this case, we're tasked to investigate a recent phising attack.
+2. A person named Happy Grunwald contacted Alonzo, a system administrator, regarding an issue with downloading the latest version of Microsoft Office.
+3. Happy reported that he received an email instructing him to update Microsoft Office via a link. After clicking the link, he was prompted to solve a CAPTCHA, but no download page appeared afterward.
+4. Recognizing this as a potential phishing attempt, Alonzo became suspicious of the attacker’s tactics. He contacted the security team, who promptly isolated the victim’s machine and provided us with network traffic data and endpoint artifacts for analysis.
 
 > 1ST QUESTION --> ANS:
 
