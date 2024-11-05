@@ -1,5 +1,8 @@
 # Pikaptcha
 
+![image](https://github.com/user-attachments/assets/e29f4a11-7ca9-4957-881f-859e6d749c7a)
+
+
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
@@ -40,3 +43,9 @@
 
 ![image](https://github.com/user-attachments/assets/13f0b3f6-8563-4606-b356-4dd0d806f481)
 
+
+# IMPORTANT LINKS:
+
+```
+
+```
