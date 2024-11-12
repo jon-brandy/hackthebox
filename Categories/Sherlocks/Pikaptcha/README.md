@@ -67,7 +67,7 @@ In short, this powershell command is used to download a malicious powersell scri
 12. Great! Simple as that now we identified the full command that was run to download and execute the stager.
 
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: `2024-09-23 05:07:45`
 
 ![image](https://github.com/user-attachments/assets/ca12a9cd-dee8-4948-9431-11f2e50dd65e)
 
@@ -76,22 +76,83 @@ In short, this powershell command is used to download a malicious powersell scri
 ![image](https://github.com/user-attachments/assets/4f95b2d4-c53a-4bc7-a3cd-6643fde35cab)
 
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: `579284442094e1a44bea9cfb7d8d794c8977714f827c97bcb2822a97742914de`
 
 ![image](https://github.com/user-attachments/assets/672f5b38-997b-4467-a94d-1db9dc5a9676)
 
 
 14. Let's shift our focus to the captured network traffic to exfitrate the powershell script, because we cannot download the powershell script from registry explorer, because **registry hive actually just stored a configuration data not actual files**.
 
+> Wireshark
 
-> 4TH QUESTION --> ANS:
+![image](https://github.com/user-attachments/assets/8976e815-ee06-417d-99f1-cb244dd43177)
+
+
+15. Actually now it's much easier, because we already identified the threat actor IP and the malicious file downloaded from the remote server. We can simply export the objects from wireshark.
+
+![image](https://github.com/user-attachments/assets/72ee81ba-eef1-4c43-a545-2037e7ea1c53)
+
+
+16. To see the script contens, simply follow the related packet stream.
+17. Based from the result, you can see that it contains an encoded powershell command.
+
+![image](https://github.com/user-attachments/assets/d04f43b8-0857-4ab7-970b-2cbeb3d19cb4)
+
+> DECODED VALUES
+
+![image](https://github.com/user-attachments/assets/4150bf57-4c19-453b-a7e7-69ac31805a2b)
+
+18. Interesting! Not a geek in powershell script, but `System.Net.Sockets.TCPClient` syntax is used to send and receive data.
+19. So if we correlate this again to next stages in cyber kill chain, current stage is **Command and Control**, this could be the backdoor that the attacker tried to use then.
+20. Searching on the internet regarding reverse shell payload for powershell, found this github gist:
+
+![image](https://github.com/user-attachments/assets/d88123eb-c241-4bbf-96c1-ea476eb26941)
+
+21. It is exactly the same! Anyway let's get the hash IOC.
+
+> Hash IOC
+
+![image](https://github.com/user-attachments/assets/cf656d59-2ab0-4dc7-bced-96f7bfc3fc23)
+
+
+> 4TH QUESTION --> ANS: 6969
 
 ![image](https://github.com/user-attachments/assets/a0bf7148-2f6b-422d-bffb-22e92ccbb706)
 
 
-> 5TH QUESTION --> ANS:
+22. The port is identified previously as we analyzed the C2 script. The port is `6969`.
+
+
+> 5TH QUESTION --> ANS: 403
 
 ![image](https://github.com/user-attachments/assets/4d9b46be-84f4-4669-aa44-9be1ce7f280b)
+
+23. Now to identify how many seconds was the reverse shell connection established between C2 and the victim's workstation, we can start by reviewing the next TCP protocol which communicated on port 6969.
+
+![image](https://github.com/user-attachments/assets/060d3ba2-063c-4b94-97cd-5c98be7ed4c7)
+
+
+23. Instead calculating it manually, I used a library named **datetime** from python.
+
+> SCRIPT TO CALCULATE THE TIMESTAMP
+
+```py
+from pwn import *
+import os
+from datetime import datetime
+
+os.system('clear')
+
+st = datetime.strptime("05:07:48", "%H:%M:%S")
+end = datetime.strptime("05:14:31", "%H:%M:%S")
+
+diff = (end - st).total_seconds()
+log.success(f'RESULT --> {diff}')
+```
+
+> RESULT
+
+![image](https://github.com/user-attachments/assets/d636c4d9-b56e-4e2b-a5ed-c033f108a315)
 
 
 > 6TH QUESTION --> ANS:
