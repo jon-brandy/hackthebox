@@ -160,8 +160,22 @@ log.success(f'RESULT --> {diff}')
 ![image](https://github.com/user-attachments/assets/13f0b3f6-8563-4606-b356-4dd0d806f481)
 
 
+24. Upon reviewing the threat actor activities, found that the attacker tried to install another powershell script.
+
+![image](https://github.com/user-attachments/assets/4b33e136-c25b-4e23-bf2b-1aa3506cda93)
+
+
+#### NOTES:
+
+Bloodhound is an open source tool used in Active Directory (AD) environment to map relationships and permissions. This tool help threat actor in reconnaisance to identify potential attack paths for privesc and lateral movement.
+
+![image](https://github.com/user-attachments/assets/b1e890ad-b0f9-4a71-8b1c-58ba64ebd240)
+
+
 # IMPORTANT LINKS:
 
 ```
-
+https://ericzimmerman.github.io/#!index.md
+https://gist.github.com/egre55/c058744a4240af6515eb32b2d33fbed3
+https://github.com/BloodHoundAD/BloodHound
 ```
