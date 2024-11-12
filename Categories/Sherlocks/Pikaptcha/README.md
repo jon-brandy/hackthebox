@@ -28,7 +28,7 @@
 
 5. We're given many registry hives and prefetch folder, it's kinda painful to analyze windows registry hives without knowing the context and location of what is our interest.
 6. To review recently executed command, we can start analyzing from `RunMRU` registry key for **happy grunwald** user.
-7. To analyze the registry hives I used `registry explorer`. To load the registry hive for user **happy grundwald**, simply load the `NTUSER.DAT` of **happy grundwald**.
+7. To analyze the registry hives I used `registry explorer`. But actually you can use `registry viewer` or just mount it using `winregfs`. To load the registry hive for user **happy grundwald**, simply load the `NTUSER.DAT` of **happy grundwald**.
 
 ![image](https://github.com/user-attachments/assets/7858c1ff-0032-44dd-9f25-eaa84c5689e5)
 
