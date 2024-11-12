@@ -81,6 +81,9 @@ In short, this powershell command is used to download a malicious powersell scri
 ![image](https://github.com/user-attachments/assets/672f5b38-997b-4467-a94d-1db9dc5a9676)
 
 
+14. Let's shift our focus to the captured network traffic to exfitrate the powershell script, because we cannot download the powershell script from registry explorer, because **registry hive actually just stored a configuration data not actual files**.
+
+
 > 4TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/a0bf7148-2f6b-422d-bffb-22e92ccbb706)
