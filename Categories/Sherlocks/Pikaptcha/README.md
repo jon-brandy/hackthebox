@@ -35,7 +35,8 @@
 
 > RESULT IN REGISTRY EXPLORER
 
-![image](https://github.com/user-attachments/assets/9f715145-4b36-4374-9974-973a6284cf5d)
+![image](https://github.com/user-attachments/assets/72e2be4e-ba96-4edc-a1ca-1f5427eb33c6)
+
 
 
 8. Again, to reduce the pain by traverse the folder manually, instead we can use the search bar to find **RunMRU**.
@@ -69,6 +70,10 @@ In short, this powershell command is used to download a malicious powersell scri
 > 2ND QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/ca12a9cd-dee8-4948-9431-11f2e50dd65e)
+
+13. Again, we can identify the timestamp of the execution at the `registry explorer`. It is shown clear.
+
+![image](https://github.com/user-attachments/assets/4f95b2d4-c53a-4bc7-a3cd-6643fde35cab)
 
 
 > 3RD QUESTION --> ANS:
