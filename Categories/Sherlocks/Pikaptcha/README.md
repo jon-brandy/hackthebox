@@ -8,6 +8,10 @@
 ## Lessons Learned:
 1. Using registry explorer to load user's registry hive.
 2. Reviewing malicious powershell that acts as a downloader.
+3. Identify the threat actor's C2 server.
+4. Calculate reverse shell's session duration.
+5. Identify the JS function used by the threat actor to lure the victim. (phising captcha).
+6. Is a new and sophisticated method of distributing Lumma Stealer Malware.
 
 ## SCENARIO:
 <p align="justify">Happy Grunwald contacted the sysadmin, Alonzo, because of issues he had downloading the latest version of Microsoft Office. He had received an email saying he needed to update, and clicked the link to do it. He reported that he visited the website and solved a captcha, but no office download page came back. Alonzo, who himself was bombarded with phishing attacks last year and was now aware of attacker tactics, immediately notified the security team to isolate the machine as he suspected an attack. You are provided with network traffic and endpoint artifacts to answer questions about what happened.</p>
@@ -155,7 +159,7 @@ log.success(f'RESULT --> {diff}')
 ![image](https://github.com/user-attachments/assets/d636c4d9-b56e-4e2b-a5ed-c033f108a315)
 
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: StageClipboard
 
 ![image](https://github.com/user-attachments/assets/13f0b3f6-8563-4606-b356-4dd0d806f481)
 
@@ -172,10 +176,28 @@ Bloodhound is an open source tool used in Active Directory (AD) environment to m
 ![image](https://github.com/user-attachments/assets/b1e890ad-b0f9-4a71-8b1c-58ba64ebd240)
 
 
+25. Now let's shift again our focus to identify the function name which contains the malicious payload to be pasted in the victim's password. Our objective should be to identify the malicious javascript function or code within the fake captcha page.
+26. To narrow down our packet analysis, I filter the packets shown to the attacker IP alongside with http protocol.
+
+![image](https://github.com/user-attachments/assets/097f1a0f-cfcc-48da-9c04-cd6e44f15a38)
+
+27. Following the first HTTP packet data then scrolling down, we can identify the **script** tag that should be our interest section to be analyzed.
+28. Upon reviewing it found a function which embedded with the powershell command we previously found during our first analysis at the victim registry hive.
+
+![image](https://github.com/user-attachments/assets/f57f3353-3b3c-47e9-bac0-9c6ecc6bcb9b)
+
+29. As an additional information, this case is very similar to **Lumma Stealer** malware that exploits fake CAPTCHA pages.
+
+![image](https://github.com/user-attachments/assets/ce5d3dbb-4092-45e7-9147-a7526e39fa30)
+
+
+30. Anyway, great! We've investigated the case!
+
 # IMPORTANT LINKS:
 
 ```
 https://ericzimmerman.github.io/#!index.md
 https://gist.github.com/egre55/c058744a4240af6515eb32b2d33fbed3
 https://github.com/BloodHoundAD/BloodHound
+https://www.cloudsek.com/blog/unmasking-the-danger-lumma-stealer-malware-exploits-fake-captcha-pages
 ```
