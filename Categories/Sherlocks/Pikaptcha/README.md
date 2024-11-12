@@ -6,8 +6,8 @@
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
-1. Using registry viewer to analyze registry hive.
-2. 
+1. Using registry explorer to load user's registry hive.
+2. Reviewing malicious powershell that acts as a downloader.
 
 ## SCENARIO:
 <p align="justify">Happy Grunwald contacted the sysadmin, Alonzo, because of issues he had downloading the latest version of Microsoft Office. He had received an email saying he needed to update, and clicked the link to do it. He reported that he visited the website and solved a captcha, but no office download page came back. Alonzo, who himself was bombarded with phishing attacks last year and was now aware of attacker tactics, immediately notified the security team to isolate the machine as he suspected an attack. You are provided with network traffic and endpoint artifacts to answer questions about what happened.</p>
