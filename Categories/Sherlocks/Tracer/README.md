@@ -8,6 +8,7 @@
 - Analyzing windows event log file.
 - Parsing a prefetch file and extract the information into csv format using PECmd.
 - Parsing $MFT using MFTECmd.
+- Analyzing USN Journal data stream -> $J.
 - Analyzing sysmon operational event log to identify fullname of the named Pipe ending with stderr.
 
 ## SCENARIO:
