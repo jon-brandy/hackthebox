@@ -22,7 +22,7 @@
 14. Using `Timeline Explorer` to review csv file.
 15. Using `cyberchef` to decode encoded powershell command (formula used --> from base64 and gunzip). Afterwards using formula (from base64 and xor 35 decimal with null preserving).
 16. Identifying threat label using virus total.
-17. Analyzing cobalt strike beacon.
+17. Analyzing cobalt strike beacon using `1768.py` script.
    
 ## SCENARIO:
 
