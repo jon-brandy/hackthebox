@@ -63,7 +63,7 @@
   |14. |[]()|[Ore](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Ore/README.md)|
   |15. |[]()|[Ultimatum](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Ultimatum/README.md)|
   |16. |[]()|[Pikaptcha](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Pikaptcha/README.md)|
-  |17. |[]()|[APTNightmare (writeups not finished)](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/APTNightmare/README.md)|
+  |17. |[]()|[APTNightmare](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/APTNightmare/README.md) (Writeup not finished yet)|
 
 
 
