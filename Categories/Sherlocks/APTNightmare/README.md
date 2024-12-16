@@ -16,7 +16,7 @@
 1. In this case, we are tasked with investigating a cybersecurity breach, the origin and methods of which are still unknown. However, it is known that numerous suspicious emails have been detected.In this case, we are tasked with investigating a cybersecurity breach, the origin and methods of which are still unknown. However, it is known that numerous suspicious emails have been detected.
 2. As a forensic investigator we are given 4 files which we need to analyze. There are 2 acquisitioned data (disk and RAM), a captured network file, and an ubuntu profile. 
 
-![image](https://github.com/user-attachments/assets/c2052eeb-b267-4b61-b857-705f541416d1)
+![image](https://github.com/user-attachments/assets/f62c048e-d09c-4a9b-9d8a-831c62632bc6)
 
 
 3. Based from the file naming, we can indicate the infected device is the CEO's and the captured RAM is from the web server.
