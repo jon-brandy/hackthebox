@@ -46,44 +46,72 @@
 
 > 10TH QUESTION --> ANS:
 
+![image](https://github.com/user-attachments/assets/d7178191-3ed0-454c-b735-8dcd1969fcc6)
+
 
 > 11TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/c1cfa667-dbea-46a1-bfb7-a75a8284d5f4)
 
 
 > 12TH QUESTION --> ANS:
 
+![image](https://github.com/user-attachments/assets/f42f9999-8f00-4894-a4d3-1648b6e51612)
+
 
 > 13TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/8b7fe429-49b7-4edc-8eac-600c7e855a0d)
 
 
 > 14TH QUESTION --> ANS:
 
+![image](https://github.com/user-attachments/assets/f8bb72f2-a79d-41f4-9f25-53a027dd8a21)
+
 
 > 15TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/01cc74a3-9c67-46a4-bb5d-e951f055057f)
 
 
 > 16TH QUESTION --> ANS:
 
+![image](https://github.com/user-attachments/assets/96e7114c-f2a0-4f85-bbeb-7b3df5826fb4)
+
 
 > 17TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/4748107b-0a8e-4faf-9a50-a0188a15d1d1)
 
 
 > 18TH QUESTION --> ANS:
 
+![image](https://github.com/user-attachments/assets/35922d0f-1aa8-4964-a917-2b5d6921fed8)
+
 
 > 19TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/07ba599e-943b-4ebf-b682-ac31cf0f0623)
 
 
 > 20TH QUESTION --> ANS:
 
+![image](https://github.com/user-attachments/assets/76c9edc4-6c82-41fe-9af1-1ad69081318a)
+
 
 > 21ST QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/22e67f89-e4fa-48e2-9511-96c105bc6efc)
 
 
 > 22ND QUESTION --> ANS:
 
+![image](https://github.com/user-attachments/assets/a09f7537-4060-4c40-8680-8c4071229499)
+
 
 > 23RD QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/b360d8f3-01a6-433e-a51b-df1380e705bb)
 
 
 ## IMPORTANT LINKS:
