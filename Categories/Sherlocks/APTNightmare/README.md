@@ -10,7 +10,7 @@
 
 ## SCENARIO:
 
-<p align="justify"></p>
+<p align="justify">We neglected to prioritize the robust security of our network and servers, and as a result, both our organization and our customers have fallen victim to a cyber attack. The origin and methods of this breach remain unknown. Numerous suspicious emails have been detected. In our pursuit of resolution, As an expert forensics investigator, you must be able to help us.</p>
 
 ## STEPS:
 1. sadas
