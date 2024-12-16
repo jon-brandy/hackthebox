@@ -18,7 +18,7 @@
 10. Using `Registry Explorer` to review registry hives, identify dirty log, and create clean hive from transaction logs.
 11. Using `FTK Imager` to review acquisitioned disk.
 12. Conducted small e-mail forensic for phishing mail.
-13. Using `EvtxEcmd.exe` to parse windows powershell event logs to csv.
+13. Using `EvtxEcmd.exe` to parse windows powershell and powershell operational event logs to csv.
 14. Using `Timeline Explorer` to review csv file. 
    
 ## SCENARIO:
