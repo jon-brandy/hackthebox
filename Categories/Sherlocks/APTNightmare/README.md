@@ -13,7 +13,13 @@
 <p align="justify">We neglected to prioritize the robust security of our network and servers, and as a result, both our organization and our customers have fallen victim to a cyber attack. The origin and methods of this breach remain unknown. Numerous suspicious emails have been detected. In our pursuit of resolution, As an expert forensics investigator, you must be able to help us.</p>
 
 ## STEPS:
-1. sadas
+1. In this case, we are tasked with investigating a cybersecurity breach, the origin and methods of which are still unknown. However, it is known that numerous suspicious emails have been detected.In this case, we are tasked with investigating a cybersecurity breach, the origin and methods of which are still unknown. However, it is known that numerous suspicious emails have been detected.
+2. As a forensic investigator we are given 4 files which we need to analyze. There are 2 acquisitioned data (disk and RAM), a captured network file, and an ubuntu profile. 
+
+![image](https://github.com/user-attachments/assets/c2052eeb-b267-4b61-b857-705f541416d1)
+
+
+3. Based from the file naming, we can indicate the infected device is the CEO's and the captured RAM is from the web server.
 
 > 1ST QUESTION --> ANS:
 
