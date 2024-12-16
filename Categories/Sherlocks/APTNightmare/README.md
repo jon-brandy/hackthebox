@@ -6,8 +6,18 @@
 
 
 ## Lessons Learned:
-1. sdasd
-
+1. Analyzed packet capture file using `wireshark`.
+2. Reviewing nmap activities and identified open ports. (using small `wireshark` foo).
+3. Identifying DNS Zone Transfer Activity and compromised subdomain along with credentials used by the threat actor.
+4. Using `volatility` to analyze memory dump from a web server (using ubuntu profile).
+5. Using `wireshark` and `volatility` to identify command used by the attacker to gain initial access and what binary is used for privilege escalation.
+6. Correlated the technique used with MITRE framewoirk.
+7. Using `regripper` to parse common registry hives.
+8. Using `LECmd.exe` to analyze **.lnk** files.
+9. Using `Registry Explorer` to review registry hives.
+10. Using `FTK Imager` to review acquisitioned disk.
+11. Conducted small e-mail forensic for phishing mail.
+   
 ## SCENARIO:
 
 <p align="justify">We neglected to prioritize the robust security of our network and servers, and as a result, both our organization and our customers have fallen victim to a cyber attack. The origin and methods of this breach remain unknown. Numerous suspicious emails have been detected. In our pursuit of resolution, As an expert forensics investigator, you must be able to help us.</p>
