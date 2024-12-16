@@ -19,7 +19,10 @@
 11. Using `FTK Imager` to review acquisitioned disk.
 12. Conducted small e-mail forensic for phishing mail.
 13. Using `EvtxEcmd.exe` to parse windows powershell and powershell operational event logs to csv.
-14. Using `Timeline Explorer` to review csv file. 
+14. Using `Timeline Explorer` to review csv file.
+15. Using `cyberchef` to decode encoded powershell command (formula used --> from base64 and gunzip). Afterwards using formula (from base64 and xor 35 decimal with null preserving).
+16. Identifying threat label using virus total.
+17. Identifying cobalt strike payload type.
    
 ## SCENARIO:
 
