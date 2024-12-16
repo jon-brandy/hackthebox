@@ -14,7 +14,7 @@
 6. Correlated the technique used with MITRE framewoirk.
 7. Using `regripper` to parse common registry hives.
 8. Using `LECmd.exe` to analyze **.lnk** files.
-9. Using `Registry Explorer` to review registry hives.
+9. Using `Registry Explorer` to review registry hives, identify dirty log, and create clean hive from transaction logs.
 10. Using `FTK Imager` to review acquisitioned disk.
 11. Conducted small e-mail forensic for phishing mail.
    
