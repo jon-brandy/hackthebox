@@ -10,7 +10,7 @@
 2. Reviewing nmap activities and identified open ports. (using small `wireshark` foo).
 3. Identifying DNS Zone Transfer Activity and compromised subdomain along with credentials used by the threat actor.
 4. Using `volatility` to analyze memory dump from a web server (using ubuntu profile).
-5. Using `wireshark` and `volatility` to identify command used by the attacker to gain initial access and what binary is used for privilege escalation.
+5. Using `wireshark` and `volatility` to identify command used by the attacker to gain initial access to the web server and what binary is used for privilege escalation.
 6. Correlated the technique used with MITRE framewoirk.
 7. Using `regripper` to parse common registry hives.
 8. Using `LECmd.exe` to analyze **.lnk** files.
