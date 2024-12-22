@@ -426,6 +426,15 @@ for /r %i in (*) do (C:\Tools\RegRipper\RegRipper4.0-main\rip.exe -r %i -a > %i.
 
 ![image](https://github.com/user-attachments/assets/a4af985a-f577-46e4-a2dd-d6dcb0a78970)
 
+![image](https://github.com/user-attachments/assets/f393b03b-d8cb-4a5f-bae8-28dd18f1228f)
+
+
+61. However, again! Still did not give us any clue what is the content of this file. Upon shifting our focus to another execution artifacts --> `prefetch file`. Found a powershell.exe prefetch file.
+
+![image](https://github.com/user-attachments/assets/a4acbd17-eadc-4864-915f-09d8186d771f)
+
+
+62. Let's analyze it using 
 
 > 17TH QUESTION --> ANS:
 
