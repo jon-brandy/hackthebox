@@ -58,10 +58,15 @@
 
 ![image](https://github.com/user-attachments/assets/06817fd6-2ffe-41ca-b23a-7bb05b7ca207)
 
-8. Further analysis of the source IP behavior, we can identified several suspicious request from it. This raise a concern regarding an incoming threat.
+8. Further analysis of the source IP behavior, we can identified several suspicious request from it. This raise a concern regarding an incoming threat --> web scanning activity.
 
 ![image](https://github.com/user-attachments/assets/f54b9957-8006-4050-a0d2-70fe7bb74a7f)
 
+![image](https://github.com/user-attachments/assets/3e5bc71c-dd3f-45c1-9bcf-e2a79b287713)
+
+
+9. Awesome! Now to make sure whether this is the compromised web server, let's identify web request that resulting to response code 200.
+10. 
 
 > 2ND QUESTION --> ANS:
 
