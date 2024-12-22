@@ -48,7 +48,20 @@
 ![image](https://github.com/user-attachments/assets/7dfc76a5-ebde-4733-b4a6-3a2ce4b21c4c)
 
 
-5. 
+5. Upon checking IP addresses with the most activity, we should noticed top 3 IP address with the most activity.
+
+![image](https://github.com/user-attachments/assets/fabb3d8c-f064-4927-b255-cbf26bb5445a)
+
+
+6. We can start reviewing activity from those 3 IP. But let's start by reviewing activity from source IP `192.168.1.5` and destination IP `192.168.1.3`.
+7. Noticed that mostly IP `192.168.1.5` is requesting resource to `192.168.1.3`. This could indicate that `192.168.1.3` is a web server.
+
+![image](https://github.com/user-attachments/assets/06817fd6-2ffe-41ca-b23a-7bb05b7ca207)
+
+8. Further analysis of the source IP behavior, we can identified several suspicious request from it. This raise a concern regarding an incoming threat.
+
+![image](https://github.com/user-attachments/assets/f54b9957-8006-4050-a0d2-70fe7bb74a7f)
+
 
 > 2ND QUESTION --> ANS:
 
