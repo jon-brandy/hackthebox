@@ -221,12 +221,21 @@ It is crucial to use flag sort first before uniq.
 ![image](https://github.com/user-attachments/assets/480fc1ef-85b6-4bee-8945-0960025f6b6d)
 
 
-> 12TH QUESTION --> ANS:
+> 12TH QUESTION --> ANS: `T1195.002`.
 
 ![image](https://github.com/user-attachments/assets/f42f9999-8f00-4894-a4d3-1648b6e51612)
 
 
-> 13TH QUESTION --> ANS:
+31. Reviewing the packet stream again, the threat actor's changed several binaries at the download directory along with the **debian package** file.
+
+![image](https://github.com/user-attachments/assets/7727ade2-334c-4c80-ba12-1e52ed0cafca)
+
+32. This activity is what called as **Supply Chain Attack**. In MITRE, the technique discussing this is documented as ID `T1195.002`.
+
+![image](https://github.com/user-attachments/assets/efe8659b-76a6-4cbe-80f1-fa4cb3fc2656)
+
+
+> 13TH QUESTION --> ANS: ``
 
 ![image](https://github.com/user-attachments/assets/8b7fe429-49b7-4edc-8eac-600c7e855a0d)
 
