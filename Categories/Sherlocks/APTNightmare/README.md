@@ -166,9 +166,18 @@ It is crucial to use flag sort first before uniq.
 
 
 
-> 8TH QUESTION --> ANS:
+> 8TH QUESTION --> ANS: `admin@cs-corp.cd:Pass@000_`
 
 ![image](https://github.com/user-attachments/assets/8ccab98f-94b0-49ef-84a6-9f478c1db49f)
+
+
+25. Remember one behavior of a web server once a correct credential is passed at a login page. The user shall gets redirected right? Hence we just need to filter activity from the threat actor's IP and filter for response code **302**.
+
+![image](https://github.com/user-attachments/assets/90753336-2135-471b-b33b-3fb3d28394c3)
+
+26. Following the http stream, we can identified the credential used by the threat actor to login. It is --> `admin@cs-corp.cd:Pass@000_`
+
+![image](https://github.com/user-attachments/assets/fe2e53f6-cbf7-4041-a8af-c714af629887)
 
 
 > 9TH QUESTION --> ANS:
