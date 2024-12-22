@@ -438,7 +438,14 @@ for /r %i in (*) do (C:\Tools\RegRipper\RegRipper4.0-main\rip.exe -r %i -a > %i.
 ![image](https://github.com/user-attachments/assets/b3ff88e0-fd1a-4a51-8f1c-28680e0a5ff9)
 
 
-> Reviewing PE
+> PECmd.exe result
+
+![image](https://github.com/user-attachments/assets/a9dab299-dbb1-4ce1-958d-bdc69de3145a)
+
+
+63. After executed `PECmd.exe` binary on prefetch file, found interesting result where a powershell file and powershell module gets executed under `CEO-US` user.
+64. 
+
 
 > 17TH QUESTION --> ANS:
 
