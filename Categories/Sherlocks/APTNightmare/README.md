@@ -387,7 +387,7 @@ knowing we already got what we're looking for now.
 ![image](https://github.com/user-attachments/assets/54da7753-b737-45d2-a4d6-bec4d26bf3c0)
 
 
-55. Anyway, since the file is accessed, then we can check the sysmon log to identify it's content or even we can start by playing with `$MFT` file and carve from `$DATA` attribute.
+55. Anyway, since the file is accessed, then we can check the sysmon log to identify it's content or even we can start by playing with `$MFT` file and carve from `$DATA` attribute (very unlikely for this case).
 56. Let's play simple by parsing the event log file using `EvtxEcmd.exe` and view the parsed csv file with `Timeline Explorer`.
 57. Sadly, we did not have sysmon event log here, this leaves us to no clue what could be inside of `policy.docm` file.
 
