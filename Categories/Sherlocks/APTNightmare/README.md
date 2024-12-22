@@ -130,9 +130,18 @@ It is crucial to use flag sort first before uniq.
 ![image](https://github.com/user-attachments/assets/dd13f059-4252-43f5-b9f7-d4398f4e9a21)
 
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: DNS Zone Transfers
 
 ![image](https://github.com/user-attachments/assets/f3184f83-beba-41ac-b0a5-361520d9114c)
+
+
+21. A misconfiguration which allows the threat actor to enumerate all subdomains, is called **DNS Zone Transfers**. We can identify this activity by **AXFR** packets. AXFR (Full Zone Transfers) is a protocol that transfers an entire DNS zone file from one DNS server to another.
+22. We can verify this by reviewing the packet data.
+
+![image](https://github.com/user-attachments/assets/b2202941-3f0a-46ce-afa7-ddbb22eb2271)
+
+
+![image](https://github.com/user-attachments/assets/e11fb748-5d08-4109-adf8-d9a19e32abd3)
 
 
 > 6TH QUESTION --> ANS:
