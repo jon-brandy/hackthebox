@@ -38,7 +38,7 @@
 
 3. Based from the file naming, we can indicate the infected device is the CEO's and the captured RAM is from the web server.
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: `192.168.1.3`
 
 ![image](https://github.com/user-attachments/assets/b9b4dc1d-29c7-4ca7-9f54-403e7cca76ce)
 
@@ -66,7 +66,10 @@
 
 
 9. Awesome! Now to make sure whether this is the compromised web server, let's identify web request that resulting to response code 200.
-10. 
+
+![image](https://github.com/user-attachments/assets/d0bac3b5-b393-4b36-ad14-094dd220e586)
+
+10. Interesting! We found a local privilege escalation attempt inside the web server **already**. This stage is after the exploitation then, the attacker already gained initial access. This is enough to conclude that IP `192.168.1.3` is the compromised web server.
 
 > 2ND QUESTION --> ANS:
 
