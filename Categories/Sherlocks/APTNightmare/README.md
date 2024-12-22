@@ -282,6 +282,46 @@ dpkg-deb -x cs-linux.deb .
 ![image](https://github.com/user-attachments/assets/f8bb72f2-a79d-41f4-9f25-53a027dd8a21)
 
 
+37. Now let's shift our focus to analyze the acquisitioned web server's RAM using volatility. Don't forget to import or copy the ubuntu zip profile given to volatility linux profile table.
+
+![image](https://github.com/user-attachments/assets/799ac070-63b7-4ecb-9650-f717fe7d59b1)
+
+
+38. Next to check and use the profile, we can execute this command:
+
+```
+volatility --info
+```
+
+![image](https://github.com/user-attachments/assets/26e1d332-c3ca-4645-be39-bf5bd55c45d6)
+
+
+39. Awesome! It is known that the threat actor sent phish email to the victim through the web server. Now let's start by reviewing command line history or process running during the acquisition to identify any suspicious command line or process.
+
+> REVIEWING COMMAND LINE HISTORY:
+
+```
+sudo python2 /opt/volatility/vol.py -f Memory_WebServer.mem --profile=LinuxUbuntu_5_3_0-70-generic_profilex64 linux_bash
+```
+
+40. Awesome, we can see all bash history of the threat actor's activity.
+
+![image](https://github.com/user-attachments/assets/74d7a1f9-1ee5-4c8a-a6dd-0265283c3741)
+
+
+41. However, noticed that the threat actor attempted to remove and tamper with the `.bash_history` file. However I did not find any interesting info here.
+
+![image](https://github.com/user-attachments/assets/2e748846-ce17-44c6-bdc4-ed08d5d42a7b)
+
+
+42. Moving on to check what processes are running during the acquisition process, found a **citserver** is running.
+
+![image](https://github.com/user-attachments/assets/3c367d8b-f697-4e0b-a089-8add445d0495)
+
+
+43. **Citserver** provides Data-storage and Connection-oriented protocols like IMAP/POP/SMTP. Which is a protocol for e-mail.
+
+
 > 15TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/01cc74a3-9c67-46a4-bb5d-e951f055057f)
