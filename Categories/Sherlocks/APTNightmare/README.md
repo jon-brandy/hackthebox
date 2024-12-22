@@ -12,18 +12,19 @@
 4. Using `volatility` to analyze memory dump from a web server (using ubuntu profile).
 5. Using `wireshark` and `volatility` to identify command used by the attacker to gain initial access to the web server and what binary is used for privilege escalation.
 6. Correlated the technique used with MITRE framework.
-7. Using `regripper` to parse common registry hives.
-8. Identifying and review program execution artifacts.
-9. Using `LECmd.exe` to analyze **.lnk** files.
-10. Using `Registry Explorer` to review registry hives, identify dirty log, and create clean hive from transaction logs.
-11. Using `FTK Imager` to review acquisitioned disk.
-12. Conducted small e-mail forensic for phishing mail.
-13. Using `EvtxEcmd.exe` to parse windows powershell and powershell operational event logs to csv.
-14. Using `Timeline Explorer` to review csv file.
-15. Using `cyberchef` to decode encoded powershell command (formula used --> from base64 and gunzip). Afterwards using formula (from base64 and xor 35 decimal with null preserving).
-16. Identifying threat label using virus total.
-17. Analyzing cobalt strike beacon using `1768.py` script.
-18. Identifying new tasks created by the threat actor (persistence artifacts).
+7. Listing debian package and extract it's content using `dpkg`.
+8. Using `regripper` to parse common registry hives.
+9. Identifying and review program execution artifacts.
+10. Using `LECmd.exe` to analyze **.lnk** files.
+11. Using `Registry Explorer` to review registry hives, identify dirty log, and create clean hive from transaction logs.
+12. Using `FTK Imager` to review acquisitioned disk.
+13. Conducted small e-mail forensic for phishing mail.
+14. Using `EvtxEcmd.exe` to parse windows powershell and powershell operational event logs to csv.
+15. Using `Timeline Explorer` to review csv file.
+16. Using `cyberchef` to decode encoded powershell command (formula used --> from base64 and gunzip). Afterwards using formula (from base64 and xor 35 decimal with null preserving).
+17. Identifying threat label using virus total.
+18. Analyzing cobalt strike beacon using `1768.py` script.
+19. Identifying new tasks created by the threat actor (persistence artifacts).
    
 ## SCENARIO:
 
@@ -238,6 +239,21 @@ It is crucial to use flag sort first before uniq.
 > 13TH QUESTION --> ANS: ``
 
 ![image](https://github.com/user-attachments/assets/8b7fe429-49b7-4edc-8eac-600c7e855a0d)
+
+
+33. To analyze debian file package we can utilize `dpkg` binary without using the package directly. Before that let's export the debian file from the pcap file.
+
+![image](https://github.com/user-attachments/assets/96295270-0908-434e-a8e1-227bdbe55127)
+
+
+34. Afterwards, let's list what's inside the debian package.
+
+> COMMAND
+
+```
+
+```
+
 
 
 > 14TH QUESTION --> ANS:
