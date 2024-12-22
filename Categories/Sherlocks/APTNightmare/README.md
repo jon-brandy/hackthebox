@@ -354,7 +354,7 @@ sudo python2 /opt/volatility/vol.py -f Memory_WebServer.mem --profile=LinuxUbunt
 
 
 49. Based on our previous finding, it is quite clear that **.docm** file should be our interest. However there is another file with extension .txt but should not be our interest.
-50. To support our assumption, let's retrieve the .docm file from the acquisitioned disk. Let's use FTK Imager to review it
+50. To support our assumption, let's retrieve the .docm file from the acquisitioned disk. Let's use FTK Imager to review it.
 
 > Using FTK Imager
 
@@ -393,6 +393,29 @@ knowing we already got what we're looking for now.
 
 ![image](https://github.com/user-attachments/assets/bd2b1085-6ee8-43fe-b21c-68911b3d3cd1)
 
+58. However I started to parse each common registry hives using regripper and indeed found and don't forget that you can detect dirty log and create the updated one by combining each transaction log using `registry explorer`.
+
+> COMMON REGISTRY HIVE PARSED
+
+```
+- NTSUSER.dat
+- SECURITY.DAT
+- SOFTWARE.DAT
+- SYSTEM.DAT
+- UsrClass.dat
+- DEFAULT.DAT
+```
+
+> Evidence regarding detecting dirty log and combining transaction log.
+
+![image](https://github.com/user-attachments/assets/2757e1aa-e10f-464f-acfb-19de4cec36ad)
+
+![image](https://github.com/user-attachments/assets/e040100f-dac0-4485-8ebe-3d7508b6314c)
+
+![image](https://github.com/user-attachments/assets/7682aef4-1865-438a-8bbf-9cf46668ab31)
+
+
+59. Long story short, 
 
 > 17TH QUESTION --> ANS:
 
