@@ -78,7 +78,7 @@
 
 11. Based on our previous analysis, we can conclude that the attacker IP is `192.168.1.5`.
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: 14
 
 ![image](https://github.com/user-attachments/assets/d1af8af5-47ee-47a4-a4ea-951a69d446c3)
 
@@ -106,7 +106,18 @@ It is crucial to use flag sort first before uniq.
 
 ![image](https://github.com/user-attachments/assets/244eb876-3152-4e22-830b-e4725f08d790)
 
-17. Turns out it's from the reverse shell attempted by the threat actor.
+17. Turns out it's from the reverse shell attempted by the threat actor. Found the attempt after filtering for POST request method usage. Anyway you shall find several SQLi attempt (blind and error-based), but this one is interesting. A reverse shell attempt at **dashboard.php**. So at this point the attacker seems logged in to the dashboard page.
+
+![image](https://github.com/user-attachments/assets/24f6beeb-61d6-4325-abed-b2c0ff78c7a9)
+
+
+> Decoded URL
+
+![image](https://github.com/user-attachments/assets/52f46657-563e-4277-9b42-8924623c3d1c)
+
+
+18. Correlating with our previous **pwnkit** binary execution, hence it indicate the reverse shell attempt is success, hence this trigger port 5555 to get **SYN/ACK** flag.
+19. Now this conclude the identified open port is **14**.
 
 
 > 4TH QUESTION --> ANS:
