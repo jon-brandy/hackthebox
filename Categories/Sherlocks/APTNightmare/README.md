@@ -7,7 +7,7 @@
 
 ## Lessons Learned:
 1. Analyzed packet capture file using `wireshark`.
-2. Reviewing nmap activities and identified open ports. (using small `wireshark` foo).
+2. Reviewing nmap activities and identified open ports. (using small `tshark` foo).
 3. Identifying DNS Zone Transfer Activity and compromised subdomain along with credentials used by the threat actor.
 4. Using `volatility` to analyze memory dump from a web server (using ubuntu profile).
 5. Using `wireshark` and `volatility` to identify command used by the attacker to gain initial access to the web server and what binary is used for privilege escalation.
@@ -82,6 +82,20 @@
 
 ![image](https://github.com/user-attachments/assets/d1af8af5-47ee-47a4-a4ea-951a69d446c3)
 
+
+12. To identify open ports that identified by the threat actor, we can simply filter for communications between the threat actor's IP and the web server's IP but with `SYN/ACK` flag.
+13. **SYN/ACK** flag indicate that the web server responded with the SYN flag --> indicate the port that used to communicate is found by the web server).
+14. To simplify things, I used `tshark` and a small filter.
+
+> COMMAND:
+
+```
+tshark -r traffic.pcapng -Y "ip.src == 192.168.1.3 && ip.dst == 192.168.1.5 && tcp.flags.syn == 1 && tcp.flags.ack == 1" -T fields -e tcp.srcport | sort -n | uniq
+
+It is crucial to use flag sort first before uniq.
+```
+
+![image](https://github.com/user-attachments/assets/16d19c14-9c27-428b-bc77-90d78de2ac49)
 
 
 > 4TH QUESTION --> ANS:
