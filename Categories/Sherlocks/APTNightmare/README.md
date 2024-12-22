@@ -120,9 +120,14 @@ It is crucial to use flag sort first before uniq.
 19. Now this conclude the identified open port is **14**.
 
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: 25,53,80,110,119
 
 ![image](https://github.com/user-attachments/assets/97cf7841-c653-4443-9024-8c0e7e333969)
+
+
+20. Again, based on previous identified port, since it's already sorted, hence we can identified the top 5 are `25,53,80,110,119`.
+
+![image](https://github.com/user-attachments/assets/dd13f059-4252-43f5-b9f7-d4398f4e9a21)
 
 
 > 5TH QUESTION --> ANS:
