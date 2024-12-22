@@ -171,7 +171,7 @@ It is crucial to use flag sort first before uniq.
 ![image](https://github.com/user-attachments/assets/8ccab98f-94b0-49ef-84a6-9f478c1db49f)
 
 
-25. Remember one behavior of a web server once a correct credential is passed at a login page. The user shall gets redirected right? Hence we just need to filter activity from the threat actor's IP and filter for response code **302**.
+25. Remember one behavior of a web server once a correct credential is passed at a login page. The user shall gets redirected to the dashboard page right? Hence we just need to filter activity from the threat actor's IP and filter for response code **302**.
 
 ![image](https://github.com/user-attachments/assets/90753336-2135-471b-b33b-3fb3d28394c3)
 
@@ -206,9 +206,19 @@ It is crucial to use flag sort first before uniq.
 
 
 
-> 11TH QUESTION --> ANS:
+> 11TH QUESTION --> ANS: `T1053.003`
 
 ![image](https://github.com/user-attachments/assets/c1cfa667-dbea-46a1-bfb7-a75a8284d5f4)
+
+
+30. Further analysis, found an attempt to replace crontab file with the forged one. Crontab is a configuration file that schedules and automate tasks in Unix-like OS.
+
+![image](https://github.com/user-attachments/assets/9626c141-4a3b-49c4-b12d-fd46c3c46225)
+
+
+31. Searching on the internet regarding mitre technique related to persistence mechanisms using scheduled task using cron shall resulting to --> `T1053.003`.
+
+![image](https://github.com/user-attachments/assets/480fc1ef-85b6-4bee-8945-0960025f6b6d)
 
 
 > 12TH QUESTION --> ANS:
