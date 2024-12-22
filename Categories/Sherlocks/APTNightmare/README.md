@@ -348,7 +348,7 @@ sudo python2 /opt/volatility/vol.py -f Memory_WebServer.mem --profile=LinuxUbunt
 ![image](https://github.com/user-attachments/assets/af646aec-cf79-4713-991a-d5068357c405)
 
 
-> 16TH QUESTION --> ANS:
+> 16TH QUESTION --> ANS: `policy.docm`
 
 ![image](https://github.com/user-attachments/assets/96e7114c-f2a0-4f85-bbeb-7b3df5826fb4)
 
@@ -422,12 +422,10 @@ for /r %i in (*) do (C:\Tools\RegRipper\RegRipper4.0-main\rip.exe -r %i -a > %i.
 ```
 
 59. Later on, the command above shall resulting to each hives have their own .txt file which contains information regarding regripper plugin (help us to gather information without drill down each hives directory at registy explorer).
-60. Long story short, found that both regripper and registr explorer stated that `policy.docm` file indeed accessed.
+60. Long story short, found that both `regripper` and `registry explorer` stated that `policy.docm` file indeed accessed, this proved the efficiency of `regripper` for DFIR.
 
 ![image](https://github.com/user-attachments/assets/a4af985a-f577-46e4-a2dd-d6dcb0a78970)
 
-
-59. Long story short, 
 
 > 17TH QUESTION --> ANS:
 
