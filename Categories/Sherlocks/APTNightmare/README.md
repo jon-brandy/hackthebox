@@ -43,6 +43,13 @@
 ![image](https://github.com/user-attachments/assets/b9b4dc1d-29c7-4ca7-9f54-403e7cca76ce)
 
 
+4. The easiest way to identify the IP address of the infected web server is by analyzing the pcap file. Because the network activity is already captured, hence it should be easier for us.
+
+![image](https://github.com/user-attachments/assets/7dfc76a5-ebde-4733-b4a6-3a2ce4b21c4c)
+
+
+5. 
+
 > 2ND QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/e47b56d0-f619-42c4-bab1-977d75b13d12)
