@@ -144,14 +144,26 @@ It is crucial to use flag sort first before uniq.
 ![image](https://github.com/user-attachments/assets/e11fb748-5d08-4109-adf8-d9a19e32abd3)
 
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: 9
 
 ![image](https://github.com/user-attachments/assets/7ea00737-7d18-4ef0-97ff-74c3e97c2b4f)
 
 
-> 7TH QUESTION --> ANS:
+23. Based on previous findings, it is clear that the threat actor identified **9** subdomains.
+
+![image](https://github.com/user-attachments/assets/165eb008-2ba4-449d-8595-f9b3ba89a30b)
+
+
+> 7TH QUESTION --> ANS: `sysmon.cs-corp.cd`
 
 ![image](https://github.com/user-attachments/assets/72b71a83-cf42-4cc9-b82c-c038753ea294)
+
+
+24. To identify the compromised subdomain, simply check the request header of previous reverse shell attempt. It is `sysmon.cs-corp.cd`
+
+![image](https://github.com/user-attachments/assets/12e218e9-ffec-40bc-9c0e-1f45d88ee3fc)
+
+
 
 
 > 8TH QUESTION --> ANS:
