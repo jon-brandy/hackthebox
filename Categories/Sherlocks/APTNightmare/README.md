@@ -195,6 +195,12 @@ It is crucial to use flag sort first before uniq.
 ![image](https://github.com/user-attachments/assets/d7178191-3ed0-454c-b735-8dcd1969fcc6)
 
 
+28. Again, refer back to our previous finding, we identified **pwnkit** execution. It is a binary used to do privilege escalation at linux environment.
+
+![image](https://github.com/user-attachments/assets/9a9774cc-ff89-47f7-b11d-5816d12f945a)
+
+29. Searching on the internet regarding technique ID that mentioned privilege escalation operation using binary, resulting to --> 
+
 > 11TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/c1cfa667-dbea-46a1-bfb7-a75a8284d5f4)
@@ -263,5 +269,6 @@ It is crucial to use flag sort first before uniq.
 ## IMPORTANT LINKS:
 
 ```
-
+https://www.acunetix.com/blog/articles/dns-zone-transfers-axfr/
+https://github.com/ly4k/PwnKit
 ```
