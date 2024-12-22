@@ -19,12 +19,14 @@
 11. Using `Registry Explorer` to review registry hives, identify dirty log, and create clean hive from transaction logs.
 12. Using `FTK Imager` to review acquisitioned disk.
 13. Conducted small e-mail forensic for phishing mail.
-14. Using `EvtxEcmd.exe` to parse windows powershell and powershell operational event logs to csv.
-15. Using `Timeline Explorer` to review csv file.
-16. Using `cyberchef` to decode encoded powershell command (formula used --> from base64 and gunzip). Afterwards using formula (from base64 and xor 35 decimal with null preserving).
-17. Identifying threat label using virus total.
-18. Analyzing cobalt strike beacon using `1768.py` script.
-19. Identifying new tasks created by the threat actor (persistence artifacts).
+14. Using `PECmd.exe` to analyze prefetch file.
+15. Using `MFTExplorer.exe` to parse and analyze raw $MFT file. 
+16. Using `EvtxEcmd.exe` to parse windows powershell and powershell operational event logs to csv.
+17. Using `Timeline Explorer` to review csv file.
+18. Using `cyberchef` to decode encoded powershell command (formula used --> from base64 and gunzip). Afterwards using formula (from base64 and xor 35 decimal with null preserving).
+19. Identifying threat label using virus total.
+20. Analyzing cobalt strike beacon using `1768.py` script.
+21. Identifying new tasks created by the threat actor (persistence artifacts).
    
 ## SCENARIO:
 
