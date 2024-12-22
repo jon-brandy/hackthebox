@@ -190,7 +190,7 @@ It is crucial to use flag sort first before uniq.
 ![image](https://github.com/user-attachments/assets/b4cf6f17-6002-470c-aa12-bcc81a57c04f)
 
 
-> 10TH QUESTION --> ANS: 
+> 10TH QUESTION --> ANS: `CVE-2021-4034`
 
 ![image](https://github.com/user-attachments/assets/d7178191-3ed0-454c-b735-8dcd1969fcc6)
 
@@ -199,7 +199,12 @@ It is crucial to use flag sort first before uniq.
 
 ![image](https://github.com/user-attachments/assets/9a9774cc-ff89-47f7-b11d-5816d12f945a)
 
-29. Searching on the internet regarding technique ID that mentioned privilege escalation operation using binary, resulting to --> 
+29. Searching on the internet regarding CVE ID related to pwnkit, resulting to several article mentioning --> `CVE-2021-4034`. Here is one of them:
+
+
+![image](https://github.com/user-attachments/assets/5bd6c2ee-c387-45b4-bace-373898ce9625)
+
+
 
 > 11TH QUESTION --> ANS:
 
@@ -271,4 +276,5 @@ It is crucial to use flag sort first before uniq.
 ```
 https://www.acunetix.com/blog/articles/dns-zone-transfers-axfr/
 https://github.com/ly4k/PwnKit
+https://blog.qualys.com/vulnerabilities-threat-research/2022/01/25/pwnkit-local-privilege-escalation-vulnerability-discovered-in-polkits-pkexec-cve-2021-4034
 ```
