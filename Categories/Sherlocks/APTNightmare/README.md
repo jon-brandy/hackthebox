@@ -326,12 +326,12 @@ sudo python2 /opt/volatility/vol.py -f Memory_WebServer.mem --profile=LinuxUbunt
 
 45. Based on the command above, it supports our speculation. **Citserver** should be the process executed to send phish email to server.
 
-> 15TH QUESTION --> ANS:
+> 15TH QUESTION --> ANS: `Review Revised Privacy Policy`.
 
 ![image](https://github.com/user-attachments/assets/01cc74a3-9c67-46a4-bb5d-e951f055057f)
 
 
-46. To identify the e-mail phishing subject, I strings the memory dump and search for **subject**. This should be not the intended way btw 🙏🏻, I used a cheat way to identify the subject easily. Remembering the victim given an attachment, hence simply filter for `attachment; filename`.
+46. To identify the e-mail phishing subject, I strings the memory dump and search for **subject**. This should be not the intended way btw 🙏🏻, I used a cheat way to identify the subject easily. Remembering the victim given an attachment, hence simply filter for `attachment; filename` and `Subjects: `.
 
 > RESULT
 
@@ -343,9 +343,28 @@ sudo python2 /opt/volatility/vol.py -f Memory_WebServer.mem --profile=LinuxUbunt
 ![image](https://github.com/user-attachments/assets/baa7df50-4e82-4529-bffb-326ab3547c14)
 
 
+48. Anyway here's the result for **Subjects: ** search. We identified the e-mail subject.
+
+![image](https://github.com/user-attachments/assets/af646aec-cf79-4713-991a-d5068357c405)
+
+
 > 16TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/96e7114c-f2a0-4f85-bbeb-7b3df5826fb4)
+
+
+49. Based on our previous finding, it is quite clear that **.docm** file should be our interest. However there is another file with extension .txt but should not be our interest.
+50. To support our assumption, let's retrieve the .docm file from the acquisitioned disk.
+
+#### NOTES:
+
+```
+At this rate, I don't think using plaso to create not so super timeline is necessary,
+knowing we already got what we're looking for now. 
+```
+
+51. Let's use FTK Imager to retrieve the .docm file.
+
 
 
 > 17TH QUESTION --> ANS:
