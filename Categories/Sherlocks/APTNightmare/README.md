@@ -415,6 +415,18 @@ knowing we already got what we're looking for now.
 ![image](https://github.com/user-attachments/assets/7682aef4-1865-438a-8bbf-9cf46668ab31)
 
 
+> COMMAND TO PARSE REGISTRY HIVE USING REGRIPPER.EXE
+
+```
+for /r %i in (*) do (C:\Tools\RegRipper\RegRipper4.0-main\rip.exe -r %i -a > %i.txt)
+```
+
+59. Later on, the command above shall resulting to each hives have their own .txt file which contains information regarding regripper plugin (help us to gather information without drill down each hives directory at registy explorer).
+60. Long story short, found that both regripper and registr explorer stated that `policy.docm` file indeed accessed.
+
+![image](https://github.com/user-attachments/assets/a4af985a-f577-46e4-a2dd-d6dcb0a78970)
+
+
 59. Long story short, 
 
 > 17TH QUESTION --> ANS:
