@@ -236,7 +236,7 @@ It is crucial to use flag sort first before uniq.
 ![image](https://github.com/user-attachments/assets/efe8659b-76a6-4cbe-80f1-fa4cb3fc2656)
 
 
-> 13TH QUESTION --> ANS: ``
+> 13TH QUESTION --> ANS: `echo cs-linux && >> ~/.bashrc`
 
 ![image](https://github.com/user-attachments/assets/8b7fe429-49b7-4edc-8eac-600c7e855a0d)
 
@@ -248,11 +248,32 @@ It is crucial to use flag sort first before uniq.
 
 34. Afterwards, let's list what's inside the debian package.
 
-> COMMAND
+> COMMAND:
 
 ```
+dpkg -c cs-linux.deb
+```
+
+![image](https://github.com/user-attachments/assets/061d900a-6bc2-40b2-987e-74e5e326d9b8)
+
+
+35. Seems our interest should be at inside the **/bin/** directory. Let's extract it's content now.
+
+> COMMAND:
 
 ```
+dpkg-deb -x cs-linux.deb .
+```
+
+![image](https://github.com/user-attachments/assets/01f0c01f-f0d6-4101-a914-338c918d90da)
+
+
+36. Interesing! It is a python script file. Decoding the base64 text shall give us the persistence command used by the threat actor inside the forged debian package.
+
+![image](https://github.com/user-attachments/assets/959f5982-d2cd-4fe3-8255-d5ecd951e251)
+
+
+![image](https://github.com/user-attachments/assets/74a71eab-f04c-4c77-b2a4-ddde44a64601)
 
 
 
