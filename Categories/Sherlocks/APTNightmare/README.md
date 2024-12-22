@@ -440,11 +440,45 @@ for /r %i in (*) do (C:\Tools\RegRipper\RegRipper4.0-main\rip.exe -r %i -a > %i.
 
 > PECmd.exe result
 
+```
+.\PECmd.exe -f "C:\Cases\APTN1ghtm4r3\DiskImage\C\Windows\prefetch\POWERSHELL.EXE-920BBA2A.pf"
+```
+
 ![image](https://github.com/user-attachments/assets/a9dab299-dbb1-4ce1-958d-bdc69de3145a)
 
 
 63. After executed `PECmd.exe` binary on prefetch file, found interesting result where a powershell file and powershell module gets executed under `CEO-US` user.
-64. 
+64. Next, If we parse the `$MFT` into `MFTExplorer.exe`, we shall get confirmation that there is no timestomping because `$SI` is not less than `$FN`. Also the timestamp is somewhat have small difference than the .LNK file.
+
+![image](https://github.com/user-attachments/assets/6e8c610b-4943-4a07-b169-a1d709921feb)
+
+
+65. For the final analysis, if we correlate the timestamp execution of this docm file with the `Windows Powershell` event log.
+
+```
+.\EvtxECmd.exe -f "C:\Cases\APTN1ghtm4r3\DiskImage\C\Windows\System32\winevt\logs\Windows PowerShell.evtx" --csv . --csvf "result-timeline.csv"
+
+Then review the csv file using timeline explorer.
+```
+
+![image](https://github.com/user-attachments/assets/3d6371ce-2722-482e-9841-03fc1e912789)
+
+
+```
+On LNK file:
+- Modified: 02:15:48
+- Last Access: 02:15:22
+
+On $MFT:
+- Modified: 02:15:47
+- Last Access: 02:15:22
+
+Malicious Powershell Script Execution:
+- Execution: 02:16:09
+```
+
+66. With every of this condition and timestamp, we can conclude that `policy.docm` is indeed the malicious file and contain powershell script which used to gain initial access at the victim machine.
+
 
 
 > 17TH QUESTION --> ANS:
