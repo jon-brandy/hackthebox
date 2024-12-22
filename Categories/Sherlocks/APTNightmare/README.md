@@ -71,14 +71,17 @@
 
 10. Interesting! We found a local privilege escalation attempt inside the web server **already**. This stage is after the exploitation then, the attacker already gained initial access. This is enough to conclude that IP `192.168.1.3` is the compromised web server.
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: `192.168.1.5`
 
 ![image](https://github.com/user-attachments/assets/e47b56d0-f619-42c4-bab1-977d75b13d12)
 
 
+11. Based on our previous analysis, we can conclude that the attacker IP is `192.168.1.5`.
+
 > 3RD QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/d1af8af5-47ee-47a4-a4ea-951a69d446c3)
+
 
 
 > 4TH QUESTION --> ANS:
