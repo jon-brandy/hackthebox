@@ -277,7 +277,7 @@ dpkg-deb -x cs-linux.deb .
 
 
 
-> 14TH QUESTION --> ANS:
+> 14TH QUESTION --> ANS: citserver
 
 ![image](https://github.com/user-attachments/assets/f8bb72f2-a79d-41f4-9f25-53a027dd8a21)
 
@@ -320,7 +320,11 @@ sudo python2 /opt/volatility/vol.py -f Memory_WebServer.mem --profile=LinuxUbunt
 
 
 43. **Citserver** provides Data-storage and Connection-oriented protocols like IMAP/POP/SMTP. Which is a protocol for e-mail.
+44. Nice! Let's gather the full commands of the process executed. In volatility2 we can use plugin **linux_psaux**.
 
+![image](https://github.com/user-attachments/assets/e11d1c4d-465f-4d03-b69a-831c695ee1a1)
+
+45. Based on the command above, it supports our speculation. **Citserver** should be the process executed to send phish email to server.
 
 > 15TH QUESTION --> ANS:
 
