@@ -90,12 +90,23 @@
 > COMMAND:
 
 ```
-tshark -r traffic.pcapng -Y "ip.src == 192.168.1.3 && ip.dst == 192.168.1.5 && tcp.flags.syn == 1 && tcp.flags.ack == 1" -T fields -e tcp.srcport | sort -n | uniq
+tshark -r traffic.pcapng -Y "ip.src == 192.168.1.3 && ip.dst == 192.168.1.5 && tcp.flags.syn == 1 && tcp.flags.ack == 1" -T fields -e tcp.srcport | sort -n | uniq -c
+tshark -r traffic.pcapng -Y "ip.src == 192.168.1.3 && ip.dst == 192.168.1.5 && tcp.flags.syn == 1 && tcp.flags.ack == 1" -T fields -e tcp.srcport | sort -n | uniq -c | wc -l
 
 It is crucial to use flag sort first before uniq.
 ```
 
-![image](https://github.com/user-attachments/assets/16d19c14-9c27-428b-bc77-90d78de2ac49)
+![image](https://github.com/user-attachments/assets/4127fa8b-8857-4458-9b99-9e541d8ec1c6)
+
+![image](https://github.com/user-attachments/assets/8bdb3caa-53e7-4b23-bf20-9ea7d067a704)
+
+
+15. Awesome! We found 15 unique IPs. However, after submit the answer, HTB stated that I've submitted wrong answer. Knowing this I start to check each ports identified to check whether the **SYN/ACK** flag indeed are coming from a nmap scan response.
+16. Long story short, found that port **5555** `SYN/ACK` response is not coming from the nmap scan.
+
+![image](https://github.com/user-attachments/assets/244eb876-3152-4e22-830b-e4725f08d790)
+
+17. Turns out it's from the reverse shell attempted by the threat actor.
 
 
 > 4TH QUESTION --> ANS:
