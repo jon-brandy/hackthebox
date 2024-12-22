@@ -354,7 +354,16 @@ sudo python2 /opt/volatility/vol.py -f Memory_WebServer.mem --profile=LinuxUbunt
 
 
 49. Based on our previous finding, it is quite clear that **.docm** file should be our interest. However there is another file with extension .txt but should not be our interest.
-50. To support our assumption, let's retrieve the .docm file from the acquisitioned disk.
+50. To support our assumption, let's retrieve the .docm file from the acquisitioned disk. Let's use FTK Imager to review it
+
+> Using FTK Imager
+
+![image](https://github.com/user-attachments/assets/e2e26d00-54a9-40a1-9220-97b1a81f1f7c)
+
+
+51. However, we found that **policy.docm** file seems removed but we can utilize one of **program execution artifacts** --> file with `.lnk` extension. This file is created or modified when certain programs or files are executed on a windows systems.
+
+![image](https://github.com/user-attachments/assets/bcfc8b22-9e73-48d0-b0a6-31d07bc8b130)
 
 #### NOTES:
 
@@ -363,7 +372,24 @@ At this rate, I don't think using plaso to create not so super timeline is neces
 knowing we already got what we're looking for now. 
 ```
 
-51. Let's use FTK Imager to retrieve the .docm file.
+52. Also noticed that we identified the victim username --> ceo-us.
+53. Now to analyze `.lnk` file we can use `LECmd.exe` tool.
+
+> COMMAND:
+
+```
+.\LECmd.exe -f "C:\Cases\APTN1ghtm4r3\DiskImage\policy.lnk"
+```
+
+54. We can retrieve much info regarding the file but sadly not the content of it. However, noticed that we identified the machine hostname, MFT entry, and file timestamp.
+
+
+![image](https://github.com/user-attachments/assets/54da7753-b737-45d2-a4d6-bec4d26bf3c0)
+
+
+55. Anyway, since the file is accessed, then we can check the sysmon log to identify it's content or even we can start by playing with `$MFT` file and carve from `$DATA` attribute.
+56. Anyway let's play simple by parsing the event log file using `EvtxEcmd.exe` and view the parsed csv file with `Timeline Explorer`.
+
 
 
 
