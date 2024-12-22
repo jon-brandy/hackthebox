@@ -331,6 +331,18 @@ sudo python2 /opt/volatility/vol.py -f Memory_WebServer.mem --profile=LinuxUbunt
 ![image](https://github.com/user-attachments/assets/01cc74a3-9c67-46a4-bb5d-e951f055057f)
 
 
+46. To identify the e-mail phishing subject, I strings the memory dump and search for **subject**. This should be not the intended way btw 🙏🏻, I used a cheat way to identify the subject easily. Remembering the victim given an attachment, hence simply filter for `attachment; filename`.
+
+> RESULT
+
+![image](https://github.com/user-attachments/assets/5565af00-0d03-44f7-b135-d3bdfdfbe352)
+
+
+47. Noticed that **Citadel** is mentioned again, our previous speculations indeed correct. Anyway, based on the text message, it seems the threat actor tricked the user by make the file attached seen as an updated privacy policy file that requires further review.
+
+![image](https://github.com/user-attachments/assets/baa7df50-4e82-4529-bffb-326ab3547c14)
+
+
 > 16TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/96e7114c-f2a0-4f85-bbeb-7b3df5826fb4)
