@@ -433,8 +433,12 @@ for /r %i in (*) do (C:\Tools\RegRipper\RegRipper4.0-main\rip.exe -r %i -a > %i.
 
 ![image](https://github.com/user-attachments/assets/a4acbd17-eadc-4864-915f-09d8186d771f)
 
+62. But before that, found interesting information at `NTUSER.DAT` hive at `UserAssist` plugin, it is known a **winword.exe** binary is executed (meaning a doc file is accessed), afterwards powershell.exe gets executed. This raise our suspicion and interest to review the **powershell.exe** prefetch file.
 
-62. Let's analyze it using 
+![image](https://github.com/user-attachments/assets/b3ff88e0-fd1a-4a51-8f1c-28680e0a5ff9)
+
+
+> Reviewing PE
 
 > 17TH QUESTION --> ANS:
 
