@@ -488,6 +488,9 @@ Malicious Powershell Script Execution:
 ![image](https://github.com/user-attachments/assets/4748107b-0a8e-4faf-9a50-a0188a15d1d1)
 
 
+67. Based on our previous analysis, we found one username of one of the CEO that received the malicious attachment. We identified "ceo-us" username.
+68. Again, this is a cheat way. What I did simply
+
 > 18TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/35922d0f-1aa8-4964-a917-2b5d6921fed8)
