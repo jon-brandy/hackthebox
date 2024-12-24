@@ -483,13 +483,19 @@ Malicious Powershell Script Execution:
 
 
 
-> 17TH QUESTION --> ANS:
+> 17TH QUESTION --> ANS: `ceo-ru, ceo-us`
 
 ![image](https://github.com/user-attachments/assets/4748107b-0a8e-4faf-9a50-a0188a15d1d1)
 
 
 67. Based on our previous analysis, we found one username of one of the CEO that received the malicious attachment. We identified "ceo-us" username.
-68. Again, this is a cheat way. What I did simply
+68. Again, this is a cheat way. What I did simply filter for `ceo-` and resulting to another username named `ceo-ru`.
+
+![image](https://github.com/user-attachments/assets/9c619140-1131-430d-84d5-74fb73d1f29b)
+
+
+69. Further review, found no other usernames. This conclude there are only two CEOs received the phish mail.
+
 
 > 18TH QUESTION --> ANS:
 
