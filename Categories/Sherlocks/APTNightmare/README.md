@@ -455,10 +455,10 @@ for /r %i in (*) do (C:\Tools\RegRipper\RegRipper4.0-main\rip.exe -r %i -a > %i.
 ![image](https://github.com/user-attachments/assets/6e8c610b-4943-4a07-b169-a1d709921feb)
 
 
-65. For the final analysis, if we correlate the timestamp execution of this docm file with the `Windows Powershell` event log.
+65. For the final analysis, if we correlate the timestamp execution of this docm file with the `Microsoft-Windows-Powershell-Operation` event log.
 
 ```
-.\EvtxECmd.exe -f "C:\Cases\APTN1ghtm4r3\DiskImage\C\Windows\System32\winevt\logs\Windows PowerShell.evtx" --csv . --csvf "result-timeline.csv"
+.\EvtxECmd.exe -f "C:\Cases\APTN1ghtm4r3\DiskImage\C\Windows\System32\winevt\logs\Microsoft-Windows-PowerShell%4Operational.evtx" --csv . --csvf "powershell-operation.csv"
 
 Then review the csv file using timeline explorer.
 ```
