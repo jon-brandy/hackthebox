@@ -523,12 +523,56 @@ Malicious Powershell Script Execution:
 
 
 72. Now refer back way to our first finding when searching the red flag indicator for `policy.docm` file. At **Windows Powershell** event log we previously identified a suspicious powershell execution.
-73. 
+73. However, since the threat actor not physically accessed the threat actor's device, hence the activities related to this can be seen at the pcap file (which captured all network traffic communications). Although, we can decode the base64 by manually copy the value at each log with eventID `4101`, but let's see if the powershell execution captured as a whole in one packet data.
+74. Upon reviewing each packet log, we can see different IP comes in traffic --> `192.168.1.7` and this IP communicates with `192.168.1.5`.
 
+![image](https://github.com/user-attachments/assets/8f4476cc-d310-4428-8c3e-c85b97adb868)
+
+
+75. Checking **endpoints** in wireshark, found list of IPs which categorized as endpoint and one of them is IP `192.168.1.7`. This conclude that IP `192.168.1.7` should be the victim's IP.
+
+![image](https://github.com/user-attachments/assets/89403dfc-5c1d-40e2-97e4-0907742edff2)
+
+
+76. Awesome, let's filter for http packets for IP `192.168.1.7` and `192.168.1.5`, also follow the packet stream.
+
+![image](https://github.com/user-attachments/assets/2e0384f4-497f-4b3c-b1c5-61719becb60d)
+
+> RESULT
+
+![image](https://github.com/user-attachments/assets/dff07dcd-da47-4c1e-bfa3-cb02227b3302)
+
+
+77. Awesome! Just like what we predicted before, the execution is captured. Now let's copy the encoded base64 text and decode it using cyberchef.
+
+> RESULT
+
+![image](https://github.com/user-attachments/assets/8f2e4db0-56eb-4d0b-8af9-28f229ab20d2)
+
+
+78. Interesting, upon reviewing the script. Found another embedded base64 encoded powershell command and scrolling down below we can identified a logic to xor each character with **35**.
+
+![image](https://github.com/user-attachments/assets/f65b4a6b-d966-4c30-8cf2-2ac4acd887eb)
+
+![image](https://github.com/user-attachments/assets/17cbc63c-6669-4a49-a0fe-05e7df93fd8b)
+
+
+79. Simply doing the same at cyberchef, shall resulting to an executable file.
+
+![image](https://github.com/user-attachments/assets/b90270c5-094f-479a-84c1-b9d32de15412)
+
+
+80. Download the file and pass it to threat intelligence, found the binary is indeed a malicious file.
+
+![image](https://github.com/user-attachments/assets/1831697a-084e-46c3-9ffd-70ff2c6d40fa)
+
+89. However we still did not find the command used by the threat actor to gain initial access, based on the cyber kill chain, this command should refer to the malware installation command.
 
 > 21ST QUESTION --> ANS: `trojan.cobaltstrike/beacon`
 
 ![image](https://github.com/user-attachments/assets/22e67f89-e4fa-48e2-9511-96c105bc6efc)
+
+
 
 
 > 22ND QUESTION --> ANS: `windows-beacon_http-reverse_http`
