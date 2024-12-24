@@ -627,7 +627,20 @@ Malicious Powershell Script Execution:
 C:\Windows\System32\Tasks\Microsoft\Windows\WindowsUpdate
 ```
 
-97. However let's inspect the file by exporting it
+97. Upon reviewing the configuration file, it is hard to correlate with timestamp, because we did not know the UTC. However there is an action tag which seems execute binary `WindowsUpdate.exe` that is stored under `C:\Users\Public\` directory, it does raise a red flag.
+
+![image](https://github.com/user-attachments/assets/d331b0f8-ab24-4b57-9e02-3b5e42a5e334)
+
+
+98. Also, if we compare the timestamp shown at the drive folders. The modified datetime for `Windows Powershell` event log is at `02/05/2024 02:17:06 AM` and the modified datetime for the scheduled task is at `02/05/2024 02:22:15`. Meaning this file was created after the initial access at the victim's machine. At this rate, it is enough to conclude that the task configuration file found was added by the threat actor.
+
+![image](https://github.com/user-attachments/assets/3ea45476-ed92-4af2-99d4-e86bb0e2036f)
+
+
+![image](https://github.com/user-attachments/assets/7b56a27d-6fe7-4c29-91d4-5e4bd352a4ed)
+
+
+99. Great! We've investigated the case!
 
 
 ## IMPORTANT LINKS:
