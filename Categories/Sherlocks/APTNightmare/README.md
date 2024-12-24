@@ -345,7 +345,7 @@ sudo python2 /opt/volatility/vol.py -f Memory_WebServer.mem --profile=LinuxUbunt
 ![image](https://github.com/user-attachments/assets/baa7df50-4e82-4529-bffb-326ab3547c14)
 
 
-48. Anyway here's the result for **Subjects: ** search. We identified the e-mail subject.
+48. Anyway here's the result for `Subjects: ` search. We identified the e-mail subject.
 
 ![image](https://github.com/user-attachments/assets/af646aec-cf79-4713-991a-d5068357c405)
 
@@ -497,9 +497,14 @@ Malicious Powershell Script Execution:
 69. Further review, found no other usernames. This conclude there are only two CEOs received the phish mail.
 
 
-> 18TH QUESTION --> ANS:
+> 18TH QUESTION --> ANS: `desktop-els5jak`
 
 ![image](https://github.com/user-attachments/assets/35922d0f-1aa8-4964-a917-2b5d6921fed8)
+
+
+70. There are many ways to identify it and we've done it few ways previously. The evidence I provided below is the example to identify the infected device's hostname by reviewing the `.lnk` file.
+
+![image](https://github.com/user-attachments/assets/5ff1ff50-199a-4f29-98b3-1d090b3cc58b)
 
 
 > 19TH QUESTION --> ANS:
