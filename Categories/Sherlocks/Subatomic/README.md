@@ -18,6 +18,14 @@
 
 ![image](https://github.com/user-attachments/assets/a4859d6d-4738-4fcb-a8df-9ae2ea0505c8)
 
+> Danger.txt
+
+![image](https://github.com/user-attachments/assets/15b5fe39-d4d5-4e41-bf8f-37fe7b691e37)
+
+
+4. Unzipping the **malware.zip** file using the provided password, shall resulting to this:
+
+
 
 > 1ST QUESTION --> ANS:
 
