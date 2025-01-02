@@ -14,7 +14,76 @@
 ## STEPS:
 1. A Discord account has been compromised and is being used to send messages containing a link to a suspected malicious file. Despite the owner's efforts to secure the account, the messages continue to be sent.
 2. As forensic analysts, our task is to investigate the incident and analyze the malware to understand its behavior and regain control of the account.
-3. 
+3. Unzipping the zip file shall resulting to 2 files. Those are **.txt** file and the zipped malware binary.
+
+![image](https://github.com/user-attachments/assets/a4859d6d-4738-4fcb-a8df-9ae2ea0505c8)
+
+
+> 1ST QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/410dbded-ea3d-4810-85a7-f1ab96265ef3)
+
+
+> 2ND QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/5de05f00-3bc8-4a96-a66f-3a1673754327)
+
+
+> 3RD QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/4131d86e-5199-45b8-920c-396c49305b96)
+
+
+> 4TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/87cfee9b-69f2-4243-900f-3397b8f18397)
+
+
+> 5TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/32b38bf1-d4cf-48a4-b8ee-5d51248508ce)
+
+
+> 6TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/4fb2fde3-b386-4402-8d00-fa3e71bfd8f4)
+
+
+> 7TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/8d3f126d-7893-4c2c-bad0-0701b26ee91d)
+
+
+> 8TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/9191e24b-562f-490a-b4a9-c6fa306cf94a)
+
+
+> 9TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/cad17c45-bb9a-4d48-a6ed-a3034d6eb855)
+
+
+> 10TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/7893cb57-ef91-43d4-b3df-5a79a0c81e45)
+
+
+> 11TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/254bb4b9-423d-4069-a2c8-3c3faa0ca93c)
+
+
+> 12TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/b8921284-21c9-413f-a332-78432de9550e)
+
+
+> 13TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/54ed6588-8c39-422f-b6d8-466d6ba9fdc3)
+
+
 
 ## IMPORTANT LINK(S):
 
