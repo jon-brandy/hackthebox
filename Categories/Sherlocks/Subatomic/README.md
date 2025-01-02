@@ -48,6 +48,10 @@ Get-Filehash .\nsis-installer.exe -Algorithm <checksum_you_want>
 ![image](https://github.com/user-attachments/assets/2dd3e64c-1db4-400b-ac31-7c80f88e1bbd)
 
 
+7. To identify the **imphash**, simply check the **Details** tab and view the **Basic Properties** section.
+
+![image](https://github.com/user-attachments/assets/915008cb-6762-4c81-a15b-7de3e4288fc3)
+
 
 > 2ND QUESTION --> ANS:
 
