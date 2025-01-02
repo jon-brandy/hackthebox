@@ -23,13 +23,21 @@
 ![image](https://github.com/user-attachments/assets/15b5fe39-d4d5-4e41-bf8f-37fe7b691e37)
 
 
-4. Unzipping the **malware.zip** file using the provided password, shall resulting to this:
+4. Unzipping the **malware.zip** file using the provided password, shall resulting to a binary named **nsis-installer.exe**.
 
+![image](https://github.com/user-attachments/assets/3d5ea2ad-681b-409a-b80f-928fc65a8c20)
 
 
 > 1ST QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/410dbded-ea3d-4810-85a7-f1ab96265ef3)
+
+
+5. To identify the **imphash** of this malware installer, we can simply grab the checksum and load it at virus total.
+
+> RESULT IN VIRUS TOTAL
+
+
 
 
 > 2ND QUESTION --> ANS:
