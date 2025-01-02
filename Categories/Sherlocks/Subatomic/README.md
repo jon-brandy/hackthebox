@@ -45,6 +45,7 @@ Get-Filehash .\nsis-installer.exe -Algorithm <checksum_you_want>
 
 > RESULT AT VIRUS TOTAL
 
+![image](https://github.com/user-attachments/assets/2dd3e64c-1db4-400b-ac31-7c80f88e1bbd)
 
 
 
