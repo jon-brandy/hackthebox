@@ -34,8 +34,16 @@
 
 
 5. To identify the **imphash** of this malware installer, we can simply grab the checksum and load it at virus total.
+6. In **Window Powershell** terminal, we can use this command:
 
-> RESULT IN VIRUS TOTAL
+```
+Get-Filehash .\nsis-installer.exe -Algorithm <checksum_you_want>
+```
+
+![image](https://github.com/user-attachments/assets/2eb19355-bad4-4fcb-8960-62a2b7bba0eb)
+
+
+> RESULT AT VIRUS TOTAL
 
 
 
