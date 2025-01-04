@@ -5,7 +5,8 @@
 
 
 ## Lesson(s) Learned:
-1. sda
+1. Using `Detect it Easy (DIE)` to identify whether the binary is packed or not.
+2. Using 
 
 ## SCENARIO:
 
@@ -26,6 +27,11 @@
 4. Unzipping the **malware.zip** file using the provided password, shall resulting to a binary named **nsis-installer.exe**.
 
 ![image](https://github.com/user-attachments/assets/3d5ea2ad-681b-409a-b80f-928fc65a8c20)
+
+5. Anyway, this is interesting because upon checking the file **properties** found `Unauthenticated Attributes`. This finding could indicate that there is additional data in the file that was not included in Microsoft's signing process.
+6. It indicates a masquerading technique.
+
+![image](https://github.com/user-attachments/assets/36a457f4-02de-4837-820b-b4dc6649a9be)
 
 
 #### NOTE:
