@@ -97,6 +97,12 @@ payload (the files to be installed) to save space.
 13. `$PLUGINSDIR` is a temporary directory created and used by NSIS when an installer runs. It is used to extract and store temporary files, such as plugins, resources, or payloads required during the installation process.
 14. The contents of `$PLUGINSDIR` are typically deleted after the installer finishes running, unless the process is interrupted or the files are explicitly left behind.
 
+> COMMAND
+
+```
+7z l nsis-installer.exe
+```
+
 ![image](https://github.com/user-attachments/assets/65071982-9d98-4817-b678-404ec9facc2d)
 
 
