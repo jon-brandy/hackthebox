@@ -53,9 +53,14 @@ Get-Filehash .\nsis-installer.exe -Algorithm <checksum_you_want>
 ![image](https://github.com/user-attachments/assets/915008cb-6762-4c81-a15b-7de3e4288fc3)
 
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: Windows Update Assistant
 
 ![image](https://github.com/user-attachments/assets/5de05f00-3bc8-4a96-a66f-3a1673754327)
+
+8. It is known that the malware contains a digital signature and to identify the program name specified under the `SpcSpOpusInfo` Data Structure we can review the **Signature Info** section at Virus Total.
+9. Viewing information under `SpcSpOpusInfo` it is clear the program name is `Windows Update Assistant`.
+
+![image](https://github.com/user-attachments/assets/b7903e58-f60d-486a-800d-ed9c862e1e65)
 
 
 > 3RD QUESTION --> ANS:
