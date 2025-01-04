@@ -28,6 +28,13 @@
 ![image](https://github.com/user-attachments/assets/3d5ea2ad-681b-409a-b80f-928fc65a8c20)
 
 
+#### NOTE:
+
+```
+Nullsoft Scriptable Install System (NSIS) is a professional open source system
+to create windows installers.
+```
+
 > 1ST QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/410dbded-ea3d-4810-85a7-f1ab96265ef3)
@@ -67,6 +74,8 @@ Get-Filehash .\nsis-installer.exe -Algorithm <checksum_you_want>
 
 ![image](https://github.com/user-attachments/assets/4131d86e-5199-45b8-920c-396c49305b96)
 
+10. Next, to identify the unique GUID used by the malware during installation, we need to interact with the binary.
+11. 
 
 > 4TH QUESTION --> ANS:
 
