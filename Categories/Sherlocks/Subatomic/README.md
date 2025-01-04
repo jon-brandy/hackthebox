@@ -5,8 +5,7 @@
 
 
 ## Lesson(s) Learned:
-1. Using `Detect it Easy (DIE)` to identify whether the binary is packed or not.
-2. Using 
+1. Using `Detect it Easy (DIE)` to identify file type.
 
 ## SCENARIO:
 
@@ -32,6 +31,10 @@
 6. It indicates a masquerading technique.
 
 ![image](https://github.com/user-attachments/assets/36a457f4-02de-4837-820b-b4dc6649a9be)
+
+7. As an additional information, another tool like `Detect it Easy (DIE)` is useful to identify the actual file type of a file.
+
+![image](https://github.com/user-attachments/assets/be0b0f89-1b04-4d59-a772-0bb7acb19924)
 
 
 #### NOTE:
@@ -81,7 +84,22 @@ Get-Filehash .\nsis-installer.exe -Algorithm <checksum_you_want>
 ![image](https://github.com/user-attachments/assets/4131d86e-5199-45b8-920c-396c49305b96)
 
 10. Next, to identify the unique GUID used by the malware during installation, we need to interact with the binary.
-11. 
+11. Since previously we identified the binary file type is indeed an `nsis`, hence it contains a compressed installation files.
+
+#### NOTE:
+
+```
+Many installers (NSIS, MSI, Inno Setup, etc) compress their
+payload (the files to be installed) to save space.
+```
+
+12. Upon listing all the compressed files using `7z`, found an interesting archive file. The archive itself could indicates a bundled payload compressed for efficiency.
+13. `$PLUGINSDIR` is a temporary directory created and used by NSIS when an installer runs. It is used to extract and store temporary files, such as plugins, resources, or payloads required during the installation process.
+14. The contents of `$PLUGINSDIR` are typically deleted after the installer finishes running, unless the process is interrupted or the files are explicitly left behind.
+
+![image](https://github.com/user-attachments/assets/65071982-9d98-4817-b678-404ec9facc2d)
+
+
 
 > 4TH QUESTION --> ANS:
 
