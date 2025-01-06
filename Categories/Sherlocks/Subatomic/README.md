@@ -6,6 +6,7 @@
 
 ## Lesson(s) Learned:
 1. Using `Detect it Easy (DIE)` to identify file type.
+2. Identifying unique GUID used by the malware for installation.
 
 ## SCENARIO:
 
@@ -138,6 +139,12 @@ payload (the files to be installed) to save space.
 
 ![image](https://github.com/user-attachments/assets/87cfee9b-69f2-4243-900f-3397b8f18397)
 
+
+23. Refer back to our previous finding upon unzipping the 7zip archive file, we shall review the `app.asar` file.
+
+![image](https://github.com/user-attachments/assets/226e5fe6-4cbd-40b1-bcc4-c006a5b32f91)
+
+24. Interesting! It seems the malware is using JS utility.
 
 > 5TH QUESTION --> ANS:
 
