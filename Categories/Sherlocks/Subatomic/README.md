@@ -153,7 +153,7 @@ payload (the files to be installed) to save space.
 ![image](https://github.com/user-attachments/assets/4a5a3237-fcf9-4804-9ceb-7e61d37de606)
 
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: `illitmagnetic.site`
 
 ![image](https://github.com/user-attachments/assets/32b38bf1-d4cf-48a4-b8ee-5d51248508ce)
 
@@ -203,9 +203,14 @@ npm install sqlite3
 
 
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: `https://ipinfo.io/json`
 
 ![image](https://github.com/user-attachments/assets/4fb2fde3-b386-4402-8d00-fa3e71bfd8f4)
+
+34. Continue reviewing the deobfuscated script, found another object named **networks** which fetch to URL that is likely used to identify public IP information of the infected machine.
+
+![image](https://github.com/user-attachments/assets/f31c5b12-66bf-4105-a476-98399633f844)
+
 
 
 > 7TH QUESTION --> ANS:
