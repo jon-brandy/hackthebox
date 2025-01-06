@@ -106,6 +106,15 @@ payload (the files to be installed) to save space.
 ![image](https://github.com/user-attachments/assets/65071982-9d98-4817-b678-404ec9facc2d)
 
 
+15. It is known there are 2 directories and 72 files within the archive file.
+
+![image](https://github.com/user-attachments/assets/858464d4-4ed6-47c0-97e9-868431c04af0)
+
+16. Noticed there is another archive file with `.asar` extension, the size itself is quite big, which indicate storing important data.
+
+![image](https://github.com/user-attachments/assets/62c2fc3d-abd7-40b3-a855-de72c1d99aa8)
+
+
 
 > 4TH QUESTION --> ANS:
 
