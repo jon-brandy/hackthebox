@@ -213,7 +213,7 @@ npm install sqlite3
 
 
 
-> 7TH QUESTION --> ANS:
+> 7TH QUESTION --> ANS: `https://illitmagnetic.site/api/`
 
 ![image](https://github.com/user-attachments/assets/8d3f126d-7893-4c2c-bad0-0701b26ee91d)
 
@@ -240,19 +240,33 @@ npm install sqlite3
 ![image](https://github.com/user-attachments/assets/0fd66a9b-701d-42a3-b747-2b7595a89990)
 
 
-> 8TH QUESTION --> ANS:
+> 8TH QUESTION --> ANS: duvet_user
 
 ![image](https://github.com/user-attachments/assets/9191e24b-562f-490a-b4a9-c6fa306cf94a)
 
 
-> 9TH QUESTION --> ANS:
+40. Again, based from the same code-block, we can identify the variable name which act as a **user_id** key.
+
+![image](https://github.com/user-attachments/assets/5c5f249e-11a6-43b8-87a1-c1c389b60e31)
+
+
+> 9TH QUESTION --> ANS: `archibaldpc`
 
 ![image](https://github.com/user-attachments/assets/cad17c45-bb9a-4d48-a6ed-a3034d6eb855)
 
+41. To identify what hostname begins with **arch**, we can refer to line **19** which contains all the **hostnames** that the malware checks upon execution.
 
-> 10TH QUESTION --> ANS:
+![image](https://github.com/user-attachments/assets/5b55181d-bd1d-47c5-a132-6043d819a01d)
+
+
+> 10TH QUESTION --> ANS: `vmwaretray`
 
 ![image](https://github.com/user-attachments/assets/7893cb57-ef91-43d4-b3df-5a79a0c81e45)
+
+42. Just below the previous code-block, we can see number of processes checked by the malware to see if they are running in a VM.
+43. Noticed the same process gets checked twice --> **vmwaretray**.
+
+![image](https://github.com/user-attachments/assets/8fd94a09-0943-4923-b4bf-c538c72a5aed)
 
 
 > 11TH QUESTION --> ANS:
