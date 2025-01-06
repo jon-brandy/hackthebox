@@ -9,7 +9,7 @@
 2. Unpacking Nullsoft Installer binary.
 3. Identifying unique GUID used by the malware for installation.
 4. Debugging obfuscated javascript file using VSCODE (to retrieve the deobfuscated JS).
-5. Small code review for JS source file.
+5. Small code review for JS source file (Trojan Discord's core module).
 
 ## SCENARIO:
 
@@ -539,5 +539,7 @@ async function getDiscordTokens() {
 ## IMPORTANT LINK(S):
 
 ```
-
+https://www.virustotal.com/gui/file/7a95214e7077d7324c0e8dc7d20f2a4e625bc0ac7e14b1446e37c47dff7eeb5b
+https://www.virustotal.com/gui/domain/illitmagnetic.site
+https://ipinfo.io/
 ```
