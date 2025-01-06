@@ -155,6 +155,24 @@ payload (the files to be installed) to save space.
 ![image](https://github.com/user-attachments/assets/32b38bf1-d4cf-48a4-b8ee-5d51248508ce)
 
 
+26. Upon reviewing the Javascript, it is clear that the script is obfuscated and it would take time if we try to conduct static analysis to the JS file.
+
+![image](https://github.com/user-attachments/assets/17f663f7-92b0-4919-b687-dbeb131e2033)
+
+27. So I tried to debug the JS using VSCODE. Anyway don't forget to install all the dependencies we previously identified in order to debug the script.
+
+> Command to install
+
+```sh
+npm install @primno/dpapi
+npm install sqlite3
+```
+
+> Don't forget to beautify the script first, so we can easily fix for syntax error
+
+![image](https://github.com/user-attachments/assets/d79e6d70-9ecf-4931-b1c8-5e2647b85f70)
+
+
 > 6TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/4fb2fde3-b386-4402-8d00-fa3e71bfd8f4)
