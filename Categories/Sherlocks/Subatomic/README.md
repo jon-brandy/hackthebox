@@ -118,6 +118,11 @@ payload (the files to be installed) to save space.
 17. Anyway, previously we identified another `.nsi` file which should be our interest beside the 7zip archive file. The `.nsi` file is part of the NullSoft installer, this file has instructions about the installation process of the binary.
 18. Knowing this, the unique GUID used by the malware for installation process can be found there. To review it we can simply open it on any text editor.
 
+> RESULT ON NOTEPAD++
+
+![image](https://github.com/user-attachments/assets/78a0f56f-df78-4f62-939a-15e442a71229)
+
+
 > 4TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/87cfee9b-69f2-4243-900f-3397b8f18397)
