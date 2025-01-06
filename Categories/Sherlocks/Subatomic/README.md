@@ -184,6 +184,17 @@ npm install sqlite3
 ![image](https://github.com/user-attachments/assets/58476ed9-9d3d-420d-9de4-f8204a97d530)
 
 
+30. I am running several pause and unpause during the debug process, until I found the **eval** statement. Opening it shall resulting to a 894 LOCs which **might** be comes from the obfuscated script. However things to note that it's kinda tricky to get the **eval** statement at the **call stack** section, because if you paused too early / late, the **eval** statement won't be visible at the **call stack** section.
+31. So several try and error shall be done.
+ 
+![image](https://github.com/user-attachments/assets/75d3949e-a3c4-41b3-bf37-b0a52ba5d07a)
+
+32. Upon reviewing the script, found an object named **options** which contains several keys, such as **api**, **user_id**, and **logout_discord**.
+33. 
+
+![image](https://github.com/user-attachments/assets/16e5ceb3-7b7e-4116-8078-0298e38492ed)
+
+
 > 6TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/4fb2fde3-b386-4402-8d00-fa3e71bfd8f4)
