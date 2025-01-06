@@ -159,7 +159,7 @@ payload (the files to be installed) to save space.
 
 ![image](https://github.com/user-attachments/assets/17f663f7-92b0-4919-b687-dbeb131e2033)
 
-27. So I tried to debug the JS using VSCODE. Anyway don't forget to install all the dependencies we previously identified in order to debug the script.
+27. So I tried to debug the JS using VSCODE. Anyway don't forget to install all the dependencies we previously identified in order to debug the script. In my case, I just missing both `@primno/dpapi` and `sqlite3` npm modules, if you facing the same problem, here lies the command line to install those two modules.
 
 > Command to install
 
