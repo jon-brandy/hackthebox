@@ -222,6 +222,22 @@ npm install sqlite3
 
 ![image](https://github.com/user-attachments/assets/fb4949e9-66c6-45e2-9974-ebb1ae326e1e)
 
+36. Based on the functions listed at **Outline**, it seems there are 4 functions that could give us answer regarding the particular path used by the malware to connect back on.
+
+![image](https://github.com/user-attachments/assets/e23dd10a-3938-4dc4-9b3a-6cd73e54f534)
+
+
+> FOUND 3 try / catch blocks
+
+|First Block|Second Block|Third Block|
+|:---------:|:----------:|:---------:|
+|![image](https://github.com/user-attachments/assets/c06ae0f9-9c6e-4a20-8e6c-db9625472d29)|![image](https://github.com/user-attachments/assets/900990f9-bae0-49f8-a260-ae67339fb0a3)|![image](https://github.com/user-attachments/assets/3d8948ee-b89e-4020-b55c-a780d91750b6)|
+
+37. Noticed that the logic for **catch** is the same for each but the error message is quite different.
+38. Based on the script above, the first block calls three functions, those are **checkVM()**, **checkCmdInstallation()**, and **newInjection()**. The second block calls **getDiscordTokens()** function and the third block calls **allBrowserData()** function.
+39. Anyway, each catch block does show that the **api** key from the **options** object is called again. It concludes the same C2 is called again for this malware.
+
+![image](https://github.com/user-attachments/assets/0fd66a9b-701d-42a3-b747-2b7595a89990)
 
 
 > 8TH QUESTION --> ANS:
