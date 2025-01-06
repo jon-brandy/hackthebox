@@ -135,7 +135,7 @@ payload (the files to be installed) to save space.
 ![image](https://github.com/user-attachments/assets/b05e39a3-f671-457b-a174-4c96cb25bdd5)
 
 
-> 4TH QUESTION --> ANS:
+> 4TH QUESTION --> ANS: `ISC`
 
 ![image](https://github.com/user-attachments/assets/87cfee9b-69f2-4243-900f-3397b8f18397)
 
@@ -145,6 +145,10 @@ payload (the files to be installed) to save space.
 ![image](https://github.com/user-attachments/assets/226e5fe6-4cbd-40b1-bcc4-c006a5b32f91)
 
 24. Interesting! It seems the malware is using JS utility.
+25. Reviewing the **JSON** file, we can identify several metadata associated with the malware and one of them is the license tied to this malware.
+
+![image](https://github.com/user-attachments/assets/4a5a3237-fcf9-4804-9ceb-7e61d37de606)
+
 
 > 5TH QUESTION --> ANS:
 
