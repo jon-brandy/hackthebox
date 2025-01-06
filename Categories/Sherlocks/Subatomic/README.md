@@ -218,6 +218,12 @@ npm install sqlite3
 ![image](https://github.com/user-attachments/assets/8d3f126d-7893-4c2c-bad0-0701b26ee91d)
 
 
+35. For better code review, we can see all of the functions listed at the **OUTLINE** section. It should gave us a grasp regarding functions related to **Discord**, **Browser**, and **General**.
+
+![image](https://github.com/user-attachments/assets/fb4949e9-66c6-45e2-9974-ebb1ae326e1e)
+
+
+
 > 8TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/9191e24b-562f-490a-b4a9-c6fa306cf94a)
