@@ -188,7 +188,7 @@ npm install sqlite3
 
 
 30. I am running several pause and unpause during the debug process, until I found the **eval** statement. Opening it shall resulting to a 894 LOCs which **might** be comes from the obfuscated script. However things to note that it's kinda tricky to get the **eval** statement at the **call stack** section, because if you paused too early / late, the **eval** statement won't be visible at the **call stack** section.
-31. So several try and error shall be done.
+31. So I did several try to identify any statement that is convincing, maybe there is a foo way regarding this.
  
 ![image](https://github.com/user-attachments/assets/75d3949e-a3c4-41b3-bf37-b0a52ba5d07a)
 
