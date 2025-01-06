@@ -103,7 +103,8 @@ payload (the files to be installed) to save space.
 7z l nsis-installer.exe
 ```
 
-![image](https://github.com/user-attachments/assets/65071982-9d98-4817-b678-404ec9facc2d)
+![image](https://github.com/user-attachments/assets/525b0cd6-2d24-4cfa-9ca8-825c0515ebe2)
+
 
 
 15. It is known there are 2 directories and 72 files within the archive file.
@@ -114,7 +115,8 @@ payload (the files to be installed) to save space.
 
 ![image](https://github.com/user-attachments/assets/62c2fc3d-abd7-40b3-a855-de72c1d99aa8)
 
-
+17. Anyway, previously we identified another `.nsi` file which should be our interest beside the 7zip archive file. The `.nsi` file is part of the NullSoft installer, this file has instructions about the installation process of the binary.
+18. Knowing this, the unique GUID used by the malware for installation process can be found there. To review it we can simply open it on any text editor.
 
 > 4TH QUESTION --> ANS:
 
