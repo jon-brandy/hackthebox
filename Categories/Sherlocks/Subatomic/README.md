@@ -8,8 +8,8 @@
 1. Using `Detect it Easy (DIE)` to identify file type.
 2. Unpacking Nullsoft Installer binary.
 3. Identifying unique GUID used by the malware for installation.
-4. Debugging obfuscated javascript file using VSCODE.
-5. 
+4. Debugging obfuscated javascript file using VSCODE (to retrieve the deobfuscated JS).
+5. Small code review for JS source file.
 
 ## SCENARIO:
 
@@ -48,7 +48,7 @@ Nullsoft Scriptable Install System (NSIS) is a professional open source system
 to create windows installers.
 ```
 
-> 1ST QUESTION --> ANS:
+> 1ST QUESTION --> ANS: b34f154ec913d2d2c435cbd644e91687
 
 ![image](https://github.com/user-attachments/assets/410dbded-ea3d-4810-85a7-f1ab96265ef3)
 
@@ -269,21 +269,40 @@ npm install sqlite3
 ![image](https://github.com/user-attachments/assets/8fd94a09-0943-4923-b4bf-c538c72a5aed)
 
 
-> 11TH QUESTION --> ANS:
+> 11TH QUESTION --> ANS: `%USERPROFILE%\Documents\cmd.exe`
 
 ![image](https://github.com/user-attachments/assets/254bb4b9-423d-4069-a2c8-3c3faa0ca93c)
 
+44. Referring to the **OUTLINE** section at VSCODE, we can identify a spesific function which relevant with **cmd**.
 
-> 12TH QUESTION --> ANS:
+![image](https://github.com/user-attachments/assets/6d0f4eb0-3eb3-4e27-960a-2d0dd8ab4db6)
+
+
+45. In summary, the script above ensure whether **cmd.exe** binary is available and update the environment's command processor path accordingly.
+46. If the **cmd.exe** binary is not exist, it will write a file from the C2 server to **Document** directory using the environment variable `USERPROFILE`.
+
+> 12TH QUESTION --> ANS: `where /r . cookies.sqlite`
 
 ![image](https://github.com/user-attachments/assets/b8921284-21c9-413f-a332-78432de9550e)
+
+47. Again, using the same method by referring to the **OUTLINE** section, we can identify a function named `getFirefoxCookies()`, which used to steal cookies from firefox.
+
+![image](https://github.com/user-attachments/assets/1a0159b3-1a60-4ebf-b1ad-441ff10a38dc)
+
+> getFirefoxCookies()
+
+![image](https://github.com/user-attachments/assets/5c028c5c-5764-464e-9413-375ae4884e46)
+
+
+48. Based on the script above, **getFirefoxCookies()** function uses command `where /r . cookies.sqlite` to find the database file.
+49. Afterwards, if the file is found then it collects all the data from the DB, then return it.
 
 
 > 13TH QUESTION --> ANS:
 
 ![image](https://github.com/user-attachments/assets/54ed6588-8c39-422f-b6d8-466d6ba9fdc3)
 
-
+50. To identify what discord module has been modified by the malware, we can review the 
 
 ## IMPORTANT LINK(S):
 
