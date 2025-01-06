@@ -4,9 +4,12 @@
 ![image](https://github.com/user-attachments/assets/7619feaa-40d4-4b8d-8cd5-5fe71e5a31d1)
 
 
-## Lesson(s) Learned:
+## Lessons Learned:
 1. Using `Detect it Easy (DIE)` to identify file type.
-2. Identifying unique GUID used by the malware for installation.
+2. Unpacking Nullsoft Installer binary.
+3. Identifying unique GUID used by the malware for installation.
+4. Debugging obfuscated javascript file using VSCODE.
+5. 
 
 ## SCENARIO:
 
@@ -190,9 +193,14 @@ npm install sqlite3
 ![image](https://github.com/user-attachments/assets/75d3949e-a3c4-41b3-bf37-b0a52ba5d07a)
 
 32. Upon reviewing the script, found an object named **options** which contains several keys, such as **api**, **user_id**, and **logout_discord**.
-33. 
 
 ![image](https://github.com/user-attachments/assets/16e5ceb3-7b7e-4116-8078-0298e38492ed)
+
+
+33. Checking the domain on threat intelligence platform, the API domain name is marked as malicious and the domain name is prone to as the C2 domain used by the malware.
+
+![image](https://github.com/user-attachments/assets/e5c24d76-f480-4ce5-897e-2734a76663ed)
+
 
 
 > 6TH QUESTION --> ANS:
