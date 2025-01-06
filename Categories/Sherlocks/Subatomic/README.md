@@ -79,7 +79,7 @@ Get-Filehash .\nsis-installer.exe -Algorithm <checksum_you_want>
 ![image](https://github.com/user-attachments/assets/b7903e58-f60d-486a-800d-ed9c862e1e65)
 
 
-> 3RD QUESTION --> ANS:
+> 3RD QUESTION --> ANS: `cfbc383d-9aa0-5771-9485-7b806e8442d5`
 
 ![image](https://github.com/user-attachments/assets/4131d86e-5199-45b8-920c-396c49305b96)
 
@@ -121,6 +121,17 @@ payload (the files to be installed) to save space.
 > RESULT ON NOTEPAD++
 
 ![image](https://github.com/user-attachments/assets/78a0f56f-df78-4f62-939a-15e442a71229)
+
+
+19. It seems, **SerenityThrerapyInstaller** should be our interest.
+
+![image](https://github.com/user-attachments/assets/a9ca6eb5-cd79-4672-a88a-70047ad23398)
+
+20. However noticed there are several keys that reference to GUID `cfbc383d-9aa0-5771-9485-7b806e8442d5`. An uninstall instruction is also reference to the same GUID along with the publisher name stated the **SerenityTherapyInstaller**.
+21. For the sake of consistency in registry entries, the GUID associated for the uninstallation is typically the same as the one used during installation.
+22. Another reason why it used the same GUID is to avoid conflict with other installations.
+
+![image](https://github.com/user-attachments/assets/b05e39a3-f671-457b-a174-4c96cb25bdd5)
 
 
 > 4TH QUESTION --> ANS:
