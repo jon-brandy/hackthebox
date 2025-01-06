@@ -172,6 +172,17 @@ npm install sqlite3
 
 ![image](https://github.com/user-attachments/assets/d79e6d70-9ecf-4931-b1c8-5e2647b85f70)
 
+29. If you face the same syntax problem like me, simply remove the **5** number before **_0**.
+
+> BEFORE
+
+![image](https://github.com/user-attachments/assets/36d607d5-6c03-469d-8143-2422cf374a99)
+
+
+> AFTER
+
+![image](https://github.com/user-attachments/assets/58476ed9-9d3d-420d-9de4-f8204a97d530)
+
 
 > 6TH QUESTION --> ANS:
 
