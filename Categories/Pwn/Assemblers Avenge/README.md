@@ -102,7 +102,8 @@ Thus xor esi achieves the same effect as xor rsi. Note that using 32 bit registe
 is to shorten the shellcode size.
 ```
 
-![image](https://github.com/user-attachments/assets/07ab3dc4-8d8c-4dcc-b788-85d6fdb68077)
+![image](https://github.com/user-attachments/assets/c0d89404-9edc-4d95-afde-64210500dd1f)
+
 
 14. Awesome! The size is exact enough.
 
