@@ -5,7 +5,7 @@
 
 ## Lessons Learned:
 1. Bypass **strelen()** check.
-2. Exploiting GLIBC 2.34
+2. Exploiting GLIBC 2.35
 3. Perform partial GOT overwrite using controlled **RBP**.
 4. Passing **/bin/sh** strings to drop shell.
 
