@@ -49,7 +49,7 @@
 
 1. leave is equivalent to:
 
-mov rsp, rbp   ; Restore the stack pointer (ESP) to the base pointer (EBP)
+mov rsp, rbp   ; Restore the stack pointer (RSP) to the base pointer (RBP)
 pop rbp        ; Restore the previous base pointer from the stack
 
 2. ret is equivalent to:
