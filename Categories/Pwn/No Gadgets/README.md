@@ -42,7 +42,7 @@
 ![image](https://github.com/user-attachments/assets/29563d3b-bd05-4137-bb90-2b739549a85a)
 
 
-#### NOTE:
+#### NOTES:
 
 ```MD
 ## Dissecting the instruction.
@@ -56,3 +56,5 @@ pop rbp        ; Restore the previous base pointer from the stack
 
 pop rip        ; Pop the return address from the stack into the instruction pointer (RIP)
 ```
+
+10. At this rate, we should weaponize **RBP**.
