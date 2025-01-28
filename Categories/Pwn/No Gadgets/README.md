@@ -37,5 +37,22 @@
 
 ![image](https://github.com/user-attachments/assets/15e203ef-1e6b-4be3-a13d-cb99264cb42d)
 
-9. 
+9. Anyway, remember that there is a register we control upon overflowing the buffer and that is **RBP**. Also noticed at the end of our function a `leave; ret;` instruction is called.
 
+![image](https://github.com/user-attachments/assets/29563d3b-bd05-4137-bb90-2b739549a85a)
+
+
+#### NOTE:
+
+```MD
+## Dissecting the instruction.
+
+1. leave is equivalent to:
+
+mov rsp, rbp   ; Restore the stack pointer (ESP) to the base pointer (EBP)
+pop rbp        ; Restore the previous base pointer from the stack
+
+2. ret is equivalent to:
+
+pop rip        ; Pop the return address from the stack into the instruction pointer (RIP)
+```
