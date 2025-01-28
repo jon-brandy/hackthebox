@@ -31,5 +31,11 @@
 ![image](https://github.com/user-attachments/assets/c1e74311-9cbc-460e-a420-f22b09b17ff6)
 
 5. If the buffer length is bigger than the allocated buffer, hence the binary shall terminated.
+6. To bypass the **strlen()** check, we can simply pass **\x00** (null) byte at the start, then send our payload afterwards.
+7. It can be done because in nature **strlen()** function read a buffer until it meet a null byte, so by sending **\x00** byte at the start shall assume strlen only read 1 byte then.
+8. Now for the ROP technique should buy us time, because the binary is compiled at GLIBC version 2.35 and `_libc_csu_init()` function was removed from GLIBC version 2.34 and up.
 
+![image](https://github.com/user-attachments/assets/15e203ef-1e6b-4be3-a13d-cb99264cb42d)
+
+9. 
 
