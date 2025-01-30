@@ -4,7 +4,7 @@
 ![image](https://github.com/user-attachments/assets/a14e6d6a-7b1f-4913-84a2-e243c47c8bfc)
 
 ## Lessons Learned:
-1. Bypass **strelen()** check.
+1. Bypass **strlen()** check.
 2. Exploiting GLIBC version 2.35.
 3. Perform partial GOT overwrite using controlled **RBP**.
 4. Passing **/bin/sh** strings to drop shell.
@@ -57,4 +57,7 @@ pop rbp        ; Restore the previous base pointer from the stack
 pop rip        ; Pop the return address from the stack into the instruction pointer (RIP)
 ```
 
-10. At this rate, we should weaponize **RBP**.
+10. Remembering this binary is compiled with **Partial RELRO**, then at this rate, we can weaponize **RBP** to overwrite `strlen@got` with `printf@got`. With this we can obtain Format String Bug (FSB) which resulting to arbitrary read.
+11. With this bug, we can leak libc address and relocate libc base. Awesome!
+
+
