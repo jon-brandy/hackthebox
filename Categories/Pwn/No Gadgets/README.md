@@ -60,4 +60,9 @@ pop rip        ; Pop the return address from the stack into the instruction poin
 10. Remembering this binary is compiled with **Partial RELRO**, then at this rate, we can weaponize **RBP** to overwrite `strlen@got` with `printf@got`. With this we can obtain Format String Bug (FSB) which resulting to arbitrary read.
 11. With this bug, we can leak libc address and relocate libc base. Awesome!
 
+> PROBLEM
+
+12. However, we are against a limitation of partial overwrite due to fgets primitive. **fgets()** function reads a buffer until newline and appends a null byte at the end.
+13. Knowing this, our input should always end in `0a00`.
+
 
