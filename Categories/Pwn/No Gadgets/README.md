@@ -277,4 +277,9 @@ sh.interactive()
 ![image](https://github.com/user-attachments/assets/1eb8386b-37e0-42e1-99a8-cf7f823e6d29)
 
 36. Relocate it using vmmap libc base, shall gave us the libc base.
-37. Now
+37. Moving on, passing **AAAAAAAA** noticed that our input overwrite puts@got again at the same offset.
+
+![image](https://github.com/user-attachments/assets/54797363-ac30-4728-a54f-9dd780219b27)
+
+38. Meaning now we can pass `/bin/sh\x00` strings and overwrite strlen with `system@got` to drop a shell!
+
