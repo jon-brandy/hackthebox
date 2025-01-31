@@ -63,6 +63,41 @@ pop rip        ; Pop the return address from the stack into the instruction poin
 > PROBLEM
 
 12. However, we are against a limitation of partial overwrite due to fgets primitive. **fgets()** function reads a buffer until newline and appends a null byte at the end.
-13. Knowing this, our input should always end in `0a00`.
+13. Knowing this, our input should always end in `0a00`. In many binary exploits, we use partial overwrites (changing just 1 or 2 bytes of a memory address), but here since the last two bytes are always `\x0a\x00`, **we are forced to overwrite with either** `00` or `0a00`, making precise overwrites tricky.
+14. If the address we want to overwrite ends in 0x00, hence we get a very small chance to hitting a correct address (since ASLR is enabled).
+
+> SOLUTION
+
+15. The solution for this is to look for a memory location that can tolerate `0a00` at the end. Usually are `.bss` and  `GOT entry`.
+16. Two ways to identify it, are using ghidra or GDB.
+
+> IN GDB
+
+![image](https://github.com/user-attachments/assets/d8596a2f-c0bd-4efa-b127-3473a3f7c772)
+
+17. Noticed that there are 2 memory regions marked as `rw-p` (readable, writable, not executable, private).
+18. One of them should be `GOT entry` and `.bss` region. To check it I used ghidra.
+
+> GHIDRA
+
+![image](https://github.com/user-attachments/assets/1c935bfc-7902-4059-bc8b-18d466ee1fff)
+
+![image](https://github.com/user-attachments/assets/c57aee8e-e516-4b7a-ae8e-ae5336264e5a)
+
+
+19. Found that `0x404000` is a `GOT Entry` and `.bss` sections. Awesome!
+
+#### NOTES:
+
+```
+Private meaning each process gets it's own stack and heap, meaning they should
+not be shared with other processes. So if we overwrite a function pointer in
+.bss, it's private to your process, so you don't need to worry about other processes
+interferring.
+
+The opposite of private is shared (s).
+=> Meaning multiple processes can read/write the same memory.
+```
+
 
 
