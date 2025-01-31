@@ -278,7 +278,7 @@ sh.interactive()
 ![image](https://github.com/user-attachments/assets/1eb8386b-37e0-42e1-99a8-cf7f823e6d29)
 
 36. Relocate it using vmmap libc base, shall gave us the libc base.
-37. Moving on, passing **AAAAAAAA** noticed that our input overwrite puts@got again at the same offset.
+37. Moving on, passing **AAAAAAAA** noticed that our input overwrite puts@got again at the same offset. This happen because after sending the payload, the original return address after **fgets()** was not changed. It works because by repopulating the GOT, the progra functions correctly allowing repeated executio of **fgets()** and controlled overwrites.
 
 ![image](https://github.com/user-attachments/assets/54797363-ac30-4728-a54f-9dd780219b27)
 
