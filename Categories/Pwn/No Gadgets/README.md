@@ -150,3 +150,25 @@ sh.sendlineafter(b':', p)
 sh.interactive()
 ```
 
+24. Now this time, our input shall clobbered the Global Offset Table (GOT). So we need to understand what to overwrite now, because few GOT functions need to be restored in order to prevent crashes.
+25. Based on our first plan, since we want to obtain arbitrary read and `puts@got` is at our control, hence we need to place format specifier at `puts@got`.
+
+> SIMULATION
+
+![image](https://github.com/user-attachments/assets/819cebcf-19aa-44ca-b631-ec6572e8a80c)
+
+```
+puts@got -> %p
+strlen@got -> ?
+printf@got -> ?
+fgets@got -> ?
+setvbuf@got -> ?
+exit@got -> ?
+```
+
+26. With this, puts cannot be called again. Because it shall leads to segmentation fault.
+27. Now we need to repopulate the other GOT functions with correct address. Let's start by overwrite `strlen@got` with printf call.
+
+![image](https://github.com/user-attachments/assets/16d3bd4d-311c-422b-9b0a-a7c97305048f)
+
+28. For the rest functions, since we don't need it, let's just fill them with their original resolver address. With this, they get resolved again and work correctly.
