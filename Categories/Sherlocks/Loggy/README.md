@@ -59,7 +59,7 @@
 
 ![image](https://github.com/user-attachments/assets/70b56b94-e350-4444-a74e-a67d4d613534)
 
-> 10TH QUESTIO --> ANS:
+> 10TH QUESTIO --> ANS: `Solitaire`
 
 ![image](https://github.com/user-attachments/assets/2e3b671b-8cef-4a2d-8e14-3475107c13a8)
 
