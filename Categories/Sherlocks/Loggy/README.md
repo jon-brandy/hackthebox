@@ -43,15 +43,15 @@
 ![image](https://github.com/user-attachments/assets/dd48ff11-ba9b-464d-b727-95c2f1ccd00c)
 
 
-> 6TH QUESTION --> ANS:
+> 6TH QUESTION --> ANS: `gotthem.htb`
 
 ![image](https://github.com/user-attachments/assets/5a67d8ab-1aea-4307-bd13-8f169cb5be47)
 
-> 7TH QUESTION --> ANS:
+> 7TH QUESTION --> ANS: `NottaHacker:Cle@rtextP@ssword`
 
 ![image](https://github.com/user-attachments/assets/e9561698-3f49-4bd6-b249-f5c26c290bab)
 
-> 8TH QUESTION --> ANS:
+> 8TH QUESTION --> ANS: `keylog.txt`
 
 ![image](https://github.com/user-attachments/assets/4e606a27-bd4c-4482-9340-ca1505bfc984)
 
