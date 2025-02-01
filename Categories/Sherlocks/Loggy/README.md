@@ -38,7 +38,7 @@
 ![image](https://github.com/user-attachments/assets/457e2656-482d-443f-92bb-59eb27146c01)
 
 
-> 5TH QUESTION --> ANS:
+> 5TH QUESTION --> ANS: `WriteFile`
 
 ![image](https://github.com/user-attachments/assets/dd48ff11-ba9b-464d-b727-95c2f1ccd00c)
 
