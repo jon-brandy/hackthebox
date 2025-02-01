@@ -5,7 +5,10 @@
 
 
 ## Lessons Learned:
-1. asdasd
+1. Using Ghidra and **ANY.RUN** to identify Programming Language used by the Malware.
+2. Using PE Studio and Detect it Easy (DIE) to identify Malicious Function Call.
+3. Identify the FTP domain Used for Data Exfiltration.
+4. Using GoReSym plugin for Binary Ninja.
 
 ## DESCRIPTION:
 
