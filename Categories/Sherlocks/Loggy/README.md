@@ -55,7 +55,7 @@
 
 ![image](https://github.com/user-attachments/assets/4e606a27-bd4c-4482-9340-ca1505bfc984)
 
-> 9TH QUESTION --> ANS:
+> 9TH QUESTION --> ANS: `janice:Password123`
 
 ![image](https://github.com/user-attachments/assets/70b56b94-e350-4444-a74e-a67d4d613534)
 
