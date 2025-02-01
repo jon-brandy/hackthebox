@@ -25,7 +25,7 @@
  
 ![image](https://github.com/user-attachments/assets/6bf474f8-55e6-46b0-8a95-51f89ffd7009)
 
-> 2ND QUESTION --> ANS:
+> 2ND QUESTION --> ANS: `Golang 1.22.3`
 
 ![image](https://github.com/user-attachments/assets/c2a77e91-03a3-4ba5-80b8-1bdd50341624)
 
