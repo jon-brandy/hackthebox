@@ -21,6 +21,42 @@
 
 ![image](https://github.com/user-attachments/assets/df7faa35-9490-4a8a-924b-b6c2899bb9a8)
 
+> 1ST QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/6bf474f8-55e6-46b0-8a95-51f89ffd7009)
+
+> 2ND QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/c2a77e91-03a3-4ba5-80b8-1bdd50341624)
+
+> 3RD QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/5da6ae1a-d4d0-49bc-bb1c-04993532cd40)
+
+> 4TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/457e2656-482d-443f-92bb-59eb27146c01)
+
+
+> 5TH QUESTION --> ANS:
+
+![image](https://github.com/user-attachments/assets/dd48ff11-ba9b-464d-b727-95c2f1ccd00c)
+
+
+> 6TH QUESTION --> ANS:
+
+
+> 7TH QUESTION --> ANS:
+
+
+> 8TH QUESTION --> ANS:
+
+
+> 9TH QUESTION --> ANS:
+
+
+> 10TH QUESTIO --> ANS:
+
 
 ## IMPORTANT LINKS:
 
