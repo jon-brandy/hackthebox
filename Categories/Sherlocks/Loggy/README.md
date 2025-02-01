@@ -21,8 +21,8 @@
 
 ![image](https://github.com/user-attachments/assets/df7faa35-9490-4a8a-924b-b6c2899bb9a8)
 
-> 1ST QUESTION --> ANS:
-
+> 1ST QUESTION --> ANS: `6acd8a362def62034cbd011e6632ba5120196e2011c83dc6045fcb28b590457c`
+ 
 ![image](https://github.com/user-attachments/assets/6bf474f8-55e6-46b0-8a95-51f89ffd7009)
 
 > 2ND QUESTION --> ANS:
