@@ -45,12 +45,15 @@
 
 > 6TH QUESTION --> ANS:
 
+![image](https://github.com/user-attachments/assets/5a67d8ab-1aea-4307-bd13-8f169cb5be47)
 
 > 7TH QUESTION --> ANS:
 
+![image](https://github.com/user-attachments/assets/e9561698-3f49-4bd6-b249-f5c26c290bab)
 
 > 8TH QUESTION --> ANS:
 
+![image](https://github.com/user-attachments/assets/4e606a27-bd4c-4482-9340-ca1505bfc984)
 
 > 9TH QUESTION --> ANS:
 
