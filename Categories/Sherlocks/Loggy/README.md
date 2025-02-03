@@ -59,6 +59,18 @@
 
 ![image](https://github.com/user-attachments/assets/5da6ae1a-d4d0-49bc-bb1c-04993532cd40)
 
+
+9. Next, to identify imported github repo, I used ghidra to decompile the binary.
+
+> GHIDRA
+
+![image](https://github.com/user-attachments/assets/f3c900b8-6e30-484b-9758-ace64781feab)
+
+![image](https://github.com/user-attachments/assets/610a9bfd-3d7f-4fba-9277-bfef2b12c2ef)
+
+10. Found 5 github repos and
+
+
 > 4TH QUESTION --> ANS: `github.com/kbinani/screenshot`
 
 ![image](https://github.com/user-attachments/assets/457e2656-482d-443f-92bb-59eb27146c01)
