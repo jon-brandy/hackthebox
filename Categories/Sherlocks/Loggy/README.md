@@ -50,6 +50,11 @@
 
 ![image](https://github.com/user-attachments/assets/c2a77e91-03a3-4ba5-80b8-1bdd50341624)
 
+8. Baseed on our previous identification, we know that we are dealing with golang binary. To identify the compiler version, we can just strings the binary and filter for **go1**.
+
+![image](https://github.com/user-attachments/assets/1f08b726-456d-46c5-8198-b341837163a7)
+
+
 > 3RD QUESTION --> ANS: `github.com/jlaffaye/ftp`
 
 ![image](https://github.com/user-attachments/assets/5da6ae1a-d4d0-49bc-bb1c-04993532cd40)
