@@ -50,7 +50,7 @@
   |1. |[Meerkat](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Meerkat/README.md)|[Bumblebee](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Bumblebee/README.md)|[Lockpick](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Lockpick/README.md)|[Constellation](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Constellation/README.md)|[OpTinselTrace-4](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/OpTinselTrace-4/README.md)|
   |2. |[Litter](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Litter/README.md)|[Logjammer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Logjammer/README.md)|[Heartbreaker-Continuum](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Heartbreaker-Continuum/README.md)|
   |3. |[]()|[Hyperfiletable](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Hyperfiletable/README.md)|[Subatomic](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Subatomic/README.md)|
-  |4. |[]()|[Tracer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Tracer/README.md)|
+  |4. |[]()|[Tracer](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Tracer/README.md)|Loggy|
   |5. |[]()|[RogueOne](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/RogueOne/README.md)|
   |6. |[]()|[Recollection](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Recollection/README.md)|
   |7. |[]()|[Brutus](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Sherlocks/Brutus/README.md)|
