@@ -25,8 +25,26 @@
 ![image](https://github.com/user-attachments/assets/df7faa35-9490-4a8a-924b-b6c2899bb9a8)
 
 > 1ST QUESTION --> ANS: `6acd8a362def62034cbd011e6632ba5120196e2011c83dc6045fcb28b590457c`
- 
+
 ![image](https://github.com/user-attachments/assets/6bf474f8-55e6-46b0-8a95-51f89ffd7009)
+
+
+5. For our initial analysis, let's load the hash to threat intelligence tool so we obtain additional info regarding this file.
+
+![image](https://github.com/user-attachments/assets/a498fdfd-8750-4456-a06c-7dc75d71bd80)
+
+
+![image](https://github.com/user-attachments/assets/333b697d-0e34-4c3d-9640-4c21607a4829)
+
+
+6. Based on the result, the file marked as malicious by few security vendors and reviewing the **details** section, we can identify that the malware is compiled with Golang compiler.
+
+![image](https://github.com/user-attachments/assets/d21bcdc2-7d94-4ac6-a6cf-be516db4ca35)
+
+7. Checking the graph representation, it is known there are 4 contacted domains and most of them are to microsoft. It could indicate a windows API usage for network communication.
+
+![image](https://github.com/user-attachments/assets/19b474f1-2c61-4d9a-aa89-2bcf09a781ef)
+
 
 > 2ND QUESTION --> ANS: `Golang 1.22.3`
 
