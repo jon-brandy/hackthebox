@@ -138,7 +138,7 @@ Don't forget to filter for WriteFile function call first.
 
 
 19. Upon checking the malware's binary path, we can identify newly created screenshot image file.
-20. It captured our activity at API Monitor. 
+20. It captured our activity at API Monitor. Knowing this, then **WriteFile** is the function abused by malware to create a file.
 
 ![image](https://github.com/user-attachments/assets/f6ab7199-f1b0-4e39-84b1-e4f4a34c7f15)
 
