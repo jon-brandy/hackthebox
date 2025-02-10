@@ -8,7 +8,7 @@
 1. Using Ghidra, **ANY.RUN**, and Detect It Easy (DIE) to identify Programming Language used by the Malware.
 2. Using PE Studio and API Monitor to identify Malicious Function Call.
 3. Identify the FTP domain Used for Data Exfiltration.
-4. Using GoReSym plugin for Binary Ninja.
+4. Review IDA graph to identify file keeps written onto the disk.
 
 ## DESCRIPTION:
 
@@ -197,5 +197,6 @@ Don't forget to filter for WriteFile function call first.
 ## IMPORTANT LINKS:
 
 ```
-https://github.com/mandiant/GoReSym
+https://gist.github.com/ssell/19cf1f96ac84be7f15545e6a0da5d741
+https://learn.microsoft.com/en-us/windows/win32/apiindex/windows-api-list
 ```
