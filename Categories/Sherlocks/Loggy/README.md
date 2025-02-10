@@ -68,7 +68,16 @@
 
 ![image](https://github.com/user-attachments/assets/610a9bfd-3d7f-4fba-9277-bfef2b12c2ef)
 
-10. Found 5 github repos and
+10. Found 5 github repos and by logic the repo used for data exfiltration should be jlaffaye's repo. However to prove our assumption, we can investigate each repos since the repo's path is visible to us. (no one knows, the repo might be named different than it's actual purpose).
+
+|hashicorp|jlaffaye|kbinani|
+|:-------:|:------:|:-----:|
+|![image](https://github.com/user-attachments/assets/d4ac31bc-409b-4bb8-9685-e5a3770ee259)|![image](https://github.com/user-attachments/assets/83f5073e-1468-4b75-b8e1-bd598be0a19c)|![image](https://github.com/user-attachments/assets/4becc0a3-0d1b-4451-a5fa-cd0892cca238)|
+
+
+|lxn|TheTitanrain|
+|:-:|:----------:|
+||
 
 
 > 4TH QUESTION --> ANS: `github.com/kbinani/screenshot`
