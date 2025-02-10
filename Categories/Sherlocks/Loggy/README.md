@@ -77,7 +77,9 @@
 
 |lxn|TheTitanrain|
 |:-:|:----------:|
-||
+|![image](https://github.com/user-attachments/assets/4b3c7572-8453-42e3-ae42-49d94aa3e7d9)|![image](https://github.com/user-attachments/assets/c7696ead-a04d-496b-bac5-1eaacb14b1b1)|
+
+11. Based on the evidence above, we can much conclude github likely used to exfiltrate data should be from user **jlaffaye** (using File Transfer Protocol).
 
 
 > 4TH QUESTION --> ANS: `github.com/kbinani/screenshot`
