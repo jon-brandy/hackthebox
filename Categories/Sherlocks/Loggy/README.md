@@ -148,30 +148,51 @@ Don't forget to filter for WriteFile function call first.
 ![image](https://github.com/user-attachments/assets/5a67d8ab-1aea-4307-bd13-8f169cb5be47)
 
 
-21. There are ways to identify the domain name used by the threat actor to exfiltrate data. We can just using **strings** and filter for FTP port or using **GoReSym**.
+21. There are ways to identify the domain name used by the threat actor to exfiltrate data. We can just using **strings** and filter for FTP port or using **GoReSym** plugin with at Binary Ninja.
+22. But at this investigation I used strings only, because my Binary Ninja is licensed free 😭
 
 > USING STRINGS
 
 ![image](https://github.com/user-attachments/assets/61849133-1003-4bc6-895d-a8b4cac6e7bc)
 
 
-
-
 > 7TH QUESTION --> ANS: `NottaHacker:Cle@rtextP@ssword`
 
 ![image](https://github.com/user-attachments/assets/e9561698-3f49-4bd6-b249-f5c26c290bab)
+
+23. For this one, I used IDA to have better readability, because my ghidra seems failed to give me better readability for golang binary.
+24. Long story short, upon reviewing the `main_sendFilesViaFTP()` function, we can identify a credential before the login() function call.
+
+![image](https://github.com/user-attachments/assets/a3a826c0-b1aa-41e2-9b59-88de6d345011)
+
+25. Great! Now we identified the threat actor's credential.
 
 > 8TH QUESTION --> ANS: `keylog.txt`
 
 ![image](https://github.com/user-attachments/assets/4e606a27-bd4c-4482-9340-ca1505bfc984)
 
+26. Next, to identify file that keeps getting written to the disk. Simply follow the graph and **KEYLOG.TXT** file is created twice with **CreateFile()** API function call.
+
 > 9TH QUESTION --> ANS: `janice:Password123`
 
 ![image](https://github.com/user-attachments/assets/70b56b94-e350-4444-a74e-a67d4d613534)
 
-> 10TH QUESTIO --> ANS: `Solitaire`
+27. To identify Janice's password, we can check the **keylog.txt** file which contains Janice's keystrokes.
+
+![image](https://github.com/user-attachments/assets/8d31ade9-3dc9-43a2-bdb5-218444e9680b)
+
+
+> 10TH QUESTION --> ANS: `Solitaire`
 
 ![image](https://github.com/user-attachments/assets/2e3b671b-8cef-4a2d-8e14-3475107c13a8)
+
+
+28. Based on the evidence given to us, it is clear that Janice opened **Solitaire** when she ran the malware.
+
+![image](https://github.com/user-attachments/assets/7b2e8580-be89-4baa-98b8-f9d7f4c5e291)
+
+
+29. Great! We've investigated the case!
 
 ## IMPORTANT LINKS:
 
