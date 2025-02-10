@@ -5,8 +5,8 @@
 
 
 ## Lessons Learned:
-1. Using Ghidra and **ANY.RUN** to identify Programming Language used by the Malware.
-2. Using PE Studio and Detect it Easy (DIE) to identify Malicious Function Call.
+1. Using Ghidra, **ANY.RUN**, and Detect It Easy (DIE) to identify Programming Language used by the Malware.
+2. Using PE Studio and API Monitor to identify Malicious Function Call.
 3. Identify the FTP domain Used for Data Exfiltration.
 4. Using GoReSym plugin for Binary Ninja.
 
@@ -40,6 +40,18 @@
 6. Based on the result, the file marked as malicious by few security vendors and reviewing the **details** section, we can identify that the malware is compiled with Golang compiler.
 
 ![image](https://github.com/user-attachments/assets/d21bcdc2-7d94-4ac6-a6cf-be516db4ca35)
+
+> Using DIE.
+
+![image](https://github.com/user-attachments/assets/beaacbdf-8ec5-412a-910a-89ccff039fcb)
+
+
+#### NOTE:
+
+```
+DIE also can be used to identify the binary's programming language, compiler,
+and it's packer (general packer).
+```
 
 7. Checking the graph representation, it is known there are 4 contacted domains and most of them are to microsoft. It could indicate a windows API usage for network communication.
 
@@ -109,7 +121,27 @@
 ![image](https://github.com/user-attachments/assets/b0c52bfc-d6af-4f33-9fb0-6b77ca296aff)
 
 
-16. Based on the evidence above, a **WriteFile** function which is part of **Kernel32.dll** is called. Let's 
+16. Based on the evidence above, a **WriteFile** function which is part of **Kernel32.dll** is called. Let's try to monitor it using **apmx**.
+
+![image](https://github.com/user-attachments/assets/490ef3cc-015d-47b6-9708-65babaa211d3)
+
+#### NOTE:
+
+```
+Don't forget to filter for WriteFile function call first.
+```
+
+17. Nice, we can see that the **WriteFile** is called. Reviewing the hexdump on one of the summary. We can identify a PNG file signature.
+18. Meaning the malware just created a PNG file.
+
+![image](https://github.com/user-attachments/assets/57dce2e8-20c1-4467-9a72-ed57f230d9f6)
+
+
+19. Upon checking the malware's binary path, we can identify newly created screenshot image file.
+20. It captured our activity at API Monitor. 
+
+![image](https://github.com/user-attachments/assets/f6ab7199-f1b0-4e39-84b1-e4f4a34c7f15)
+
 
 > 6TH QUESTION --> ANS: `gotthem.htb`
 
