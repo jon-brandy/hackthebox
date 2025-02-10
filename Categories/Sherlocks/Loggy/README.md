@@ -79,7 +79,10 @@
 |:-:|:----------:|
 |![image](https://github.com/user-attachments/assets/4b3c7572-8453-42e3-ae42-49d94aa3e7d9)|![image](https://github.com/user-attachments/assets/c7696ead-a04d-496b-bac5-1eaacb14b1b1)|
 
-11. Based on the evidence above, we can much conclude github likely used to exfiltrate data should be from user **jlaffaye** (using File Transfer Protocol).
+11. Based on the evidence above, we can much conclude github likely used to exfiltrate data should be from user **jlaffaye** (using File Transfer Protocol). Another convincing evidence is function usage related to FTP for handling files.
+
+![image](https://github.com/user-attachments/assets/b1fd4bf0-7af5-4a8b-b28e-cd6f2159217c)
+
 
 
 > 4TH QUESTION --> ANS: `github.com/kbinani/screenshot`
@@ -87,10 +90,18 @@
 ![image](https://github.com/user-attachments/assets/457e2656-482d-443f-92bb-59eb27146c01)
 
 
+12. Again,  it's clear the mentioned dependency should be **github.com/kbinani/screenshot**.
+
+![image](https://github.com/user-attachments/assets/0f180c09-0985-43ee-b217-8ed27efd54eb)
+
+
 > 5TH QUESTION --> ANS: `WriteFile`
 
 ![image](https://github.com/user-attachments/assets/dd48ff11-ba9b-464d-b727-95c2f1ccd00c)
 
+
+13. Now, to identify which function is used by the malware to create a file after execution, we need to list all the available functions.
+14. Since it's related to file creation at windows, the function should be related to API function.
 
 > 6TH QUESTION --> ANS: `gotthem.htb`
 
