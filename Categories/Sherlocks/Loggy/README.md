@@ -104,6 +104,9 @@
 14. Since it's related to file creation at windows, the function should be related to Windows API function.
 15. There are 2 ways to identify it, in static way we can simply load the binary to **PESTUDIO**, in dynamic way we need to monitor the Windows API function call using **apmx**.
 
+![image](https://github.com/user-attachments/assets/b0c52bfc-d6af-4f33-9fb0-6b77ca296aff)
+
+
 > 6TH QUESTION --> ANS: `gotthem.htb`
 
 ![image](https://github.com/user-attachments/assets/5a67d8ab-1aea-4307-bd13-8f169cb5be47)
