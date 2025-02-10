@@ -101,7 +101,8 @@
 
 
 13. Now, to identify which function is used by the malware to create a file after execution, we need to list all the available functions.
-14. Since it's related to file creation at windows, the function should be related to API function.
+14. Since it's related to file creation at windows, the function should be related to Windows API function.
+15. There are 2 ways to identify it, in static way we can simply load the binary to **PESTUDIO**, in dynamic way we need to monitor the Windows API function call using **apmx**.
 
 > 6TH QUESTION --> ANS: `gotthem.htb`
 
