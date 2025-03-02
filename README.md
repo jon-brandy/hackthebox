@@ -96,7 +96,8 @@
 |11. |[Bon-nie-appetit](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Bon-nie-appetit/README.md)|[Great Old Talisman](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Great%20Old%20Talisman/README.md)|[Spellbook](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Spellbook/README.md)|
 |12. |[Oxidized ROP](https://github.com/jon-brandy/hackthebox/tree/main/Categories/Pwn/Oxidized%20ROP)|[Regularity](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Regularity/README.md)|[Writing on the Wall](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Writing%20on%20the%20Wall/README.md)|
 |13. |[Execute](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Execute/README.md)|[Rocket Blaster XXX](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Rocket%20Blaster%20XXX/README.md)|[Sound of Silence](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Sound%20of%20Silence/README.md)|
-|14. |[Kernel Adventures: Part 1](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Kernel%20Adventures%3A%20Part%201/README.md)|[Assemblers Avenge](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Assemblers%20Avenge/README.md)|[No Gadgets](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/No%20Gadgets/README.md)|
+|14. |[r0bob1rd](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/r0bob1rd/README.md)|[Assemblers Avenge](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Assemblers%20Avenge/README.md)|[No Gadgets](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/No%20Gadgets/README.md)|
+|15. |[Kernel Adventures: Part 1](https://github.com/jon-brandy/hackthebox/blob/main/Categories/Pwn/Kernel%20Adventures%3A%20Part%201/README.md)|
 
 
 
