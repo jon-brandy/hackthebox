@@ -43,3 +43,9 @@
 ![image](https://github.com/user-attachments/assets/e7b62d7d-ce07-4530-bcef-54d271a13e98)
 
 
+![image](https://github.com/user-attachments/assets/2e198915-7642-4e8b-9451-38d6f2eb0b5e)
+
+
+6. Notice that the **.data** section is close to **.got** section memory. So we could actually leak the libc function by passing the correct index number. Now to identify it, let's examine the mapped GOT dynamically using **GDB**.
+
+
