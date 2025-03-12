@@ -38,7 +38,7 @@
 ![image](https://github.com/user-attachments/assets/50b412a0-82a6-4f18-954f-d61ded782e47)
 
 7. We can further investigate the threat actor's activity with ease, because the **Smart Screen Debug Logs** is enabled.
-8. Note that, **Smart Screen Debug Logs** is from **Microsoft Defender SmartScreen** and this function primarily works as preventive measure rather than tool / binary removal.
+8. Note that, **Smart Screen Debug Logs** is from **Microsoft Defender SmartScreen** and this function primarily works as preventive measure rather than tool / binary removal. Which means it focuses on protecting users from malicious downloads, websites, and app installers.
 9. So if we found the C2 or malicious binary installation performed by the threat actor, it shall shown at the log.
 10. Upon reviewing the log, not long after the initial access, at `2025-01-24 10:17:14` a **WinRAR** software setup binary is executed.
 
@@ -58,11 +58,14 @@
 
 ![image](https://github.com/user-attachments/assets/a7d57f46-43ed-4a8f-8799-fa698bb18a51)
 
-
+13. The binary seems a file search utility.
 
 > 4TH QUESTION -> ANS: `2025-01-24 10:17:33`
 
 ![image](https://github.com/user-attachments/assets/6b3be03d-d7c0-4883-9ca9-5cc49bfc4fad)
+
+
+14. Based on our previous finding, the execution timestamp is `2025-01-24 10:17:33`.
 
 
 > 5TH QUESTION -> ANS: `C:\Users\Dutch\Documents\2025- Board of directors Documents\Ministry Of Defense Audit.pdf`
@@ -70,9 +73,18 @@
 ![image](https://github.com/user-attachments/assets/94d2b3ef-8add-4d7e-a267-1ba5670d2263)
 
 
+15. Next, upon continue reviewing the log. Found a PDF file which likely the first document that the attacker got their hands on.
+
+![image](https://github.com/user-attachments/assets/e11321b3-e9f1-49f7-8350-dad2dce66e5c)
+
+
 > 6TH QUESTION -> ANS: `C:\Users\Dutch\Documents\2025- Board of directors Documents\2025-BUDGET-ALLOCATION-CONFIDENTIAL.pdf`
 
 ![image](https://github.com/user-attachments/assets/4ef005ed-b067-4ce2-a25d-2ab5a34346d9)
+
+16. Found another PDF that should be the second stolen document.
+
+![image](https://github.com/user-attachments/assets/f2859c25-7421-4bf8-8633-49a1e197b6c4)
 
 
 > 7TH QUESTION -> ANS: `File Shredder`
