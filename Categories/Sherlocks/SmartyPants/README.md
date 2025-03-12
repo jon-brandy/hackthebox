@@ -20,7 +20,7 @@
 ![image](https://github.com/user-attachments/assets/d94bdf93-6369-4e65-bb2f-fc1fc3ea9d17)
 
 
-> 2ND QUESTION -> ANS:
+> 2ND QUESTION -> ANS: `WinRAR`
 
 ![image](https://github.com/user-attachments/assets/50b412a0-82a6-4f18-954f-d61ded782e47)
 
