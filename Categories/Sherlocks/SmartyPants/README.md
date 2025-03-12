@@ -15,7 +15,7 @@
 1. On 24 January 2025, an intruder gained unauthorized access to Forela’s fileserver, installed utilities to facilitate their actions, exfiltrated critical files, and then deleted them to prevent recovery.
 2. This security breach has led to an extortion attempt, with the attackers demanding a ransom. The legal team is currently handling the extortion aspect, but our primary focus is conducting an immediate triage to assess the full extent of the incident.
 
-> 1ST QUESTION -> ANS:
+> 1ST QUESTION -> ANS: `2025-01-24 10:15:14`
 
 ![image](https://github.com/user-attachments/assets/d94bdf93-6369-4e65-bb2f-fc1fc3ea9d17)
 
