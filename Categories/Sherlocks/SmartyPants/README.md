@@ -103,6 +103,7 @@
 ![image](https://github.com/user-attachments/assets/94f03be4-af63-43e0-97f2-318d024f1e8d)
 
 
+19. Again, based on our previous finding, we can identify the timestamp for this utility execution is at `2025-01-24 10:22:19`. 
 
 
 > 9TH QUESTION -> ANS: `File Shredder`
@@ -110,10 +111,22 @@
 ![image](https://github.com/user-attachments/assets/51b7cb02-4139-4415-8c7b-dfd45d9a9203)
 
 
+20. Again, while continuing the review. Found a binary execution named **File Shredder** at timestamp `2025-01-24 10:26:40`. A file shredder is a specialized tool that permanently deletes files by overwriting them multiple times.
+
+![image](https://github.com/user-attachments/assets/0da79142-aca7-4873-b024-353a3f76bee9)
+
+
 > 10TH QUESTION -> ANS: `2025-01-24 10:28:41`
 
 ![image](https://github.com/user-attachments/assets/2d360039-bf08-4d1a-a261-103c1e6c8016)
 
+
+21. To identify an attempt to clear log files, we need to check the **Security** event log and filter for eventID **1102**.
+
+![image](https://github.com/user-attachments/assets/0e133d84-42c2-4466-a31d-fb0913504acf)
+
+22. Now we know the timestamp for log clear activity is at `2025-01-24 10:28:41`.
+23. Great! We've investigated the case.
 
 ## IMPORTANT LINKS:
 
