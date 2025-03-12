@@ -21,11 +21,23 @@
 
 ![image](https://github.com/user-attachments/assets/d94bdf93-6369-4e65-bb2f-fc1fc3ea9d17)
 
+3. To review the log for logon using RDP, there are many RDP-related event logs. Interestingly, the logon attempt is not logged inside the Security event log. As you can see below, there is no successful logon with logon type 10.
+
+![image](https://github.com/user-attachments/assets/8dec4e05-b8f3-4dad-86f9-e912e6076013)
+
+
+4. Note that there are many event logs related to RDP and in this case we could identify the logon attempt from this event log -> `Microsoft-Windows-TerminalServices-RemoteConnectionManager%4Operational.evtx`.
+5. Upon reviewing the log, found the log that indicates successful event logon at timestamp `2025-01-24 10:15:14` and reviewing other logs, no other RDP login attempt.
+6. This should be the initial login access of the attacker, because there is no other login attempt.
+
+![image](https://github.com/user-attachments/assets/64bf5f50-f493-4f09-a4e1-76611ec54cfa)
+
 
 > 2ND QUESTION -> ANS: `WinRAR`
 
 ![image](https://github.com/user-attachments/assets/50b412a0-82a6-4f18-954f-d61ded782e47)
 
+7. We can further investigate the threat actor's activity with ease, because the **Smart Screen Debug Logs** is enabled.
 
 > 3RD QUESTION -> ANS: `C:\Users\Dutch\Downloads\Everything.exe`
 
@@ -71,4 +83,5 @@
 ```
 https://ponderthebits.com/2018/02/windows-rdp-related-event-logs-identification-tracking-and-investigation/
 https://s0cm0nkey.gitbook.io/s0cm0nkeys-security-reference-guide/dfir-digital-forensics-and-incident-response/ir-event-log-cheatsheet
+https://learn.microsoft.com/en-us/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/
 ```
