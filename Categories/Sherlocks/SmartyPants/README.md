@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-1. sada
+1. Identify & Analyze Windows RDP-Related Event Logs.
 
 ## SCENARIO:
 
@@ -67,4 +67,5 @@
 ## IMPORTANT LINKS:
 
 ```
+https://ponderthebits.com/2018/02/windows-rdp-related-event-logs-identification-tracking-and-investigation/
 ```
