@@ -6,6 +6,8 @@
 
 ## Lessons Learned:
 1. Identify & Analyze Windows RDP-Related Event Logs.
+2. Using **event log explorer** and **event viewer** to analyze windows event logs.
+3. Reviewing **Smart Screen Debug** logs.
 
 ## SCENARIO:
 
