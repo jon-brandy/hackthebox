@@ -25,31 +25,31 @@
 ![image](https://github.com/user-attachments/assets/50b412a0-82a6-4f18-954f-d61ded782e47)
 
 
-> 3RD QUESTION -> ANS:
+> 3RD QUESTION -> ANS: `C:\Users\Dutch\Downloads\Everything.exe`
 
 ![image](https://github.com/user-attachments/assets/cd70cd64-c2d5-4178-939b-e9db77473350)
 
-> 4TH QUESTION -> ANS:
+> 4TH QUESTION -> ANS: `2025-01-24 10:17:33`
 
 ![image](https://github.com/user-attachments/assets/6b3be03d-d7c0-4883-9ca9-5cc49bfc4fad)
 
 
-> 5TH QUESTION -> ANS:
+> 5TH QUESTION -> ANS: `C:\Users\Dutch\Documents\2025- Board of directors Documents\Ministry Of Defense Audit.pdf`
 
 ![image](https://github.com/user-attachments/assets/94d2b3ef-8add-4d7e-a267-1ba5670d2263)
 
 
-> 6TH QUESTION -> ANS:
+> 6TH QUESTION -> ANS: `C:\Users\Dutch\Documents\2025- Board of directors Documents\2025-BUDGET-ALLOCATION-CONFIDENTIAL.pdf`
 
 ![image](https://github.com/user-attachments/assets/4ef005ed-b067-4ce2-a25d-2ab5a34346d9)
 
 
-> 7TH QUESTION -> ANS:
+> 7TH QUESTION -> ANS: `File Shredder`
 
 ![image](https://github.com/user-attachments/assets/f3395436-e559-407e-9492-d49d2f85855d)
 
 
-> 8TH QUESTION -> ANS:
+> 8TH QUESTION -> ANS: `2025-01-24 10:28:41`
 
 ![image](https://github.com/user-attachments/assets/94f03be4-af63-43e0-97f2-318d024f1e8d)
 
