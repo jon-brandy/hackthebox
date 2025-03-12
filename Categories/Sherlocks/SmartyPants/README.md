@@ -87,22 +87,30 @@
 ![image](https://github.com/user-attachments/assets/f2859c25-7421-4bf8-8633-49a1e197b6c4)
 
 
-> 7TH QUESTION -> ANS: `File Shredder`
+> 7TH QUESTION -> ANS: `MEGAsync`
 
 ![image](https://github.com/user-attachments/assets/f3395436-e559-407e-9492-d49d2f85855d)
 
+17. To identify the installed cloud utility used to steal and exfiltrate the documents, we just need to continue review the same event log file.
+18. Found a downloaded setup binary for **MEGAsync** and not long after that you shall identify **MEGAsync.exe** binary execution.
 
-> 8TH QUESTION -> ANS: `2025-01-24 10:28:41`
+![image](https://github.com/user-attachments/assets/b14aac96-b8a7-47b7-9e43-7350629ed0b3)
+
+![image](https://github.com/user-attachments/assets/9cbd12fc-54dd-4530-9a6c-f1f2c4bec039)
+
+> 8TH QUESTION -> ANS: `2025-01-24 10:22:19`
 
 ![image](https://github.com/user-attachments/assets/94f03be4-af63-43e0-97f2-318d024f1e8d)
 
 
-> 9TH QUESTION -> ANS:
+
+
+> 9TH QUESTION -> ANS: `File Shredder`
 
 ![image](https://github.com/user-attachments/assets/51b7cb02-4139-4415-8c7b-dfd45d9a9203)
 
 
-> 10TH QUESTION -> ANS:
+> 10TH QUESTION -> ANS: `2025-01-24 10:28:41`
 
 ![image](https://github.com/user-attachments/assets/2d360039-bf08-4d1a-a261-103c1e6c8016)
 
