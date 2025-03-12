@@ -38,10 +38,27 @@
 ![image](https://github.com/user-attachments/assets/50b412a0-82a6-4f18-954f-d61ded782e47)
 
 7. We can further investigate the threat actor's activity with ease, because the **Smart Screen Debug Logs** is enabled.
+8. Note that, **Smart Screen Debug Logs** is from **Microsoft Defender SmartScreen** and this function primarily works as preventive measure rather than tool / binary removal.
+9. So if we found the C2 or malicious binary installation performed by the threat actor, it shall shown at the log.
+10. Upon reviewing the log, not long after the initial access, at `2025-01-24 10:17:14` a **WinRAR** software setup binary is executed.
+
+![image](https://github.com/user-attachments/assets/d94533d6-24e9-4cb4-8647-37dd0ec812a1)
+
+> WinRAR.exe binary execution
+
+![image](https://github.com/user-attachments/assets/a6eaec8e-abe3-4f01-bea0-3635b7746553)
+
 
 > 3RD QUESTION -> ANS: `C:\Users\Dutch\Downloads\Everything.exe`
 
 ![image](https://github.com/user-attachments/assets/cd70cd64-c2d5-4178-939b-e9db77473350)
+
+11. Next, continue reviewing the log, we can identify another interesting binary named **Everything.exe** executed at timestamp `2025-01-24 10:17:33`.
+12. Searching on the internet regarding this binary, found a research article published by **CYRFIRMA** regarding **ELPACO-team Ransomware**.
+
+![image](https://github.com/user-attachments/assets/a7d57f46-43ed-4a8f-8799-fa698bb18a51)
+
+
 
 > 4TH QUESTION -> ANS: `2025-01-24 10:17:33`
 
@@ -84,4 +101,5 @@
 https://ponderthebits.com/2018/02/windows-rdp-related-event-logs-identification-tracking-and-investigation/
 https://s0cm0nkey.gitbook.io/s0cm0nkeys-security-reference-guide/dfir-digital-forensics-and-incident-response/ir-event-log-cheatsheet
 https://learn.microsoft.com/en-us/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/
+https://www.cyfirma.com/research/elpaco-team-ransomware-a-new-variant-of-the-mimic-ransomware-family/
 ```
