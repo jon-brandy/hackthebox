@@ -88,5 +88,5 @@
 ## IMPORTANT LINKS:
 
 ```
-
+https://medium.com/@pkhuyar/the-cve-2025-29927-with-next-js-framework-with-9-1-critical-score-75937fb000a3
 ```
