@@ -7,7 +7,8 @@
 ## Lessons Learned:
 1. Reviewing android image file using FTK imager and mount it on linux (identify last device boot time).
 2. Performing android e-mail and browser forensics (identify phish mail, malicious apk file, and installation timestamp).
-3. Performing static analysis on Android APKs (identify runtime permissions and C2 IP address).
+3. Performing static analysis on Android APKs (identify runtime permissions).
+4. Using wireshark and virus total to identify C2 IP Address and it's port.
 
 ## SCENARIO:
 
