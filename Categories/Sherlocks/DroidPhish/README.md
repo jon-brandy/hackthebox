@@ -61,7 +61,7 @@
 ![image](https://github.com/user-attachments/assets/29a8011e-49ce-4488-93e2-74a3f69cce82)
 
 
-> 10TH QUESTION -> ANS:
+> 10TH QUESTION -> ANS: `3.121.139.82:10824`
 
 ![image](https://github.com/user-attachments/assets/72b79ea6-3904-44a8-99c2-8d8b74c0509e)
 
