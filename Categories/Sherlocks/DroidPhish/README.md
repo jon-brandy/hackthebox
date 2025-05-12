@@ -57,7 +57,7 @@
 ![image](https://github.com/user-attachments/assets/26bb6b4e-b304-4ca2-88f2-ec492cb4a3ee)
 
 
-> 9TH QUESTION -> ANS:
+> 9TH QUESTION -> ANS: `13`
 
 ![image](https://github.com/user-attachments/assets/29a8011e-49ce-4488-93e2-74a3f69cce82)
 
