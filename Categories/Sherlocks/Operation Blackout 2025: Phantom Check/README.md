@@ -8,6 +8,9 @@
 1. Using Hayabusa for efficient parsing and triage of Windows event logs.
 2. Utilized Timeline Explorer to examine and correlate events within CSV-based timeline data.
 3. Using Event Viewer to analyze windows event logs.
+4. WMI class abused to retrieve model and manufacturer information.
+5. Identification of current machine temperature value.
+6. Identification of virtualization detection activity.
 
 ## SCENARIO:
 
