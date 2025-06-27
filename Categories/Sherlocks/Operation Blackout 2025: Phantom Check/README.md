@@ -112,6 +112,8 @@ SELECT * FROM MSAcpi_ThermalZoneTemperature
 16. Based on our previous findings, we can confidently conclude that the script is also capable of detecting VirtualBox environments.
 17. To achieve this, the script performs a comparison check for the presence of two specific processes: vboxservice.exe and vboxtray.exe, both commonly associated with VirtualBox installations.
 
+![image](https://github.com/user-attachments/assets/ff1363b6-b4f7-43b1-a277-27d714ee18a4)
+
 
 > 6TH QUESTION --> ANS: `Hyper-V, Vmware`
 
