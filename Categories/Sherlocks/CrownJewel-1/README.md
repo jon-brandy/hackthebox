@@ -13,6 +13,15 @@
 ## STEPS:
 1. sa
 
+```
+hayabusa-3.3.0-win-x64.exe csv-timeline -d C:\HTB-SHERLOCKS\Artifacts -o results-crownjewel-1.csv -p super-verbose
+```
+
+![gambar](https://github.com/user-attachments/assets/f5d30afe-9e4b-43a8-975d-787bc73d5ca9)
+
+![gambar](https://github.com/user-attachments/assets/ad0a3af0-6cd3-4af2-a00c-69b01f1ea4c2)
+
+
 > 1ST QUESTION --> ANS: 
 ![gambar](https://github.com/user-attachments/assets/325d09da-1e48-418f-8b4d-404aa1918ad4)
 
