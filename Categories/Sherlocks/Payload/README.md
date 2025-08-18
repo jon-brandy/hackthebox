@@ -15,6 +15,8 @@
 
 <img width="1282" height="200" alt="image" src="https://github.com/user-attachments/assets/efa2000a-a035-4616-bbb7-ff7f44ec751f" />
 
+<img width="1472" height="166" alt="image" src="https://github.com/user-attachments/assets/17a1b2bf-ed0d-404d-8d19-f116e002d1e5" />
+
 
 > 2ND QUESTION -> ANS:
 
