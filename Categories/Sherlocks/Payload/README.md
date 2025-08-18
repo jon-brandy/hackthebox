@@ -29,9 +29,11 @@
 <img width="806" height="658" alt="image" src="https://github.com/user-attachments/assets/a292f283-9e81-4b17-8d9b-ad7808ebd910" />
 
 
-> 4TH QUESTION -> ANS:
+> 4TH QUESTION -> ANS: `False`
 
 <img width="1281" height="198" alt="image" src="https://github.com/user-attachments/assets/f8fbf1bc-72b1-41a4-a2c8-eaad1fb15e8c" />
+
+<img width="583" height="635" alt="image" src="https://github.com/user-attachments/assets/c51d7208-1a01-4fb1-9276-55f16c9fdeba" />
 
 
 > 5TH QUESTION -> ANS: `0x140000000`
