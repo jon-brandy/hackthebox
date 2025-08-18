@@ -43,7 +43,7 @@
 <img width="843" height="642" alt="image" src="https://github.com/user-attachments/assets/cf231646-db83-4ee5-8546-4bde01280105" />
 
 
-> 6TH QUESTION -> ANS:
+> 6TH QUESTION -> ANS: `0x00001125`
 
 <img width="1279" height="196" alt="image" src="https://github.com/user-attachments/assets/c80996c0-55a4-4b1b-b8ee-2562feed8cf6" />
 
