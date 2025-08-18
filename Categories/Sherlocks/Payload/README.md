@@ -70,9 +70,13 @@
 <img width="1914" height="1067" alt="image" src="https://github.com/user-attachments/assets/d519bf5b-c386-4e99-8819-0ff233c9b8da" />
 
 
-> 8TH QUESTION -> ANS:
+> 8TH QUESTION -> ANS: `0x5555555555555555`
 
 <img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/7467689d-d3c4-46d3-9048-7cd5c7a35c43" />
+
+<img width="992" height="1151" alt="image" src="https://github.com/user-attachments/assets/6abdf47b-475e-4475-9f6f-e619b91fa4e1" />
+
+<img width="1897" height="441" alt="image" src="https://github.com/user-attachments/assets/335147fb-c2bc-466c-a2cc-77f5f94a8f52" />
 
 
 > 9TH QUESTION -> ANS:
