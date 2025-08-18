@@ -1,8 +1,12 @@
 # Payload
 > Write-up author: jon-brandy
 
+<img width="366" height="145" alt="image" src="https://github.com/user-attachments/assets/9bc5a89c-86c0-49cf-adad-b11d71ba6594" />
+
+
 ## Lessons Learned:
-1. Using PEStudio, DIE, Ghidra, and radare2 to conduct static windows binary analysis.
+1. Malware Analysis
+2. Using PEStudio, DIE, Ghidra, and radare2 to conduct static windows binary analysis.
 
 ## SCENARIO:
 
