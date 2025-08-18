@@ -2,7 +2,7 @@
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
-1. Using PEStudio, DIE, Ghidra, and radare2 to conduct static binary analysis.
+1. Using PEStudio, DIE, Ghidra, and radare2 to conduct static windows binary analysis.
 
 ## SCENARIO:
 
