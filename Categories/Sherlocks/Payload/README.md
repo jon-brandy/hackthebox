@@ -59,9 +59,15 @@
 <img width="1279" height="196" alt="image" src="https://github.com/user-attachments/assets/c80996c0-55a4-4b1b-b8ee-2562feed8cf6" />
 
 
-> 7TH QUESTION -> ANS:
+> 7TH QUESTION -> ANS: `8d098d59a01f830a`
 
 <img width="1279" height="198" alt="image" src="https://github.com/user-attachments/assets/b19cacb0-a646-41e9-8885-be4b60b12e4e" />
+
+<img width="1055" height="1065" alt="image" src="https://github.com/user-attachments/assets/8306ea12-4b7b-4763-86b0-1fafebff32ed" />
+
+<img width="2073" height="931" alt="image" src="https://github.com/user-attachments/assets/7457af5e-c047-4468-b07e-84ca4f8f067a" />
+
+<img width="1914" height="1067" alt="image" src="https://github.com/user-attachments/assets/d519bf5b-c386-4e99-8819-0ff233c9b8da" />
 
 
 > 8TH QUESTION -> ANS:
