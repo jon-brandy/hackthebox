@@ -11,7 +11,7 @@
 ## STEPS:
 1. asdsa
 
-> 1ST QUESTION -> ANS:
+> 1ST QUESTION -> ANS: `EDD41B4A819F917F81203424730AAF0C24CC95E40ACFC0F1BD90B11DADF58015`
 
 <img width="1282" height="200" alt="image" src="https://github.com/user-attachments/assets/efa2000a-a035-4616-bbb7-ff7f44ec751f" />
 
@@ -32,7 +32,7 @@
 <img width="1281" height="198" alt="image" src="https://github.com/user-attachments/assets/f8fbf1bc-72b1-41a4-a2c8-eaad1fb15e8c" />
 
 
-> 5TH QUESTION -> ANS:
+> 5TH QUESTION -> ANS: `0x140000000`
 
 <img width="1279" height="201" alt="image" src="https://github.com/user-attachments/assets/7daf7a0e-b437-4da8-a361-6c1c5a442867" />
 
