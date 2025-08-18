@@ -6,7 +6,7 @@
 
 ## Lessons Learned:
 1. Malware Analysis
-2. Using PEStudio, DIE, Ghidra, and radare2 to conduct static windows binary analysis.
+2. Using PEStudio, DIE, Ghidra, CFF Explorer, and radare2 to conduct static windows binary analysis.
 
 ## SCENARIO:
 
