@@ -2,14 +2,14 @@
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
-1. asda
+1. Using PEStudio, DIE, Ghidra, and radare2 to conduct static binary analysis.
 
 ## SCENARIO:
 
 <p align="justify">You’ve completed Training Day — congrats, rookie. Now the real game begins. An unmarked binary just landed on your desk. It’s acting shady, tripping a few alarms, but no one's sure what it really is. Malware? Or just a misunderstood piece of code? Your mission: reverse-engineer the program, trace its behavior, and uncover the truth. Every line of code could be a clue—or a trap. Welcome to your first real case.</p>
 
 ## STEPS:
-1. Using PEStudio, DIE, Ghidra, and radare2 to conduct static binary analysis.
+1. asda
 
 > 1ST QUESTION -> ANS: `EDD41B4A819F917F81203424730AAF0C24CC95E40ACFC0F1BD90B11DADF58015`
 
@@ -75,4 +75,6 @@
 
 ## REFERENCES:
 ```
+https://github.com/radareorg/radare2/releases
+https://github.com/horsicq/DIE-engine/releases
 ```
