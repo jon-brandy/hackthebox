@@ -22,9 +22,11 @@
 
 <img width="1280" height="199" alt="image" src="https://github.com/user-attachments/assets/5db6c7c9-93e4-40e4-a5cd-d5bd9947e20a" />
 
-> 3RD QUESTION -> ANS:
+> 3RD QUESTION -> ANS: `2023-04-06 15:21:17`
 
 <img width="1283" height="197" alt="image" src="https://github.com/user-attachments/assets/bf90cb0f-6159-4715-bb77-42702624d34e" />
+
+<img width="806" height="658" alt="image" src="https://github.com/user-attachments/assets/a292f283-9e81-4b17-8d9b-ad7808ebd910" />
 
 
 > 4TH QUESTION -> ANS:
