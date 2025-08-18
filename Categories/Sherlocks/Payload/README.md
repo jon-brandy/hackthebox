@@ -26,7 +26,7 @@
 <img width="1472" height="166" alt="image" src="https://github.com/user-attachments/assets/17a1b2bf-ed0d-404d-8d19-f116e002d1e5" />
 
 
-> 2ND QUESTION -> ANS:
+> 2ND QUESTION -> ANS: MingW
 
 <img width="1280" height="199" alt="image" src="https://github.com/user-attachments/assets/5db6c7c9-93e4-40e4-a5cd-d5bd9947e20a" />
 
