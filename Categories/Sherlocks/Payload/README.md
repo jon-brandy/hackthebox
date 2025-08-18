@@ -6,8 +6,8 @@
 
 ## Lessons Learned:
 1. Malware Analysis
-2. Using PEStudio, DIE, Ghidra, CFF Explorer, PE Bear, and radare2 to conduct static windows binary analysis.
-3. Using x64dbg and capa to conduct dynamic binary analysis.
+2. Using `PEStudio`, `DIE`, `Ghidra`, `CFF Explorer`, `PE Bear`, and `radare2` to conduct static windows binary analysis.
+3. Using `x64dbg` and `capa` to conduct dynamic binary analysis.
 
 ## SCENARIO:
 
