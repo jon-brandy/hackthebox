@@ -6,7 +6,7 @@
 
 ## SCENARIO:
 
-<p align="justify"></p>
+<p align="justify">You’ve completed Training Day — congrats, rookie. Now the real game begins. An unmarked binary just landed on your desk. It’s acting shady, tripping a few alarms, but no one's sure what it really is. Malware? Or just a misunderstood piece of code? Your mission: reverse-engineer the program, trace its behavior, and uncover the truth. Every line of code could be a clue—or a trap. Welcome to your first real case.</p>
 
 ## STEPS:
 1. asdsa
