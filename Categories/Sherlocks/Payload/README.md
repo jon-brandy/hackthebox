@@ -36,6 +36,8 @@
 
 <img width="1279" height="201" alt="image" src="https://github.com/user-attachments/assets/7daf7a0e-b437-4da8-a361-6c1c5a442867" />
 
+<img width="843" height="642" alt="image" src="https://github.com/user-attachments/assets/cf231646-db83-4ee5-8546-4bde01280105" />
+
 
 > 6TH QUESTION -> ANS:
 
