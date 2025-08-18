@@ -79,7 +79,7 @@
 <img width="1280" height="197" alt="image" src="https://github.com/user-attachments/assets/fc1c6c3c-ce4e-46d4-a07f-c33de35e997b" />
 
 
-> 11TH QUESTION -> ANS:
+> 11TH QUESTION -> ANS: `VirtualAllocEx`
 
 <img width="1279" height="196" alt="image" src="https://github.com/user-attachments/assets/23d38c47-8834-4e8b-acfa-42911d4d4255" />
 
