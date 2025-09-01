@@ -22,7 +22,7 @@
 <img width="1475" height="1260" alt="image" src="https://github.com/user-attachments/assets/beb0dad2-4938-4611-9284-f988590bfc7a" />
 
 
-> 2ND QUESTION -> ANS:
+> 2ND QUESTION -> ANS: `2024-09-18 13:57:04`
 
 <img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/2faca0be-2c8f-4be1-a7c7-98a3729303e6" />
 
