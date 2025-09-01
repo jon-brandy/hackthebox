@@ -13,6 +13,68 @@
 ## STEPS:
 1. asda
 
+<img width="392" height="154" alt="image" src="https://github.com/user-attachments/assets/3e98df31-c334-49e8-b385-42cc33c038ba" />
+
+> 1ST QUESTION -> ANS:
+
+<img width="1280" height="199" alt="image" src="https://github.com/user-attachments/assets/79a50e11-370b-4033-92bc-ec4f7ea4ef8b" />
+
+
+> 2ND QUESTION -> ANS:
+
+<img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/2faca0be-2c8f-4be1-a7c7-98a3729303e6" />
+
+
+> 3RD QUESTION -> ANS:
+
+<img width="1275" height="196" alt="image" src="https://github.com/user-attachments/assets/1d4a3384-61ca-436d-a685-6b132970734f" />
+
+
+> 4TH QUESTION -> ANS:
+
+<img width="1282" height="196" alt="image" src="https://github.com/user-attachments/assets/7355cb64-0b3d-4d9c-8486-801efd42c871" />
+
+
+> 5TH QUESTION -> ANS:
+
+<img width="1280" height="199" alt="image" src="https://github.com/user-attachments/assets/e4281f82-c4f2-4a02-9f1f-d8a4c58bd107" />
+
+
+> 6TH QUESTION -> ANS:
+
+<img width="1282" height="200" alt="image" src="https://github.com/user-attachments/assets/0fa4daf4-4896-47fc-b2f8-fec035c3e668" />
+
+
+> 7TH QUESTION -> ANS:
+
+<img width="1283" height="198" alt="image" src="https://github.com/user-attachments/assets/f75af8bd-3a83-4df1-9540-bf7c0529e5d0" />
+
+
+> 8TH QUESTION -> ANS:
+
+<img width="1280" height="200" alt="image" src="https://github.com/user-attachments/assets/ae4c3b09-b24c-4362-9cf2-002da21aef71" />
+
+
+> 9TH QUESTION -> ANS:
+
+<img width="1281" height="202" alt="image" src="https://github.com/user-attachments/assets/7e91a7bd-4236-476a-a6da-330b10165b9f" />
+
+
+> 10TH QUESTION -> ANS:
+
+<img width="1279" height="196" alt="image" src="https://github.com/user-attachments/assets/1c6b31b2-6094-4b28-afe9-4ed52806e9e2" />
+
+
+> 11TH QUESTION -> ANS:
+
+<img width="1275" height="197" alt="image" src="https://github.com/user-attachments/assets/74c1dbb5-0fca-4b5a-b4cb-0ac4692ef9c8" />
+
+
+> 12TH QUESTION -> ANS:
+
+<img width="1283" height="198" alt="image" src="https://github.com/user-attachments/assets/aa2915e5-eaea-44b0-8d77-68741f8afb29" />
+
+
 ## REFERENCES:
 
 ```
