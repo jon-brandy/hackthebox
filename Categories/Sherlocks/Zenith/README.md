@@ -47,17 +47,17 @@
 <img width="1282" height="200" alt="image" src="https://github.com/user-attachments/assets/0fa4daf4-4896-47fc-b2f8-fec035c3e668" />
 
 
-> 7TH QUESTION -> ANS:
+> 7TH QUESTION -> ANS: `WindowsPooler`
 
 <img width="1283" height="198" alt="image" src="https://github.com/user-attachments/assets/f75af8bd-3a83-4df1-9540-bf7c0529e5d0" />
 
 
-> 8TH QUESTION -> ANS:
+> 8TH QUESTION -> ANS: `explorer.exe`
 
 <img width="1280" height="200" alt="image" src="https://github.com/user-attachments/assets/ae4c3b09-b24c-4362-9cf2-002da21aef71" />
 
 
-> 9TH QUESTION -> ANS:
+> 9TH QUESTION -> ANS: `Windows7`
 
 <img width="1281" height="202" alt="image" src="https://github.com/user-attachments/assets/7e91a7bd-4236-476a-a6da-330b10165b9f" />
 
