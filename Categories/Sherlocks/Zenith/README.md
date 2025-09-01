@@ -5,9 +5,10 @@
 
 
 ## Lessons Learned:
-1. BMC Forensics.
+1. E-mail Forensics.
 2. Parse event logs using `Hayabusa` and `EvtxEcmd`.
-3. Static binary analysis using `pestudio`, `ghidra`, and manual detonation using `Flare-VM`.
+3. Using `Timeline Explorer` to review parsed event logs.
+4. Static binary analysis using `pestudio`, `ghidra`, and manual detonation using `Flare-VM`.
 
 ## SCENARIO:
 <p align="justify">We are contacting you with an urgent request concerning a potentially suspicious email that was recently received and unfortunately opened by one of our team members. As a construction company (Caymine builders), we regularly engage in project discussions with clients, and this email appeared to contain a project plan in PDF format. However, after further review, we have reason to believe this email and its attachment could be malicious. Despite our usual security protocols, the PDF was opened on one of our systems, which has raised significant concern regarding the security of our network.</p>
@@ -64,7 +65,7 @@
 <img width="1281" height="202" alt="image" src="https://github.com/user-attachments/assets/7e91a7bd-4236-476a-a6da-330b10165b9f" />
 
 
-> 10TH QUESTION -> ANS:
+> 10TH QUESTION -> ANS: `Adobe Reader 9`
 
 <img width="1279" height="196" alt="image" src="https://github.com/user-attachments/assets/1c6b31b2-6094-4b28-afe9-4ed52806e9e2" />
 
@@ -82,5 +83,6 @@
 ## REFERENCES:
 
 ```
-
+https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-process32firstw
+https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-createtoolhelp32snapshot
 ```
