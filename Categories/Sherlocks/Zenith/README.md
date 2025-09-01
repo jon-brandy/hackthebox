@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-- asda
+1. BMC Forensics.
 
 ## SCENARIO:
 <p align="justify">We are contacting you with an urgent request concerning a potentially suspicious email that was recently received and unfortunately opened by one of our team members. As a construction company (Caymine builders), we regularly engage in project discussions with clients, and this email appeared to contain a project plan in PDF format. However, after further review, we have reason to believe this email and its attachment could be malicious. Despite our usual security protocols, the PDF was opened on one of our systems, which has raised significant concern regarding the security of our network.</p>
@@ -15,9 +15,11 @@
 
 <img width="392" height="154" alt="image" src="https://github.com/user-attachments/assets/3e98df31-c334-49e8-b385-42cc33c038ba" />
 
-> 1ST QUESTION -> ANS:
+> 1ST QUESTION -> ANS: `2024-09-19 17:44:11`
 
 <img width="1280" height="199" alt="image" src="https://github.com/user-attachments/assets/79a50e11-370b-4033-92bc-ec4f7ea4ef8b" />
+
+<img width="1475" height="1260" alt="image" src="https://github.com/user-attachments/assets/beb0dad2-4938-4611-9284-f988590bfc7a" />
 
 
 > 2ND QUESTION -> ANS:
