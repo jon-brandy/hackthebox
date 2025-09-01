@@ -27,22 +27,22 @@
 <img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/2faca0be-2c8f-4be1-a7c7-98a3729303e6" />
 
 
-> 3RD QUESTION -> ANS:
+> 3RD QUESTION -> ANS: `downtown_construction_project_plan.pdf`
 
 <img width="1275" height="196" alt="image" src="https://github.com/user-attachments/assets/1d4a3384-61ca-436d-a685-6b132970734f" />
 
 
-> 4TH QUESTION -> ANS:
+> 4TH QUESTION -> ANS: `2024-09-18 21:19:18`
 
 <img width="1282" height="196" alt="image" src="https://github.com/user-attachments/assets/7355cb64-0b3d-4d9c-8486-801efd42c871" />
 
 
-> 5TH QUESTION -> ANS:
+> 5TH QUESTION -> ANS: `exit`
 
 <img width="1280" height="199" alt="image" src="https://github.com/user-attachments/assets/e4281f82-c4f2-4a02-9f1f-d8a4c58bd107" />
 
 
-> 6TH QUESTION -> ANS:
+> 6TH QUESTION -> ANS: `C:\Users\Public\test.exe`
 
 <img width="1282" height="200" alt="image" src="https://github.com/user-attachments/assets/0fa4daf4-4896-47fc-b2f8-fec035c3e668" />
 
