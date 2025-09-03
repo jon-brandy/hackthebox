@@ -13,6 +13,9 @@
 ## STEPS:
 1. sda
 
+<img width="369" height="93" alt="image" src="https://github.com/user-attachments/assets/b1fafb3c-a15d-4aa2-8b4c-9856249351ee" />
+
+
 > 1ST QUESTION -> ANS:
 
 <img width="1237" height="191" alt="image" src="https://github.com/user-attachments/assets/1db3e3de-eb77-45a1-871b-21c75fe6dc47" />
