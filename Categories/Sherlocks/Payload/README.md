@@ -79,12 +79,13 @@
 <img width="1897" height="441" alt="image" src="https://github.com/user-attachments/assets/335147fb-c2bc-466c-a2cc-77f5f94a8f52" />
 
 
-> 9TH QUESTION -> ANS:
+> 9TH QUESTION -> ANS: `0x5FFC40`
 
 <img width="1279" height="201" alt="image" src="https://github.com/user-attachments/assets/053f7e62-d1c5-4a7a-b538-01ef68213a94" />
 
+<img width="1066" height="948" alt="Pasted image 20250902194404" src="https://github.com/user-attachments/assets/0e3aeaf2-8adf-462e-bf86-7f981d2d84fc" />
 
-> 10TH QUESTION -> ANS:
+> 10TH QUESTION -> ANS: `fc4881e4f0ffffff`
 
 <img width="1280" height="197" alt="image" src="https://github.com/user-attachments/assets/fc1c6c3c-ce4e-46d4-a07f-c33de35e997b" />
 
