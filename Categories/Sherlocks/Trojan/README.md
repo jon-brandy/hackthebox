@@ -16,12 +16,12 @@
 <img width="369" height="93" alt="image" src="https://github.com/user-attachments/assets/b1fafb3c-a15d-4aa2-8b4c-9856249351ee" />
 
 
-> 1ST QUESTION -> ANS:
+> 1ST QUESTION -> ANS: `19041`
 
 <img width="1237" height="191" alt="image" src="https://github.com/user-attachments/assets/1db3e3de-eb77-45a1-871b-21c75fe6dc47" />
 
 
-> 2ND QUESTION -> ANS:
+> 2ND QUESTION -> ANS: `DESKTOP-38NVPD0` 
 
 <img width="1234" height="192" alt="image" src="https://github.com/user-attachments/assets/f76aca6a-e6ca-461d-b881-23df5876690b" />
 
