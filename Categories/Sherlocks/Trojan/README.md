@@ -26,57 +26,57 @@
 <img width="1234" height="192" alt="image" src="https://github.com/user-attachments/assets/f76aca6a-e6ca-461d-b881-23df5876690b" />
 
 
-> 3RD QUESTION -> ANS:
+> 3RD QUESTION -> ANS: `Data_Recovery.zip`
 
 <img width="1238" height="192" alt="image" src="https://github.com/user-attachments/assets/ed65beed-75a5-4cfe-b504-77660a2711af" />
 
 
-> 4TH QUESTION -> ANS:
+> 4TH QUESTION -> ANS: `praetorial-gears.000webhostapp.com`
 
 <img width="1236" height="194" alt="image" src="https://github.com/user-attachments/assets/a6d5ade0-1234-4b37-b961-59b2d4e22029" />
 
 
-> 5TH QUESTION -> ANS:
+> 5TH QUESTION -> ANS: `484`
 
 <img width="1238" height="192" alt="image" src="https://github.com/user-attachments/assets/7db56aeb-cd9a-4a51-8404-1bd876f09eba" />
 
 
-> 6TH QUESTION -> ANS:
+> 6TH QUESTION -> ANS: `C:\Users\John\Downloads\Data_Recovery\Recovery_Setup.exe`
 
 <img width="1239" height="197" alt="image" src="https://github.com/user-attachments/assets/f892da69-7bf1-4b45-a872-35a560d44c52" />
 
 
-> 7TH QUESTION -> ANS:
+> 7TH QUESTION -> ANS: `C34601c5da3501f6ee0efce18de7e6145153ecfac2ce2019ec52e1535a4b3193`
 
 <img width="1235" height="193" alt="image" src="https://github.com/user-attachments/assets/5db87b7b-eb33-427c-950b-bdf33838ce32" />
 
 
-> 8TH QUESTION -> ANS:
+> 8TH QUESTION -> ANS: `2023-05-30 02:06:29`
 
 <img width="1239" height="195" alt="image" src="https://github.com/user-attachments/assets/0ca7f7c6-ef03-4f3e-80b4-a21637c692b0" />
 
 
-> 9TH QUESTION -> ANS:
+> 9TH QUESTION -> ANS: `2`
 
 <img width="1237" height="195" alt="image" src="https://github.com/user-attachments/assets/675870ca-b145-4eab-8c0e-6a61259ad4fd" />
 
 
-> 10TH QUESTION -> ANS:
+> 10TH QUESTION -> ANS: `IS-R7RFP.TMP` 
 
 <img width="1236" height="190" alt="image" src="https://github.com/user-attachments/assets/35c1cc1a-1d53-4b1e-b434-a2cef0506978" />
 
 
-> 11TH QUESTION -> ANS:
+> 11TH QUESTION -> ANS: `4`
 
 <img width="1237" height="194" alt="image" src="https://github.com/user-attachments/assets/87f112a8-417f-42e5-8add-3646631f0ada" />
 
 
-> 12TH QUESTION -> ANS:
+> 12TH QUESTION -> ANS: `puk.php`
 
 <img width="1238" height="190" alt="image" src="https://github.com/user-attachments/assets/d74a395f-4ea1-4d39-b54e-068a47a6fed7" />
 
 
-> 13TH QUESTION -> ANS:
+> 13TH QUESTION -> ANS: `FinalRecovery v3.0.7.0325`
 
 <img width="1242" height="192" alt="image" src="https://github.com/user-attachments/assets/fadf016e-af2a-421e-bc6e-9244904b393d" />
 
@@ -84,4 +84,5 @@
 ## REFERENCES:
 
 ```
+https://www.virustotal.com/gui/file/c34601c5da3501f6ee0efce18de7e6145153ecfac2ce2019ec52e1535a4b3193/detection
 ```
