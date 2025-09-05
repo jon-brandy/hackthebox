@@ -177,16 +177,42 @@ To identify persistence mechanism as **Run** or **RunOnce** manually, you may ch
 
 <img width="1279" height="196" alt="image" src="https://github.com/user-attachments/assets/1c6b31b2-6094-4b28-afe9-4ed52806e9e2" />
 
+23. To identify the adobe program used, we should review the `Application` event log file and check for Event ID `11707` for completed installation operation.
+
+<img width="1565" height="325" alt="image" src="https://github.com/user-attachments/assets/c5e29612-860a-4dd8-897e-74dd1d23f285" />
+
 
 > 11TH QUESTION -> ANS: `2024-09-19 17:48:31`
 
 <img width="1275" height="197" alt="image" src="https://github.com/user-attachments/assets/74c1dbb5-0fca-4b5a-b4cb-0ac4692ef9c8" />
 
+24. Activity related to service installation can be identified in `system` event log. However, to give us better scope or horizon related to suspicious activity, we may also triage all event logs using evtx analyzer tool -> Hayabusa.
+
+> Command using Hayabus
+
+```
+hayabusa-3.3.0-win-x64.exe csv-timeline -d dir_to_evtx -o htb-zenith-hayabusa.csv -p super-verbose
+```
+
+<img width="1816" height="578" alt="image" src="https://github.com/user-attachments/assets/8ae0ee71-be7d-4368-9bfd-f599ac3c743c" />
+
+25. Notice, that `Hayabusa` flagged a high alert named "Meterpreter or Cobalt Strike Getsystem Service Installation - System". This should be related to our interest.
+
+<img width="2934" height="501" alt="image" src="https://github.com/user-attachments/assets/df21276b-622b-4125-b260-285305d15c3b" />
+
+26. On felamos-PC (the client host), the threat actor performed privilege escalation by creating a service named **ismzjo** that executes command prompt as SYSTEM. Don't forget to conver the timestamp to UTC+0.
 
 > 12TH QUESTION -> ANS: `2024-09-19 17:50:17`
 
 <img width="1283" height="198" alt="image" src="https://github.com/user-attachments/assets/aa2915e5-eaea-44b0-8d77-68741f8afb29" />
 
+27. At `System` windows event log, we can clearly identify the timestamp of WindowsPooler service exection for persistence.
+
+<img width="1922" height="105" alt="image" src="https://github.com/user-attachments/assets/763e978f-1b9f-482c-a956-d7a09cc42396" />
+
+<img width="904" height="190" alt="image" src="https://github.com/user-attachments/assets/f8b617ee-d80e-4ba7-92f1-dc176dab3721" />
+
+28. Great! We've investigated the case briefly.
 
 ## REFERENCES:
 
@@ -194,4 +220,5 @@ To identify persistence mechanism as **Run** or **RunOnce** manually, you may ch
 https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-process32firstw
 https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-createtoolhelp32snapshot
 https://github.com/jesparza/peepdf
+https://github.com/Yamato-Security/hayabusa
 ```
