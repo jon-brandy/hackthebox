@@ -84,15 +84,24 @@ In a PDF, an indirect object reference has this format:
 
 <img width="1282" height="196" alt="image" src="https://github.com/user-attachments/assets/7355cb64-0b3d-4d9c-8486-801efd42c871" />
 
+11. The compilation timestamp for the PE binary, can be easily identified again by simply running **exiftool** to check the binary's metadata.
+
+<img width="885" height="687" alt="image" src="https://github.com/user-attachments/assets/df36e1d4-af36-484d-b9c2-2c85471456f0" />
+
 
 > 5TH QUESTION -> ANS: `exit`
 
 <img width="1280" height="199" alt="image" src="https://github.com/user-attachments/assets/e4281f82-c4f2-4a02-9f1f-d8a4c58bd107" />
 
+12. Since the question asks for the original project name, this can be verified by examining the debug information embedded in the binary. A static analysis in Ghidra can be performed with the objective of locating the Program Database (PDB) file path, which often reveals the original project name assigned by the developer.
+
+<img width="1324" height="850" alt="image" src="https://github.com/user-attachments/assets/6c0556d0-e906-4f49-9129-1161f63779ff" />
+
 
 > 6TH QUESTION -> ANS: `C:\Users\Public\test.exe`
 
 <img width="1282" height="200" alt="image" src="https://github.com/user-attachments/assets/0fa4daf4-4896-47fc-b2f8-fec035c3e668" />
+
 
 
 > 7TH QUESTION -> ANS: `WindowsPooler`
