@@ -47,7 +47,7 @@
 
 <img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/2faca0be-2c8f-4be1-a7c7-98a3729303e6" />
 
-6. To identify the file creation timestamp, we used exiftool in Linux to examine the PDF metadata. During the review, we observed that the Producer field was set to pyFPDF. The use of a non-standard PDF generation tool is noteworthy and raises a potential concern.
+6. To identify the file creation timestamp, we used **exiftool** in Linux to examine the PDF metadata. During the review, we observed that the Producer field was set to pyFPDF. The use of a non-standard PDF generation tool is noteworthy and raises a potential concern.
 
 <img width="937" height="506" alt="image" src="https://github.com/user-attachments/assets/3eca2467-9599-4f0e-870b-39ee54abea6c" />
 
@@ -57,6 +57,27 @@
 <img width="1275" height="196" alt="image" src="https://github.com/user-attachments/assets/1d4a3384-61ca-436d-a685-6b132970734f" />
 
 7. Next, to identify what is the embedded file name, we can start by parse the PDF's Objects using `peepdf`.
+
+<img width="740" height="986" alt="image" src="https://github.com/user-attachments/assets/9afbfe57-c4a7-475f-8a80-184bf1c087c9" />
+
+8. We identified several suspicious elements during the analysis. Starting with objects 11 and 12, we found a reference to object 13, which appears to contain the file extension of the displayed filename. Upon reviewing object 13, we can clearly conclude that the filename and its extension are `downtown_construction_project_plan.pdf`.
+
+<img width="894" height="361" alt="image" src="https://github.com/user-attachments/assets/d03a1666-853b-4c2d-8ddf-95fde083f825" />
+
+#### NOTE:
+
+```console
+In a PDF, an indirect object reference has this format:
+<object number> <generation number> R
+```
+
+9. Reviewing object 14 revealed the content of the embedded file. However, the declared MIME type is inconsistent with the actual file data. Analysis of the raw bytes indicates that the embedded content is a PE binary.
+
+<img width="3278" height="961" alt="image" src="https://github.com/user-attachments/assets/332a89c0-8459-48c9-9715-b0d112057d7a" />
+
+10. To make sure of it, after extract the pdf using **binwalk** and performs a basic file check, it confirms LINUX identified the file nto as PDF but as 32 bit PE binary.
+
+<img width="879" height="218" alt="image" src="https://github.com/user-attachments/assets/1ce418c5-a866-4bdf-a028-6eb708519c3d" />
 
 
 > 4TH QUESTION -> ANS: `2024-09-18 21:19:18`
@@ -109,4 +130,5 @@
 ```
 https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-process32firstw
 https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-createtoolhelp32snapshot
+https://github.com/jesparza/peepdf
 ```
