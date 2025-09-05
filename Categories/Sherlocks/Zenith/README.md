@@ -7,7 +7,7 @@
 ## Lessons Learned:
 1. Business e-mail compromise.
 2. Parse PDF objects using `peepdf`.
-3. Parse event logs using `Hayabusa` and `EvtxEcmd`.
+3. Parse event logs using `Hayabusa` and `EvtxeCmd`.
 4. Using `Timeline Explorer` to review parsed event logs.
 5. Static binary analysis using `pestudio`, `ghidra`, and manual detonation using `Flare-VM`.
 
@@ -101,6 +101,9 @@ In a PDF, an indirect object reference has this format:
 > 6TH QUESTION -> ANS: `C:\Users\Public\test.exe`
 
 <img width="1282" height="200" alt="image" src="https://github.com/user-attachments/assets/0fa4daf4-4896-47fc-b2f8-fec035c3e668" />
+
+
+13. To identify this, we can start by reviewing the windows event logs. But previously you may parse it first using **EvtxeCmd** created by Eric Zimmerman.
 
 
 
