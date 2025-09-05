@@ -154,6 +154,23 @@ To identify persistence mechanism as **Run** or **RunOnce** manually, you may ch
 
 <img width="1281" height="202" alt="image" src="https://github.com/user-attachments/assets/7e91a7bd-4236-476a-a6da-330b10165b9f" />
 
+20. To identify the client’s OS version, we reviewed the `System` event logs. These logs were first parsed using `EvtxECmd` (by Eric Zimmerman) and then examined with `Timeline Explorer`.
+
+> COMMAND
+
+```
+.\EvtxECmd.exe -f "path_to_file.evtx" --csv . --csvf filename_xxx.csv
+```
+
+<img width="1391" height="442" alt="image" src="https://github.com/user-attachments/assets/fd8e5e6f-3561-4e3b-8354-4b476cf5f257" />
+
+21. Afterwards, in `Timeline Explorer`, we can check for Event ID `2004` or search for the keyword "Build" to identify the OS build information.
+
+<img width="2682" height="622" alt="image" src="https://github.com/user-attachments/assets/10444848-fa0e-4ee9-a7e6-633a7b82c425" />
+
+22. Review the Event ID `2004` details, it shows us information related to the client OS.
+
+<img width="1030" height="185" alt="image" src="https://github.com/user-attachments/assets/a48c52bf-8e9e-43d7-9059-5bea2521fcf6" />
 
 
 > 10TH QUESTION -> ANS: `Adobe Reader 9`
