@@ -97,6 +97,10 @@ In a PDF, an indirect object reference has this format:
 
 <img width="1324" height="850" alt="image" src="https://github.com/user-attachments/assets/6c0556d0-e906-4f49-9129-1161f63779ff" />
 
+> Or you may use PESTUDIO
+
+<img width="941" height="575" alt="image" src="https://github.com/user-attachments/assets/0d5c41ad-61ec-49d6-9330-135cecf15651" />
+
 
 > 6TH QUESTION -> ANS: `C:\Users\Public\test.exe`
 
