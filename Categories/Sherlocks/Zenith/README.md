@@ -14,7 +14,7 @@
 <p align="justify">We are contacting you with an urgent request concerning a potentially suspicious email that was recently received and unfortunately opened by one of our team members. As a construction company (Caymine builders), we regularly engage in project discussions with clients, and this email appeared to contain a project plan in PDF format. However, after further review, we have reason to believe this email and its attachment could be malicious. Despite our usual security protocols, the PDF was opened on one of our systems, which has raised significant concern regarding the security of our network.</p>
 
 ## STEPS:
-1. asda
+1. In this case, we were tasked with investigating a phishing incident involving an email that contained a malicious PDF. Unfortunately, the PDF was opened, and the client is concerned about the security of their network.
 
 <img width="392" height="154" alt="image" src="https://github.com/user-attachments/assets/3e98df31-c334-49e8-b385-42cc33c038ba" />
 
