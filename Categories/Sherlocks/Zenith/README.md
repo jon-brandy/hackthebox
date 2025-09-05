@@ -16,18 +16,38 @@
 ## STEPS:
 1. In this case, we were tasked with investigating a phishing incident involving an email that contained a malicious PDF. Unfortunately, the PDF was opened, and the client is concerned about the security of their network.
 
-<img width="392" height="154" alt="image" src="https://github.com/user-attachments/assets/3e98df31-c334-49e8-b385-42cc33c038ba" />
+> Artifacts given
+
+<img width="1130" height="656" alt="image" src="https://github.com/user-attachments/assets/d9c4b8e7-1be5-48d9-9877-ebe224c9efd3" />
 
 > 1ST QUESTION -> ANS: `2024-09-19 17:44:11`
 
 <img width="1280" height="199" alt="image" src="https://github.com/user-attachments/assets/79a50e11-370b-4033-92bc-ec4f7ea4ef8b" />
 
-<img width="1475" height="1260" alt="image" src="https://github.com/user-attachments/assets/beb0dad2-4938-4611-9284-f988590bfc7a" />
+2. To identify the timestamp of the e-mail retrieval, we can review the available e-mail artifacts and analyze the message headers.
+
+<img width="844" height="266" alt="image" src="https://github.com/user-attachments/assets/2e6345bf-34c3-4cdb-8990-581feaaa536a" />
+
+> In VSCODE
+
+<img width="2328" height="1097" alt="image" src="https://github.com/user-attachments/assets/161f8893-597b-426d-acf9-462b4407c528" />
+
+3. The e-mail headers clearly show the message components and include the timestamp indicating when the Postfix MTA on `mail.caymine.htb` accepted and delivered the e-mail to the recipient’s mailbox (`felamos@caymine.htb`) at `Thu, 19 Sep 2024 17:44:11 UTC`.
+4. Also, scrolling down below we can see the attached PDF file.
+
+<img width="832" height="1000" alt="image" src="https://github.com/user-attachments/assets/d993dbc6-1faa-475c-94ac-62bdcdd1e4dd" />
+
+5. To review the file, we can just decode the base64 using cyberchef then save it as PDF file.
+
+<img width="1002" height="1189" alt="image" src="https://github.com/user-attachments/assets/089539fe-fcdb-4010-bd23-d6ef8cdd5fd6" />
 
 
 > 2ND QUESTION -> ANS: `2024-09-18 13:57:04`
 
 <img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/2faca0be-2c8f-4be1-a7c7-98a3729303e6" />
+
+6. To identify the creation file timestamp, we can use `exiftool` in Linux to check for its metadata.
+
 
 
 > 3RD QUESTION -> ANS: `downtown_construction_project_plan.pdf`
