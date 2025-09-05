@@ -103,8 +103,13 @@ In a PDF, an indirect object reference has this format:
 <img width="1282" height="200" alt="image" src="https://github.com/user-attachments/assets/0fa4daf4-4896-47fc-b2f8-fec035c3e668" />
 
 
-13. To identify this, we can start by reviewing the windows event logs. But previously you may parse it first using **EvtxeCmd** created by Eric Zimmerman.
+13. To identify this, I began by detonating the malware in a controlled sandboxed environment (FLARE-VM) and examined the Users subdirectories. During this review, I found a newly created binary named `test.exe` inside the Public directory.
 
+<img width="653" height="254" alt="image" src="https://github.com/user-attachments/assets/9875683b-5f80-4fe3-95d4-377c5d628813" />
+
+14. Since the malware copies itself, we can verify its legitimacy by checking the file hash, a straightforward method. The analysis confirmed that the newly created file is identical to the original binary.
+
+<img width="831" height="238" alt="image" src="https://github.com/user-attachments/assets/7b055244-4743-46b6-8ecb-a7610b298428" />
 
 
 > 7TH QUESTION -> ANS: `WindowsPooler`
@@ -112,14 +117,39 @@ In a PDF, an indirect object reference has this format:
 <img width="1283" height="198" alt="image" src="https://github.com/user-attachments/assets/f75af8bd-3a83-4df1-9540-bf7c0529e5d0" />
 
 
+15. Since the detonation was performed manually, we can also review the `SOFTWARE` or `NTUSER.dat` registry hive to identify anomalous registry key values under the `Run` key. However, because the binary is stored in the Public directory, the focus should be on reviewing `HKEY_CURRENT_USER` (NTUSER.dat).
+
+<img width="963" height="695" alt="image" src="https://github.com/user-attachments/assets/a7f40453-b066-4ce9-b53e-45659d3925dd" />
+
+
+#### NOTE:
+To identify persistence mechanism as **Run** or **RunOnce** manually, you may check from these:
+- **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run** (SOFTWARE)
+- **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce** (SOFTWARE)
+- **HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run** (NTUSER.dat)
+- **HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce** (NTUSER.dat)
+
+
+16. Interestingly, a new Windows service named WindowsPooler was found installed on the system, and it references the malicious binary.
+17. Actually all of these findings can be confirmed by reviewing the code at function `FUN_140001070`
+
+<img width="1513" height="730" alt="image" src="https://github.com/user-attachments/assets/9476aea9-2722-4b44-a0d6-a2b2e9163f01" />
+
+
 > 8TH QUESTION -> ANS: `explorer.exe`
 
 <img width="1280" height="200" alt="image" src="https://github.com/user-attachments/assets/ae4c3b09-b24c-4362-9cf2-002da21aef71" />
 
+18. To verify this, I continued the code review at function `FUN_140001070` and identified several Windows API calls and code snippets consistent with process injection behavior. Specifically, the code performs process enumeration and targeting, opens the target process, allocates memory within the remote process, writes the payload into the allocated memory, and finally executes the injected code.
+
+<img width="774" height="892" alt="image" src="https://github.com/user-attachments/assets/becd2638-a6b9-4c90-9c07-4380e2032f03" />
+
+19. Now, it is confirmed that **explorer.exe** indeed the targeted process for payload injection by the malware.
 
 > 9TH QUESTION -> ANS: `Windows7`
 
 <img width="1281" height="202" alt="image" src="https://github.com/user-attachments/assets/7e91a7bd-4236-476a-a6da-330b10165b9f" />
+
 
 
 > 10TH QUESTION -> ANS: `Adobe Reader 9`
