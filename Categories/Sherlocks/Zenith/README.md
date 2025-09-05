@@ -206,7 +206,7 @@ hayabusa-3.3.0-win-x64.exe csv-timeline -d dir_to_evtx -o htb-zenith-hayabusa.cs
 
 <img width="1283" height="198" alt="image" src="https://github.com/user-attachments/assets/aa2915e5-eaea-44b0-8d77-68741f8afb29" />
 
-27. At `System` windows event log, we can clearly identify the timestamp of WindowsPooler service exection for persistence.
+27. At `System` windows event log, we can clearly identify the timestamp of WindowsPooler service exection for persistence. Check for event ID **7045** and triage specific for new installation service WindowsPooler.
 
 <img width="1922" height="105" alt="image" src="https://github.com/user-attachments/assets/763e978f-1b9f-482c-a956-d7a09cc42396" />
 
