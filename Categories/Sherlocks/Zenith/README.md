@@ -5,10 +5,11 @@
 
 
 ## Lessons Learned:
-1. E-mail Forensics.
-2. Parse event logs using `Hayabusa` and `EvtxEcmd`.
-3. Using `Timeline Explorer` to review parsed event logs.
-4. Static binary analysis using `pestudio`, `ghidra`, and manual detonation using `Flare-VM`.
+1. Business e-mail compromise.
+2. Parse PDF objects using `peepdf`.
+3. Parse event logs using `Hayabusa` and `EvtxEcmd`.
+4. Using `Timeline Explorer` to review parsed event logs.
+5. Static binary analysis using `pestudio`, `ghidra`, and manual detonation using `Flare-VM`.
 
 ## SCENARIO:
 <p align="justify">We are contacting you with an urgent request concerning a potentially suspicious email that was recently received and unfortunately opened by one of our team members. As a construction company (Caymine builders), we regularly engage in project discussions with clients, and this email appeared to contain a project plan in PDF format. However, after further review, we have reason to believe this email and its attachment could be malicious. Despite our usual security protocols, the PDF was opened on one of our systems, which has raised significant concern regarding the security of our network.</p>
@@ -46,13 +47,16 @@
 
 <img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/2faca0be-2c8f-4be1-a7c7-98a3729303e6" />
 
-6. To identify the creation file timestamp, we can use `exiftool` in Linux to check for its metadata.
+6. To identify the file creation timestamp, we used exiftool in Linux to examine the PDF metadata. During the review, we observed that the Producer field was set to pyFPDF. The use of a non-standard PDF generation tool is noteworthy and raises a potential concern.
 
+<img width="937" height="506" alt="image" src="https://github.com/user-attachments/assets/3eca2467-9599-4f0e-870b-39ee54abea6c" />
 
 
 > 3RD QUESTION -> ANS: `downtown_construction_project_plan.pdf`
 
 <img width="1275" height="196" alt="image" src="https://github.com/user-attachments/assets/1d4a3384-61ca-436d-a685-6b132970734f" />
+
+7. Next, to identify what is the embedded file name, we can start by parse the PDF's Objects using `peepdf`.
 
 
 > 4TH QUESTION -> ANS: `2024-09-18 21:19:18`
