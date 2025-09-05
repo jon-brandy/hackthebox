@@ -186,7 +186,7 @@ To identify persistence mechanism as **Run** or **RunOnce** manually, you may ch
 
 <img width="1275" height="197" alt="image" src="https://github.com/user-attachments/assets/74c1dbb5-0fca-4b5a-b4cb-0ac4692ef9c8" />
 
-24. Activity related to service installation can be identified in `system` event log. However, to give us better scope or horizon related to suspicious activity, we may also triage all event logs using evtx analyzer tool -> Hayabusa.
+24. Activity related to service installation can be identified in `system` event log. However, to give us quick scope or small horizon related to suspicious activity, we may also triage all event logs using evtx analyzer tool -> Hayabusa.
 
 > Command using Hayabus
 
