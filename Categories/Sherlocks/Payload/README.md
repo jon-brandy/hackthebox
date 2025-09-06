@@ -144,7 +144,10 @@
 <img width="3128" height="1210" alt="image" src="https://github.com/user-attachments/assets/9307cbc3-8222-452a-9e35-3ba1098ae730" />
 
 
-23. 
+23. Next, right-click and follow the steps below. Since our objective is to begin debugging at the payload decoding phase, we should first locate the key buffer offset and set breakpoints there. Additional breakpoints can also be placed throughout the debugging process, as this may help us identify more accurate offsets for analysis.
+
+<img width="1774" height="905" alt="image" src="https://github.com/user-attachments/assets/9ee7992c-1466-4962-a679-48c84e9b5745" />
+
 
 <img width="1066" height="948" alt="Pasted image 20250902194404" src="https://github.com/user-attachments/assets/0e3aeaf2-8adf-462e-bf86-7f981d2d84fc" />
 
