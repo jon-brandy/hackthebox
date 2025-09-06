@@ -5,9 +5,8 @@
 
 
 ## Lessons Learned:
-1. Malware Analysis
-2. Using `PEStudio`, `DIE`, `Ghidra`, `CFF Explorer`, `PE Bear`, and `radare2` to conduct static windows binary analysis.
-3. Using `x64dbg` to conduct dynamic binary analysis.
+1. Using `PEStudio`, `DIE`, `Ghidra`, `CFF Explorer`, `PE Bear`, and `radare2` to conduct static windows binary analysis and triage.
+2. Using `x64dbg` to conduct dynamic binary analysis.
 
 ## SCENARIO:
 
@@ -46,7 +45,11 @@
 
 <img width="1283" height="197" alt="image" src="https://github.com/user-attachments/assets/bf90cb0f-6159-4715-bb77-42702624d34e" />
 
+
+5. To identify information related to compilation datetime, I used `radare2` with flag `-I` to shows for binary info and with this we can identify the timestamp for the binary compilation.
+
 <img width="806" height="658" alt="image" src="https://github.com/user-attachments/assets/a292f283-9e81-4b17-8d9b-ad7808ebd910" />
+
 
 
 > 4TH QUESTION -> ANS: `False`
