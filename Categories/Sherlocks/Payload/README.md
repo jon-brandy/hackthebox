@@ -110,6 +110,8 @@
 
 17. At this stage, we were able to clearly identify the first 8 bytes of the payload. In addition, another useful tool for static binary analysis is `PE-Bear`, which provides greater visibility into the encrypted payload structure and its characteristics.
 
+> PAYLOAD IS STORED AT .DATA SECTION (Global Initialized Variable)
+
 <img width="2089" height="1224" alt="image" src="https://github.com/user-attachments/assets/6f801202-d001-404c-9a8f-0f0dcd0722bc" />
 
 > 8TH QUESTION -> ANS: `0x5555555555555555`
@@ -121,10 +123,13 @@
 
 <img width="763" height="898" alt="image" src="https://github.com/user-attachments/assets/2115c734-2de7-473a-aebc-7388963aa512" />
 
+> KEY BUFFER LOCATION
 
-<img width="992" height="1151" alt="image" src="https://github.com/user-attachments/assets/6abdf47b-475e-4475-9f6f-e619b91fa4e1" />
+<img width="1818" height="235" alt="image" src="https://github.com/user-attachments/assets/b457c547-05bf-4601-bdb5-81a18f0e4f91" />
 
-<img width="1897" height="441" alt="image" src="https://github.com/user-attachments/assets/335147fb-c2bc-466c-a2cc-77f5f94a8f52" />
+> KEY BUFFER CONTENT
+
+<img width="813" height="210" alt="image" src="https://github.com/user-attachments/assets/632ad58a-f2e5-48ea-a370-e8a8e5a3c7ec" />
 
 
 > 9TH QUESTION -> ANS: `0x5FFC40`
