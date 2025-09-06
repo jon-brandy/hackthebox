@@ -193,6 +193,15 @@
 
 <img width="1279" height="196" alt="image" src="https://github.com/user-attachments/assets/23d38c47-8834-4e8b-acfa-42911d4d4255" />
 
+33. Upon continuation reviewing any invoked functions after handle retrieval of DLL. Found a function named `VirtualAllocEx()` that absent in the IAT shown by the `pestudio`.
+
+<img width="908" height="403" alt="image" src="https://github.com/user-attachments/assets/34d832f3-9be6-41a8-a945-c70624e05535" />
+
+> IN PESTUDIO
+
+<img width="1157" height="513" alt="image" src="https://github.com/user-attachments/assets/63ce799b-f99d-4a9b-876c-8cc1e04d7047" />
+
+34. Great! We've briefly investigated the case.
 
 ## REFERENCES:
 ```
