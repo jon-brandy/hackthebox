@@ -100,18 +100,26 @@
 
 <img width="821" height="392" alt="image" src="https://github.com/user-attachments/assets/98e6d6c9-1c8f-4750-a07e-38fa5aed39de" />
 
+> PAYLOAD LOCATION
 
-<img width="1055" height="1065" alt="image" src="https://github.com/user-attachments/assets/8306ea12-4b7b-4763-86b0-1fafebff32ed" />
+<img width="778" height="144" alt="image" src="https://github.com/user-attachments/assets/a3a66306-52cd-4367-9c9e-a18ba91b9112" />
 
-<img width="2073" height="931" alt="image" src="https://github.com/user-attachments/assets/7457af5e-c047-4468-b07e-84ca4f8f067a" />
+> PAYLOAD CONTENT
 
-<img width="1914" height="1067" alt="image" src="https://github.com/user-attachments/assets/d519bf5b-c386-4e99-8819-0ff233c9b8da" />
+<img width="830" height="785" alt="image" src="https://github.com/user-attachments/assets/fe818b72-8924-4979-8e3c-5e4ada82b7d3" />
 
+17. At this stage, we were able to clearly identify the first 8 bytes of the payload. In addition, another useful tool for static binary analysis is `PE-Bear`, which provides greater visibility into the encrypted payload structure and its characteristics.
+
+<img width="2089" height="1224" alt="image" src="https://github.com/user-attachments/assets/6f801202-d001-404c-9a8f-0f0dcd0722bc" />
 
 > 8TH QUESTION -> ANS: `0x5555555555555555`
 
 <img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/7467689d-d3c4-46d3-9048-7cd5c7a35c43" />
 
+18. Reviewing the previously identified decode function for the payloads. Notice `param1` is treated as a pointer to a buffer of bytes, `param2` iiis used as a modulus, means the function keeps wrappoing around inside that buffer.
+19. It means `param1` is a key material buffer, which is indexed repeatedly to generate the keystream `local_1d` that XORs against `param3`.
+
+<img width="763" height="898" alt="image" src="https://github.com/user-attachments/assets/2115c734-2de7-473a-aebc-7388963aa512" />
 
 
 <img width="992" height="1151" alt="image" src="https://github.com/user-attachments/assets/6abdf47b-475e-4475-9f6f-e619b91fa4e1" />
