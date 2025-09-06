@@ -148,6 +148,20 @@
 
 <img width="1774" height="905" alt="image" src="https://github.com/user-attachments/assets/9ee7992c-1466-4962-a679-48c84e9b5745" />
 
+> RESULT AFTER JUMPED TO KEY BUFFER
+
+<img width="1346" height="715" alt="image" src="https://github.com/user-attachments/assets/9372c3e9-85c7-4a0d-996a-38a42c6abdf3" />
+
+24. After set breakpoint(s), just click the run button to jump there (it act like continue in GDB).
+
+<img width="1435" height="439" alt="image" src="https://github.com/user-attachments/assets/3b25cdb6-9ae8-4862-8fba-7ea7cabc7e73" />
+
+25. To identify the content, we can follow the dump by right click and follow these steps:
+
+<img width="1189" height="737" alt="image" src="https://github.com/user-attachments/assets/40fe5390-251b-4eb1-91b8-3478159d65d2" />
+
+26. The full debugging steps are not shown here, as they would be too lengthy. The main objective is to identify where the decoded value is stored.
+27. Once this location is identified, another breakpoint can be set to track that section or register, and the dump can then be followed again in xDbg.
 
 <img width="1066" height="948" alt="Pasted image 20250902194404" src="https://github.com/user-attachments/assets/0e3aeaf2-8adf-462e-bf86-7f981d2d84fc" />
 
