@@ -27,14 +27,19 @@
 
 <img width="1282" height="200" alt="image" src="https://github.com/user-attachments/assets/efa2000a-a035-4616-bbb7-ff7f44ec751f" />
 
-<img width="1472" height="166" alt="image" src="https://github.com/user-attachments/assets/17a1b2bf-ed0d-404d-8d19-f116e002d1e5" />
+3. Loading the binary into PEstudio allowed us to identify its hash, as well as review the imported and exported functions that could raise suspicion. In addition, analyzing the embedded strings provided further context, which may assist in attribution efforts or serve as a quick triage step to infer the potential objectives of the binary.
+4. We also identified that the binary is 64-bit, and two imports, VirtualProtect and VirtualQuery were flagged as malicious. It is important to note, however, that not all imports marked as malicious should be considered inherently suspicious. Many Windows APIs are legitimate but frequently abused by malware, which often leads automated tools or triage utilities to flag them as potentially malicious.
+
+<img width="1129" height="568" alt="image" src="https://github.com/user-attachments/assets/afe1300a-6185-4cda-adf2-3a615d9f4598" />
 
 
 > 2ND QUESTION -> ANS: MingW
 
 <img width="1280" height="199" alt="image" src="https://github.com/user-attachments/assets/5db6c7c9-93e4-40e4-a5cd-d5bd9947e20a" />
 
-<img width="1804" height="1303" alt="image" src="https://github.com/user-attachments/assets/4595e90e-1b3d-43a0-8721-41e02b46cd29" />
+4. Upon reviewing the strings in PEstudio, we were able to clearly identify the compiler used for the binary, which is **MinGW**. Numerous compiler-related strings referencing **MinGW** were present throughout the binary.
+
+<img width="1213" height="806" alt="image" src="https://github.com/user-attachments/assets/04c5a580-f102-41ae-b4f3-0617b1c2f434" />
 
 
 > 3RD QUESTION -> ANS: `2023-04-06 15:21:17`
