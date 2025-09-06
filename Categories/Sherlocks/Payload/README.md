@@ -75,7 +75,7 @@
 <img width="1279" height="196" alt="image" src="https://github.com/user-attachments/assets/c80996c0-55a4-4b1b-b8ee-2562feed8cf6" />
 
 10. Another useful tool to highlight is CFF Explorer, which is widely used for binary triage and analysis.
-11. Inside parsed header, we can identify the address of the binary's entrypoint.
+11. Inside parsed header section, we can identify the address of the binary's entrypoint.
 
 <img width="803" height="831" alt="image" src="https://github.com/user-attachments/assets/8538ace5-5622-437d-9c53-b81a81353f9e" />
 
@@ -83,6 +83,22 @@
 
 <img width="1279" height="198" alt="image" src="https://github.com/user-attachments/assets/b19cacb0-a646-41e9-8885-be4b60b12e4e" />
 
+12. To speed up the triage, I began by searching for code that attempts to obtain a handle to a DLL and store the address of its functions. This is so could quick reveals the intent of the binary.
+13. This search led to the identification of the function `FUN_140001d97`.
+
+<img width="1669" height="897" alt="image" src="https://github.com/user-attachments/assets/7a5c7022-2c4e-4f1c-9d50-c40c18067ec3" />
+
+14. Long story short, after reviewing each nested functions, identified `FUN_1400017d0` as the function of primary interest.
+
+<img width="1622" height="288" alt="image" src="https://github.com/user-attachments/assets/4cce5022-044e-458a-b647-c883272d140b" />
+
+15. Inside, it performs a simple bitwise operations actually. It's just a textbook XOR-based encoding / decoding.
+
+<img width="759" height="908" alt="image" src="https://github.com/user-attachments/assets/1378b5b2-5c1a-481d-8638-17fdccb2c0a9" />
+
+16. However, the analysis revealed suspicious behavior when `param3` was identified as a string buffer. Upon inspecting its contents, we observed the presence of encoded strings. This indicates that, prior to obtaining the handle of a DLL and resolving its functions, the binary performs a payload decoding routine.
+
+<img width="821" height="392" alt="image" src="https://github.com/user-attachments/assets/98e6d6c9-1c8f-4750-a07e-38fa5aed39de" />
 
 
 <img width="1055" height="1065" alt="image" src="https://github.com/user-attachments/assets/8306ea12-4b7b-4763-86b0-1fafebff32ed" />
@@ -95,6 +111,8 @@
 > 8TH QUESTION -> ANS: `0x5555555555555555`
 
 <img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/7467689d-d3c4-46d3-9048-7cd5c7a35c43" />
+
+
 
 <img width="992" height="1151" alt="image" src="https://github.com/user-attachments/assets/6abdf47b-475e-4475-9f6f-e619b91fa4e1" />
 
