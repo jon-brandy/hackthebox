@@ -170,13 +170,23 @@
 
 <img width="1373" height="604" alt="image" src="https://github.com/user-attachments/assets/d71685e8-ab9e-470a-bdf3-09c76dc61d2c" />
 
-30. 
+30. To examine the content value and its address, it is best to begin the review at the cmp instruction. For this purpose, we set a breakpoint at offset `0x1400019A4` and then followed the dumps starting at offset `0x14000199B`. Now we can see that the address of the decrypted payload is stored at `0x5FFC40`, as `ds:[RDX]` is used to hold each decrypted payload buffer index and, in turn, points to this address.
 
-<img width="1066" height="948" alt="Pasted image 20250902194404" src="https://github.com/user-attachments/assets/0e3aeaf2-8adf-462e-bf86-7f981d2d84fc" />
+<img width="1503" height="1135" alt="image" src="https://github.com/user-attachments/assets/bbc25bc5-138d-4f8b-a05c-11069d2940f3" />
+
+31. At this stage, we can skip the previous breakpoint and set a new one at `0x1400019B4`, then follow the dumps at `0x1400019AF`. From there, by examining offset `0xFFC40` and the subsequent addresses, we can identify the entirety of the decrypted payload.
+
+<img width="843" height="899" alt="image" src="https://github.com/user-attachments/assets/f55bc4c4-574d-4ad5-a2a6-fe7c7a7cdbb7" />
+
 
 > 10TH QUESTION -> ANS: `fc4881e4f0ffffff`
 
 <img width="1280" height="197" alt="image" src="https://github.com/user-attachments/assets/fc1c6c3c-ce4e-46d4-a07f-c33de35e997b" />
+
+
+32. Based on our previous findings, we can clearly identify in the dump that the first 8 bytes of the payload reside at `0x5FFC38 + 0x8`, spanning up to offset `0x5FFC48`.
+
+<img width="623" height="477" alt="image" src="https://github.com/user-attachments/assets/8cec8585-47e7-435d-8d81-9807ebf0f6ee" />
 
 
 > 11TH QUESTION -> ANS: `VirtualAllocEx`
