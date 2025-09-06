@@ -92,11 +92,11 @@
 
 <img width="1622" height="288" alt="image" src="https://github.com/user-attachments/assets/4cce5022-044e-458a-b647-c883272d140b" />
 
-15. Inside, it performs a simple bitwise operations actually. It's just a textbook XOR-based encoding / decoding.
+15. Inside, it performs a simple bitwise operations actually. It's just a textbook XOR-based encryption / decryption.
 
 <img width="759" height="908" alt="image" src="https://github.com/user-attachments/assets/1378b5b2-5c1a-481d-8638-17fdccb2c0a9" />
 
-16. However, the analysis revealed suspicious behavior when `param3` was identified as a string buffer. Upon inspecting its contents, we observed the presence of encoded strings. This indicates that, prior to obtaining the handle of a DLL and resolving its functions, the binary performs a payload decoding routine.
+16. However, the analysis revealed suspicious behavior when `param3` was identified as a string buffer. Upon inspecting its contents, we observed the presence of encrypted strings. This indicates that, prior to obtaining the handle of a DLL and resolving its functions, the binary performs a payload decryption routine.
 
 <img width="821" height="392" alt="image" src="https://github.com/user-attachments/assets/98e6d6c9-1c8f-4750-a07e-38fa5aed39de" />
 
@@ -118,7 +118,7 @@
 
 <img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/7467689d-d3c4-46d3-9048-7cd5c7a35c43" />
 
-18. Reviewing the previously identified decode function for the payloads. Notice `param1` is treated as a pointer to a buffer of bytes, `param2` iiis used as a modulus, means the function keeps wrappoing around inside that buffer.
+18. Reviewing the previously identified decrypt function for the payloads. Notice `param1` is treated as a pointer to a buffer of bytes, `param2` iiis used as a modulus, means the function keeps wrappoing around inside that buffer.
 19. It means `param1` is a key material buffer, which is indexed repeatedly to generate the keystream `local_1d` that XORs against `param3`.
 
 <img width="763" height="898" alt="image" src="https://github.com/user-attachments/assets/2115c734-2de7-473a-aebc-7388963aa512" />
@@ -160,8 +160,17 @@
 
 <img width="1189" height="737" alt="image" src="https://github.com/user-attachments/assets/40fe5390-251b-4eb1-91b8-3478159d65d2" />
 
-26. The full debugging steps are not shown here, as they would be too lengthy. The main objective is to identify where the decoded value is stored.
+26. The full debugging steps are not shown here, as they would be too lengthy. The main objective is to identify where the decrypted value is stored.
 27. Once this location is identified, another breakpoint can be set to track that section or register, and the dump can then be followed again in xDbg.
+28. I recommend always comparing the logic with the assembly view in Ghidra, as this provides better context for identifying which instructions should be prioritized during debugging.
+
+<img width="1882" height="723" alt="image" src="https://github.com/user-attachments/assets/860af134-2207-4cce-bb0b-541a933aff0a" />
+
+29. In short, we identified the actual offset where the decrypted payload is stored. Based on our findings, the encrypted payload resides in the .DATA section. Therefore, the debugging focus should be narrowed to mov instructions that interact with the data segment (ds).
+
+<img width="1373" height="604" alt="image" src="https://github.com/user-attachments/assets/d71685e8-ab9e-470a-bdf3-09c76dc61d2c" />
+
+30. 
 
 <img width="1066" height="948" alt="Pasted image 20250902194404" src="https://github.com/user-attachments/assets/0e3aeaf2-8adf-462e-bf86-7f981d2d84fc" />
 
