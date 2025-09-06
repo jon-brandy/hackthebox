@@ -193,7 +193,7 @@
 
 <img width="1279" height="196" alt="image" src="https://github.com/user-attachments/assets/23d38c47-8834-4e8b-acfa-42911d4d4255" />
 
-33. Upon continuation reviewing any invoked functions after handle retrieval of DLL. Found a function named `VirtualAllocEx()` that absent in the IAT shown by the `pestudio`.
+33. Continuing the review of invoked functions after the DLL handle retrieval, we identified a call to `VirtualAllocEx()`, which was notably absent from the Import Address Table (IAT) displayed in PEstudio.
 
 <img width="908" height="403" alt="image" src="https://github.com/user-attachments/assets/34d832f3-9be6-41a8-a945-c70624e05535" />
 
