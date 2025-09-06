@@ -14,9 +14,13 @@
 <p align="justify">You’ve completed Training Day — congrats, rookie. Now the real game begins. An unmarked binary just landed on your desk. It’s acting shady, tripping a few alarms, but no one's sure what it really is. Malware? Or just a misunderstood piece of code? Your mission: reverse-engineer the program, trace its behavior, and uncover the truth. Every line of code could be a clue—or a trap. Welcome to your first real case.</p>
 
 ## STEPS:
-1. asda
+1. In this case, we were tasked with investigating a suspicious binary that triggered multiple alarms upon execution. Extracting the malware archive revealed a single file named **func_pointer.exe**.
 
-<img width="514" height="294" alt="image" src="https://github.com/user-attachments/assets/21be1a37-0609-45a1-baf8-187d42cb3900" />
+<img width="1024" height="549" alt="image" src="https://github.com/user-attachments/assets/bfee7d95-622f-4875-a91e-9940e3e0ca70" />
+
+2. When the binary was executed, it only displayed a simple dialog box stating **HTB pwned us** No other immediate modifications were visibly observed. This behavior is interesting, as it suggests that the malware may be designed to execute post-exploitation activities in a stealthy manner.
+
+<img width="179" height="144" alt="image" src="https://github.com/user-attachments/assets/c47b8ac0-ed02-4418-befa-83281fccbf7c" />
 
 
 > 1ST QUESTION -> ANS: `EDD41B4A819F917F81203424730AAF0C24CC95E40ACFC0F1BD90B11DADF58015`
