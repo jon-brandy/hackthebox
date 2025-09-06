@@ -201,7 +201,21 @@
 
 <img width="1157" height="513" alt="image" src="https://github.com/user-attachments/assets/63ce799b-f99d-4a9b-876c-8cc1e04d7047" />
 
-34. Great! We've briefly investigated the case.
+34. Reviewing the code in ghidra, found that other winapi functions somehow also unable to be identified by pestudio. It happened due to the coding used. Those functions are resolved dynamically at runtime, hence they won't appear in static import table (`.idata` section).
+
+#### NOTE:
+
+```
+Snippet code for dynamic resolve:
+
+// C code.
+pHVar1 = GetModuleHandleA("kernel32.dll");
+pHVar1 = GetProcAddress(pHVar1, "VirtualAllocEx");
+```
+
+<img width="664" height="687" alt="image" src="https://github.com/user-attachments/assets/2d0fc03e-fe6a-4c45-9d96-798d7d9af8c1" />
+
+35. Great! We've briefly investigated the case!
 
 ## REFERENCES:
 ```
