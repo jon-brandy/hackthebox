@@ -46,15 +46,17 @@
 <img width="1283" height="197" alt="image" src="https://github.com/user-attachments/assets/bf90cb0f-6159-4715-bb77-42702624d34e" />
 
 
-5. To identify information related to compilation datetime, I used `radare2` with flag `-I` to shows for binary info and with this we can identify the timestamp for the binary compilation.
+5. To identify information related to compilation datetime, I used `radare2` with flag `-I` to shows for binary info (including its protections).
 
-<img width="806" height="658" alt="image" src="https://github.com/user-attachments/assets/a292f283-9e81-4b17-8d9b-ad7808ebd910" />
+<img width="1304" height="863" alt="image" src="https://github.com/user-attachments/assets/e35e9f11-aab0-4aad-8fc0-91922c7912b4" />
 
-
+6. This binary was compiled as a 64-bit Windows console application. It has stack canaries enabled and NX/DEP protection, which prevent straightforward stack buffer overflows and execution of injected shellcode from data pages. However, **it lacks ASLR support** (no relocations, not PIC), meaning the memory layout is mostly predictable.
 
 > 4TH QUESTION -> ANS: `False`
 
 <img width="1281" height="198" alt="image" src="https://github.com/user-attachments/assets/f8fbf1bc-72b1-41a4-a2c8-eaad1fb15e8c" />
+
+7. Based on our previous findings, the binary was compiled with **ASLR (Address Space Layout Randomization) disabled**.
 
 <img width="583" height="635" alt="image" src="https://github.com/user-attachments/assets/c51d7208-1a01-4fb1-9276-55f16c9fdeba" />
 
