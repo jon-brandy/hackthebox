@@ -65,17 +65,25 @@
 
 <img width="1279" height="201" alt="image" src="https://github.com/user-attachments/assets/7daf7a0e-b437-4da8-a361-6c1c5a442867" />
 
-<img width="843" height="642" alt="image" src="https://github.com/user-attachments/assets/cf231646-db83-4ee5-8546-4bde01280105" />
+8. There are many ways to identify the image base address, you may use decompiler or debugger. However, in this case I will use `Detect-it-Easy (DIE)` which commonly used to identify a file type along with heuristic analysis.
+9. At the top right, we can see the image base address of the binary along with its entry point address.
 
+<img width="723" height="527" alt="image" src="https://github.com/user-attachments/assets/feae4977-5444-4447-983f-0c46a22b4812" />
 
 > 6TH QUESTION -> ANS: `0x00001125`
 
 <img width="1279" height="196" alt="image" src="https://github.com/user-attachments/assets/c80996c0-55a4-4b1b-b8ee-2562feed8cf6" />
 
+10. Another useful tool to highlight is CFF Explorer, which is widely used for binary triage and analysis.
+11. Inside parsed header, we can identify the address of the binary's entrypoint.
+
+<img width="803" height="831" alt="image" src="https://github.com/user-attachments/assets/8538ace5-5622-437d-9c53-b81a81353f9e" />
 
 > 7TH QUESTION -> ANS: `8d098d59a01f830a`
 
 <img width="1279" height="198" alt="image" src="https://github.com/user-attachments/assets/b19cacb0-a646-41e9-8885-be4b60b12e4e" />
+
+
 
 <img width="1055" height="1065" alt="image" src="https://github.com/user-attachments/assets/8306ea12-4b7b-4763-86b0-1fafebff32ed" />
 
