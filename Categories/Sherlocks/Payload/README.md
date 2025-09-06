@@ -132,9 +132,19 @@
 <img width="813" height="210" alt="image" src="https://github.com/user-attachments/assets/632ad58a-f2e5-48ea-a370-e8a8e5a3c7ec" />
 
 
+20. Great! Now we also identified the key buffer used (in hex).
+
 > 9TH QUESTION -> ANS: `0x5FFC40`
 
 <img width="1279" height="201" alt="image" src="https://github.com/user-attachments/assets/053f7e62-d1c5-4a7a-b538-01ef68213a94" />
+
+21. To identify the address of the decrypted payload, we should debug the binary. To debug it I used `x64Dbg`.
+22. At first, load the binary there and press `run to user code` so we jumped to the binary's entrypoint.
+
+<img width="3128" height="1210" alt="image" src="https://github.com/user-attachments/assets/9307cbc3-8222-452a-9e35-3ba1098ae730" />
+
+
+23. 
 
 <img width="1066" height="948" alt="Pasted image 20250902194404" src="https://github.com/user-attachments/assets/0e3aeaf2-8adf-462e-bf86-7f981d2d84fc" />
 
