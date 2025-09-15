@@ -49,7 +49,7 @@
 <img width="1279" height="197" alt="image" src="https://github.com/user-attachments/assets/d7606584-0ca8-4e12-9fbc-b87fe80a707b" />
 
 
-> 8TH QUESTION -> ANS:
+> 8TH QUESTION -> ANS: `Skipping directory: %s (access denied)`
 
 <img width="1279" height="197" alt="image" src="https://github.com/user-attachments/assets/15f6cb6f-3397-4eaa-8c10-6597cd5a3537" />
 
