@@ -54,17 +54,17 @@
 <img width="1279" height="197" alt="image" src="https://github.com/user-attachments/assets/15f6cb6f-3397-4eaa-8c10-6597cd5a3537" />
 
 
-> 9TH QUESTION -> ANS:
+> 9TH QUESTION -> ANS: `crypto_aes_NewCipher`
 
 <img width="1281" height="196" alt="image" src="https://github.com/user-attachments/assets/24c339f8-da86-4345-824c-73eff5f1eed9" />
 
 
-> 10TH QUESTION -> ANS:
+> 10TH QUESTION -> ANS: `6368616e676520746869732070617373`
 
 <img width="1278" height="196" alt="image" src="https://github.com/user-attachments/assets/f6d40ea4-ff10-4f7f-8448-45ab3ab8da98" />
 
 
-> 11TH QUESTION -> ANS:
+> 11TH QUESTION -> ANS: `AI Coding Chatbot`
 
 <img width="1280" height="196" alt="image" src="https://github.com/user-attachments/assets/261e879f-bd54-4c7a-a3ce-04a4fcb7f518" />
 
