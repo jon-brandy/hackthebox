@@ -8,7 +8,7 @@
 1. ASD
 
 ## SCENARIO:
-<p align="justify"> </p>
+<p align="justify">Recently, Binz received a request via email to create a 3D model for a client's family. Upon downloading and opening the provided files, he observed unusual system behavior that raised suspicion. Acting on instinct, he promptly deleted the files; however, he remained concerned that the system might still be compromised. In response, we acquired a full memory dump from the affected machine for in-depth malware analysis. The objective of this investigation is to identify indicators of compromise (IOCs) that can be integrated into our Endpoint Detection and Response (EDR) systems, as we suspect the use of a novel and sophisticated infection vector.</p>
 
 ## STEPS:
 1. ASD
