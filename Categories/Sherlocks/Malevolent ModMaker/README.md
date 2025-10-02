@@ -18,6 +18,17 @@
 
 <img width="585" height="337" alt="image" src="https://github.com/user-attachments/assets/2bf15621-a10f-49a6-8902-0194aeeae5d9" />
 
+> This time we are dealing with 64-bit golang-based downloader and ransomware.
+
+- Downloader
+
+<img width="713" height="241" alt="image" src="https://github.com/user-attachments/assets/1c2fd52e-1faa-43b4-b550-efabaa1ce7b8" />
+
+
+- Ransomware
+
+<img width="618" height="200" alt="image" src="https://github.com/user-attachments/assets/234e63ea-face-43f9-8798-ae2e1ad10d7d" />
+
 
 > 1ST QUESTION -> ANS: `ransomware`
 
