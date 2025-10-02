@@ -41,6 +41,16 @@
 
 <img width="1279" height="197" alt="image" src="https://github.com/user-attachments/assets/7c3a00d2-832a-43b5-afd9-553baa6bec64" />
 
+6. To identify which commands were used to execute binaries and scripts, I manually debugged the sample in xDbg, pausing execution just before the webhook was called.
+7. The simplest approach is to search for error strings or any other strings of interest. In this case, I focused on debugging-related terms, since earlier the malware printed error messages to the terminal when its outbound connection to the Discord webhook failed.
+8. Filtering for the string `discord` in xDbg produced several hits. The bottom four entries are likely the most relevant to our analysis.
+
+<img width="889" height="709" alt="image" src="https://github.com/user-attachments/assets/1990a958-c58f-4063-bb5d-9578e8fe794c" />
+
+9. Inspect the offset then scrolled-up we can identify `powerhsell -ep bypass` is used to perform request with curl to several domains.
+
+<img width="1287" height="903" alt="image" src="https://github.com/user-attachments/assets/b8630e6f-8ba2-48bb-9888-d70372bbbaa8" />
+
 
 > 4TH QUESTION -> ANS: `ZVBOKX3P8H7`
 
