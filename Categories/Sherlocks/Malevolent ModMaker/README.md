@@ -66,6 +66,11 @@
 
 <img width="1284" height="198" alt="image" src="https://github.com/user-attachments/assets/f70cc14b-65a1-431f-916f-2d01c17b5a06" />
 
+12. Continuing our analysis, after geolocation check is failed, the malware using powershell again to perform downloads for `goteem.exe` to goteem[.]htb. Which no doubt is the encryptor (based on the ransom notes and encrypted file's extension).
+
+<img width="1248" height="807" alt="image" src="https://github.com/user-attachments/assets/4073990d-bcf6-415c-ad01-b698b8ebd102" />
+
+
 
 > 6TH QUESTION -> ANS: `application/json`
 
