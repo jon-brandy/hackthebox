@@ -143,9 +143,13 @@
 <img width="1416" height="892" alt="image" src="https://github.com/user-attachments/assets/f1e078b1-0500-4887-a103-386b9848a2e2" />
 
 
-24. This are the translation in xDbg.
+24. Since the offsets differ, the easiest approach is to search for nearby strings such as Error: reading file. From there, I began analyzing the surrounding assembly instructions and correlating them with the decompiled code in Ghidra.
 
 <img width="1212" height="616" alt="image" src="https://github.com/user-attachments/assets/653cb54d-a76a-4bef-9859-93638e93ddd0" />
+
+25. Set breakpoint at offset `0x3C72C0` then dollow dunmp value at offset `0x3C72A8`. At the dump tab below, we can identify the decryption key.
+
+<img width="1704" height="838" alt="image" src="https://github.com/user-attachments/assets/3f234a02-8dce-4d1c-8a85-b62008fd3adc" />
 
 
 > 11TH QUESTION -> ANS: `AI Coding Chatbot`
@@ -153,7 +157,19 @@
 <img width="1280" height="196" alt="image" src="https://github.com/user-attachments/assets/261e879f-bd54-4c7a-a3ce-04a4fcb7f518" />
 
 
+26. Using bruh.exe together with the identified decryption key, we can clearly identify the project name as `AI Coding Chatbot`.
+
+```
+bruh.exe -key 6368616e676520746869732070617373
+```
+
+<img width="768" height="535" alt="image" src="https://github.com/user-attachments/assets/2b2e250f-5df7-4b6a-bcc9-33f694710ccf" />
+
+27. We've finished briefly analysed the malware!
+
 ## REFERENCES:
 
 ```
+https://remnux.org/
+https://github.com/mandiant/flare-vm
 ```
