@@ -27,8 +27,7 @@
 
 - Ransomware
 
-<img width="618" height="200" alt="image" src="https://github.com/user-attachments/assets/234e63ea-face-43f9-8798-ae2e1ad10d7d" />
-
+<img width="713" height="241" alt="image" src="https://github.com/user-attachments/assets/4b2025b1-3d4f-446f-9a85-46bfeb232472" />
 
 > 1ST QUESTION -> ANS: `ransomware`
 
