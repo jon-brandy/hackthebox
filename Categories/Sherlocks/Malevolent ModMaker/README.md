@@ -7,7 +7,7 @@
 ## Lessons Learned:
 1. Reverse Engineering Golang-based Ransoware.
 2. Dynamic binary analysis using `x64dbg`.
-3. Static binary analysis using `ghidra`, `pestudio`, and `CFFExplorer`.
+3. Static binary analysis using `DiE` and `Ghidra`.
 
 ## SCENARIO:
 <p align="justify">Bob, a senior software engineer at Acme Inc., was taking a break from correcting AI code to check in with his favorite gaming community. One of the newer members shared a new program that can make mods for a popular game. Eager to try new things, when he ran it as administrator (as instructed), all of his files were deleted and replaced! He immediately called the help desk, so they locked his machine and an incident response was called!</p>
