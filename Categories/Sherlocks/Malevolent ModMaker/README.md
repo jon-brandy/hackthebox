@@ -5,8 +5,9 @@
 
 
 ## Lessons Learned:
-1. Dynamic binary analysis using `x64dbg`.
-2. Static binary analysis using `ghidra`, `pestudio`, and `CFFExplorer`.
+1. Reverse Engineering Golang-based Ransoware.
+2. Dynamic binary analysis using `x64dbg`.
+3. Static binary analysis using `ghidra`, `pestudio`, and `CFFExplorer`.
 
 ## SCENARIO:
 <p align="justify">Bob, a senior software engineer at Acme Inc., was taking a break from correcting AI code to check in with his favorite gaming community. One of the newer members shared a new program that can make mods for a popular game. Eager to try new things, when he ran it as administrator (as instructed), all of his files were deleted and replaced! He immediately called the help desk, so they locked his machine and an incident response was called!</p>
@@ -56,7 +57,7 @@
 
 <img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/bcd9bd8f-7338-4f50-b719-182dc1a2522f" />
 
-10. Based on our previous findings, we can clearly identify that hunnid[.]htb is the API used to perform geolocation enumeration, as it makes use of several parameters directly related to geolocation.
+10. Based on our previous findings, we can clearly identify that `hunnid[.]htb` is the API used to perform geolocation enumeration, as it makes use of several parameters directly related to geolocation.
 
 <img width="1236" height="194" alt="image" src="https://github.com/user-attachments/assets/f587e602-cfff-4c24-a0b6-53b446345d92" />
 
@@ -66,7 +67,8 @@
 
 <img width="1284" height="198" alt="image" src="https://github.com/user-attachments/assets/f70cc14b-65a1-431f-916f-2d01c17b5a06" />
 
-12. Continuing our analysis, after geolocation check is failed, the malware using powershell again to perform downloads for `goteem.exe` to goteem[.]htb. Which no doubt is the encryptor (based on the ransom notes and encrypted file's extension).
+12. Continuing our analysis, after geolocation check is failed, the malware using powershell again to perform downloads for `goteem.exe` to `goteem[.]htb`. Which no doubt is the encryptor (based on the ransom notes and encrypted file's extension).
+13. We can clearly state that `goteem[.]htb` is the C2 that serves for the ransomware.
 
 <img width="1248" height="807" alt="image" src="https://github.com/user-attachments/assets/4073990d-bcf6-415c-ad01-b698b8ebd102" />
 
@@ -75,6 +77,11 @@
 > 6TH QUESTION -> ANS: `application/json`
 
 <img width="1284" height="202" alt="image" src="https://github.com/user-attachments/assets/bfb6e326-6127-43c2-912f-8abbf855a754" />
+
+14. Continuing the debug of the same binary, at offsets `0xD3426A3` and `0xD326AA`, we observed errors related to JSON input.
+15. From this, we can conclude that the C2 server’s response uses the content type `application/json`.
+
+<img width="1743" height="424" alt="image" src="https://github.com/user-attachments/assets/b6686dfe-63a0-4adb-ac5d-9505dd5e3481" />
 
 
 > 7TH QUESTION -> ANS: `TXT`
