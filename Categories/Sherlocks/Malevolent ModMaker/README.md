@@ -31,8 +31,8 @@
 
 <img width="1279" height="198" alt="image" src="https://github.com/user-attachments/assets/c14514c3-6446-4e2e-9958-6da3b47ebdaf" />
 
-4. Instead of reviewing the source code manually, I prefer to just detonate the binary and analyze what's happen to the sandbox machine.
-5. Detonated the malware (MCModMaker-v1.4.exe), it shows us a terminal which printed outbount 
+4. Instead of manually reviewing the source code, I chose to detonate the binary and observe what happens to the sandbox environment.
+5. After detonating the malware (MCModMaker-v1.4.exe), a terminal window appeared showing a failed outbound POST request to Discord (its C2 server), which was attempted via a webhook.
 
 <img width="989" height="267" alt="image" src="https://github.com/user-attachments/assets/b482edb0-77b8-493d-bfdc-ab6e0c60470f" />
 
