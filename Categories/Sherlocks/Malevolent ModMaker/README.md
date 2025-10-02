@@ -138,7 +138,14 @@
 <img width="1278" height="196" alt="image" src="https://github.com/user-attachments/assets/f6d40ea4-ff10-4f7f-8448-45ab3ab8da98" />
 
 
-23. 
+23. Since the encryption logic relies on AES, the same key is used for both encryption and decryption. In Ghidra, these code blocks are the ones that need to be inspected to identify the key value.
+
+<img width="1416" height="892" alt="image" src="https://github.com/user-attachments/assets/f1e078b1-0500-4887-a103-386b9848a2e2" />
+
+
+24. This are the translation in xDbg.
+
+<img width="1212" height="616" alt="image" src="https://github.com/user-attachments/assets/653cb54d-a76a-4bef-9859-93638e93ddd0" />
 
 
 > 11TH QUESTION -> ANS: `AI Coding Chatbot`
