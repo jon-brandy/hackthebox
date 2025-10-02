@@ -12,16 +12,29 @@
 <p align="justify">Bob, a senior software engineer at Acme Inc., was taking a break from correcting AI code to check in with his favorite gaming community. One of the newer members shared a new program that can make mods for a popular game. Eager to try new things, when he ran it as administrator (as instructed), all of his files were deleted and replaced! He immediately called the help desk, so they locked his machine and an incident response was called!</p>
 
 ## STEPS:
-1. asddas
+1. In this case, we were tasked with investigating an incident where, after a senior software engineer downloaded and executed a program advertised as a modding tool for popular games, it instead encrypted all of his files and deleted the originals.
+2. The scope of the investigation is relatively small. We were specifically asked to analyze the malware based on a set of defined questions. The provided artifacts for analysis are shown in the red box below:
+
+<img width="585" height="337" alt="image" src="https://github.com/user-attachments/assets/2bf15621-a10f-49a6-8902-0194aeeae5d9" />
+
 
 > 1ST QUESTION -> ANS: `ransomware`
 
 <img width="1281" height="205" alt="image" src="https://github.com/user-attachments/assets/1ed8b46b-5c62-4352-9bcb-ffe51e3d04e9" />
 
+3. Based on the incident scenario and the provided artifacts, we can clearly attribute this malware infection to ransomware.
+
+<img width="816" height="287" alt="image" src="https://github.com/user-attachments/assets/6a2cceb5-6d0e-469c-bc90-83fb39a91251" />
+
 
 > 2ND QUESTION -> ANS: `webhook`
 
 <img width="1279" height="198" alt="image" src="https://github.com/user-attachments/assets/c14514c3-6446-4e2e-9958-6da3b47ebdaf" />
+
+4. Instead of reviewing the source code manually, I prefer to just detonate the binary and analyze what's happen to the sandbox machine.
+5. Detonated the malware (MCModMaker-v1.4.exe), it shows us a terminal which printed outbount 
+
+<img width="989" height="267" alt="image" src="https://github.com/user-attachments/assets/b482edb0-77b8-493d-bfdc-ab6e0c60470f" />
 
 
 > 3RD QUESTION -> ANS: `powershell -ep bypass`
