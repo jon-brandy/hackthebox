@@ -56,6 +56,11 @@
 
 <img width="1280" height="198" alt="image" src="https://github.com/user-attachments/assets/bcd9bd8f-7338-4f50-b719-182dc1a2522f" />
 
+10. Based on our previous findings, we can clearly identify that hunnid[.]htb is the API used to perform geolocation enumeration, as it makes use of several parameters directly related to geolocation.
+
+<img width="1236" height="194" alt="image" src="https://github.com/user-attachments/assets/f587e602-cfff-4c24-a0b6-53b446345d92" />
+
+11. The API key is also presented in cleartext -> `ZVBOKX3P8H7`.
 
 > 5TH QUESTION -> ANS: `goteem.htb`
 
