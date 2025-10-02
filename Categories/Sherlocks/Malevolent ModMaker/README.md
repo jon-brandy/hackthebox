@@ -98,10 +98,29 @@
 
 <img width="1279" height="197" alt="image" src="https://github.com/user-attachments/assets/d7606584-0ca8-4e12-9fbc-b87fe80a707b" />
 
+16. To test it, I placed the ransomware in a custom directory and added several files with common target extensions.
+17. I executed the sample once but observed no activity. This suggests an error occurred—potentially an internal check or error-handling routine that prevented encryption.
+18. I then tested it in another directory with unrestricted read/write access (C:\Users\Public), but still saw no activity.
+
+<img width="800" height="474" alt="image" src="https://github.com/user-attachments/assets/bc8bc1f8-ef11-42e5-ab79-c5f224b52713" />
+
+19. While debugging in xDbg, at offset `0x6478E4` I observed output indicating that the malware had detected a `.txt` file in the Documents folder and successfully encrypted it. An interesting finding.
+
+<img width="1154" height="230" alt="image" src="https://github.com/user-attachments/assets/836c3d22-ce58-40ae-a7fc-75584c0c925b" />
+
+20. To verify this behavior, I copied all the previously tested files into Documents. The result confirmed that only the `.txt` file was encrypted, while the Office files remained untouched.
+
+<img width="2012" height="655" alt="image" src="https://github.com/user-attachments/assets/2e2a7f53-2ace-4419-8022-a71f3a084b98" />
+
 
 > 8TH QUESTION -> ANS: `Skipping directory: %s (access denied)`
 
 <img width="1279" height="197" alt="image" src="https://github.com/user-attachments/assets/15f6cb6f-3397-4eaa-8c10-6597cd5a3537" />
+
+
+21. This behavior suggests that the encryptor may not have access to certain directories. By searching for error-handling related strings, I found references indicating that some directories were explicitly skipped.
+
+<img width="1257" height="341" alt="image" src="https://github.com/user-attachments/assets/dc3bb70c-9a18-4332-9f62-3b2f1c39c657" />
 
 
 > 9TH QUESTION -> ANS: `crypto_aes_NewCipher`
@@ -109,9 +128,17 @@
 <img width="1281" height="196" alt="image" src="https://github.com/user-attachments/assets/24c339f8-da86-4345-824c-73eff5f1eed9" />
 
 
+22. Reviewing the decompiled main code binary in ghidra, the encryption algorithm seems using AES and the function call is `crypto_aes_NewCipher`.
+
+<img width="1098" height="893" alt="image" src="https://github.com/user-attachments/assets/82ee58c4-f3c3-4012-9e56-f637a4bea234" />
+
+
 > 10TH QUESTION -> ANS: `6368616e676520746869732070617373`
 
 <img width="1278" height="196" alt="image" src="https://github.com/user-attachments/assets/f6d40ea4-ff10-4f7f-8448-45ab3ab8da98" />
+
+
+23. 
 
 
 > 11TH QUESTION -> ANS: `AI Coding Chatbot`
