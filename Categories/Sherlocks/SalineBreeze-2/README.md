@@ -5,10 +5,10 @@
 
 
 ## Lessons Learned:
-1. Demodex Tactic, Technique, and Procedure. (Combination with Salt Typhoon and Ghost Emperor).
-2. Powershell deobfuscation & reversing.
-3. Dynamic malware analysis with Flare-VM and `procmon`.
-4. Static malware analysis with `pestudio`, and `ghidra`.
+1. Demodex TTPs (associated with Salt Typhoon / Earth Estries & Ghost Emperor)
+2. PowerShell deobfuscation and reverse engineering
+3. Dynamic malware analysis using FLARE-VM and Procmon
+4. Static malware analysis using PEStudio and Ghidra
 
 ## SCENARIO:
 <p align="justify">Your boss was so impressed with your research skills that you've been "rewarded" with a new task: malware analysis. Your mission is to investigate a piece of malware linked to the infamous cyber espionage group, Salt Typhoon. They've been targeting critical infrastructure, and it's up to you to uncover their tactics and techniques.</p>
