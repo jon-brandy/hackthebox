@@ -81,7 +81,7 @@
 <img width="1415" height="242" alt="image" src="https://github.com/user-attachments/assets/c2d2f5ce-23bd-4839-aa27-6076143ad90a" />
 
  
-## REFERENCES:
+## REFERENCE:
 
 ```
 https://www.trendmicro.com/en_us/research/24/k/earth-estries.html
