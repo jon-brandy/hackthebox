@@ -1,6 +1,8 @@
 # Secret Pictures
 > Write-up author: jon-brandy
 
+<img width="395" height="144" alt="image" src="https://github.com/user-attachments/assets/94daab7e-5b5d-4b5a-8ec6-b639c02e4e7a" />
+
 
 ## SCENARIO:
 <p align="justify">The university's IT team began receiving reports of strange activity on library computers. Students noticed hidden files appearing on their USB drives and disappearing moments later. An investigation revealed a single suspicious file named "SecretPictures." When opened, it vanished instantly without leaving a trace, and no antivirus tool could identify it. The IT team isolated the file and provided it for your analysis. As a cybersecurity analyst, your task is to determine what this malware does, how it spreads, and how to stop it before it affects more systems.</p>
