@@ -98,19 +98,24 @@ Get-Filehash .\secretPictures.exe -Algorithm MD5
 <img width="425" height="139" alt="image" src="https://github.com/user-attachments/assets/18823df9-bf2e-44d2-9e1b-99f67fbec065" />
 
 
-> 4TH QUESTION --> ANS: `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\HealthCheck`
+> 4TH QUESTION --> ANS: `malware.invalid.com`
 
 <img width="1099" height="170" alt="image" src="https://github.com/user-attachments/assets/c4cc06bf-78b8-4809-9ecf-1cfcb1db66ff" />
 
+13. To identify its FQDN, I created a sandbox environment with fake network capability. For this purpose, I used REMnux configured with INetSim.
+14. On my Windows machine (FLARE-VM), I captured the network traffic using Wireshark and executed the malware again to observe and extract its FQDN.
 
-<img width="694" height="163" alt="image" src="https://github.com/user-attachments/assets/2c2584e8-82d0-4117-9155-0472ac808c42" />
+<img width="1314" height="527" alt="image" src="https://github.com/user-attachments/assets/2e7470da-3c6a-4115-ba41-0fddd4647c57" />
 
 
-> 5TH QUESTION --> ANS: `malware.invalid.com`
+15. As seen above, flare performed an outbound connection to `malware.invalid[.]com`.
+
+
+> 5TH QUESTION --> ANS: `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\HealthCheck`
 
 <img width="1099" height="171" alt="image" src="https://github.com/user-attachments/assets/7eaccc6e-5294-49d9-b7d3-eb9136e8a84a" />
 
-<img width="1314" height="527" alt="image" src="https://github.com/user-attachments/assets/2e7470da-3c6a-4115-ba41-0fddd4647c57" />
+<img width="694" height="163" alt="image" src="https://github.com/user-attachments/assets/2c2584e8-82d0-4117-9155-0472ac808c42" />
 
 
 > 6TH QUESTION --> ANS: `GetDriveType`
