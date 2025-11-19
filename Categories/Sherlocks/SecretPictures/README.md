@@ -56,9 +56,18 @@ Get-Filehash .\secretPictures.exe -Algorithm MD5
 <img width="664" height="590" alt="image" src="https://github.com/user-attachments/assets/279166fe-228e-482c-9c32-254a424ac72d" />
 
 
-6. Inside the `main.hide()`, the binary performs a current working directory check using `main_getCurrentPath`. also `off_90D2F0` section stored the path to "C:\\Systemlogs". 
+6. Inside the `main.hide()`, the binary performs a current working directory check using `main_getCurrentPath()`. 
 
 <img width="800" height="529" alt="image" src="https://github.com/user-attachments/assets/c83260f3-716e-4000-8b7a-fefeff794475" />
+
+
+7. Also `off_90D2F0` section stored the path to "C:\\Systemlogs".
+
+<img width="1055" height="395" alt="image" src="https://github.com/user-attachments/assets/ed081e18-9ea0-495d-ba9a-861c928f5208" />
+
+8. Afterwards, it called `runtime_concatstring2()` to copy the binary to `Systemlogs` directory.
+
+<img width="921" height="474" alt="image" src="https://github.com/user-attachments/assets/13681c21-b51f-4043-a235-bdbbb888fcce" />
 
 
 > 4TH QUESTION --> ANS: `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\HealthCheck`
