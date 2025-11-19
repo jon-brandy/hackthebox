@@ -193,18 +193,30 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 <img width="1098" height="171" alt="image" src="https://github.com/user-attachments/assets/4c2a44f1-f384-4c43-b543-51340d67f178" />
 
 
+28. By reviewing the execution graph in IDA, it is evident that the function main_touchBase is invoked early in the execution flow, serving as one of the malware’s initial routines.
+29. Immediately after this call, the malware proceeds to establish outbound communication with its Command-and-Control (C2) domain, indicating that this stage is responsible for its initial beaconing or registration attempt.
+
+<img width="1569" height="819" alt="image" src="https://github.com/user-attachments/assets/a51cb78b-156f-416a-8a63-69c8d8ca8f9f" />
 
 
-<img width="1298" height="309" alt="image" src="https://github.com/user-attachments/assets/e91a9068-582c-4c15-b869-c0c3b0138968" />
+30. A quick inspection of the imported libraries and referenced functions shows that the malware relies on Base64 operations to encode both its outbound requests and the responses received from the C2 server. This suggests the malware employs simple encoding—rather than encryption—to obfuscate network traffic and evade basic detection mechanisms.
 
+<img width="1613" height="635" alt="image" src="https://github.com/user-attachments/assets/2f0c5734-1c78-4dae-b297-b44d960415b3" />
 
 > 9TH QUESTION --> ANS: `name,version`
 
 <img width="1097" height="190" alt="image" src="https://github.com/user-attachments/assets/1d9d4ec1-56a5-4825-ac3f-45008acae3cd" />
 
+31. Inspecting at one of the POST request packet in previously captured netflow in wireshark, we can identify 2 fields in the request body -> name and version.
+
 <img width="1300" height="488" alt="image" src="https://github.com/user-attachments/assets/b8b56ccf-7a0b-4db8-a5fe-650e4076c7c2" />
 
+32. These also mentioned at the `main_collectData()` function.
 
+<img width="1220" height="477" alt="image" src="https://github.com/user-attachments/assets/d0a09d15-1ac0-4d64-bdbe-c8b76586fd92" />
+
+
+33. We've finished briefly analyzed the binary.
 
 ## REFERENCES:
 ```
