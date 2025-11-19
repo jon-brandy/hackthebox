@@ -182,9 +182,17 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 <img width="1099" height="170" alt="image" src="https://github.com/user-attachments/assets/897b8960-8f6f-4a47-893d-1bee7ab9fd60" />
 
 
+26. To identify the library function used for the periodic execution, we just need to review the `main_repeat()` function.
+27. We can clearly see the NewTicker API is invoked there.
+
+<img width="1495" height="620" alt="image" src="https://github.com/user-attachments/assets/9f937b73-5748-4ddb-a0a5-377ebe3823cc" />
+
+
 > 8TH QUESTION --> ANS: `Base64`
 
 <img width="1098" height="171" alt="image" src="https://github.com/user-attachments/assets/4c2a44f1-f384-4c43-b543-51340d67f178" />
+
+
 
 
 <img width="1298" height="309" alt="image" src="https://github.com/user-attachments/assets/e91a9068-582c-4c15-b869-c0c3b0138968" />
