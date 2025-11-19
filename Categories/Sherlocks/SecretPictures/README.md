@@ -162,6 +162,20 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 <img width="1097" height="169" alt="image" src="https://github.com/user-attachments/assets/d96bc92d-1aa2-40a0-8bf1-07ddcf17b089" />
 
 
+22. Although an initial inspection using PeStudio did not reveal any Windows API associated with drive-type enumeration, a deeper review of the disassembled code shows that the malware does invoke such functionality internally.
+23. Upon examining the `main_outbreak()` function, the API usage becomes evident.
+
+<img width="1425" height="881" alt="image" src="https://github.com/user-attachments/assets/91c5e459-82ab-419c-8cb8-1710b22f7e1a" />
+
+
+24. This function is responsible for the malware’s worm-like propagation mechanism. It iterates through drive letters from 68 (‘D’) to 90 (‘Z’), generating paths for each potential drive. For every detected removable drive, the malware attempts to copy itself to that location under the lure filename SecretPictures.exe.
+
+<img width="983" height="880" alt="image" src="https://github.com/user-attachments/assets/5eb9754c-8959-48f5-9e00-ebd2866546dd" />
+
+25. Based on this analysis, it is clear that the malware relies on the `GetDriveType` Windows API to identify removable drives before performing the copy operation.
+
+<img width="1030" height="374" alt="image" src="https://github.com/user-attachments/assets/c9d9841a-f0d6-4c7d-afaa-1dd1c5f2251d" />
+
 
 > 7TH QUESTION --> ANS: `NewTicker`
 
