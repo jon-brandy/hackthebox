@@ -6,7 +6,8 @@
 
 ## Lessons Learned:
 1. Static Analysis using tools such as `IDA`, `PE Studio`, and `Detect It Easy (DiE)` to examine the PE file’s structure, metadata, and potential indicators of malicious behavior.
-2. Dynamic Analysis using `Wireshark` to monitor network activity and observe the malware’s behavior during execution.
+2. Capturing netflow using `Wireshark` to monitor network activity and observe the malware’s behavior during execution.
+3. Debugging using `IDA`.
 
 ## SCENARIO:
 <p align="justify">The university's IT team began receiving reports of strange activity on library computers. Students noticed hidden files appearing on their USB drives and disappearing moments later. An investigation revealed a single suspicious file named "SecretPictures." When opened, it vanished instantly without leaving a trace, and no antivirus tool could identify it. The IT team isolated the file and provided it for your analysis. As a cybersecurity analyst, your task is to determine what this malware does, how it spreads, and how to stop it before it affects more systems.</p>
