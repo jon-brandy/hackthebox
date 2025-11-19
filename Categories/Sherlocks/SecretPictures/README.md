@@ -66,9 +66,14 @@ Get-Filehash .\secretPictures.exe -Algorithm MD5
 <img width="1099" height="170" alt="image" src="https://github.com/user-attachments/assets/c4cc06bf-78b8-4809-9ecf-1cfcb1db66ff" />
 
 
+<img width="694" height="163" alt="image" src="https://github.com/user-attachments/assets/2c2584e8-82d0-4117-9155-0472ac808c42" />
+
+
 > 5TH QUESTION --> ANS: `malware.invalid.com`
 
 <img width="1099" height="171" alt="image" src="https://github.com/user-attachments/assets/7eaccc6e-5294-49d9-b7d3-eb9136e8a84a" />
+
+<img width="1314" height="527" alt="image" src="https://github.com/user-attachments/assets/2e7470da-3c6a-4115-ba41-0fddd4647c57" />
 
 
 > 6TH QUESTION --> ANS: `GetDriveType`
@@ -87,9 +92,16 @@ Get-Filehash .\secretPictures.exe -Algorithm MD5
 <img width="1098" height="171" alt="image" src="https://github.com/user-attachments/assets/4c2a44f1-f384-4c43-b543-51340d67f178" />
 
 
+<img width="1298" height="309" alt="image" src="https://github.com/user-attachments/assets/e91a9068-582c-4c15-b869-c0c3b0138968" />
+
+
 > 9TH QUESTION --> ANS: `name,version`
 
 <img width="1097" height="190" alt="image" src="https://github.com/user-attachments/assets/1d9d4ec1-56a5-4825-ac3f-45008acae3cd" />
+
+<img width="1300" height="488" alt="image" src="https://github.com/user-attachments/assets/b8b56ccf-7a0b-4db8-a5fe-650e4076c7c2" />
+
+
 
 ## REFERENCES:
 ```
