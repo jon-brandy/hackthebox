@@ -61,7 +61,11 @@ Get-Filehash .\secretPictures.exe -Algorithm MD5
 <img width="800" height="529" alt="image" src="https://github.com/user-attachments/assets/c83260f3-716e-4000-8b7a-fefeff794475" />
 
 
-7. Also `off_90D2F0` section stored the path to "C:\\Systemlogs".
+7. Another functions that should be our interest are `main_lurk()` and `main_vanish()`, also `off_90D2F0` section, which stored the path to "C:\\Systemlogs".
+
+<img width="1002" height="206" alt="image" src="https://github.com/user-attachments/assets/7f7fbc52-e7bd-44c7-b714-fb4592db1107" />
+
+> OFF_90D2F0 section
 
 <img width="1055" height="395" alt="image" src="https://github.com/user-attachments/assets/ed081e18-9ea0-495d-ba9a-861c928f5208" />
 
@@ -114,6 +118,8 @@ Get-Filehash .\secretPictures.exe -Algorithm MD5
 > 5TH QUESTION --> ANS: `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\HealthCheck`
 
 <img width="1099" height="171" alt="image" src="https://github.com/user-attachments/assets/7eaccc6e-5294-49d9-b7d3-eb9136e8a84a" />
+
+16. Reviewing the `main_lurk()` function, 
 
 <img width="694" height="163" alt="image" src="https://github.com/user-attachments/assets/2c2584e8-82d0-4117-9155-0472ac808c42" />
 
