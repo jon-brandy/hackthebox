@@ -69,6 +69,33 @@ Get-Filehash .\secretPictures.exe -Algorithm MD5
 
 <img width="921" height="474" alt="image" src="https://github.com/user-attachments/assets/13681c21-b51f-4043-a235-bdbbb888fcce" />
 
+9. From reviewing the pseudocode, we can infer that a Systemlogs directory will be created, and the malware will copy itself there once its current location is identified by the program and before the execution flow is finished.
+10. However, it is best to verify this behavior by debugging the binary.
+
+> BEFORE
+
+<img width="1706" height="786" alt="image" src="https://github.com/user-attachments/assets/68b1dcf7-17cd-47de-86c0-689238933b7b" />
+
+> AFTER
+
+<img width="1770" height="850" alt="image" src="https://github.com/user-attachments/assets/6a1efc86-6489-4b14-be79-a14322484ae4" />
+
+
+11. As shown above, after `main_lurk()` completes, the program proceeds to `main_vanish()`. At this point, the Systemlogs directory has not yet been created, because the copying operation actually occurs inside the `main_vanish()` function.
+
+<img width="1225" height="789" alt="image" src="https://github.com/user-attachments/assets/2df20334-064d-475e-afcb-19da284900b7" />
+
+> SYSTEMLOGS DIRECTORY AND INSIDE IT
+
+<img width="851" height="474" alt="image" src="https://github.com/user-attachments/assets/8273a036-699c-4acb-8f32-c19d8aee7e13" />
+
+<img width="1025" height="189" alt="image" src="https://github.com/user-attachments/assets/01082fed-748e-4f9e-ad22-45df21c2a70c" />
+
+
+12. Noticed that the copied filename is changed to `logcheck.exe` and the original binary is removed.
+
+<img width="425" height="139" alt="image" src="https://github.com/user-attachments/assets/18823df9-bf2e-44d2-9e1b-99f67fbec065" />
+
 
 > 4TH QUESTION --> ANS: `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\HealthCheck`
 
