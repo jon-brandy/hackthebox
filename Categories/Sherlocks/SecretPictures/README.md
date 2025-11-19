@@ -119,10 +119,40 @@ Get-Filehash .\secretPictures.exe -Algorithm MD5
 
 <img width="1099" height="171" alt="image" src="https://github.com/user-attachments/assets/7eaccc6e-5294-49d9-b7d3-eb9136e8a84a" />
 
-16. Reviewing the `main_lurk()` function, 
+16. Upon reviewing the main_lurk() function, it becomes evident that the binary attempts to open a registry key under the Run location and create a new value inside it. This behavior indicates a persistence mechanism, typically used to ensure execution after reboot. Although the sample also uses scheduled task–related functionality elsewhere, the logic here directly targets Run key–based persistence.
+
+<img width="1576" height="941" alt="image" src="https://github.com/user-attachments/assets/573fe80b-46f3-4e74-9cd1-19a2278fa8e2" />
+
+17. The registry root handle is not stored in cleartext. Instead, the malware passes a decimal constant to the golang_org_x_sys_windows_registry_OpenKey function. To identify which predefined HKEY it corresponds to, this decimal value must be translated to hexadecimal.
+18. This conversion can be validated using [any](https://www.rapidtables.com/convert/number/decimal-to-hex.html?x=-2147483647) standard decimal-to-hex utility.
+
+```
+v43 = golang_org_x_sys_windows_registry_OpenKey(
+        -2147483647,
+        (unsigned int)"Software\\Microsoft\\Windows\\CurrentVersion\\RUN",
+        45,
+        3,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9);
+```
+
+<img width="593" height="680" alt="image" src="https://github.com/user-attachments/assets/2b9157bb-cb42-4bbe-8297-e071c8faed82" />
+
+
+18. After obtaining the hex form, we correlate the value with documented Windows predefined registry handles, such as those listed in the Windows SDK (winreg.h) or in public [mirrors](https://doxygen.reactos.org/d0/d77/winreg_8h.html).
 
 <img width="694" height="163" alt="image" src="https://github.com/user-attachments/assets/2c2584e8-82d0-4117-9155-0472ac808c42" />
 
+19. Great! Based on this mapping, we can conclusively determine that the malware attempts to open and write to:
+
+```
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+```
+
+20. This confirms that the malware establishes persistence by placing an entry under the HKCU Run key, ensuring the malicious program executes automatically for the current user during system startup.
 
 > 6TH QUESTION --> ANS: `GetDriveType`
 
@@ -153,4 +183,7 @@ Get-Filehash .\secretPictures.exe -Algorithm MD5
 
 ## REFERENCES:
 ```
+https://learn.microsoft.com/en-us/windows/win32/sysinfo/predefined-keys?
+https://doxygen.reactos.org/d0/d77/winreg_8h.html
+https://www.rapidtables.com/convert/number/decimal-to-hex.html?x=-2147483647
 ```
