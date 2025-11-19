@@ -76,6 +76,7 @@ Get-Filehash .\secretPictures.exe -Algorithm MD5
 
 <img width="1706" height="786" alt="image" src="https://github.com/user-attachments/assets/68b1dcf7-17cd-47de-86c0-689238933b7b" />
 
+
 > AFTER
 
 <img width="1770" height="850" alt="image" src="https://github.com/user-attachments/assets/6a1efc86-6489-4b14-be79-a14322484ae4" />
