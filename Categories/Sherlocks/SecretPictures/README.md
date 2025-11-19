@@ -144,7 +144,7 @@ v43 = golang_org_x_sys_windows_registry_OpenKey(
 
 18. After obtaining the hex form, we correlate the value with documented Windows predefined registry handles, such as those listed in the Windows SDK (winreg.h) or in public [mirrors](https://doxygen.reactos.org/d0/d77/winreg_8h.html).
 
-<img width="694" height="163" alt="image" src="https://github.com/user-attachments/assets/2c2584e8-82d0-4117-9155-0472ac808c42" />
+<img width="961" height="687" alt="image" src="https://github.com/user-attachments/assets/3507cb00-f349-43b6-8117-6702787487e3" />
 
 19. Great! Based on this mapping, we can conclusively determine that the malware attempts to open and write to:
 
@@ -153,6 +153,9 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 ```
 
 20. This confirms that the malware establishes persistence by placing an entry under the HKCU Run key, ensuring the malicious program executes automatically for the current user during system startup.
+21. We can see the value stored there by visiting the key using any registry viewer software you have.
+
+<img width="694" height="163" alt="image" src="https://github.com/user-attachments/assets/2c2584e8-82d0-4117-9155-0472ac808c42" />
 
 > 6TH QUESTION --> ANS: `GetDriveType`
 
