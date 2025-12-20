@@ -169,12 +169,23 @@ O:\HTB
 
 <img width="1415" height="214" alt="image" src="https://github.com/user-attachments/assets/b9111235-9749-49b8-94b7-fb64e91a842e" />
 
+22. To identify the name of the malicious service, we need to detonate onedrived.ps1 again. However, this time, we execute Process Hacker first.
+23. Using it, we were able to monitor the process names spawned by the PowerShell script.
+
+> PROCESS HACKER
+
+<img width="1747" height="690" alt="image" src="https://github.com/user-attachments/assets/318d6a0d-49e6-4ed6-967d-a7832214a055" />
 
 
+
+24. Great! We found the newly created service name and the it's file location.
 
 > 8TH QUESTION --> ANS: `C:\Windows\System32\msmp4dec.dll`
 
 <img width="1415" height="218" alt="image" src="https://github.com/user-attachments/assets/37adc5e6-62d9-48d1-8b1c-496c98a7a1f0" />
+
+
+25. Based on our previous findings, the path to the malicious DLL is at `C:\Windows\System32\msmp4dec.dll`
 
 
 > 9TH QUESTION --> ANS: `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SvcHost`
@@ -182,9 +193,23 @@ O:\HTB
 <img width="1416" height="214" alt="image" src="https://github.com/user-attachments/assets/7fd53a92-f782-4b65-9a0d-2329530ac7cc" />
 
 
+26. To identify the registry path used to associate the service group (msgroup) with the malicious service, we can start by checking the registry key for the `MsMp4Hw` service.
+
+<img width="808" height="267" alt="image" src="https://github.com/user-attachments/assets/8d7bf098-ade6-4642-9011-8bf8bcb8c821" />
+
+
+27. Based on our findings above, we can conclude that the registry path `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Svchost` is used to associate the msgroup with the malicious service.
+28. We can double-check it by visiting that location.
+
+<img width="778" height="207" alt="image" src="https://github.com/user-attachments/assets/2057646d-e1a6-4ab7-8ae9-37dd1970f1c8" />
+
+29. Great! It is true.
+
 > 10TH QUESTION --> ANS: `Start-Service -name $svcname;`
 
 <img width="1414" height="217" alt="image" src="https://github.com/user-attachments/assets/553c9d92-013a-411d-afea-fb7909d284a7" />
+
+
 
 
 > 11TH QUESTION --> ANS: `GetComputerNameA`
