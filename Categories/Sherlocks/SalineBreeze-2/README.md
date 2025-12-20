@@ -130,16 +130,24 @@ except Exception as e:
 <img width="1647" height="1096" alt="image" src="https://github.com/user-attachments/assets/9b1d5910-97a1-46f1-a328-b5d2f2496aa4" />
 
 18. Great! After decrypting the payload, we can now identify the value assigned to the variable `$cregvalue`.
-19. In the top lines of the script, the value "midihelp" is assigned to the variable `$cregvalue`.
 
 <img width="889" height="422" alt="image" src="https://github.com/user-attachments/assets/db94bb56-773d-4aaa-aed1-aec0de916281" />
 
-
+19. In the top lines of the script, the value "midihelp" is assigned to the variable `$cregvalue`.
 
 > 6TH QUESTION --> ANS: `3b1c251b0b37b57b755d4545a7dbbe4c29c15baeca4fc2841f82bc80ea877b66`
 
 <img width="1414" height="215" alt="image" src="https://github.com/user-attachments/assets/e5a51a57-a916-46e6-aa8b-6ad54e5b53a6" />
 
+20. To identify the SHA-256 checksum, based on the script, simply decode the base64-encoded bytes then get the checksum.
+
+<img width="801" height="524" alt="image" src="https://github.com/user-attachments/assets/f70ebfad-3c72-4867-8d11-2f0b9e7da2e2" />
+
+21. To speed things up, I used this simple powershell script:
+
+```ps1
+
+```
 
 > 7TH QUESTION --> ANS: `MsMp4Hw`
 
