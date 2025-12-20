@@ -5,7 +5,7 @@
 
 
 ## Lessons Learned:
-1. Demodex TTPs (associated with Salt Typhoon / Earth Estries & Ghost Emperor)
+1. Demodex TTPs (associated with Demodex, Salt Typhoon / Earth Estries & Ghost Emperor)
 2. PowerShell deobfuscation and reverse engineering
 3. Dynamic malware analysis using FLARE-VM and Procmon
 4. Static malware analysis using PEStudio and Ghidra
@@ -14,11 +14,28 @@
 <p align="justify">Your boss was so impressed with your research skills that you've been "rewarded" with a new task: malware analysis. Your mission is to investigate a piece of malware linked to the infamous cyber espionage group, Salt Typhoon. They've been targeting critical infrastructure, and it's up to you to uncover their tactics and techniques.</p>
 
 ## STEPS:
-1. asda
+1. In this case, we are tasked with performing a malware analysis on a .ps1 file that is suspected to be linked to an infamous cyber-espionage group known as Salt Typhoon.
+2. Upon a quick review of the provided PowerShell script, we can clearly identify encrypted strings and an AES-based decrypt-and-execute loader logic.
+
+> ONEDRIVED.PS1
+
+<img width="1076" height="707" alt="image" src="https://github.com/user-attachments/assets/74f24f95-80b8-4024-aaa9-4a3136724299" />
+
 
 > 1ST QUESTION --> ANS: `Demodex`
 
 <img width="1414" height="216" alt="image" src="https://github.com/user-attachments/assets/51072693-dabd-493d-bbe7-90fdf570d03a" />
+
+
+3. While reviewing online articles about Salt Typhoon, one article curated by [Trend Micro](https://www.trendmicro.com/en_us/research/24/k/earth-estries.html) describes a DEMODEX rootkit infection chain that used the same PowerShell script name as the one we have now.
+
+<img width="1480" height="776" alt="image" src="https://github.com/user-attachments/assets/c1c970bc-dfc4-4089-9ae1-4c24e8701095" />
+
+
+4. The article also states that, based on Trend Micro telemetry, they identified specific commands used by the threat actor to make the script functional.
+5. Let's just tried that on our sandbox.
+
+<img width="927" height="348" alt="image" src="https://github.com/user-attachments/assets/7847d7be-1b60-4ff7-a9f4-b8597d33a499" />
 
 
 > 2ND QUESTION --> ANS: `System.Security.Cryptography.AesManaged`
