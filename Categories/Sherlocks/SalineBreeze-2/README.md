@@ -139,19 +139,37 @@ except Exception as e:
 
 <img width="1414" height="215" alt="image" src="https://github.com/user-attachments/assets/e5a51a57-a916-46e6-aa8b-6ad54e5b53a6" />
 
-20. To identify the SHA-256 checksum, based on the script, simply decode the base64-encoded bytes then get the checksum.
+20. To identify the SHA-256 checksum, based on the script logic, we simply need to decode the Base64-encoded bytes and then calculate the checksum.
 
 <img width="801" height="524" alt="image" src="https://github.com/user-attachments/assets/f70ebfad-3c72-4867-8d11-2f0b9e7da2e2" />
 
-21. To speed things up, I used this simple powershell script:
+21. Since we also want to analyze the binary further, I saved the output. To decode and save it, I used a Python script.
 
-```ps1
+```py
+import base64, sys
+
+strings = "" # the encoded strings.
+res = base64.b64decode(strings)
+# print(res)
+out = 'decode_htb.bin'
+with open(out, 'wb') as f:
+    f.write(res)
+```
+
+> GET SHA-256 CHECKSUM
 
 ```
+O:\HTB
+λ sha256sum decode_htb.bin
+3b1c251b0b37b57b755d4545a7dbbe4c29c15baeca4fc2841f82bc80ea877b66 *decode_htb.bin
+```
+
 
 > 7TH QUESTION --> ANS: `MsMp4Hw`
 
 <img width="1415" height="214" alt="image" src="https://github.com/user-attachments/assets/b9111235-9749-49b8-94b7-fb64e91a842e" />
+
+
 
 
 > 8TH QUESTION --> ANS: `C:\Windows\System32\msmp4dec.dll`
