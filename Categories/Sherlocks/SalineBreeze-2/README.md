@@ -8,7 +8,8 @@
 1. Demodex TTPs (associated with Demodex, Salt Typhoon / Earth Estries & Ghost Emperor).
 2. PowerShell deobfuscation and reverse engineering (decrypt AES-256-CBC).
 3. Dynamic malware analysis using FLARE-VM and Process Hacker.
-4. Static malware analysis using PEStudio and Ghidra.
+4. Using API Monitor to capture win32 API function.
+5. Static malware analysis using PEStudio and Ghidra.
 
 ## SCENARIO:
 <p align="justify">Your boss was so impressed with your research skills that you've been "rewarded" with a new task: malware analysis. Your mission is to investigate a piece of malware linked to the infamous cyber espionage group, Salt Typhoon. They've been targeting critical infrastructure, and it's up to you to uncover their tactics and techniques.</p>
@@ -227,12 +228,23 @@ O:\HTB
 <img width="1415" height="215" alt="image" src="https://github.com/user-attachments/assets/697d9ac8-2044-4b91-89c6-0b663728353e" />
 
 
-31. There are 2 ways to identify the windows API imported by the malicious DLL to obtain the local computer name. You can use `pestudio` or `ApiMonitor`.
+31. There are two ways to identify the Windows API imported by the malicious DLL to obtain the local computer name: you can use `pestudio` or `ApiMonitor`.
 
 > USING PESTUDIO
 
 <img width="1159" height="566" alt="image" src="https://github.com/user-attachments/assets/9118dc1d-f0fb-4d23-b93e-a2ac6d707153" />
 
+
+> APIMONITOR
+
+32. Now, to verify whether this is true, we can use ApiMonitor by attaching it to the PID of the malicious svchost.exe and enabling a filter for the `GetComputerNameA` win32 API function.
+
+<img width="1819" height="928" alt="image" src="https://github.com/user-attachments/assets/e1558d12-4a24-49f1-8151-75ced32ef9fb" />
+
+
+33. Great! It clearly shows `GetComputerNameA` is utilized to obtain our local computer name.
+
+<img width="682" height="609" alt="image" src="https://github.com/user-attachments/assets/f25911d0-782b-4b2f-86d7-aaeec0218fc3" />
 
 
 > 12TH QUESTION --> ANS: `ServiceMain`
@@ -240,12 +252,22 @@ O:\HTB
 <img width="1416" height="216" alt="image" src="https://github.com/user-attachments/assets/bc5a3d16-bfd9-4b35-82f8-3e3a1ff4d098" />
 
 
+34. Again, there are several ways to identify the function responsible for initiating the service. In ApiMonitor, this can be identified by checking its threads.
+
+<img width="404" height="419" alt="image" src="https://github.com/user-attachments/assets/3d42a3c3-39e9-4fdb-aae4-84652e2b8c50" />
+
+
+35. On the other hand, using Pestudio is sufficient for static analysis by reviewing the exported functions.
+
+<img width="1134" height="445" alt="image" src="https://github.com/user-attachments/assets/65443676-68f1-441a-a520-792470205310" />
 
 
 > 13TH QUESTION --> ANS: `10000`
 
 <img width="1415" height="242" alt="image" src="https://github.com/user-attachments/assets/c2d2f5ce-23bd-4839-aa27-6076143ad90a" />
 
+
+36. Decompiling and pseudonym at ghidra, we can 
  
 ## REFERENCE:
 
