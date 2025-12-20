@@ -179,7 +179,7 @@ O:\HTB
 
 
 
-24. Great! We found the newly created service name and the it's file location.
+24. Awesome! We found the newly created service name and the it's file location.
 
 > 8TH QUESTION --> ANS: `C:\Windows\System32\msmp4dec.dll`
 
@@ -211,7 +211,7 @@ O:\HTB
 <img width="1533" height="260" alt="image" src="https://github.com/user-attachments/assets/e788fc30-351f-45eb-83da-fa5affa54a83" />
 
 
-29. Great! It is true.
+29. Nice! It is true.
 
 > 10TH QUESTION --> ANS: `Start-Service -name $svcname;`
 
@@ -267,7 +267,12 @@ O:\HTB
 <img width="1415" height="242" alt="image" src="https://github.com/user-attachments/assets/c2d2f5ce-23bd-4839-aa27-6076143ad90a" />
 
 
-36. Decompiling and pseudonym at ghidra, we can 
+36. Decompiling and pseudonym at ghidra, we can easily identified the hardcoded value for the used Sleep() function, it is 10000 milliseconds. 
+
+<img width="1897" height="887" alt="image" src="https://github.com/user-attachments/assets/bb54c3fc-efee-41f0-820b-0c899d15af74" />
+
+
+37. Great! We've briefly analyzed the malware.
  
 ## REFERENCE:
 
