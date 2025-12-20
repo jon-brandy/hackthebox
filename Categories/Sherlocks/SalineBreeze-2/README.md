@@ -199,9 +199,16 @@ O:\HTB
 
 
 27. Based on our findings above, we can conclude that the registry path `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Svchost` is used to associate the msgroup with the malicious service.
-28. We can double-check it by visiting that location.
+28. We can double-check it by visiting that location or we can also perform static analysis for the decrypted payload.
+
+> CHECKING THE REGISTRY PATH
 
 <img width="778" height="207" alt="image" src="https://github.com/user-attachments/assets/2057646d-e1a6-4ab7-8ae9-37dd1970f1c8" />
+
+> THE LINE THAT SPECIFIES THE PATH
+
+<img width="1533" height="260" alt="image" src="https://github.com/user-attachments/assets/e788fc30-351f-45eb-83da-fa5affa54a83" />
+
 
 29. Great! It is true.
 
@@ -210,6 +217,9 @@ O:\HTB
 <img width="1414" height="217" alt="image" src="https://github.com/user-attachments/assets/553c9d92-013a-411d-afea-fb7909d284a7" />
 
 
+30. Upon reviewing the code again, at the last line after the service installation. The service is invoked by this command -> `Start-Service -name $svcname;`
+
+<img width="1534" height="321" alt="image" src="https://github.com/user-attachments/assets/323286c9-d774-473e-8454-dda2fa276a4c" />
 
 
 > 11TH QUESTION --> ANS: `GetComputerNameA`
