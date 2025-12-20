@@ -5,10 +5,10 @@
 
 
 ## Lessons Learned:
-1. Demodex TTPs (associated with Demodex, Salt Typhoon / Earth Estries & Ghost Emperor)
-2. PowerShell deobfuscation and reverse engineering (decrypt AES-256-CBC)
-3. Dynamic malware analysis using FLARE-VM and Procmon
-4. Static malware analysis using PEStudio and Ghidra
+1. Demodex TTPs (associated with Demodex, Salt Typhoon / Earth Estries & Ghost Emperor).
+2. PowerShell deobfuscation and reverse engineering (decrypt AES-256-CBC).
+3. Dynamic malware analysis using FLARE-VM and Process Hacker.
+4. Static malware analysis using PEStudio and Ghidra.
 
 ## SCENARIO:
 <p align="justify">Your boss was so impressed with your research skills that you've been "rewarded" with a new task: malware analysis. Your mission is to investigate a piece of malware linked to the infamous cyber espionage group, Salt Typhoon. They've been targeting critical infrastructure, and it's up to you to uncover their tactics and techniques.</p>
@@ -227,9 +227,19 @@ O:\HTB
 <img width="1415" height="215" alt="image" src="https://github.com/user-attachments/assets/697d9ac8-2044-4b91-89c6-0b663728353e" />
 
 
+31. There are 2 ways to identify the windows API imported by the malicious DLL to obtain the local computer name. You can use `pestudio` or `ApiMonitor`.
+
+> USING PESTUDIO
+
+<img width="1159" height="566" alt="image" src="https://github.com/user-attachments/assets/9118dc1d-f0fb-4d23-b93e-a2ac6d707153" />
+
+
+
 > 12TH QUESTION --> ANS: `ServiceMain`
 
 <img width="1416" height="216" alt="image" src="https://github.com/user-attachments/assets/bc5a3d16-bfd9-4b35-82f8-3e3a1ff4d098" />
+
+
 
 
 > 13TH QUESTION --> ANS: `10000`
