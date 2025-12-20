@@ -6,7 +6,7 @@
 
 ## Lessons Learned:
 1. Demodex TTPs (associated with Demodex, Salt Typhoon / Earth Estries & Ghost Emperor)
-2. PowerShell deobfuscation and reverse engineering
+2. PowerShell deobfuscation and reverse engineering (decrypt AES-256-CBC)
 3. Dynamic malware analysis using FLARE-VM and Procmon
 4. Static malware analysis using PEStudio and Ghidra
 
@@ -65,6 +65,7 @@
 $0 = New-Object System.Security.Cryptography.AesManaged
 ```
 
+12. It is also important to note that, since there is no explicit mode assignment, the AES mode defaults to CBC with PKCS7 padding.
 
 
 > 3RD QUESTION --> ANS: `$k`
@@ -72,8 +73,8 @@ $0 = New-Object System.Security.Cryptography.AesManaged
 <img width="1413" height="213" alt="image" src="https://github.com/user-attachments/assets/f681489d-69b6-4c31-ae28-e563b8193fc9" />
 
 
-12. Upon reviewing the script again, it is clear that the variable `$k` is used to store the first argument passed by the user.
-13. The argument passed is `password@123`.
+13. Upon reviewing the script again, it is clear that the variable `$k` is used to store the first argument passed by the user.
+14. The argument passed is `password@123`.
 
 <img width="1890" height="152" alt="image" src="https://github.com/user-attachments/assets/a6fc82e3-304b-4fa3-8a5e-803f9f021f85" />
 
@@ -83,11 +84,56 @@ $0 = New-Object System.Security.Cryptography.AesManaged
 <img width="1413" height="219" alt="image" src="https://github.com/user-attachments/assets/22fa89d4-95a7-4408-81d1-eeeeebd1ead0" />
 
 
-14. Previously we identified `password@123` indeed the correct one.
+15. Previously we identified `password@123` indeed the correct one.
 
 > 5TH QUESTION --> ANS: `midihelp`
 
 <img width="1416" height="215" alt="image" src="https://github.com/user-attachments/assets/43aa3efb-ae9d-438a-a608-d99d5cc357a7" />
+
+
+16. Since we already know which encryption is used to obfuscate the payload, we can attempt to decrypt it using the same encryption logic (AES-256-CBC).
+17. In this case, I used a customized Python script to decrypt the payload:
+
+```py
+from Crypto.Cipher import AES
+import base64
+
+def decr(enc, argp):
+    key = argp.ljust(32, '0')
+    keyb = key.encode('utf-8')
+    iv = bytes(16)
+    
+    encr_data= base64.b64decode(enc)
+    cipher = AES.new(key_bytes, AES.MODE_CBC, iv)
+    
+    decr_bytes = cipher.decrypt(encr_data)
+    
+    # Remove PKCS7 padding
+    padding_length = decr_bytes[-1]
+    decr_bytes = decr_bytes[:-padding_length]
+  
+    res = decr_bytes.decode('utf-8')
+    
+    return res
+
+encrypted_string = "" # pass the encrypted payload here
+key = "password@123"
+try:
+  result = decr(encrypted_string, key)
+  print(f"Decrypted content: {result}")
+except Exception as e:
+  print(f"Decryption failed: {e}")
+```
+
+> RESULT
+
+<img width="1647" height="1096" alt="image" src="https://github.com/user-attachments/assets/9b1d5910-97a1-46f1-a328-b5d2f2496aa4" />
+
+18. Great! After decrypting the payload, we can now identify the value assigned to the variable `$cregvalue`.
+19. In the top lines of the script, the value "midihelp" is assigned to the variable `$cregvalue`.
+
+<img width="889" height="422" alt="image" src="https://github.com/user-attachments/assets/db94bb56-773d-4aaa-aed1-aec0de916281" />
+
 
 
 > 6TH QUESTION --> ANS: `3b1c251b0b37b57b755d4545a7dbbe4c29c15baeca4fc2841f82bc80ea877b66`
