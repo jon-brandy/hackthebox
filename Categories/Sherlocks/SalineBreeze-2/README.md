@@ -33,10 +33,16 @@
 
 
 4. The article also states that, based on Trend Micro telemetry, they identified specific commands used by the threat actor to make the script functional.
-5. Let's just tried that on our sandbox.
+5. Let's try that on our sandbox.
 
 <img width="927" height="348" alt="image" src="https://github.com/user-attachments/assets/7847d7be-1b60-4ff7-a9f4-b8597d33a499" />
 
+6. Comparing the results of executing the PowerShell script with and without the password mentioned in the article shows different outcomes.
+7. When the password is used, the script executes without errors.
+
+<img width="1165" height="587" alt="image" src="https://github.com/user-attachments/assets/de067aac-d83f-441d-b39f-3a14adcc3a58" />
+
+8. This concludes that we are dealing with the Demodex malware family.
 
 > 2ND QUESTION --> ANS: `System.Security.Cryptography.AesManaged`
 
