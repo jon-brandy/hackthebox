@@ -2,7 +2,8 @@
 > Write-up author: jon-brandy
 
 ## Lessons Learned:
-1. sada
+1. User-mode debugging with WinDbg.
+2. Cobalt Strike.
 
 ## SCENARIO:
 
