@@ -1,6 +1,9 @@
 # CrashDump
 > Write-up author: jon-brandy
 
+<img width="408" height="175" alt="image" src="https://github.com/user-attachments/assets/5aaa49ec-a22f-44fe-acfd-00832920ad4f" />
+
+
 ## Lessons Learned:
 1. User-mode debugging with WinDbg.
 2. Cobalt Strike.
